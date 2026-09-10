@@ -26,3 +26,4 @@ __pycache__/
 
 # Keep reviewed evidence intentionally; do not commit raw private captures/logs.
 /tmp/
+/.cache/
