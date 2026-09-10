@@ -1,0 +1,51 @@
+[
+  {
+    "width": 1440,
+    "link": "Get the plugin\n↗",
+    "box": {
+      "x": 1032.5625,
+      "y": 32,
+      "width": 177.40625,
+      "height": 48
+    },
+    "overflow": false
+  },
+  {
+    "route": "http://127.0.0.1:8774/plugin.html",
+    "downloadVisible": true
+  },
+  {
+    "width": 390,
+    "link": "Get the plugin\n↗",
+    "box": {
+      "x": 218.546875,
+      "y": 79,
+      "width": 151.453125,
+      "height": 44
+    },
+    "overflow": false
+  },
+  {
+    "route": "http://127.0.0.1:8774/plugin.html",
+    "downloadVisible": true
+  },
+  {
+    "width": 320,
+    "link": "Get the plugin\n↗",
+    "box": {
+      "x": 154.703125,
+      "y": 79,
+      "width": 151.453125,
+      "height": 44
+    },
+    "overflow": false
+  },
+  {
+    "route": "http://127.0.0.1:8774/plugin.html",
+    "downloadVisible": true
+  },
+  {
+    "download": "headstart-plugin-0.3.0.zip",
+    "failure": null
+  }
+]
