@@ -17,6 +17,16 @@ Current user instructions take precedence. For product conflicts, the v0.4 adden
 
 HeadStart is a naming candidate, not a finalized or cleared brand. Playparts is the older working name used in filenames, schema identifiers, and the plugin. Preserve existing identifiers until a deliberate naming migration is requested.
 
+## Current demo target — 10 September 2026
+
+The user's north star is a **60-second audience demo video**: discover three appealing games with varied genres or styles, add them to a grab-bag, ask their Astra to mash up all three using actual source code, show the resulting coherent playable game, and show automatic royalty logging to the original developers for the pieces actually reused. The minute is the video's runtime, not a promised build latency. See [docs/demo-target.md](docs/demo-target.md) for the proposed sequence and evidence requirements.
+
+The user's MCP tool/plugin must automatically reference their selected grab-bag as context for Astra; manual URL pasting or a hand-assembled handoff does not fulfill this target. A bag reference resolves its selected revision, game/source versions and intended scope. Read-only catalog/bag retrieval remains distinct from authorized local integration. This is required target behavior, not an implemented service.
+
+This target supersedes an earlier single-capability-only demo and the deferral of royalty logging. Demonstrated source choices and adapters require evidence; varied examples do not establish universal cross-engine conversion. Royalty recording is required in the target; payment/settlement, rates and economic agreements remain unspecified. Do not fabricate amounts, agreements or obligations, or infer an economic agreement from open-source status. Records must distinguish selected games from actually reused pieces and identify unresolved royalty terms honestly.
+
+The three September simplicity boards predate this target. The next mockup pass should lead each discovery style into the shared bag → remix brief → Astra → playable result → creator royalty record journey. The final C storyboard now describes this target; current design work does not request building the game or producing the video.
+
 ## Workspace reality
 
 - This workspace starts as a specification and review package, with a static HTML prototype, JSON contracts/research fixtures, and a Python inspection helper. There is no production catalog application, live API/MCP connector, signing service, hosted executor, or root application build/test configuration yet.
@@ -41,7 +51,7 @@ Preserve these emphases from the planning conversation:
 
 Collect or infer a small editable game brief: experience, style references, target platform/device, runtime/version, camera/input, scope, budgets, existing systems to preserve, and constraints. Ask only about decisions that materially affect the work. Recommendations explain reasons, alternatives, tradeoffs, and unknowns.
 
-Defer the earlier runtime SDK, player accounts/saves/leaderboards, marketplace payments, royalty settlement, managed game hosting, generalized conversion, and hosted repository integration. Public remix/provenance is optional; required source notices are not. Do not infer royalties or automatic remix tracking from open-source status or dependency relationships.
+Defer the earlier runtime SDK, player accounts/saves/leaderboards, marketplace payments, royalty payment/settlement, managed game hosting, generalized conversion, and hosted repository integration. The current demo target requires automatic reuse and royalty logging for actually reused pieces; its rates and agreements remain unspecified. Public remix/provenance sharing is optional; required source notices are not. Open-source status and dependency relationships alone establish neither actual reuse nor an economic agreement.
 
 ## Architecture and data rules
 
@@ -67,7 +77,9 @@ The PRD proposes a modular web application, Postgres metadata with lexical/trigr
 
 ## UI and evidence quality
 
-The user is developing new mockups, and all current mockups and preferred explorations remain provisional until they select a design baseline for implementation. Follow `docs/design-direction.md`. Do not lock implementation or review criteria to the older palette, typography, navigation, or layout. Keep presentation adaptable through design tokens and reusable components; preserve product behavior, evidence accuracy, accessibility, and responsive support. Research, backend, and local functionality can proceed while styling remains explicitly provisional. Final visual acceptance must reference the selected mockup path/version and desktop/mobile evidence; an unresolved design selection leaves the visual acceptance item open rather than blocking unrelated work.
+The user selected **C4 · Living-world landing** and its related C screens on 10 September 2026 as the current implementation baseline. Follow [docs/design-direction.md](docs/design-direction.md) and [the final storyboard draft](docs/design/C4-FINAL-STORYBOARD.md). C4b is the requested refinement: smaller companion, open ocean with fewer distant islands, retained boats and lively details, and a connected foreground stone bridge. Preserve original C4. C2 governs scrollable list browsing and Genre/Style/Runtime dropdowns; C3 governs image-grid browsing and the three-game bag; original C (C1) supplies brief/recommendation simplicity; C5 supplies mobile/motion intent. C14 drafts the Astra → playable remix → actual-used creator/royalty record continuation. Reference the exact artifact version/digest in UI acceptance, and independently compare actual desktop/mobile captures with applicable selected boards.
+
+Keep the prompt, primary action, “Browse all games” link and bag clear and accessible. Express the agent's presence through the living world. A small companion follows reachable paths/bridge; castles, birds, boats and gentle depth remain decorative first-party hero content, separate from untrusted game demos. Provide paused/reduced-motion, keyboard and mobile alternatives. These are static design references; this selection does not implement motion, video, a playable remix, MCP bag retrieval or royalty services. Keep design tokens/components adaptable, preserve evidence accuracy and functional requirements, and keep other art explorations for comparison.
 
 Allow browsing, demo launch, and source viewing without login. Prefer external demos; embedded untrusted games require a separate origin and restrictive sandbox. Load one demo after a user gesture, provide exit/fallback controls, and keep game loading separate from the catalog shell.
 

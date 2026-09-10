@@ -6,7 +6,7 @@ P0 establishes the research, local discovery and real plugin reuse workflow. P1 
 
 Every issue requires a coder/author subagent, a separate critical reviewer, meaningful evidence, fixes and re-review until an explicit PASS. UI work includes desktop/mobile screenshot inspection and design critique. See [the workflow](../development-workflow.md).
 
-**Design is provisional.** New mockups are in progress. Follow [the design-direction policy](../design-direction.md): preserve functional outcomes while keeping visual decisions adaptable to the mockup the user selects. Research and functional implementation can proceed; final visual acceptance identifies the selected reference and version.
+**Selected design: C4 living world.** The user selected C4 and the related C screens on 10 September 2026. Follow [the final storyboard](../design/C4-FINAL-STORYBOARD.md), [design-conformance issue draft](../design/C4-DESIGN-ISSUE.md), and [design-direction policy](../design-direction.md). C4b is the requested refinement and C14 drafts the continuation. Final implementation acceptance compares actual desktop/mobile states with exact reference digests; mockups do not establish live services.
 
 | Order | Priority | Issue | Depends on |
 | --- | --- | --- | --- |

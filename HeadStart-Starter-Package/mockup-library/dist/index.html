@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HeadStart — Mockup library</title>
+  <meta name="description" content="Browse and compare HeadStart's design explorations and original mockups.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#gallery">Skip to mockups</a>
+  <header class="header">
+    <div class="heading"><span class="brand">HeadStart</span><h1>Mockup library</h1></div>
+    <p>Explore the designs. Select two to compare.</p>
+    <p><a href="../../design-explorations/2026-09-simplicity/FINAL-STORYBOARD.html">View the selected C direction and final storyboard →</a></p>
+  </header>
+  <main>
+    <section class="toolbar" aria-label="Find mockups">
+      <label class="search">Search<input id="search" type="search" placeholder="Try “sketch”, “wide”, or “C9”…" autocomplete="off"></label>
+      <label>Design family<select id="family"><option value="">All designs</option></select></label>
+      <button id="reset" class="quiet" hidden>Clear filters</button>
+      <p id="count" role="status" aria-live="polite"></p>
+    </section>
+    <div id="gallery" class="gallery" tabindex="-1"></div>
+    <section id="empty" class="empty" hidden><h2>No matching mockups</h2><p>Try another name or show every design.</p><button id="empty-reset">Show all designs</button></section>
+    <noscript><p>This gallery needs JavaScript for filtering and comparison. <a href="../../design-explorations/2026-09-simplicity/STORYBOARDS.md">View the design notes.</a></p></noscript>
+    <footer class="page-footer">Design explorations and reference screens. Game artwork and product states are illustrative.</footer>
+  </main>
+  <aside id="selection" class="selection" aria-label="Selected mockups" hidden>
+    <div id="selected-items" class="selected-items"></div>
+    <div class="selection-actions"><button id="clear-selected" class="quiet">Clear</button><button id="compare" class="primary" disabled>Choose one more</button></div>
+    <span id="selection-status" class="sr-only" aria-live="polite"></span>
+  </aside>
+  <dialog id="viewer" aria-labelledby="viewer-title">
+    <div class="dialog-bar"><div><span id="viewer-family" class="meta"></span><h2 id="viewer-title"></h2></div><div class="dialog-actions"><a id="original" target="_blank" rel="noopener">Open original</a><button id="zoom" aria-pressed="false">Zoom in</button><button class="close" data-close="viewer" aria-label="Close preview">✕</button></div></div>
+    <div id="image-stage" class="image-stage"><img id="large-image" alt=""></div>
+    <div class="viewer-bottom"><button id="previous" aria-label="Previous mockup">← Previous</button><p id="viewer-description"></p><button id="next" aria-label="Next mockup">Next →</button></div>
+  </dialog>
+  <dialog id="comparison" aria-labelledby="compare-title">
+    <div class="dialog-bar"><div><span class="meta">Side by side</span><h2 id="compare-title">Compare designs</h2></div><button class="close" data-close="comparison" aria-label="Close comparison">✕</button></div>
+    <div id="compare-grid" class="compare-grid"></div>
+  </dialog>
+</body>
+</html>
