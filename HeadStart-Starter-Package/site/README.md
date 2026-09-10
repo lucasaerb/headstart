@@ -1,6 +1,6 @@
 # HeadStart living-world site
 
-A buildless local frontend using HTML, CSS and JavaScript, based on the user-selected C4/C4b direction. Art assets are original generated illustrations. The interactive world uses a generated ambient motion plate behind independent CSS atmosphere, foreground foliage and companion layers; it is a landing scene, not a running external game.
+A frontend using HTML, CSS and JavaScript, based on the user-selected C4/C4b direction, plus a Vercel email-capture function backed by private Blob storage. Art assets are original generated illustrations. The interactive world uses a generated ambient motion plate behind independent CSS atmosphere, foreground foliage and companion layers; it is a landing scene, not a running external game.
 
 From the workspace root:
 
@@ -10,7 +10,9 @@ python3 -m http.server 8765 --bind 127.0.0.1 --directory HeadStart-Starter-Packa
 
 Open `http://127.0.0.1:8765/site/dist/`.
 
-No package install or build is required. The existing package server can serve this route alongside the mockup library and storyboard.
+The static server can preview the visuals alongside the mockup library and storyboard, but cannot save email submissions. Deployment runs `npm ci` and `node build.mjs` from `site/dist`, producing an explicit public-file allowlist and a separately bundled `/api/subscribe` function. See [email capture operations](../../tools/signup/README.md) for private storage, consent, owner export/delete and rate-limit cleanup.
+
+The visible homepage form collects optional launch/product-update interest. Play demo actions ask for an email before revealing their original external link; demo-only consent never opts into updates. Both flows are unverified lead capture, not identity verification or source-access authorization. No email is sent by this implementation.
 
 ## Plugin download
 
