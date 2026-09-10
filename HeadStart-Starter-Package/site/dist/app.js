@@ -17,6 +17,7 @@ const dialogOpeners = new Map();
 function openDialog(id, opener) { const dialog = $(id); dialogOpeners.set(id, opener || document.activeElement); dialog.showModal(); document.body.style.overflow = 'hidden'; }
 for (const dialog of document.querySelectorAll('dialog')) dialog.addEventListener('close', () => { if (!document.querySelector('dialog[open]')) document.body.style.overflow = ''; const opener = dialogOpeners.get(dialog.id); if (opener?.isConnected) opener.focus(); });
 for (const button of document.querySelectorAll('[data-close]')) button.addEventListener('click', () => $(button.dataset.close).close());
+$('how-dialog').addEventListener('close', () => { const player=$('how-video-player'); if(player){player.pause();player.currentTime=0;} });
 $('bag-open').addEventListener('click', () => { renderBag(); openDialog('bag-dialog', $('bag-open')); });
 $('library-bag').addEventListener('click', () => { renderBag(); openDialog('bag-dialog', $('library-bag')); });
 $('mobile-bag').addEventListener('click', () => { renderBag(); openDialog('bag-dialog', $('mobile-bag')); });
