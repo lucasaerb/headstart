@@ -18,7 +18,7 @@ class DistributionTests(unittest.TestCase):
             path = self.source / relative
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text('{}' if path.suffix == '.json' else '# Test\n')
-        (self.source / '.codex-plugin/plugin.json').write_text(json.dumps({'name': 'playparts-plugin', 'version': '0.2.0'}))
+        (self.source / '.codex-plugin/plugin.json').write_text(json.dumps({'name': 'headstart-plugin', 'version': '0.2.0'}))
         (self.source / 'plugin.json').write_bytes((self.source / '.codex-plugin/plugin.json').read_bytes())
         self.output = self.root / 'output/package.zip'
 

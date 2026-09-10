@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "headstart": {
+      "type": "stdio",
+      "command": "python3",
+      "args": [
+        "-B",
+        "${PLUGIN_ROOT}/scripts/catalog_mcp.py"
+      ]
+    }
+  }
+}

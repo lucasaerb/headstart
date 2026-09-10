@@ -2,7 +2,7 @@
 
 **A head start for your next game.** Discover playable games, understand their systems, and reuse suitable building blocks with guidance in your coding agent.
 
-HeadStart is a working name. The existing specification and plugin starter use the earlier Playparts name.
+HeadStart is the current app and plugin name. Original specification files retain their historical filenames.
 
 ## Start here
 
@@ -20,7 +20,7 @@ The repository currently contains the PRD, design prototype, images, initial dat
 
 Build a structured research database of example games with real images, categories, playable/demo destinations, repository links, and traceable source and rights evidence. Start with that content, then build a working local discovery experience around it. Keep uncertain research separate from eligible published listings.
 
-The [first research database](research/catalog/README.md) now contains 43 entries and 87 candidate building blocks, with searchable SQLite/JSON/CSV exports and 12 authentic preview images. Browse the [index](research/catalog/INDEX.md), [shortlist](research/catalog/SHORTLIST.md), and [image contact sheet](research/catalog/contact-sheet.jpg). These are researched source leads with explicit limitations, not tested integrations.
+The [first research database](research/catalog/README.md) now contains 72 entries and 145 candidate building blocks, with searchable SQLite/JSON/CSV exports and 12 authentic preview images. Browse the [index](research/catalog/INDEX.md), [shortlist](research/catalog/SHORTLIST.md), and [image contact sheet](research/catalog/contact-sheet.jpg). These are researched source leads with explicit limitations, not tested integrations. The [browser expansion](research/catalog/BROWSER-EXPANSION.md) adds 29 browser projects and creator-reported model attribution.
 
 ## Local preview
 
@@ -39,3 +39,7 @@ Localhost comes first. Vercel is the intended website host; Railway is an option
 Every issue uses a separate coder/author subagent and critical reviewer subagent. The reviewer evaluates the implementation, meaningful tests, and visual evidence where relevant. Findings return to the coder for correction and re-review until the issue's acceptance criteria pass. See the [workflow](docs/development-workflow.md) for the required evidence and completion rules.
 
 Private reference recordings and the redundant full-package archive remain local and are excluded from Git. Existing upstream licensing and attribution records are preserved; no blanket license is assigned to third-party material by this repository.
+
+## Codex plugin
+
+The [HeadStart discovery plugin](HeadStart-Starter-Package/headstart-plugin/README.md) packages six skills and a real local metadata MCP server with 52 reviewed references and 105 candidate systems. [Build the portable ZIP](tools/plugin/README.md) and describe your game in Codex to get grounded source starting points. [Independent end-to-end evidence](docs/reviews/plugin-discovery/REVIEW.md) records real installation, skill discovery and a fresh-agent recommendation. Protected code handoffs remain unavailable pending verified-email access.

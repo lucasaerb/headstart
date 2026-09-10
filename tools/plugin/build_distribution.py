@@ -13,13 +13,13 @@ import zipfile
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-SOURCE = ROOT / 'HeadStart-Starter-Package/playparts-plugin'
+SOURCE = ROOT / 'HeadStart-Starter-Package/headstart-plugin'
 MAX_FILE = 8 * 1024 * 1024
 MAX_TOTAL = 32 * 1024 * 1024
 REQUIRED = {'.codex-plugin/plugin.json', 'plugin.json', 'mcp.json', 'README.md',
             'scripts/catalog_mcp.py', 'scripts/inspect_project.py',
             'references/discovery-catalog.json', 'references/discovery-manifest.json'}
-REQUIRED |= {f'skills/playparts-{name}/SKILL.md' for name in
+REQUIRED |= {f'skills/headstart-{name}/SKILL.md' for name in
              ('find', 'inspect', 'plan', 'integrate', 'validate', 'credit')}
 
 
@@ -32,9 +32,9 @@ def allowed(path: str) -> bool:
     if len(parts) == 2 and parts[0] == 'references':
         return parts[1].endswith(('.md', '.json')) and not parts[1].startswith('.')
     if len(parts) == 3 and parts[0] == 'skills':
-        return parts[2] == 'SKILL.md' and re.fullmatch(r'playparts-[a-z-]+', parts[1]) is not None
+        return parts[2] == 'SKILL.md' and re.fullmatch(r'headstart-[a-z-]+', parts[1]) is not None
     if len(parts) == 4 and parts[0] == 'skills' and parts[2:] == ['agents', 'openai.yaml']:
-        return re.fullmatch(r'playparts-[a-z-]+', parts[1]) is not None
+        return re.fullmatch(r'headstart-[a-z-]+', parts[1]) is not None
     return False
 
 
@@ -78,7 +78,7 @@ def build(source: Path, output: Path) -> dict:
     legacy = json.loads(payload['.codex-plugin/plugin.json'])
     if any(manifest.get(k) != legacy.get(k) for k in ('name', 'version')):
         raise ValueError('Canonical and legacy manifest identity/version mismatch')
-    if manifest.get('name') != 'playparts-plugin':
+    if manifest.get('name') != 'headstart-plugin':
         raise ValueError('Unexpected plugin identifier')
     version = manifest.get('version')
     if not isinstance(version, str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9.+_-]{0,127}', version):
@@ -88,9 +88,9 @@ def build(source: Path, output: Path) -> dict:
     if market.get('name') != 'personal' or len(market.get('plugins', [])) != 1:
         raise ValueError('Unexpected distribution marketplace')
     entry = market['plugins'][0]
-    if entry.get('name') != 'playparts-plugin' or entry.get('source') != {'source': 'local', 'path': './plugins/playparts-plugin'}:
+    if entry.get('name') != 'headstart-plugin' or entry.get('source') != {'source': 'local', 'path': './plugins/headstart-plugin'}:
         raise ValueError('Marketplace does not resolve bundled plugin')
-    files = {'plugins/playparts-plugin/' + name: value for name, value in payload.items()}
+    files = {'plugins/headstart-plugin/' + name: value for name, value in payload.items()}
     files['.agents/plugins/marketplace.json'] = marketplace
     files['README.md'] = (HERE / 'templates/INSTALL.md').read_bytes()
     report = {'schema_version': '1.0', 'name': manifest['name'], 'version': version,

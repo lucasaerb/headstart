@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "playparts-plugin",
+      "name": "headstart-plugin",
       "source": {
         "source": "local",
-        "path": "./plugins/playparts-plugin"
+        "path": "./plugins/headstart-plugin"
       },
       "policy": {
         "installation": "AVAILABLE",

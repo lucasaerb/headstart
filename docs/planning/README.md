@@ -6,7 +6,7 @@ P0 establishes the research, local discovery and real plugin reuse workflow. P1 
 
 Every issue requires a coder/author subagent, a separate critical reviewer, meaningful evidence, fixes and re-review until an explicit PASS. UI work includes desktop/mobile screenshot inspection and design critique. See [the workflow](../development-workflow.md).
 
-**Design is provisional.** New mockups are in progress. Follow [the design-direction policy](../design-direction.md): preserve functional outcomes while keeping visual decisions adaptable to the mockup the user selects. Research and functional implementation can proceed; final visual acceptance identifies the selected reference and version.
+**Selected design: C4 living world.** The user selected C4 and the related C screens on 10 September 2026. Follow [the final storyboard](../design/C4-FINAL-STORYBOARD.md), [design-conformance issue #26](https://github.com/lucasaerb/headstart/issues/26), and [design-direction policy](../design-direction.md). C4b is the requested refinement and C14 drafts the continuation. Final implementation acceptance compares actual desktop/mobile states with exact reference digests; mockups do not establish live services.
 
 | Order | Priority | Issue | Depends on |
 | --- | --- | --- | --- |
@@ -44,3 +44,17 @@ Every issue requires a coder/author subagent, a separate critical reviewer, mean
 - [Project instructions](../../AGENTS.md)
 
 `issues.json` preserves the reviewed issue definitions; `github-issues.json` maps their stable keys to live GitHub issues. GitHub issues hold ongoing implementation status. Update the local planning mirror when scope or dependency changes, rather than silently allowing contradictory plans.
+
+## User-prioritized local delivery slices — 10 September 2026
+
+The user moved the installable plugin ahead of the original sequence, then requested broader browser/model discovery and visible GitHub popularity. These bounded slices advance the larger backlog without closing unmet authenticated handoff, automatic bag retrieval, integration or royalty requirements in #13–#17 and #27. The original sequence and design issue #26 above remain intact.
+
+| Priority | Issue | Prerequisite | Current review state |
+| --- | --- | --- | --- |
+| P0 | [#28 · Installable Codex discovery plugin](https://github.com/lucasaerb/headstart/issues/28) | #1 | Closed after independent PASS; installed plugin 0.2.1 has 52 research references / 105 blocks. |
+| P0 | [#29 · Browser games and evidenced AI-model labels](https://github.com/lucasaerb/headstart/issues/29) | #1 | Closed after independent PASS. Research corpus: 72 entries / 145 blocks. |
+| P0 | [#30 · GitHub stars and popularity sorting](https://github.com/lucasaerb/headstart/issues/30) | #29 data/display behavior | Closed after independent PASS. Dated repository-level popularity, not quality. |
+
+Acceptance contracts: [plugin discovery](plugin-discovery/issue.md), [browser/model expansion](browser-model-expansion.md), [GitHub popularity](github-popularity.md). Every slice retains the required builder → independent reviewer → fixes → re-review loop. Statuses above are this planning snapshot; GitHub tracks subsequent closure.
+
+[#31 · Adopt HeadStart app and plugin naming](https://github.com/lucasaerb/headstart/issues/31) is complete after independent PASS; it migrated the active plugin/package and skills to the selected app name; see the [migration contract](headstart-rename.md).

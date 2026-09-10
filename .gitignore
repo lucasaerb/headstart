@@ -3,6 +3,7 @@
 /Sf.mp4
 /citybuilder.mp4
 /r3f.mp4
+/blackwater_fps.mp4
 /HeadStart-Starter-Package/Playparts-Complete-Package.zip
 
 # Local configuration and generated output
@@ -12,6 +13,8 @@
 node_modules/
 .next/
 dist/
+!HeadStart-Starter-Package/site/dist/
+!HeadStart-Starter-Package/site/dist/**
 coverage/
 test-results/
 playwright-report/

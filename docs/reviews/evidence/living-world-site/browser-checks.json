@@ -1,0 +1,113 @@
+[
+  {
+    "width": 1440,
+    "dimensions": {
+      "vw": 1440,
+      "sw": 1440,
+      "bag": {
+        "x": 1244.96875,
+        "y": 32.5,
+        "width": 123.03125,
+        "height": 47,
+        "top": 32.5,
+        "right": 1368,
+        "bottom": 79.5,
+        "left": 1244.96875
+      },
+      "helper": {
+        "x": 585.296875,
+        "y": 676.65625,
+        "width": 114.3125,
+        "height": 114.3125,
+        "top": 676.65625,
+        "right": 699.609375,
+        "bottom": 790.96875,
+        "left": 585.296875
+      }
+    }
+  },
+  {
+    "width": 390,
+    "dimensions": {
+      "vw": 390,
+      "sw": 390,
+      "bag": {
+        "x": 275.84375,
+        "y": 23,
+        "width": 94.15625,
+        "height": 44,
+        "top": 23,
+        "right": 370,
+        "bottom": 67,
+        "left": 275.84375
+      },
+      "helper": {
+        "x": 121.90625,
+        "y": 693.984375,
+        "width": 65,
+        "height": 65,
+        "top": 693.984375,
+        "right": 186.90625,
+        "bottom": 758.984375,
+        "left": 121.90625
+      }
+    }
+  },
+  {
+    "width": 320,
+    "dimensions": {
+      "vw": 320,
+      "sw": 320,
+      "bag": {
+        "x": 217.84375,
+        "y": 23,
+        "width": 86.15625,
+        "height": 44,
+        "top": 23,
+        "right": 304,
+        "bottom": 67,
+        "left": 217.84375
+      },
+      "helper": {
+        "x": 85.5,
+        "y": 693.984375,
+        "width": 65,
+        "height": 65,
+        "top": 693.984375,
+        "right": 150.5,
+        "bottom": 758.984375,
+        "left": 85.5
+      }
+    }
+  },
+  {
+    "width": 768,
+    "dimensions": {
+      "vw": 768,
+      "sw": 768,
+      "bag": {
+        "x": 606.578125,
+        "y": 28.5,
+        "width": 123.03125,
+        "height": 47,
+        "top": 28.5,
+        "right": 729.609375,
+        "bottom": 75.5,
+        "left": 606.578125
+      },
+      "helper": {
+        "x": 270.3046875,
+        "y": 571.09375,
+        "width": 96.484375,
+        "height": 96.484375,
+        "top": 571.09375,
+        "right": 366.7890625,
+        "bottom": 667.578125,
+        "left": 270.3046875
+      }
+    }
+  },
+  {
+    "motion": "PASS pointer right; pause freezes RAF and CSS; keyboard Home/End bounded; pause reload; reduced-motion starts still; explicit play then mobile tap moves"
+  }
+]

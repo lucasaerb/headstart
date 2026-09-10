@@ -1,4 +1,6 @@
-# Playparts review package
+# HeadStart starter package
+
+For the current app, open `site/dist/`; for the current plugin, read [headstart-plugin/README.md](headstart-plugin/README.md). The sections below inventory the original reference delivery; its filenames and embedded mockup branding are historical.
 
 Start with **Playparts-UI-Mockups.pdf** for the visual experience and **Playparts-Technical-PRD-v0.3.pdf** for the product specification. The Word and Markdown versions are editable. The plugin is a core MVP requirement in this revision.
 
@@ -8,7 +10,7 @@ Start with **Playparts-UI-Mockups.pdf** for the visual experience and **Playpart
 - Playparts-UI-Prototype.html: clickable local mockup with embedded concept artwork, navigation, sample search, empty state, agent-brief export, plugin starter download and actual external demo/source links. Open it in a browser; keep the plugin ZIP alongside it for that download link.
 - mockups/: ten high-resolution PNG screenshots and a screen index.
 - Playparts-Technical-PRD-v0.3.pdf, .docx and .md: 21-page PRD in PDF/Word, plus editable Markdown.
-- Playparts-Plugin-Starter.zip and playparts-plugin/: six preloaded skills, engine/ontology/evidence references, a local inspection helper and a validated plugin manifest.
+- Playparts-Plugin-Starter.zip: archived original starter. The current six-skill plugin lives in `headstart-plugin/`; build its current portable ZIP using `python3 tools/plugin/build_distribution.py` from the repository root.
 - catalog-record.schema.json and catalog-record.example.json: initial versioned data contract and a deliberately unverified candidate fixture.
 - seed-catalog.json: six seed research records with real links and explicit unresolved fields.
 - assets/game-concepts.png and IMAGE-PROMPT.md: generated illustrative artwork and the exact generation prompt.
@@ -19,7 +21,7 @@ Discover a project → play its demo → inspect a capability → use the plugin
 
 ## Product and artifact boundaries
 
-Playparts is a temporary name. This package is a design and technical specification with a skills starter, not a live marketplace. No plugin was installed, no account was connected and no target game was modified. The starter has no live catalog/MCP backend, signing service or hosted executor. Skill instructions run through a supported host agent’s tools after the user loads them.
+HeadStart is the current product name. The original delivery was a design and specification package with a skills starter. The current plugin has a real local read-only catalog MCP and has been installed and client-tested; authenticated handoffs, automatic bag retrieval, signing and hosted execution remain unimplemented. See the current plugin README and `docs/reviews/` for dated evidence.
 
 Generated game artwork is not a screenshot of the named repositories. Mockup verification statuses, target Coastal Rally, change counts and provenance relationships are illustrative. The UI uses sample data; some filter controls demonstrate design intent rather than a real index. Real external links open upstream projects.
 
@@ -33,4 +35,4 @@ The PRD includes source references and proposed acceptance gates. Planning metri
 
 ## Latest product direction
 
-Read [Product-Direction-v0.4.md](Product-Direction-v0.4.md) for the HeadStart naming candidate and proposed art direction, performance review and code review capabilities. This addendum extends PRD v0.3. Existing mockups and the plugin starter retain the Playparts working name; the three additional review skills are specified in the addendum and are not yet implemented in the plugin.
+Read [Product-Direction-v0.4.md](Product-Direction-v0.4.md) for the proposed art direction, performance review and code review capabilities. This addendum extends PRD v0.3. Archived mockups retain their original branding; the three additional review skills are specified in the addendum and are not yet implemented in the plugin.

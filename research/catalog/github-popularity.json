@@ -1,0 +1,462 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-09-10T19:48:26Z",
+  "repositories": [
+    {
+      "repo_url": "https://developers.openai.com/showcase/hollowflux",
+      "stars": null,
+      "status": "not_github",
+      "checked_at": "2026-09-10T21:30:00Z",
+      "evidence_url": "https://developers.openai.com/showcase/hollowflux",
+      "notes": "This is an official OpenAI showcase page, not a public GitHub repository; GitHub stars and source availability do not apply."
+    },
+    {
+      "repo_url": "https://developers.openai.com/showcase/sunwake",
+      "stars": null,
+      "status": "not_github",
+      "checked_at": "2026-09-10T21:30:00Z",
+      "evidence_url": "https://developers.openai.com/showcase/sunwake",
+      "notes": "This is an official OpenAI showcase page, not a public GitHub repository; GitHub stars and source availability do not apply."
+    },
+    {
+      "repo_url": "https://developers.openai.com/showcase/void-explorer",
+      "stars": null,
+      "status": "not_github",
+      "checked_at": "2026-09-10T21:30:00Z",
+      "evidence_url": "https://developers.openai.com/showcase/void-explorer",
+      "notes": "This is an official OpenAI showcase page, not a public GitHub repository; GitHub stars and source availability do not apply."
+    },
+    {
+      "repo_url": "https://gitea.wildfiregames.com/0ad/0ad",
+      "stars": null,
+      "status": "not_github",
+      "checked_at": "2026-09-10T19:48:23Z",
+      "evidence_url": "https://gitea.wildfiregames.com/0ad/0ad",
+      "notes": "GitHub star metric does not apply to this repository host."
+    },
+    {
+      "repo_url": "https://github.com/Anuken/Mindustry",
+      "stars": 28946,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/Anuken/Mindustry",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/asmoyou/toy2game",
+      "stars": 4,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/asmoyou/toy2game",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games",
+      "stars": 32,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/Ayi1337/gpt6-astra-one-shot-games",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/BKcore/HexGL",
+      "stars": 1742,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/BKcore/HexGL",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/Braffolk/fable5-world-demo",
+      "stars": 718,
+      "status": "available",
+      "checked_at": "2026-09-10T20:45:00Z",
+      "evidence_url": "https://api.github.com/repos/Braffolk/fable5-world-demo",
+      "notes": "Observed GitHub stargazers_count for the whole repository. A popularity signal, not quality, model performance or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/CleverRaven/Cataclysm-DDA",
+      "stars": 13113,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/CleverRaven/Cataclysm-DDA",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/derek-wangpch/OpenCityMaker",
+      "stars": 4,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/derek-wangpch/OpenCityMaker",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/donmccurdy/three-pathfinding",
+      "stars": 1372,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/donmccurdy/three-pathfinding",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/doublespeakgames/adarkroom",
+      "stars": 8276,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/doublespeakgames/adarkroom",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/ellisonleao/clumsy-bird",
+      "stars": 1622,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/ellisonleao/clumsy-bird",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/endless-sky/endless-sky",
+      "stars": 7550,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/endless-sky/endless-sky",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/freeciv/freeciv",
+      "stars": 1591,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/freeciv/freeciv",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/FreeCol/freecol",
+      "stars": 711,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/FreeCol/freecol",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/gabrielecirulli/2048",
+      "stars": 13380,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/gabrielecirulli/2048",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/gkjohnson/three-mesh-bvh",
+      "stars": 3483,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/gkjohnson/three-mesh-bvh",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/godotengine/godot-demo-projects",
+      "stars": 9503,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/godotengine/godot-demo-projects",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5",
+      "stars": 4,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/hamzabellouch/Build-with-anthropic-fable-5",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/Hextris/hextris",
+      "stars": 2435,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/Hextris/hextris",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/Hiraeth010/blackwater",
+      "stars": 11,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/Hiraeth010/blackwater",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/IceCreamYou/THREE.Terrain",
+      "stars": 899,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/IceCreamYou/THREE.Terrain",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/KilledByAPixel/LittleJS",
+      "stars": 4175,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/KilledByAPixel/LittleJS",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/liabru/matter-js",
+      "stars": 18399,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/liabru/matter-js",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/lo-th/3d.city",
+      "stars": 1744,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/lo-th/3d.city",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/luanti-org/luanti",
+      "stars": 13586,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/luanti-org/luanti",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon",
+      "stars": 497,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/majidmanzarpour/threejs-procedural-dungeon",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra",
+      "stars": 135,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/MartinDelophy/awesome-gpt-6-astra",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/mozilla/BrowserQuest",
+      "stars": 9372,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/mozilla/BrowserQuest",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/mrdoob/three.js",
+      "stars": 115380,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/mrdoob/three.js",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/Mugen87/yuka",
+      "stars": 1366,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/Mugen87/yuka",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/OpenRA/OpenRA",
+      "stars": 17357,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/OpenRA/OpenRA",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/OpenRCT2/OpenRCT2",
+      "stars": 16201,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/OpenRCT2/OpenRCT2",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/OpenTTD/OpenTTD",
+      "stars": 8248,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/OpenTTD/OpenTTD",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter",
+      "stars": 120,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/ourcade/phaser3-dungeon-crawler-starter",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/PhiloLabs/fable51-worlds",
+      "stars": 477,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/PhiloLabs/fable51-worlds",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/pmndrs/drei",
+      "stars": 9862,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/pmndrs/drei",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/pmndrs/ecctrl",
+      "stars": 794,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/pmndrs/ecctrl",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/pmndrs/racing-game",
+      "stars": 2214,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/pmndrs/racing-game",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/pmndrs/react-three-rapier",
+      "stars": 1431,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/pmndrs/react-three-rapier",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/rawprogress/fable-cities",
+      "stars": 71,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/rawprogress/fable-cities",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/rbenzing/SlimCityGame",
+      "stars": 2,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/rbenzing/SlimCityGame",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/Ryan-fm/Dwellcraft",
+      "stars": 1,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/Ryan-fm/Dwellcraft",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/scottstts/Jelly-Baby",
+      "stars": 141,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/scottstts/Jelly-Baby",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/stackloomdev/last-beacon",
+      "stars": 1,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/stackloomdev/last-beacon",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/stackloomdev/silent-meridian",
+      "stars": 0,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/stackloomdev/silent-meridian",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/SuperTux/supertux",
+      "stars": 3138,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/SuperTux/supertux",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/supertuxkart/stk-code",
+      "stars": 5346,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/supertuxkart/stk-code",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/threapchills/MagicCarpetWizard",
+      "stars": 0,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/threapchills/MagicCarpetWizard",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/tweeres04/gather-it",
+      "stars": 1,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/tweeres04/gather-it",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/wesnoth/wesnoth",
+      "stars": 6870,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/wesnoth/wesnoth",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/widelands/widelands",
+      "stars": 3053,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/widelands/widelands",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/winchxyz/vesper-street",
+      "stars": 10,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/winchxyz/vesper-street",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/yairm210/Unciv",
+      "stars": 11257,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/yairm210/Unciv",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://gitlab.com/veloren/veloren",
+      "stars": null,
+      "status": "not_github",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://gitlab.com/veloren/veloren",
+      "notes": "GitHub star metric does not apply to this repository host."
+    }
+  ]
+}

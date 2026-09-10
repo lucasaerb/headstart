@@ -74,6 +74,35 @@ class CatalogTests(unittest.TestCase):
     def test_media_missing_evidence_is_rejected(self):
         self.assertTrue(validate([fixture()], [{"id": "missing-proof"}]))
 
+    def test_media_record_identity_must_match_repository(self):
+        row = fixture()
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "media").mkdir()
+            image = root / "media/test.png"
+            image.write_bytes(b"fixture image")
+            media = {
+                "id": "test-preview", "record_id": row["id"], "title": "Test", "notes": "Fixture",
+                "uploaded_at": "2026-09-10T12:00:00Z", "repo_url": row["repo_url"],
+                "source_page": "https://example.com/image", "original_url": "https://example.com/image.png",
+                "license_evidence_url": "https://example.com/license", "license_expression": "MIT",
+                "license_urls": ["https://example.com/license"], "credit": "Fixture author",
+                "rights_status": "reviewed_for_catalog_display", "allowed_use": "Test only",
+                "local_path": "media/test.png", "sha256": hashlib.sha256(image.read_bytes()).hexdigest(),
+                "width": 1, "height": 1, "alt": "Fixture image", "capture_date": None,
+                "capture_date_status": "unknown", "downloaded_at": "2026-09-10T12:00:00Z",
+                "reviewed_at": "2026-09-10T12:00:00Z", "version_relation": "Fixture only",
+                "modifications": "None",
+            }
+            self.assertEqual(validate([row], [media], root), [])
+            media["uploaded_at"] = None
+            self.assertEqual(validate([row], [media], root), [])
+            media["record_id"] = "missing-record"
+            self.assertTrue(validate([row], [media], root))
+            media["record_id"] = row["id"]
+            media["repo_url"] = "https://github.com/example/other"
+            self.assertTrue(validate([row], [media], root))
+
     def test_path_aliases_and_nonfinite_metrics_are_rejected(self):
         for path in [".", "./demo", "demo/", "a//b", "a/./b", "demo/."]:
             row = fixture()

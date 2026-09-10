@@ -60,6 +60,12 @@ def safe_path(value):
             and "/./" not in value and (value == "" or Path(value).as_posix() == value))
 
 
+def ai_provenance(row):
+    """Absent optional attribution means unknown, never inferred from code style."""
+    return row.get("ai_provenance", {"status": "unknown", "models": [], "evidence": [],
+                                      "notes": "No creator model attribution has been established."})
+
+
 def validate(records, media, root=ROOT):
     errors = []
     def fail(label, message):
@@ -207,8 +213,32 @@ def validate(records, media, root=ROOT):
                 fail(label, "elapsed minutes must be nonnegative number or null")
             strings(research["known_unknowns"], label + ".research.known_unknowns")
             enum(research["integration_family"], {"threejs-r3f-candidate", "reference-only", "other-web-candidate"}, label + ".research.integration_family")
+        if "ai_provenance" in row:
+            provenance = row["ai_provenance"]
+            ai_label = label + ".ai_provenance"
+            if obj(provenance, {"status", "models", "evidence", "notes"}, ai_label):
+                enum(provenance["status"], {"creator_attributed", "unverified", "unknown"}, ai_label + ".status")
+                strings(provenance["models"], ai_label + ".models")
+                string(provenance["notes"], ai_label + ".notes")
+                models = provenance["models"]
+                if isinstance(models, list) and all(isinstance(m, str) for m in models):
+                    if len(models) != len(set(models)) or any(m != " ".join(m.split()) for m in models):
+                        fail(ai_label, "model names must be unique with normalized whitespace")
+                evidence = provenance["evidence"]
+                if not isinstance(evidence, list):
+                    fail(ai_label, "evidence must be an array")
+                else:
+                    for item in evidence:
+                        if obj(item, {"url", "claim"}, ai_label + ".evidence"):
+                            url(item["url"], ai_label + ".evidence.url")
+                            string(item["claim"], ai_label + ".evidence.claim")
+                if provenance["status"] == "creator_attributed" and (not models or not evidence):
+                    fail(ai_label, "creator attribution needs named models and creator evidence")
+                if provenance["status"] == "unknown" and models:
+                    fail(ai_label, "unknown attribution cannot name models")
     media_ids = set()
-    media_keys = {"id", "title", "notes", "uploaded_at", "repo_url", "source_page", "original_url", "license_evidence_url", "license_expression", "license_urls", "credit", "rights_status", "allowed_use", "local_path", "sha256", "width", "height", "alt", "capture_date", "capture_date_status", "downloaded_at", "reviewed_at", "version_relation", "modifications"}
+    media_record_ids = set()
+    media_keys = {"id", "record_id", "title", "notes", "uploaded_at", "repo_url", "source_page", "original_url", "license_evidence_url", "license_expression", "license_urls", "credit", "rights_status", "allowed_use", "local_path", "sha256", "width", "height", "alt", "capture_date", "capture_date_status", "downloaded_at", "reviewed_at", "version_relation", "modifications"}
     for item in media:
         if not obj(item, media_keys, "media"):
             continue
@@ -218,6 +248,12 @@ def validate(records, media, root=ROOT):
             if mid in media_ids:
                 fail(mid, "duplicate media id")
             media_ids.add(mid)
+        record_id = item["record_id"]
+        string(record_id, "media.record_id")
+        if isinstance(record_id, str):
+            if record_id in media_record_ids:
+                fail(mid, "duplicate media record_id")
+            media_record_ids.add(record_id)
         for key in ("repo_url", "source_page", "original_url", "license_evidence_url"):
             url(item[key], f"media.{key}")
         for key in ("title", "notes", "license_expression", "credit", "allowed_use", "alt", "version_relation", "modifications"):
@@ -232,9 +268,14 @@ def validate(records, media, root=ROOT):
                 fail("media", f"{key} must be positive integer")
         enum(item["capture_date_status"], {"source_declared", "unknown"}, "media.capture_date_status")
         string(item["capture_date"], "media.capture_date", nullable=item["capture_date_status"] == "unknown")
-        for key in ("uploaded_at", "downloaded_at", "reviewed_at"):
+        if item["uploaded_at"] is not None:
+            timestamp(item["uploaded_at"], "media.uploaded_at")
+        for key in ("downloaded_at", "reviewed_at"):
             timestamp(item[key], "media." + key)
-        enum(item["rights_status"], {"reviewed_for_catalog_display"}, "media.rights_status")
+        enum(item["rights_status"], {
+            "reviewed_for_catalog_display",
+            "official_source_local_display_rights_unresolved",
+        }, "media.rights_status")
         rel = item["local_path"]
         if not safe_path(rel) or not (root / rel).resolve().is_relative_to(root.resolve()):
             fail("media", "media path escapes catalog")
@@ -242,8 +283,11 @@ def validate(records, media, root=ROOT):
         path = root / rel
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != item["sha256"]:
             fail("media", "missing/tampered image")
-        if not any(isinstance(r, dict) and r.get("repo_url") == item["repo_url"] for r in records):
-            fail("media", "no matching research repository")
+        matching_record = next((r for r in records if isinstance(r, dict) and r.get("id") == record_id), None)
+        if matching_record is None:
+            fail("media", "no matching research record")
+        elif matching_record.get("repo_url") != item["repo_url"]:
+            fail("media", "record_id and repository do not identify the same research record")
     return errors
 
 
@@ -260,6 +304,7 @@ def load(root=ROOT):
         raise ValueError("\n".join(errors))
     if not records:
         raise ValueError("No research records found")
+    records = [dict(row, ai_provenance=ai_provenance(row)) for row in records]
     records.sort(key=lambda row: row["id"])
     return records, media
 
@@ -282,7 +327,8 @@ def sql_build(path, records, media):
             CREATE TABLE building_blocks(id TEXT PRIMARY KEY, project_id TEXT NOT NULL REFERENCES projects(id),
                 name TEXT NOT NULL, category TEXT NOT NULL, evidence_status TEXT NOT NULL,
                 source_path TEXT, evidence_url TEXT NOT NULL, notes TEXT NOT NULL);
-            CREATE TABLE media(id TEXT PRIMARY KEY, repo_url TEXT NOT NULL, media_json TEXT NOT NULL);
+            CREATE TABLE attributed_models(project_id TEXT NOT NULL REFERENCES projects(id), model TEXT NOT NULL, PRIMARY KEY(project_id, model));
+            CREATE TABLE media(id TEXT PRIMARY KEY, record_id TEXT NOT NULL UNIQUE REFERENCES projects(id), repo_url TEXT NOT NULL, media_json TEXT NOT NULL);
             CREATE VIRTUAL TABLE search USING fts5(project_id UNINDEXED, title, text, tokenize='unicode61');
         """)
         for row in records:
@@ -290,13 +336,15 @@ def sql_build(path, records, media):
                 row["id"], row["title"], row["repo_url"], row["subproject_path"], row["content_kind"],
                 row["runtime"]["name"], row["dimension"], row["demo"]["kind"], row["rights"]["code_license"],
                 json.dumps(row, ensure_ascii=False, sort_keys=True)))
+            if ai_provenance(row)["status"] == "creator_attributed":
+                db.executemany("INSERT INTO attributed_models VALUES (?,?)", [(row["id"], model) for model in ai_provenance(row)["models"]])
             db.execute("INSERT INTO search VALUES (?,?,?)", (row["id"], row["title"], text_index(row)))
             for i, block in enumerate(row["building_blocks"]):
                 db.execute("INSERT INTO building_blocks VALUES (?,?,?,?,?,?,?,?)", (
                     f"{row['id']}:{i+1}", row["id"], block["name"], block["category"],
                     block["status"], block["source_path"], block["evidence_url"], block["notes"]))
         for item in media:
-            db.execute("INSERT INTO media VALUES (?,?,?)", (item["id"], item["repo_url"], json.dumps(item, ensure_ascii=False, sort_keys=True)))
+            db.execute("INSERT INTO media VALUES (?,?,?,?)", (item["id"], item["record_id"], item["repo_url"], json.dumps(item, ensure_ascii=False, sort_keys=True)))
         if db.execute("PRAGMA integrity_check").fetchone()[0] != "ok":
             raise ValueError("SQLite integrity check failed")
 
@@ -340,21 +388,21 @@ def build(root=ROOT):
         writer = csv.writer(handle)
         writer.writerow(["id", "title", "kind", "genres", "capabilities", "runtime", "dimension",
                          "repo_url", "source_commit", "demo_url", "demo_kind", "code_license",
-                         "asset_status", "reuse_status", "source_checked_at"])
+                         "asset_status", "reuse_status", "source_checked_at", "ai_status", "ai_models", "ai_evidence"])
         for row in records:
             fields = [row["id"], row["title"], row["content_kind"], "; ".join(row["genres"]),
                 "; ".join(row["capability_tags"]), row["runtime"]["name"], row["dimension"],
                 row["repo_url"], row["source"]["commit"] or "", row["demo"]["url"] or "",
                 row["demo"]["kind"], row["rights"]["code_license"] or "unknown",
-                row["rights"]["asset_status"], row["rights"]["scope_reuse_status"], row["source"]["inspected_at"]]
+                row["rights"]["asset_status"], row["rights"]["scope_reuse_status"], row["source"]["inspected_at"], ai_provenance(row)["status"], "; ".join(ai_provenance(row)["models"]), "; ".join(e["url"] for e in ai_provenance(row)["evidence"])]
             # Do not allow spreadsheet formula execution when opening a CSV export.
             writer.writerow(["'" + f if str(f).startswith(("=", "+", "-", "@")) else f for f in fields])
     lines = ["# Researched games and building blocks", "", "Provisional research index. Source and asset scope still require review before reuse. Browser links have not necessarily been played; historical previews do not prove a current source/demo match.", "",
-             "| Project | Kind / runtime | Genres | Useful systems | Source / demo |",
-             "| --- | --- | --- | --- | --- |"]
+             "| Project | Kind / runtime | Genres | Useful systems | Source / demo | AI provenance |",
+             "| --- | --- | --- | --- | --- | --- |"]
     for row in records:
         demo = f" · [destination]({row['demo']['url']}) ({row['demo']['kind']})" if row["demo"]["url"] else " · no demo established"
-        lines.append(f"| {md(row['title'])} | {row['content_kind']} / {md(row['runtime']['name'])} | {md(', '.join(row['genres']))} | {md(', '.join(b['name'] for b in row['building_blocks']))} | [repo]({row['repo_url']}){demo} |")
+        lines.append(f"| {md(row['title'])} | {row['content_kind']} / {md(row['runtime']['name'])} | {md(', '.join(row['genres']))} | {md(', '.join(b['name'] for b in row['building_blocks']))} | [repo]({row['repo_url']}){demo} | {md(ai_provenance(row)['status'])}: {md(', '.join(ai_provenance(row)['models']) or 'unknown')} |")
     (root / "INDEX.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     coverage = {"records": len(records), "building_blocks": sum(len(r["building_blocks"]) for r in records),
                 "media": len(media), "pinned_source_records": sum(bool(r["source"]["commit"]) for r in records)}
@@ -370,12 +418,14 @@ def build(root=ROOT):
         "source_inspected_blocks": sum(b["status"] == "source_inspected" for r in records for b in r["building_blocks"]),
         "preview_reference": sum(bool(r["preview"]["source_url"]) for r in records),
     }
+    coverage["ai_provenance_status"] = dict(sorted(collections.Counter(ai_provenance(r)["status"] for r in records).items()))
+    coverage["creator_attributed_models"] = dict(sorted(collections.Counter(model for r in records if ai_provenance(r)["status"] == "creator_attributed" for model in ai_provenance(r)["models"]).items()))
     coverage["all_contract_field_completeness"] = completeness(records)
     write_json(root / "coverage.json", coverage)
     return coverage
 
 
-def search(query, root=ROOT, runtime=None, kind=None, limit=20):
+def search(query, root=ROOT, runtime=None, kind=None, limit=20, model=None):
     path = root / "catalog.sqlite"
     if not path.exists():
         raise ValueError("Build the index first")
@@ -392,6 +442,9 @@ def search(query, root=ROOT, runtime=None, kind=None, limit=20):
     if kind:
         sql += " AND p.kind=?"
         values.append(kind)
+    if model:
+        sql += " AND EXISTS (SELECT 1 FROM attributed_models a WHERE a.project_id=p.id AND a.model=?)"
+        values.append(model)
     sql += " ORDER BY bm25(search,0,4,1),p.id LIMIT ?"
     values.append(max(1, min(limit, 100)))
     with closing(sqlite3.connect(path.resolve().as_uri() + "?mode=ro", uri=True)) as db:
@@ -408,6 +461,7 @@ def main():
     query.add_argument("query")
     query.add_argument("--runtime")
     query.add_argument("--kind")
+    query.add_argument("--model", help="Exact creator-attributed model; never matches unverified claims")
     query.add_argument("--limit", type=int, default=20)
     query.add_argument("--json", action="store_true")
     args = parser.parse_args()
@@ -418,7 +472,7 @@ def main():
             records, media = load(args.root)
             print(f"PASS: {len(records)} research records; {len(media)} checked image files")
         else:
-            rows = search(args.query, args.root, args.runtime, args.kind, args.limit)
+            rows = search(args.query, args.root, args.runtime, args.kind, args.limit, args.model)
             if args.json:
                 print(json.dumps(rows, ensure_ascii=False, indent=2))
             else:

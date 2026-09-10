@@ -10,20 +10,32 @@ Read these sources progressively before changing the relevant area:
 2. `HeadStart-Starter-Package/Product-Direction-v0.4.md` — latest written product direction, target-aware recommendations, and proposed review skills.
 3. `HeadStart-Starter-Package/Playparts-Technical-PRD-v0.3.md` — baseline requirements, architecture, contracts, evidence gates, and rollout. Prefer the editable Markdown for reading; PDF and DOCX are companion editions.
 4. `HeadStart-Starter-Package/Playparts-UI-Prototype.html` and `HeadStart-Starter-Package/mockups/` — interaction and visual references. `mockups/screen-index.json` maps the screens; `Playparts-UI-Mockups.pdf` is the review book.
-5. `HeadStart-Starter-Package/playparts-plugin/README.md`, its relevant `skills/*/SKILL.md`, and `references/` — actual starter behavior and domain guidance.
+5. `HeadStart-Starter-Package/headstart-plugin/README.md`, its relevant `skills/*/SKILL.md`, and `references/` — actual starter behavior and domain guidance.
 6. [Prior planning conversation: Transcribe Game Platform Idea](https://chatgpt.com/share/6aa2d557-61dc-83ea-8919-c0a266c8dc49) — product rationale and research leads. Reviewed for this initialization on 2026-09-10; it is historical context, not proof that upstream projects or proposed services work.
 
 Current user instructions take precedence. For product conflicts, the v0.4 addendum extends v0.3; the revised PRD's explicit scope replaces earlier brainstorming. Mockups, prior assistant suggestions, and numerical examples do not establish implemented behavior or measured results. Keep this file current as implementation decisions become concrete.
 
-HeadStart is a naming candidate, not a finalized or cleared brand. Playparts is the older working name used in filenames, schema identifiers, and the plugin. Preserve existing identifiers until a deliberate naming migration is requested.
+The user selected HeadStart as the current app name and explicitly requested the naming migration on 10 September 2026. Active plugin identifiers are `headstart-plugin` and `headstart-*` skills. The catalog schema URI is `urn:headstart:catalog-record:0.1`; its fields and schema version are unchanged. Original specification filenames and historical review evidence retain their previous names so citations remain valid. This product naming decision does not establish trademark clearance.
+
+## Current demo target — 10 September 2026
+
+The user's north star is a **60-second audience demo video**: discover three appealing games with varied genres or styles, add them to a grab-bag, ask their Astra to mash up all three using actual source code, show the resulting coherent playable game, and show automatic royalty logging to the original developers for the pieces actually reused. The minute is the video's runtime, not a promised build latency. See [docs/demo-target.md](docs/demo-target.md) for the proposed sequence and evidence requirements.
+
+The user's MCP tool/plugin must automatically reference their selected grab-bag as context for Astra; manual URL pasting or a hand-assembled handoff does not fulfill this target. A bag reference resolves its selected revision, game/source versions and intended scope. Read-only catalog/bag retrieval remains distinct from authorized local integration. This is required target behavior, not an implemented service.
+
+This target supersedes an earlier single-capability-only demo and the deferral of royalty logging. Demonstrated source choices and adapters require evidence; varied examples do not establish universal cross-engine conversion. Royalty recording is required in the target; payment/settlement, rates and economic agreements remain unspecified. Do not fabricate amounts, agreements or obligations, or infer an economic agreement from open-source status. Records must distinguish selected games from actually reused pieces and identify unresolved royalty terms honestly.
+
+The three September simplicity boards predate this target. The next mockup pass should lead each discovery style into the shared bag → remix brief → Astra → playable result → creator royalty record journey. The final C storyboard now describes this target; the current landing implementation includes an illustrative generated ambient world video, while the playable remix and one-minute audience demo remain future work.
 
 ## Workspace reality
 
-- This workspace starts as a specification and review package, with a static HTML prototype, JSON contracts/research fixtures, and a Python inspection helper. There is no production catalog application, live API/MCP connector, signing service, hosted executor, or root application build/test configuration yet.
-- `HeadStart-Starter-Package/playparts-plugin/` contains plugin version `0.1.0`, its `.codex-plugin/plugin.json`, and six packaged skills: Find, Inspect, Plan, Integrate, Validate, Credit. They use the host agent's tools; they are not a standalone execution service.
+- The workspace now includes the supplied specification package, a local C4 frontend, a researched catalog and an installable local discovery plugin. A real read-only bundled MCP connector exists; there is still no shared production catalog API, verified-email service, signing service, hosted executor or root application build/test configuration.
+- `HeadStart-Starter-Package/headstart-plugin/` contains installed and client-verified plugin version `0.3.0`: canonical `plugin.json`, `mcp.json`, legacy `.codex-plugin/plugin.json`, and six skills (Find, Inspect, Plan, Integrate, Validate, Credit). Its local stdio MCP serves 52 bounded internal research references and 105 source-inspected building blocks from a self-contained metadata snapshot. It performs no target writes or source delivery. Authenticated handoffs, email verification, automatic website-bag retrieval and tested integration remain unavailable; unsupported reuse handoffs fail closed. See `docs/reviews/plugin-discovery/` for actual client evidence.
 - Art direction, performance review, and code review skills are specified in v0.4 but not implemented in the starter. Treat them as first-release work, not available features.
-- The schema, example record, and seed catalog exist both at the package root and under `playparts-plugin/references/`. Keep each pair synchronized when changing the shared contract or fixtures. Catalog schema and ontology versions start at `0.1`; version incompatible changes explicitly.
+- The schema, example record, and seed catalog exist both at the package root and under `headstart-plugin/references/`. Keep each pair synchronized when changing the shared contract or fixtures. Catalog schema and ontology versions start at `0.1`; version incompatible changes explicitly.
 - The six seed records are research candidates, with unresolved fields. The example record is intentionally unverified. Neither constitutes a published, reusable, or integration-tested catalog.
+- `research/catalog/` currently indexes 72 research entries and 145 candidate building blocks; the plugin intentionally ships only the reviewed 52-reference subset. Browser/model expansion records distinguish creator attribution from unverified or unknown model provenance, including contribution-specific limits. Collection membership and AI playing a game do not establish model-generated code. New preview references are not cleared imagery; the existing 12 licensed historical previews remain a separate evidence set.
+- GitHub stars are dated repository-level observations from `github-popularity.json`, shared across subprojects. Unknown, failed and non-GitHub values remain null; stars are neither quality nor rights/integration evidence. Refresh through `research/catalog/scripts/refresh_popularity.py`; do not fetch per visitor or invent zero counts.
 - Root MP4s and the `.screenstudio` directory are supplied reference media, not application source. Preserve them; inspect only relevant media when needed and do not infer its contents from filenames. Avoid including recordings, generated archives, or large binaries in source changes without a task-related reason.
 
 ## Product priorities
@@ -43,7 +55,7 @@ Preserve these emphases from the planning conversation:
 
 Collect or infer a small editable game brief: experience, style references, target platform/device, runtime/version, camera/input, scope, budgets, existing systems to preserve, and constraints. Ask only about decisions that materially affect the work. Recommendations explain reasons, alternatives, tradeoffs, and unknowns.
 
-Defer the earlier runtime SDK, player accounts/saves/leaderboards, marketplace payments, royalty settlement, managed game hosting, generalized conversion, and hosted repository integration. Public remix/provenance is optional; required source notices are not. Do not infer royalties or automatic remix tracking from open-source status or dependency relationships.
+Defer the earlier runtime SDK, player accounts/saves/leaderboards, marketplace payments, royalty payment/settlement, managed game hosting, generalized conversion, and hosted repository integration. The current demo target requires automatic reuse and royalty logging for actually reused pieces; its rates and agreements remain unspecified. Public remix/provenance sharing is optional; required source notices are not. Open-source status and dependency relationships alone establish neither actual reuse nor an economic agreement.
 
 ## Architecture and data rules
 
@@ -55,7 +67,7 @@ The PRD proposes a modular web application, Postgres metadata with lexical/trigr
 - Preserve claim origin, reviewer, timestamp, and uncertainty. Distinguish editorial opinion, static inspection, maintainer assertion, and measured results. Unknown measurements remain unknown, not zero.
 - Apply explicit runtime, platform, rights, and readiness constraints before ranking. Explain matches, group related project/component results, and offer explicit filter relaxation for empty results. Never silently drop a hard filter. Ranking weights in v0.3 are starting proposals, not validated facts.
 - Implement v0.4's GameBrief, StyleProfile, ReviewFinding, BenchmarkRun, Recommendation, and Recipe concepts through explicit versioned contracts. A tested component does not make an assembled recipe tested.
-- Keep source analysis separate from public browsing. Proposed MCP tools are `search_components`, `get_component`, and `prepare_handoff`; the starter does not provide them. Catalog retrieval must not perform target writes.
+- Keep source analysis separate from public browsing. The local plugin implements read-only `search_components` and `get_component` over its bundled snapshot. `prepare_handoff` remains unavailable and fails closed until the verified-email and scoped-handoff requirements are implemented. Metadata retrieval and public upstream links never authorize target writes or platform-controlled source delivery.
 
 ## Trust, rights, and integration boundaries
 
@@ -69,7 +81,9 @@ The PRD proposes a modular web application, Postgres metadata with lexical/trigr
 
 ## UI and evidence quality
 
-The user is developing new mockups, and all current mockups and preferred explorations remain provisional until they select a design baseline for implementation. Follow `docs/design-direction.md`. Do not lock implementation or review criteria to the older palette, typography, navigation, or layout. Keep presentation adaptable through design tokens and reusable components; preserve product behavior, evidence accuracy, accessibility, and responsive support. Research, backend, and local functionality can proceed while styling remains explicitly provisional. Final visual acceptance must reference the selected mockup path/version and desktop/mobile evidence; an unresolved design selection leaves the visual acceptance item open rather than blocking unrelated work.
+The user selected **C4 · Living-world landing** and its related C screens on 10 September 2026 as the current implementation baseline. Follow [docs/design-direction.md](docs/design-direction.md) and [the final storyboard draft](docs/design/C4-FINAL-STORYBOARD.md). C4b is the requested refinement: smaller companion, open ocean with fewer distant islands, retained boats and lively details, and a connected foreground stone bridge. Preserve original C4. C2 governs scrollable list browsing and Genre/Style/Runtime dropdowns; C3 governs image-grid browsing and the three-game bag; original C (C1) supplies brief/recommendation simplicity; C5 supplies mobile/motion intent. C14 drafts the Astra → playable remix → actual-used creator/royalty record continuation. Reference the exact artifact version/digest in UI acceptance, and independently compare actual desktop/mobile captures with applicable selected boards.
+
+Keep the prompt, primary action, “Browse all games” link and bag clear and accessible. Express the agent's presence through the living world. A small companion follows reachable paths/bridge; castles, birds, boats and gentle depth remain decorative first-party hero content, separate from untrusted game demos. Provide paused/reduced-motion, keyboard and mobile alternatives. The user subsequently explicitly approved this preferred direction (“I love it”) and requested a real layered interactive website. Track design alignment in [issue #26](https://github.com/lucasaerb/headstart/issues/26). The first implementation is the local frontend in `HeadStart-Starter-Package/site/dist/`, with independent world/companion/foreground layers, reachable bridge movement, local C4b motion video with static fallback, pause/reduced-motion and accessible browsing/bag. A live visual frontend does not establish a playable source-code remix, MCP bag retrieval or royalty services. Keep design tokens/components adaptable, preserve evidence accuracy and functional requirements, and keep other art explorations for comparison.
 
 Allow browsing, demo launch, and public upstream source links without login; platform-controlled source-content delivery requires the verified-email gate above. Prefer external demos; embedded untrusted games require a separate origin and restrictive sandbox. Load one demo after a user gesture, provide exit/fallback controls, and keep game loading separate from the catalog shell.
 
@@ -92,8 +106,12 @@ Commands available from the workspace root:
 python3 -m http.server 8000 --bind 127.0.0.1 --directory HeadStart-Starter-Package
 # Then open http://127.0.0.1:8000/Playparts-UI-Prototype.html
 
+# Working C4 frontend, mockup library and storyboard (same static server).
+python3 -m http.server 8765 --bind 127.0.0.1 --directory HeadStart-Starter-Package
+# http://127.0.0.1:8765/site/dist/
+
 # Read-only manifest inspection of an explicitly selected target game.
-python3 HeadStart-Starter-Package/playparts-plugin/scripts/inspect_project.py /path/to/selected/game
+python3 HeadStart-Starter-Package/headstart-plugin/scripts/inspect_project.py /path/to/selected/game
 
 # JSON syntax check only; this is not schema/evidence validation.
 python3 -m json.tool HeadStart-Starter-Package/catalog-record.schema.json > /dev/null

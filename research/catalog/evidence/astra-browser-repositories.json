@@ -1,0 +1,199 @@
+[
+  {
+    "repo_url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games",
+    "provider_id": 1357748847,
+    "commit": "4178b08d569372a1492878d73c6018a90f564e5b",
+    "description": "GPT-6 Astra \u7684 One Shot \u6e38\u620f\u6d4b\u8bd5\uff0c\u5305\u542b\u539f\u59cb Prompt \u4e0e\u53ef\u76f4\u63a5\u8fd0\u884c\u7684\u5355\u6587\u4ef6 HTML\u3002",
+    "homepage": null,
+    "default_branch": "main",
+    "api_license": null,
+    "tree_truncated": false,
+    "evidence_note": "API license classification is a lead only; individual record rights derive from inspected text."
+  },
+  {
+    "repo_url": "https://github.com/Hiraeth010/blackwater",
+    "provider_id": 1357520718,
+    "commit": "80e56105690c963e3263d075ade41afce533d44e",
+    "description": "Open-source Three.js tactical FPS: a rain-soaked terminal, procedural assets, and a complete single-player mission.",
+    "homepage": "https://blackwater-roan.vercel.app",
+    "default_branch": "main",
+    "api_license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "tree_truncated": false,
+    "evidence_note": "API license classification is a lead only; individual record rights derive from inspected text."
+  },
+  {
+    "repo_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra",
+    "provider_id": 1357960982,
+    "commit": "139a9287e763e5b592bb53fda97e5101db15db40",
+    "description": "A curated collection of fun games built with GPT-6 Astra, with source code, demos, and prompts. | GPT-6 Astra \u6e38\u620f\u7cbe\u9009",
+    "homepage": "https://astragames.aigccreative.com/",
+    "default_branch": "main",
+    "api_license": {
+      "key": "cc0-1.0",
+      "name": "Creative Commons Zero v1.0 Universal",
+      "spdx_id": "CC0-1.0",
+      "url": "https://api.github.com/licenses/cc0-1.0",
+      "node_id": "MDc6TGljZW5zZTY="
+    },
+    "tree_truncated": false,
+    "evidence_note": "API license classification is a lead only; individual record rights derive from inspected text."
+  },
+  {
+    "repo_url": "https://github.com/PhiloLabs/fable51-worlds",
+    "provider_id": 1355092388,
+    "commit": "d24028466530a15d58d3d94537e6317b84101589",
+    "description": "worlds via code, from fable 5.1",
+    "homepage": null,
+    "default_branch": "main",
+    "api_license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "tree_truncated": false,
+    "evidence_note": "API license classification is a lead only; individual record rights derive from inspected text."
+  },
+  {
+    "repo_url": "https://github.com/Ryan-fm/Dwellcraft",
+    "provider_id": 1362248332,
+    "commit": "5055fefac14f0fe7214c6cbb66853e62a2154a88",
+    "description": null,
+    "homepage": null,
+    "default_branch": "main",
+    "api_license": null,
+    "tree_truncated": false,
+    "evidence_note": "API license classification is a lead only; individual record rights derive from inspected text."
+  },
+  {
+    "repo_url": "https://github.com/asmoyou/toy2game",
+    "provider_id": 1358065997,
+    "commit": "39078515a13331a748e63bc75424ed83c773a72a",
+    "description": "\u628a\u5b9e\u7269\u73a9\u5177\u53d8\u6210\u6253\u5f00\u5373\u73a9\u7684 3D \u7f51\u9875\u6e38\u620f\u3002\u652f\u6301\u5355\u4eba\u89e3\u8c1c\u30012\u20134 \u4eba\u540c\u5c4f\u4e0e\u7535\u8111\u5bf9\u624b\uff0c\u9002\u914d\u624b\u673a\u3001\u5e73\u677f\u548c\u7535\u8111\u3002\u6e90\u7801\u5f00\u653e\uff0c\u975e\u5546\u4e1a\u4f7f\u7528\u514d\u8d39\uff0c\u5546\u7528\u987b\u7ecf\u4f5c\u8005\u6388\u6743\u3002",
+    "homepage": "https://games.asmo.top",
+    "default_branch": "main",
+    "api_license": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    },
+    "tree_truncated": false,
+    "evidence_note": "API license classification is a lead only; individual record rights derive from inspected text."
+  },
+  {
+    "repo_url": "https://github.com/derek-wangpch/OpenCityMaker",
+    "provider_id": 1359048119,
+    "commit": "ca45404de679baf5afb6b2504ef3c0af27b64ffc",
+    "description": "Open-source procedural 3D city-building 2048 game",
+    "homepage": "https://citymaker.0to1app.com",
+    "default_branch": "master",
+    "api_license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "tree_truncated": false,
+    "evidence_note": "API license classification is a lead only; individual record rights derive from inspected text."
+  },
+  {
+    "repo_url": "https://github.com/scottstts/Jelly-Baby",
+    "provider_id": 1358300780,
+    "commit": "a36879ca47a890638ed9e4feaf98304e4c8c417e",
+    "description": "A bouncy shiny jelly baby game",
+    "homepage": null,
+    "default_branch": "main",
+    "api_license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "spdx_id": "GPL-3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0",
+      "node_id": "MDc6TGljZW5zZTk="
+    },
+    "tree_truncated": false,
+    "evidence_note": "API license classification is a lead only; individual record rights derive from inspected text."
+  },
+  {
+    "repo_url": "https://github.com/stackloomdev/last-beacon",
+    "provider_id": 1359783843,
+    "commit": "102ca4cfca542f9cca7a6020b12e20db78ac0003",
+    "description": "A bilingual isometric island tower-defense game. Connect the grid, build defenses, and keep the last lighthouse alive.",
+    "homepage": "https://last-beacon.loupengju.cc",
+    "default_branch": "main",
+    "api_license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "tree_truncated": false,
+    "evidence_note": "API license classification is a lead only; individual record rights derive from inspected text."
+  },
+  {
+    "repo_url": "https://github.com/stackloomdev/silent-meridian",
+    "provider_id": 1361132035,
+    "commit": "5a3b800ff67913c6a310348cfd49cea34274f344",
+    "description": "An original bilingual browser mystery game: four chapters, thirteen puzzles, and a minute that never ended.",
+    "homepage": "https://silent-meridian.stackloom.org/",
+    "default_branch": "main",
+    "api_license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "tree_truncated": false,
+    "evidence_note": "API license classification is a lead only; individual record rights derive from inspected text."
+  },
+  {
+    "repo_url": "https://github.com/threapchills/MagicCarpetWizard",
+    "provider_id": 1357635893,
+    "commit": "6f949ee5d5f0915dae2c837da7308bcde63fa7f3",
+    "description": "Video Game made with GPT 6 Astra",
+    "homepage": null,
+    "default_branch": "main",
+    "api_license": null,
+    "tree_truncated": false,
+    "evidence_note": "API license classification is a lead only; individual record rights derive from inspected text."
+  },
+  {
+    "repo_url": "https://github.com/winchxyz/vesper-street",
+    "provider_id": 1361653529,
+    "commit": "fcc2f6eda84311194c0834de6cd7081c2965086f",
+    "description": "Isometric survival horror in Three.js: a drowned town built from procedural voxels, wet-street reflections, a flashlight that is your only weapon. No assets, runs in the browser.",
+    "homepage": null,
+    "default_branch": "main",
+    "api_license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "tree_truncated": false,
+    "evidence_note": "API license classification is a lead only; individual record rights derive from inspected text."
+  },
+  {
+    "repo_url": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5",
+    "provider_id": 1279798894,
+    "commit": "2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8",
+    "description": "A curated monorepo of interactive web experiments, 3D flight simulators, physics engines, web OS emulators, and creative tools.",
+    "homepage": "https://sites.google.com/view/hamzabellouch/",
+    "default_branch": "main",
+    "api_license": null,
+    "tree_truncated": false,
+    "evidence_note": "No project license established from retrieved source."
+  }
+]

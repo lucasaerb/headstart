@@ -1,6 +1,10 @@
-# Design direction while mockups evolve
+# Selected design direction — C4 living world
 
-The user is preparing new mockups. All existing prototypes and explorations, including currently preferred boards, are provisional until the user explicitly selects a baseline for implementation. A preference or an attractive reference does not finalize its palette, layout, typography, navigation arrangement, or component styling. Preserve the references for comparison.
+On 10 September 2026 the user explicitly selected **C4 · Living-world landing**, together with the related C screens, as the implementation baseline “for now.” The user requested a modest pullback, fewer distant islands, retained boats and environmental details, and a walkable foreground bridge like C9. The resulting **C4b** is the final refinement draft within that selected direction. C4 remains preserved as the original selection; C4b and the new continuation screens are authored drafts, not a separate claim of user approval.
+
+See [the final 60-second storyboard](design/C4-FINAL-STORYBOARD.md) and the [visual storyboard](../HeadStart-Starter-Package/design-explorations/2026-09-simplicity/FINAL-STORYBOARD.html). Apply C4/C4b to the landing, C2 to list browsing and dropdown filters, C3 to the image grid and three-game bag, original C (C1) to concise brief/recommendation behavior, and C5 to mobile/motion intent. C14 extends the design through Astra, the playable remix and the creator reuse/royalty record. The storyboard records exact reference digests and evidence needed for the actual demo.
+
+A, B and C6–C13 remain comparison explorations, not implementation alternatives unless the user reopens that choice. Preserve them. The visual baseline does not establish live product behavior.
 
 Research, catalog contracts, backend work and local functionality can proceed now against verified functional prerequisites. UI work may use explicitly provisional styling. Keep colors, type, spacing and related presentation choices in design tokens and reusable components; keep catalog data, rights and evidence rules, search behavior and integration logic separate from presentation. Avoid encoding a particular mockup's layout into domain contracts.
 

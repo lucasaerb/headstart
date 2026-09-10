@@ -16,3 +16,11 @@ Each record requires:
 - `research`: {author, started_at, completed_at, elapsed_minutes, selection_reason, known_unknowns: array, integration_family: threejs-r3f-candidate|reference-only|other-web-candidate}.
 
 Unknowns must remain explicit. Lists represent source-declared or editorial classifications, not tested platform support. Do not infer a source-demo revision match from a repository link. All initial scope reuse statuses remain review_required; internal discovery eligibility is a later documented review decision distinct from extraction and tested status.
+
+Local display media is keyed to the exact research `record_id`, with the canonical `repo_url` retained as a consistency check. A repository URL alone is not a safe image identity because independently useful monorepo subprojects can share one repository. `rights_status=reviewed_for_catalog_display` records an inspected display basis. `rights_status=official_source_local_display_rights_unresolved` records a user-directed local use of an authentic official-source image while preserving that no broader image license was established; it never authorizes publication or reuse.
+
+Dated browser sessions live in the separate `play-observations.json` enrichment so the immutable source-research claim remains distinct. Each observation names the record, status, timestamp, reviewer, environment, scenario, result, limitations and an explicit editorial-pick boolean. Only an `interactive_checked` observation may be a pick; incomplete loads never imply playability or fun.
+
+### Optional creator model provenance
+
+`ai_provenance` is a backward-compatible research-0.1 extension, independent of readiness and rights. When supplied, require `status`, `models`, `evidence` and `notes` as defined in DATA-DICTIONARY.md. A `creator_attributed` claim requires named models and a creator evidence URL/claim; `unknown` cannot name a model. Missing fields normalize to unknown in derived outputs. The validator checks structure, not whether a claim is true: the independent source reviewer must verify attribution before display as creator-attributed. Never label model authorship from repository appearance, a generic AI mention, or a model vendor alone.

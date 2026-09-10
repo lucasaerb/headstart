@@ -1,0 +1,82 @@
+{
+  "reviewer": "/root/critical_review",
+  "reviewed_at": "2026-09-10T20:21:40Z",
+  "verdict": "pass",
+  "blocking_gap": null,
+  "scope": "Browser/model catalog expansion, image-backed local dashboard, provenance, filters, responsive rendering and bounded play observations; excludes public publication, source delivery and integration",
+  "files": {
+    "HeadStart-Starter-Package/site/README.md": "6aed9a20ade73105da212318831e74ae2790dda9bf28eb1a7fb9861257f44e10",
+    "HeadStart-Starter-Package/site/dist/app.js": "b94e0d56354774ff0ab400364ee58ba5b01e610349eeb91e19f0063a40661a73",
+    "HeadStart-Starter-Package/site/dist/styles.css": "ffc1bbdab3c9db5e4291ed52ec10d52e39640aeb4231bb6832e818edf93c6672",
+    "HeadStart-Starter-Package/site/dist/index.html": "9626468d03008e642e7bd5e1ecff90152a5076c683c72af76561bcda6755ad40",
+    "HeadStart-Starter-Package/site/dist/catalog.js": "c231c3464931a14756a27dd7032c171ee8edbf494ed6c7ba87a957073a54a82c",
+    "HeadStart-Starter-Package/site/dist/provenance/validation.json": "66487f4e0ccea748abdc0ce79ba23a5485846f989fc4b5cf9480af6c5bba111b",
+    "HeadStart-Starter-Package/site/dist/provenance/snapshot/media-manifest.json": "7f03bfb39ed6e207b450fb2621b98834b2d8b037c11139ab3cec9764fc64cc22",
+    "HeadStart-Starter-Package/site/dist/provenance/snapshot/media-credits.md": "d134bd8c3ad049bd2d1b0e6534b33a3105610ca8b59402e1b721297f898950f6",
+    "HeadStart-Starter-Package/site/dist/provenance/snapshot/RESEARCH-CONTRACT.md": "4d5aa72292d40c8aa093e540cf1ea0ec4b740ffa25fe806837ba18cceb12740c",
+    "HeadStart-Starter-Package/site/dist/provenance/NOTICES.md": "d134bd8c3ad049bd2d1b0e6534b33a3105610ca8b59402e1b721297f898950f6",
+    "research/catalog/records/astra-browser.json": "3a558acd182571c88b3e6fb7dd1538e50c893cdf0a0c1870bcda828bbe083dc0",
+    "research/catalog/catalog.json": "3f055c11a9c39575a46da9e9dea2ba36274071f300e6603f3377c36eba2a5da6",
+    "research/catalog/catalog.csv": "bb55d7d2e9d28749efc1525dc5d97f4a56600bd615bf8b8d1c55c770c5573a07",
+    "research/catalog/catalog.sqlite": "c50f80b67e6cbda60caf0824b6e2a61bcd09a8468c2840abca6da3902b21a7c3",
+    "research/catalog/coverage.json": "b6588b3ff8722f54e4c494deea52928a7c500a72766c97af2b3fe393dde3ec91",
+    "research/catalog/INDEX.md": "7075c5438c530765d65a3afa4231e037214c6cc42058b4e7a9f8023aa48e2a3c",
+    "research/catalog/README.md": "ec3f161453341244d23aa4ee9c3dfe8f59891df2abfe7ff7847e1b6104177592",
+    "research/catalog/BROWSER-EXPANSION.md": "8214d98fdf7a8e7442359c45dc561f50b7ef3c9cfc69944cae4d621342819422",
+    "research/catalog/RESEARCH-CONTRACT.md": "4d5aa72292d40c8aa093e540cf1ea0ec4b740ffa25fe806837ba18cceb12740c",
+    "research/catalog/DATA-DICTIONARY.md": "69be3f29c4d3a358cfbff8d65ba9e137fa89652cdb2b48326dbc6f541aaf495b",
+    "research/catalog/internal-discovery-review.json": "8d538e77c7e45f02e8350ca4923a90b364ee1d667097331f4e0cde8dffb9f10f",
+    "research/catalog/github-popularity.json": "d52cb2bd8108ccb1496103eb36f760b9e305449f9be9e07dbeb6dfb06875090d",
+    "research/catalog/play-observations.json": "e67d731d76457f9368e15987c54589cb6ecd34e0ab2e55a8a057e1094fbdf5a0",
+    "research/catalog/media-manifest.json": "7f03bfb39ed6e207b450fb2621b98834b2d8b037c11139ab3cec9764fc64cc22",
+    "research/catalog/media-credits.md": "d134bd8c3ad049bd2d1b0e6534b33a3105610ca8b59402e1b721297f898950f6",
+    "research/catalog/contact-sheet.jpg": "41b46df128f30c6a5d4d85bdaeb1e588559c388311350e6b926d4595035892a0",
+    "research/catalog/evidence/astra-browser-source-audit.json": "0ad0a73c8da57d5ee31dfd319c3aebecffd34776acbb2be0f5d2f4aaa7b5368d",
+    "research/catalog/evidence/astra-browser-repositories.json": "b301a089a07979c35cb98de18f95773c75799bb8456de8c3bf11db4281226031",
+    "research/catalog/evidence/browser-preview-source-metadata.json": "9fb2ad6c8090ae62651b2b872104ecdda02a01e65bf179f9f51b88c8aef1b838",
+    "research/catalog/scripts/catalog.py": "c6a8716b3846a712d63b75a7fe5bbba744d3cf6860f747576e92669e7e758bed",
+    "research/catalog/scripts/build_site_catalog.py": "d21dc8f076c4bd46412e86d3e4ce662c8165a65fcbb65ee82c37b6c56eab140c",
+    "research/catalog/scripts/collect_browser_previews.py": "a2890b40185e4b0d8bd464f81c662d7775a2e66be026f07c7c66282cfc6c379b",
+    "research/catalog/scripts/media_contact_sheet.py": "788bd447eeab36794d76e052ef75ffee2c6ce031f2adb45c86373e34177b9a19",
+    "research/catalog/scripts/sync_site_provenance.py": "7c9fb9bc3f2b485e76bf9c6a96597ea6b26463af2c1f67c5ad35a0f37ba94f1f",
+    "research/catalog/scripts/test_catalog.py": "814b7d3846071daa1765b3b0d435931a4c24d0cff88097e7fe3448e3e61f0a5e",
+    "research/catalog/scripts/test_ai_provenance.py": "5077d5ddf3b292aaade7204cc27410b66cc331d8a3a060f8b0bd4d17a868d505",
+    "docs/planning/browser-model-expansion.md": "e4c872ef8e0c7d9aa760c05cfc9fb51a2f23076d333834ce636e64b7181bbf66",
+    "docs/reviews/browser-model-expansion/current-desktop.jpg": "ca06b48c966c28dab3ead2be1d23b9e75af463d9f68e6226bcec14cfc284558d",
+    "docs/reviews/browser-model-expansion/current-mobile-devtools.jpg": "de906e6fe55522825147189655fafe8c064fa1a6adcfeed675592a57e55b4caa",
+    "docs/reviews/browser-model-expansion/current-mobile-cards-devtools.jpg": "bd2c17d768d46c5c86b7c40ec0c2206d65a79ffb787078f1fee7d7138b9b9c30",
+    "docs/reviews/browser-model-expansion/UI-REVIEW.md": "a6eabb02196e372ddb93d76f02cb4382065f100e933392eda4f4de0970147626",
+    "docs/reviews/browser-model-expansion/independent-source-fetch.json": "a690896894d63ac9327afc11349bbd2f76b58c98eacbcbbb1b9357e897ebea33"
+  },
+  "sets": {
+    "HeadStart-Starter-Package/site/dist/assets/catalog": {
+      "file_count": 40,
+      "algorithm": "SHA-256 of sorted sha256sum output",
+      "digest": "1a6b1904aa85c5b39e393ff3bab9e68bda303c32994e932bbe0653007ef32500"
+    },
+    "research/catalog/media": {
+      "file_count": 40,
+      "algorithm": "SHA-256 of sorted sha256sum output for direct child files",
+      "digest": "4ffe42713116b5765a6f2011e809493ba8ac293b65f6ddb2ad5df08cac676e93"
+    }
+  },
+  "visual_evidence": {
+    "desktop_current": {
+      "path": "docs/reviews/browser-model-expansion/current-desktop.jpg",
+      "sha256": "ca06b48c966c28dab3ead2be1d23b9e75af463d9f68e6226bcec14cfc284558d",
+      "result": "PASS: current filter row, 40-image grid and representative crops"
+    },
+    "mobile_filters_current": {
+      "path": "docs/reviews/browser-model-expansion/current-mobile-devtools.jpg",
+      "sha256": "de906e6fe55522825147189655fafe8c064fa1a6adcfeed675592a57e55b4caa",
+      "viewport": "400x770",
+      "result": "PASS: responsive Category/model/sort controls with no horizontal clipping"
+    },
+    "mobile_cards_current": {
+      "path": "docs/reviews/browser-model-expansion/current-mobile-cards-devtools.jpg",
+      "sha256": "bd2c17d768d46c5c86b7c40ec0c2206d65a79ffb787078f1fee7d7138b9b9c30",
+      "viewport": "400x770",
+      "result": "PASS: image card, categories, runtime, model, actions and curator status"
+    }
+  }
+}

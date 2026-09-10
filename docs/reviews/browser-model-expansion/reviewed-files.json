@@ -1,0 +1,17 @@
+{
+  "reviewer": "/root/plugin_reviewer",
+  "reviewed_at": "2026-09-10T19:53:42.357392+00:00",
+  "scope": "Issues 29/30 catalog discovery, attribution, popularity; excludes concurrent hero changes",
+  "files": {
+    "HeadStart-Starter-Package/site/dist/app.js": "53696e335d41e755bc01ce77ae26636104763eacdf70d2a616cf3fd4893cae5b",
+    "HeadStart-Starter-Package/site/dist/styles.css": "fdf2eedef52459c8bde4cfa7c8a6d7e8a13f5c2b4b3f70a3d0436a858d6262eb",
+    "HeadStart-Starter-Package/site/dist/index.html": "eba63ba6fafb382f85f60c9a5bdfb157fc7e263bcf802af0728584398d456b49",
+    "HeadStart-Starter-Package/site/dist/catalog.js": "c5fd6d9d26cb0f99de74d9b4e82c9f6c4a83fcd5f9ddb0eb99bc5c921748f8da",
+    "research/catalog/records/astra-browser.json": "9b93375a118f0bfc8a7aa117a80243130e414a22e29f09bf1cabc021bce9a39f",
+    "research/catalog/internal-discovery-review.json": "8d538e77c7e45f02e8350ca4923a90b364ee1d667097331f4e0cde8dffb9f10f",
+    "research/catalog/github-popularity.json": "fbe5d688b368f92af3c34c43620805f4a7d7c2a4abef0cc29e4e90c124089c9b",
+    "research/catalog/scripts/build_site_catalog.py": "32d68b25527ec6c6bd178b173c3adca72dbe371c778eb7a02421d59b44ca9bcd",
+    "research/catalog/scripts/catalog.py": "bf6b6529afd22b16505c2709e74d5b8b316eed895971bb18c8725499a56e13b3",
+    "research/catalog/scripts/refresh_popularity.py": "c0def5a12242762195c08cfe08bc4cfd6b3ec86d84c6b706601977665ef3f541"
+  }
+}

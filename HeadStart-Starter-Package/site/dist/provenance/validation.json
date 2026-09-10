@@ -1,0 +1,14 @@
+{
+  "researchRecordCount": 76,
+  "displayedRecordCount": 43,
+  "imageCount": 43,
+  "displayedRowsHaveImages": true,
+  "snapshotHashes": {
+    "snapshot/media-manifest.json": "e29226dc244bb609b251ea0a9a5392c31a09ede45c8d71a57a80734cb08dbd9a",
+    "snapshot/media-credits.md": "85c459ff3cea8a3fea6883afdcea44a1ed22e8a006279d6b2797682a73bafcd6",
+    "snapshot/RESEARCH-CONTRACT.md": "4d5aa72292d40c8aa093e540cf1ea0ec4b740ffa25fe806837ba18cceb12740c",
+    "NOTICES.md": "85c459ff3cea8a3fea6883afdcea44a1ed22e8a006279d6b2797682a73bafcd6"
+  },
+  "imageByteHashChecks": "43 of 43 passed",
+  "networkChecksPerformed": false
+}

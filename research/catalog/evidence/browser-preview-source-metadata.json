@@ -1,0 +1,259 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-10T20:03:28.150833+00:00",
+  "scope": "Immutable upstream image files selected for local catalog preview; no game source executed.",
+  "records": [
+    {
+      "record_id": "astra-thunderfall",
+      "source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/thunderfall/gameplay.jpg",
+      "original_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/thunderfall/gameplay.jpg",
+      "sha256": "0d1cda2750293876526eb8752debb1c6ebc7e2a2c281b93c6a22e2e5870f8e0a",
+      "width": 1470,
+      "height": 1005,
+      "bytes": 179739
+    },
+    {
+      "record_id": "blackwater",
+      "source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/blackwater/gameplay.jpg",
+      "original_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/blackwater/gameplay.jpg",
+      "sha256": "0ffdf45c843dc5b5e7257037cbf00ef661ff78fb3ecafd3f25171754fd7a5dfa",
+      "width": 1280,
+      "height": 720,
+      "bytes": 90525
+    },
+    {
+      "record_id": "dungeon-forge",
+      "source_page": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/docs/preview.jpg",
+      "original_url": "https://raw.githubusercontent.com/majidmanzarpour/threejs-procedural-dungeon/0a2aa0980028cbbc77af6642b4232b45713dc5de/docs/preview.jpg",
+      "sha256": "256d06c9a586f934a7faf20660bf6bcc23b0570a4ce7be3c93c8afe9d8b20f3c",
+      "width": 1600,
+      "height": 967,
+      "bytes": 440200
+    },
+    {
+      "record_id": "ecctrl",
+      "source_page": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/docs/images/ecctrl-hero.gif",
+      "original_url": "https://raw.githubusercontent.com/pmndrs/ecctrl/e2cab804f9f15661a642e76f52d09f0b2db63f35/docs/images/ecctrl-hero.gif",
+      "sha256": "d9f7f6d44c393b0d3e953640ae5ea3d1247445a834578ec29cdbe747f325c10a",
+      "width": 400,
+      "height": 248,
+      "bytes": 3952519
+    },
+    {
+      "record_id": "fable-cities",
+      "source_page": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/assets/hero.jpg",
+      "original_url": "https://raw.githubusercontent.com/rawprogress/fable-cities/aea8b1035030952555395de0c1de14ba693a1427/assets/hero.jpg",
+      "sha256": "0590917b638e138ebb348e56b3748c71844ef2d6b9568f57b9906f06e97111f3",
+      "width": 1920,
+      "height": 1026,
+      "bytes": 654208
+    },
+    {
+      "record_id": "fable5-laas",
+      "source_page": "https://github.com/Braffolk/fable5-world-demo/blob/fd75fdb718996908aad3d22b59dfa297dc94298d/docs/readme-hero.jpg",
+      "original_url": "https://raw.githubusercontent.com/Braffolk/fable5-world-demo/fd75fdb718996908aad3d22b59dfa297dc94298d/docs/readme-hero.jpg",
+      "sha256": "d3fcd08f8f8afb633490665c55886498718aa0b90838339699f713984a9568b7",
+      "width": 1928,
+      "height": 1238,
+      "bytes": 660858
+    },
+    {
+      "record_id": "hexgl",
+      "source_page": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/css/mobile.jpg",
+      "original_url": "https://raw.githubusercontent.com/BKcore/HexGL/6addc95a2fce3bf05f4d751823cc054c61a16d68/css/mobile.jpg",
+      "sha256": "47a8905d72243b83964700a26cf62830abf8e69498f27658ea2620a732393d0e",
+      "width": 1280,
+      "height": 800,
+      "bytes": 251974
+    },
+    {
+      "record_id": "jelly-baby",
+      "source_page": "https://github.com/scottstts/Jelly-Baby/blob/a36879ca47a890638ed9e4feaf98304e4c8c417e/assets/screenshot.jpeg",
+      "original_url": "https://raw.githubusercontent.com/scottstts/Jelly-Baby/a36879ca47a890638ed9e4feaf98304e4c8c417e/assets/screenshot.jpeg",
+      "sha256": "ba4ac9b691356a3e4aee32ac8350b9fd558587fd2a031168f9f4350be892156e",
+      "width": 2160,
+      "height": 1432,
+      "bytes": 488018
+    },
+    {
+      "record_id": "last-beacon",
+      "source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/last-beacon/gameplay-en.png",
+      "original_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/last-beacon/gameplay-en.png",
+      "sha256": "a9eb4266e2e521716c9dca5cc317b9f0700f1190fc676eefd2df94ccd8c914ac",
+      "width": 1604,
+      "height": 1600,
+      "bytes": 576264
+    },
+    {
+      "record_id": "open-city-maker",
+      "source_page": "https://github.com/derek-wangpch/OpenCityMaker/blob/ca45404de679baf5afb6b2504ef3c0af27b64ffc/docs/images/citymaker-game.png",
+      "original_url": "https://raw.githubusercontent.com/derek-wangpch/OpenCityMaker/ca45404de679baf5afb6b2504ef3c0af27b64ffc/docs/images/citymaker-game.png",
+      "sha256": "d739b7560f9700730f4679d866fd1cf4c6af28921178444ceb1e8790b060f3bf",
+      "width": 1440,
+      "height": 1100,
+      "bytes": 268315
+    },
+    {
+      "record_id": "philolabs-death-star-trench-run",
+      "source_page": "https://github.com/PhiloLabs/fable51-worlds/blob/d24028466530a15d58d3d94537e6317b84101589/death-star-trench-run/media/preview.gif",
+      "original_url": "https://raw.githubusercontent.com/PhiloLabs/fable51-worlds/d24028466530a15d58d3d94537e6317b84101589/death-star-trench-run/media/preview.gif",
+      "sha256": "b2541981649e11240ae677a35a3b28227fe534f43b22e5ec74533d3cece0ac3e",
+      "width": 600,
+      "height": 338,
+      "bytes": 5254613
+    },
+    {
+      "record_id": "philolabs-death-star-trench-run-gpt-astra",
+      "source_page": "https://github.com/PhiloLabs/fable51-worlds/blob/d24028466530a15d58d3d94537e6317b84101589/death-star-trench-run-gpt-astra/media/preview.gif",
+      "original_url": "https://raw.githubusercontent.com/PhiloLabs/fable51-worlds/d24028466530a15d58d3d94537e6317b84101589/death-star-trench-run-gpt-astra/media/preview.gif",
+      "sha256": "279562395f523cac69d99ad9776ddbfa8495b83f2f10cc44a18ec3aae446c2d3",
+      "width": 800,
+      "height": 256,
+      "bytes": 5103100
+    },
+    {
+      "record_id": "philolabs-kyoto-higashiyama",
+      "source_page": "https://github.com/PhiloLabs/fable51-worlds/blob/d24028466530a15d58d3d94537e6317b84101589/kyoto-higashiyama/media/preview.gif",
+      "original_url": "https://raw.githubusercontent.com/PhiloLabs/fable51-worlds/d24028466530a15d58d3d94537e6317b84101589/kyoto-higashiyama/media/preview.gif",
+      "sha256": "1b19c0f940842324a308a55ee9c071b060471aac1b33ecafa13fb9f5987baf5c",
+      "width": 760,
+      "height": 428,
+      "bytes": 4893860
+    },
+    {
+      "record_id": "philolabs-kyoto-higashiyama-gpt-astra",
+      "source_page": "https://github.com/PhiloLabs/fable51-worlds/blob/d24028466530a15d58d3d94537e6317b84101589/kyoto-higashiyama-gpt-astra/media/preview.gif",
+      "original_url": "https://raw.githubusercontent.com/PhiloLabs/fable51-worlds/d24028466530a15d58d3d94537e6317b84101589/kyoto-higashiyama-gpt-astra/media/preview.gif",
+      "sha256": "6f24e1dc5cef00ee90e9bf0d0effa7d83dd1964e5631dd5d4dfb2f4bec8c69ee",
+      "width": 960,
+      "height": 302,
+      "bytes": 4018652
+    },
+    {
+      "record_id": "philolabs-union-square-sf",
+      "source_page": "https://github.com/PhiloLabs/fable51-worlds/blob/d24028466530a15d58d3d94537e6317b84101589/union-square-sf/media/preview.gif",
+      "original_url": "https://raw.githubusercontent.com/PhiloLabs/fable51-worlds/d24028466530a15d58d3d94537e6317b84101589/union-square-sf/media/preview.gif",
+      "sha256": "acaf3d4522a9e4d6cbea159b24721bba583c926cb39bffde1de1398ed4da1af2",
+      "width": 600,
+      "height": 338,
+      "bytes": 5032969
+    },
+    {
+      "record_id": "philolabs-union-square-sf-gpt-astra",
+      "source_page": "https://github.com/PhiloLabs/fable51-worlds/blob/d24028466530a15d58d3d94537e6317b84101589/union-square-sf-gpt-astra/media/preview.gif",
+      "original_url": "https://raw.githubusercontent.com/PhiloLabs/fable51-worlds/d24028466530a15d58d3d94537e6317b84101589/union-square-sf-gpt-astra/media/preview.gif",
+      "sha256": "56cbdfae540293adafc8d20ba2cd3b24cbc4d24cb5fd6f22855f862edb590798",
+      "width": 800,
+      "height": 252,
+      "bytes": 5064672
+    },
+    {
+      "record_id": "pmndrs-racing-game",
+      "source_page": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/thumbnail.webp",
+      "original_url": "https://raw.githubusercontent.com/pmndrs/racing-game/7816a5d954b75e6ad853ae4e4f0cbbd628072643/thumbnail.webp",
+      "sha256": "44088d796a27865624b38a86d89df8fb087b8360bf56a1ee8572892bc82cf44d",
+      "width": 1600,
+      "height": 845,
+      "bytes": 92072
+    },
+    {
+      "record_id": "silent-meridian",
+      "source_page": "https://github.com/stackloomdev/silent-meridian/blob/5a3b800ff67913c6a310348cfd49cea34274f344/docs/screenshots/depth-observatory.png",
+      "original_url": "https://raw.githubusercontent.com/stackloomdev/silent-meridian/5a3b800ff67913c6a310348cfd49cea34274f344/docs/screenshots/depth-observatory.png",
+      "sha256": "0dbe1f42c1b2a3dcc74bdd2b805f1b7999c70831da6f65b2d6948039b5820d5d",
+      "width": 1440,
+      "height": 900,
+      "bytes": 1458991
+    },
+    {
+      "record_id": "slimcity",
+      "source_page": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/screenshots/screenshot-01.png",
+      "original_url": "https://raw.githubusercontent.com/rbenzing/SlimCityGame/73e065226b8134cf44901a641076aeed3281f9f1/screenshots/screenshot-01.png",
+      "sha256": "b39876bd5cead3537ffb97ba72df43521aaf3ae7c8d611abcafb0462ed2222f5",
+      "width": 1173,
+      "height": 594,
+      "bytes": 327248
+    },
+    {
+      "record_id": "three-pathfinding",
+      "source_page": "https://user-images.githubusercontent.com/1848368/34424850-d79e5a24-ebf4-11e7-87c4-afc75cdc41bd.png",
+      "original_url": "https://user-images.githubusercontent.com/1848368/34424850-d79e5a24-ebf4-11e7-87c4-afc75cdc41bd.png",
+      "sha256": "91999166337568f4cf249957b1713334901a897338e7ecb8b2d4ae44fabe6548",
+      "width": 2180,
+      "height": 1632,
+      "bytes": 309172
+    },
+    {
+      "record_id": "three-terrain",
+      "source_page": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/demo/img/screenshot2.jpg",
+      "original_url": "https://raw.githubusercontent.com/IceCreamYou/THREE.Terrain/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/demo/img/screenshot2.jpg",
+      "sha256": "eec926ed43e62a9fee3bcbca89276235eff4c0fc6ad8f77f93fa0904bf1957ea",
+      "width": 722,
+      "height": 542,
+      "bytes": 68063
+    },
+    {
+      "record_id": "toy2game-balance-astronaut",
+      "source_page": "https://github.com/asmoyou/toy2game/blob/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/balance-astronaut.png",
+      "original_url": "https://raw.githubusercontent.com/asmoyou/toy2game/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/balance-astronaut.png",
+      "sha256": "a25411cea9de06f29dc59edda1fc9c74e50083446aef83b84d464d0ebdb335b6",
+      "width": 1200,
+      "height": 800,
+      "bytes": 184612
+    },
+    {
+      "record_id": "toy2game-flip-match",
+      "source_page": "https://github.com/asmoyou/toy2game/blob/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/flip-match.png",
+      "original_url": "https://raw.githubusercontent.com/asmoyou/toy2game/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/flip-match.png",
+      "sha256": "bbe8fe4ad505e32d9dcda3aef34d1fc829cd08ae844d08fa7a084e5f7aef4817",
+      "width": 1200,
+      "height": 800,
+      "bytes": 338111
+    },
+    {
+      "record_id": "toy2game-frog-feast",
+      "source_page": "https://github.com/asmoyou/toy2game/blob/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/frog-feast.png",
+      "original_url": "https://raw.githubusercontent.com/asmoyou/toy2game/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/frog-feast.png",
+      "sha256": "914d976332a876dc48c4deb229cf63d016a3eeae327c27013f10ad9d963f6eb6",
+      "width": 1200,
+      "height": 800,
+      "bytes": 501163
+    },
+    {
+      "record_id": "toy2game-parking-escape",
+      "source_page": "https://github.com/asmoyou/toy2game/blob/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/parking-escape.png",
+      "original_url": "https://raw.githubusercontent.com/asmoyou/toy2game/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/parking-escape.png",
+      "sha256": "843107a07ced823fd3a49aabe4cfaf6fbd455f83ffacb2bf4eb601081fd5c283",
+      "width": 1200,
+      "height": 800,
+      "bytes": 287963
+    },
+    {
+      "record_id": "toy2game-penguin-ice",
+      "source_page": "https://github.com/asmoyou/toy2game/blob/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/penguin-ice.png",
+      "original_url": "https://raw.githubusercontent.com/asmoyou/toy2game/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/penguin-ice.png",
+      "sha256": "d52eb5159cf7e2caa2a2c94d10d6ed6acc248fb20fb1b7652de76279c46f1199",
+      "width": 1200,
+      "height": 800,
+      "bytes": 137775
+    },
+    {
+      "record_id": "toy2game-rabbit-trap",
+      "source_page": "https://github.com/asmoyou/toy2game/blob/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/rabbit-trap.png",
+      "original_url": "https://raw.githubusercontent.com/asmoyou/toy2game/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/rabbit-trap.png",
+      "sha256": "2f68315c369da4238379bac7dc8e6283f72721d434d0cce4fadfc46aed081624",
+      "width": 1200,
+      "height": 800,
+      "bytes": 511747
+    },
+    {
+      "record_id": "vesper-street",
+      "source_page": "https://github.com/winchxyz/vesper-street/blob/fcc2f6eda84311194c0834de6cd7081c2965086f/media/01_vesper_street.jpg",
+      "original_url": "https://raw.githubusercontent.com/winchxyz/vesper-street/fcc2f6eda84311194c0834de6cd7081c2965086f/media/01_vesper_street.jpg",
+      "sha256": "c104e95e6989e75da77ff5ced1eecc6cc5927f06f54e06a69b3737721e6e9af6",
+      "width": 1280,
+      "height": 720,
+      "bytes": 314842
+    }
+  ]
+}

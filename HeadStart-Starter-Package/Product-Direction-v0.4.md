@@ -2,7 +2,7 @@
 
 PRD addendum v0.4 · 10 September 2026
 
-Status: proposed product requirements. HeadStart is a naming candidate, not a cleared or finalized brand. This addendum extends the delivered Playparts Technical PRD v0.3; existing mockups and plugin package retain their working names. The additional skills below are specified here and are not yet implemented in that starter package.
+Status: proposed product requirements. Naming update, 10 September 2026: the user selected HeadStart as the app name and requested migrating the active plugin to headstart-plugin. No trademark clearance is implied. This addendum extends the delivered Playparts Technical PRD v0.3; original specification and mockup artifacts retain their historical filenames. The additional skills below are specified here and are not yet implemented in that starter package.
 
 ## Product promise
 

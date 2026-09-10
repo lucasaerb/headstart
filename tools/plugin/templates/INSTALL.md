@@ -13,7 +13,7 @@ If you already have a marketplace named `personal`, resolve that name conflict b
 
    ```sh
    codex plugin marketplace add .
-   codex plugin add playparts-plugin@personal
+   codex plugin add headstart-plugin@personal
    ```
 
 3. Start a **new Codex thread** in your game project (or an empty project for discovery). Ask:
@@ -31,9 +31,9 @@ For an update, extract the new archive into a new permanent folder, run `codex p
 To uninstall:
 
 ```sh
-codex plugin remove playparts-plugin@personal
+codex plugin remove headstart-plugin@personal
 ```
 
 If this archive is your only configured source for the `personal` marketplace, you can also run `codex plugin marketplace remove personal`. Leave it configured if other plugins use it.
 
-`distribution-manifest.json` records the plugin version and SHA-256 of every payload file except itself. It detects accidental changes; it is not a publisher signature. See `plugins/playparts-plugin/README.md` for the skills and technical limits.
+`distribution-manifest.json` records the plugin version and SHA-256 of every payload file except itself. It detects accidental changes; it is not a publisher signature. See `plugins/headstart-plugin/README.md` for the skills and technical limits.

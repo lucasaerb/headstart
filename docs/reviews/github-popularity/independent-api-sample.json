@@ -1,0 +1,50 @@
+[
+  {
+    "repo_url": "https://github.com/stackloomdev/silent-meridian",
+    "evidence_url": "https://api.github.com/repos/stackloomdev/silent-meridian",
+    "author_observed": 0,
+    "reviewer_observed": 0,
+    "canonical_matches": true,
+    "checked_at": "2026-09-10T19:49:28.029955+00:00"
+  },
+  {
+    "repo_url": "https://github.com/threapchills/MagicCarpetWizard",
+    "evidence_url": "https://api.github.com/repos/threapchills/MagicCarpetWizard",
+    "author_observed": 0,
+    "reviewer_observed": 0,
+    "canonical_matches": true,
+    "checked_at": "2026-09-10T19:49:28.236369+00:00"
+  },
+  {
+    "repo_url": "https://github.com/ellisonleao/clumsy-bird",
+    "evidence_url": "https://api.github.com/repos/ellisonleao/clumsy-bird",
+    "author_observed": 1622,
+    "reviewer_observed": 1622,
+    "canonical_matches": true,
+    "checked_at": "2026-09-10T19:49:28.400703+00:00"
+  },
+  {
+    "repo_url": "https://github.com/Anuken/Mindustry",
+    "evidence_url": "https://api.github.com/repos/Anuken/Mindustry",
+    "author_observed": 28946,
+    "reviewer_observed": 28946,
+    "canonical_matches": true,
+    "checked_at": "2026-09-10T19:49:28.535023+00:00"
+  },
+  {
+    "repo_url": "https://github.com/mrdoob/three.js",
+    "evidence_url": "https://api.github.com/repos/mrdoob/three.js",
+    "author_observed": 115380,
+    "reviewer_observed": 115380,
+    "canonical_matches": true,
+    "checked_at": "2026-09-10T19:49:28.685501+00:00"
+  },
+  {
+    "repo_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra",
+    "evidence_url": "https://api.github.com/repos/MartinDelophy/awesome-gpt-6-astra",
+    "author_observed": 135,
+    "reviewer_observed": 135,
+    "canonical_matches": true,
+    "checked_at": "2026-09-10T19:49:28.843154+00:00"
+  }
+]

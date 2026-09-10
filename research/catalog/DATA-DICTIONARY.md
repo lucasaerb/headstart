@@ -26,9 +26,9 @@ Schema identifier: `research-0.1`. This is a research interchange format, not a 
 
 ## Media and observations
 
-`media-manifest.json` maps each specific preview to its canonical research repository, original file, file-page revision, declared capture date, download time, original hash/dimensions, credit, exact license expression, allowed scope and transformations. Capture date can remain unknown while upload date is known. Historical images do not attest the indexed source commit. `media-credits.md` and `media/licenses/` carry notices; `evidence/media-source-metadata.json` preserves the inspected Commons metadata.
+`media-manifest.json` maps each specific preview to one exact `record_id` and its canonical project reference, original file, file-page revision, declared capture date, download time, original hash/dimensions, credit, rights expression, allowed scope and transformations. Record identity prevents an image from one monorepo subproject from appearing on a different subproject that shares the repository URL. Capture and upstream upload dates can remain unknown; download and author observation times remain timestamped. Historical images do not attest the indexed source commit. Official publication proves provenance but does not by itself establish image reuse rights, so the manifest can retain a narrow local-display status with broader rights unresolved. `media-credits.md` and `media/licenses/` carry notices; evidence snapshots preserve inspected metadata.
 
-`evidence/link-checks.json` contains dated HTTP probes, errors and redirect results. Source-file audits preserve immutable URLs, fetch outcomes and hashes. Reports must not contain credentials, signed URL secrets or unrelated local/private data.
+`evidence/link-checks.json` contains dated HTTP probes, errors and redirect results. `play-observations.json` is a separate dashboard enrichment with a reviewer, environment, scenario, result, limitations and explicit editorial-pick decision. It may report `interactive_checked` or `load_incomplete` without rewriting the source-research record's `demo.interactive_status`; this preserves the difference between source inspection and a later bounded browser session. Source-file audits preserve immutable URLs, fetch outcomes and hashes. Reports must not contain credentials, signed URL secrets or unrelated local/private data.
 
 `internal-discovery-review.json` is a separate, narrowly scoped review: factual internal research display and links, with only explicitly licensed media. It must not be interpreted as public catalog publication or permission to download/merge upstream code. Verified-email access to platform-controlled reuse actions is planned separately.
 
@@ -37,3 +37,22 @@ Schema identifier: `research-0.1`. This is a research interchange format, not a 
 `coverage.json` reports record, repository-kind, runtime, genre/intent, dimension, image and block counts. Its `all_contract_field_completeness` reports populated versus null/empty/missing values for every leaf contract field. Empty root `subproject_path` is known, not missing; an actual numeric zero is not treated as unknown. Evidence/block arrays also have meaningful count summaries. Empty or null values may be intentional, so completeness is not a quality or eligibility score.
 
 `catalog.json`, `catalog.csv`, `catalog.sqlite`, `INDEX.md` and `coverage.json` are generated from sorted source records. The JSON export records source-file hashes. Search indexes descriptions, taxonomy and candidate-block notes; source JSON retains the original separate facets.
+
+## Optional AI model attribution (backward-compatible research-0.1 extension)
+
+`ai_provenance` records creator attribution separately from source inspection, rights, demo health and integration readiness. Its required nested fields, when present, are:
+
+- `status`: `creator_attributed`, `unverified`, or `unknown`.
+- `models`: unique model-name strings with normalized whitespace. Preserve the exact stated model/version; do not infer a newer generation from a vendor name. Preferred discovery labels include `GPT-6 Astra`, `Fable 5`, and `Fable 5.1`; the browser-first projection also recognizes creator statements using `Claude Fable 5` or `Claude Fable 5.1`. Preserve the evidenced spelling; this display priority does not merge exact model search filters.
+- `evidence`: `{url, claim}` objects with HTTPS links to attribution evidence and specific factual claims. `creator_attributed` requires at least one model and evidence item. Human review must establish that the linked creator statement supports the named model; syntax validation alone cannot establish authorship.
+- `notes`: limitations, attribution context and uncertainty. Creator attribution does not prove exclusively generated code, code quality, permission to reuse, or a tested game.
+
+Absent attribution is normalized to `unknown` with no named models in derived exports, leaving source files intact. Unknown status cannot name models. Unverified claims can retain reported model names but are not eligible for the exact creator-model search filter. JSON/SQLite preserve full evidence; CSV and Markdown expose the status and reported model names. Coverage separates status counts from creator-attributed model counts.
+
+`catalog.py search camera --model 'GPT-6 Astra'` applies an exact creator-attributed model constraint together with existing runtime/kind constraints. It never silently relaxes filters. Rebuild the SQLite index before using this new filter.
+
+## GitHub popularity observations
+
+`github-popularity.json` is a separate versioned snapshot (`schema_version: "1.0"`), with a UTC-aware batch `checked_at` and `repositories` array. Each repository records `repo_url`, `stars`, `status`, `checked_at`, `evidence_url`, and `notes`. Available counts require a nonnegative integer and a matching GitHub API repository URL. Unavailable/non-GitHub counts remain null; zero means an actual observed zero. Counts belong to the repository, so subprojects share their parent's count. They are popularity observations, not code-quality, model-authorship, play or reuse evidence.
+
+The site projection exposes `githubStars` and the complete `popularity` observation. It validates counts/status/timestamps/evidence identity before projection. Missing observations become unknown/null. Sorting is a presentation choice and must preserve explicit search filters.

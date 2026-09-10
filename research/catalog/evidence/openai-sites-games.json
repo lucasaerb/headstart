@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "scope": "Official OpenAI article/showcase metadata and gameplay-image provenance; no public source or reuse grant inferred.",
+  "records": [
+    {
+      "record_id": "openai-sites-void-explorer",
+      "showcase_url": "https://developers.openai.com/showcase/void-explorer",
+      "live_url": "https://void-explorer.openai.chatgpt.site/",
+      "article_url": "https://developers.openai.com/blog/how-to-build-games-with-astra",
+      "image_url": "https://cdn.openai.com/devhub/blog/how-to-build-games/orbital-flight-579e20d663e3.webp",
+      "sha256": "579e20d663e37424677536f6202ce102dcdcc409065d5eb40a7555e99b8d6a10",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 131138,
+      "observed_at": "2026-09-10T21:30:00Z",
+      "rights_note": "Official publication establishes provenance, not a reuse license."
+    },
+    {
+      "record_id": "openai-sites-sunwake",
+      "showcase_url": "https://developers.openai.com/showcase/sunwake",
+      "live_url": "https://sunwake-the-last-light.openai.chatgpt.site/",
+      "article_url": "https://developers.openai.com/blog/how-to-build-games-with-astra",
+      "image_url": "https://cdn.openai.com/devhub/blog/how-to-build-games/sunwake-water-f1c48b3f7fe8.webp",
+      "sha256": "f1c48b3f7fe8706dd558c8378f97863bbab8a21684ec640c38196f404cbeac11",
+      "width": 1440,
+      "height": 900,
+      "bytes": 143058,
+      "observed_at": "2026-09-10T21:30:00Z",
+      "rights_note": "Official publication establishes provenance, not a reuse license."
+    },
+    {
+      "record_id": "openai-sites-hollowflux",
+      "showcase_url": "https://developers.openai.com/showcase/hollowflux",
+      "live_url": "https://tideglass-drowned-vein.openai.chatgpt.site/",
+      "article_url": "https://developers.openai.com/blog/how-to-build-games-with-astra",
+      "image_url": "https://cdn.openai.com/devhub/blog/how-to-build-games/hollowflux-water-15cd30282861.webp",
+      "sha256": "15cd30282861fa4e2dff59bed31132663e11b6e98ce453289f0496f3733abc69",
+      "width": 1600,
+      "height": 900,
+      "bytes": 131366,
+      "observed_at": "2026-09-10T21:30:00Z",
+      "rights_note": "Official publication establishes provenance, not a reuse license."
+    }
+  ]
+}

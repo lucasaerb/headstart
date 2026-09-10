@@ -1,0 +1,18 @@
+[
+  {
+    "asset": "companion",
+    "model": "bria/remove-background",
+    "predictionId": "0csnx276z1rmy0d0hhrb7jw3qr",
+    "status": "succeeded",
+    "inputFileId": "YjNhODQxM2EtOGQ0NS00OWVlLWJhOTItNDVhMmFiMTQxMTky.png",
+    "outputBytes": 2830324
+  },
+  {
+    "asset": "foliage",
+    "model": "bria/remove-background",
+    "predictionId": "y7cwtxfv4nrmr0d0hhr821sh10",
+    "status": "succeeded",
+    "inputFileId": "MWNiYTEzOTktNWY0MC00MWM2LWFkZDctNTJiODc2OTRjNmM1.png",
+    "outputBytes": 1906326
+  }
+]

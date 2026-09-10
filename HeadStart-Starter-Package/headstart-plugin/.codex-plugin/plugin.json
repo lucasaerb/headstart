@@ -1,0 +1,30 @@
+{
+  "name": "headstart-plugin",
+  "version": "0.3.0",
+  "description": "Discover game codebase starting points through a local, read-only research catalog and six focused coding-agent skills.",
+  "author": {
+    "name": "HeadStart project"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "HeadStart",
+    "shortDescription": "Find game starting points inside Codex",
+    "longDescription": "Search 52 source-inspected game and framework references locally, compare evidence and inspect pinned starting points. Six skills guide discovery through authorized local work. Source exports, email verification, website bag sync and tested integrations are not implemented.",
+    "developerName": "HeadStart project",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Find starting points for my dream game.",
+      "Find a camera system for my Three.js game.",
+      "Compare game codebases for a browser city builder."
+    ],
+    "brandColor": "#315BE8"
+  },
+  "keywords": [
+    "games",
+    "building-blocks",
+    "skills",
+    "threejs",
+    "provenance"
+  ]
+}

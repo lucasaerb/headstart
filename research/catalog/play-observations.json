@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "records": [
+    {
+      "record_id": "open-city-maker",
+      "status": "interactive_checked",
+      "checked_at": "2026-09-10T20:10:00Z",
+      "reviewer": "/root",
+      "environment": "Google Chrome on macOS, desktop window, public production demo",
+      "scenario": "Loaded the Beijing board and completed left, up and right moves through the game's accessible controls.",
+      "result": "Controls responded, matching buildings merged, score advanced from 0 to 4, the Hutong cluster unlocked and progress persisted locally. The immediate feedback and readable city-building progression support a bounded editorial recommendation.",
+      "limitations": "Brief representative session only; no mobile, long-session, performance, every-city, save-recovery or source/deployment parity test.",
+      "editorial_pick": true
+    },
+    {
+      "record_id": "pmndrs-racing-game",
+      "status": "load_incomplete",
+      "checked_at": "2026-09-10T20:11:00Z",
+      "reviewer": "/root",
+      "environment": "Google Chrome on macOS, desktop window, public production demo",
+      "scenario": "Loaded the race HUD, opened the start state and confirmed the page entered its audio-playing mode.",
+      "result": "The Three.js scene and control HUD loaded, but sustained steering/acceleration was not established through the available automation controls.",
+      "limitations": "Does not establish successful driving, game completion, mobile controls, performance or source/deployment parity; it is not an editorial fun verdict.",
+      "editorial_pick": false
+    },
+    {
+      "record_id": "fable5-laas",
+      "status": "load_incomplete",
+      "checked_at": "2026-09-10T20:08:00Z",
+      "reviewer": "/root",
+      "environment": "Google Chrome on macOS, desktop window, public production demo",
+      "scenario": "Opened the Fable 5 Three.js WebGPU demo and waited through its staged terrain and vegetation loading sequence.",
+      "result": "The loader advanced through terrain and vegetation stages, but the world did not reach a confirmed interactive state during the bounded session.",
+      "limitations": "High memory use and incomplete load; no movement, performance, mobile or source/deployment parity conclusion.",
+      "editorial_pick": false
+    }
+  ]
+}

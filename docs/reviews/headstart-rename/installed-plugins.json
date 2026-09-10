@@ -1,0 +1,23 @@
+{
+  "installed": [
+    {
+      "pluginId": "headstart-plugin@personal",
+      "name": "headstart-plugin",
+      "marketplaceName": "personal",
+      "version": "0.3.0",
+      "installed": true,
+      "enabled": true,
+      "source": {
+        "source": "local",
+        "path": "~/Documents/GameDev/dist/headstart-plugin/current/plugins/headstart-plugin"
+      },
+      "marketplaceSource": {
+        "sourceType": "local",
+        "source": "~/Documents/GameDev/dist/headstart-plugin/current"
+      },
+      "installPolicy": "AVAILABLE",
+      "authPolicy": "ON_INSTALL"
+    }
+  ],
+  "available": []
+}

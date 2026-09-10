@@ -1,0 +1,32 @@
+[
+  {
+    "width": 320,
+    "cardBottom": 558.84375,
+    "helperTop": 693.984375,
+    "unobscured": true
+  },
+  {
+    "width": 390,
+    "cardBottom": 497.03125,
+    "helperTop": 693.984375,
+    "unobscured": true
+  },
+  {
+    "width": 768,
+    "cardBottom": 539,
+    "helperTop": 616.796875,
+    "unobscured": true
+  },
+  {
+    "width": 900,
+    "cardBottom": 543.28125,
+    "helperTop": 613.953125,
+    "unobscured": true
+  },
+  {
+    "width": 1024,
+    "cardBottom": 543.28125,
+    "helperTop": 613.953125,
+    "unobscured": true
+  }
+]

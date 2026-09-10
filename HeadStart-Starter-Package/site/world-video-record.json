@@ -1,0 +1,21 @@
+{
+  "model": "google/veo-3.1",
+  "id": "5gc8b12b81rmw0d0hkestpwjzc",
+  "status": "succeeded",
+  "prompt": "Locked-off 8-second game-world cinemagraph using the supplied image as the exact composition. Preserve the castle, connected stone bridge, windmill, blue flags, sailboats, waterfalls, coastline and foreground flowers in their exact positions and scale. Animate only subtle existing motion: windmill blades turn slowly in place, blue flags flutter in place, waterfalls flow within their channels, ocean glints shimmer, and boats bob a few pixels. The camera never moves. No new objects or characters. Nothing crosses the castle or upper-left copy area. Clean stable stylized 3D game art, calm and premium, seamless loop, no cuts, no lighting changes, no fog, no smoke, no large mist, no moving foreground banner, no text, no UI, no audio.",
+  "negativePrompt": "camera movement, zoom, pan, dolly, reframing, crop change, new islands, new characters, extra birds, smoke, fog, white plume, large mist, banner sliding across frame, objects melting, castle deformation, bridge deformation, cuts, text, UI, audio",
+  "settings": {
+    "duration": 8,
+    "resolution": "1080p",
+    "aspect_ratio": "16:9",
+    "generate_audio": false,
+    "seed": 90211,
+    "firstAndLastFrame": "assets/world.png"
+  },
+  "outputBytes": 10194522,
+  "candidatePath": "dist/assets/world-motion.mp4",
+  "postProcess": "Cropped the model's 1920x1080 letterboxed output to the centered 1620x1080 3:2 content plate with ffmpeg; encoded H.264 CRF 16 for the local hero.",
+  "sha256": "7c7801465bfaa6bc2f7e3a3bcc52c13deb6de32d891e79f603bc41a05b4ccaf4",
+  "deliveredDimensions": "1620x1080",
+  "reviewStatus": "PASS — independently reviewed by /root/live_landing_reviewer; see docs/reviews/headstart-live-world-video.md"
+}

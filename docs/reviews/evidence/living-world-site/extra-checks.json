@@ -1,0 +1,26 @@
+[
+  {
+    "width": 1440,
+    "decoded": 12,
+    "skip": true,
+    "dialogTabTrap": true,
+    "offscreenCSS": true
+  },
+  {
+    "width": 390,
+    "decoded": 12,
+    "skip": true,
+    "dialogTabTrap": true,
+    "offscreenCSS": true
+  },
+  {
+    "width": 320,
+    "decoded": 12,
+    "skip": true,
+    "dialogTabTrap": true,
+    "offscreenCSS": true
+  },
+  {
+    "catalogImageFailure": "neutral fallback and bag survives"
+  }
+]

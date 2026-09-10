@@ -266,6 +266,16 @@
       "local-release-pilot"
     ]
   },
+  "c4-design-conformance": {
+    "number": 26,
+    "url": "https://github.com/lucasaerb/headstart/issues/26",
+    "title": "Conform HeadStart UI to the selected C4 living-world storyboard",
+    "priority": "P0",
+    "phase": "Selected design implementation",
+    "depends_on": [
+      "discovery-ui"
+    ]
+  },
   "verified-email-access": {
     "number": 27,
     "url": "https://github.com/lucasaerb/headstart/issues/27",
@@ -276,5 +286,53 @@
       "catalog-api",
       "game-brief-collections"
     ]
+  },
+  "plugin-discovery": {
+    "number": 28,
+    "url": "https://github.com/lucasaerb/headstart/issues/28",
+    "title": "P0 \u00b7 Ship installable Codex plugin for grounded game discovery",
+    "priority": "P0",
+    "phase": "Local plugin",
+    "depends_on": [
+      "catalog-research"
+    ],
+    "state": "closed",
+    "review_status": "PASS"
+  },
+  "browser-model-expansion": {
+    "number": 29,
+    "url": "https://github.com/lucasaerb/headstart/issues/29",
+    "title": "P0 \u00b7 Expand Three.js browser games with evidenced AI-model labels",
+    "priority": "P0",
+    "phase": "Browser discovery",
+    "depends_on": [
+      "catalog-research"
+    ],
+    "state": "closed",
+    "review_status": "PASS"
+  },
+  "github-popularity": {
+    "number": 30,
+    "url": "https://github.com/lucasaerb/headstart/issues/30",
+    "title": "P0 \u00b7 Show GitHub stars and rank catalog popularity",
+    "priority": "P0",
+    "phase": "Browser discovery",
+    "depends_on": [
+      "browser-model-expansion"
+    ],
+    "state": "closed",
+    "review_status": "PASS"
+  },
+  "headstart-rename": {
+    "number": 31,
+    "url": "https://github.com/lucasaerb/headstart/issues/31",
+    "title": "P0 \u00b7 Adopt HeadStart app and plugin naming",
+    "priority": "P0",
+    "phase": "Local plugin",
+    "depends_on": [
+      "plugin-discovery"
+    ],
+    "state": "closed",
+    "review_status": "PASS"
   }
 }

@@ -1,5 +1,7 @@
 # Research shortlist — 10 September 2026
 
+> Historical first-pass snapshot (10 September 2026): the 43-entry / 87-block counts and priorities below describe the original cohort. The current [browser-first expansion](BROWSER-EXPANSION.md) adds 33 entries / 66 blocks, bringing the research index to 76 / 153. Six new blocks come only from official descriptions because the three OpenAI Sites games have no linked public source. Its attribution and rights caveats must be read alongside this snapshot.
+
 Start with these 12 projects to compare real games and useful systems. This order is an editorial research priority, not a quality score, rights clearance or integration verdict. Browser-first candidates lead; native simulation and strategy projects remain valuable references with explicit engine limits.
 
 Browse the full [index](INDEX.md) and [machine-readable catalog](catalog.json). The record IDs below are the stable `id` values in that catalog; author fixtures are [web.json](records/web.json) and [native.json](records/native.json). Each source link is pinned to the researched commit. External demos have not been interactively tested.

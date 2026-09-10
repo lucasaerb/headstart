@@ -1,0 +1,54 @@
+{
+  "url": "http://127.0.0.1:8765/site/dist/",
+  "reviewer": "/root/live_landing_reviewer",
+  "browser": "Google Chrome 152.0.7977.84",
+  "sessions": [
+    {
+      "viewport": "1440x1000",
+      "video": { "readyState": 4, "duration": 8, "currentTimeAdvanced": true, "paused": false },
+      "pause": { "videoPaused": true, "timeDeltaAfter500ms": 0, "cssAnimationPlayState": "paused" },
+      "resume": { "videoPaused": false, "readyState": 4, "currentTimeAdvanced": true },
+      "fallback": { "heroDataVideo": "fallback", "videoError": true, "posterVisible": true },
+      "verdict": "PASS"
+    },
+    {
+      "viewport": "1440x1000",
+      "flags": ["--force-prefers-reduced-motion"],
+      "reducedMotion": { "matches": true, "heroPaused": true, "currentSrc": "", "readyState": 0, "networkState": 0, "currentTime": 0 },
+      "verdict": "PASS"
+    },
+    {
+      "viewport": "390x844",
+      "touch": true,
+      "video": { "readyState": 4, "paused": false },
+      "companionRect": { "x": 121.90625, "y": 693.984375, "width": 65, "height": 65 },
+      "scrollWidth": 390,
+      "horizontalOverflow": false,
+      "verdict": "PASS"
+    },
+    {
+      "viewport": "320x844",
+      "touch": true,
+      "video": { "readyState": 4, "paused": false },
+      "companionRect": { "x": 85.5078125, "y": 693.984375, "width": 65, "height": 65 },
+      "scrollWidth": 320,
+      "horizontalOverflow": false,
+      "verdict": "PASS"
+    }
+  ],
+  "coreRegression": { "browseLink": true, "genreFilter": "5 racing projects", "threeGameBag": true, "mobileBagDialog": true, "verdict": "PASS" },
+  "videoArtifact": {
+    "path": "HeadStart-Starter-Package/site/dist/assets/world-motion.mp4",
+    "sha256": "7c7801465bfaa6bc2f7e3a3bcc52c13deb6de32d891e79f603bc41a05b4ccaf4",
+    "width": 1620,
+    "height": 1080,
+    "fps": 24,
+    "frames": 192,
+    "durationSeconds": 8,
+    "bytes": 10194522,
+    "audio": false,
+    "verdict": "PASS",
+    "finding": "Contact sheet shows a stable clean composition without the previous plume/banner artifact; motion remains subtle and illustrative."
+  },
+  "overallVerdict": "PASS"
+}
