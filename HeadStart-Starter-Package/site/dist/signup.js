@@ -66,12 +66,12 @@ demoForm.addEventListener('submit', async event => {
   const status = document.getElementById('demo-email-status');
   button.disabled = true; status.textContent = 'Saving your email…';
   const choice = demoChoice;
+  const email = normalizeEmail(demoForm.elements.email.value);
   try {
-    const response = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: demoForm.elements.email.value, website: demoForm.elements.website.value, consentVersion: 'headstart-updates-2026-09-10', purpose: 'demo-access', updates: demoForm.elements.updates.checked, gameId: choice.gameId }), signal: AbortSignal.timeout(15000) });
+    const response = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, website: demoForm.elements.website.value, consentVersion: 'headstart-updates-2026-09-10', purpose: 'demo-access', updates: demoForm.elements.updates.checked, gameId: choice.gameId }), signal: AbortSignal.timeout(15000) });
     const result = await response.json();
     if (!response.ok) throw new Error(result.message || 'We couldn’t save your email. Please try again.');
     if (attempt !== demoAttempt || !demoDialog.open) return;
-    const email = normalizeEmail(demoForm.elements.email.value);
     const remembered = writeRememberedEmail(email);
     rememberedEmail = remembered ? email : '';
     demoSessionSaved = true; demoForm.reset(); demoForm.hidden = true; renderRememberedEmail();

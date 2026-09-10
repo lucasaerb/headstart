@@ -27,7 +27,7 @@ class FakeElement {
   focus() { this.focused = true; }
 }
 
-function createHarness({ stored = null, storageThrows = false, responseOk = true, fetchError = null, missingFooter = false } = {}) {
+function createHarness({ stored = null, storageThrows = false, responseOk = true, fetchError = null, missingFooter = false, responseGate = null } = {}) {
   const elements = Object.fromEntries([
     'remembered-email', 'remembered-email-value', 'email-preference-status', 'forget-email',
     'demo-email-dialog', 'demo-email-form', 'demo-launch', 'demo-email-status', 'demo-email-context', 'demo-email'
@@ -49,6 +49,7 @@ function createHarness({ stored = null, storageThrows = false, responseOk = true
   const requests = [];
   const fetch = async (url, options) => {
     requests.push({ url, body: JSON.parse(options.body) });
+    if (responseGate) await responseGate;
     if (fetchError) throw fetchError;
     return { ok: responseOk, json: async () => ({ message: responseOk ? 'Saved.' : 'Not saved.' }) };
   };
@@ -94,6 +95,35 @@ test('demo marketing opt-in is sent only when explicitly selected', async () => 
   harness.elements['demo-email-form'].elements.updates.checked = true;
   await harness.elements['demo-email-form'].dispatch('submit');
   assert.equal(harness.requests[0].body.updates, true);
+});
+
+test('delayed success remembers only the submitted address despite an in-flight edit', async () => {
+  let finish;
+  const responseGate = new Promise(resolve => { finish = resolve; });
+  const harness = createHarness({ responseGate });
+  await harness.clickDemo();
+  harness.elements['demo-email'].value = ' Submitted@Example.COM ';
+  const pending = harness.elements['demo-email-form'].dispatch('submit');
+  assert.equal(harness.requests[0].body.email, 'submitted@example.com');
+  harness.elements['demo-email'].value = 'unsaved@example.com';
+  assert.equal(harness.data.size, 0);
+  finish(); await pending;
+  assert.equal(JSON.parse(harness.data.get('headstart.remembered-email.v1')).email, 'submitted@example.com');
+  assert.equal(harness.elements['remembered-email-value'].textContent, 'submitted@example.com');
+});
+
+test('delayed failure remembers neither submitted nor edited address', async () => {
+  let finish;
+  const responseGate = new Promise(resolve => { finish = resolve; });
+  const harness = createHarness({ responseGate, responseOk: false });
+  await harness.clickDemo();
+  harness.elements['demo-email'].value = 'submitted@example.com';
+  const pending = harness.elements['demo-email-form'].dispatch('submit');
+  harness.elements['demo-email'].value = 'unsaved@example.com';
+  finish(); await pending;
+  assert.equal(harness.data.size, 0);
+  assert.equal(harness.elements['demo-email'].value, 'unsaved@example.com');
+  assert.equal((await harness.clickDemo()).prevented, true);
 });
 
 test('failed requests do not remember an email or unlock later demos', async () => {
