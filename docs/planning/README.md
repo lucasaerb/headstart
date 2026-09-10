@@ -6,6 +6,8 @@ P0 establishes the research, local discovery and real plugin reuse workflow. P1 
 
 Every issue requires a coder/author subagent, a separate critical reviewer, meaningful evidence, fixes and re-review until an explicit PASS. UI work includes desktop/mobile screenshot inspection and design critique. See [the workflow](../development-workflow.md).
 
+**Design is provisional.** New mockups are in progress. Follow [the design-direction policy](../design-direction.md): preserve functional outcomes while keeping visual decisions adaptable to the mockup the user selects. Research and functional implementation can proceed; final visual acceptance identifies the selected reference and version.
+
 | Order | Priority | Issue | Depends on |
 | --- | --- | --- | --- |
 | 01 | P0 | [01 · Research the example-game database, real previews, categories and source links](https://github.com/lucasaerb/headstart/issues/1) | — |

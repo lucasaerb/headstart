@@ -9,6 +9,7 @@ HeadStart is a working name. The existing specification and plugin starter use t
 - [Project instructions](AGENTS.md)
 - [Prioritized build backlog](docs/planning/README.md)
 - [Coder and reviewer workflow](docs/development-workflow.md)
+- [Provisional design direction](docs/design-direction.md)
 - [Latest product direction](HeadStart-Starter-Package/Product-Direction-v0.4.md)
 - [Technical PRD](HeadStart-Starter-Package/Playparts-Technical-PRD-v0.3.md)
 - [Review package inventory](HeadStart-Starter-Package/START-HERE.md)

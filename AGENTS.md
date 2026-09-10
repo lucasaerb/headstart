@@ -67,7 +67,7 @@ The PRD proposes a modular web application, Postgres metadata with lexical/trigr
 
 ## UI and evidence quality
 
-Use the existing mockups as the visual starting point: light surfaces, dark readable type, blue actions, prominent game previews, capability navigation, and clear detail/source/rights panels. Keep both project discovery and capability selection visible. Support keyboard navigation, visible focus, mobile discovery, accessible filters, and useful empty/error states.
+The user is developing new mockups, and all current mockups and preferred explorations remain provisional until they select a design baseline for implementation. Follow `docs/design-direction.md`. Do not lock implementation or review criteria to the older palette, typography, navigation, or layout. Keep presentation adaptable through design tokens and reusable components; preserve product behavior, evidence accuracy, accessibility, and responsive support. Research, backend, and local functionality can proceed while styling remains explicitly provisional. Final visual acceptance must reference the selected mockup path/version and desktop/mobile evidence; an unresolved design selection leaves the visual acceptance item open rather than blocking unrelated work.
 
 Allow browsing, demo launch, and source viewing without login. Prefer external demos; embedded untrusted games require a separate origin and restrictive sandbox. Load one demo after a user gesture, provide exit/fallback controls, and keep game loading separate from the catalog shell.
 

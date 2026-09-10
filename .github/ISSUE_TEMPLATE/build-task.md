@@ -24,6 +24,10 @@ Priority: P0 / P1 / P2. Depends on: issue links or none.
 
 Name meaningful tests, source/data checks, and desktop/mobile screenshots for UI changes. Include image/source review for research. Explain if visual evidence is not applicable.
 
+## Design reference and acceptance
+
+For UI work, record the user-selected mockup path/version and applicable screens, or explicitly mark styling provisional. All existing mockups and preferred explorations remain provisional until the user selects an implementation baseline. Keep presentation adaptable with design tokens and reusable components separate from domain behavior. Final visual acceptance requires independent desktop/mobile comparison with the selected reference; missing selection stays an open visual item while independent research, backend and functional work proceeds. Preserve accessibility, behavior and evidence requirements. Follow the [design-direction policy](https://github.com/lucasaerb/headstart/blob/main/docs/design-direction.md).
+
 ## Required coder/reviewer loop
 
 - [ ] A coder/author subagent implements the issue and records actual evidence.

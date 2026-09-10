@@ -1,0 +1,18 @@
+# Design direction while mockups evolve
+
+The user is preparing new mockups. All existing prototypes and explorations, including currently preferred boards, are provisional until the user explicitly selects a baseline for implementation. A preference or an attractive reference does not finalize its palette, layout, typography, navigation arrangement, or component styling. Preserve the references for comparison.
+
+Research, catalog contracts, backend work and local functionality can proceed now against verified functional prerequisites. UI work may use explicitly provisional styling. Keep colors, type, spacing and related presentation choices in design tokens and reusable components; keep catalog data, rights and evidence rules, search behavior and integration logic separate from presentation. Avoid encoding a particular mockup's layout into domain contracts.
+
+Functional outcomes and evidence requirements still apply: project and capability discovery, authentic previews, accessible controls and keyboard focus, responsive behavior, useful loading/empty/error states, and honest source, rights and readiness claims. New visual choices do not waive these requirements. Do not apply a HeadStart website mockup to the art direction or gameplay of an upstream or integrated game; review that output against its own declared brief and relevant evidence.
+
+For each affected UI issue and review record:
+
+- State whether the design reference is provisional or selected by the user. For a selection, record its exact path or URL, version or digest, selection context, and applicable screens. Do not infer selection from filenames, previous preferences or issue text.
+- Capture and independently review the implemented desktop/mobile states, recording viewport, browser, scenario and code revision. Review accessibility, usability and behavior even while styling is provisional.
+- Before claiming final visual acceptance, compare applicable screenshots with the selected baseline, explain responsive adaptations and record any intentional deviations. If the selected reference lacks a required state or viewport, document the adaptation and its review rather than inventing a supplied mockup.
+- If no baseline has been selected, record final visual acceptance as an open item. Functional or nonvisual acceptance can pass on its own evidence, but an issue requiring final visual acceptance stays open until that item passes. Do not freeze unrelated research or backend work. A downstream issue may proceed when the independent reviewer has documented that the specific prerequisite behavior, interfaces and data it needs pass, even if unrelated upstream visual acceptance remains open. Record that dependency assessment; unresolved needed interfaces or behavior still block dependent work, and a partial pass does not close the upstream issue.
+
+The coder/author and independent critical reviewer loop remains required for every issue. A reviewer may approve completed functional criteria while explicitly identifying pending visual criteria; this is not an overall issue PASS or permission to close an issue with unmet acceptance. Follow the [development workflow](development-workflow.md).
+
+Issue #2 (`local-foundation`) delivers a temporary scaffold. Its desktop/mobile usability, accessibility and behavior require independent review, but final-product mockup comparison is N/A for that scaffold and belongs to #6 (`discovery-ui`) and #21 (`local-quality-gates`). Provisional scaffold styling alone does not block #2 from passing its own acceptance criteria or providing verified functional prerequisites.
