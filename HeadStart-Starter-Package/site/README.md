@@ -12,7 +12,7 @@ Open `http://127.0.0.1:8765/site/dist/`.
 
 The static server can preview the visuals alongside the mockup library and storyboard, but cannot save email submissions. Deployment runs `npm ci` and `node build.mjs` from `site/dist`, producing an explicit public-file allowlist and a separately bundled `/api/subscribe` function. See [email capture operations](../../tools/signup/README.md) for private storage, consent, owner export/delete and rate-limit cleanup.
 
-The visible homepage form collects optional launch/product-update interest. Play demo actions ask for an email before revealing their original external link; demo-only consent never opts into updates. Both flows are unverified lead capture, not identity verification or source-access authorization. No email is sent by this implementation.
+The visible homepage form collects optional launch/product-update interest. The first successful homepage or demo-access save also remembers the normalized address in that browser so later demo launches do not ask again; the visible **Forget email** action clears only that browser preference. Failed saves do not create the preference. Demo-only consent never opts into updates, and a remembered address never submits the updates form automatically. Both flows are unverified lead capture, not an account, identity verification or source-access authorization. No email is sent by this implementation.
 
 ## Plugin download
 
