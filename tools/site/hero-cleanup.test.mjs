@@ -34,4 +34,7 @@ test('real catalog search and bag remix brief remain present', () => {
   assert.match(html, /<textarea id="remix-idea"/);
   assert.match(app, /\$\('remix-idea'\)\.addEventListener\('input'/);
   assert.match(app, /window\.HeadStartGauntlet\.buildPrompt/);
+  assert.match(html, /id="continue-astra"/);
+  assert.match(html, /id="remembered-email" class="remembered-email" hidden/);
+  assert.match(html, /id="forget-email"/);
 });

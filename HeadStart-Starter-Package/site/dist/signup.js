@@ -23,16 +23,16 @@ const preferenceStatus = document.getElementById('email-preference-status');
 let rememberedEmail = readRememberedEmail();
 let demoSessionSaved = Boolean(rememberedEmail);
 function renderRememberedEmail() {
-  rememberedPanel.hidden = !rememberedEmail;
-  rememberedValue.textContent = rememberedEmail;
+  if (rememberedPanel) rememberedPanel.hidden = !rememberedEmail;
+  if (rememberedValue) rememberedValue.textContent = rememberedEmail;
 }
 renderRememberedEmail();
-document.getElementById('forget-email').addEventListener('click', () => {
+document.getElementById('forget-email')?.addEventListener('click', () => {
   const cleared = clearRememberedEmail();
   rememberedEmail = '';
   demoSessionSaved = false;
   renderRememberedEmail();
-  preferenceStatus.textContent = cleared ? 'This browser no longer remembers your email.' : 'This browser could not clear its saved preference. You can still enter your email before opening a demo.';
+  if (preferenceStatus) preferenceStatus.textContent = cleared ? 'This browser no longer remembers your email.' : 'This browser could not clear its saved preference. You can still enter your email before opening a demo.';
 });
 const demoDialog = document.getElementById('demo-email-dialog');
 const demoForm = document.getElementById('demo-email-form');

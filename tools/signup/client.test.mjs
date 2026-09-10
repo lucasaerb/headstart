@@ -27,11 +27,12 @@ class FakeElement {
   focus() { this.focused = true; }
 }
 
-function createHarness({ stored = null, storageThrows = false, responseOk = true, fetchError = null } = {}) {
+function createHarness({ stored = null, storageThrows = false, responseOk = true, fetchError = null, missingFooter = false } = {}) {
   const elements = Object.fromEntries([
     'remembered-email', 'remembered-email-value', 'email-preference-status', 'forget-email',
     'demo-email-dialog', 'demo-email-form', 'demo-launch', 'demo-email-status', 'demo-email-context', 'demo-email'
   ].map(id => [id, new FakeElement(id)]));
+  if (missingFooter) for (const id of ['remembered-email', 'remembered-email-value', 'email-preference-status', 'forget-email']) delete elements[id];
   elements['demo-email-form'].elements = { email: elements['demo-email'], website: new FakeElement(), updates: new FakeElement() };
   elements['demo-email-form'].submitButton = new FakeElement();
   const documentListeners = new Map();
@@ -86,6 +87,15 @@ test('successful demo save remembers normalized email and later demos use their 
   assert.equal((await harness.clickDemo({ url: 'https://other.example/game#start' })).prevented, false);
 });
 
+test('demo marketing opt-in is sent only when explicitly selected', async () => {
+  const harness = createHarness();
+  await harness.clickDemo();
+  harness.elements['demo-email'].value = 'updates@example.com';
+  harness.elements['demo-email-form'].elements.updates.checked = true;
+  await harness.elements['demo-email-form'].dispatch('submit');
+  assert.equal(harness.requests[0].body.updates, true);
+});
+
 test('failed requests do not remember an email or unlock later demos', async () => {
   const harness = createHarness({ responseOk: false });
   await harness.clickDemo();
@@ -127,4 +137,10 @@ test('blocked or corrupt storage fails safely and success remains usable for the
   assert.equal((await blocked.clickDemo()).prevented, false);
   const reload = createHarness({ storageThrows: true });
   assert.equal((await reload.clickDemo()).prevented, true);
+});
+
+test('demo flow still initializes when optional footer preference controls are absent', async () => {
+  const harness = createHarness({ missingFooter: true });
+  assert.equal((await harness.clickDemo()).prevented, true);
+  assert.equal(harness.elements['demo-email-dialog'].open, true);
 });
