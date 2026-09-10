@@ -14,7 +14,7 @@ No package install or build is required. The existing package server can serve t
 
 ## Plugin download
 
-`dist/plugin.html` provides the actual HeadStart 0.3.0 MCP/plugin ZIP and installation instructions. The catalog heading, footer, bag connection state and How it works dialog link to it. The archive contains first-party plugin code and research metadata, no upstream game code or images; downloading does not connect a client or synchronize the website bag. Rebuild the public artifact from the repository root with:
+`dist/plugin.html` provides the actual HeadStart 0.3.0 MCP/plugin ZIP and installation instructions. The catalog heading, footer, bag prompt panel and How it works dialog link to it. The archive contains first-party plugin code and research metadata, no upstream game code or images; downloading does not connect a client or synchronize the website bag. Rebuild the public artifact from the repository root with:
 
 ```sh
 python3 tools/plugin/build_distribution.py --output HeadStart-Starter-Package/site/dist/downloads/headstart-plugin-0.3.0.zip
@@ -29,8 +29,8 @@ The current ZIP SHA-256 is `3644bcc2f48975f996d979be3e6ade7aca8276133acb8b4b86fc
 - Separate sky, landscape, foreground foliage, birds/water and transparent companion layers. Pointer parallax leaves HTML copy and controls stationary. The explorer moves along a fixed bridge path in world coordinates, including after resize.
 - An 8-second local Seedance ambient video animates the existing world (windmill, flags, waterfalls, ocean and boats) after the hero enters view. The C4b still image remains the poster and fallback; pause, reduced-motion, hidden-tab and offscreen states stop video playback as well as CSS motion.
 - Pointer following, touch-to-explore and keyboard arrow/Home/End movement. Pause stops decorative motion; reduced-motion starts paused. Work suspends when the hero is offscreen or the document hidden.
-- 40 image-backed research-preview projects selected from 73 research records, including browser games, demos and toolkits; search and Genre/Category/Platform/Style/Runtime/Model filters; creator-reported model evidence; dated repository star counts and Most GitHub stars sorting; list/grid layouts. Every displayed row has a record-specific game image with source, credit, license evidence and preserved notices.
-- Browser-local bag capped at three, editable brief, reload persistence, empty/removal states, storage-failure messages and a planning JSON download.
+- 69 image-backed research-preview projects selected from 76 research records, including browser games, demos and toolkits; search and Genre/Category/Platform/Style/Runtime/Model filters; creator-reported model evidence; dated repository star counts and Most GitHub stars sorting; list/grid layouts. Every displayed row has a record-specific game image with source, credit, license evidence and preserved notices.
+- Browser-local bag capped at three, editable 4,000-character brief, reload persistence, empty/removal states and storage-failure messages. Copy or download a HeadStart Gauntlet Loop Markdown prompt: detailed interview, generated concept mockups and user design choice before a builder/reviewer implementation loop. Preview enables manual copy when clipboard permission is unavailable.
 - Honest Astra connection state. No live connector, code remix, royalty record service or payment service is implemented. Bag notes do not satisfy the target's automatic plugin retrieval.
 
 ## Validation
@@ -61,4 +61,15 @@ python3 research/catalog/scripts/media_contact_sheet.py
 python3 research/catalog/scripts/sync_site_provenance.py
 ```
 
-The projection includes only records with reviewed local previews, so records without record-specific image evidence remain in the 73-record research database and stay off the 40-row dashboard. Model labels require creator attribution; unknown attribution stays unknown. Repository star counts are shared by subprojects, dated, and separate from rights or integration readiness. Missing and non-GitHub counts remain unavailable instead of zero. The default order favors browser projects and evidenced preferred models; popularity sorting preserves active filters.
+The projection includes only records with reviewed local previews, so the seven records without reviewed record-specific image evidence remain in the 76-record research database and stay off the 69-row dashboard. Model labels require creator attribution; unknown attribution stays unknown. Repository star counts are shared by subprojects, dated, and separate from rights or integration readiness. Missing and non-GitHub counts remain unavailable instead of zero. The default order favors browser projects and evidenced preferred models; popularity sorting preserves active filters.
+
+## Gauntlet Loop prompt
+
+`tools/bag-prompt/gauntlet-prompt.js` is the pure prompt formatter. After changing it, refresh its browser asset from the repository root:
+
+```sh
+cp tools/bag-prompt/gauntlet-prompt.js HeadStart-Starter-Package/site/dist/gauntlet-prompt.js
+node --test tools/bag-prompt/test_gauntlet_prompt.js
+```
+
+The exported Markdown carries public metadata and the user's brief, not upstream source content or automatic plugin context. It instructs the receiving agent to interview the user and generate concept mockups before implementation. Source delivery and reuse handoffs remain separately gated. The prompt itself does not launch agents, generate images or prove a game was built. Current UI review: `docs/reviews/gauntlet-prompt/`.

@@ -1,6 +1,6 @@
 # HeadStart for Codex — local preview
 
-Describe your dream game in Codex and discover real codebase starting points, pinned source paths, and honest limitations. This package contains metadata and six skills; it does not contain the games' source code.
+Describe your dream game in Codex and discover real codebase starting points, pinned source paths, and honest limitations. This package contains metadata and nine skills, including Three.js starter selection plus Unity and Blender guidance; it does not contain the games' source code or external editor connectors.
 
 ## Install
 
@@ -20,7 +20,7 @@ If you already have a marketplace named `personal`, resolve that name conflict b
 
    > Use HeadStart to find three starting points for a cozy browser game with farming, exploration and building. Explain the source paths, engine fit and unknowns.
 
-Discovery needs no email or cloud service. HeadStart reads bundled catalog metadata locally. Public upstream links remain open. Platform code delivery, reuse handoffs, website bag sync and automatic integration are unavailable in this preview; verified-email access is tracked separately. The assistant may inspect or edit your local project only within your authorization.
+Discovery needs no email or cloud service. HeadStart reads bundled catalog metadata locally and can return pinned project/repository plus reviewed preview links for a bounded starting-project subset. This is not a live website or bag connection. Public upstream links remain open. Platform code delivery, reuse handoffs, website bag sync and automatic integration are unavailable in this preview; verified-email access is tracked separately. The assistant may inspect or edit your local project only within your authorization.
 
 If tools are missing, check `python3 --version` and `codex plugin list`, then open a new thread. Keep this folder while the local marketplace is configured. This is a private/local preview, not a public-directory or signed release.
 

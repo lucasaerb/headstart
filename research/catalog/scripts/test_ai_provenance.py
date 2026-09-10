@@ -6,6 +6,7 @@ import unittest
 
 from catalog import ai_provenance, build, load, search, validate
 from build_site_catalog import catalog_asset_src, load_play_observations, pinned_source_url, project, read_existing, serialize, update_site_index
+from collect_browser_previews import ALT, audit_display_language, load_audit_approvals, require_alt_coverage
 from test_catalog import fixture
 
 
@@ -132,11 +133,17 @@ class AIProvenanceTests(unittest.TestCase):
         official = copy.deepcopy(cleared)
         official.update(id='official', title='Official image')
         official_item = dict(item, record_id=official['id'], rights_status='official_source_local_display_rights_unresolved', sha256='c'*64, local_path='media/official.webp')
+        pending = copy.deepcopy(cleared)
+        pending.update(id='pending', title='Pending independent media review')
+        pending_item = dict(item, record_id=pending['id'], rights_status='candidate_local_display_pending_independent_review', sha256='d'*64, local_path='media/pending.webp')
         existing = [
             {'id': cleared['id'], 'preview': {'src': 'assets/catalog/cleared.png', 'sha256': 'a'*64}},
             {'id': unreviewed['id'], 'preview': {'src': 'assets/catalog/unreviewed.png', 'sha256': 'b'*64}},
         ]
-        rows = project([cleared, missing, unreviewed, official], [item, wrong_status, official_item], existing, require_previews=True)
+        rows = project([cleared, missing, unreviewed, official, pending], [item, wrong_status, official_item, pending_item], existing, require_previews=True)
+        self.assertEqual([row['id'] for row in rows], ['cleared'])
+        official_item.update(reviewer='independent reviewer', independent_reviewed_at='2026-09-10T22:00:00Z', independent_review_verdict='PASS: exact official image approved for narrow local display')
+        rows = project([cleared, official, pending], [item, official_item, pending_item], existing, require_previews=True)
         self.assertEqual({row['id'] for row in rows}, {'cleared', 'official'})
         official_preview = next(row['preview'] for row in rows if row['id'] == 'official')
         self.assertEqual(official_preview['rightsStatus'], 'official_source_local_display_rights_unresolved')
@@ -160,14 +167,16 @@ class AIProvenanceTests(unittest.TestCase):
         rows = project([fixture()], [])
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp) / 'index.html'
-            path.write_text('<section id="games" data-catalog-total="99"><p id="result-count">99 projects</p></section><script src="catalog.js" defer></script>')
-            update_site_index(path, rows)
+            path.write_text('<section id="games" data-catalog-total="99" data-research-total="99"><p id="result-count">99 projects</p><span id="pictured-count">99 pictured of 99 research records</span></section><script src="catalog.js" defer></script>')
+            update_site_index(path, rows, research_total=76)
             updated = path.read_text()
             self.assertIn('data-catalog-total="1"', updated)
+            self.assertIn('data-research-total="76"', updated)
             self.assertIn('<p id="result-count">1 projects</p>', updated)
+            self.assertIn('<span id="pictured-count">1 pictured of 76 research records</span>', updated)
             self.assertRegex(updated, r'catalog\.js\?v=[a-f0-9]{12}')
             versioned = updated
-            update_site_index(path, rows)
+            update_site_index(path, rows, research_total=76)
             self.assertEqual(path.read_text(), versioned)
 
     def test_play_observations_require_a_successful_session_for_editorial_pick(self):
@@ -188,6 +197,82 @@ class AIProvenanceTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 load_play_observations(path)
 
+    def test_audit_media_promotion_requires_exact_independent_pass_set(self):
+        expected = {'one', 'two'}
+        record = lambda rid: {'record_id': rid, 'decision': 'approved_for_local_catalog_display',
+                              'reviewer': 'independent reviewer', 'reviewed_at': '2026-09-10T22:00:00Z',
+                              'verdict': 'PASS: exact image and narrow display scope approved'}
+        self.assertEqual(load_audit_approvals(None, expected), {})
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'approval.json'
+            path.write_text(json.dumps({'schema_version': '1.0', 'records': [record('one')]}))
+            with self.assertRaises(ValueError):
+                load_audit_approvals(path, expected)
+            path.write_text(json.dumps({'schema_version': '1.0', 'records': [record('one'), record('two')]}))
+            self.assertEqual(set(load_audit_approvals(path, expected)), expected)
+            failed = record('two'); failed['verdict'] = 'BLOCKED: rights unresolved'
+            path.write_text(json.dumps({'schema_version': '1.0', 'records': [record('one'), failed]}))
+            with self.assertRaises(ValueError):
+                load_audit_approvals(path, expected)
+        template = Path(__file__).resolve().parents[1] / 'media-approval.template.json'
+        template_ids = {item['record_id'] for item in json.loads(template.read_text())['records']}
+        self.assertEqual(len(template_ids), 29)
+        with self.assertRaises(ValueError):
+            load_audit_approvals(template, template_ids)
+
+    def test_approved_audit_media_language_drops_pending_state_without_widening_rights(self):
+        candidate = {
+            'rights': {'note': 'Image rights remain unresolved outside catalog identification.'},
+            'blockers': ['Resolve the upstream asset license before broader reuse.'],
+        }
+        pending_policy = 'candidate_local_display_pending_independent_review means local evidence only.'
+        pending_use, pending_notes = audit_display_language(candidate, False, pending_policy)
+        self.assertEqual(pending_use, pending_policy)
+        self.assertIn('candidate pending independent review', pending_notes)
+
+        approved_use, approved_notes = audit_display_language(candidate, True, pending_policy)
+        approved_text = f'{approved_use} {approved_notes}'.casefold()
+        for stale_phrase in ('pending independent review',
+                             'candidate_local_display_pending_independent_review',
+                             'media-audit candidate'):
+            self.assertNotIn(stale_phrase, approved_text)
+        self.assertIn('independent narrow local research-display review passed', approved_text)
+        self.assertIn(candidate['rights']['note'].casefold(), approved_text)
+        self.assertIn(candidate['blockers'][0].casefold(), approved_text)
+        self.assertIn('does not authorize public redistribution', approved_text)
+
+    def test_approved_audit_manifest_uses_final_language_and_exact_review_stamp(self):
+        root = Path(__file__).resolve().parents[1]
+        audit = json.loads((root.parents[1] / 'docs/reviews/full-catalog-media-audit/media-audit.json').read_text())
+        audit_ids = {item['record_id'] for item in audit['records']
+                     if item['assessment'] == 'candidate_local_display_pending_independent_review'}
+        approval_path = root.parents[1] / 'docs/reviews/full-catalog-media-audit/media-approval.json'
+        approvals = {item['record_id']: item for item in json.loads(approval_path.read_text())['records']}
+        _, media = load()
+        media_by_record = {item['record_id']: item for item in media}
+        self.assertEqual(len(audit_ids), 26)
+        for record_id in audit_ids:
+            with self.subTest(record_id=record_id):
+                item = media_by_record[record_id]
+                approval = approvals[record_id]
+                text = f"{item['allowed_use']} {item['notes']}".casefold()
+                self.assertEqual(item['rights_status'], 'reviewed_for_catalog_display')
+                self.assertNotIn('pending independent review', text)
+                self.assertNotIn('candidate_local_display_pending_independent_review', text)
+                self.assertNotIn('media-audit candidate', text)
+                self.assertEqual(item['reviewer'], approval['reviewer'])
+                self.assertEqual(item['independent_reviewed_at'], approval['reviewed_at'])
+                self.assertEqual(item['independent_review_verdict'], approval['verdict'])
+
+    def test_all_selected_media_has_record_specific_alt_text_before_download(self):
+        _, media = load()
+        record_ids = {item['record_id'] for item in media}
+        self.assertEqual(len(record_ids), 69)
+        self.assertEqual(record_ids - ALT.keys(), set())
+        require_alt_coverage(record_ids)
+        with self.assertRaises(ValueError):
+            require_alt_coverage(record_ids | {'missing-alt-fixture'})
+
     def test_official_sites_games_keep_source_and_rights_limits(self):
         records, media = load()
         by_id = {row['id']: row for row in records}
@@ -207,12 +292,25 @@ class AIProvenanceTests(unittest.TestCase):
                 self.assertIsNone(row['source']['commit'])
                 self.assertIsNone(row['rights']['code_license'])
                 self.assertEqual(row['rights']['code_status'], 'unresolved')
-                self.assertNotIn('reviewer', media_by_record[record_id])
+                self.assertEqual(media_by_record[record_id]['reviewer'], '/root/critical_review')
+                self.assertEqual(media_by_record[record_id]['independent_reviewed_at'], '2026-09-10T20:55:48Z')
+                self.assertTrue(media_by_record[record_id]['independent_review_verdict'].startswith('PASS'))
                 self.assertEqual(media_by_record[record_id]['rights_status'], 'official_source_local_display_rights_unresolved')
         projected = {row['id']: row for row in project(records, media, require_previews=True)}
         for record_id in expected:
             self.assertEqual(projected[record_id]['sourceAvailability'], 'no_public_source')
-            self.assertTrue(projected[record_id]['preview']['src'].endswith('.webp'))
+            self.assertIn('Sites', projected[record_id]['platforms'])
+            self.assertEqual(projected[record_id]['aiProvenance']['models'], ['GPT-6 Astra'])
+            self.assertEqual(projected[record_id]['preview']['rightsStatus'], 'official_source_local_display_rights_unresolved')
+
+        unstamped_media = copy.deepcopy(media)
+        for item in unstamped_media:
+            if item['record_id'] in expected:
+                for field in ('reviewer', 'independent_reviewed_at', 'independent_review_verdict'):
+                    item.pop(field)
+        unstamped = {row['id']: row for row in project(records, unstamped_media, require_previews=True)}
+        for record_id in expected:
+            self.assertNotIn(record_id, unstamped)
 
 
 if __name__ == '__main__':

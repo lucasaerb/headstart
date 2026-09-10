@@ -1,10 +1,10 @@
 # HeadStart for Codex
 
-Describe your dream game and find real codebase starting points without leaving your coding conversation. Version **0.3.0** combines six skills with a local MCP catalog: **52 research references and 105 source-inspected building blocks**, including immutable source links, inspected paths and reuse limitations.
+Describe your dream game and find real codebase starting points without leaving your coding conversation. Version **0.4.0** combines nine skills with a local MCP catalog: **52 research references and 105 source-inspected building blocks**, including immutable source links, inspected paths and reuse limitations.
 
 ## Start here
 
-Use the **top-level README in the portable HeadStart ZIP** to install its local marketplace and add `headstart-plugin`. The package, MCP server and all six skill identifiers now use HeadStart. Installation is a local Codex workflow; this package is not a public ChatGPT directory listing. Python **3.10 or newer** must be available as `python3` to the Codex process. No API key, server hosting or Python packages are needed for discovery.
+Use the **top-level README in the portable HeadStart ZIP** to install its local marketplace and add `headstart-plugin`. The package, MCP server and all nine skill identifiers use HeadStart. Installation is a local Codex workflow; this package is not a public ChatGPT directory listing. Python **3.10 or newer** must be available as `python3` to the Codex process. No API key, server hosting or Python packages are needed for discovery.
 
 Start a new Codex thread after adding the plugin. Try:
 
@@ -17,17 +17,22 @@ For developers working from this repository, `tools/plugin/README.md` at the rep
 ## What works
 
 - **Find:** turn an idea into project/system searches and evidence-based comparisons.
+- **Three.js starter:** select source-inspected Three.js/R3F starting projects and retain their exact repository, revision and reviewed preview reference when available.
+- **Unity:** inspect Unity project fit and guide an explicitly requested connection to Unity Technologies' official Unity AI MCP without enabling editor control by default.
+- **Blender:** assess asset-authoring/export fit and guide an explicitly requested, safety- and telemetry-reviewed connection to the third-party Blender MCP.
 - **Inspect:** inspect the chosen source and an explicitly selected target workspace.
 - **Plan / Integrate / Validate / Credit:** guide the host coding agent through authorized local work, actual checks and preserved notices. These are skill instructions, not a hosted execution service or pretested integration adapters.
-- **Local MCP:** `catalog_info`, `search_components`, `get_component`; pinned versions, bounded pagination and exact filters. See [catalog access](references/catalog-access.md).
+- **Local MCP:** `catalog_info`, `search_components`, `get_component`, `get_starting_project`; pinned versions, bounded pagination and exact filters. `prepare_handoff` remains a fail-closed protected-action boundary. See [catalog access](references/catalog-access.md).
 
-The MCP process reads only bundled metadata. It makes no network requests, reads no target project and writes no files. It includes no upstream game code or images. Discovery is open; public repository and external demo links are available. Demo launch, source downloads and local work—when requested separately—use the host agent's existing capabilities and permissions.
+The MCP process reads only bundled metadata. It makes no network requests, reads no target project and writes no files. It includes no upstream game code or image bytes. Four starting-project records include reviewed public preview links and rights context; other projects return an explicit missing-preview state. Discovery is open; public repository and external demo links are available. Demo launch, source downloads and local work—when requested separately—use the host agent's existing capabilities and permissions.
 
 ## Honest limits
 
-This is an offline research snapshot. Source-inspected does not mean extracted, integration-tested, currently playable or cleared for code/asset reuse. Twenty candidates without completed scope review are excluded. Each result carries its own rights caveats and source commit; repository license filtering does not clear selected files or assets. Source and review SHA-256 values in [the manifest](references/discovery-manifest.json) identify the input snapshot, not a cryptographic publisher signature.
+This is an offline research snapshot. Source-inspected does not mean extracted, integration-tested, currently playable or cleared for code/asset reuse. Twenty candidates without completed scope review are excluded. Each result carries its own rights caveats and source commit; repository license filtering does not clear selected files or assets. Catalog, media-reference source and review SHA-256 values in [the manifest](references/discovery-manifest.json) bind the local release inputs, but are not a cryptographic publisher signature.
 
-`prepare_handoff` always returns an actionable denial: verified-email identity and scope-rights services are not implemented. There is no email collection, login URL, code export or portable code-packet fallback in this release. Website bag synchronization, source-code remixing and royalty services are also unimplemented. A user-provided list is not automatic bag retrieval. Public source links and independently authorized work on user-selected local sources remain separate.
+`prepare_handoff` always returns an actionable denial: verified-email identity and scope-rights services are not implemented. There is no email collection, login URL, code export or portable code-packet fallback in this release. Live website and bag synchronization, source-code remixing and royalty services are also unimplemented. Snapshot-backed `get_starting_project` is not a live website fetch. A user-provided list is not automatic bag retrieval. Public source links and independently authorized work on user-selected local sources remain separate.
+
+The download does not vendor `vibegameengine/web-starter-kit` because the inspected revision did not establish a root license for the whole starter. Unity editor connectivity uses Unity Technologies' official Unity MCP Server, supplied through the separately installed `com.unity.ai.assistant` package; Unity's separate official agent plugin supplies skills only. Neither is bundled by HeadStart. The community Blender MCP is also not bundled or auto-started: it can execute arbitrary Python, safe mode defaults off, and its published terms describe default-enabled rich telemetry plus minimal anonymous usage after opt-out. See [technology companions](references/technology-companions.md) for setup, rights, privacy and execution boundaries.
 
 ## Troubleshooting and development
 

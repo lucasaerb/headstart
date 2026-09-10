@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..900&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #10162b;
+      }
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        color: #10162b;
+      }
+
+      :root {
+        --cream: #f6f1e6;
+        --paper: #fffdf8;
+        --navy: #10162b;
+        --slate: #3a4256;
+        --blue: #3b5bff;
+        --terracotta: #e2703a;
+      }
+
+      .scene {
+        position: absolute;
+        inset: 0;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+      }
+      #scene1 {
+        z-index: 1;
+        background: var(--cream);
+      }
+      #scene2 {
+        z-index: 2;
+        background: var(--cream);
+        opacity: 0;
+      }
+      #scene3 {
+        z-index: 3;
+        background: var(--cream);
+        opacity: 0;
+      }
+      #scene4 {
+        z-index: 4;
+        background: var(--navy);
+        opacity: 0;
+      }
+      #scene5 {
+        z-index: 5;
+        background: var(--cream);
+        opacity: 0;
+      }
+      #scene6 {
+        z-index: 6;
+        background: var(--navy);
+        opacity: 0;
+      }
+
+      /* ---------- shared decoratives ---------- */
+      .glow {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        pointer-events: none;
+      }
+      .ghost-word {
+        position: absolute;
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: 420px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        white-space: nowrap;
+        pointer-events: none;
+        user-select: none;
+      }
+      .ghost-word.on-cream {
+        color: var(--navy);
+        opacity: 0.05;
+      }
+      .ghost-word.on-navy {
+        color: var(--cream);
+        opacity: 0.06;
+      }
+      .hairline {
+        position: absolute;
+        background: rgba(16, 22, 43, 0.14);
+        transform-origin: left center;
+      }
+
+      /* ---------- browser frame (site screenshots) ---------- */
+      .browser-card {
+        position: absolute;
+        border-radius: 22px;
+        background: var(--paper);
+        box-shadow:
+          0 40px 90px rgba(16, 22, 43, 0.28),
+          0 4px 16px rgba(16, 22, 43, 0.12);
+        overflow: hidden;
+        border: 1px solid rgba(16, 22, 43, 0.08);
+      }
+      .browser-chrome {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 54px;
+        padding: 0 22px;
+        background: var(--paper);
+        border-bottom: 1px solid rgba(16, 22, 43, 0.08);
+      }
+      .browser-dots {
+        display: flex;
+        gap: 9px;
+        flex: none;
+      }
+      .browser-dots span {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        display: block;
+      }
+      .browser-dots span:nth-child(1) {
+        background: #e2703a;
+      }
+      .browser-dots span:nth-child(2) {
+        background: #f0c14b;
+      }
+      .browser-dots span:nth-child(3) {
+        background: #4caf6e;
+      }
+      .browser-url {
+        flex: 1;
+        height: 30px;
+        border-radius: 8px;
+        background: rgba(16, 22, 43, 0.05);
+        display: flex;
+        align-items: center;
+        padding: 0 14px;
+        font-size: 16px;
+        color: var(--slate);
+        font-family: "Space Grotesk", sans-serif;
+        letter-spacing: 0.01em;
+      }
+      .browser-body {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      .browser-body img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      /* ---------- typography ---------- */
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--slate);
+        background: rgba(16, 22, 43, 0.06);
+        padding: 10px 20px;
+        border-radius: 100px;
+        width: fit-content;
+      }
+      .eyebrow.on-navy {
+        color: var(--cream);
+        background: rgba(246, 241, 230, 0.1);
+      }
+      .eyebrow .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--terracotta);
+        flex: none;
+      }
+      .headline {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: 82px;
+        line-height: 1.04;
+        letter-spacing: -0.02em;
+        color: var(--navy);
+        max-width: 720px;
+      }
+      .headline.on-navy {
+        color: var(--cream);
+      }
+      .subline {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--slate);
+        max-width: 620px;
+      }
+      .subline.on-navy {
+        color: rgba(246, 241, 230, 0.72);
+      }
+      .tag-row {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        max-width: 640px;
+      }
+      .tag-pill {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--navy);
+        background: var(--paper);
+        border: 1px solid rgba(16, 22, 43, 0.1);
+        padding: 12px 22px;
+        border-radius: 100px;
+      }
+
+      /* ---------- scene content layout ---------- */
+      .scene-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 90px 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 28px;
+      }
+      .split {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        gap: 60px;
+      }
+      .split-text {
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        flex: none;
+        width: 700px;
+      }
+
+      /* ---------- montage (scene 4) ---------- */
+      .clip-wrap {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        background: transparent;
+        z-index: 1;
+      }
+      .clip-wrap video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: auto;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+      }
+      #clip-a video {
+        transform: translate(-50%, -62%) scale(1.32);
+      }
+      #clip-b video {
+        transform: translate(-50%, -52%) scale(1.06);
+      }
+      #clip-c video {
+        transform: translate(-50%, -56%) scale(1.36);
+      }
+      #clip-d video {
+        transform: translate(-43%, -68%) scale(1.62);
+      }
+      .label-chip {
+        position: absolute;
+        left: 90px;
+        bottom: 86px;
+        z-index: 15;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: rgba(16, 22, 43, 0.85);
+        backdrop-filter: blur(6px);
+        border-left: 5px solid var(--terracotta);
+        padding: 18px 30px;
+        border-radius: 10px;
+      }
+      .label-chip .num {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: 30px;
+        color: #f5975f;
+        font-variant-numeric: tabular-nums;
+      }
+      .label-chip .txt {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .label-chip .title {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--cream);
+        letter-spacing: 0.01em;
+      }
+      .label-chip .kind {
+        font-size: 17px;
+        font-weight: 500;
+        color: rgba(246, 241, 230, 0.85);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .montage-watermark {
+        position: absolute;
+        right: 60px;
+        top: 60px;
+        z-index: 15;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(16, 22, 43, 0.5);
+        backdrop-filter: blur(6px);
+        padding: 12px 22px;
+        border-radius: 100px;
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: 24px;
+        color: rgba(246, 241, 230, 0.92);
+      }
+      .montage-watermark .chip {
+        width: 11px;
+        height: 11px;
+        border-radius: 3px;
+        background: var(--terracotta);
+      }
+
+      /* ---------- CTA scene ---------- */
+      .cta-wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 34px;
+        text-align: center;
+      }
+      .cta-logo {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        font-size: 128px;
+        color: var(--cream);
+        letter-spacing: -0.02em;
+      }
+      .cta-tagline {
+        font-size: 34px;
+        color: rgba(246, 241, 230, 0.78);
+        max-width: 760px;
+      }
+      .cta-url {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        background: var(--blue);
+        color: #fff;
+        font-weight: 700;
+        font-size: 26px;
+        padding: 20px 40px;
+        border-radius: 100px;
+      }
+      .cta-url .arrow {
+        font-size: 26px;
+      }
+      .cta-sub {
+        font-size: 20px;
+        color: rgba(246, 241, 230, 0.62);
+      }
+      #s6-fade {
+        position: absolute;
+        inset: 0;
+        background: var(--navy);
+        opacity: 0;
+        z-index: 30;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="40"
+      data-width="1920"
+      data-height="1080"
+    >
+      <!-- ============ SCENE 1 — HOOK ============ -->
+      <div class="scene" id="scene1">
+        <div class="glow" id="s1-glow" style="width: 900px; height: 900px; top: -280px; right: -260px; background: rgba(59, 91, 255, 0.16);"></div>
+        <div class="ghost-word on-cream" data-layout-allow-overflow id="s1-ghost" style="bottom: -90px; left: -30px;">PLAY</div>
+        <div class="hairline" id="s1-line" style="width: 260px; height: 2px; top: 96px; left: 130px;"></div>
+
+        <div class="scene-content">
+          <div class="split">
+            <div class="split-text">
+              <div class="eyebrow" id="s1-badge"><span class="dot"></span>Live product &middot; real games</div>
+              <div class="headline" id="s1-head">Every great game starts somewhere.</div>
+              <div class="subline" id="s1-sub">HeadStart is a home for the games you wish existed &mdash; browse real projects, then remix them into your own.</div>
+            </div>
+
+            <div class="browser-card" id="s1-frame" style="width: 880px; top: 289px; right: 130px;">
+              <div class="browser-chrome">
+                <div class="browser-dots"><span></span><span></span><span></span></div>
+                <div class="browser-url">headstart-virid.vercel.app</div>
+              </div>
+              <div class="browser-body">
+                <img id="s1-img" data-layout-allow-overflow src="assets/hero_clean.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ SCENE 2 — SEARCH ============ -->
+      <div class="scene" id="scene2">
+        <div class="glow" id="s2-glow" style="width: 800px; height: 800px; bottom: -260px; left: -220px; background: rgba(226, 112, 58, 0.14);"></div>
+        <div class="ghost-word on-cream" data-layout-allow-overflow id="s2-ghost" style="top: -60px; right: -40px;">TYPE</div>
+
+        <div class="scene-content">
+          <div class="split" style="flex-direction: row-reverse;">
+            <div class="split-text">
+              <div class="eyebrow" id="s2-badge"><span class="dot"></span>AI-assisted discovery</div>
+              <div class="headline" id="s2-head">Tell it what you're building.</div>
+              <div class="subline" id="s2-sub">Describe the game in your head. HeadStart finds real starting points that already match it.</div>
+            </div>
+
+            <div class="browser-card" id="s2-frame" style="width: 880px; top: 289px; left: 130px;">
+              <div class="browser-chrome">
+                <div class="browser-dots"><span></span><span></span><span></span></div>
+                <div class="browser-url">headstart-virid.vercel.app</div>
+              </div>
+              <div class="browser-body">
+                <img id="s2-img" data-layout-allow-overflow src="assets/hero_typed.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ SCENE 3 — BROWSE / CATALOG ============ -->
+      <div class="scene" id="scene3">
+        <div class="glow" id="s3-glow" style="width: 900px; height: 900px; top: -320px; left: 50%; transform: translateX(-50%); background: rgba(59, 91, 255, 0.14);"></div>
+        <div class="ghost-word on-cream" data-layout-allow-overflow id="s3-ghost" style="bottom: -100px; right: -50px;">BROWSE</div>
+
+        <div class="scene-content" style="align-items: center; padding-top: 64px; padding-bottom: 64px;">
+          <div style="display:flex; flex-direction:column; align-items:center; gap:20px; width:100%;">
+            <div class="headline" id="s3-head" style="max-width:1000px; text-align:center; font-size:52px;">43 real games. Real source, verified.</div>
+            <div class="tag-row" id="s3-tags" style="justify-content:center; max-width: 1000px;">
+              <div class="tag-pill">FPS shooters</div>
+              <div class="tag-pill">City builders</div>
+              <div class="tag-pill">Driving sims</div>
+              <div class="tag-pill">Open worlds</div>
+            </div>
+            <div class="browser-card" id="s3-frame" style="position: relative; width: 1180px; margin-top: 6px;">
+              <div class="browser-chrome">
+                <div class="browser-dots"><span></span><span></span><span></span></div>
+                <div class="browser-url">headstart-virid.vercel.app/#games</div>
+              </div>
+              <div class="browser-body">
+                <img id="s3-img" data-layout-allow-overflow src="assets/catalog_grid.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ SCENE 4 — GAME MONTAGE (PEAK) ============ -->
+      <div class="scene" id="scene4">
+        <div class="glow" id="s4-glow" style="width: 1000px; height: 1000px; top: -300px; left: -200px; background: rgba(226, 112, 58, 0.22); z-index: 1;"></div>
+
+        <div class="montage-watermark"><span class="chip"></span>HeadStart</div>
+
+        <div id="clip-a" class="clip-wrap" data-layout-allow-overflow>
+          <video id="v-a" data-start="13.6" data-duration="2.1" data-track-index="0" class="clip"
+                 src="assets/blackwater_clip.mp4" muted playsinline></video>
+        </div>
+        <div id="chip-a" class="label-chip clip" data-start="13.6" data-duration="2.1" data-track-index="1">
+          <div class="num">01</div>
+          <div class="txt"><div class="title">Blackwater</div><div class="kind">FPS Shooter</div></div>
+        </div>
+
+        <div id="clip-b" class="clip-wrap" data-layout-allow-overflow>
+          <video id="v-b" data-start="15.7" data-duration="3.9" data-track-index="0" class="clip"
+                 src="assets/citybuilder_clip.mp4" muted playsinline></video>
+        </div>
+        <div id="chip-b" class="label-chip clip" data-start="15.7" data-duration="3.9" data-track-index="1">
+          <div class="num">02</div>
+          <div class="txt"><div class="title">Fable Cities</div><div class="kind">City Builder</div></div>
+        </div>
+
+        <div id="clip-c" class="clip-wrap" data-layout-allow-overflow>
+          <video id="v-c" data-start="19.6" data-duration="3.4" data-track-index="0" class="clip"
+                 src="assets/r3f_clip.mp4" muted playsinline></video>
+        </div>
+        <div id="chip-c" class="label-chip clip" data-start="19.6" data-duration="3.4" data-track-index="1">
+          <div class="num">03</div>
+          <div class="txt"><div class="title">Ecctrl Sandbox</div><div class="kind">Physics &amp; Vehicles</div></div>
+        </div>
+
+        <div id="clip-d" class="clip-wrap" data-layout-allow-overflow>
+          <video id="v-d" data-start="23.0" data-duration="3.2" data-track-index="0" class="clip"
+                 src="assets/sf_clip.mp4" muted playsinline></video>
+        </div>
+        <div id="chip-d" class="label-chip clip" data-start="23.0" data-duration="3.2" data-track-index="1">
+          <div class="num">04</div>
+          <div class="txt"><div class="title">San Francisco</div><div class="kind">Open World</div></div>
+        </div>
+      </div>
+
+      <!-- ============ SCENE 5 — BAG / BREATHE ============ -->
+      <div class="scene" id="scene5">
+        <div class="glow" id="s5-glow" style="width: 850px; height: 850px; bottom: -280px; right: -220px; background: rgba(59, 91, 255, 0.14);"></div>
+        <div class="ghost-word on-cream" data-layout-allow-overflow id="s5-ghost" style="top: -70px; left: -40px;">COLLECT</div>
+
+        <div class="scene-content">
+          <div class="split">
+            <div class="split-text">
+              <div class="eyebrow" id="s5-badge"><span class="dot"></span>Your selection, saved</div>
+              <div class="headline" id="s5-head">Add your favorites to a bag.</div>
+              <div class="subline" id="s5-sub">Collect the games you love, then bring real source straight into your own agent.</div>
+            </div>
+
+            <div class="browser-card" id="s5-frame" style="width: 850px; top: 268px; right: 150px;">
+              <div class="browser-chrome">
+                <div class="browser-dots"><span></span><span></span><span></span></div>
+                <div class="browser-url">headstart-virid.vercel.app</div>
+              </div>
+              <div class="browser-body">
+                <img id="s5-img" data-layout-allow-overflow src="assets/bag_panel.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ SCENE 6 — CTA / END CARD ============ -->
+      <div class="scene" id="scene6">
+        <div class="glow" id="s6-glow" style="width: 1100px; height: 1100px; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(59, 91, 255, 0.2);"></div>
+        <div class="ghost-word on-navy" data-layout-allow-overflow id="s6-ghost" style="bottom: -140px; left: 50%; transform: translateX(-50%); font-size: 520px;">HEADSTART</div>
+
+        <div class="cta-wrap">
+          <div class="cta-logo" id="s6-logo">HeadStart</div>
+          <div class="cta-tagline" id="s6-tag">Every great game starts somewhere.</div>
+          <div class="cta-url" id="s6-url">headstart-virid.vercel.app <span class="arrow">&rarr;</span></div>
+          <div class="cta-sub" id="s6-subtext">Free to browse &middot; bring your own agent</div>
+        </div>
+
+        <div id="s6-fade"></div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      /* ================= SCENE 1 : HOOK (0 - 4.2, transition out 4.2-4.8) ================= */
+      tl.fromTo("#s1-line", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power2.out" }, 0.1);
+      tl.fromTo("#s1-badge", { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }, 0.15);
+      tl.fromTo("#s1-head", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.65, ease: "power3.out" }, 0.35);
+      tl.fromTo("#s1-sub", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "sine.out" }, 0.65);
+      tl.fromTo("#s1-frame", { x: 70, opacity: 0, rotationY: -6, transformPerspective: 1400 },
+        { x: 0, opacity: 1, rotationY: -3, duration: 0.7, ease: "expo.out" }, 0.3);
+      tl.fromTo("#s1-img", { scale: 1.0 }, { scale: 1.05, duration: 4.6, ease: "none" }, 0);
+      tl.fromTo("#s1-glow", { scale: 0.9, opacity: 0.7 }, { scale: 1.15, opacity: 1, duration: 2.3, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0.2);
+
+      /* transition 1->2 : blur crossfade (medium) */
+      tl.to("#scene1", { filter: "blur(10px)", scale: 1.03, opacity: 0, duration: 0.5, ease: "power2.inOut" }, 4.2);
+      tl.fromTo("#scene2", { filter: "blur(10px)", scale: 0.97, opacity: 0 },
+        { filter: "blur(0px)", scale: 1, opacity: 1, duration: 0.5, ease: "power2.inOut" }, 4.3);
+      tl.set("#scene1", { visibility: "hidden" }, 4.8);
+
+      /* ================= SCENE 2 : SEARCH (4.8 - 8.4, transition out 8.4-8.95) ================= */
+      tl.fromTo("#s2-badge", { x: 24, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "power2.out" }, 4.5);
+      tl.fromTo("#s2-head", { x: 34, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, 4.65);
+      tl.fromTo("#s2-sub", { opacity: 0 }, { opacity: 1, duration: 0.55, ease: "sine.out" }, 4.95);
+      tl.fromTo("#s2-frame", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.65, ease: "power3.out" }, 4.45);
+      tl.fromTo("#s2-img", { x: 0 }, { x: -18, duration: 4.0, ease: "sine.inOut" }, 4.8);
+      tl.fromTo("#s2-glow", { scale: 1, opacity: 0.6 }, { scale: 1.2, opacity: 0.9, duration: 2.0, ease: "sine.inOut", yoyo: true, repeat: 1 }, 4.8);
+
+      /* transition 2->3 : zoom through */
+      tl.to("#scene2", { scale: 2.2, opacity: 0, filter: "blur(8px)", duration: 0.4, ease: "power3.in" }, 8.4);
+      tl.fromTo("#scene3", { scale: 0.55, opacity: 0, filter: "blur(8px)" },
+        { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 8.55);
+      tl.set("#scene2", { visibility: "hidden" }, 8.95);
+
+      /* ================= SCENE 3 : BROWSE (8.95 - 13.2, transition out 13.2-13.6) ================= */
+      tl.fromTo("#s3-head", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "power3.out" }, 8.7);
+      tl.fromTo("#s3-tags .tag-pill", { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.6)", stagger: 0.1 }, 9.0);
+      tl.fromTo("#s3-frame", { y: 50, opacity: 0, scale: 0.96 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "power2.out" }, 9.15);
+      tl.fromTo("#s3-img", { scale: 1.0, xPercent: 0 }, { scale: 1.14, xPercent: -4, duration: 4.25, ease: "none" }, 8.95);
+
+      /* transition 3->4 : whip pan (high energy, velocity matched into montage) */
+      tl.to("#scene3", { x: -420, opacity: 0, filter: "blur(24px)", duration: 0.3, ease: "power3.in" }, 13.2);
+      tl.fromTo("#scene4", { x: 420, opacity: 0, filter: "blur(24px)" },
+        { x: 0, opacity: 1, filter: "blur(0px)", duration: 0.3, ease: "power3.out" }, 13.3);
+      tl.set("#scene3", { visibility: "hidden" }, 13.6);
+
+      /* ================= SCENE 4 : MONTAGE (13.6 - 26.2) ================= */
+      tl.fromTo("#scene4 .montage-watermark", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 13.8);
+      tl.fromTo("#s4-glow", { scale: 0.9, opacity: 0.55 }, { scale: 1.2, opacity: 0.85, duration: 3.15, ease: "sine.inOut", yoyo: true, repeat: 3 }, 13.6);
+
+      const clipPunch = (sel, t) => {
+        tl.fromTo(sel, { scale: 1.1, opacity: 0.4 }, { scale: 1, opacity: 1, duration: 0.28, ease: "power3.out" }, t);
+      };
+      clipPunch("#clip-a", 13.6);
+      clipPunch("#clip-b", 15.7);
+      clipPunch("#clip-c", 19.6);
+      clipPunch("#clip-d", 23.0);
+
+      const chipIn = (sel, t) => {
+        tl.fromTo(sel, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, t + 0.12);
+      };
+      chipIn("#chip-a", 13.6);
+      chipIn("#chip-b", 15.7);
+      chipIn("#chip-c", 19.6);
+      chipIn("#chip-d", 23.0);
+
+      /* transition 4->5 : blur crossfade calm (deceleration after peak).
+         Starts while the last montage clip still has footage, so the frame never empties. */
+      tl.to("#scene4", { filter: "blur(25px)", scale: 1.05, duration: 0.6, ease: "power1.in" }, 25.3);
+      tl.to("#scene4", { opacity: 0, duration: 0.4, ease: "power1.in" }, 25.7);
+      tl.fromTo("#scene5", { filter: "blur(25px)", scale: 0.95, opacity: 0 },
+        { filter: "blur(25px)", scale: 0.95, opacity: 1, duration: 0.3, ease: "power1.inOut" }, 26.1);
+      tl.to("#scene5", { filter: "blur(0px)", scale: 1, duration: 0.6, ease: "power1.out" }, 26.45);
+      tl.set("#scene4", { visibility: "hidden" }, 26.1);
+
+      /* ================= SCENE 5 : BAG / BREATHE (26.4 - 33.0, transition out 33.0-33.55) ================= */
+      tl.fromTo("#s5-badge", { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" }, 26.6);
+      tl.fromTo("#s5-head", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 26.8);
+      tl.fromTo("#s5-sub", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "sine.out" }, 27.1);
+      tl.fromTo("#s5-frame", { scale: 0.92, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.7, ease: "back.out(1.2)" }, 26.65);
+      tl.fromTo("#s5-img", { y: 0 }, { y: -10, duration: 2.8, ease: "sine.inOut", yoyo: true, repeat: 1 }, 27.4);
+      tl.fromTo("#s5-glow", { scale: 1, opacity: 0.55 }, { scale: 1.18, opacity: 0.85, duration: 2.8, ease: "sine.inOut", yoyo: true, repeat: 1 }, 26.4);
+
+      /* transition 5->6 : focus pull */
+      tl.to("#scene5", { filter: "blur(15px)", duration: 0.5, ease: "power1.in" }, 33.0);
+      tl.to("#scene5", { opacity: 0, duration: 0.3, ease: "power2.in" }, 33.25);
+      tl.fromTo("#scene6", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, 33.25);
+      tl.set("#scene5", { visibility: "hidden" }, 33.55);
+
+      /* ================= SCENE 6 : CTA (33.55 - 40) ================= */
+      tl.fromTo("#s6-logo", { scale: 0.85, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "expo.out" }, 33.7);
+      tl.fromTo("#s6-tag", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 34.05);
+      tl.fromTo("#s6-url", { y: 20, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.7)" }, 34.35);
+      tl.fromTo("#s6-subtext", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "sine.out" }, 34.7);
+      tl.fromTo("#s6-glow", { scale: 0.95, opacity: 0.7 }, { scale: 1.1, opacity: 1, duration: 2.8, ease: "sine.inOut", yoyo: true, repeat: 1 }, 33.6);
+      tl.fromTo("#s6-ghost", { x: 0 }, { x: -40, duration: 6.4, ease: "sine.inOut" }, 33.6);
+
+      /* final fade to close (allowed: last scene only) */
+      tl.to("#s6-fade", { opacity: 1, duration: 0.7, ease: "power2.inOut" }, 39.3);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

@@ -47,7 +47,7 @@ def content(response):
 class CatalogMCPTests(unittest.TestCase):
     def test_real_lifecycle_discovery_and_evidence(self):
         listing, info, found = run([request(2, 'tools/list'), call('catalog_info'), call('search_components', {'query': 'puzzle', 'code_license': 'MIT'})])
-        self.assertEqual(len(listing['result']['tools']), 4)
+        self.assertEqual(len(listing['result']['tools']), 5)
         self.assertEqual(content(info)['projects'], 52)
         results = content(found)['results']
         self.assertTrue(results)
@@ -56,6 +56,58 @@ class CatalogMCPTests(unittest.TestCase):
         self.assertTrue(detail['evidence'])
         self.assertEqual(detail['rights']['scope_reuse_status'], 'review_required')
         self.assertIn('PASS', detail['discovery_review']['review_verdict'])
+
+    def test_starting_project_keeps_repository_version_and_reviewed_preview_together(self):
+        found = content(run([call('search_components', {'query': 'racing', 'kind': 'project', 'runtime': 'React Three Fiber / Three.js'})])[0])
+        selected = next(r for r in found['results'] if r['id'] == 'pmndrs-racing-game')
+        value = content(run([call('get_starting_project', {
+            'id': selected['id'], 'source_commit': selected['source_commit']
+        })])[0])
+        self.assertEqual(value['origin'], 'bundled_release_snapshot')
+        self.assertFalse(value['website_live_connected'])
+        self.assertEqual(value['project']['repo_url'], selected['repo_url'])
+        self.assertEqual(value['project']['source_commit'], selected['source_commit'])
+        self.assertEqual(value['preview_status'], 'reviewed_reference')
+        self.assertIn(selected['source_commit'], value['preview_reference']['source_page'])
+        self.assertEqual(len(value['preview_reference']['sha256']), 64)
+
+        component = content(run([call('search_components', {'query': 'camera', 'kind': 'component'})])[0])['results'][0]
+        rejected = content(run([call('get_starting_project', {
+            'id': component['id'], 'source_commit': component['source_commit']
+        })])[0])
+        self.assertEqual(rejected['error']['code'], 'project_required')
+
+    def test_starting_project_media_matches_reviewed_research_manifest(self):
+        packaged = json.loads((ROOT / 'references/starting-project-media.json').read_text())['records']
+        research = json.loads((ROOT.parents[1] / 'research/catalog/media-manifest.json').read_text())
+        reviewed = {item['record_id']: item for item in research if item['rights_status'] == 'reviewed_for_catalog_display'}
+        keys = ('source_page', 'license_expression', 'license_evidence_url', 'credit',
+                'allowed_use', 'version_relation', 'sha256')
+        for item in packaged:
+            with self.subTest(project_id=item['project_id']):
+                evidence = reviewed[item['project_id']]
+                self.assertEqual(item['image_url'], evidence['original_url'])
+                for key in keys:
+                    self.assertEqual(item[key], evidence[key])
+
+    def test_starting_project_media_corruption_fails_closed(self):
+        mutations = [
+            lambda media: media['records'][0].update(
+                image_url='https://attacker.example/preview.png', credit='Attacker', sha256='a' * 64),
+            lambda media: media['records'][0].update(image_url='file:///private/preview.png'),
+            lambda media: media['records'][0].update(image_url='https://127.0.0.1/preview.png'),
+            lambda media: media['records'][0].update(source_commit='f' * 40),
+        ]
+        for mutate in mutations:
+            with self.subTest(mutate=mutate), tempfile.TemporaryDirectory() as directory:
+                copied = Path(directory) / 'plugin'
+                shutil.copytree(ROOT, copied, ignore=shutil.ignore_patterns('__pycache__'))
+                media_path = copied / 'references/starting-project-media.json'
+                media = json.loads(media_path.read_text())
+                mutate(media)
+                media_path.write_text(json.dumps(media))
+                result = content(run([call('catalog_info')], copied)[0])
+                self.assertEqual(result['error']['code'], 'catalog_unavailable')
 
     def test_component_search_provides_exact_source_path(self):
         found = content(run([call('search_components', {'query': 'camera', 'kind': 'component'})])[0])
@@ -145,6 +197,8 @@ class CatalogMCPTests(unittest.TestCase):
             source, output = root / 'research', root / 'plugin'
             source.mkdir()
             (output / 'references').mkdir(parents=True)
+            shutil.copy2(ROOT / 'references/starting-project-media.json',
+                         output / 'references/starting-project-media.json')
             records = json.loads((ROOT / 'references/discovery-catalog.json').read_text())['records'][:2]
             first = records[0]
             (source / 'catalog.json').write_text(json.dumps({'schema_version': 'research-0.1', 'records': records}))

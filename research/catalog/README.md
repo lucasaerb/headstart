@@ -1,6 +1,6 @@
 # Game and building-block research database
 
-The research index now contains **76 entries and 153 candidate building blocks**; 147 blocks are source-inspected and six are official-description leads without public source. The [browser-first expansion](BROWSER-EXPANSION.md) contains 33 additions, including three official OpenAI Sites showcases and 25 Three.js examples, with explicit creator-attribution evidence for Astra, Fable 5 and Fable 5.1. The historical first pass contained 43 entries and 87 blocks across 40 repositories. **43 authentic previews** have record-specific local-display scopes: 12 historical images, 28 source-project expansion images and three official OpenAI article images whose broader reuse rights remain unresolved. The current dashboard projects this image-backed subset; 33 research candidates still need authentic, display-scoped images before they can join it.
+The research index now contains **76 entries and 153 candidate building blocks**; 147 blocks are source-inspected and six are official-description leads without public source. The [browser-first expansion](BROWSER-EXPANSION.md) contains 33 additions, including three official OpenAI Sites showcases and 25 Three.js examples, with explicit creator-attribution evidence for Astra, Fable 5 and Fable 5.1. The historical first pass contained 43 entries and 87 blocks across 40 repositories. **69 authentic project images** have record-specific media records and appear in the dashboard after independent narrow local-display review. The approval evidence covers exactly the 26 full-catalog audit candidates and three official OpenAI images added to the previously reviewed 40; seven exact image gaps remain. Broader image and game-asset reuse rights remain separate and unresolved where recorded.
 
 This is a working local research index, independent of the unfinished website design. The source slices have not been extracted, executed, benchmarked or tested in a target game. Browser destinations are not play attestations. A separate dated browser observation confirms one bounded CityMaker session; it does not change source or integration readiness. Code, media, source/demo matching and integration readiness remain separate.
 
@@ -10,7 +10,7 @@ This is a working local research index, independent of the unfinished website de
 - [Full readable index](INDEX.md)
 - [Twelve-project shortlist and adaptation considerations](SHORTLIST.md)
 - [Gaps, conflicting rights, and next research priorities](GAPS.md)
-- [43-image preview contact sheet](contact-sheet.jpg) and [full image credits](media-credits.md)
+- [69-image preview contact sheet](contact-sheet.jpg) and [full image credits](media-credits.md)
 - [Exact dashboard image gap backlog](IMAGE-GAPS.md)
 - [Structured JSON](catalog.json), [CSV](catalog.csv), and [SQLite database](catalog.sqlite)
 - [Coverage and per-field completeness](coverage.json)
@@ -43,15 +43,19 @@ To refresh the bounded browser preview set and regenerate the image contact shee
 ```sh
 python3 -m venv research/catalog/.venv
 research/catalog/.venv/bin/python -m pip install -r research/catalog/requirements-media.txt
-research/catalog/.venv/bin/python research/catalog/scripts/collect_browser_previews.py --apply
+research/catalog/.venv/bin/python research/catalog/scripts/collect_browser_previews.py \
+  --approval-file docs/reviews/full-catalog-media-audit/media-approval.json \
+  --apply
 research/catalog/.venv/bin/python research/catalog/scripts/media_contact_sheet.py
 ```
 
-The collected originals remain unchanged. The contact sheet only scales copies to fit and samples a representative frame from animated images. Keep the image credits, manifest, license notices and original/source references with distributed media; do not infer permission for other game artwork from these 43 files. Browser-expansion permissions are intentionally limited to the local prototype where stated; they do not establish public-site or in-game reuse rights. The three OpenAI article images have an explicit unresolved-rights expression and user-directed local-display scope, not an inferred image license.
+The completed [independent approval file](../../docs/reviews/full-catalog-media-audit/media-approval.json) covers exactly all 26 full-catalog audit candidates and the three official OpenAI images. Each of its 29 records contains `decision: approved_for_local_catalog_display`, an independent reviewer, timezone-aware review time and `PASS` verdict. The collector rejects partial, extra or blocked decision sets. Without `--approval-file`, the 26 audit rows remain `candidate_local_display_pending_independent_review`, while the three official OpenAI rows remain unresolved and unstamped. [`media-approval.template.json`](media-approval.template.json) remains a deliberately invalid blank starting point for a future independent review cycle.
+
+The collected originals remain unchanged. The contact sheet only scales copies to fit and samples a representative frame from animated images. Keep the image credits, manifest, license notices and original/source references with distributed media; do not infer permission for other game artwork from these 69 files. Browser-expansion permissions are intentionally limited to the local prototype where stated; they do not establish public-site or in-game reuse rights. The three OpenAI article images have an explicit unresolved-rights expression and user-directed local-display scope, not an inferred image license.
 
 ## Evidence boundaries
 
-Every record has a full source commit, provider ID, author and timestamp, primary-source evidence, an inspected implementation entry point and coupling notes. Canonical sources include Gitea for 0 A.D. and GitLab for Veloren; the Veloren record explains the pinned official backup-mirror inspection.
+Seventy-three source-available records have a full source commit and provider identity. The three official OpenAI Sites games retain null source revisions because the inspected official pages link no public repository. Every record keeps an author, timestamp, evidence, capability boundary and explicit unknowns. Canonical sources include Gitea for 0 A.D. and GitLab for Veloren; the Veloren record explains the pinned official backup-mirror inspection.
 
 The internal-reference assessment concerns original summaries and source/demo links, plus only the explicitly reviewed images. It does not approve production publication, source downloads, extraction, asset reuse or tested compatibility. The four candidate-only entries are 3d.city, Clumsy Bird, Gather It and HexGL. Other records still require selected-scope review before source reuse.
 
@@ -59,7 +63,7 @@ The HTTP audit records reachability separately from play, follows bounded redire
 
 Optional creator model attribution is recorded independently from readiness and rights; see [the dictionary](DATA-DICTIONARY.md). Search with `--model 'GPT-6 Astra'` to require that exact creator-attributed model. Missing attribution remains unknown, and unverified claims do not satisfy this filter.
 
-The pure frontend projection helper is `scripts/build_site_catalog.py`. By default it prints a static catalog JSON assignment; it does not change the site or copy assets. Pass `--existing-catalog` to preserve only record-matched local previews with matching hashes, `--require-previews` for the dashboard projection that omits every record without an explicit local-display scope, and an explicit `--output` when the site owner is ready to update the application. Dashboard builds also pass `--site-index HeadStart-Starter-Package/site/dist/index.html` so the visible total and cache-busting catalog URL update atomically with the projection. The current dashboard uses `--require-previews`; showing all 76 entries requires collecting authentic, record-specific, display-scoped images for the remaining 33 rather than introducing generic placeholders. The broader research database and plugin retain link-only candidates. Creator-attributed preferred models with browser targets sort first, followed by Three.js browser candidates and other browser references. This discovery order is not a quality or integration-readiness score.
+The pure frontend projection helper is `scripts/build_site_catalog.py`. By default it prints a static catalog JSON assignment; it does not change the site or copy assets. Pass `--existing-catalog` to preserve only record-matched local previews with matching hashes, `--require-previews` for the dashboard projection that omits every record without an explicit local-display scope, and an explicit `--output` when the site owner is ready to update the application. Dashboard builds also pass `--site-index HeadStart-Starter-Package/site/dist/index.html` so the visible total and cache-busting catalog URL update atomically with the projection. The current dashboard uses `--require-previews` and displays 69 pictured records. Showing all 76 entries requires defensible exact-record images and independent local-display review for the remaining seven; generic placeholders remain disallowed. The broader research database and plugin retain link-only candidates. Creator-attributed preferred models with browser targets sort first, followed by Three.js browser candidates and other browser references. This discovery order is not a quality or integration-readiness score.
 
 ## GitHub popularity snapshot
 

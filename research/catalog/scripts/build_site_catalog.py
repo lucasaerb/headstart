@@ -113,12 +113,16 @@ def load_play_observations(path):
 def catalog_asset_src(canonical):
     """Derive a site asset URL only from an explicitly display-scoped flat media path."""
     local_path = canonical.get('local_path')
-    display_statuses = {
-        'reviewed_for_catalog_display',
-        'official_source_local_display_rights_unresolved',
-    }
-    if (canonical.get('rights_status') not in display_statuses
-            or not safe_path(local_path)):
+    status = canonical.get('rights_status')
+    reviewed = status == 'reviewed_for_catalog_display'
+    official_approved = (
+        status == 'official_source_local_display_rights_unresolved'
+        and isinstance(canonical.get('reviewer'), str) and bool(canonical['reviewer'].strip())
+        and isinstance(canonical.get('independent_reviewed_at'), str) and bool(canonical['independent_reviewed_at'].strip())
+        and isinstance(canonical.get('independent_review_verdict'), str)
+        and canonical['independent_review_verdict'].startswith('PASS')
+    )
+    if (not reviewed and not official_approved) or not safe_path(local_path):
         return None
     parts = PurePosixPath(local_path).parts
     if len(parts) != 2 or parts[0] != 'media':
@@ -195,18 +199,23 @@ def serialize(rows):
     return PREFIX + json.dumps(rows, ensure_ascii=False, indent=2, allow_nan=False).replace('</', '<\\/').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029') + ';\n'
 
 
-def update_site_index(path, rows):
+def update_site_index(path, rows, research_total=None):
     """Publish an exact displayed total and cache-busting catalog URL together."""
+    research_total = len(rows) if research_total is None else research_total
     source = path.read_text(encoding='utf-8')
     version = hashlib.sha256(serialize(rows).encode('utf-8')).hexdigest()[:12]
     source, script_count = re.subn(r'<script src="catalog\.js(?:\?v=[^"]*)?" defer></script>',
                                    f'<script src="catalog.js?v={version}" defer></script>', source)
     source, total_count = re.subn(r'(id="games"[^>]*data-catalog-total=")[^"]*(")',
                                   rf'\g<1>{len(rows)}\2', source)
+    source, research_count = re.subn(r'(id="games"[^>]*data-research-total=")[^"]*(")',
+                                     rf'\g<1>{research_total}\2', source)
     source, visible_count = re.subn(r'(<p id="result-count"[^>]*>)[^<]*(</p>)',
                                     rf'\g<1>{len(rows)} projects\2', source)
-    if script_count != 1 or total_count != 1 or visible_count != 1:
-        raise ValueError('Site index needs one catalog script, displayed-total marker and visible result count')
+    source, pictured_count = re.subn(r'(<span id="pictured-count">)[^<]*(</span>)',
+                                     rf'\g<1>{len(rows)} pictured of {research_total} research records\2', source)
+    if script_count != 1 or total_count != 1 or research_count != 1 or visible_count != 1 or pictured_count != 1:
+        raise ValueError('Site index needs one catalog script, catalog/research total markers, pictured count and visible result count')
     path.write_text(source, encoding='utf-8')
 
 
@@ -235,7 +244,7 @@ def main():
         if args.site_index:
             if not args.output:
                 raise ValueError('--site-index requires --output')
-            update_site_index(args.site_index, json.loads(output[len(PREFIX):-2]))
+            update_site_index(args.site_index, json.loads(output[len(PREFIX):-2]), research_total=len(records))
     except (OSError, ValueError, KeyError, TypeError) as exc:
         parser.exit(1, f'Projection error: {exc}\n')
 

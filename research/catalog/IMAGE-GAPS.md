@@ -1,46 +1,57 @@
-# Dashboard image gaps — 10 September 2026
+# Dashboard media review gaps — 10 September 2026
 
-The research catalog has 76 records; 43 have authentic, record-specific local-display media and appear in the current dashboard. The 33 records below remain out of the image-required projection. This is a collection backlog, not permission to copy the linked image or a reason to substitute a generic placeholder.
+The research catalog has 76 records. The dashboard pictures 69 of them with authentic, record-specific images and withholds the seven exact gaps below. Every displayed image passed the local catalog-display gate; no generic placeholder fills a missing record.
 
-## Existing upstream reference needs rights and identity review (12)
+## Approved image evidence (69)
 
-- `3d-city` — 3d.city: https://raw.githubusercontent.com/lo-th/3d.city/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/assets/img/preview01.jpg
-- `clumsy-bird` — Clumsy Bird: https://i.imgur.com/Slbvt65.png
-- `fable5-real-physics-engine` — Veritas Physics Sandbox: https://raw.githubusercontent.com/hamzabellouch/Build-with-anthropic-fable-5/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/docs/screenshot-orbits.png
-- `godot-astar-grid-2d` — Godot AStarGrid2D Navigation: https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/screenshots/navigation_astar.webp
-- `godot-platformer-2d` — Godot 2D Platformer: https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/screenshots/platformer.webp
-- `godot-platformer-3d` — Godot 3D Platformer: https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/screenshots/platformer.webp
-- `godot-truck-town` — Godot Truck Town: https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/screenshots/truck_town.webp
-- `hextris` — Hextris: https://raw.githubusercontent.com/Hextris/hextris/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/twitter-opengraph.png
-- `littlejs` — LittleJS: https://raw.githubusercontent.com/KilledByAPixel/LittleJS/da1b3836552b2373522a56bd39d6fb9f4b530017/examples/screenshot.jpg
-- `openrct2` — OpenRCT2: https://github.com/user-attachments/assets/fa893cc8-1484-4751-94be-4ead00a6c8f9
-- `three-mesh-bvh` — three-mesh-bvh: https://raw.githubusercontent.com/gkjohnson/three-mesh-bvh/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/docs/example-sm.gif
-- `unciv` — Unciv: https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/extraImages/GithubPreviewImage.jpg
+The displayed set combines 40 previously reviewed images with 29 images covered by the independent [media approval decision](../../docs/reviews/full-catalog-media-audit/media-approval.json): all 26 authentic candidates from the [full-catalog media audit](../../docs/reviews/full-catalog-media-audit/media-audit.json) and the three official OpenAI gameplay images for Void Explorer, Sunwake and Hollowflux. The approval file covers exactly those 29 record IDs and records the independent reviewer, timestamp and `PASS` verdict for each. The canonical [media manifest](media-manifest.json) retains the exact source page, original URL, digest, record-specific credit and review stamp.
 
-## Authentic image still needs discovery (21)
+That decision approves only narrow local HeadStart research/catalog identification and display of each exact image. It does not resolve or grant public redistribution, promotional reuse, relicensing, source export, game-asset reuse, endorsement or rights in depicted third-party assets. The three OpenAI images therefore remain `official_source_local_display_rights_unresolved` even though their narrow local display review passed. The 26 audited images retain their individual rights notes and blockers in the manifest and [media credits](media-credits.md).
 
-- `a-dark-room` — A Dark Room
-- `astra-apex-club` — Apex Club
-- `astra-melon-lab` — Melon Lab
-- `astra-mosswing` — Mosswing
-- `astra-sunjing-puzzles` — Sunjing Puzzles
-- `astra-three-kingdoms` — Three Kingdoms
-- `browserquest` — BrowserQuest
-- `drei` — Drei
-- `dwellcraft` — Dwellcraft
-- `fable5-fpv-drone` — FPV AcroSim
-- `fable5-plane-game` — Horizons Flight Simulator
-- `freeciv` — Freeciv
-- `freecol` — FreeCol
-- `gather-it` — Gather It
-- `magic-carpet-wizard` — Magic Carpet Wizard
-- `matter-js` — Matter.js
-- `openra` — OpenRA
-- `phaser-dungeon-crawler` — Phaser Dungeon Crawler Starter
-- `react-three-rapier` — React Three Rapier
-- `threejs` — Three.js
-- `yuka` — Yuka
+## No defensible stable exact-record image (7)
 
-## Projection behavior
+### `a-dark-room` — A Dark Room
 
-After research adds a matching `media-manifest.json` row, retains the original file under `research/catalog/media/`, copies it to `site/dist/assets/catalog/`, and assigns an accepted explicit local-display `rights_status`, `build_site_catalog.py --require-previews` includes that record automatically. The projection matches by `record_id`, verifies the media hash and permits only flat safe asset paths. Until then the dashboard omits the record, so the site never presents a generic image as that game or hides an unresolved display-rights state.
+Status: `blocked_no_record_specific_image`. The pinned repository contains a logo but no defensible gameplay screenshot.
+
+- Capture or obtain a project-authorized gameplay screenshot from an official distribution page; do not substitute the repository logo.
+
+### `fable5-fpv-drone` — FPV AcroSim
+
+Status: `blocked_no_record_specific_image`. No repository license and no record-specific screenshot found at the pinned revision.
+
+- The repository-wide Fable image and unrelated 3d-game/menu.png cannot be assigned to FPV AcroSim; obtain an official project screenshot.
+
+### `fable5-plane-game` — Horizons Flight Simulator
+
+Status: `blocked_no_record_specific_image`. No repository license and no record-specific screenshot found at the pinned revision.
+
+- The repository-wide Fable image and unrelated 3d-game/menu.png cannot be assigned to Horizons Flight Simulator; obtain an official project screenshot.
+
+### `gather-it` — Gather It
+
+Status: `blocked_no_record_specific_image`. No repository license and no screenshot or official project-site image was found at the pinned revision.
+
+- Obtain a creator-hosted gameplay screenshot and permission; do not use Unity template art as a game screenshot.
+
+### `matter-js` — Matter.js
+
+Status: `blocked_no_stable_official_image_url`. The pinned repository and official demo pages provide no stable, record-specific image URL.
+
+- Create a reviewed capture from the official interactive demo with capture timestamp and demo URL, or obtain a maintainer-hosted screenshot.
+
+### `phaser-dungeon-crawler` — Phaser Dungeon Crawler Starter
+
+Status: `blocked_no_stable_official_image_url`. No stable official screenshot URL found; Dungeon Tileset II and Legend of Faune are separately credited assets.
+
+- Obtain a reviewed official-demo capture and preserve the third-party asset credits and terms.
+
+### `yuka` — Yuka
+
+Status: `blocked_no_stable_official_image_url`. The official site and pinned repository expose logos and example assets but no stable representative screenshot URL.
+
+- Create a reviewed capture from a named official Yuka example with capture timestamp and example URL, or obtain a maintainer-hosted screenshot.
+
+## Promotion and projection
+
+The completed approval file covers exactly the 26 audited candidates and three official OpenAI images. The collector still fails closed: without that exact 29-record independent decision, audit candidates remain `candidate_local_display_pending_independent_review`, official-source images remain unstamped, and neither group projects. With the decision file, the collector preserves its reviewer, timestamp and `PASS` verdict while keeping every row’s broader-rights caveats. `build_site_catalog.py --require-previews` matches by `record_id`, verifies media hashes, permits only flat safe asset paths and rejects every pending or unstamped row.

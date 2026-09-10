@@ -1,0 +1,303 @@
+{
+  "audit_version": "0.1",
+  "audited_at": "2026-09-10",
+  "catalog_source": "research/catalog/catalog.json",
+  "media_manifest_source": "research/catalog/media-manifest.json",
+  "catalog_record_count": 76,
+  "reviewed_media_record_count": 43,
+  "undisplayed_record_count": 33,
+  "policy": "Only an authentic project/game image traceable to the project's pinned repository or an official project site is proposed. A code license is recorded as evidence but is not treated as automatic clearance for every image. Every candidate remains pending independent media/rights review before dashboard projection.",
+  "dashboard_rule": "candidate_local_display_pending_independent_review means the image is narrow-use evidence for identifying the upstream project in the local dashboard. It does not authorize source export, promotional reuse, relicensing, or imply that third-party assets are covered by the code license.",
+  "already_present_official_openai_sites": [
+    {
+      "record_id": "openai-sites-void-explorer",
+      "title": "Void Explorer",
+      "official_source": "https://developers.openai.com/showcase/void-explorer",
+      "direct_image_url": "https://cdn.openai.com/devhub/showcase/void-explorer/final-2d809ef19b55.webp",
+      "model_attribution": "Built with: GPT-6 Astra + Codex; Model: GPT-6 Astra",
+      "manifest_state": "already_present"
+    },
+    {
+      "record_id": "openai-sites-sunwake",
+      "title": "Sunwake",
+      "official_source": "https://developers.openai.com/showcase/sunwake",
+      "direct_image_url": "https://developers.openai.com/showcase/sunwake/gameplay-sailing.webp",
+      "model_attribution": "Built with: GPT-6 Astra + Codex; Model: GPT-6 Astra",
+      "manifest_state": "already_present"
+    },
+    {
+      "record_id": "openai-sites-hollowflux",
+      "title": "Hollowflux",
+      "official_source": "https://developers.openai.com/showcase/hollowflux",
+      "direct_image_url": "https://cdn.openai.com/devhub/showcase/hollowflux/final-e6f75c7e4bdd.webp",
+      "model_attribution": "Built with: GPT-6 Astra + Codex; Model: GPT-6 Astra",
+      "manifest_state": "already_present"
+    }
+  ],
+  "records": [
+    {
+      "record_id": "3d-city",
+      "title": "3d.city",
+      "image": {"source_page": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/assets/img/preview01.jpg", "direct_url": "https://raw.githubusercontent.com/lo-th/3d.city/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/assets/img/preview01.jpg", "relation": "Pinned repository gameplay preview", "credit": "lo-th and contributors"},
+      "rights": {"license_evidence": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/LICENSE", "license_expression": null, "note": "README/license conflict and asset scope remain unresolved."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Resolve conflicting project-level license claims before any reuse beyond narrow catalog identification."]
+    },
+    {
+      "record_id": "a-dark-room",
+      "title": "A Dark Room",
+      "image": null,
+      "rights": {"license_evidence": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/LICENSE.md", "license_expression": "MPL-2.0", "note": "The pinned repository contains a logo but no defensible gameplay screenshot."},
+      "assessment": "blocked_no_record_specific_image",
+      "blockers": ["Capture or obtain a project-authorized gameplay screenshot from an official distribution page; do not substitute the repository logo."]
+    },
+    {
+      "record_id": "astra-apex-club",
+      "title": "Apex Club",
+      "image": {"source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/apex-club/gameplay.png", "direct_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/apex-club/gameplay.png", "relation": "Pinned upstream collection gameplay screenshot for the named entry", "credit": "Ryan; submitted by MartinDelophy"},
+      "rights": {"license_evidence": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE", "license_expression": "CC0-1.0 for collection repository", "note": "The collection warns that linked games and their images retain their own rights; image-specific permission is not established."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Confirm the screenshot submitter had authority to apply the collection license or retain a local-identification-only restriction."]
+    },
+    {
+      "record_id": "astra-melon-lab",
+      "title": "Melon Lab",
+      "image": {"source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/melon-lab/gameplay.jpg", "direct_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/melon-lab/gameplay.jpg", "relation": "Named gameplay screenshot in the project collection; not stored in the game repository", "credit": "Ayi1337; screenshot curated by MartinDelophy"},
+      "rights": {"license_evidence": null, "license_expression": null, "note": "The game repository has no license, and the screenshot's transfer into the CC0 collection does not establish creator authorization."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Confirm image origin/permission; keep source-content reuse blocked because the game repository has no license."]
+    },
+    {
+      "record_id": "astra-mosswing",
+      "title": "Mosswing",
+      "image": {"source_page": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/design/desktop-final.png", "direct_url": "https://raw.githubusercontent.com/Ayi1337/gpt6-astra-one-shot-games/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/design/desktop-final.png", "relation": "Pinned game repository final desktop design/gameplay image", "credit": "Ayi1337 and contributors"},
+      "rights": {"license_evidence": null, "license_expression": null, "note": "No repository license grants reuse of code or image."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Restrict to local catalog identification unless the creator grants image use; source-content reuse remains blocked."]
+    },
+    {
+      "record_id": "astra-sunjing-puzzles",
+      "title": "Sunjing Puzzles",
+      "image": {"source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/sunjing-puzzles/gameplay.jpg", "direct_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/sunjing-puzzles/gameplay.jpg", "relation": "Pinned upstream collection gameplay screenshot for the named entry", "credit": "MartinDelophy and contributors"},
+      "rights": {"license_evidence": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE", "license_expression": "CC0-1.0 for collection repository", "note": "Linked-game and image rights remain separately qualified by the collection README."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Confirm image-specific permission before broader reuse."]
+    },
+    {
+      "record_id": "astra-three-kingdoms",
+      "title": "Three Kingdoms",
+      "image": {"source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/three-kingdoms/gameplay.jpg", "direct_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/three-kingdoms/gameplay.jpg", "relation": "Pinned upstream collection gameplay screenshot for the named entry", "credit": "MartinDelophy and contributors"},
+      "rights": {"license_evidence": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE", "license_expression": "CC0-1.0 for collection repository", "note": "Portrait and terrain asset rights require separate review."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Confirm image-specific and depicted third-party asset permissions before broader reuse."]
+    },
+    {
+      "record_id": "browserquest",
+      "title": "BrowserQuest",
+      "image": {"source_page": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/client/img/common/screenshot.jpg", "direct_url": "https://raw.githubusercontent.com/mozilla/BrowserQuest/af32d247cac3495ca430d0effbb88dd5f3250b2c/client/img/common/screenshot.jpg", "relation": "Pinned repository gameplay screenshot", "credit": "Little Workshop (Franck and Guillaume Lecollinet), Mozilla and contributors"},
+      "rights": {"license_evidence": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/LICENSE", "license_expression": "MPL-2.0", "note": "Inspect repository notices for artwork attribution before non-catalog reuse."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": []
+    },
+    {
+      "record_id": "clumsy-bird",
+      "title": "Clumsy Bird",
+      "image": {"source_page": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/README.md", "direct_url": "https://i.imgur.com/Slbvt65.png", "relation": "Gameplay image embedded by the maintainer in the pinned README", "credit": "ellisonleao and contributors"},
+      "rights": {"license_evidence": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/LICENSE.md", "license_expression": "GPL-3.0", "note": "The image is hosted outside the pinned repository; image-specific rights are not stated."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Preserve the maintainer-README relation and avoid claiming the GPL necessarily covers the external image."]
+    },
+    {
+      "record_id": "drei",
+      "title": "Drei",
+      "image": {"source_page": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/.storybook/public/images/share-screen.jpg", "direct_url": "https://raw.githubusercontent.com/pmndrs/drei/ffa15b956e320391b0e86084cb58c8da0445abe3/.storybook/public/images/share-screen.jpg", "relation": "Pinned repository documentation/demo overview image", "credit": "pmndrs and contributors"},
+      "rights": {"license_evidence": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/LICENSE", "license_expression": "MIT", "note": "This is a library/demo image, not evidence of one complete game."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": []
+    },
+    {
+      "record_id": "dwellcraft",
+      "title": "Dwellcraft",
+      "image": {"source_page": "https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/docs/screenshots/editor-en.png", "direct_url": "https://raw.githubusercontent.com/Ryan-fm/Dwellcraft/5055fefac14f0fe7214c6cbb66853e62a2154a88/docs/screenshots/editor-en.png", "relation": "Pinned repository in-game editor screenshot identified by the README", "credit": "Ryan-fm and contributors"},
+      "rights": {"license_evidence": null, "license_expression": null, "note": "No repository license found."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Restrict to local catalog identification unless the creator grants image use; source-content reuse remains blocked."]
+    },
+    {
+      "record_id": "fable5-fpv-drone",
+      "title": "FPV AcroSim",
+      "image": null,
+      "rights": {"license_evidence": null, "license_expression": null, "note": "No repository license and no record-specific screenshot found at the pinned revision."},
+      "assessment": "blocked_no_record_specific_image",
+      "blockers": ["The repository-wide Fable image and unrelated 3d-game/menu.png cannot be assigned to FPV AcroSim; obtain an official project screenshot."]
+    },
+    {
+      "record_id": "fable5-plane-game",
+      "title": "Horizons Flight Simulator",
+      "image": null,
+      "rights": {"license_evidence": null, "license_expression": null, "note": "No repository license and no record-specific screenshot found at the pinned revision."},
+      "assessment": "blocked_no_record_specific_image",
+      "blockers": ["The repository-wide Fable image and unrelated 3d-game/menu.png cannot be assigned to Horizons Flight Simulator; obtain an official project screenshot."]
+    },
+    {
+      "record_id": "fable5-real-physics-engine",
+      "title": "Veritas Physics Sandbox",
+      "image": {"source_page": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/docs/screenshot-orbits.png", "direct_url": "https://raw.githubusercontent.com/hamzabellouch/Build-with-anthropic-fable-5/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/docs/screenshot-orbits.png", "relation": "Pinned subproject gameplay/simulation screenshot", "credit": "hamzabellouch and contributors"},
+      "rights": {"license_evidence": null, "license_expression": null, "note": "No repository license found."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Restrict to local catalog identification unless the creator grants image use; source-content reuse remains blocked."]
+    },
+    {
+      "record_id": "freeciv",
+      "title": "Freeciv",
+      "image": {"source_page": "https://freeciv.org/", "direct_url": "https://freeciv.org/images/freeciv-screenshot-2.5.0.png", "relation": "Gameplay screenshot displayed on the official project home page", "credit": "Freeciv Project contributors"},
+      "rights": {"license_evidence": "https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/COPYING", "license_expression": "GPL-2.0-or-later", "note": "The official page does not state a file-specific image license."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Retain official-site credit and narrow catalog-display scope until screenshot rights are confirmed."]
+    },
+    {
+      "record_id": "freecol",
+      "title": "FreeCol",
+      "image": {"source_page": "https://www.freecol.org/screenshots.html", "direct_url": "https://www.freecol.org/images/screen-1.0.0.jpg", "relation": "Gameplay screenshot on the official project screenshot gallery", "credit": "FreeCol Team"},
+      "rights": {"license_evidence": "https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/LICENSE", "license_expression": "GPL-2.0-or-later", "note": "The official gallery does not state a file-specific image license."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Retain official-site credit and narrow catalog-display scope until screenshot rights are confirmed."]
+    },
+    {
+      "record_id": "gather-it",
+      "title": "Gather It",
+      "image": null,
+      "rights": {"license_evidence": null, "license_expression": null, "note": "No repository license and no screenshot or official project-site image was found at the pinned revision."},
+      "assessment": "blocked_no_record_specific_image",
+      "blockers": ["Obtain a creator-hosted gameplay screenshot and permission; do not use Unity template art as a game screenshot."]
+    },
+    {
+      "record_id": "godot-astar-grid-2d",
+      "title": "Godot AStarGrid2D Navigation",
+      "image": {"source_page": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/screenshots/navigation_astar.webp", "direct_url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/screenshots/navigation_astar.webp", "relation": "Pinned subproject screenshot", "credit": "Godot Engine contributors; see subproject credits"},
+      "rights": {"license_evidence": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md", "license_expression": "MIT", "note": "Review subproject-specific asset credits before reuse."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": []
+    },
+    {
+      "record_id": "godot-platformer-2d",
+      "title": "Godot 2D Platformer",
+      "image": {"source_page": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/screenshots/platformer.webp", "direct_url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/screenshots/platformer.webp", "relation": "Pinned subproject gameplay screenshot", "credit": "Godot Engine contributors; see subproject credits"},
+      "rights": {"license_evidence": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md", "license_expression": "MIT", "note": "Review subproject-specific asset credits before reuse."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": []
+    },
+    {
+      "record_id": "godot-platformer-3d",
+      "title": "Godot 3D Platformer",
+      "image": {"source_page": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/screenshots/platformer.webp", "direct_url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/screenshots/platformer.webp", "relation": "Pinned subproject gameplay screenshot", "credit": "Godot Engine contributors; see subproject credits"},
+      "rights": {"license_evidence": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md", "license_expression": "MIT", "note": "Review subproject-specific asset credits before reuse."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": []
+    },
+    {
+      "record_id": "godot-truck-town",
+      "title": "Godot Truck Town",
+      "image": {"source_page": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/screenshots/truck_town.webp", "direct_url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/screenshots/truck_town.webp", "relation": "Pinned subproject gameplay screenshot", "credit": "Godot Engine contributors; see subproject credits"},
+      "rights": {"license_evidence": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md", "license_expression": "MIT", "note": "Review subproject-specific asset credits before reuse."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": []
+    },
+    {
+      "record_id": "hextris",
+      "title": "Hextris",
+      "image": {"source_page": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/twitter-opengraph.png", "direct_url": "https://raw.githubusercontent.com/Hextris/hextris/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/twitter-opengraph.png", "relation": "Pinned repository social/game preview", "credit": "Logan Engstrom, Garrett Finucane, Noah Moroze, Michael Yang and contributors"},
+      "rights": {"license_evidence": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/LICENSE.md", "license_expression": "GPL-3.0-or-later", "note": "Keep creator credit with catalog display."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": []
+    },
+    {
+      "record_id": "littlejs",
+      "title": "LittleJS",
+      "image": {"source_page": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/examples/screenshot.jpg", "direct_url": "https://raw.githubusercontent.com/KilledByAPixel/LittleJS/da1b3836552b2373522a56bd39d6fb9f4b530017/examples/screenshot.jpg", "relation": "Pinned repository example montage", "credit": "Frank Force and contributors"},
+      "rights": {"license_evidence": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/LICENSE", "license_expression": "MIT", "note": "This represents engine examples rather than one complete game."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": []
+    },
+    {
+      "record_id": "magic-carpet-wizard",
+      "title": "Magic Carpet Wizard",
+      "image": {"source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/magic-carpet/gameplay.jpg", "direct_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/magic-carpet/gameplay.jpg", "relation": "Named gameplay screenshot in an upstream discovery collection; absent from the game repository", "credit": "threapchills; screenshot curated by MartinDelophy"},
+      "rights": {"license_evidence": null, "license_expression": null, "note": "The game repository has no license and screenshot origin/permission is not established."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Confirm screenshot provenance and creator permission before dashboard projection; source-content reuse remains blocked."]
+    },
+    {
+      "record_id": "matter-js",
+      "title": "Matter.js",
+      "image": null,
+      "rights": {"license_evidence": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/LICENSE", "license_expression": "MIT", "note": "The pinned repository and official demo pages provide no stable, record-specific image URL."},
+      "assessment": "blocked_no_stable_official_image_url",
+      "blockers": ["Create a reviewed capture from the official interactive demo with capture timestamp and demo URL, or obtain a maintainer-hosted screenshot."]
+    },
+    {
+      "record_id": "openra",
+      "title": "OpenRA",
+      "image": {"source_page": "https://www.openra.net/", "direct_url": "https://www.openra.net/images/news/20260222-generators.gif", "relation": "Official project news gameplay animation showing current generator effects", "credit": "OpenRA developers and contributors"},
+      "rights": {"license_evidence": "https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/COPYING", "license_expression": "GPL-3.0-or-later for OpenRA code", "note": "Original-game content and image-specific rights are separate from the engine code license."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Keep narrow official-project identification scope; do not imply the GPL covers depicted proprietary game assets."]
+    },
+    {
+      "record_id": "openrct2",
+      "title": "OpenRCT2",
+      "image": {"source_page": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/readme.md", "direct_url": "https://github.com/user-attachments/assets/fa893cc8-1484-4751-94be-4ead00a6c8f9", "relation": "Gameplay image embedded in the pinned official repository README", "credit": "OpenRCT2 developers"},
+      "rights": {"license_evidence": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/licence.txt", "license_expression": "GPL-3.0-or-later for OpenRCT2 code", "note": "External attachment image and original RollerCoaster Tycoon data/assets have separate rights."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": ["Retain narrow identification scope and do not present original game assets as GPL-licensed."]
+    },
+    {
+      "record_id": "phaser-dungeon-crawler",
+      "title": "Phaser Dungeon Crawler Starter",
+      "image": null,
+      "rights": {"license_evidence": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/LICENSE", "license_expression": "MIT for project code", "note": "No stable official screenshot URL found; Dungeon Tileset II and Legend of Faune are separately credited assets."},
+      "assessment": "blocked_no_stable_official_image_url",
+      "blockers": ["Obtain a reviewed official-demo capture and preserve the third-party asset credits and terms."]
+    },
+    {
+      "record_id": "react-three-rapier",
+      "title": "React Three Rapier",
+      "image": {"source_page": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/misc/example-auto-colliders.jpg", "direct_url": "https://raw.githubusercontent.com/pmndrs/react-three-rapier/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/misc/example-auto-colliders.jpg", "relation": "Pinned repository interactive physics example screenshot", "credit": "pmndrs and contributors"},
+      "rights": {"license_evidence": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/LICENSE", "license_expression": "MIT", "note": "Represents a reusable physics capability rather than a complete game."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": []
+    },
+    {
+      "record_id": "three-mesh-bvh",
+      "title": "three-mesh-bvh",
+      "image": {"source_page": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/docs/example-sm.gif", "direct_url": "https://raw.githubusercontent.com/gkjohnson/three-mesh-bvh/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/docs/example-sm.gif", "relation": "Pinned repository interactive capability demo animation", "credit": "gkjohnson and contributors"},
+      "rights": {"license_evidence": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/LICENSE", "license_expression": "MIT", "note": "Represents spatial-query/raycast capability rather than a complete game."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": []
+    },
+    {
+      "record_id": "threejs",
+      "title": "Three.js",
+      "image": {"source_page": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/screenshots/games_fps.jpg", "direct_url": "https://raw.githubusercontent.com/mrdoob/three.js/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/screenshots/games_fps.jpg", "relation": "Pinned repository screenshot of the official FPS game example", "credit": "mrdoob and contributors"},
+      "rights": {"license_evidence": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/LICENSE", "license_expression": "MIT", "note": "Represents one official engine example, not the entire Three.js project."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": []
+    },
+    {
+      "record_id": "unciv",
+      "title": "Unciv",
+      "image": {"source_page": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/extraImages/GithubPreviewImage.jpg", "direct_url": "https://raw.githubusercontent.com/yairm210/Unciv/0d7d1e43cd4776e04cd3f9eaf752527885123e62/extraImages/GithubPreviewImage.jpg", "relation": "Pinned repository game preview image", "credit": "Yair Morgenstern and Unciv contributors"},
+      "rights": {"license_evidence": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/LICENSE", "license_expression": "MPL-2.0", "note": "Review art and ruleset asset credits separately before reuse."},
+      "assessment": "candidate_local_display_pending_independent_review",
+      "blockers": []
+    },
+    {
+      "record_id": "yuka",
+      "title": "Yuka",
+      "image": null,
+      "rights": {"license_evidence": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/LICENSE", "license_expression": "MIT", "note": "The official site and pinned repository expose logos and example assets but no stable representative screenshot URL."},
+      "assessment": "blocked_no_stable_official_image_url",
+      "blockers": ["Create a reviewed capture from a named official Yuka example with capture timestamp and example URL, or obtain a maintainer-hosted screenshot."]
+    }
+  ]
+}

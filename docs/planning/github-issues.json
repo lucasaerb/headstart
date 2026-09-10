@@ -334,5 +334,17 @@
     ],
     "state": "closed",
     "review_status": "PASS"
+  },
+  "gauntlet-prompt": {
+    "number": 32,
+    "url": "https://github.com/lucasaerb/headstart/issues/32",
+    "title": "P0 \u00b7 Export a mockup-first Gauntlet Loop from selected games",
+    "priority": "P0",
+    "phase": "Local discovery",
+    "depends_on": [
+      "headstart-rename"
+    ],
+    "state": "closed",
+    "review_status": "PASS"
   }
 }

@@ -58,3 +58,5 @@ The user moved the installable plugin ahead of the original sequence, then reque
 Acceptance contracts: [plugin discovery](plugin-discovery/issue.md), [browser/model expansion](browser-model-expansion.md), [GitHub popularity](github-popularity.md). Every slice retains the required builder → independent reviewer → fixes → re-review loop. Statuses above are this planning snapshot; GitHub tracks subsequent closure.
 
 [#31 · Adopt HeadStart app and plugin naming](https://github.com/lucasaerb/headstart/issues/31) is complete after independent PASS; it migrated the active plugin/package and skills to the selected app name; see the [migration contract](headstart-rename.md).
+
+[#32 · Gauntlet Loop prompt](https://github.com/lucasaerb/headstart/issues/32) is complete after independent PASS: bag notes are replaced by a detailed interview → mockups → builder/reviewer workflow; [acceptance contract](gauntlet-prompt.md).

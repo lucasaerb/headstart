@@ -1,0 +1,18 @@
+---
+name: headstart-unity
+description: Assess Unity projects and guide optional official Unity AI MCP connectivity without implying cross-engine compatibility or granting unbounded editor control.
+---
+
+# Unity project guidance
+
+Use this skill for Unity discovery, source inspection and feasibility. Read [technology companions](../../references/technology-companions.md) before enabling any editor connector, and [engine guidance](../../references/engine-guidance.md) before making compatibility claims.
+
+Inspect the exact Unity editor version, `Packages/manifest.json`, assembly definitions, scenes, prefabs, ScriptableObjects, render pipeline, input system, physics ownership, asset import settings and `.meta` GUID relationships. Preserve existing project instructions and unrelated changes. A WebGL demo does not make Unity source compatible with Three.js, and C# recreation is a separate adaptation with its own plan and tests.
+
+When editor connectivity is requested, use Unity Technologies' official Unity MCP Server supplied through the `com.unity.ai.assistant` package. First verify Unity 6 (`6000.0`) or later, an MCP-compatible client, the target project's Unity Cloud connection, and an active Unity AI trial or subscription. Then have the user verify the bridge in **Edit > Project Settings > AI > Unity MCP**. Prefer Unity's supported-client configuration. If manual configuration is necessary, use the platform-specific relay Unity installed under `~/.unity/relay/` with the required `--mcp` argument; do not invent or copy a path for a different platform.
+
+The HeadStart download does not bundle Unity AI, its package or relay, and its own `mcp.json` configures only HeadStart's offline catalog. Direct external Unity MCP clients require approval in Unity. The tool surface can read the scene hierarchy, console, component values and build settings, and can also create/modify/delete GameObjects, edit C# scripts and trigger editor actions. Before mutations, confirm the selected project and bounded operation, inspect the enabled tool list, preserve version-control rollback, and validate the result in Unity. Do not treat the connection as read-only merely because HeadStart's catalog MCP is read-only.
+
+Unity also publishes the same first-party agent-skills repository for Claude Code and Codex, with host-specific installation commands. It is separate from the MCP setup: the inspected `0.1.0-beta` repository README says its plugin payload contains skills only, with no hooks or MCP servers. In Codex, Unity documents `codex plugin marketplace add Unity-Technologies/unity-agent-plugin` followed by `codex plugin add unity@unity-agent-plugin`. Inside a Claude Code session, Unity documents the slash commands `/plugin marketplace add Unity-Technologies/unity-agent-plugin` followed by `/plugin install unity@unity-agent-plugin`; do not present those as terminal commands. From a terminal, the corresponding documented forms are `claude plugin marketplace add Unity-Technologies/unity-agent-plugin` and `claude plugin install unity@unity-agent-plugin`. Explain that this installs a Unity Companion License package from Unity's marketplace; HeadStart does not vendor it. Do not change the user's plugin configuration unless they requested installation.
+
+For read-only work, return the exact files and settings inspected plus uncertainties. For requested edits, define the bounded editor/project operation, preserve GUID relationships and run the target's own Unity checks plus behavior-specific validation. Do not claim that the current bundled catalog contains a reviewed Unity starter when the exact runtime filter returns none.

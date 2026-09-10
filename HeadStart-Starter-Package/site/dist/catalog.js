@@ -184,16 +184,17 @@ window.HEADSTART_CATALOG = [
       ],
       "sourcePage": "https://developers.openai.com/blog/how-to-build-games-with-astra",
       "licenseEvidenceUrl": "https://developers.openai.com/blog/how-to-build-games-with-astra",
-      "captureDate": "2026-09-04",
+      "captureDate": null,
       "versionRelation": "Official article gameplay image for the named showcase. No public source commit or exact build revision is available, and this is not a HeadStart playthrough or integration attestation.",
       "alt": "Hollowflux top-down 2D character beside luminous blue water and stone ruins.",
       "sha256": "15cd30282861fa4e2dff59bed31132663e11b6e98ce453289f0496f3733abc69",
       "originalUrl": "https://cdn.openai.com/devhub/blog/how-to-build-games/hollowflux-water-15cd30282861.webp",
       "allowedUse": "User-directed local HeadStart catalog identification and display of this exact official OpenAI gameplay image only. This record grants no public redistribution, source extraction, game-asset reuse, endorsement or broader license rights.",
-      "modifications": "Original CDN bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
       "rightsStatus": "official_source_local_display_rights_unresolved",
-      "src": "assets/catalog/hollowflux.webp",
-      "localSourcePath": "research/catalog/media/hollowflux.webp"
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/openai-sites-hollowflux.webp",
+      "localSourcePath": "research/catalog/media/openai-sites-hollowflux.webp"
     },
     "contentKind": "game",
     "dimension": "2d",
@@ -900,6 +901,423 @@ window.HEADSTART_CATALOG = [
     }
   },
   {
+    "id": "magic-carpet-wizard",
+    "title": "Magic Carpet Wizard",
+    "summary": "An arcade carpet-flight game with combat, pickups and procedural scenery.",
+    "genres": [
+      "flight",
+      "action"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://threapchills.github.io/MagicCarpetWizard/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/threapchills/MagicCarpetWizard",
+    "projectUrl": "https://threapchills.github.io/MagicCarpetWizard/",
+    "commit": "6f949ee5d5f0915dae2c837da7308bcde63fa7f3",
+    "creator": "threapchills and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "threapchills; screenshot curated by MartinDelophy",
+      "licenseExpression": "LicenseRef-Image-Rights-Unresolved",
+      "licenseUrls": [
+        "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/magic-carpet/gameplay.jpg"
+      ],
+      "sourcePage": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/magic-carpet/gameplay.jpg",
+      "licenseEvidenceUrl": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/magic-carpet/gameplay.jpg",
+      "captureDate": null,
+      "versionRelation": "Named gameplay screenshot in an upstream discovery collection; absent from the game repository. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Magic Carpet Wizard title screen over a stylized flying-carpet city scene.",
+      "sha256": "ccfd5e50efd82d639a51ad2b0adb6ac1a6887f03786d6d7a15d156f63892c3ae",
+      "originalUrl": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/magic-carpet/gameplay.jpg",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/magic-carpet-wizard.jpg",
+      "localSourcePath": "research/catalog/media/magic-carpet-wizard.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "procedural",
+      "stylized"
+    ],
+    "runtimeVersion": "three 0.185.1",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer link/source media only; no current browser play test or source/deployment match. Video references are not playable demos.",
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": null,
+      "asset_status": "unreviewed",
+      "asset_notes": "Selected artwork, audio, fonts, models and transitive dependencies are not fully reviewed. Upstream preview references are not cleared for redistribution.",
+      "scope_reuse_status": "review_required",
+      "notes": "No project-code license established; public source is not reuse permission."
+    },
+    "sourceInspectedAt": "2026-09-10T19:35:18Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "candidate_only",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/threapchills/MagicCarpetWizard/tree/6f949ee5d5f0915dae2c837da7308bcde63fa7f3",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "physics",
+      "vfx"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Swept carpet collision",
+        "category": "physics",
+        "evidence_url": "https://github.com/threapchills/MagicCarpetWizard/blob/6f949ee5d5f0915dae2c837da7308bcde63fa7f3/src/collision.js",
+        "source_path": "src/collision.js",
+        "status": "source_inspected",
+        "notes": "Sweeps a carpet hull against chunk solids in curved terrain coordinates. No extraction or integration test."
+      },
+      {
+        "name": "Spell particle field",
+        "category": "vfx",
+        "evidence_url": "https://github.com/threapchills/MagicCarpetWizard/blob/6f949ee5d5f0915dae2c837da7308bcde63fa7f3/src/magic.js",
+        "source_path": "src/magic.js",
+        "status": "source_inspected",
+        "notes": "Dynamic GPU attributes and pooled spell visuals depend on world placement and material helpers. No extraction or integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/threapchills/MagicCarpetWizard/tree/6f949ee5d5f0915dae2c837da7308bcde63fa7f3",
+        "claim": "GitHub identity and immutable source tree retrieved; no upstream execution.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/threapchills/MagicCarpetWizard/blob/6f949ee5d5f0915dae2c837da7308bcde63fa7f3/README.md",
+        "claim": "Project description, links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/threapchills/MagicCarpetWizard/blob/6f949ee5d5f0915dae2c837da7308bcde63fa7f3/package.json",
+        "claim": "Runtime dependency declarations inspected; ranges do not establish compatibility.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/threapchills/MagicCarpetWizard/blob/6f949ee5d5f0915dae2c837da7308bcde63fa7f3/src/collision.js",
+        "claim": "Swept carpet collision entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/threapchills/MagicCarpetWizard/blob/6f949ee5d5f0915dae2c837da7308bcde63fa7f3/src/magic.js",
+        "claim": "Spell particle field entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "creator_attributed",
+      "models": [
+        "GPT-6 Astra"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/threapchills/MagicCarpetWizard",
+          "claim": "Creator-facing repository description, development record or linked author post attributes this represented work to GPT-6 Astra."
+        }
+      ],
+      "notes": "Creator attribution describes development participation, not model certification, exclusive authorship or measured performance."
+    },
+    "githubStars": 0,
+    "popularity": {
+      "repo_url": "https://github.com/threapchills/MagicCarpetWizard",
+      "stars": 0,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/threapchills/MagicCarpetWizard",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "astra-melon-lab",
+    "title": "Melon Lab",
+    "summary": "A fruit-merging puzzle with deformable bodies and container collisions.",
+    "genres": [
+      "puzzle",
+      "physics"
+    ],
+    "runtime": "Canvas 2D",
+    "label": "Play demo",
+    "demoUrl": "https://melon-game.jack-514.chatgpt.site/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/Ayi1337/gpt6-astra-one-shot-games",
+    "projectUrl": "https://melon-game.jack-514.chatgpt.site/",
+    "commit": "4178b08d569372a1492878d73c6018a90f564e5b",
+    "creator": "Ayi1337 and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Ayi1337; screenshot curated by MartinDelophy",
+      "licenseExpression": "LicenseRef-Image-Rights-Unresolved",
+      "licenseUrls": [
+        "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/melon-lab/gameplay.jpg"
+      ],
+      "sourcePage": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/melon-lab/gameplay.jpg",
+      "licenseEvidenceUrl": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/melon-lab/gameplay.jpg",
+      "captureDate": null,
+      "versionRelation": "Named gameplay screenshot in the project collection; not stored in the game repository. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Chinese-language fruit-merging puzzle with colorful fruit pieces dropping into a tall play area.",
+      "sha256": "001f69f4349e81984e804c4c76120040089193f941d6a9a074ceaf675d15a379",
+      "originalUrl": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/melon-lab/gameplay.jpg",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/astra-melon-lab.jpg",
+      "localSourcePath": "research/catalog/media/astra-melon-lab.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "2d",
+    "visualStyle": [
+      "procedural",
+      "stylized"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer link/source media only; no current browser play test or source/deployment match. Video references are not playable demos.",
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": null,
+      "asset_status": "unreviewed",
+      "asset_notes": "Selected artwork, audio, fonts, models and transitive dependencies are not fully reviewed. Upstream preview references are not cleared for redistribution.",
+      "scope_reuse_status": "review_required",
+      "notes": "No project-code license established; public source is not reuse permission."
+    },
+    "sourceInspectedAt": "2026-09-10T19:35:18Z",
+    "integrationFamily": "other-web-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "candidate_only",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/tree/4178b08d569372a1492878d73c6018a90f564e5b",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "economy",
+      "physics"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Merge score loop",
+        "category": "economy",
+        "evidence_url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/melon-lab/src/public/game.js",
+        "source_path": "melon-lab/src/public/game.js",
+        "status": "source_inspected",
+        "notes": "World merge events award combos and update persistent best score; DOM and storage coupled. No extraction or integration test."
+      },
+      {
+        "name": "Deformable fruit solver",
+        "category": "physics",
+        "evidence_url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/melon-lab/src/public/physics.js",
+        "source_path": "melon-lab/src/public/physics.js",
+        "status": "source_inspected",
+        "notes": "Particle distance and pressure constraints use fixed fruit geometry and bounds. No extraction or integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/tree/4178b08d569372a1492878d73c6018a90f564e5b",
+        "claim": "GitHub identity and immutable source tree retrieved; no upstream execution.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/README.md",
+        "claim": "Project description, links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/README.md",
+        "claim": "Model attribution evidence inspected; exact contribution remains bounded in ai_provenance notes.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/melon-lab/src/public/game.js",
+        "claim": "Merge score loop entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/melon-lab/src/public/physics.js",
+        "claim": "Deformable fruit solver entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "creator_attributed",
+      "models": [
+        "GPT-6 Astra"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/README.md",
+          "claim": "Creator-facing repository description, development record or linked author post attributes this represented work to GPT-6 Astra."
+        }
+      ],
+      "notes": "Creator attribution describes development participation, not model certification, exclusive authorship or measured performance."
+    },
+    "githubStars": 32,
+    "popularity": {
+      "repo_url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games",
+      "stars": 32,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/Ayi1337/gpt6-astra-one-shot-games",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "astra-mosswing",
+    "title": "Mosswing",
+    "summary": "A small tap-to-flap flight game through stone gaps.",
+    "genres": [
+      "arcade",
+      "flight"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://mosswing-quiet-flight.jack-514.chatgpt.site/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/Ayi1337/gpt6-astra-one-shot-games",
+    "projectUrl": "https://mosswing-quiet-flight.jack-514.chatgpt.site/",
+    "commit": "4178b08d569372a1492878d73c6018a90f564e5b",
+    "creator": "Ayi1337 and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Ayi1337 and contributors",
+      "licenseExpression": "LicenseRef-Image-Rights-Unresolved",
+      "licenseUrls": [
+        "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/design/desktop-final.png"
+      ],
+      "sourcePage": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/design/desktop-final.png",
+      "licenseEvidenceUrl": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/design/desktop-final.png",
+      "captureDate": null,
+      "versionRelation": "Pinned game repository final desktop design/gameplay image. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Mosswing title screen with a small bird flying between leafy stone columns.",
+      "sha256": "e48e75f6d576698277fbf38943951dca9b414e6f8a6ec01da83ac63b9df5f829",
+      "originalUrl": "https://raw.githubusercontent.com/Ayi1337/gpt6-astra-one-shot-games/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/design/desktop-final.png",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/astra-mosswing.jpg",
+      "localSourcePath": "research/catalog/media/astra-mosswing.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "procedural",
+      "stylized"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer link/source media only; no current browser play test or source/deployment match. Video references are not playable demos.",
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": null,
+      "asset_status": "unreviewed",
+      "asset_notes": "Selected artwork, audio, fonts, models and transitive dependencies are not fully reviewed. Upstream preview references are not cleared for redistribution.",
+      "scope_reuse_status": "review_required",
+      "notes": "No project-code license established; public source is not reuse permission."
+    },
+    "sourceInspectedAt": "2026-09-10T19:35:18Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "candidate_only",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/tree/4178b08d569372a1492878d73c6018a90f564e5b",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "world",
+      "movement"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Flight scene",
+        "category": "world",
+        "evidence_url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/game.js",
+        "source_path": "mosswing/src/game.js",
+        "status": "source_inspected",
+        "notes": "Procedural vegetation and obstacle visuals share the game loop and globals. No extraction or integration test."
+      },
+      {
+        "name": "Flap-and-gate model",
+        "category": "movement",
+        "evidence_url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/physics.cjs",
+        "source_path": "mosswing/src/physics.cjs",
+        "status": "source_inspected",
+        "notes": "FlightModel steps gravity, gates and score; duplicated in browser source, so select one authority. No extraction or integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/tree/4178b08d569372a1492878d73c6018a90f564e5b",
+        "claim": "GitHub identity and immutable source tree retrieved; no upstream execution.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/README.md",
+        "claim": "Project description, links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/README.md",
+        "claim": "Model attribution evidence inspected; exact contribution remains bounded in ai_provenance notes.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/game.js",
+        "claim": "Flight scene entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/physics.cjs",
+        "claim": "Flap-and-gate model entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "creator_attributed",
+      "models": [
+        "GPT-6 Astra"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/README.md",
+          "claim": "Creator-facing repository description, development record or linked author post attributes this represented work to GPT-6 Astra."
+        }
+      ],
+      "notes": "Creator attribution describes development participation, not model certification, exclusive authorship or measured performance."
+    },
+    "githubStars": 32,
+    "popularity": {
+      "repo_url": "https://github.com/Ayi1337/gpt6-astra-one-shot-games",
+      "stars": 32,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/Ayi1337/gpt6-astra-one-shot-games",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
     "id": "silent-meridian",
     "title": "Silent Meridian",
     "summary": "A chapter-based mystery game with linked puzzles, evidence and time-state changes.",
@@ -1074,16 +1492,17 @@ window.HEADSTART_CATALOG = [
       ],
       "sourcePage": "https://developers.openai.com/blog/how-to-build-games-with-astra",
       "licenseEvidenceUrl": "https://developers.openai.com/blog/how-to-build-games-with-astra",
-      "captureDate": "2026-09-04",
+      "captureDate": null,
       "versionRelation": "Official article gameplay image for the named showcase. No public source commit or exact build revision is available, and this is not a HeadStart playthrough or integration attestation.",
       "alt": "Sunwake orange motorboat cutting across faceted blue ocean waves.",
       "sha256": "f1c48b3f7fe8706dd558c8378f97863bbab8a21684ec640c38196f404cbeac11",
       "originalUrl": "https://cdn.openai.com/devhub/blog/how-to-build-games/sunwake-water-f1c48b3f7fe8.webp",
       "allowedUse": "User-directed local HeadStart catalog identification and display of this exact official OpenAI gameplay image only. This record grants no public redistribution, source extraction, game-asset reuse, endorsement or broader license rights.",
-      "modifications": "Original CDN bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
       "rightsStatus": "official_source_local_display_rights_unresolved",
-      "src": "assets/catalog/sunwake.webp",
-      "localSourcePath": "research/catalog/media/sunwake.webp"
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/openai-sites-sunwake.webp",
+      "localSourcePath": "research/catalog/media/openai-sites-sunwake.webp"
     },
     "contentKind": "game",
     "dimension": "3d",
@@ -1179,6 +1598,150 @@ window.HEADSTART_CATALOG = [
       "checked_at": "2026-09-10T21:30:00Z",
       "evidence_url": "https://developers.openai.com/showcase/sunwake",
       "notes": "This is an official OpenAI showcase page, not a public GitHub repository; GitHub stars and source availability do not apply."
+    }
+  },
+  {
+    "id": "astra-three-kingdoms",
+    "title": "Three Kingdoms",
+    "summary": "A historical territory-strategy game with officers and a campaign map.",
+    "genres": [
+      "strategy",
+      "management"
+    ],
+    "runtime": "React",
+    "label": "Play demo",
+    "demoUrl": "https://sanguo-jiangshan.vercel.app/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/MartinDelophy/awesome-gpt-6-astra",
+    "projectUrl": "https://sanguo-jiangshan.vercel.app/",
+    "commit": "139a9287e763e5b592bb53fda97e5101db15db40",
+    "creator": "MartinDelophy and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "MartinDelophy and contributors",
+      "licenseExpression": "CC0-1.0 for collection repository",
+      "licenseUrls": [
+        "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE"
+      ],
+      "sourcePage": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/three-kingdoms/gameplay.jpg",
+      "licenseEvidenceUrl": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned upstream collection gameplay screenshot for the named entry. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Three Kingdoms campaign map with cities, armies and Chinese-language strategy panels.",
+      "sha256": "fab946924b63d86f6e6d15040eac94be835d8d70cae41decbf433c0a90196dd0",
+      "originalUrl": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/three-kingdoms/gameplay.jpg",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/astra-three-kingdoms.jpg",
+      "localSourcePath": "research/catalog/media/astra-three-kingdoms.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "2d",
+    "visualStyle": [
+      "procedural",
+      "stylized"
+    ],
+    "runtimeVersion": "react 19.2.8",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer link/source media only; no current browser play test or source/deployment match. Video references are not playable demos.",
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": null,
+      "asset_status": "unreviewed",
+      "asset_notes": "Selected artwork, audio, fonts, models and transitive dependencies are not fully reviewed. Upstream preview references are not cleared for redistribution.",
+      "scope_reuse_status": "review_required",
+      "notes": "Collection CC0 is not assumed to clear contributed game source. No explicit subproject license grant established."
+    },
+    "sourceInspectedAt": "2026-09-10T19:35:18Z",
+    "integrationFamily": "other-web-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "candidate_only",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/MartinDelophy/awesome-gpt-6-astra/tree/139a9287e763e5b592bb53fda97e5101db15db40",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "strategy",
+      "character-data"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Territory economy and combat",
+        "category": "strategy",
+        "evidence_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/three-kingdoms/game/engine.ts",
+        "source_path": "works/three-kingdoms/game/engine.ts",
+        "status": "source_inspected",
+        "notes": "Engine couples city ownership, actions, troop costs and combat to roster data. No extraction or integration test."
+      },
+      {
+        "name": "Officer roster data",
+        "category": "character-data",
+        "evidence_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/three-kingdoms/game/officers.ts",
+        "source_path": "works/three-kingdoms/game/officers.ts",
+        "status": "source_inspected",
+        "notes": "Typed officer stats and portrait indices form game content; portraits are separate assets. No extraction or integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/tree/139a9287e763e5b592bb53fda97e5101db15db40",
+        "claim": "GitHub identity and immutable source tree retrieved; no upstream execution.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/three-kingdoms/README.md",
+        "claim": "Project description, links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/three-kingdoms/package.json",
+        "claim": "Runtime dependency declarations inspected; ranges do not establish compatibility.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/three-kingdoms/CREATION.md",
+        "claim": "Model attribution evidence inspected; exact contribution remains bounded in ai_provenance notes.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/three-kingdoms/game/engine.ts",
+        "claim": "Territory economy and combat entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/three-kingdoms/game/officers.ts",
+        "claim": "Officer roster data entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "creator_attributed",
+      "models": [
+        "GPT-6 Astra"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/three-kingdoms/CREATION.md",
+          "claim": "Creator-facing repository description, development record or linked author post attributes this represented work to GPT-6 Astra."
+        }
+      ],
+      "notes": "Creator attributes iterative code/design to Astra; bitmap portraits and terrain used a separate image-generation tool."
+    },
+    "githubStars": 135,
+    "popularity": {
+      "repo_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra",
+      "stars": 135,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/MartinDelophy/awesome-gpt-6-astra",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
     }
   },
   {
@@ -1927,6 +2490,143 @@ window.HEADSTART_CATALOG = [
     }
   },
   {
+    "id": "fable5-real-physics-engine",
+    "title": "Veritas Physics Sandbox",
+    "summary": "A browser rigid-body simulation toolkit with interactive scenes.",
+    "genres": [
+      "simulation",
+      "physics"
+    ],
+    "runtime": "Canvas 2D",
+    "label": "No demo",
+    "demoUrl": null,
+    "demoKind": "none",
+    "repoUrl": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5",
+    "projectUrl": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/tree/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine",
+    "commit": "2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8",
+    "creator": "hamzabellouch and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "hamzabellouch and contributors",
+      "licenseExpression": "LicenseRef-Image-Rights-Unresolved",
+      "licenseUrls": [
+        "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/docs/screenshot-orbits.png"
+      ],
+      "sourcePage": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/docs/screenshot-orbits.png",
+      "licenseEvidenceUrl": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/docs/screenshot-orbits.png",
+      "captureDate": null,
+      "versionRelation": "Pinned subproject gameplay/simulation screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Dark orbital simulation view with colored trajectories and a parameter panel.",
+      "sha256": "5592dc7d1a24eb31598dbd535a8a759525ca56c6214c37b3d26d9f2ef5c89d77",
+      "originalUrl": "https://raw.githubusercontent.com/hamzabellouch/Build-with-anthropic-fable-5/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/docs/screenshot-orbits.png",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/fable5-real-physics-engine.png",
+      "localSourcePath": "research/catalog/media/fable5-real-physics-engine.png"
+    },
+    "contentKind": "toolkit",
+    "dimension": "2d",
+    "visualStyle": [
+      "procedural"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "unknown",
+    "demoNotes": "Runnable browser source is present; no hosted browser demo established and no upstream build executed.",
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": null,
+      "asset_status": "unreviewed",
+      "asset_notes": "Vendored libraries and procedural/reference assets need separate scope review.",
+      "scope_reuse_status": "review_required",
+      "notes": "No project-code license established. README educational/research description is not a reuse grant."
+    },
+    "sourceInspectedAt": "2026-09-10T19:36:55Z",
+    "integrationFamily": "other-web-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "candidate_only",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/tree/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "physics"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Contact manifold generation",
+        "category": "physics",
+        "evidence_url": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/src/collision.js",
+        "source_path": "real-physics-engine/src/collision.js",
+        "status": "source_inspected",
+        "notes": "Sweep-and-prune and polygon/circle tests depend on shared body shape and vector contracts. No extraction or integration test."
+      },
+      {
+        "name": "Sequential impulse solver",
+        "category": "physics",
+        "evidence_url": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/src/solver.js",
+        "source_path": "real-physics-engine/src/solver.js",
+        "status": "source_inspected",
+        "notes": "Warm-start contacts, friction and restitution require consistent manifold/body units and timestep. No extraction or integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/tree/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8",
+        "claim": "Repository identity and immutable source tree retrieved; no execution.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/README.md",
+        "kind": "readme",
+        "claim": "Creator description/model attribution inspected."
+      },
+      {
+        "url": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/README.md",
+        "kind": "readme",
+        "claim": "Declared subproject behavior and static implementation entry points inspected."
+      },
+      {
+        "url": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/src/collision.js",
+        "kind": "source",
+        "claim": "Declared subproject behavior and static implementation entry points inspected."
+      },
+      {
+        "url": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/src/solver.js",
+        "kind": "source",
+        "claim": "Declared subproject behavior and static implementation entry points inspected."
+      }
+    ],
+    "aiProvenance": {
+      "status": "creator_attributed",
+      "models": [
+        "Fable 5"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/README.md",
+          "claim": "Maintainer states repository prototypes were generated using Fable 5 and explicitly maps this subproject in the directory table."
+        }
+      ],
+      "notes": "Repository-wide creator statement covers this listed prototype. No independent model certification, exclusive authorship, flight realism or performance validation."
+    },
+    "githubStars": 4,
+    "popularity": {
+      "repo_url": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5",
+      "stars": 4,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/hamzabellouch/Build-with-anthropic-fable-5",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
     "id": "vesper-street",
     "title": "Vesper Street",
     "summary": "An isometric survival-horror game in a flooded town with light-reactive enemies.",
@@ -2091,16 +2791,17 @@ window.HEADSTART_CATALOG = [
       ],
       "sourcePage": "https://developers.openai.com/blog/how-to-build-games-with-astra",
       "licenseEvidenceUrl": "https://developers.openai.com/blog/how-to-build-games-with-astra",
-      "captureDate": "2026-09-04",
+      "captureDate": null,
       "versionRelation": "Official article gameplay image for the named showcase. No public source commit or exact build revision is available, and this is not a HeadStart playthrough or integration attestation.",
       "alt": "Void Explorer spacecraft flying near a cyan planet encircled by bright magenta rings.",
       "sha256": "579e20d663e37424677536f6202ce102dcdcc409065d5eb40a7555e99b8d6a10",
       "originalUrl": "https://cdn.openai.com/devhub/blog/how-to-build-games/orbital-flight-579e20d663e3.webp",
       "allowedUse": "User-directed local HeadStart catalog identification and display of this exact official OpenAI gameplay image only. This record grants no public redistribution, source extraction, game-asset reuse, endorsement or broader license rights.",
-      "modifications": "Original CDN bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
       "rightsStatus": "official_source_local_display_rights_unresolved",
-      "src": "assets/catalog/void-explorer.webp",
-      "localSourcePath": "research/catalog/media/void-explorer.webp"
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/openai-sites-void-explorer.webp",
+      "localSourcePath": "research/catalog/media/openai-sites-void-explorer.webp"
     },
     "contentKind": "game",
     "dimension": "3d",
@@ -2196,6 +2897,280 @@ window.HEADSTART_CATALOG = [
       "checked_at": "2026-09-10T21:30:00Z",
       "evidence_url": "https://developers.openai.com/showcase/void-explorer",
       "notes": "This is an official OpenAI showcase page, not a public GitHub repository; GitHub stars and source availability do not apply."
+    }
+  },
+  {
+    "id": "3d-city",
+    "title": "3d.city",
+    "summary": "A browser city builder combining a Three.js city view with a worker-based Micropolis-derived simulation.",
+    "genres": [
+      "city-builder",
+      "simulation",
+      "management"
+    ],
+    "runtime": "Three.js / micropolisJS",
+    "label": "Play demo",
+    "demoUrl": "https://lo-th.github.io/3d.city/index.html",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/lo-th/3d.city",
+    "projectUrl": "https://lo-th.github.io/3d.city/index.html",
+    "commit": "60fc6de2451ac6cf4df211a7cdae6c55c97e73c7",
+    "creator": "lo-th and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "lo-th and contributors",
+      "licenseExpression": "LicenseRef-Image-Rights-Unresolved",
+      "licenseUrls": [
+        "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/LICENSE"
+      ],
+      "sourcePage": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/assets/img/preview01.jpg",
+      "licenseEvidenceUrl": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned repository gameplay preview. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Isometric low-poly city blocks glowing at night beside roads and industrial buildings.",
+      "sha256": "154188126c682068fc4174b2458e23c15d2b2251c88a0e2b980b68a7d5ad8ffb",
+      "originalUrl": "https://raw.githubusercontent.com/lo-th/3d.city/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/assets/img/preview01.jpg",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/3d-city.jpg",
+      "localSourcePath": "research/catalog/media/3d-city.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "low-poly",
+      "urban"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "URL from maintainer README or repository homepage; no source/deployment revision match established.",
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Textures and models need attribution review; code rights conflict must be resolved before extraction.",
+      "scope_reuse_status": "review_required",
+      "notes": "README claims MIT, while LICENSE/COPYING and inspected simulation/budget headers specify GPLv3 plus additional terms. Conflicting project-level claim; do not classify the whole project as MIT."
+    },
+    "sourceInspectedAt": "2026-09-10T17:33:07Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "candidate_only",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/lo-th/3d.city/tree/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "simulation-clock",
+      "economy"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "City simulation scheduling",
+        "category": "simulation-clock",
+        "evidence_url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/src/micro/Simulation.js",
+        "source_path": "src/micro/Simulation.js",
+        "status": "source_inspected",
+        "notes": "Simulation aggregates map scanning, zones and services; depends on the Micropolis model and worker boundary."
+      },
+      {
+        "name": "Municipal budget",
+        "category": "economy",
+        "evidence_url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/src/micro/game/Budget.js",
+        "source_path": "src/micro/game/Budget.js",
+        "status": "source_inspected",
+        "notes": "Funds, tax and service spending appear in the budget class; coupled to Micro constants and messages."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/lo-th/3d.city/tree/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7",
+        "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/README.md",
+        "claim": "Project purpose, maintainer links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/LICENSE",
+        "claim": "License text inspected; scope and exceptions retained in rights notes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/package.json",
+        "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/src/micro/Simulation.js",
+        "claim": "City simulation scheduling entry points statically inspected; not executed.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/src/micro/game/Budget.js",
+        "claim": "Municipal budget entry points statically inspected; not executed.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 1744,
+    "popularity": {
+      "repo_url": "https://github.com/lo-th/3d.city",
+      "stars": 1744,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/lo-th/3d.city",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "astra-apex-club",
+    "title": "Apex Club",
+    "summary": "A browser kart racer with procedural course scenery and vehicle handling.",
+    "genres": [
+      "racing"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://apex-club-racing.vercel.app/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/MartinDelophy/awesome-gpt-6-astra",
+    "projectUrl": "https://apex-club-racing.vercel.app/",
+    "commit": "139a9287e763e5b592bb53fda97e5101db15db40",
+    "creator": "Ryan; submitted by MartinDelophy",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Ryan; submitted by MartinDelophy",
+      "licenseExpression": "CC0-1.0 for collection repository",
+      "licenseUrls": [
+        "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE"
+      ],
+      "sourcePage": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/apex-club/gameplay.png",
+      "licenseEvidenceUrl": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned upstream collection gameplay screenshot for the named entry. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Two low-poly race cars competing on a curved road with speed, position and lap HUD panels.",
+      "sha256": "c6a4a5871a66bff15eda5050d4ec64988031f231604536947c68ed603b360ae3",
+      "originalUrl": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/apex-club/gameplay.png",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/astra-apex-club.jpg",
+      "localSourcePath": "research/catalog/media/astra-apex-club.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "procedural",
+      "stylized"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer link/source media only; no current browser play test or source/deployment match. Video references are not playable demos.",
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": null,
+      "asset_status": "unreviewed",
+      "asset_notes": "Selected artwork, audio, fonts, models and transitive dependencies are not fully reviewed. Upstream preview references are not cleared for redistribution.",
+      "scope_reuse_status": "review_required",
+      "notes": "Collection CC0 is not assumed to clear contributed game source. No explicit subproject license grant established."
+    },
+    "sourceInspectedAt": "2026-09-10T19:35:18Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "candidate_only",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/MartinDelophy/awesome-gpt-6-astra/tree/139a9287e763e5b592bb53fda97e5101db15db40",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "vehicle-controller",
+      "race-rules"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Arcade driving model",
+        "category": "vehicle-controller",
+        "evidence_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/apex-club/driving-model.js",
+        "source_path": "works/apex-club/driving-model.js",
+        "status": "source_inspected",
+        "notes": "World-space handling, drift and track contacts depend on kart parameters. No extraction or integration test."
+      },
+      {
+        "name": "Race and team rules",
+        "category": "race-rules",
+        "evidence_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/apex-club/race-rules.js",
+        "source_path": "works/apex-club/race-rules.js",
+        "status": "source_inspected",
+        "notes": "Standings and team scores depend on finish times, progress and local racer state. No extraction or integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/tree/139a9287e763e5b592bb53fda97e5101db15db40",
+        "claim": "GitHub identity and immutable source tree retrieved; no upstream execution.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/apex-club/README.md",
+        "claim": "Project description, links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/apex-club/package.json",
+        "claim": "Runtime dependency declarations inspected; ranges do not establish compatibility.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/apex-club/driving-model.js",
+        "claim": "Arcade driving model entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/apex-club/race-rules.js",
+        "claim": "Race and team rules entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unverified",
+      "models": [],
+      "evidence": [
+        {
+          "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/apex-club/CREATION.md",
+          "claim": "Development record does not establish exact model identity; unresolved attribution retained."
+        }
+      ],
+      "notes": "This project appears in an Astra collection, but a creator statement establishing the exact model contribution has not been verified."
+    },
+    "githubStars": 135,
+    "popularity": {
+      "repo_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra",
+      "stars": 135,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/MartinDelophy/awesome-gpt-6-astra",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
     }
   },
   {
@@ -2469,6 +3444,142 @@ window.HEADSTART_CATALOG = [
       "status": "available",
       "checked_at": "2026-09-10T19:48:24Z",
       "evidence_url": "https://api.github.com/repos/Hiraeth010/blackwater",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "drei",
+    "title": "Drei",
+    "summary": "Reusable scene helpers for cameras, materials, loading and interaction in React Three Fiber.",
+    "genres": [
+      "rendering",
+      "exploration"
+    ],
+    "runtime": "React Three Fiber / Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://drei.pmnd.rs/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/pmndrs/drei",
+    "projectUrl": "https://docs.pmnd.rs/drei",
+    "commit": "ffa15b956e320391b0e86084cb58c8da0445abe3",
+    "creator": "pmndrs and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "pmndrs and contributors",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/LICENSE"
+      ],
+      "sourcePage": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/.storybook/public/images/share-screen.jpg",
+      "licenseEvidenceUrl": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned repository documentation/demo overview image. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Drei Storybook share-screen demo placeholder reading click here to Share Screen.",
+      "sha256": "ba9fbdb0326a92aaca59510808770ff378c2177f66f7f514f38a337538cf8884",
+      "originalUrl": "https://raw.githubusercontent.com/pmndrs/drei/ffa15b956e320391b0e86084cb58c8da0445abe3/.storybook/public/images/share-screen.jpg",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/drei.jpg",
+      "localSourcePath": "research/catalog/media/drei.jpg"
+    },
+    "contentKind": "toolkit",
+    "dimension": "3d",
+    "visualStyle": [
+      "configurable"
+    ],
+    "runtimeVersion": "R3F ^9.0.0; React ^19; Three.js >=0.159",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "URL from maintainer README or repository homepage; no source/deployment revision match established.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Helper code license inspected; external HDRIs, fonts, demos and models are separate rights scopes.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "sourceInspectedAt": "2026-09-10T17:33:07Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/pmndrs/drei/tree/ffa15b956e320391b0e86084cb58c8da0445abe3",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "camera",
+      "materials"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Camera control binding",
+        "category": "camera",
+        "evidence_url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/src/core/CameraControls.tsx",
+        "source_path": "src/core/CameraControls.tsx",
+        "status": "source_inspected",
+        "notes": "Wraps camera-controls and connects camera/DOM events to R3F; preserve active camera and input ownership."
+      },
+      {
+        "name": "Planar reflective material",
+        "category": "materials",
+        "evidence_url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/src/core/MeshReflectorMaterial.tsx",
+        "source_path": "src/core/MeshReflectorMaterial.tsx",
+        "status": "source_inspected",
+        "notes": "Renders a reflected scene to render targets with optional blur; rendering cost and cleanup require measurement and lifecycle tests."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/pmndrs/drei/tree/ffa15b956e320391b0e86084cb58c8da0445abe3",
+        "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/README.md",
+        "claim": "Project purpose, maintainer links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/LICENSE",
+        "claim": "License text inspected; scope and exceptions retained in rights notes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/package.json",
+        "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/src/core/CameraControls.tsx",
+        "claim": "Camera control binding entry points statically inspected; not executed.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/src/core/MeshReflectorMaterial.tsx",
+        "claim": "Planar reflective material entry points statically inspected; not executed.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 9862,
+    "popularity": {
+      "repo_url": "https://github.com/pmndrs/drei",
+      "stars": 9862,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/pmndrs/drei",
       "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
     }
   },
@@ -3879,6 +4990,142 @@ window.HEADSTART_CATALOG = [
     }
   },
   {
+    "id": "react-three-rapier",
+    "title": "React Three Rapier",
+    "summary": "React bindings for Rapier bodies, colliders and joints inside an existing React Three Fiber scene.",
+    "genres": [
+      "physics",
+      "sandbox"
+    ],
+    "runtime": "React Three Fiber / Rapier",
+    "label": "Play demo",
+    "demoUrl": "https://react-three-rapier.pmnd.rs",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/pmndrs/react-three-rapier",
+    "projectUrl": "https://react-three-rapier.pmnd.rs",
+    "commit": "ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98",
+    "creator": "pmndrs and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "pmndrs and contributors",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/LICENSE"
+      ],
+      "sourcePage": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/misc/example-auto-colliders.jpg",
+      "licenseEvidenceUrl": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned repository interactive physics example screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "White physics-test shapes resting on a bright green surface in React Three Rapier.",
+      "sha256": "645a6f73889291ee7974d308c317217b6fd283618e6cea0d975bd50d04f9ee91",
+      "originalUrl": "https://raw.githubusercontent.com/pmndrs/react-three-rapier/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/misc/example-auto-colliders.jpg",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/react-three-rapier.jpg",
+      "localSourcePath": "research/catalog/media/react-three-rapier.jpg"
+    },
+    "contentKind": "toolkit",
+    "dimension": "3d",
+    "visualStyle": [
+      "configurable"
+    ],
+    "runtimeVersion": "2.2.0; R3F ^9.0.4; Rapier 0.19.2",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "URL from maintainer README or repository homepage; no source/deployment revision match established.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Core binding code license inspected; Rapier/WASM transitive license and demo assets remain separate checks.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "sourceInspectedAt": "2026-09-10T17:33:07Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/pmndrs/react-three-rapier/tree/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "physics",
+      "physics-joints"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Rigid-body lifecycle",
+        "category": "physics",
+        "evidence_url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/src/components/RigidBody.tsx",
+        "source_path": "packages/react-three-rapier/src/components/RigidBody.tsx",
+        "status": "source_inspected",
+        "notes": "Creates a Rapier body and binds it to object state; requires the existing Physics context and lifecycle ownership."
+      },
+      {
+        "name": "Physics joint hooks",
+        "category": "physics-joints",
+        "evidence_url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/src/hooks/joints.ts",
+        "source_path": "packages/react-three-rapier/src/hooks/joints.ts",
+        "status": "source_inspected",
+        "notes": "Hooks create fixed, revolute, rope and spring impulse joints; body refs and simulation lifecycle need target tests."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/pmndrs/react-three-rapier/tree/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98",
+        "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/readme.md",
+        "claim": "Project purpose, maintainer links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/LICENSE",
+        "claim": "License text inspected; scope and exceptions retained in rights notes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/package.json",
+        "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/src/components/RigidBody.tsx",
+        "claim": "Rigid-body lifecycle entry points statically inspected; not executed.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/src/hooks/joints.ts",
+        "claim": "Physics joint hooks entry points statically inspected; not executed.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 1431,
+    "popularity": {
+      "repo_url": "https://github.com/pmndrs/react-three-rapier",
+      "stars": 1431,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/pmndrs/react-three-rapier",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
     "id": "slimcity",
     "title": "SlimCity",
     "summary": "A compact city simulation with separate economic, road-network and rendering modules.",
@@ -4017,6 +5264,278 @@ window.HEADSTART_CATALOG = [
     }
   },
   {
+    "id": "astra-sunjing-puzzles",
+    "title": "Sunjing Puzzles",
+    "summary": "An interlocking wooden puzzle and sliding-block puzzle workshop.",
+    "genres": [
+      "puzzle"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://sunjing-puzzles.vercel.app/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/MartinDelophy/awesome-gpt-6-astra",
+    "projectUrl": "https://sunjing-puzzles.vercel.app/",
+    "commit": "139a9287e763e5b592bb53fda97e5101db15db40",
+    "creator": "MartinDelophy and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "MartinDelophy and contributors",
+      "licenseExpression": "CC0-1.0 for collection repository",
+      "licenseUrls": [
+        "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE"
+      ],
+      "sourcePage": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/sunjing-puzzles/gameplay.jpg",
+      "licenseEvidenceUrl": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned upstream collection gameplay screenshot for the named entry. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Sunjing construction puzzle interface showing a tan interlocking block model and controls.",
+      "sha256": "73913335440878881965a5a857d231ca9cb1c2396481e15ba3863d3992805453",
+      "originalUrl": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/sunjing-puzzles/gameplay.jpg",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/astra-sunjing-puzzles.jpg",
+      "localSourcePath": "research/catalog/media/astra-sunjing-puzzles.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "procedural",
+      "stylized"
+    ],
+    "runtimeVersion": "react 19.2.8; three ^0.185.1",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer link/source media only; no current browser play test or source/deployment match. Video references are not playable demos.",
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": null,
+      "asset_status": "unreviewed",
+      "asset_notes": "Selected artwork, audio, fonts, models and transitive dependencies are not fully reviewed. Upstream preview references are not cleared for redistribution.",
+      "scope_reuse_status": "review_required",
+      "notes": "Collection CC0 is not assumed to clear contributed game source. No explicit subproject license grant established."
+    },
+    "sourceInspectedAt": "2026-09-10T19:35:18Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "candidate_only",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/MartinDelophy/awesome-gpt-6-astra/tree/139a9287e763e5b592bb53fda97e5101db15db40",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "camera",
+      "puzzle-rules"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Puzzle scene interaction",
+        "category": "camera",
+        "evidence_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/sunjing-puzzles/components/PuzzleScene.tsx",
+        "source_path": "works/sunjing-puzzles/components/PuzzleScene.tsx",
+        "status": "source_inspected",
+        "notes": "React effect owns Three renderer/orbit controls and puzzle picking callbacks. No extraction or integration test."
+      },
+      {
+        "name": "Lock and board rules",
+        "category": "puzzle-rules",
+        "evidence_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/sunjing-puzzles/lib/game.ts",
+        "source_path": "works/sunjing-puzzles/lib/game.ts",
+        "status": "source_inspected",
+        "notes": "Voxel lock removals and sliding-board legality use distinct piece representations. No extraction or integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/tree/139a9287e763e5b592bb53fda97e5101db15db40",
+        "claim": "GitHub identity and immutable source tree retrieved; no upstream execution.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/sunjing-puzzles/README.md",
+        "claim": "Project description, links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/sunjing-puzzles/package.json",
+        "claim": "Runtime dependency declarations inspected; ranges do not establish compatibility.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/sunjing-puzzles/components/PuzzleScene.tsx",
+        "claim": "Puzzle scene interaction entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/sunjing-puzzles/lib/game.ts",
+        "claim": "Lock and board rules entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unverified",
+      "models": [],
+      "evidence": [
+        {
+          "url": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/works/sunjing-puzzles/CREATION.md",
+          "claim": "Development record does not establish exact model identity; unresolved attribution retained."
+        }
+      ],
+      "notes": "This project appears in an Astra collection, but a creator statement establishing the exact model contribution has not been verified."
+    },
+    "githubStars": 135,
+    "popularity": {
+      "repo_url": "https://github.com/MartinDelophy/awesome-gpt-6-astra",
+      "stars": 135,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/MartinDelophy/awesome-gpt-6-astra",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "three-mesh-bvh",
+    "title": "three-mesh-bvh",
+    "summary": "Geometry acceleration structures and queries that can support picking, collision and character movement.",
+    "genres": [
+      "spatial-query",
+      "exploration"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://gkjohnson.github.io/three-mesh-bvh/example/bundle/raycast.html",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/gkjohnson/three-mesh-bvh",
+    "projectUrl": "https://gkjohnson.github.io/three-mesh-bvh/example/bundle/raycast.html",
+    "commit": "8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab",
+    "creator": "gkjohnson and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "gkjohnson and contributors",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/LICENSE"
+      ],
+      "sourcePage": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/docs/example-sm.gif",
+      "licenseEvidenceUrl": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned repository interactive capability demo animation. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Animated red knotted torus surrounded by white ray and particle traces on black.",
+      "sha256": "3ff289466734ad424adf17a5fddb2b1bce97ae144e104ab6083083efb496b381",
+      "originalUrl": "https://raw.githubusercontent.com/gkjohnson/three-mesh-bvh/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/docs/example-sm.gif",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/three-mesh-bvh.gif",
+      "localSourcePath": "research/catalog/media/three-mesh-bvh.gif"
+    },
+    "contentKind": "toolkit",
+    "dimension": "3d",
+    "visualStyle": [
+      "configurable"
+    ],
+    "runtimeVersion": "library 0.9.15; Three.js >=0.159.0",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "URL from maintainer README or repository homepage; no source/deployment revision match established.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Library source license inspected; third-party demonstration models/screenshots remain unreviewed. No performance numbers were measured.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "sourceInspectedAt": "2026-09-10T17:33:07Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/gkjohnson/three-mesh-bvh/tree/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "collision-query",
+      "background-processing"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Mesh spatial queries",
+        "category": "collision-query",
+        "evidence_url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/src/core/MeshBVH.js",
+        "source_path": "src/core/MeshBVH.js",
+        "status": "source_inspected",
+        "notes": "BVH implements geometry queries and serialization; local/world transform handling and geometry mutation need integration tests."
+      },
+      {
+        "name": "Worker BVH construction",
+        "category": "background-processing",
+        "evidence_url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/src/workers/GenerateMeshBVHWorker.js",
+        "source_path": "src/workers/GenerateMeshBVHWorker.js",
+        "status": "source_inspected",
+        "notes": "Transfers geometry buffers while building asynchronously; unavailable geometry during transfer and worker disposal must be handled."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/gkjohnson/three-mesh-bvh/tree/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab",
+        "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/README.md",
+        "claim": "Project purpose, maintainer links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/LICENSE",
+        "claim": "License text inspected; scope and exceptions retained in rights notes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/package.json",
+        "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/src/core/MeshBVH.js",
+        "claim": "Mesh spatial queries entry points statically inspected; not executed.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/src/workers/GenerateMeshBVHWorker.js",
+        "claim": "Worker BVH construction entry points statically inspected; not executed.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 3483,
+    "popularity": {
+      "repo_url": "https://github.com/gkjohnson/three-mesh-bvh",
+      "stars": 3483,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/gkjohnson/three-mesh-bvh",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
     "id": "three-pathfinding",
     "title": "three-pathfinding",
     "summary": "Navigation-mesh utilities for Three.js with zone construction, path search and constrained movement.",
@@ -4148,6 +5667,142 @@ window.HEADSTART_CATALOG = [
       "status": "available",
       "checked_at": "2026-09-10T19:48:25Z",
       "evidence_url": "https://api.github.com/repos/donmccurdy/three-pathfinding",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "threejs",
+    "title": "Three.js",
+    "summary": "The 3D rendering library underlying the initial integration family, with reusable animation and visual-effect examples.",
+    "genres": [
+      "rendering",
+      "animation"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://threejs.org/examples/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/mrdoob/three.js",
+    "projectUrl": "https://threejs.org/",
+    "commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+    "creator": "mrdoob and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "mrdoob and contributors",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/LICENSE"
+      ],
+      "sourcePage": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/screenshots/games_fps.jpg",
+      "licenseEvidenceUrl": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned repository screenshot of the official FPS game example. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Blue-gray first-person arena with ramps and tiled walls from the Three.js FPS example.",
+      "sha256": "a2319a4d4874518beea8dedbe9aa7ffe2dbc0673b1a1db1598c01369ad0b6f85",
+      "originalUrl": "https://raw.githubusercontent.com/mrdoob/three.js/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/screenshots/games_fps.jpg",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/threejs.jpg",
+      "localSourcePath": "research/catalog/media/threejs.jpg"
+    },
+    "contentKind": "toolkit",
+    "dimension": "3d",
+    "visualStyle": [
+      "configurable"
+    ],
+    "runtimeVersion": "0.186.0 (dev branch snapshot)",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "URL from maintainer README or repository homepage; no source/deployment revision match established.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Library/addon code license inspected; examples include external models, textures and datasets whose licenses need independent checks.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "sourceInspectedAt": "2026-09-10T17:33:07Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/mrdoob/three.js/tree/5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "animation",
+      "materials"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Animation playback and blending",
+        "category": "animation",
+        "evidence_url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/src/animation/AnimationMixer.js",
+        "source_path": "src/animation/AnimationMixer.js",
+        "status": "source_inspected",
+        "notes": "Mixer binds actions/tracks to objects and maintains caches; blend policy and uncache cleanup remain target responsibilities."
+      },
+      {
+        "name": "Reflective water effect",
+        "category": "materials",
+        "evidence_url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/objects/Water.js",
+        "source_path": "examples/jsm/objects/Water.js",
+        "status": "source_inspected",
+        "notes": "Planar reflection shader uses a render target and normal map; explicitly WebGL-only, with separate WebGPU WaterMesh recommended by source."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/mrdoob/three.js/tree/5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/README.md",
+        "claim": "Project purpose, maintainer links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/LICENSE",
+        "claim": "License text inspected; scope and exceptions retained in rights notes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/package.json",
+        "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/src/animation/AnimationMixer.js",
+        "claim": "Animation playback and blending entry points statically inspected; not executed.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/objects/Water.js",
+        "claim": "Reflective water effect entry points statically inspected; not executed.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 115380,
+    "popularity": {
+      "repo_url": "https://github.com/mrdoob/three.js",
+      "stars": 115380,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/mrdoob/three.js",
       "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
     }
   },
@@ -4421,6 +6076,979 @@ window.HEADSTART_CATALOG = [
     }
   },
   {
+    "id": "browserquest",
+    "title": "BrowserQuest",
+    "summary": "An archived multiplayer RPG experiment useful for studying client navigation and server world replication.",
+    "genres": [
+      "action-rpg",
+      "multiplayer"
+    ],
+    "runtime": "HTML5 Canvas / Node.js",
+    "label": "No demo",
+    "demoUrl": null,
+    "demoKind": "none",
+    "repoUrl": "https://github.com/mozilla/BrowserQuest",
+    "projectUrl": "https://github.com/mozilla/BrowserQuest",
+    "commit": "af32d247cac3495ca430d0effbb88dd5f3250b2c",
+    "creator": "Little Workshop (Franck and Guillaume Lecollinet), Mozilla and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Little Workshop (Franck and Guillaume Lecollinet), Mozilla and contributors",
+      "licenseExpression": "MPL-2.0",
+      "licenseUrls": [
+        "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/LICENSE"
+      ],
+      "sourcePage": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/client/img/common/screenshot.jpg",
+      "licenseEvidenceUrl": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned repository gameplay screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "BrowserQuest title screen on a parchment banner with a red Play button.",
+      "sha256": "81372c467d4192493d0ffa5e8cdd67710e51e80ee9af6a13a57344a6d27fbb85",
+      "originalUrl": "https://raw.githubusercontent.com/mozilla/BrowserQuest/af32d247cac3495ca430d0effbb88dd5f3250b2c/client/img/common/screenshot.jpg",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/browserquest.jpg",
+      "localSourcePath": "research/catalog/media/browserquest.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "2d",
+    "visualStyle": [
+      "pixel-art",
+      "fantasy"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "unknown",
+    "demoNotes": "Maintainer repository homepage historically linked http://browserquest.mozilla.org/. HTTPS equivalent failed DNS resolution on 2026-09-10 at 17:34Z; no current playable destination verified.",
+    "rights": {
+      "code_license": "MPL-2.0",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/LICENSE",
+      "asset_status": "mixed",
+      "asset_notes": "LICENSE separates MPL-2.0 code from CC-BY-SA-3.0 content; individual bundled third-party libraries still need review.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "sourceInspectedAt": "2026-09-10T17:33:07Z",
+    "integrationFamily": "reference-only",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/mozilla/BrowserQuest/tree/af32d247cac3495ca430d0effbb88dd5f3250b2c",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "pathfinding",
+      "networking"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Grid pathfinding adapter",
+        "category": "pathfinding",
+        "evidence_url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/client/js/pathfinder.js",
+        "source_path": "client/js/pathfinder.js",
+        "status": "source_inspected",
+        "notes": "Wraps AStar and collision-grid/entity handling; AMD and Class dependencies are legacy integration work."
+      },
+      {
+        "name": "World replication and entity groups",
+        "category": "networking",
+        "evidence_url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/server/js/worldserver.js",
+        "source_path": "server/js/worldserver.js",
+        "status": "source_inspected",
+        "notes": "Entity groups, player queues and spawn/broadcast routing are present; server, shared protocol and map code form a substantial dependency scope."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/mozilla/BrowserQuest/tree/af32d247cac3495ca430d0effbb88dd5f3250b2c",
+        "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/README.md",
+        "claim": "Project purpose, maintainer links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/LICENSE",
+        "claim": "License text inspected; scope and exceptions retained in rights notes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/package.json",
+        "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/client/js/pathfinder.js",
+        "claim": "Grid pathfinding adapter entry points statically inspected; not executed.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/server/js/worldserver.js",
+        "claim": "World replication and entity groups entry points statically inspected; not executed.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 9372,
+    "popularity": {
+      "repo_url": "https://github.com/mozilla/BrowserQuest",
+      "stars": 9372,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/mozilla/BrowserQuest",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "clumsy-bird",
+    "title": "Clumsy Bird",
+    "summary": "A melonJS bird-and-obstacle arcade example with explicit play-screen setup and entity collision behavior.",
+    "genres": [
+      "arcade",
+      "endless-runner"
+    ],
+    "runtime": "melonJS",
+    "label": "Play demo",
+    "demoUrl": "https://ellisonleao.github.io/clumsy-bird/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/ellisonleao/clumsy-bird",
+    "projectUrl": "https://ellisonleao.github.io/clumsy-bird/",
+    "commit": "fae3d487d5102af29fb3f78431cbd45e9b83aed3",
+    "creator": "ellisonleao and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "ellisonleao and contributors",
+      "licenseExpression": "GPL-3.0",
+      "licenseUrls": [
+        "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/LICENSE.md"
+      ],
+      "sourcePage": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/README.md",
+      "licenseEvidenceUrl": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/LICENSE.md",
+      "captureDate": null,
+      "versionRelation": "Gameplay image embedded by the maintainer in the pinned README. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Yellow bird flying between green pipes above a city in Clumsy Bird.",
+      "sha256": "0df18f1e76d3341946e582d8167e54f24b84c23647653e1e954891744e19e564",
+      "originalUrl": "https://i.imgur.com/Slbvt65.png",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/clumsy-bird.png",
+      "localSourcePath": "research/catalog/media/clumsy-bird.png"
+    },
+    "contentKind": "game",
+    "dimension": "2d",
+    "visualStyle": [
+      "pixel-art"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "URL from maintainer README or repository homepage; no source/deployment revision match established.",
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/LICENSE.md",
+      "asset_status": "unreviewed",
+      "asset_notes": "Bird imagery and audio require separate origin/permission checks; do not infer original-game art permission from this repository license.",
+      "scope_reuse_status": "review_required",
+      "notes": "Inspected package.json declares MIT and links LICENSE, but the actual root LICENSE.md is GPL-3.0. These declarations conflict; resolve selected-file rights before extraction or labeling the whole project GPL/MIT."
+    },
+    "sourceInspectedAt": "2026-09-10T17:33:07Z",
+    "integrationFamily": "other-web-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "candidate_only",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/ellisonleao/clumsy-bird/tree/fae3d487d5102af29fb3f78431cbd45e9b83aed3",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "character-controller",
+      "game-state"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Flap movement and obstacle entities",
+        "category": "character-controller",
+        "evidence_url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/js/entities/entities.js",
+        "source_path": "js/entities/entities.js",
+        "status": "source_inspected",
+        "notes": "Bird animation, gravity and collision callbacks are present; art and melonJS lifecycle are coupled."
+      },
+      {
+        "name": "Play-screen lifecycle",
+        "category": "game-state",
+        "evidence_url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/js/screens/play.js",
+        "source_path": "js/screens/play.js",
+        "status": "source_inspected",
+        "notes": "Resets score, binds the flap action and creates scene objects; source uses legacy melonJS APIs."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/ellisonleao/clumsy-bird/tree/fae3d487d5102af29fb3f78431cbd45e9b83aed3",
+        "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/README.md",
+        "claim": "Project purpose, maintainer links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/LICENSE.md",
+        "claim": "License text inspected; scope and exceptions retained in rights notes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/package.json",
+        "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/js/entities/entities.js",
+        "claim": "Flap movement and obstacle entities entry points statically inspected; not executed.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/js/screens/play.js",
+        "claim": "Play-screen lifecycle entry points statically inspected; not executed.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/package.json",
+        "claim": "Package licenses array says MIT while root LICENSE.md says GPL-3.0; contradictory declarations block resolved code classification.",
+        "kind": "license"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 1622,
+    "popularity": {
+      "repo_url": "https://github.com/ellisonleao/clumsy-bird",
+      "stars": 1622,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/ellisonleao/clumsy-bird",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "dwellcraft",
+    "title": "Dwellcraft",
+    "summary": "A browser home-layout sandbox with furniture placement and local design saves.",
+    "genres": [
+      "sandbox",
+      "building"
+    ],
+    "runtime": "Babylon.js",
+    "label": "Play demo",
+    "demoUrl": "https://dwellcraft.vercel.app/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/Ryan-fm/Dwellcraft",
+    "projectUrl": "https://dwellcraft.vercel.app/",
+    "commit": "5055fefac14f0fe7214c6cbb66853e62a2154a88",
+    "creator": "Ryan-fm and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Ryan-fm and contributors",
+      "licenseExpression": "LicenseRef-Image-Rights-Unresolved",
+      "licenseUrls": [
+        "https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/docs/screenshots/editor-en.png"
+      ],
+      "sourcePage": "https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/docs/screenshots/editor-en.png",
+      "licenseEvidenceUrl": "https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/docs/screenshots/editor-en.png",
+      "captureDate": null,
+      "versionRelation": "Pinned repository in-game editor screenshot identified by the README. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Dwellcraft browser editor displaying an isometric furnished apartment floor plan.",
+      "sha256": "f6f1030528e26cac99bcf73aaf092056cdcbbd0099675696e8f8b15c2506e1f2",
+      "originalUrl": "https://raw.githubusercontent.com/Ryan-fm/Dwellcraft/5055fefac14f0fe7214c6cbb66853e62a2154a88/docs/screenshots/editor-en.png",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/dwellcraft.png",
+      "localSourcePath": "research/catalog/media/dwellcraft.png"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "procedural",
+      "stylized"
+    ],
+    "runtimeVersion": "@babylonjs/core ^9.0.0; react ^19.2.8",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer link/source media only; no current browser play test or source/deployment match. Video references are not playable demos.",
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": null,
+      "asset_status": "unreviewed",
+      "asset_notes": "ASSETS.md describes Poly Haven assets and separate font/UI licenses; no project-code license found. Concept art is not gameplay evidence.",
+      "scope_reuse_status": "review_required",
+      "notes": "No project-code license established; public source is not reuse permission."
+    },
+    "sourceInspectedAt": "2026-09-10T19:35:18Z",
+    "integrationFamily": "other-web-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "candidate_only",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/Ryan-fm/Dwellcraft/tree/5055fefac14f0fe7214c6cbb66853e62a2154a88",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "construction",
+      "camera"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Furniture placement",
+        "category": "construction",
+        "evidence_url": "https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/lib/placement.ts",
+        "source_path": "lib/placement.ts",
+        "status": "source_inspected",
+        "notes": "Separating-axis overlap and placement validation depend on world assets/floors. No extraction or integration test."
+      },
+      {
+        "name": "Planar walk camera",
+        "category": "camera",
+        "evidence_url": "https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/lib/navigation.ts",
+        "source_path": "lib/navigation.ts",
+        "status": "source_inspected",
+        "notes": "Babylon UniversalCamera subclass removes vertical motion and configures collision ellipsoid. No extraction or integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/Ryan-fm/Dwellcraft/tree/5055fefac14f0fe7214c6cbb66853e62a2154a88",
+        "claim": "GitHub identity and immutable source tree retrieved; no upstream execution.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/README.md",
+        "claim": "Project description, links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/package.json",
+        "claim": "Runtime dependency declarations inspected; ranges do not establish compatibility.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/lib/placement.ts",
+        "claim": "Furniture placement entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/lib/navigation.ts",
+        "claim": "Planar walk camera entry points statically inspected; dependencies and coupling noted.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unverified",
+      "models": [],
+      "evidence": [],
+      "notes": "This project appears in an Astra collection, but a creator statement establishing the exact model contribution has not been verified."
+    },
+    "githubStars": 1,
+    "popularity": {
+      "repo_url": "https://github.com/Ryan-fm/Dwellcraft",
+      "stars": 1,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/Ryan-fm/Dwellcraft",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "godot-platformer-2d",
+    "title": "Godot 2D Platformer",
+    "summary": "Compact pixel-art platformer demonstrating movement and a pause interface.",
+    "genres": [
+      "platformer",
+      "action"
+    ],
+    "runtime": "Godot",
+    "label": "Play demo",
+    "demoUrl": "https://godotengine.github.io/godot-demo-projects/2d/platformer/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/godotengine/godot-demo-projects",
+    "projectUrl": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/README.md",
+    "commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+    "creator": "Godot Engine contributors; see subproject credits",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Godot Engine contributors; see subproject credits",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md"
+      ],
+      "sourcePage": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/screenshots/platformer.webp",
+      "licenseEvidenceUrl": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "captureDate": null,
+      "versionRelation": "Pinned subproject gameplay screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Orange character collecting coins across bright floating platforms in the Godot 2D platformer.",
+      "sha256": "ef5eb833df4cf3618e92c4e5853e944e5999f8c9933ca21efd02dd87fea3502c",
+      "originalUrl": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/screenshots/platformer.webp",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/godot-platformer-2d.webp",
+      "localSourcePath": "research/catalog/media/godot-platformer-2d.webp"
+    },
+    "contentKind": "demo",
+    "dimension": "2d",
+    "visualStyle": [
+      "pixel-art"
+    ],
+    "runtimeVersion": "4.7 development branch (project feature value)",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Official index and HTML export endpoint inspected. Browser execution was not tested. Index describes automatic master exports, but exact deployed artifact/commit correspondence was not verified; web rendering uses Compatibility and can differ from native Forward+.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "asset_status": "unreviewed",
+      "asset_notes": "README credits external music by Hubert Lamontagne. MIT code does not settle the exact music distribution terms; selected sounds, sprites and font provenance require review.",
+      "scope_reuse_status": "review_required",
+      "notes": "MIT notice retention applies to code; audit exact source slice, scene resources and third-party content. No Three.js/R3F adapter or reuse test exists in this batch."
+    },
+    "sourceInspectedAt": "2026-09-10T17:34:56.320282+00:00",
+    "integrationFamily": "reference-only",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/godotengine/godot-demo-projects/tree/a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+    "platforms": [
+      "browser export",
+      "native Godot project"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "movement",
+      "ui"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Slope-aware player movement",
+        "category": "movement",
+        "evidence_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/player/player.gd",
+        "source_path": "2d/platformer/player/player.gd",
+        "status": "source_inspected",
+        "notes": "CharacterBody2D handles acceleration, gravity, variable-height jump and movement; scene children and named input actions must be adapted."
+      },
+      {
+        "name": "Pause menu and focus",
+        "category": "ui",
+        "evidence_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/gui/pause_menu.gd",
+        "source_path": "2d/platformer/gui/pause_menu.gd",
+        "status": "source_inspected",
+        "notes": "Control-based menu changes SceneTree pause state and tweens opacity/anchors; requires button/focus and scene ownership."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/README.md",
+        "claim": "Root describes demo distribution, development-branch compatibility and official browser exports.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+        "claim": "Inspected MIT license text; selected media/dependencies require separate review.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/README.md",
+        "claim": "Inspected subproject features, renderer, credits and screenshot reference.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/project.godot",
+        "claim": "Inspected config/features 4.7, input actions and physics/renderer settings.",
+        "kind": "source"
+      },
+      {
+        "url": "https://godotengine.github.io/godot-demo-projects/",
+        "claim": "Official export index links this subproject; no interactive test or build-to-commit attestation.",
+        "kind": "official-docs"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/player/player.gd",
+        "claim": "Slope-aware player movement: inspected script behavior and scene dependencies.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/gui/pause_menu.gd",
+        "claim": "Pause menu and focus: inspected script behavior and scene dependencies.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 9503,
+    "popularity": {
+      "repo_url": "https://github.com/godotengine/godot-demo-projects",
+      "stars": 9503,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/godotengine/godot-demo-projects",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "godot-platformer-3d",
+    "title": "Godot 3D Platformer",
+    "summary": "3D platforming reference with camera-relative movement and raycast camera collision.",
+    "genres": [
+      "platformer",
+      "action"
+    ],
+    "runtime": "Godot",
+    "label": "Play demo",
+    "demoUrl": "https://godotengine.github.io/godot-demo-projects/3d/platformer/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/godotengine/godot-demo-projects",
+    "projectUrl": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/README.md",
+    "commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+    "creator": "Godot Engine contributors; see subproject credits",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Godot Engine contributors; see subproject credits",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md"
+      ],
+      "sourcePage": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/screenshots/platformer.webp",
+      "licenseEvidenceUrl": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "captureDate": null,
+      "versionRelation": "Pinned subproject gameplay screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Robot character carrying a blue cylinder in a blocky forest in the Godot 3D platformer.",
+      "sha256": "ecc6228fd200ddbde9d21707e7ffea1bd24ac59592a92aa2e33cabea91706a88",
+      "originalUrl": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/screenshots/platformer.webp",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/godot-platformer-3d.webp",
+      "localSourcePath": "research/catalog/media/godot-platformer-3d.webp"
+    },
+    "contentKind": "demo",
+    "dimension": "3d",
+    "visualStyle": [],
+    "runtimeVersion": "4.7 development branch (project feature value)",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Official index and HTML export endpoint inspected. Browser execution was not tested. Index describes automatic master exports, but exact deployed artifact/commit correspondence was not verified; web rendering uses Compatibility and can differ from native Forward+.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "asset_status": "unreviewed",
+      "asset_notes": "README credits an external virtual joystick add-on. Models, textures, audio and add-on terms require selected-file checks beyond root MIT.",
+      "scope_reuse_status": "review_required",
+      "notes": "MIT notice retention applies to code; audit exact source slice, scene resources and third-party content. No Three.js/R3F adapter or reuse test exists in this batch."
+    },
+    "sourceInspectedAt": "2026-09-10T17:34:56.320282+00:00",
+    "integrationFamily": "reference-only",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/godotengine/godot-demo-projects/tree/a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+    "platforms": [
+      "browser export",
+      "native Godot project"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "movement",
+      "camera"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Camera-relative 3D controller",
+        "category": "movement",
+        "evidence_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/player/player.gd",
+        "source_path": "3d/platformer/player/player.gd",
+        "status": "source_inspected",
+        "notes": "CharacterBody3D transforms movement by camera basis and applies gravity/acceleration; depends on animation tree, input map and scene-node structure."
+      },
+      {
+        "name": "Occlusion-aware follow camera",
+        "category": "camera",
+        "evidence_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/player/follow_camera.gd",
+        "source_path": "3d/platformer/player/follow_camera.gd",
+        "status": "source_inspected",
+        "notes": "Camera raycasts toward target and side angles, shortens blocked distance and auto-turns; must share physics world and preserve camera ownership."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/README.md",
+        "claim": "Root describes demo distribution, development-branch compatibility and official browser exports.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+        "claim": "Inspected MIT license text; selected media/dependencies require separate review.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/README.md",
+        "claim": "Inspected subproject features, renderer, credits and screenshot reference.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/project.godot",
+        "claim": "Inspected config/features 4.7, input actions and physics/renderer settings.",
+        "kind": "source"
+      },
+      {
+        "url": "https://godotengine.github.io/godot-demo-projects/",
+        "claim": "Official export index links this subproject; no interactive test or build-to-commit attestation.",
+        "kind": "official-docs"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/player/player.gd",
+        "claim": "Camera-relative 3D controller: inspected script behavior and scene dependencies.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/player/follow_camera.gd",
+        "claim": "Occlusion-aware follow camera: inspected script behavior and scene dependencies.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 9503,
+    "popularity": {
+      "repo_url": "https://github.com/godotengine/godot-demo-projects",
+      "stars": 9503,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/godotengine/godot-demo-projects",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "godot-astar-grid-2d",
+    "title": "Godot AStarGrid2D Navigation",
+    "summary": "Small tile-grid pathfinding example with a steering-driven character.",
+    "genres": [
+      "navigation-demo",
+      "strategy-toolkit"
+    ],
+    "runtime": "Godot",
+    "label": "Play demo",
+    "demoUrl": "https://godotengine.github.io/godot-demo-projects/2d/navigation_astar/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/godotengine/godot-demo-projects",
+    "projectUrl": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/README.md",
+    "commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+    "creator": "Godot Engine contributors; see subproject credits",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Godot Engine contributors; see subproject credits",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md"
+      ],
+      "sourcePage": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/screenshots/navigation_astar.webp",
+      "licenseEvidenceUrl": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "captureDate": null,
+      "versionRelation": "Pinned subproject screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Godot AStarGrid2D demo with a small robot navigating stone platforms in space.",
+      "sha256": "b33e2e80bdb1ae471df51caab48af2c9cea8bfc06cc53a42474579092778b89c",
+      "originalUrl": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/screenshots/navigation_astar.webp",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/godot-astar-grid-2d.webp",
+      "localSourcePath": "research/catalog/media/godot-astar-grid-2d.webp"
+    },
+    "contentKind": "demo",
+    "dimension": "2d",
+    "visualStyle": [],
+    "runtimeVersion": "4.7 development branch (project feature value)",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Official index and HTML export endpoint inspected. Browser execution was not tested. Index describes automatic master exports, but exact deployed artifact/commit correspondence was not verified; web rendering uses Compatibility and can differ from native Forward+.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "asset_status": "unreviewed",
+      "asset_notes": "Root MIT declaration inspected; screenshot and sprite identity/creator provenance still need central media review. No blanket derivative clearance claimed.",
+      "scope_reuse_status": "review_required",
+      "notes": "MIT notice retention applies to code; audit exact source slice, scene resources and third-party content. No Three.js/R3F adapter or reuse test exists in this batch."
+    },
+    "sourceInspectedAt": "2026-09-10T17:34:56.320282+00:00",
+    "integrationFamily": "reference-only",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/godotengine/godot-demo-projects/tree/a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+    "platforms": [
+      "browser export",
+      "native Godot project"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "pathfinding",
+      "movement"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Obstacle-aware grid paths",
+        "category": "pathfinding",
+        "evidence_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/pathfind_astar.gd",
+        "source_path": "2d/navigation_astar/pathfind_astar.gd",
+        "status": "source_inspected",
+        "notes": "TileMapLayer configures Manhattan AStarGrid2D, marks occupied cells solid and draws resulting path; fixed cell/region assumptions need adapting."
+      },
+      {
+        "name": "Steering path follower",
+        "category": "movement",
+        "evidence_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/character.gd",
+        "source_path": "2d/navigation_astar/character.gd",
+        "status": "source_inspected",
+        "notes": "Node2D consumes path points with velocity steering and arrival tolerance; this is movement logic, not physics collision avoidance."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/README.md",
+        "claim": "Root describes demo distribution, development-branch compatibility and official browser exports.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+        "claim": "Inspected MIT license text; selected media/dependencies require separate review.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/README.md",
+        "claim": "Inspected subproject features, renderer, credits and screenshot reference.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/project.godot",
+        "claim": "Inspected config/features 4.7, input actions and physics/renderer settings.",
+        "kind": "source"
+      },
+      {
+        "url": "https://godotengine.github.io/godot-demo-projects/",
+        "claim": "Official export index links this subproject; no interactive test or build-to-commit attestation.",
+        "kind": "official-docs"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/pathfind_astar.gd",
+        "claim": "Obstacle-aware grid paths: inspected script behavior and scene dependencies.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/character.gd",
+        "claim": "Steering path follower: inspected script behavior and scene dependencies.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 9503,
+    "popularity": {
+      "repo_url": "https://github.com/godotengine/godot-demo-projects",
+      "stars": 9503,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/godotengine/godot-demo-projects",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "godot-truck-town",
+    "title": "Godot Truck Town",
+    "summary": "Vehicle-physics playground with several truck forms and camera views.",
+    "genres": [
+      "driving",
+      "simulation",
+      "vehicle-demo"
+    ],
+    "runtime": "Godot",
+    "label": "Play demo",
+    "demoUrl": "https://godotengine.github.io/godot-demo-projects/3d/truck_town/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/godotengine/godot-demo-projects",
+    "projectUrl": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/README.md",
+    "commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+    "creator": "Godot Engine contributors; see subproject credits",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Godot Engine contributors; see subproject credits",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md"
+      ],
+      "sourcePage": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/screenshots/truck_town.webp",
+      "licenseEvidenceUrl": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "captureDate": null,
+      "versionRelation": "Pinned subproject gameplay screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Red pickup driving through a low-poly town in the Godot Truck Town demo.",
+      "sha256": "7d7e38da059e04b0b948b35e6898cbf5483bd54163efd6d3741b18fcbc2f30e4",
+      "originalUrl": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/screenshots/truck_town.webp",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/godot-truck-town.webp",
+      "localSourcePath": "research/catalog/media/godot-truck-town.webp"
+    },
+    "contentKind": "demo",
+    "dimension": "3d",
+    "visualStyle": [],
+    "runtimeVersion": "4.7 development branch (project feature value)",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Official index and HTML export endpoint inspected. Browser execution was not tested. Index describes automatic master exports, but exact deployed artifact/commit correspondence was not verified; web rendering uses Compatibility and can differ from native Forward+.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "asset_status": "unreviewed",
+      "asset_notes": "README names external Freesound ambience and Sketchfab models. Their exact licenses, attributions and derivative scopes remain unresolved in this record.",
+      "scope_reuse_status": "review_required",
+      "notes": "MIT notice retention applies to code; audit exact source slice, scene resources and third-party content. No Three.js/R3F adapter or reuse test exists in this batch."
+    },
+    "sourceInspectedAt": "2026-09-10T17:34:56.320282+00:00",
+    "integrationFamily": "reference-only",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/godotengine/godot-demo-projects/tree/a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+    "platforms": [
+      "browser export",
+      "native Godot project"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "vehicle-physics",
+      "camera"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Vehicle throttle, steering and boost",
+        "category": "vehicle-physics",
+        "evidence_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/vehicles/vehicle.gd",
+        "source_path": "3d/truck_town/vehicles/vehicle.gd",
+        "status": "source_inspected",
+        "notes": "VehicleBody3D applies engine force, steering, braking and boost with audio/haptics; requires vehicle scene, Jolt setup and named inputs."
+      },
+      {
+        "name": "Switchable vehicle follow camera",
+        "category": "camera",
+        "evidence_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/vehicles/follow_camera.gd",
+        "source_path": "3d/truck_town/vehicles/follow_camera.gd",
+        "status": "source_inspected",
+        "notes": "Camera supports exterior/interior/top-down modes and speed-related FOV interpolation; static inspection is not evidence of optimal feel or frame-rate independence."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/README.md",
+        "claim": "Root describes demo distribution, development-branch compatibility and official browser exports.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+        "claim": "Inspected MIT license text; selected media/dependencies require separate review.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/README.md",
+        "claim": "Inspected subproject features, renderer, credits and screenshot reference.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/project.godot",
+        "claim": "Inspected config/features 4.7, input actions and physics/renderer settings.",
+        "kind": "source"
+      },
+      {
+        "url": "https://godotengine.github.io/godot-demo-projects/",
+        "claim": "Official export index links this subproject; no interactive test or build-to-commit attestation.",
+        "kind": "official-docs"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/vehicles/vehicle.gd",
+        "claim": "Vehicle throttle, steering and boost: inspected script behavior and scene dependencies.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/vehicles/follow_camera.gd",
+        "claim": "Switchable vehicle follow camera: inspected script behavior and scene dependencies.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 9503,
+    "popularity": {
+      "repo_url": "https://github.com/godotengine/godot-demo-projects",
+      "stars": 9503,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/godotengine/godot-demo-projects",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
     "id": "hexgl",
     "title": "HexGL",
     "summary": "A futuristic browser racer with hovercraft-style movement and recorded race-state playback.",
@@ -4549,6 +7177,276 @@ window.HEADSTART_CATALOG = [
       "status": "available",
       "checked_at": "2026-09-10T19:48:24Z",
       "evidence_url": "https://api.github.com/repos/BKcore/HexGL",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "hextris",
+    "title": "Hextris",
+    "summary": "A rotating-hexagon puzzle game with adjacent-color matching and escalating block waves.",
+    "genres": [
+      "puzzle",
+      "arcade"
+    ],
+    "runtime": "HTML5 Canvas",
+    "label": "Play demo",
+    "demoUrl": "https://hextris.github.io/hextris",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/Hextris/hextris",
+    "projectUrl": "https://hextris.io",
+    "commit": "3f4847dc8fd7dab3d1c87e6324b9159d92fbd396",
+    "creator": "Logan Engstrom, Garrett Finucane, Noah Moroze, Michael Yang and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Logan Engstrom, Garrett Finucane, Noah Moroze, Michael Yang and contributors",
+      "licenseExpression": "GPL-3.0-or-later",
+      "licenseUrls": [
+        "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/LICENSE.md"
+      ],
+      "sourcePage": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/twitter-opengraph.png",
+      "licenseEvidenceUrl": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/LICENSE.md",
+      "captureDate": null,
+      "versionRelation": "Pinned repository social/game preview. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Hextris board with a dark central hexagon bordered by colored segments.",
+      "sha256": "e799d31923ca034365e312f9cc5f19fb97e9eb74b15f1c573203dfc5064bfd38",
+      "originalUrl": "https://raw.githubusercontent.com/Hextris/hextris/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/twitter-opengraph.png",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/hextris.png",
+      "localSourcePath": "research/catalog/media/hextris.png"
+    },
+    "contentKind": "game",
+    "dimension": "2d",
+    "visualStyle": [
+      "geometric",
+      "flat-color"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "URL from maintainer README or repository homepage; no source/deployment revision match established.",
+    "rights": {
+      "code_license": "GPL-3.0-or-later",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/LICENSE.md",
+      "asset_status": "unreviewed",
+      "asset_notes": "Fonts, sounds and image rights not independently cleared; GPL README and license inspected.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "sourceInspectedAt": "2026-09-10T17:33:07Z",
+    "integrationFamily": "other-web-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/Hextris/hextris/tree/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "puzzle-rules",
+      "spawn-system"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Adjacent-color matching",
+        "category": "puzzle-rules",
+        "evidence_url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/js/checking.js",
+        "source_path": "js/checking.js",
+        "status": "source_inspected",
+        "notes": "Flood-fill and consolidation inspect neighbor blocks around hexagonal sides; depends on Hex block layout and global settings."
+      },
+      {
+        "name": "Wave difficulty progression",
+        "category": "spawn-system",
+        "evidence_url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/js/wavegen.js",
+        "source_path": "js/wavegen.js",
+        "status": "source_inspected",
+        "notes": "Spawn intervals and difficulty change after block destruction; global game clock/settings require an adapter."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/Hextris/hextris/tree/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396",
+        "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/README.md",
+        "claim": "Project purpose, maintainer links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/LICENSE.md",
+        "claim": "License text inspected; scope and exceptions retained in rights notes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/js/checking.js",
+        "claim": "Adjacent-color matching entry points statically inspected; not executed.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/js/wavegen.js",
+        "claim": "Wave difficulty progression entry points statically inspected; not executed.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 2435,
+    "popularity": {
+      "repo_url": "https://github.com/Hextris/hextris",
+      "stars": 2435,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/Hextris/hextris",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "littlejs",
+    "title": "LittleJS",
+    "summary": "A browser game engine and example collection covering sprite games, effects, synthesized audio and input.",
+    "genres": [
+      "platformer",
+      "arcade",
+      "puzzle"
+    ],
+    "runtime": "LittleJS",
+    "label": "Play demo",
+    "demoUrl": "https://killedbyapixel.github.io/LittleJS/examples",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/KilledByAPixel/LittleJS",
+    "projectUrl": "https://killedbyapixel.github.io/LittleJS/examples",
+    "commit": "da1b3836552b2373522a56bd39d6fb9f4b530017",
+    "creator": "Frank Force and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Frank Force and contributors",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/LICENSE"
+      ],
+      "sourcePage": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/examples/screenshot.jpg",
+      "licenseEvidenceUrl": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned repository example montage. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Montage of four colorful LittleJS game and puzzle example screens.",
+      "sha256": "7a1ddaa184b36fb75ee9d80bd0b10d47a1471b572779b0ad15c995de897012e5",
+      "originalUrl": "https://raw.githubusercontent.com/KilledByAPixel/LittleJS/da1b3836552b2373522a56bd39d6fb9f4b530017/examples/screenshot.jpg",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/littlejs.jpg",
+      "localSourcePath": "research/catalog/media/littlejs.jpg"
+    },
+    "contentKind": "engine",
+    "dimension": "mixed",
+    "visualStyle": [
+      "pixel-art",
+      "configurable"
+    ],
+    "runtimeVersion": "1.18.30",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "URL from maintainer README or repository homepage; no source/deployment revision match established.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Library code license inspected; individual example textures, fonts and audio still require scope review.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "sourceInspectedAt": "2026-09-10T17:33:07Z",
+    "integrationFamily": "other-web-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/KilledByAPixel/LittleJS/tree/da1b3836552b2373522a56bd39d6fb9f4b530017",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "audio",
+      "particles"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Synthesized and spatial audio",
+        "category": "audio",
+        "evidence_url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/src/engineAudio.js",
+        "source_path": "src/engineAudio.js",
+        "status": "source_inspected",
+        "notes": "Sound and instance classes combine Web Audio, generated sound and positional attenuation; engine globals and audio lifecycle remain dependencies."
+      },
+      {
+        "name": "Particle emitters",
+        "category": "particles",
+        "evidence_url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/src/engineParticles.js",
+        "source_path": "src/engineParticles.js",
+        "status": "source_inspected",
+        "notes": "Emitter/particle classes implement randomized motion, gradients and tile collisions; depends on EngineObject and drawing/math helpers."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/KilledByAPixel/LittleJS/tree/da1b3836552b2373522a56bd39d6fb9f4b530017",
+        "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/README.md",
+        "claim": "Project purpose, maintainer links and declared feature context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/LICENSE",
+        "claim": "License text inspected; scope and exceptions retained in rights notes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/package.json",
+        "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/src/engineAudio.js",
+        "claim": "Synthesized and spatial audio entry points statically inspected; not executed.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/src/engineParticles.js",
+        "claim": "Particle emitters entry points statically inspected; not executed.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 4175,
+    "popularity": {
+      "repo_url": "https://github.com/KilledByAPixel/LittleJS",
+      "stars": 4175,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/KilledByAPixel/LittleJS",
       "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
     }
   },
@@ -4957,6 +7855,258 @@ window.HEADSTART_CATALOG = [
     }
   },
   {
+    "id": "freeciv",
+    "title": "Freeciv",
+    "summary": "Empire-building strategy with turn-based city production and movement planning.",
+    "genres": [
+      "4x",
+      "turn-based-strategy",
+      "builder",
+      "economy"
+    ],
+    "runtime": "Freeciv native engine",
+    "label": "Get game",
+    "demoUrl": "https://www.freeciv.org/",
+    "demoKind": "native-download",
+    "repoUrl": "https://github.com/freeciv/freeciv",
+    "projectUrl": "https://www.freeciv.org/",
+    "commit": "61db53503f9243aca417848a72864be69635235e",
+    "creator": "Freeciv Project contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Freeciv Project contributors",
+      "licenseExpression": "GPL-2.0-or-later",
+      "licenseUrls": [
+        "https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/COPYING"
+      ],
+      "sourcePage": "https://freeciv.org/",
+      "licenseEvidenceUrl": "https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/COPYING",
+      "captureDate": null,
+      "versionRelation": "Gameplay screenshot displayed on the official project home page. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Freeciv strategy map with cities, territory borders, unit labels and command panels.",
+      "sha256": "8d7b385c1363a2dce89e33cebb3f503e06a5844182ed548eced636b0ef18c40b",
+      "originalUrl": "https://freeciv.org/images/freeciv-screenshot-2.5.0.png",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/freeciv.png",
+      "localSourcePath": "research/catalog/media/freeciv.png"
+    },
+    "contentKind": "game",
+    "dimension": "2d",
+    "visualStyle": [],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer distribution page or homepage entry point, not a browser game or proof that a release matches the inspected source commit. Native setup/content requirements apply.",
+    "rights": {
+      "code_license": "GPL-2.0-or-later",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/COPYING",
+      "asset_status": "unreviewed",
+      "asset_notes": "Root COPYING and selected source headers inspected; tileset, flag, sound and ruleset licenses were not independently scoped in this batch. Do not transfer the code license to all visual content.",
+      "scope_reuse_status": "review_required",
+      "notes": "License summary identifies project terms, not blanket reuse clearance or any royalty agreement. Preserve notices; resolve selected files and transitive dependencies. See research/catalog/evidence/native-batch.json for actual batch timing; no individual timing was recorded."
+    },
+    "sourceInspectedAt": "2026-09-10T17:34:56.320282+00:00",
+    "integrationFamily": "reference-only",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/freeciv/freeciv/tree/61db53503f9243aca417848a72864be69635235e",
+    "platforms": [],
+    "platformKind": "desktop",
+    "capabilities": [
+      "economy",
+      "pathfinding"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "City turn and production processing",
+        "category": "economy",
+        "evidence_url": "https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/server/cityturn.c",
+        "source_path": "server/cityturn.c",
+        "status": "source_inspected",
+        "notes": "City turn code manages food/population and building/unit production using server and ruleset state; not a frontend-ready simulation library."
+      },
+      {
+        "name": "Movement-cost route planning",
+        "category": "pathfinding",
+        "evidence_url": "https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/common/aicore/path_finding.c",
+        "source_path": "common/aicore/path_finding.c",
+        "status": "source_inspected",
+        "notes": "Pathfinder differentiates ordinary, danger and fuel routes with movement and zone-of-control costs; requires Freeciv map/unit callbacks."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/README.md",
+        "claim": "Inspected maintainer description, distribution links and declared scope; no execution.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/COPYING",
+        "claim": "Inspected license text and declared project terms; selected scope and exceptions require review.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/server/cityturn.c",
+        "claim": "City turn and production processing: inspected declarations and relevant behavior; not isolated or tested.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/common/aicore/path_finding.c",
+        "claim": "Movement-cost route planning: inspected declarations and relevant behavior; not isolated or tested.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 1591,
+    "popularity": {
+      "repo_url": "https://github.com/freeciv/freeciv",
+      "stars": 1591,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:25Z",
+      "evidence_url": "https://api.github.com/repos/freeciv/freeciv",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "freecol",
+    "title": "FreeCol",
+    "summary": "Colonization strategy with worker allocation, production chains and unit movement costs.",
+    "genres": [
+      "turn-based-strategy",
+      "colony-management",
+      "economy",
+      "builder"
+    ],
+    "runtime": "JVM / FreeCol",
+    "label": "Get game",
+    "demoUrl": "https://github.com/FreeCol/freecol/releases",
+    "demoKind": "native-download",
+    "repoUrl": "https://github.com/FreeCol/freecol",
+    "projectUrl": "https://www.freecol.org/",
+    "commit": "e45ac6fd9592c8f032b2686658f63447c115d9d7",
+    "creator": "FreeCol Team",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "FreeCol Team",
+      "licenseExpression": "GPL-2.0-or-later",
+      "licenseUrls": [
+        "https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/LICENSE"
+      ],
+      "sourcePage": "https://www.freecol.org/screenshots.html",
+      "licenseEvidenceUrl": "https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Gameplay screenshot on the official project screenshot gallery. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "FreeCol coastal strategy map with ships, settlements, a minimap and status interface.",
+      "sha256": "542c24c05758abb589cf35c4ffb5a0419b858abbe375ba6ec9c5cb28e383742a",
+      "originalUrl": "https://www.freecol.org/images/screen-1.0.0.jpg",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/freecol.jpg",
+      "localSourcePath": "research/catalog/media/freecol.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "2d",
+    "visualStyle": [],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer distribution page or homepage entry point, not a browser game or proof that a release matches the inspected source commit. Native setup/content requirements apply.",
+    "rights": {
+      "code_license": "GPL-2.0-or-later",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/LICENSE",
+      "asset_status": "mixed",
+      "asset_notes": "Selected source headers allow GPL-2.0-or-later. README says most media GPLv2 and some CC-BY-4.0; directory README files must establish exact selected art, music and sound terms.",
+      "scope_reuse_status": "review_required",
+      "notes": "License summary identifies project terms, not blanket reuse clearance or any royalty agreement. Preserve notices; resolve selected files and transitive dependencies. See research/catalog/evidence/native-batch.json for actual batch timing; no individual timing was recorded."
+    },
+    "sourceInspectedAt": "2026-09-10T17:34:56.320282+00:00",
+    "integrationFamily": "reference-only",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/FreeCol/freecol/tree/e45ac6fd9592c8f032b2686658f63447c115d9d7",
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "platformKind": "desktop",
+    "capabilities": [
+      "economy",
+      "pathfinding"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Colony goods and worker production",
+        "category": "economy",
+        "evidence_url": "https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/src/net/sf/freecol/common/model/Colony.java",
+        "source_path": "src/net/sf/freecol/common/model/Colony.java",
+        "status": "source_inspected",
+        "notes": "Colony chooses work types against required goods and cached production; coupled to goods definitions, workers, buildings and game specification."
+      },
+      {
+        "name": "Unit movement costs and routing context",
+        "category": "pathfinding",
+        "evidence_url": "https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/src/net/sf/freecol/common/model/Unit.java",
+        "source_path": "src/net/sf/freecol/common/model/Unit.java",
+        "status": "source_inspected",
+        "notes": "Unit movement costs consider terrain, roads, naval state and turn allowance; requires map and settlement models."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/README.md",
+        "claim": "Inspected maintainer description, distribution links and declared scope; no execution.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/LICENSE",
+        "claim": "Inspected license text and declared project terms; selected scope and exceptions require review.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/src/net/sf/freecol/common/model/Colony.java",
+        "claim": "Colony goods and worker production: inspected declarations and relevant behavior; not isolated or tested.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/src/net/sf/freecol/common/model/Unit.java",
+        "claim": "Unit movement costs and routing context: inspected declarations and relevant behavior; not isolated or tested.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 711,
+    "popularity": {
+      "repo_url": "https://github.com/FreeCol/freecol",
+      "stars": 711,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/FreeCol/freecol",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
     "id": "luanti",
     "title": "Luanti (formerly Minetest)",
     "summary": "Voxel engine and modding platform, useful for terrain and grid-navigation references rather than a self-contained curated game.",
@@ -5211,6 +8361,266 @@ window.HEADSTART_CATALOG = [
       "status": "available",
       "checked_at": "2026-09-10T19:48:24Z",
       "evidence_url": "https://api.github.com/repos/Anuken/Mindustry",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "openra",
+    "title": "OpenRA",
+    "summary": "RTS engine with classic-game mods, resource harvesters and configurable production queues.",
+    "genres": [
+      "rts",
+      "strategy",
+      "resource-management"
+    ],
+    "runtime": "OpenRA / .NET",
+    "label": "Get game",
+    "demoUrl": "https://www.openra.net/",
+    "demoKind": "native-download",
+    "repoUrl": "https://github.com/OpenRA/OpenRA",
+    "projectUrl": "https://www.openra.net/",
+    "commit": "f3ec7f8e1593b482f85fd101652deb740c33dee6",
+    "creator": "OpenRA developers and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "OpenRA developers and contributors",
+      "licenseExpression": "GPL-3.0-or-later for OpenRA code",
+      "licenseUrls": [
+        "https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/COPYING"
+      ],
+      "sourcePage": "https://www.openra.net/",
+      "licenseEvidenceUrl": "https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/COPYING",
+      "captureDate": null,
+      "versionRelation": "Official project news gameplay animation showing current generator effects. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "OpenRA map-generator settings dialog over a generated strategy map.",
+      "sha256": "d35d9c5e68bff8482b65e9e1aac9c399557b82d57889a6a615572cf71f788b4b",
+      "originalUrl": "https://www.openra.net/images/news/20260222-generators.gif",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/openra.gif",
+      "localSourcePath": "research/catalog/media/openra.gif"
+    },
+    "contentKind": "engine",
+    "dimension": "2d",
+    "visualStyle": [],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer distribution page or homepage entry point, not a browser game or proof that a release matches the inspected source commit. Native setup/content requirements apply.",
+    "rights": {
+      "code_license": "GPL-3.0-or-later",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/COPYING",
+      "asset_status": "mixed",
+      "asset_notes": "Official FAQ says default mods use original Westwood game assets downloaded separately or extracted from installed media. Those files are not covered by OpenRA GPL; availability as freeware is not reuse permission. Inspect mod assets separately.",
+      "scope_reuse_status": "review_required",
+      "notes": "License summary identifies project terms, not blanket reuse clearance or any royalty agreement. Preserve notices; resolve selected files and transitive dependencies. See research/catalog/evidence/native-batch.json for actual batch timing; no individual timing was recorded."
+    },
+    "sourceInspectedAt": "2026-09-10T17:34:56.320282+00:00",
+    "integrationFamily": "reference-only",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/OpenRA/OpenRA/tree/f3ec7f8e1593b482f85fd101652deb740c33dee6",
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "platformKind": "desktop",
+    "capabilities": [
+      "production-queues",
+      "resource-loops"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Actor production queue",
+        "category": "production-queues",
+        "evidence_url": "https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/OpenRA.Mods.Common/Traits/Player/ProductionQueue.cs",
+        "source_path": "OpenRA.Mods.Common/Traits/Player/ProductionQueue.cs",
+        "status": "source_inspected",
+        "notes": "Queue configuration and production traits depend on OpenRA actors, resource accounting, rulesets and tick interfaces."
+      },
+      {
+        "name": "Resource harvesting and docking",
+        "category": "resource-loops",
+        "evidence_url": "https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/OpenRA.Mods.Common/Traits/Harvester.cs",
+        "source_path": "OpenRA.Mods.Common/Traits/Harvester.cs",
+        "status": "source_inspected",
+        "notes": "Harvester stores resource types, harvest orders and docking transfers; coupled to resource layers, mobile traits and actor conditions."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/README.md",
+        "claim": "Inspected maintainer description, distribution links and declared scope; no execution.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/COPYING",
+        "claim": "Inspected license text and declared project terms; selected scope and exceptions require review.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/OpenRA.Mods.Common/Traits/Player/ProductionQueue.cs",
+        "claim": "Actor production queue: inspected declarations and relevant behavior; not isolated or tested.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/OpenRA.Mods.Common/Traits/Harvester.cs",
+        "claim": "Resource harvesting and docking: inspected declarations and relevant behavior; not isolated or tested.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/OpenRA/OpenRA/wiki/FAQ",
+        "claim": "FAQ distinguishes GPL engine from original-game assets downloaded/extracted separately.",
+        "kind": "official-docs"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 17357,
+    "popularity": {
+      "repo_url": "https://github.com/OpenRA/OpenRA",
+      "stars": 17357,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/OpenRA/OpenRA",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "openrct2",
+    "title": "OpenRCT2",
+    "summary": "Amusement-park construction and management with guest movement and finance systems.",
+    "genres": [
+      "simulation",
+      "management",
+      "tycoon",
+      "builder"
+    ],
+    "runtime": "OpenRCT2 native engine",
+    "label": "Get game",
+    "demoUrl": "https://openrct2.io/download/release/latest",
+    "demoKind": "native-download",
+    "repoUrl": "https://github.com/OpenRCT2/OpenRCT2",
+    "projectUrl": "https://openrct2.io",
+    "commit": "bb118516646347d73e7eb0d30de9eef2f5b16043",
+    "creator": "OpenRCT2 developers",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "OpenRCT2 developers",
+      "licenseExpression": "GPL-3.0-or-later for OpenRCT2 code",
+      "licenseUrls": [
+        "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/licence.txt"
+      ],
+      "sourcePage": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/readme.md",
+      "licenseEvidenceUrl": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/licence.txt",
+      "captureDate": null,
+      "versionRelation": "Gameplay image embedded in the pinned official repository README. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Busy OpenRCT2 amusement park with interwoven roller coasters, paths and buildings.",
+      "sha256": "c53a146a5d4019e4270382edd48fdb9742bd7020429a29d10541a99978a650be",
+      "originalUrl": "https://github.com/user-attachments/assets/fa893cc8-1484-4751-94be-4ead00a6c8f9",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/openrct2.webp",
+      "localSourcePath": "research/catalog/media/openrct2.webp"
+    },
+    "contentKind": "game",
+    "dimension": "2d",
+    "visualStyle": [],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer distribution page or homepage entry point, not a browser game or proof that a release matches the inspected source commit. Native setup/content requirements apply.",
+    "rights": {
+      "code_license": "GPL-3.0-or-later",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/licence.txt",
+      "asset_status": "mixed",
+      "asset_notes": "Original RollerCoaster Tycoon 2 files are required by the inspected README. Engine GPL does not clear those proprietary graphics, audio or scenarios. OpenGraphics replacement is a separate project requiring its own scope audit.",
+      "scope_reuse_status": "review_required",
+      "notes": "License summary identifies project terms, not blanket reuse clearance or any royalty agreement. Preserve notices; resolve selected files and transitive dependencies. See research/catalog/evidence/native-batch.json for actual batch timing; no individual timing was recorded."
+    },
+    "sourceInspectedAt": "2026-09-10T17:34:56.320282+00:00",
+    "integrationFamily": "reference-only",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/OpenRCT2/OpenRCT2/tree/bb118516646347d73e7eb0d30de9eef2f5b16043",
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "platformKind": "desktop",
+    "capabilities": [
+      "economy",
+      "pathfinding"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Park operating finances",
+        "category": "economy",
+        "evidence_url": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/src/openrct2/management/Finance.cpp",
+        "source_path": "src/openrct2/management/Finance.cpp",
+        "status": "source_inspected",
+        "notes": "FinancePayment and wage/interest/upkeep routines use shared GameState, park flags, rides and UI invalidation; extraction is not standalone."
+      },
+      {
+        "name": "Guest pathfinding",
+        "category": "pathfinding",
+        "evidence_url": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/src/openrct2/peep/GuestPathfinding.cpp",
+        "source_path": "src/openrct2/peep/GuestPathfinding.cpp",
+        "status": "source_inspected",
+        "notes": "Guest/staff path search operates on park footpaths, queues, ride IDs and junction history; requires map and peep-state adapters."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/readme.md",
+        "claim": "Inspected maintainer description, distribution links and declared scope; no execution.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/licence.txt",
+        "claim": "Inspected license text and declared project terms; selected scope and exceptions require review.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/src/openrct2/management/Finance.cpp",
+        "claim": "Park operating finances: inspected declarations and relevant behavior; not isolated or tested.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/src/openrct2/peep/GuestPathfinding.cpp",
+        "claim": "Guest pathfinding: inspected declarations and relevant behavior; not isolated or tested.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 16201,
+    "popularity": {
+      "repo_url": "https://github.com/OpenRCT2/OpenRCT2",
+      "stars": 16201,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:24Z",
+      "evidence_url": "https://api.github.com/repos/OpenRCT2/OpenRCT2",
       "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
     }
   },
@@ -5725,6 +9135,135 @@ window.HEADSTART_CATALOG = [
       "status": "available",
       "checked_at": "2026-09-10T19:48:26Z",
       "evidence_url": "https://api.github.com/repos/wesnoth/wesnoth",
+      "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "unciv",
+    "title": "Unciv",
+    "summary": "Moddable civilization strategy with city construction and turn-limited unit movement.",
+    "genres": [
+      "4x",
+      "turn-based-strategy",
+      "builder",
+      "economy"
+    ],
+    "runtime": "libGDX",
+    "label": "Get game",
+    "demoUrl": "https://yairm210.itch.io/unciv",
+    "demoKind": "native-download",
+    "repoUrl": "https://github.com/yairm210/Unciv",
+    "projectUrl": "https://yairm210.github.io/Unciv/",
+    "commit": "0d7d1e43cd4776e04cd3f9eaf752527885123e62",
+    "creator": "Yair Morgenstern and Unciv contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Yair Morgenstern and Unciv contributors",
+      "licenseExpression": "MPL-2.0",
+      "licenseUrls": [
+        "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/LICENSE"
+      ],
+      "sourcePage": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/extraImages/GithubPreviewImage.jpg",
+      "licenseEvidenceUrl": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned repository game preview image. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation.",
+      "alt": "Unciv hex strategy map with units, cities and construction and action panels.",
+      "sha256": "029cdac8b189b8aa76b53cebd30a5e4955ba6bb81e0709742e6e93af0380e230",
+      "originalUrl": "https://raw.githubusercontent.com/yairm210/Unciv/0d7d1e43cd4776e04cd3f9eaf752527885123e62/extraImages/GithubPreviewImage.jpg",
+      "allowedUse": "Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.",
+      "modifications": "Original bytes retained unchanged; browser display and contact sheet may scale without cropping.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/unciv.jpg",
+      "localSourcePath": "research/catalog/media/unciv.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "2d",
+    "visualStyle": [],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer distribution page or homepage entry point, not a browser game or proof that a release matches the inspected source commit. Native setup/content requirements apply.",
+    "rights": {
+      "code_license": "MPL-2.0",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/LICENSE",
+      "asset_status": "mixed",
+      "asset_notes": "README explicitly lists mixed CC-BY-SA-4.0, CC-BY-3.0/4.0, CC0 and public-domain media; docs/Credits.md is the next per-file audit source. Original Civilization assets are not included as reusable rights.",
+      "scope_reuse_status": "review_required",
+      "notes": "License summary identifies project terms, not blanket reuse clearance or any royalty agreement. Preserve notices; resolve selected files and transitive dependencies. See research/catalog/evidence/native-batch.json for actual batch timing; no individual timing was recorded."
+    },
+    "sourceInspectedAt": "2026-09-10T17:34:56.320282+00:00",
+    "integrationFamily": "reference-only",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "internal_reference_ready",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/yairm210/Unciv/tree/0d7d1e43cd4776e04cd3f9eaf752527885123e62",
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS",
+      "Android"
+    ],
+    "platformKind": "desktop",
+    "capabilities": [
+      "production-queues",
+      "pathfinding"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "City construction queue",
+        "category": "production-queues",
+        "evidence_url": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/core/src/com/unciv/logic/city/CityConstructions.kt",
+        "source_path": "core/src/com/unciv/logic/city/CityConstructions.kt",
+        "status": "source_inspected",
+        "notes": "CityConstructions owns queued/in-progress buildings, units and overflow; tied to ruleset, city statistics and serialization."
+      },
+      {
+        "name": "Unit movement and zone-of-control routing",
+        "category": "pathfinding",
+        "evidence_url": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/core/src/com/unciv/logic/map/mapunit/movement/UnitMovement.kt",
+        "source_path": "core/src/com/unciv/logic/map/mapunit/movement/UnitMovement.kt",
+        "status": "source_inspected",
+        "notes": "UnitMovement selects pathing maps based on zone-of-control and escort settings; needs unit, tile map, movement budget and rules."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/README.md",
+        "claim": "Inspected maintainer description, distribution links and declared scope; no execution.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/LICENSE",
+        "claim": "Inspected license text and declared project terms; selected scope and exceptions require review.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/core/src/com/unciv/logic/city/CityConstructions.kt",
+        "claim": "City construction queue: inspected declarations and relevant behavior; not isolated or tested.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/core/src/com/unciv/logic/map/mapunit/movement/UnitMovement.kt",
+        "claim": "Unit movement and zone-of-control routing: inspected declarations and relevant behavior; not isolated or tested.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "githubStars": 11257,
+    "popularity": {
+      "repo_url": "https://github.com/yairm210/Unciv",
+      "stars": 11257,
+      "status": "available",
+      "checked_at": "2026-09-10T19:48:26Z",
+      "evidence_url": "https://api.github.com/repos/yairm210/Unciv",
       "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
     }
   },

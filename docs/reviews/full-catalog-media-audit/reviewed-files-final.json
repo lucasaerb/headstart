@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "/root/critical_review",
+  "reviewed_at": "2026-09-10T21:04:57Z",
+  "verdict": "PASS",
+  "git_base": "26cb4bb5b544afba64199f3d1dcada3e235c31f4",
+  "hash_algorithm": "sha256",
+  "files": {
+    "research/catalog/catalog.json": "3813eea6ff2b8227db4b9aa6769dadd5021e9059125d20152f63fa9b471b8060",
+    "research/catalog/coverage.json": "8c432c6c5a7252e417fb21cab4981f74b02e10cf18ff840f511bad7bce88a958",
+    "research/catalog/media-manifest.json": "049e15e0b2f20ee0a4d7e0b4e6fa88e6fbaa1a0b882e3a763ef43bbafc55e5d9",
+    "research/catalog/media-credits.md": "b7780a5e60d5a31cf54d837701dc285c32d4e484aa668be1871b480d54e51360",
+    "research/catalog/contact-sheet.jpg": "1d08014178cf995f7f10a96587656cea52c81f5736d7287edd15c4150cdae0af",
+    "research/catalog/IMAGE-GAPS.md": "74baf928953114853c950fd9fbdfea984bf9d1ffbe5073e7ff00e08f7225f53a",
+    "research/catalog/README.md": "9b6d9694d7f2aaff0e870e97d54a6335c2c37798b858fe138e5ad21e01ea267f",
+    "research/catalog/media-approval.template.json": "0af635d15340ecff577103edd0fd2e767bd5bacd2c3f4353fa278720a50ad8a9",
+    "research/catalog/scripts/collect_browser_previews.py": "d6b57e6bc01980e0be2ee580a3c03385802bdc55ada1f701f12c476e8957c1a2",
+    "research/catalog/scripts/build_site_catalog.py": "90c2d55cdbdf8dbcf757b38f7ad8bc7c74fa0a00f26986bc1286a1617502ea75",
+    "research/catalog/scripts/test_ai_provenance.py": "fbc328f61eda05e9fdfc88eca702cb650ec67d5efd8ba2a509e52091eb8737a8",
+    "docs/reviews/full-catalog-media-audit/media-audit.json": "2e678860e70079c7845b52ca44bb814aae606a7c4ac1c1c40159a5bd8c18301d",
+    "docs/reviews/full-catalog-media-audit/media-approval.json": "bfc202636e87b75dab335649262744fe71729cdf0d950aa9bc0950bccbab9322",
+    "docs/reviews/full-catalog-media-audit/mobile-400x717-filters.jpg": "516367763cd51abcc0325299491f41475f046509eee39feae0efcdbd74a78655",
+    "docs/reviews/full-catalog-media-audit/current-desktop.jpg": "c3fd32d37707355aaae1f3f597fa1aad2e4b5ca6c8c7d7ac819cbe4dcc83032c",
+    "docs/reviews/full-catalog-media-audit/current-mobile-400x717-cards.jpg": "2290a349dba004fcafeaeb4f73a5c35d7c7f15912ea96de0adc27c703a5bfd8d",
+    "HeadStart-Starter-Package/site/dist/catalog.js": "0836a5236ca184ecf32f5d14d5953b3e42f3e182f19293fd34ab9e37262b1fb9",
+    "HeadStart-Starter-Package/site/dist/index.html": "72c42b9f0d1370567a3ebd451030b42447cbed53ee40ccd5377cc2d5cec594b3",
+    "HeadStart-Starter-Package/site/dist/app.js": "18a7e344e997da5a1875aeca592760743c7067065ba21cfbd068467d4450f332",
+    "HeadStart-Starter-Package/site/dist/styles.css": "f414cae2624ddc6fdfc2cded97da58a4bf7a3b1b0e52b81d9fe32b04134b7a19",
+    "HeadStart-Starter-Package/site/dist/provenance/snapshot/media-manifest.json": "049e15e0b2f20ee0a4d7e0b4e6fa88e6fbaa1a0b882e3a763ef43bbafc55e5d9",
+    "HeadStart-Starter-Package/site/dist/provenance/validation.json": "f02ee51725df17524539e502cd3ba0c527623895c9a1ebe6badaf0fef4bec309"
+  },
+  "sets": {
+    "69_manifest_selected_research_media": {
+      "count": 69,
+      "digest_of_sorted_sha256_and_path_lines": "72c918d8c30a56925c1f2f63c9a7b5acb63c52470e3f6a01ae0c27065481be38"
+    },
+    "69_manifest_selected_site_assets": {
+      "count": 69,
+      "digest_of_sorted_sha256_and_path_lines": "581edac2accdfca058e0e6903871da9749fca5d9fcab544b7b9f9c498c90320b"
+    }
+  },
+  "reproduction": {
+    "catalog_js_exact_match": true,
+    "index_html_exact_match": true,
+    "catalog_records": 76,
+    "manifest_rows": 69,
+    "site_rows": 69,
+    "newly_approved_rows": 29,
+    "withheld_rows": 7
+  }
+}

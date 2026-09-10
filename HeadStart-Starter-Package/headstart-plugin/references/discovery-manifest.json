@@ -1,5 +1,6 @@
 {
   "snapshot_sha256": "fbe756c24287cdb3171d16b6a0be6e8449f87c2c6033ef3547a73e86355631a8",
+  "starting_project_media_sha256": "38f1a11e13d2752e789e9e92d247f09cf70c07e4d355f81efeec0ae731a92f3f",
   "source_catalog_sha256": "3813eea6ff2b8227db4b9aa6769dadd5021e9059125d20152f63fa9b471b8060",
   "source_review_sha256": "8d538e77c7e45f02e8350ca4923a90b364ee1d667097331f4e0cde8dffb9f10f",
   "source_schema_version": "research-0.1",

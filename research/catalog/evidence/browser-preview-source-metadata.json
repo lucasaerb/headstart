@@ -1,8 +1,62 @@
 {
   "schema_version": "1.0",
-  "observed_at": "2026-09-10T20:03:28.150833+00:00",
+  "observed_at": "2026-09-10T21:01:01.661078+00:00",
   "scope": "Immutable upstream image files selected for local catalog preview; no game source executed.",
   "records": [
+    {
+      "record_id": "3d-city",
+      "source_page": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/assets/img/preview01.jpg",
+      "original_url": "https://raw.githubusercontent.com/lo-th/3d.city/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/assets/img/preview01.jpg",
+      "sha256": "154188126c682068fc4174b2458e23c15d2b2251c88a0e2b980b68a7d5ad8ffb",
+      "width": 800,
+      "height": 280,
+      "bytes": 63845
+    },
+    {
+      "record_id": "astra-apex-club",
+      "source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/apex-club/gameplay.png",
+      "original_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/apex-club/gameplay.png",
+      "sha256": "c6a4a5871a66bff15eda5050d4ec64988031f231604536947c68ed603b360ae3",
+      "width": 1440,
+      "height": 900,
+      "bytes": 120117
+    },
+    {
+      "record_id": "astra-melon-lab",
+      "source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/melon-lab/gameplay.jpg",
+      "original_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/melon-lab/gameplay.jpg",
+      "sha256": "001f69f4349e81984e804c4c76120040089193f941d6a9a074ceaf675d15a379",
+      "width": 1440,
+      "height": 950,
+      "bytes": 130083
+    },
+    {
+      "record_id": "astra-mosswing",
+      "source_page": "https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/design/desktop-final.png",
+      "original_url": "https://raw.githubusercontent.com/Ayi1337/gpt6-astra-one-shot-games/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/design/desktop-final.png",
+      "sha256": "e48e75f6d576698277fbf38943951dca9b414e6f8a6ec01da83ac63b9df5f829",
+      "width": 908,
+      "height": 932,
+      "bytes": 49622
+    },
+    {
+      "record_id": "astra-sunjing-puzzles",
+      "source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/sunjing-puzzles/gameplay.jpg",
+      "original_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/sunjing-puzzles/gameplay.jpg",
+      "sha256": "73913335440878881965a5a857d231ca9cb1c2396481e15ba3863d3992805453",
+      "width": 1265,
+      "height": 712,
+      "bytes": 53449
+    },
+    {
+      "record_id": "astra-three-kingdoms",
+      "source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/three-kingdoms/gameplay.jpg",
+      "original_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/three-kingdoms/gameplay.jpg",
+      "sha256": "fab946924b63d86f6e6d15040eac94be835d8d70cae41decbf433c0a90196dd0",
+      "width": 1440,
+      "height": 900,
+      "bytes": 348254
+    },
     {
       "record_id": "astra-thunderfall",
       "source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/thunderfall/gameplay.jpg",
@@ -22,6 +76,33 @@
       "bytes": 90525
     },
     {
+      "record_id": "browserquest",
+      "source_page": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/client/img/common/screenshot.jpg",
+      "original_url": "https://raw.githubusercontent.com/mozilla/BrowserQuest/af32d247cac3495ca430d0effbb88dd5f3250b2c/client/img/common/screenshot.jpg",
+      "sha256": "81372c467d4192493d0ffa5e8cdd67710e51e80ee9af6a13a57344a6d27fbb85",
+      "width": 554,
+      "height": 300,
+      "bytes": 34355
+    },
+    {
+      "record_id": "clumsy-bird",
+      "source_page": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/README.md",
+      "original_url": "https://i.imgur.com/Slbvt65.png",
+      "sha256": "0df18f1e76d3341946e582d8167e54f24b84c23647653e1e954891744e19e564",
+      "width": 800,
+      "height": 534,
+      "bytes": 125790
+    },
+    {
+      "record_id": "drei",
+      "source_page": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/.storybook/public/images/share-screen.jpg",
+      "original_url": "https://raw.githubusercontent.com/pmndrs/drei/ffa15b956e320391b0e86084cb58c8da0445abe3/.storybook/public/images/share-screen.jpg",
+      "sha256": "ba9fbdb0326a92aaca59510808770ff378c2177f66f7f514f38a337538cf8884",
+      "width": 1138,
+      "height": 640,
+      "bytes": 15558
+    },
+    {
       "record_id": "dungeon-forge",
       "source_page": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/docs/preview.jpg",
       "original_url": "https://raw.githubusercontent.com/majidmanzarpour/threejs-procedural-dungeon/0a2aa0980028cbbc77af6642b4232b45713dc5de/docs/preview.jpg",
@@ -29,6 +110,15 @@
       "width": 1600,
       "height": 967,
       "bytes": 440200
+    },
+    {
+      "record_id": "dwellcraft",
+      "source_page": "https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/docs/screenshots/editor-en.png",
+      "original_url": "https://raw.githubusercontent.com/Ryan-fm/Dwellcraft/5055fefac14f0fe7214c6cbb66853e62a2154a88/docs/screenshots/editor-en.png",
+      "sha256": "f6f1030528e26cac99bcf73aaf092056cdcbbd0099675696e8f8b15c2506e1f2",
+      "width": 1440,
+      "height": 960,
+      "bytes": 512066
     },
     {
       "record_id": "ecctrl",
@@ -58,6 +148,69 @@
       "bytes": 660858
     },
     {
+      "record_id": "fable5-real-physics-engine",
+      "source_page": "https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/docs/screenshot-orbits.png",
+      "original_url": "https://raw.githubusercontent.com/hamzabellouch/Build-with-anthropic-fable-5/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/docs/screenshot-orbits.png",
+      "sha256": "5592dc7d1a24eb31598dbd535a8a759525ca56c6214c37b3d26d9f2ef5c89d77",
+      "width": 1261,
+      "height": 1234,
+      "bytes": 150763
+    },
+    {
+      "record_id": "freeciv",
+      "source_page": "https://freeciv.org/",
+      "original_url": "https://freeciv.org/images/freeciv-screenshot-2.5.0.png",
+      "sha256": "8d7b385c1363a2dce89e33cebb3f503e06a5844182ed548eced636b0ef18c40b",
+      "width": 400,
+      "height": 300,
+      "bytes": 198696
+    },
+    {
+      "record_id": "freecol",
+      "source_page": "https://www.freecol.org/screenshots.html",
+      "original_url": "https://www.freecol.org/images/screen-1.0.0.jpg",
+      "sha256": "542c24c05758abb589cf35c4ffb5a0419b858abbe375ba6ec9c5cb28e383742a",
+      "width": 2152,
+      "height": 1650,
+      "bytes": 1656176
+    },
+    {
+      "record_id": "godot-astar-grid-2d",
+      "source_page": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/screenshots/navigation_astar.webp",
+      "original_url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/screenshots/navigation_astar.webp",
+      "sha256": "b33e2e80bdb1ae471df51caab48af2c9cea8bfc06cc53a42474579092778b89c",
+      "width": 1152,
+      "height": 648,
+      "bytes": 134468
+    },
+    {
+      "record_id": "godot-platformer-2d",
+      "source_page": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/screenshots/platformer.webp",
+      "original_url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/screenshots/platformer.webp",
+      "sha256": "ef5eb833df4cf3618e92c4e5853e944e5999f8c9933ca21efd02dd87fea3502c",
+      "width": 1280,
+      "height": 720,
+      "bytes": 196746
+    },
+    {
+      "record_id": "godot-platformer-3d",
+      "source_page": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/screenshots/platformer.webp",
+      "original_url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/screenshots/platformer.webp",
+      "sha256": "ecc6228fd200ddbde9d21707e7ffea1bd24ac59592a92aa2e33cabea91706a88",
+      "width": 1280,
+      "height": 720,
+      "bytes": 248792
+    },
+    {
+      "record_id": "godot-truck-town",
+      "source_page": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/screenshots/truck_town.webp",
+      "original_url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/screenshots/truck_town.webp",
+      "sha256": "7d7e38da059e04b0b948b35e6898cbf5483bd54163efd6d3741b18fcbc2f30e4",
+      "width": 1280,
+      "height": 720,
+      "bytes": 247618
+    },
+    {
       "record_id": "hexgl",
       "source_page": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/css/mobile.jpg",
       "original_url": "https://raw.githubusercontent.com/BKcore/HexGL/6addc95a2fce3bf05f4d751823cc054c61a16d68/css/mobile.jpg",
@@ -65,6 +218,15 @@
       "width": 1280,
       "height": 800,
       "bytes": 251974
+    },
+    {
+      "record_id": "hextris",
+      "source_page": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/twitter-opengraph.png",
+      "original_url": "https://raw.githubusercontent.com/Hextris/hextris/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/twitter-opengraph.png",
+      "sha256": "e799d31923ca034365e312f9cc5f19fb97e9eb74b15f1c573203dfc5064bfd38",
+      "width": 512,
+      "height": 512,
+      "bytes": 17258
     },
     {
       "record_id": "jelly-baby",
@@ -85,6 +247,24 @@
       "bytes": 576264
     },
     {
+      "record_id": "littlejs",
+      "source_page": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/examples/screenshot.jpg",
+      "original_url": "https://raw.githubusercontent.com/KilledByAPixel/LittleJS/da1b3836552b2373522a56bd39d6fb9f4b530017/examples/screenshot.jpg",
+      "sha256": "7a1ddaa184b36fb75ee9d80bd0b10d47a1471b572779b0ad15c995de897012e5",
+      "width": 960,
+      "height": 540,
+      "bytes": 146330
+    },
+    {
+      "record_id": "magic-carpet-wizard",
+      "source_page": "https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/magic-carpet/gameplay.jpg",
+      "original_url": "https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/magic-carpet/gameplay.jpg",
+      "sha256": "ccfd5e50efd82d639a51ad2b0adb6ac1a6887f03786d6d7a15d156f63892c3ae",
+      "width": 1440,
+      "height": 950,
+      "bytes": 201801
+    },
+    {
       "record_id": "open-city-maker",
       "source_page": "https://github.com/derek-wangpch/OpenCityMaker/blob/ca45404de679baf5afb6b2504ef3c0af27b64ffc/docs/images/citymaker-game.png",
       "original_url": "https://raw.githubusercontent.com/derek-wangpch/OpenCityMaker/ca45404de679baf5afb6b2504ef3c0af27b64ffc/docs/images/citymaker-game.png",
@@ -92,6 +272,51 @@
       "width": 1440,
       "height": 1100,
       "bytes": 268315
+    },
+    {
+      "record_id": "openai-sites-hollowflux",
+      "source_page": "https://developers.openai.com/blog/how-to-build-games-with-astra",
+      "original_url": "https://cdn.openai.com/devhub/blog/how-to-build-games/hollowflux-water-15cd30282861.webp",
+      "sha256": "15cd30282861fa4e2dff59bed31132663e11b6e98ce453289f0496f3733abc69",
+      "width": 1600,
+      "height": 900,
+      "bytes": 131366
+    },
+    {
+      "record_id": "openai-sites-sunwake",
+      "source_page": "https://developers.openai.com/blog/how-to-build-games-with-astra",
+      "original_url": "https://cdn.openai.com/devhub/blog/how-to-build-games/sunwake-water-f1c48b3f7fe8.webp",
+      "sha256": "f1c48b3f7fe8706dd558c8378f97863bbab8a21684ec640c38196f404cbeac11",
+      "width": 1440,
+      "height": 900,
+      "bytes": 143058
+    },
+    {
+      "record_id": "openai-sites-void-explorer",
+      "source_page": "https://developers.openai.com/blog/how-to-build-games-with-astra",
+      "original_url": "https://cdn.openai.com/devhub/blog/how-to-build-games/orbital-flight-579e20d663e3.webp",
+      "sha256": "579e20d663e37424677536f6202ce102dcdcc409065d5eb40a7555e99b8d6a10",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 131138
+    },
+    {
+      "record_id": "openra",
+      "source_page": "https://www.openra.net/",
+      "original_url": "https://www.openra.net/images/news/20260222-generators.gif",
+      "sha256": "d35d9c5e68bff8482b65e9e1aac9c399557b82d57889a6a615572cf71f788b4b",
+      "width": 1024,
+      "height": 640,
+      "bytes": 424684
+    },
+    {
+      "record_id": "openrct2",
+      "source_page": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/readme.md",
+      "original_url": "https://github.com/user-attachments/assets/fa893cc8-1484-4751-94be-4ead00a6c8f9",
+      "sha256": "c53a146a5d4019e4270382edd48fdb9742bd7020429a29d10541a99978a650be",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1287300
     },
     {
       "record_id": "philolabs-death-star-trench-run",
@@ -157,6 +382,15 @@
       "bytes": 92072
     },
     {
+      "record_id": "react-three-rapier",
+      "source_page": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/misc/example-auto-colliders.jpg",
+      "original_url": "https://raw.githubusercontent.com/pmndrs/react-three-rapier/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/misc/example-auto-colliders.jpg",
+      "sha256": "645a6f73889291ee7974d308c317217b6fd283618e6cea0d975bd50d04f9ee91",
+      "width": 800,
+      "height": 520,
+      "bytes": 33745
+    },
+    {
       "record_id": "silent-meridian",
       "source_page": "https://github.com/stackloomdev/silent-meridian/blob/5a3b800ff67913c6a310348cfd49cea34274f344/docs/screenshots/depth-observatory.png",
       "original_url": "https://raw.githubusercontent.com/stackloomdev/silent-meridian/5a3b800ff67913c6a310348cfd49cea34274f344/docs/screenshots/depth-observatory.png",
@@ -175,6 +409,15 @@
       "bytes": 327248
     },
     {
+      "record_id": "three-mesh-bvh",
+      "source_page": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/docs/example-sm.gif",
+      "original_url": "https://raw.githubusercontent.com/gkjohnson/three-mesh-bvh/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/docs/example-sm.gif",
+      "sha256": "3ff289466734ad424adf17a5fddb2b1bce97ae144e104ab6083083efb496b381",
+      "width": 800,
+      "height": 600,
+      "bytes": 20338824
+    },
+    {
       "record_id": "three-pathfinding",
       "source_page": "https://user-images.githubusercontent.com/1848368/34424850-d79e5a24-ebf4-11e7-87c4-afc75cdc41bd.png",
       "original_url": "https://user-images.githubusercontent.com/1848368/34424850-d79e5a24-ebf4-11e7-87c4-afc75cdc41bd.png",
@@ -191,6 +434,15 @@
       "width": 722,
       "height": 542,
       "bytes": 68063
+    },
+    {
+      "record_id": "threejs",
+      "source_page": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/screenshots/games_fps.jpg",
+      "original_url": "https://raw.githubusercontent.com/mrdoob/three.js/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/screenshots/games_fps.jpg",
+      "sha256": "a2319a4d4874518beea8dedbe9aa7ffe2dbc0673b1a1db1598c01369ad0b6f85",
+      "width": 400,
+      "height": 250,
+      "bytes": 35267
     },
     {
       "record_id": "toy2game-balance-astronaut",
@@ -245,6 +497,15 @@
       "width": 1200,
       "height": 800,
       "bytes": 511747
+    },
+    {
+      "record_id": "unciv",
+      "source_page": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/extraImages/GithubPreviewImage.jpg",
+      "original_url": "https://raw.githubusercontent.com/yairm210/Unciv/0d7d1e43cd4776e04cd3f9eaf752527885123e62/extraImages/GithubPreviewImage.jpg",
+      "sha256": "029cdac8b189b8aa76b53cebd30a5e4955ba6bb81e0709742e6e93af0380e230",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 576026
     },
     {
       "record_id": "vesper-street",

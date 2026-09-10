@@ -1,0 +1,55 @@
+{
+  "schema_version": "headstart-project-media-0.1",
+  "scope": "Reviewed public preview references for pinned starting projects. URLs and rights evidence only; no image bytes or source code are bundled.",
+  "source_manifest": "research/catalog/media-manifest.json",
+  "records": [
+    {
+      "project_id": "dungeon-forge",
+      "source_commit": "0a2aa0980028cbbc77af6642b4232b45713dc5de",
+      "image_url": "https://raw.githubusercontent.com/majidmanzarpour/threejs-procedural-dungeon/0a2aa0980028cbbc77af6642b4232b45713dc5de/docs/preview.jpg",
+      "source_page": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/docs/preview.jpg",
+      "license_expression": "MIT",
+      "license_evidence_url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/LICENSE",
+      "credit": "majidmanzarpour and contributors",
+      "allowed_use": "Local HeadStart catalog identification and preview display for this repository-included image under the listed terms; no broader game-asset reuse, endorsement or model-quality claim.",
+      "version_relation": "Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation.",
+      "sha256": "256d06c9a586f934a7faf20660bf6bcc23b0570a4ce7be3c93c8afe9d8b20f3c"
+    },
+    {
+      "project_id": "open-city-maker",
+      "source_commit": "ca45404de679baf5afb6b2504ef3c0af27b64ffc",
+      "image_url": "https://raw.githubusercontent.com/derek-wangpch/OpenCityMaker/ca45404de679baf5afb6b2504ef3c0af27b64ffc/docs/images/citymaker-game.png",
+      "source_page": "https://github.com/derek-wangpch/OpenCityMaker/blob/ca45404de679baf5afb6b2504ef3c0af27b64ffc/docs/images/citymaker-game.png",
+      "license_expression": "MIT",
+      "license_evidence_url": "https://github.com/derek-wangpch/OpenCityMaker/blob/ca45404de679baf5afb6b2504ef3c0af27b64ffc/LICENSE",
+      "credit": "derek-wangpch and contributors",
+      "allowed_use": "Local HeadStart catalog identification and preview display for this repository-included image under the listed terms; no broader game-asset reuse, endorsement or model-quality claim.",
+      "version_relation": "Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation.",
+      "sha256": "d739b7560f9700730f4679d866fd1cf4c6af28921178444ceb1e8790b060f3bf"
+    },
+    {
+      "project_id": "pmndrs-racing-game",
+      "source_commit": "7816a5d954b75e6ad853ae4e4f0cbbd628072643",
+      "image_url": "https://raw.githubusercontent.com/pmndrs/racing-game/7816a5d954b75e6ad853ae4e4f0cbbd628072643/thumbnail.webp",
+      "source_page": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/thumbnail.webp",
+      "license_expression": "MIT",
+      "license_evidence_url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/LICENSE.md",
+      "credit": "pmndrs and contributors",
+      "allowed_use": "Local HeadStart catalog identification and preview display for this repository-included image under the listed terms; no broader game-asset reuse, endorsement or model-quality claim.",
+      "version_relation": "Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation.",
+      "sha256": "44088d796a27865624b38a86d89df8fb087b8360bf56a1ee8572892bc82cf44d"
+    },
+    {
+      "project_id": "three-terrain",
+      "source_commit": "434d977ffdbac604cd5c6fd332c4d005f7f9ec68",
+      "image_url": "https://raw.githubusercontent.com/IceCreamYou/THREE.Terrain/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/demo/img/screenshot2.jpg",
+      "source_page": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/demo/img/screenshot2.jpg",
+      "license_expression": "MIT",
+      "license_evidence_url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/LICENSE.txt",
+      "credit": "Isaac Sukin and contributors",
+      "allowed_use": "Local HeadStart catalog identification and preview display for this repository-included image under the listed terms; no broader game-asset reuse, endorsement or model-quality claim.",
+      "version_relation": "Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation.",
+      "sha256": "eec926ed43e62a9fee3bcbca89276235eff4c0fc6ad8f77f93fa0904bf1957ea"
+    }
+  ]
+}

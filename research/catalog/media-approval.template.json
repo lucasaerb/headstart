@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Independent reviewer promotion input for exactly 29 authentic pending images. This template is intentionally invalid until every decision and reviewer field is completed.",
+  "records": [
+    {
+      "record_id": "3d-city",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "astra-apex-club",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "astra-melon-lab",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "astra-mosswing",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "astra-sunjing-puzzles",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "astra-three-kingdoms",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "browserquest",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "clumsy-bird",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "drei",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "dwellcraft",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "fable5-real-physics-engine",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "freeciv",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "freecol",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "godot-astar-grid-2d",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "godot-platformer-2d",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "godot-platformer-3d",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "godot-truck-town",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "hextris",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "littlejs",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "magic-carpet-wizard",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "openai-sites-hollowflux",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "openai-sites-sunwake",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "openai-sites-void-explorer",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "openra",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "openrct2",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "react-three-rapier",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "three-mesh-bvh",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "threejs",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    },
+    {
+      "record_id": "unciv",
+      "decision": "pending",
+      "reviewer": "",
+      "reviewed_at": "",
+      "verdict": ""
+    }
+  ]
+}

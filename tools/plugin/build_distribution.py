@@ -18,9 +18,10 @@ MAX_FILE = 8 * 1024 * 1024
 MAX_TOTAL = 32 * 1024 * 1024
 REQUIRED = {'.codex-plugin/plugin.json', 'plugin.json', 'mcp.json', 'README.md',
             'scripts/catalog_mcp.py', 'scripts/inspect_project.py',
-            'references/discovery-catalog.json', 'references/discovery-manifest.json'}
+            'references/discovery-catalog.json', 'references/discovery-manifest.json',
+            'references/starting-project-media.json', 'references/technology-companions.md'}
 REQUIRED |= {f'skills/headstart-{name}/SKILL.md' for name in
-             ('find', 'inspect', 'plan', 'integrate', 'validate', 'credit')}
+             ('find', 'inspect', 'plan', 'integrate', 'validate', 'credit', 'threejs-starter', 'unity', 'blender')}
 
 
 def allowed(path: str) -> bool:

@@ -37,6 +37,13 @@ class DistributionTests(unittest.TestCase):
             plugin = self.root / 'relocated' / market['plugins'][0]['source']['path']
             self.assertTrue((plugin / 'scripts/catalog_mcp.py').is_file())
             self.assertTrue((plugin / 'references/discovery-catalog.json').is_file())
+            self.assertTrue((plugin / 'references/starting-project-media.json').is_file())
+            self.assertTrue((plugin / 'references/technology-companions.md').is_file())
+            self.assertTrue((plugin / 'skills/headstart-threejs-starter/SKILL.md').is_file())
+            self.assertTrue((plugin / 'skills/headstart-unity/SKILL.md').is_file())
+            self.assertTrue((plugin / 'skills/headstart-blender/SKILL.md').is_file())
+            self.assertFalse(any(Path(name).suffix.lower() in {'.png', '.jpg', '.jpeg', '.gif', '.webp'}
+                                 for name in archive.namelist()))
 
     def test_secrets_build_helpers_and_cache_excluded(self):
         for name in ['.env', '.env.production', 'scripts/bundle_catalog.py',
@@ -68,6 +75,55 @@ class DistributionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Missing required'):
             builder.build(self.source, self.output)
         self.assertEqual(before, self.output.read_bytes())
+
+    def test_companion_review_is_required(self):
+        (self.source / 'references/technology-companions.md').unlink()
+        with self.assertRaisesRegex(ValueError, 'technology-companions.md'):
+            builder.build(self.source, self.output)
+
+    def test_source_documents_official_unity_mcp_boundary(self):
+        companion = (builder.SOURCE / 'references/technology-companions.md').read_text()
+        unity_skill = (builder.SOURCE / 'skills/headstart-unity/SKILL.md').read_text()
+        combined = companion + unity_skill
+        self.assertNotIn('kitwright/unity-mcp', combined.lower())
+        for required in (
+            'com.unity.ai.assistant',
+            'Unity 6 (`6000.0`)',
+            '~/.unity/relay/',
+            '`--mcp`',
+            'Unity Cloud',
+            'trial or subscription',
+            'Direct external',
+            'edit C# scripts',
+            'https://unity.com/blog/unity-ai-mcp-how-to-get-started',
+            'https://docs.unity3d.com/Packages/com.unity.ai.assistant@2.0/manual/unity-mcp-overview.html',
+            'codex plugin marketplace add Unity-Technologies/unity-agent-plugin',
+            'skills only—no hooks and no MCP servers',
+            'inside a Claude Code session',
+            '/plugin marketplace add Unity-Technologies/unity-agent-plugin',
+            '/plugin install unity@unity-agent-plugin',
+            'https://unity.com/blog/unity-plugin-for-claude-code',
+            'https://docs.unity.com/en-us/ai/unity-plugin/claude-code',
+        ):
+            self.assertIn(required, combined)
+
+    def test_source_documents_blender_mcp_boundary(self):
+        companion = (builder.SOURCE / 'references/technology-companions.md').read_text()
+        blender_skill = (builder.SOURCE / 'skills/headstart-blender/SKILL.md').read_text()
+        combined = companion + blender_skill
+        for required in (
+            '5f8ddaf6e987c4aa0c3467fcc548838b28f64477',
+            'codex mcp add blender -- uvx blender-mcp',
+            'uvx blender-mcp install-addon',
+            'BLENDER_MCP_SAFE_MODE=1',
+            'arbitrary Python',
+            'enabled by default',
+            'minimal anonymous usage',
+            'not Blender Foundation',
+            'https://github.com/ahujasid/blender-mcp/blob/5f8ddaf6e987c4aa0c3467fcc548838b28f64477/LICENSE',
+            'https://github.com/ahujasid/blender-mcp/blob/5f8ddaf6e987c4aa0c3467fcc548838b28f64477/TERMS_AND_CONDITIONS.md',
+        ):
+            self.assertIn(required, combined)
 
     def test_write_failure_preserves_existing_and_cleans_temporary(self):
         builder.build(self.source, self.output)

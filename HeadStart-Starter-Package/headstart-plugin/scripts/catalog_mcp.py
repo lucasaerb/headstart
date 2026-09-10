@@ -11,7 +11,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = '2025-06-18'
-VERSION = '0.3.0'
+VERSION = '0.4.0'
 MAX_LINE = 65536
 NOTICE = ('Local research snapshot; source-inspected references, not reusable packages. '
           'Demo play, integration, asset rights and performance remain unverified. '
@@ -43,6 +43,7 @@ TOOLS = [
         'offset': {'type': 'integer', 'minimum': 0, 'maximum': 1000},
     })),
     ('get_component', 'Retrieve project or component metadata at its exact pinned source commit. No source content is delivered.', schema({'id': STRING, 'source_commit': {'type': 'string', 'pattern': '^[0-9a-f]{40}$'}}, ['id', 'source_commit'])),
+    ('get_starting_project', 'Retrieve one pinned starting-project record with its public repository, demo and reviewed preview reference when bundled. This reads the release snapshot, not the live website, and delivers no source or image bytes.', schema({'id': STRING, 'source_commit': {'type': 'string', 'pattern': '^[0-9a-f]{40}$'}}, ['id', 'source_commit'])),
     ('prepare_handoff', 'Unavailable: always denies code export/reuse handoff until verified-email identity and scope rights services exist. Discovery remains open.', schema({'id': STRING, 'source_commit': {'type': 'string', 'pattern': '^[0-9a-f]{40}$'}}, ['id', 'source_commit'])),
 ]
 TOOL_SCHEMAS = {name: spec for name, _, spec in TOOLS}
@@ -208,13 +209,19 @@ class Catalog:
         self.error = None
         try:
             raw = (root / 'references/discovery-catalog.json').read_bytes()
+            media_raw = (root / 'references/starting-project-media.json').read_bytes()
             manifest = json.loads((root / 'references/discovery-manifest.json').read_text())
             if hashlib.sha256(raw).hexdigest() != manifest['snapshot_sha256']:
                 raise ValueError('Snapshot digest mismatch')
+            if hashlib.sha256(media_raw).hexdigest() != manifest['starting_project_media_sha256']:
+                raise ValueError('Project media digest mismatch')
             snapshot = json.loads(raw)
             if snapshot['schema_version'] != 'headstart-discovery-0.1':
                 raise ValueError('Unsupported snapshot contract')
             validate_snapshot(snapshot, manifest)
+            media_snapshot = json.loads(media_raw)
+            if media_snapshot.get('schema_version') != 'headstart-project-media-0.1':
+                raise ValueError('Unsupported project media contract')
             self.manifest = manifest
             self.records = snapshot['records']
             self.entries = {}
@@ -228,6 +235,35 @@ class Catalog:
                     if block_id in self.entries:
                         raise ValueError('Duplicate catalog ID')
                     self.entries[block_id] = (record, block)
+            self.project_media = {}
+            for media in media_snapshot.get('records', []):
+                obj = media if isinstance(media, dict) else None
+                if obj is None or obj.get('project_id') in self.project_media or obj.get('project_id') not in self.entries:
+                    raise ValueError('Invalid project media record')
+                record, block = self.entries[obj['project_id']]
+                if block is not None or obj.get('source_commit') != record['source']['commit']:
+                    raise ValueError('Project media version mismatch')
+                for key in ('image_url', 'source_page', 'license_evidence_url'):
+                    parsed = urlsplit(obj.get(key, ''))
+                    if (parsed.scheme != 'https' or not parsed.hostname or parsed.username or parsed.password
+                            or any(c.isspace() for c in obj[key])):
+                        raise ValueError('Invalid project media URL')
+                    host = parsed.hostname.casefold()
+                    if '.' not in host or host.endswith(('.local', '.localhost', '.internal')):
+                        raise ValueError('Non-public project media URL')
+                    try:
+                        address = ipaddress.ip_address(host)
+                    except ValueError:
+                        pass
+                    else:
+                        if not address.is_global:
+                            raise ValueError('Non-public project media URL')
+                for key in ('license_expression', 'credit', 'allowed_use', 'version_relation', 'sha256'):
+                    if not isinstance(obj.get(key), str) or not obj[key]:
+                        raise ValueError('Invalid project media evidence')
+                if not re.fullmatch('[0-9a-f]{64}', obj['sha256']):
+                    raise ValueError('Invalid project media digest')
+                self.project_media[obj['project_id']] = obj
         except (OSError, ValueError, KeyError, TypeError):
             self.error = 'Bundled catalog is missing, modified or incompatible. Reinstall the same plugin release; do not substitute seed fixtures.'
 
@@ -240,7 +276,9 @@ class Catalog:
                     'code_license': {r['rights']['code_license'] for r in self.records if r['rights']['code_license']},
                     'readiness': {'source_inspected'},
                     'model': {model for r in self.records if ai_provenance(r)['status'] == 'creator_attributed' for model in ai_provenance(r)['models']},
-                }.items()}, 'notice': NOTICE, 'handoff_available': False, 'website_bag_connected': False}
+                }.items()}, 'notice': NOTICE, 'handoff_available': False,
+                'starting_project_snapshot': True, 'reviewed_preview_references': len(self.project_media),
+                'website_live_connected': False, 'website_bag_connected': False}
 
     def result(self, entry_id, full=False):
         r, block = self.entries[entry_id]
@@ -272,11 +310,21 @@ class Catalog:
             raise ToolError('catalog_unavailable', self.error)
         if name == 'catalog_info':
             return self.info()
-        if name == 'get_component':
+        if name in ('get_component', 'get_starting_project'):
             if args['id'] not in self.entries:
                 raise ToolError('not_found', 'ID is not in this discovery snapshot. Search for an available ID.')
             if self.entries[args['id']][0]['source']['commit'] != args['source_commit']:
                 raise ToolError('version_mismatch', 'Requested commit is not bundled. Search to inspect the available version; do not silently substitute it.')
+            if name == 'get_starting_project':
+                record, block = self.entries[args['id']]
+                if block is not None:
+                    raise ToolError('project_required', 'Starting-project retrieval requires a project ID, not a component ID.')
+                preview = self.project_media.get(args['id'])
+                return {'project': self.result(args['id'], True),
+                        'preview_reference': preview,
+                        'preview_status': 'reviewed_reference' if preview else 'not_bundled',
+                        'origin': 'bundled_release_snapshot', 'website_live_connected': False,
+                        'notice': NOTICE}
             return {'record': self.result(args['id'], True), 'notice': NOTICE}
         query_tokens = set(tokens(args.get('query', '')))
         if args.get('query', '').strip() and not query_tokens:

@@ -10,18 +10,18 @@ Start with **Playparts-UI-Mockups.pdf** for the visual experience and **Playpart
 - Playparts-UI-Prototype.html: clickable local mockup with embedded concept artwork, navigation, sample search, empty state, agent-brief export, plugin starter download and actual external demo/source links. Open it in a browser; keep the plugin ZIP alongside it for that download link.
 - mockups/: ten high-resolution PNG screenshots and a screen index.
 - Playparts-Technical-PRD-v0.3.pdf, .docx and .md: 21-page PRD in PDF/Word, plus editable Markdown.
-- Playparts-Plugin-Starter.zip: archived original starter. The current six-skill plugin lives in `headstart-plugin/`; build its current portable ZIP using `python3 tools/plugin/build_distribution.py` from the repository root.
+- Playparts-Plugin-Starter.zip: archived original starter. The current source candidate in `headstart-plugin/` contains nine skills plus the local catalog MCP; build its portable ZIP using `python3 tools/plugin/build_distribution.py` from the repository root.
 - catalog-record.schema.json and catalog-record.example.json: initial versioned data contract and a deliberately unverified candidate fixture.
 - seed-catalog.json: six seed research records with real links and explicit unresolved fields.
 - assets/game-concepts.png and IMAGE-PROMPT.md: generated illustrative artwork and the exact generation prompt.
 
 ## Core product flow
 
-Discover a project → play its demo → inspect a capability → use the plugin → inspect the local target → plan and apply authorized integration → validate and preserve credits. The plugin includes Find, Inspect, Plan, Integrate, Validate and Credit skills. Portable agent briefs remain a fallback.
+Discover a project → play its demo → inspect a capability → use the plugin → inspect the local target → plan and apply authorized integration → validate and preserve credits. Source candidate 0.4.0 includes Find, Three.js Starter, Unity, Blender, Inspect, Plan, Integrate, Validate and Credit skills. Portable agent briefs remain a fallback.
 
 ## Product and artifact boundaries
 
-HeadStart is the current product name. The original delivery was a design and specification package with a skills starter. The current plugin has a real local read-only catalog MCP and has been installed and client-tested; authenticated handoffs, automatic bag retrieval, signing and hosted execution remain unimplemented. See the current plugin README and `docs/reviews/` for dated evidence.
+HeadStart is the current product name. The original delivery was a design and specification package with a skills starter. Plugin 0.3.0's six-skill local read-only catalog workflow has been installed and client-tested; source candidate 0.4.0 adds Three.js Starter, Unity and Blender guidance plus snapshot-backed starting-project/media-reference retrieval and still requires its own client review. Authenticated handoffs, live website/bag retrieval, signing and hosted execution remain unimplemented. See the current plugin README and `docs/reviews/` for dated evidence.
 
 Generated game artwork is not a screenshot of the named repositories. Mockup verification statuses, target Coastal Rally, change counts and provenance relationships are illustrative. The UI uses sample data; some filter controls demonstrate design intent rather than a real index. Real external links open upstream projects.
 

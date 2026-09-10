@@ -26,8 +26,17 @@ def bundle(research_root, plugin_root):
         records.append(selected)
     raw = (json.dumps({'schema_version': 'headstart-discovery-0.1', 'records': records}, indent=2, ensure_ascii=False, allow_nan=False) + '\n').encode()
     target = plugin_root / 'references'
+    media_path = target / 'starting-project-media.json'
+    if not media_path.is_file() or media_path.is_symlink():
+        raise ValueError('Missing required starting-project media snapshot')
+    media_raw = media_path.read_bytes()
     (target / 'discovery-catalog.json').write_bytes(raw)
-    manifest = {'snapshot_sha256': hashlib.sha256(raw).hexdigest(), 'source_catalog_sha256': hashlib.sha256(catalog_raw).hexdigest(), 'source_review_sha256': hashlib.sha256(review_raw).hexdigest(), 'source_schema_version': catalog['schema_version'], 'scope': review['definition'], 'record_count': len(records)}
+    manifest = {'snapshot_sha256': hashlib.sha256(raw).hexdigest(),
+                'starting_project_media_sha256': hashlib.sha256(media_raw).hexdigest(),
+                'source_catalog_sha256': hashlib.sha256(catalog_raw).hexdigest(),
+                'source_review_sha256': hashlib.sha256(review_raw).hexdigest(),
+                'source_schema_version': catalog['schema_version'],
+                'scope': review['definition'], 'record_count': len(records)}
     (target / 'discovery-manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
     print(f'Bundled {len(records)} link-only research references.')
 

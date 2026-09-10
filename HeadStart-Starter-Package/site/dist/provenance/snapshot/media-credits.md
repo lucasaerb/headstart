@@ -244,7 +244,127 @@ Changes: Original image bytes retained unchanged; contact sheet scales an indepe
 
 SHA256: `7fe1da94be67834d6a1e5cd1be3a0937e9a261587d1dd5ee2644896e8bd44bee`. Dimensions: 2520 × 1362.
 
-## 13. Thunderfall
+## 13. 3d.city
+
+![Isometric low-poly city blocks glowing at night beside roads and industrial buildings.](media/3d-city.jpg)
+
+Credit: lo-th and contributors
+
+Rights expression: **LicenseRef-Image-Rights-Unresolved**. [rights evidence](https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/LICENSE).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/LICENSE) · [Original image](https://raw.githubusercontent.com/lo-th/3d.city/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/assets/img/preview01.jpg) · [Project reference](https://github.com/lo-th/3d.city)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned repository gameplay preview. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. README/license conflict and asset scope remain unresolved. Resolve conflicting project-level license claims before any reuse beyond narrow catalog identification.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `154188126c682068fc4174b2458e23c15d2b2251c88a0e2b980b68a7d5ad8ffb`. Dimensions: 800 × 280.
+
+## 14. Apex Club
+
+![Two low-poly race cars competing on a curved road with speed, position and lap HUD panels.](media/astra-apex-club.jpg)
+
+Credit: Ryan; submitted by MartinDelophy
+
+Rights expression: **CC0-1.0 for collection repository**. [rights evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE) · [Original image](https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/apex-club/gameplay.png) · [Project reference](https://github.com/MartinDelophy/awesome-gpt-6-astra)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned upstream collection gameplay screenshot for the named entry. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. The collection warns that linked games and their images retain their own rights; image-specific permission is not established. Confirm the screenshot submitter had authority to apply the collection license or retain a local-identification-only restriction.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `c6a4a5871a66bff15eda5050d4ec64988031f231604536947c68ed603b360ae3`. Dimensions: 1440 × 900.
+
+## 15. Melon Lab
+
+![Chinese-language fruit-merging puzzle with colorful fruit pieces dropping into a tall play area.](media/astra-melon-lab.jpg)
+
+Credit: Ayi1337; screenshot curated by MartinDelophy
+
+Rights expression: **LicenseRef-Image-Rights-Unresolved**. [rights evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/melon-lab/gameplay.jpg).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/melon-lab/gameplay.jpg) · [Original image](https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/melon-lab/gameplay.jpg) · [Project reference](https://github.com/Ayi1337/gpt6-astra-one-shot-games)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Named gameplay screenshot in the project collection; not stored in the game repository. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. The game repository has no license, and the screenshot's transfer into the CC0 collection does not establish creator authorization. Confirm image origin/permission; keep source-content reuse blocked because the game repository has no license.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `001f69f4349e81984e804c4c76120040089193f941d6a9a074ceaf675d15a379`. Dimensions: 1440 × 950.
+
+## 16. Mosswing
+
+![Mosswing title screen with a small bird flying between leafy stone columns.](media/astra-mosswing.jpg)
+
+Credit: Ayi1337 and contributors
+
+Rights expression: **LicenseRef-Image-Rights-Unresolved**. [rights evidence](https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/design/desktop-final.png).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/Ayi1337/gpt6-astra-one-shot-games/blob/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/design/desktop-final.png) · [Original image](https://raw.githubusercontent.com/Ayi1337/gpt6-astra-one-shot-games/4178b08d569372a1492878d73c6018a90f564e5b/mosswing/src/design/desktop-final.png) · [Project reference](https://github.com/Ayi1337/gpt6-astra-one-shot-games)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned game repository final desktop design/gameplay image. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. No repository license grants reuse of code or image. Restrict to local catalog identification unless the creator grants image use; source-content reuse remains blocked.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `e48e75f6d576698277fbf38943951dca9b414e6f8a6ec01da83ac63b9df5f829`. Dimensions: 908 × 932.
+
+## 17. Sunjing Puzzles
+
+![Sunjing construction puzzle interface showing a tan interlocking block model and controls.](media/astra-sunjing-puzzles.jpg)
+
+Credit: MartinDelophy and contributors
+
+Rights expression: **CC0-1.0 for collection repository**. [rights evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE) · [Original image](https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/sunjing-puzzles/gameplay.jpg) · [Project reference](https://github.com/MartinDelophy/awesome-gpt-6-astra)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned upstream collection gameplay screenshot for the named entry. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Linked-game and image rights remain separately qualified by the collection README. Confirm image-specific permission before broader reuse.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `73913335440878881965a5a857d231ca9cb1c2396481e15ba3863d3992805453`. Dimensions: 1265 × 712.
+
+## 18. Three Kingdoms
+
+![Three Kingdoms campaign map with cities, armies and Chinese-language strategy panels.](media/astra-three-kingdoms.jpg)
+
+Credit: MartinDelophy and contributors
+
+Rights expression: **CC0-1.0 for collection repository**. [rights evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE) · [Original image](https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/three-kingdoms/gameplay.jpg) · [Project reference](https://github.com/MartinDelophy/awesome-gpt-6-astra)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned upstream collection gameplay screenshot for the named entry. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Portrait and terrain asset rights require separate review. Confirm image-specific and depicted third-party asset permissions before broader reuse.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `fab946924b63d86f6e6d15040eac94be835d8d70cae41decbf433c0a90196dd0`. Dimensions: 1440 × 900.
+
+## 19. Thunderfall
 
 ![A fighter aircraft dodging fire above Thunderfall's volcanic battlefield.](media/astra-thunderfall.jpg)
 
@@ -256,7 +376,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE) · [Original image](https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/thunderfall/gameplay.jpg) · [Project reference](https://github.com/MartinDelophy/awesome-gpt-6-astra)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Separate curated gameplay capture; its exact game-build relation to the indexed source commit is unknown. Not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -264,7 +384,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `0d1cda2750293876526eb8752debb1c6ebc7e2a2c281b93c6a22e2e5870f8e0a`. Dimensions: 1470 × 1005.
 
-## 14. Blackwater
+## 20. Blackwater
 
 ![First-person combat in Blackwater's rain-soaked freight terminal.](media/blackwater.jpg)
 
@@ -276,7 +396,7 @@ Allowed use: Local HeadStart research-preview identification only. MIT covers th
 
 [Exact rights/provenance evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE) · [Original image](https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/blackwater/gameplay.jpg) · [Project reference](https://github.com/Hiraeth010/blackwater)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Separate curated gameplay capture; its exact game-build relation to the indexed source commit is unknown. Not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -284,7 +404,67 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `0ffdf45c843dc5b5e7257037cbf00ef661ff78fb3ecafd3f25171754fd7a5dfa`. Dimensions: 1280 × 720.
 
-## 15. Dungeon Forge
+## 21. BrowserQuest
+
+![BrowserQuest title screen on a parchment banner with a red Play button.](media/browserquest.jpg)
+
+Credit: Little Workshop (Franck and Guillaume Lecollinet), Mozilla and contributors
+
+Rights expression: **MPL-2.0**. [rights evidence](https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/LICENSE).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/LICENSE) · [Original image](https://raw.githubusercontent.com/mozilla/BrowserQuest/af32d247cac3495ca430d0effbb88dd5f3250b2c/client/img/common/screenshot.jpg) · [Project reference](https://github.com/mozilla/BrowserQuest)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned repository gameplay screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Inspect repository notices for artwork attribution before non-catalog reuse.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `81372c467d4192493d0ffa5e8cdd67710e51e80ee9af6a13a57344a6d27fbb85`. Dimensions: 554 × 300.
+
+## 22. Clumsy Bird
+
+![Yellow bird flying between green pipes above a city in Clumsy Bird.](media/clumsy-bird.png)
+
+Credit: ellisonleao and contributors
+
+Rights expression: **GPL-3.0**. [rights evidence](https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/LICENSE.md).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/LICENSE.md) · [Original image](https://i.imgur.com/Slbvt65.png) · [Project reference](https://github.com/ellisonleao/clumsy-bird)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Gameplay image embedded by the maintainer in the pinned README. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. The image is hosted outside the pinned repository; image-specific rights are not stated. Preserve the maintainer-README relation and avoid claiming the GPL necessarily covers the external image.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `0df18f1e76d3341946e582d8167e54f24b84c23647653e1e954891744e19e564`. Dimensions: 800 × 534.
+
+## 23. Drei
+
+![Drei Storybook share-screen demo placeholder reading click here to Share Screen.](media/drei.jpg)
+
+Credit: pmndrs and contributors
+
+Rights expression: **MIT**. [rights evidence](https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/LICENSE).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/LICENSE) · [Original image](https://raw.githubusercontent.com/pmndrs/drei/ffa15b956e320391b0e86084cb58c8da0445abe3/.storybook/public/images/share-screen.jpg) · [Project reference](https://github.com/pmndrs/drei)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned repository documentation/demo overview image. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. This is a library/demo image, not evidence of one complete game.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `ba9fbdb0326a92aaca59510808770ff378c2177f66f7f514f38a337538cf8884`. Dimensions: 1138 × 640.
+
+## 24. Dungeon Forge
 
 ![A procedurally generated stone dungeon viewed from above.](media/dungeon-forge.jpg)
 
@@ -296,7 +476,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/LICENSE) · [Original image](https://raw.githubusercontent.com/majidmanzarpour/threejs-procedural-dungeon/0a2aa0980028cbbc77af6642b4232b45713dc5de/docs/preview.jpg) · [Project reference](https://github.com/majidmanzarpour/threejs-procedural-dungeon)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -304,7 +484,27 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `256d06c9a586f934a7faf20660bf6bcc23b0570a4ce7be3c93c8afe9d8b20f3c`. Dimensions: 1600 × 967.
 
-## 16. Ecctrl
+## 25. Dwellcraft
+
+![Dwellcraft browser editor displaying an isometric furnished apartment floor plan.](media/dwellcraft.png)
+
+Credit: Ryan-fm and contributors
+
+Rights expression: **LicenseRef-Image-Rights-Unresolved**. [rights evidence](https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/docs/screenshots/editor-en.png).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/Ryan-fm/Dwellcraft/blob/5055fefac14f0fe7214c6cbb66853e62a2154a88/docs/screenshots/editor-en.png) · [Original image](https://raw.githubusercontent.com/Ryan-fm/Dwellcraft/5055fefac14f0fe7214c6cbb66853e62a2154a88/docs/screenshots/editor-en.png) · [Project reference](https://github.com/Ryan-fm/Dwellcraft)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned repository in-game editor screenshot identified by the README. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. No repository license found. Restrict to local catalog identification unless the creator grants image use; source-content reuse remains blocked.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `f6f1030528e26cac99bcf73aaf092056cdcbbd0099675696e8f8b15c2506e1f2`. Dimensions: 1440 × 960.
+
+## 26. Ecctrl
 
 ![A third-person character controller running through the Ecctrl demo world.](media/ecctrl.gif)
 
@@ -316,7 +516,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/LICENSE) · [Original image](https://raw.githubusercontent.com/pmndrs/ecctrl/e2cab804f9f15661a642e76f52d09f0b2db63f35/docs/images/ecctrl-hero.gif) · [Project reference](https://github.com/pmndrs/ecctrl)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -324,7 +524,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `d9f7f6d44c393b0d3e953640ae5ea3d1247445a834578ec29cdbe747f325c10a`. Dimensions: 400 × 248.
 
-## 17. Fable Cities
+## 27. Fable Cities
 
 ![A generated city skyline and streets in Fable Cities.](media/fable-cities.jpg)
 
@@ -336,7 +536,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/LICENSE) · [Original image](https://raw.githubusercontent.com/rawprogress/fable-cities/aea8b1035030952555395de0c1de14ba693a1427/assets/hero.jpg) · [Project reference](https://github.com/rawprogress/fable-cities)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -344,7 +544,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `0590917b638e138ebb348e56b3748c71844ef2d6b9568f57b9906f06e97111f3`. Dimensions: 1920 × 1026.
 
-## 18. LAAS
+## 28. LAAS
 
 ![A wide procedural forest valley rendered by LAAS in Three.js WebGPU.](media/fable5-laas.jpg)
 
@@ -356,7 +556,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/Braffolk/fable5-world-demo/blob/fd75fdb718996908aad3d22b59dfa297dc94298d/LICENSE) · [Original image](https://raw.githubusercontent.com/Braffolk/fable5-world-demo/fd75fdb718996908aad3d22b59dfa297dc94298d/docs/readme-hero.jpg) · [Project reference](https://github.com/Braffolk/fable5-world-demo)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -364,7 +564,147 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `d3fcd08f8f8afb633490665c55886498718aa0b90838339699f713984a9568b7`. Dimensions: 1928 × 1238.
 
-## 19. HexGL
+## 29. Veritas Physics Sandbox
+
+![Dark orbital simulation view with colored trajectories and a parameter panel.](media/fable5-real-physics-engine.png)
+
+Credit: hamzabellouch and contributors
+
+Rights expression: **LicenseRef-Image-Rights-Unresolved**. [rights evidence](https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/docs/screenshot-orbits.png).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/hamzabellouch/Build-with-anthropic-fable-5/blob/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/docs/screenshot-orbits.png) · [Original image](https://raw.githubusercontent.com/hamzabellouch/Build-with-anthropic-fable-5/2fbca6277a08ea30e8b47cee4ed8bd4f3f93a1c8/real-physics-engine/docs/screenshot-orbits.png) · [Project reference](https://github.com/hamzabellouch/Build-with-anthropic-fable-5)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned subproject gameplay/simulation screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. No repository license found. Restrict to local catalog identification unless the creator grants image use; source-content reuse remains blocked.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `5592dc7d1a24eb31598dbd535a8a759525ca56c6214c37b3d26d9f2ef5c89d77`. Dimensions: 1261 × 1234.
+
+## 30. Freeciv
+
+![Freeciv strategy map with cities, territory borders, unit labels and command panels.](media/freeciv.png)
+
+Credit: Freeciv Project contributors
+
+Rights expression: **GPL-2.0-or-later**. [rights evidence](https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/COPYING).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/COPYING) · [Original image](https://freeciv.org/images/freeciv-screenshot-2.5.0.png) · [Project reference](https://github.com/freeciv/freeciv)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Gameplay screenshot displayed on the official project home page. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. The official page does not state a file-specific image license. Retain official-site credit and narrow catalog-display scope until screenshot rights are confirmed.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `8d7b385c1363a2dce89e33cebb3f503e06a5844182ed548eced636b0ef18c40b`. Dimensions: 400 × 300.
+
+## 31. FreeCol
+
+![FreeCol coastal strategy map with ships, settlements, a minimap and status interface.](media/freecol.jpg)
+
+Credit: FreeCol Team
+
+Rights expression: **GPL-2.0-or-later**. [rights evidence](https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/LICENSE).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/LICENSE) · [Original image](https://www.freecol.org/images/screen-1.0.0.jpg) · [Project reference](https://github.com/FreeCol/freecol)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Gameplay screenshot on the official project screenshot gallery. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. The official gallery does not state a file-specific image license. Retain official-site credit and narrow catalog-display scope until screenshot rights are confirmed.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `542c24c05758abb589cf35c4ffb5a0419b858abbe375ba6ec9c5cb28e383742a`. Dimensions: 2152 × 1650.
+
+## 32. Godot AStarGrid2D Navigation
+
+![Godot AStarGrid2D demo with a small robot navigating stone platforms in space.](media/godot-astar-grid-2d.webp)
+
+Credit: Godot Engine contributors; see subproject credits
+
+Rights expression: **MIT**. [rights evidence](https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md) · [Original image](https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/screenshots/navigation_astar.webp) · [Project reference](https://github.com/godotengine/godot-demo-projects)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned subproject screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Review subproject-specific asset credits before reuse.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `b33e2e80bdb1ae471df51caab48af2c9cea8bfc06cc53a42474579092778b89c`. Dimensions: 1152 × 648.
+
+## 33. Godot 2D Platformer
+
+![Orange character collecting coins across bright floating platforms in the Godot 2D platformer.](media/godot-platformer-2d.webp)
+
+Credit: Godot Engine contributors; see subproject credits
+
+Rights expression: **MIT**. [rights evidence](https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md) · [Original image](https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/screenshots/platformer.webp) · [Project reference](https://github.com/godotengine/godot-demo-projects)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned subproject gameplay screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Review subproject-specific asset credits before reuse.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `ef5eb833df4cf3618e92c4e5853e944e5999f8c9933ca21efd02dd87fea3502c`. Dimensions: 1280 × 720.
+
+## 34. Godot 3D Platformer
+
+![Robot character carrying a blue cylinder in a blocky forest in the Godot 3D platformer.](media/godot-platformer-3d.webp)
+
+Credit: Godot Engine contributors; see subproject credits
+
+Rights expression: **MIT**. [rights evidence](https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md) · [Original image](https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/screenshots/platformer.webp) · [Project reference](https://github.com/godotengine/godot-demo-projects)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned subproject gameplay screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Review subproject-specific asset credits before reuse.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `ecc6228fd200ddbde9d21707e7ffea1bd24ac59592a92aa2e33cabea91706a88`. Dimensions: 1280 × 720.
+
+## 35. Godot Truck Town
+
+![Red pickup driving through a low-poly town in the Godot Truck Town demo.](media/godot-truck-town.webp)
+
+Credit: Godot Engine contributors; see subproject credits
+
+Rights expression: **MIT**. [rights evidence](https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md) · [Original image](https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/screenshots/truck_town.webp) · [Project reference](https://github.com/godotengine/godot-demo-projects)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned subproject gameplay screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Review subproject-specific asset credits before reuse.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `7d7e38da059e04b0b948b35e6898cbf5483bd54163efd6d3741b18fcbc2f30e4`. Dimensions: 1280 × 720.
+
+## 36. HexGL
 
 ![A futuristic hover racer speeding along HexGL's elevated city track.](media/hexgl.jpg)
 
@@ -376,7 +716,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/LICENSE) · [Original image](https://raw.githubusercontent.com/BKcore/HexGL/6addc95a2fce3bf05f4d751823cc054c61a16d68/css/mobile.jpg) · [Project reference](https://github.com/BKcore/HexGL)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -384,7 +724,27 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `47a8905d72243b83964700a26cf62830abf8e69498f27658ea2620a732393d0e`. Dimensions: 1280 × 800.
 
-## 20. Jelly Baby
+## 37. Hextris
+
+![Hextris board with a dark central hexagon bordered by colored segments.](media/hextris.png)
+
+Credit: Logan Engstrom, Garrett Finucane, Noah Moroze, Michael Yang and contributors
+
+Rights expression: **GPL-3.0-or-later**. [rights evidence](https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/LICENSE.md).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/LICENSE.md) · [Original image](https://raw.githubusercontent.com/Hextris/hextris/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/twitter-opengraph.png) · [Project reference](https://github.com/Hextris/hextris)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned repository social/game preview. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Keep creator credit with catalog display.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `e799d31923ca034365e312f9cc5f19fb97e9eb74b15f1c573203dfc5064bfd38`. Dimensions: 512 × 512.
+
+## 38. Jelly Baby
 
 ![Colorful soft-body jelly characters in the WebGPU physics sandbox.](media/jelly-baby.jpg)
 
@@ -396,7 +756,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/scottstts/Jelly-Baby/blob/a36879ca47a890638ed9e4feaf98304e4c8c417e/LICENSE) · [Original image](https://raw.githubusercontent.com/scottstts/Jelly-Baby/a36879ca47a890638ed9e4feaf98304e4c8c417e/assets/screenshot.jpeg) · [Project reference](https://github.com/scottstts/Jelly-Baby)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -404,7 +764,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `ba4ac9b691356a3e4aee32ac8350b9fd558587fd2a031168f9f4350be892156e`. Dimensions: 2160 × 1432.
 
-## 21. Last Beacon
+## 39. Last Beacon
 
 ![Towers defending Last Beacon's coastal island from an enemy wave.](media/last-beacon.png)
 
@@ -416,7 +776,7 @@ Allowed use: Local HeadStart research-preview identification only. MIT covers th
 
 [Exact rights/provenance evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/LICENSE) · [Original image](https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/last-beacon/gameplay-en.png) · [Project reference](https://github.com/stackloomdev/last-beacon)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Separate curated gameplay capture; its exact game-build relation to the indexed source commit is unknown. Not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -424,7 +784,47 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `a9eb4266e2e521716c9dca5cc317b9f0700f1190fc676eefd2df94ccd8c914ac`. Dimensions: 1604 × 1600.
 
-## 22. CityMaker
+## 40. LittleJS
+
+![Montage of four colorful LittleJS game and puzzle example screens.](media/littlejs.jpg)
+
+Credit: Frank Force and contributors
+
+Rights expression: **MIT**. [rights evidence](https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/LICENSE).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/LICENSE) · [Original image](https://raw.githubusercontent.com/KilledByAPixel/LittleJS/da1b3836552b2373522a56bd39d6fb9f4b530017/examples/screenshot.jpg) · [Project reference](https://github.com/KilledByAPixel/LittleJS)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned repository example montage. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. This represents engine examples rather than one complete game.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `7a1ddaa184b36fb75ee9d80bd0b10d47a1471b572779b0ad15c995de897012e5`. Dimensions: 960 × 540.
+
+## 41. Magic Carpet Wizard
+
+![Magic Carpet Wizard title screen over a stylized flying-carpet city scene.](media/magic-carpet-wizard.jpg)
+
+Credit: threapchills; screenshot curated by MartinDelophy
+
+Rights expression: **LicenseRef-Image-Rights-Unresolved**. [rights evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/magic-carpet/gameplay.jpg).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/MartinDelophy/awesome-gpt-6-astra/blob/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/magic-carpet/gameplay.jpg) · [Original image](https://raw.githubusercontent.com/MartinDelophy/awesome-gpt-6-astra/139a9287e763e5b592bb53fda97e5101db15db40/assets/screenshots/magic-carpet/gameplay.jpg) · [Project reference](https://github.com/threapchills/MagicCarpetWizard)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Named gameplay screenshot in an upstream discovery collection; absent from the game repository. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. The game repository has no license and screenshot origin/permission is not established. Confirm screenshot provenance and creator permission before dashboard projection; source-content reuse remains blocked.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `ccfd5e50efd82d639a51ad2b0adb6ac1a6887f03786d6d7a15d156f63892c3ae`. Dimensions: 1440 × 950.
+
+## 42. CityMaker
 
 ![CityMaker's 2048 board filled with low-poly Hong Kong buildings.](media/open-city-maker.png)
 
@@ -436,7 +836,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/derek-wangpch/OpenCityMaker/blob/ca45404de679baf5afb6b2504ef3c0af27b64ffc/LICENSE) · [Original image](https://raw.githubusercontent.com/derek-wangpch/OpenCityMaker/ca45404de679baf5afb6b2504ef3c0af27b64ffc/docs/images/citymaker-game.png) · [Project reference](https://github.com/derek-wangpch/OpenCityMaker)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -444,7 +844,107 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `d739b7560f9700730f4679d866fd1cf4c6af28921178444ceb1e8790b060f3bf`. Dimensions: 1440 × 1100.
 
-## 23. Trench Run — Fable 5.1
+## 43. Hollowflux
+
+![Hollowflux top-down 2D character beside luminous blue water and stone ruins.](media/openai-sites-hollowflux.webp)
+
+Credit: Thomas Ricouard / OpenAI
+
+Rights expression: **LicenseRef-OpenAI-Official-Image-Rights-Unresolved**. [rights evidence](https://developers.openai.com/blog/how-to-build-games-with-astra).
+
+Allowed use: User-directed local HeadStart catalog identification and display of this exact official OpenAI gameplay image only. This record grants no public redistribution, source extraction, game-asset reuse, endorsement or broader license rights.
+
+[Exact rights/provenance evidence](https://developers.openai.com/blog/how-to-build-games-with-astra) · [Original image](https://cdn.openai.com/devhub/blog/how-to-build-games/hollowflux-water-15cd30282861.webp) · [Project reference](https://developers.openai.com/showcase/hollowflux)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Official article gameplay image for the named showcase. No public source commit or exact build revision is available, and this is not a HeadStart playthrough or integration attestation. Official OpenAI author-article gameplay image. User directed its use in the local HeadStart dashboard. No separate image reuse license was found; public redistribution, model training and in-game asset reuse remain unresolved.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `15cd30282861fa4e2dff59bed31132663e11b6e98ce453289f0496f3733abc69`. Dimensions: 1600 × 900.
+
+## 44. Sunwake
+
+![Sunwake orange motorboat cutting across faceted blue ocean waves.](media/openai-sites-sunwake.webp)
+
+Credit: Thomas Ricouard / OpenAI
+
+Rights expression: **LicenseRef-OpenAI-Official-Image-Rights-Unresolved**. [rights evidence](https://developers.openai.com/blog/how-to-build-games-with-astra).
+
+Allowed use: User-directed local HeadStart catalog identification and display of this exact official OpenAI gameplay image only. This record grants no public redistribution, source extraction, game-asset reuse, endorsement or broader license rights.
+
+[Exact rights/provenance evidence](https://developers.openai.com/blog/how-to-build-games-with-astra) · [Original image](https://cdn.openai.com/devhub/blog/how-to-build-games/sunwake-water-f1c48b3f7fe8.webp) · [Project reference](https://developers.openai.com/showcase/sunwake)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Official article gameplay image for the named showcase. No public source commit or exact build revision is available, and this is not a HeadStart playthrough or integration attestation. Official OpenAI author-article gameplay image. User directed its use in the local HeadStart dashboard. No separate image reuse license was found; public redistribution, model training and in-game asset reuse remain unresolved.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `f1c48b3f7fe8706dd558c8378f97863bbab8a21684ec640c38196f404cbeac11`. Dimensions: 1440 × 900.
+
+## 45. Void Explorer
+
+![Void Explorer spacecraft flying near a cyan planet encircled by bright magenta rings.](media/openai-sites-void-explorer.webp)
+
+Credit: Thomas Ricouard / OpenAI
+
+Rights expression: **LicenseRef-OpenAI-Official-Image-Rights-Unresolved**. [rights evidence](https://developers.openai.com/blog/how-to-build-games-with-astra).
+
+Allowed use: User-directed local HeadStart catalog identification and display of this exact official OpenAI gameplay image only. This record grants no public redistribution, source extraction, game-asset reuse, endorsement or broader license rights.
+
+[Exact rights/provenance evidence](https://developers.openai.com/blog/how-to-build-games-with-astra) · [Original image](https://cdn.openai.com/devhub/blog/how-to-build-games/orbital-flight-579e20d663e3.webp) · [Project reference](https://developers.openai.com/showcase/void-explorer)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Official article gameplay image for the named showcase. No public source commit or exact build revision is available, and this is not a HeadStart playthrough or integration attestation. Official OpenAI author-article gameplay image. User directed its use in the local HeadStart dashboard. No separate image reuse license was found; public redistribution, model training and in-game asset reuse remain unresolved.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `579e20d663e37424677536f6202ce102dcdcc409065d5eb40a7555e99b8d6a10`. Dimensions: 1600 × 1000.
+
+## 46. OpenRA
+
+![OpenRA map-generator settings dialog over a generated strategy map.](media/openra.gif)
+
+Credit: OpenRA developers and contributors
+
+Rights expression: **GPL-3.0-or-later for OpenRA code**. [rights evidence](https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/COPYING).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/COPYING) · [Original image](https://www.openra.net/images/news/20260222-generators.gif) · [Project reference](https://github.com/OpenRA/OpenRA)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Official project news gameplay animation showing current generator effects. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Original-game content and image-specific rights are separate from the engine code license. Keep narrow official-project identification scope; do not imply the GPL covers depicted proprietary game assets.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `d35d9c5e68bff8482b65e9e1aac9c399557b82d57889a6a615572cf71f788b4b`. Dimensions: 1024 × 640.
+
+## 47. OpenRCT2
+
+![Busy OpenRCT2 amusement park with interwoven roller coasters, paths and buildings.](media/openrct2.webp)
+
+Credit: OpenRCT2 developers
+
+Rights expression: **GPL-3.0-or-later for OpenRCT2 code**. [rights evidence](https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/licence.txt).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/licence.txt) · [Original image](https://github.com/user-attachments/assets/fa893cc8-1484-4751-94be-4ead00a6c8f9) · [Project reference](https://github.com/OpenRCT2/OpenRCT2)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Gameplay image embedded in the pinned official repository README. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. External attachment image and original RollerCoaster Tycoon data/assets have separate rights. Retain narrow identification scope and do not present original game assets as GPL-licensed.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `c53a146a5d4019e4270382edd48fdb9742bd7020429a29d10541a99978a650be`. Dimensions: 1920 × 1080.
+
+## 48. Trench Run — Fable 5.1
 
 ![A spacecraft flying through the generated trench-run scene.](media/philolabs-death-star-trench-run.gif)
 
@@ -456,7 +956,7 @@ Allowed use: Local HeadStart research-preview identification only. The selected 
 
 [Exact rights/provenance evidence](https://github.com/PhiloLabs/fable51-worlds/blob/d24028466530a15d58d3d94537e6317b84101589/LICENSE) · [Original image](https://raw.githubusercontent.com/PhiloLabs/fable51-worlds/d24028466530a15d58d3d94537e6317b84101589/death-star-trench-run/media/preview.gif) · [Project reference](https://github.com/PhiloLabs/fable51-worlds)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -464,7 +964,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `b2541981649e11240ae677a35a3b28227fe534f43b22e5ec74533d3cece0ac3e`. Dimensions: 600 × 338.
 
-## 24. Trench Run — Astra
+## 49. Trench Run — Astra
 
 ![Astra's generated spacecraft trench-run scene.](media/philolabs-death-star-trench-run-gpt-astra.gif)
 
@@ -476,7 +976,7 @@ Allowed use: Local HeadStart research-preview identification only. The selected 
 
 [Exact rights/provenance evidence](https://github.com/PhiloLabs/fable51-worlds/blob/d24028466530a15d58d3d94537e6317b84101589/LICENSE) · [Original image](https://raw.githubusercontent.com/PhiloLabs/fable51-worlds/d24028466530a15d58d3d94537e6317b84101589/death-star-trench-run-gpt-astra/media/preview.gif) · [Project reference](https://github.com/PhiloLabs/fable51-worlds)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -484,7 +984,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `279562395f523cac69d99ad9776ddbfa8495b83f2f10cc44a18ec3aae446c2d3`. Dimensions: 800 × 256.
 
-## 25. Kyoto Higashiyama — Fable 5.1
+## 50. Kyoto Higashiyama — Fable 5.1
 
 ![Generated Kyoto Higashiyama street with traditional facades.](media/philolabs-kyoto-higashiyama.gif)
 
@@ -496,7 +996,7 @@ Allowed use: Local HeadStart research-preview identification only. The selected 
 
 [Exact rights/provenance evidence](https://github.com/PhiloLabs/fable51-worlds/blob/d24028466530a15d58d3d94537e6317b84101589/LICENSE) · [Original image](https://raw.githubusercontent.com/PhiloLabs/fable51-worlds/d24028466530a15d58d3d94537e6317b84101589/kyoto-higashiyama/media/preview.gif) · [Project reference](https://github.com/PhiloLabs/fable51-worlds)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -504,7 +1004,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `1b19c0f940842324a308a55ee9c071b060471aac1b33ecafa13fb9f5987baf5c`. Dimensions: 760 × 428.
 
-## 26. Kyoto Higashiyama — Astra
+## 51. Kyoto Higashiyama — Astra
 
 ![Astra's generated Kyoto Higashiyama street scene.](media/philolabs-kyoto-higashiyama-gpt-astra.gif)
 
@@ -516,7 +1016,7 @@ Allowed use: Local HeadStart research-preview identification only. The selected 
 
 [Exact rights/provenance evidence](https://github.com/PhiloLabs/fable51-worlds/blob/d24028466530a15d58d3d94537e6317b84101589/LICENSE) · [Original image](https://raw.githubusercontent.com/PhiloLabs/fable51-worlds/d24028466530a15d58d3d94537e6317b84101589/kyoto-higashiyama-gpt-astra/media/preview.gif) · [Project reference](https://github.com/PhiloLabs/fable51-worlds)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -524,7 +1024,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `6f24e1dc5cef00ee90e9bf0d0effa7d83dd1964e5631dd5d4dfb2f4bec8c69ee`. Dimensions: 960 × 302.
 
-## 27. Union Square — Fable 5.1
+## 52. Union Square — Fable 5.1
 
 ![Generated Union Square street scene with buildings, traffic and pedestrians.](media/philolabs-union-square-sf.gif)
 
@@ -536,7 +1036,7 @@ Allowed use: Local HeadStart research-preview identification only. The selected 
 
 [Exact rights/provenance evidence](https://github.com/PhiloLabs/fable51-worlds/blob/d24028466530a15d58d3d94537e6317b84101589/LICENSE) · [Original image](https://raw.githubusercontent.com/PhiloLabs/fable51-worlds/d24028466530a15d58d3d94537e6317b84101589/union-square-sf/media/preview.gif) · [Project reference](https://github.com/PhiloLabs/fable51-worlds)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -544,7 +1044,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `acaf3d4522a9e4d6cbea159b24721bba583c926cb39bffde1de1398ed4da1af2`. Dimensions: 600 × 338.
 
-## 28. Union Square — Astra
+## 53. Union Square — Astra
 
 ![Astra's generated Union Square street scene.](media/philolabs-union-square-sf-gpt-astra.gif)
 
@@ -556,7 +1056,7 @@ Allowed use: Local HeadStart research-preview identification only. The selected 
 
 [Exact rights/provenance evidence](https://github.com/PhiloLabs/fable51-worlds/blob/d24028466530a15d58d3d94537e6317b84101589/LICENSE) · [Original image](https://raw.githubusercontent.com/PhiloLabs/fable51-worlds/d24028466530a15d58d3d94537e6317b84101589/union-square-sf-gpt-astra/media/preview.gif) · [Project reference](https://github.com/PhiloLabs/fable51-worlds)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -564,7 +1064,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `56cbdfae540293adafc8d20ba2cd3b24cbc4d24cb5fd6f22855f862edb590798`. Dimensions: 800 × 252.
 
-## 29. Poimandres Racing Game
+## 54. Poimandres Racing Game
 
 ![A low-poly racing car on the Poimandres track.](media/pmndrs-racing-game.webp)
 
@@ -576,7 +1076,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/LICENSE.md) · [Original image](https://raw.githubusercontent.com/pmndrs/racing-game/7816a5d954b75e6ad853ae4e4f0cbbd628072643/thumbnail.webp) · [Project reference](https://github.com/pmndrs/racing-game)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -584,7 +1084,27 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `44088d796a27865624b38a86d89df8fb087b8360bf56a1ee8572892bc82cf44d`. Dimensions: 1600 × 845.
 
-## 30. Silent Meridian
+## 55. React Three Rapier
+
+![White physics-test shapes resting on a bright green surface in React Three Rapier.](media/react-three-rapier.jpg)
+
+Credit: pmndrs and contributors
+
+Rights expression: **MIT**. [rights evidence](https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/LICENSE).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/LICENSE) · [Original image](https://raw.githubusercontent.com/pmndrs/react-three-rapier/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/misc/example-auto-colliders.jpg) · [Project reference](https://github.com/pmndrs/react-three-rapier)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned repository interactive physics example screenshot. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Represents a reusable physics capability rather than a complete game.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `645a6f73889291ee7974d308c317217b6fd283618e6cea0d975bd50d04f9ee91`. Dimensions: 800 × 520.
+
+## 56. Silent Meridian
 
 ![Silent Meridian's observatory with a brass puzzle mechanism and clue markers.](media/silent-meridian.png)
 
@@ -596,7 +1116,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/stackloomdev/silent-meridian/blob/5a3b800ff67913c6a310348cfd49cea34274f344/LICENSE) · [Original image](https://raw.githubusercontent.com/stackloomdev/silent-meridian/5a3b800ff67913c6a310348cfd49cea34274f344/docs/screenshots/depth-observatory.png) · [Project reference](https://github.com/stackloomdev/silent-meridian)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -604,7 +1124,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `0dbe1f42c1b2a3dcc74bdd2b805f1b7999c70831da6f65b2d6948039b5820d5d`. Dimensions: 1440 × 900.
 
-## 31. SlimCity
+## 57. SlimCity
 
 ![A dense isometric city and simulation controls in SlimCity.](media/slimcity.png)
 
@@ -616,7 +1136,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/LICENSE) · [Original image](https://raw.githubusercontent.com/rbenzing/SlimCityGame/73e065226b8134cf44901a641076aeed3281f9f1/screenshots/screenshot-01.png) · [Project reference](https://github.com/rbenzing/SlimCityGame)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -624,7 +1144,27 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `b39876bd5cead3537ffb97ba72df43521aaf3ae7c8d611abcafb0462ed2222f5`. Dimensions: 1173 × 594.
 
-## 32. three-pathfinding
+## 58. three-mesh-bvh
+
+![Animated red knotted torus surrounded by white ray and particle traces on black.](media/three-mesh-bvh.gif)
+
+Credit: gkjohnson and contributors
+
+Rights expression: **MIT**. [rights evidence](https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/LICENSE).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/LICENSE) · [Original image](https://raw.githubusercontent.com/gkjohnson/three-mesh-bvh/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/docs/example-sm.gif) · [Project reference](https://github.com/gkjohnson/three-mesh-bvh)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned repository interactive capability demo animation. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Represents spatial-query/raycast capability rather than a complete game.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `3ff289466734ad424adf17a5fddb2b1bce97ae144e104ab6083083efb496b381`. Dimensions: 800 × 600.
+
+## 59. three-pathfinding
 
 ![Agents navigating a Three.js pathfinding demonstration scene.](media/three-pathfinding.png)
 
@@ -636,7 +1176,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/LICENSE) · [Original image](https://user-images.githubusercontent.com/1848368/34424850-d79e5a24-ebf4-11e7-87c4-afc75cdc41bd.png) · [Project reference](https://github.com/donmccurdy/three-pathfinding)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -644,7 +1184,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `91999166337568f4cf249957b1713334901a897338e7ecb8b2d4ae44fabe6548`. Dimensions: 2180 × 1632.
 
-## 33. THREE.Terrain
+## 60. THREE.Terrain
 
 ![A generated Three.js terrain landscape under a blue sky.](media/three-terrain.jpg)
 
@@ -656,7 +1196,7 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/LICENSE.txt) · [Original image](https://raw.githubusercontent.com/IceCreamYou/THREE.Terrain/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/demo/img/screenshot2.jpg) · [Project reference](https://github.com/IceCreamYou/THREE.Terrain)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -664,7 +1204,27 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `eec926ed43e62a9fee3bcbca89276235eff4c0fc6ad8f77f93fa0904bf1957ea`. Dimensions: 722 × 542.
 
-## 34. Balance Astronaut
+## 61. Three.js
+
+![Blue-gray first-person arena with ramps and tiled walls from the Three.js FPS example.](media/threejs.jpg)
+
+Credit: mrdoob and contributors
+
+Rights expression: **MIT**. [rights evidence](https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/LICENSE).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/LICENSE) · [Original image](https://raw.githubusercontent.com/mrdoob/three.js/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/screenshots/games_fps.jpg) · [Project reference](https://github.com/mrdoob/three.js)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned repository screenshot of the official FPS game example. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Represents one official engine example, not the entire Three.js project.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `a2319a4d4874518beea8dedbe9aa7ffe2dbc0673b1a1db1598c01369ad0b6f85`. Dimensions: 400 × 250.
+
+## 62. Balance Astronaut
 
 ![Astronaut figures balancing on a suspended physics platform.](media/toy2game-balance-astronaut.png)
 
@@ -676,7 +1236,7 @@ Allowed use: Local, noncommercial HeadStart research-preview display only under 
 
 [Exact rights/provenance evidence](https://github.com/asmoyou/toy2game/blob/39078515a13331a748e63bc75424ed83c773a72a/LICENSE) · [Original image](https://raw.githubusercontent.com/asmoyou/toy2game/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/balance-astronaut.png) · [Project reference](https://github.com/asmoyou/toy2game)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -684,7 +1244,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `a25411cea9de06f29dc59edda1fc9c74e50083446aef83b84d464d0ebdb335b6`. Dimensions: 1200 × 800.
 
-## 35. Flip Match
+## 63. Flip Match
 
 ![Bright 3D tiles arranged for a Flip Match puzzle round.](media/toy2game-flip-match.png)
 
@@ -696,7 +1256,7 @@ Allowed use: Local, noncommercial HeadStart research-preview display only under 
 
 [Exact rights/provenance evidence](https://github.com/asmoyou/toy2game/blob/39078515a13331a748e63bc75424ed83c773a72a/LICENSE) · [Original image](https://raw.githubusercontent.com/asmoyou/toy2game/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/flip-match.png) · [Project reference](https://github.com/asmoyou/toy2game)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -704,7 +1264,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `bbe8fe4ad505e32d9dcda3aef34d1fc829cd08ae844d08fa7a084e5f7aef4817`. Dimensions: 1200 × 800.
 
-## 36. Frog Feast
+## 64. Frog Feast
 
 ![Cartoon frogs competing in the Frog Feast arcade arena.](media/toy2game-frog-feast.png)
 
@@ -716,7 +1276,7 @@ Allowed use: Local, noncommercial HeadStart research-preview display only under 
 
 [Exact rights/provenance evidence](https://github.com/asmoyou/toy2game/blob/39078515a13331a748e63bc75424ed83c773a72a/LICENSE) · [Original image](https://raw.githubusercontent.com/asmoyou/toy2game/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/frog-feast.png) · [Project reference](https://github.com/asmoyou/toy2game)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -724,7 +1284,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `914d976332a876dc48c4deb229cf63d016a3eeae327c27013f10ad9d963f6eb6`. Dimensions: 1200 × 800.
 
-## 37. Parking Escape
+## 65. Parking Escape
 
 ![Compact cars arranged in a 3D Parking Escape puzzle.](media/toy2game-parking-escape.png)
 
@@ -736,7 +1296,7 @@ Allowed use: Local, noncommercial HeadStart research-preview display only under 
 
 [Exact rights/provenance evidence](https://github.com/asmoyou/toy2game/blob/39078515a13331a748e63bc75424ed83c773a72a/LICENSE) · [Original image](https://raw.githubusercontent.com/asmoyou/toy2game/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/parking-escape.png) · [Project reference](https://github.com/asmoyou/toy2game)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -744,7 +1304,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `843107a07ced823fd3a49aabe4cfaf6fbd455f83ffacb2bf4eb601081fd5c283`. Dimensions: 1200 × 800.
 
-## 38. Penguin Ice
+## 66. Penguin Ice
 
 ![Penguins sliding and balancing on an icy physics stage.](media/toy2game-penguin-ice.png)
 
@@ -756,7 +1316,7 @@ Allowed use: Local, noncommercial HeadStart research-preview display only under 
 
 [Exact rights/provenance evidence](https://github.com/asmoyou/toy2game/blob/39078515a13331a748e63bc75424ed83c773a72a/LICENSE) · [Original image](https://raw.githubusercontent.com/asmoyou/toy2game/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/penguin-ice.png) · [Project reference](https://github.com/asmoyou/toy2game)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -764,7 +1324,7 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `d52eb5159cf7e2caa2a2c94d10d6ed6acc248fb20fb1b7652de76279c46f1199`. Dimensions: 1200 × 800.
 
-## 39. Rabbit Trap
+## 67. Rabbit Trap
 
 ![Rabbit pieces on the colorful Rabbit Trap board.](media/toy2game-rabbit-trap.png)
 
@@ -776,7 +1336,7 @@ Allowed use: Local, noncommercial HeadStart research-preview display only under 
 
 [Exact rights/provenance evidence](https://github.com/asmoyou/toy2game/blob/39078515a13331a748e63bc75424ed83c773a72a/LICENSE) · [Original image](https://raw.githubusercontent.com/asmoyou/toy2game/39078515a13331a748e63bc75424ed83c773a72a/apps/web/public/images/rabbit-trap.png) · [Project reference](https://github.com/asmoyou/toy2game)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
@@ -784,7 +1344,27 @@ Changes: Original bytes retained unchanged; browser display and contact sheet ma
 
 SHA256: `2f68315c369da4238379bac7dc8e6283f72721d434d0cce4fadfc46aed081624`. Dimensions: 1200 × 800.
 
-## 40. Vesper Street
+## 68. Unciv
+
+![Unciv hex strategy map with units, cities and construction and action panels.](media/unciv.jpg)
+
+Credit: Yair Morgenstern and Unciv contributors
+
+Rights expression: **MPL-2.0**. [rights evidence](https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/LICENSE).
+
+Allowed use: Independent narrow local research-display review passed for this exact audited image. The approval is limited to identifying the upstream project in the local HeadStart catalog; it does not authorize public redistribution, source export, promotional reuse, relicensing, game-asset reuse, endorsement, or imply that third-party assets are covered by the code license.
+
+[Exact rights/provenance evidence](https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/LICENSE) · [Original image](https://raw.githubusercontent.com/yairm210/Unciv/0d7d1e43cd4776e04cd3f9eaf752527885123e62/extraImages/GithubPreviewImage.jpg) · [Project reference](https://github.com/yairm210/Unciv)
+
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
+
+Pinned repository game preview image. This image identifies the named catalog record but is not a HeadStart playthrough, source/deployment parity check or integration attestation. Independent narrow local research-display review passed. Review art and ruleset asset credits separately before reuse.
+
+Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
+
+SHA256: `029cdac8b189b8aa76b53cebd30a5e4955ba6bb81e0709742e6e93af0380e230`. Dimensions: 1920 × 1080.
+
+## 69. Vesper Street
 
 ![Isometric exploration of a flooded, neon-lit street in Vesper Street.](media/vesper-street.jpg)
 
@@ -796,70 +1376,10 @@ Allowed use: Local HeadStart catalog identification and preview display for this
 
 [Exact rights/provenance evidence](https://github.com/winchxyz/vesper-street/blob/fcc2f6eda84311194c0834de6cd7081c2965086f/LICENSE) · [Original image](https://raw.githubusercontent.com/winchxyz/vesper-street/fcc2f6eda84311194c0834de6cd7081c2965086f/media/01_vesper_street.jpg) · [Project reference](https://github.com/winchxyz/vesper-street)
 
-Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T20:03:28.150833+00:00.
+Capture date: unknown (unknown). Uploaded: unknown. Downloaded: 2026-09-10T21:01:01.661078+00:00.
 
 Image file pinned in the named repository at the indexed source commit; not a HeadStart playthrough or target-integration attestation. File-specific local display review only. The repository-level license is applied only where this selected image is included in that licensed tree and no narrower file notice was found. Underlying assets, dependencies, public publication and code extraction retain the record's separate rights limits.
 
 Changes: Original bytes retained unchanged; browser display and contact sheet may scale without cropping.
 
 SHA256: `c104e95e6989e75da77ff5ced1eecc6cc5927f06f54e06a69b3737721e6e9af6`. Dimensions: 1280 × 720.
-
-## 41. Void Explorer
-
-![Void Explorer spacecraft flying near a cyan planet encircled by bright magenta rings.](media/void-explorer.webp)
-
-Credit: Thomas Ricouard / OpenAI
-
-Rights expression: **LicenseRef-OpenAI-Official-Image-Rights-Unresolved**. [rights evidence](https://developers.openai.com/blog/how-to-build-games-with-astra).
-
-Allowed use: User-directed local HeadStart catalog identification and display of this exact official OpenAI gameplay image only. This record grants no public redistribution, source extraction, game-asset reuse, endorsement or broader license rights.
-
-[Exact rights/provenance evidence](https://developers.openai.com/blog/how-to-build-games-with-astra) · [Original image](https://cdn.openai.com/devhub/blog/how-to-build-games/orbital-flight-579e20d663e3.webp) · [Project reference](https://developers.openai.com/showcase/void-explorer)
-
-Capture date: 2026-09-04 (source_declared). Uploaded: unknown. Downloaded: 2026-09-10T21:30:00Z.
-
-Official article gameplay image for the named showcase. No public source commit or exact build revision is available, and this is not a HeadStart playthrough or integration attestation. Official OpenAI author-article gameplay image. User directed its use in the local HeadStart dashboard. No separate image reuse license was found; public redistribution, model training and in-game asset reuse remain unresolved.
-
-Changes: Original CDN bytes retained unchanged; browser display and contact sheet may scale without cropping.
-
-SHA256: `579e20d663e37424677536f6202ce102dcdcc409065d5eb40a7555e99b8d6a10`. Dimensions: 1600 × 1000.
-
-## 42. Sunwake
-
-![Sunwake orange motorboat cutting across faceted blue ocean waves.](media/sunwake.webp)
-
-Credit: Thomas Ricouard / OpenAI
-
-Rights expression: **LicenseRef-OpenAI-Official-Image-Rights-Unresolved**. [rights evidence](https://developers.openai.com/blog/how-to-build-games-with-astra).
-
-Allowed use: User-directed local HeadStart catalog identification and display of this exact official OpenAI gameplay image only. This record grants no public redistribution, source extraction, game-asset reuse, endorsement or broader license rights.
-
-[Exact rights/provenance evidence](https://developers.openai.com/blog/how-to-build-games-with-astra) · [Original image](https://cdn.openai.com/devhub/blog/how-to-build-games/sunwake-water-f1c48b3f7fe8.webp) · [Project reference](https://developers.openai.com/showcase/sunwake)
-
-Capture date: 2026-09-04 (source_declared). Uploaded: unknown. Downloaded: 2026-09-10T21:30:00Z.
-
-Official article gameplay image for the named showcase. No public source commit or exact build revision is available, and this is not a HeadStart playthrough or integration attestation. Official OpenAI author-article gameplay image. User directed its use in the local HeadStart dashboard. No separate image reuse license was found; public redistribution, model training and in-game asset reuse remain unresolved.
-
-Changes: Original CDN bytes retained unchanged; browser display and contact sheet may scale without cropping.
-
-SHA256: `f1c48b3f7fe8706dd558c8378f97863bbab8a21684ec640c38196f404cbeac11`. Dimensions: 1440 × 900.
-
-## 43. Hollowflux
-
-![Hollowflux top-down 2D character beside luminous blue water and stone ruins.](media/hollowflux.webp)
-
-Credit: Thomas Ricouard / OpenAI
-
-Rights expression: **LicenseRef-OpenAI-Official-Image-Rights-Unresolved**. [rights evidence](https://developers.openai.com/blog/how-to-build-games-with-astra).
-
-Allowed use: User-directed local HeadStart catalog identification and display of this exact official OpenAI gameplay image only. This record grants no public redistribution, source extraction, game-asset reuse, endorsement or broader license rights.
-
-[Exact rights/provenance evidence](https://developers.openai.com/blog/how-to-build-games-with-astra) · [Original image](https://cdn.openai.com/devhub/blog/how-to-build-games/hollowflux-water-15cd30282861.webp) · [Project reference](https://developers.openai.com/showcase/hollowflux)
-
-Capture date: 2026-09-04 (source_declared). Uploaded: unknown. Downloaded: 2026-09-10T21:30:00Z.
-
-Official article gameplay image for the named showcase. No public source commit or exact build revision is available, and this is not a HeadStart playthrough or integration attestation. Official OpenAI author-article gameplay image. User directed its use in the local HeadStart dashboard. No separate image reuse license was found; public redistribution, model training and in-game asset reuse remain unresolved.
-
-Changes: Original CDN bytes retained unchanged; browser display and contact sheet may scale without cropping.
-
-SHA256: `15cd30282861fa4e2dff59bed31132663e11b6e98ce453289f0496f3733abc69`. Dimensions: 1600 × 900.

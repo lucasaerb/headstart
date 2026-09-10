@@ -1,0 +1,19 @@
+{
+  "reviewer": "/root/plugin_reviewer",
+  "reviewed_at": "2026-09-10T20:40:53.283638+00:00",
+  "files": {
+    "tools/bag-prompt/gauntlet-prompt.js": "7cf9c73ce00f4a31d966e0bad903ec7fb557130b1ed3b039012025dfee034144",
+    "tools/bag-prompt/test_gauntlet_prompt.js": "074f66ffcd4d56a915400479f7beef85a63c1db85b825d791273b84c001469e8",
+    "HeadStart-Starter-Package/site/dist/gauntlet-prompt.js": "7cf9c73ce00f4a31d966e0bad903ec7fb557130b1ed3b039012025dfee034144",
+    "HeadStart-Starter-Package/site/dist/app.js": "7d62b30c752d6edc8e8594b3f41b245821d5d31de3a1d712040f913b800e2748",
+    "HeadStart-Starter-Package/site/dist/index.html": "e0d4b9a220b227fe6a5287dd780d5402b3c15879b48b003d1eb7ae6c86a93339",
+    "HeadStart-Starter-Package/site/dist/styles.css": "89d05dd32e496079682684fc9f651ff7ab1c69ba11fec8fc1542cb949177ff94",
+    "HeadStart-Starter-Package/site/dist/catalog.js": "a7a49e64fc91e602022048180d598e1a84ee096fa045c9cc8f52063b68770326"
+  },
+  "download": {
+    "filename": "headstart-gauntlet-loop.md",
+    "type": "text/markdown;charset=utf-8",
+    "matches_rendered_preview": true,
+    "sha256": "126139586bdef9c28f1aee6f1f16716737ab5606c05b8e4fe77eec21652b4048"
+  }
+}

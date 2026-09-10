@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Independent approval for exactly the 29 authentic media rows reviewed for narrow local HeadStart catalog display; broader image, source and asset rights remain unresolved where stated.",
+  "records": [
+    {
+      "record_id": "3d-city",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "astra-apex-club",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "astra-melon-lab",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "astra-mosswing",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "astra-sunjing-puzzles",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "astra-three-kingdoms",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "browserquest",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "clumsy-bird",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "drei",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "dwellcraft",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "fable5-real-physics-engine",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "freeciv",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "freecol",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "godot-astar-grid-2d",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "godot-platformer-2d",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "godot-platformer-3d",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "godot-truck-town",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "hextris",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "littlejs",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "magic-carpet-wizard",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "openai-sites-hollowflux",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "openai-sites-sunwake",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "openai-sites-void-explorer",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "openra",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "openrct2",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "react-three-rapier",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "three-mesh-bvh",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "threejs",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    },
+    {
+      "record_id": "unciv",
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-10T20:55:48Z",
+      "verdict": "PASS: exact authentic source bytes, record identity, narrow local catalog display, credit, and unresolved broader-rights limits independently reviewed"
+    }
+  ]
+}

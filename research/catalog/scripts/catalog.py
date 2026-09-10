@@ -275,6 +275,7 @@ def validate(records, media, root=ROOT):
         enum(item["rights_status"], {
             "reviewed_for_catalog_display",
             "official_source_local_display_rights_unresolved",
+            "candidate_local_display_pending_independent_review",
         }, "media.rights_status")
         rel = item["local_path"]
         if not safe_path(rel) or not (root / rel).resolve().is_relative_to(root.resolve()):
@@ -402,7 +403,10 @@ def build(root=ROOT):
              "| --- | --- | --- | --- | --- | --- |"]
     for row in records:
         demo = f" · [destination]({row['demo']['url']}) ({row['demo']['kind']})" if row["demo"]["url"] else " · no demo established"
-        lines.append(f"| {md(row['title'])} | {row['content_kind']} / {md(row['runtime']['name'])} | {md(', '.join(row['genres']))} | {md(', '.join(b['name'] for b in row['building_blocks']))} | [repo]({row['repo_url']}){demo} | {md(ai_provenance(row)['status'])}: {md(', '.join(ai_provenance(row)['models']) or 'unknown')} |")
+        has_source = bool(row["source"]["commit"])
+        source_label = "repository" if has_source else "official project (no public source linked)"
+        source_url = row["repo_url"] if has_source else row["project_url"]
+        lines.append(f"| {md(row['title'])} | {row['content_kind']} / {md(row['runtime']['name'])} | {md(', '.join(row['genres']))} | {md(', '.join(b['name'] for b in row['building_blocks']))} | [{source_label}]({source_url}){demo} | {md(ai_provenance(row)['status'])}: {md(', '.join(ai_provenance(row)['models']) or 'unknown')} |")
     (root / "INDEX.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     coverage = {"records": len(records), "building_blocks": sum(len(r["building_blocks"]) for r in records),
                 "media": len(media), "pinned_source_records": sum(bool(r["source"]["commit"]) for r in records)}
