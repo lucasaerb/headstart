@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-09-10T17:34:07Z",
+  "method": "Python urllib HTTPS GET; response status/reachable only, not browser play",
+  "https_equivalents": [
+    {
+      "original": "http://adarkroom.doublespeakgames.com",
+      "https": "https://adarkroom.doublespeakgames.com",
+      "status": 200
+    },
+    {
+      "original": "http://ellisonleao.github.io/clumsy-bird/",
+      "https": "https://ellisonleao.github.io/clumsy-bird/",
+      "status": 200
+    },
+    {
+      "original": "http://hexgl.bkcore.com",
+      "https": "https://hexgl.bkcore.com",
+      "status": 200
+    },
+    {
+      "original": "http://i.imgur.com/Slbvt65.png",
+      "https": "https://i.imgur.com/Slbvt65.png",
+      "status": 200
+    },
+    {
+      "original": "http://lo-th.github.io/3d.city/index.html",
+      "https": "https://lo-th.github.io/3d.city/index.html",
+      "status": 200
+    }
+  ],
+  "unavailable": [
+    {
+      "original": "http://browserquest.mozilla.org/",
+      "attempted": "https://browserquest.mozilla.org/",
+      "result": "DNS resolution failed"
+    }
+  ]
+}

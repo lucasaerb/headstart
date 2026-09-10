@@ -30,6 +30,8 @@ HeadStart is a naming candidate, not a finalized or cleared brand. Playparts is 
 
 The central journey is: **describe a game → discover projects and capabilities → play a demo → inspect source, fit, and rights → use the plugin → inspect the local target → plan and apply authorized integration → validate and preserve credits**. Portable Markdown/JSON handoffs are an interoperability fallback. The plugin and a real read-only catalog connection are required MVP deliverables.
 
+The user requires verified-email identity before platform-controlled code downloads, source exports, or reuse handoffs. Browsing, search, metadata, external demos, public upstream source links, and anonymous local collections remain open. Enforce the protected-action boundary on the server and in equivalent MCP operations; no client-only gate or anonymous portable-export bypass. Preserve the selected bag/intent through verification. This does not restrict public upstream repositories, authorize local edits, or imply marketing consent. P0 issue #27 precedes the handoff implementation; localhost verification can use a development email-preview adapter.
+
 Start assisted integration with Three.js and React Three Fiber. Phaser, Godot, and Unity can appear in discovery with explicit support limits; cross-engine integration requires its own adapters and tests. Blender is an asset-authoring workflow, separate from runtime compatibility.
 
 Preserve these emphases from the planning conversation:
@@ -69,7 +71,7 @@ The PRD proposes a modular web application, Postgres metadata with lexical/trigr
 
 The user is developing new mockups, and all current mockups and preferred explorations remain provisional until they select a design baseline for implementation. Follow `docs/design-direction.md`. Do not lock implementation or review criteria to the older palette, typography, navigation, or layout. Keep presentation adaptable through design tokens and reusable components; preserve product behavior, evidence accuracy, accessibility, and responsive support. Research, backend, and local functionality can proceed while styling remains explicitly provisional. Final visual acceptance must reference the selected mockup path/version and desktop/mobile evidence; an unresolved design selection leaves the visual acceptance item open rather than blocking unrelated work.
 
-Allow browsing, demo launch, and source viewing without login. Prefer external demos; embedded untrusted games require a separate origin and restrictive sandbox. Load one demo after a user gesture, provide exit/fallback controls, and keep game loading separate from the catalog shell.
+Allow browsing, demo launch, and public upstream source links without login; platform-controlled source-content delivery requires the verified-email gate above. Prefer external demos; embedded untrusted games require a separate origin and restrictive sandbox. Load one demo after a user gesture, provide exit/fallback controls, and keep game loading separate from the catalog shell.
 
 Generated game artwork is illustrative, not a screenshot of its named repository. Coastal Rally, verification badges, change counts, and provenance relationships in the mockups are fixtures. Show installation only after client acknowledgment and integration only after a validated result. Never replace unavailable services with simulated success.
 

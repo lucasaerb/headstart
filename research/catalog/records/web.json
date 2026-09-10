@@ -1,0 +1,3014 @@
+[
+  {
+    "id": "pmndrs-racing-game",
+    "title": "Poimandres Racing Game",
+    "repo_url": "https://github.com/pmndrs/racing-game",
+    "project_url": "https://racing.pmnd.rs/",
+    "creator": "pmndrs and contributors",
+    "summary": "A community-built browser racer with a component-based vehicle, track and race interface.",
+    "subproject_path": "",
+    "content_kind": "game",
+    "genres": [
+      "racing",
+      "arcade"
+    ],
+    "capability_tags": [
+      "vehicle-controller",
+      "camera"
+    ],
+    "visual_style": [
+      "low-poly",
+      "stylized"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "chase",
+      "top-down"
+    ],
+    "runtime": {
+      "name": "React Three Fiber / Three.js",
+      "language": "TypeScript",
+      "version": "Three.js ^0.139.0; R3F ^8.0.12",
+      "version_status": "inspected"
+    },
+    "physics": [
+      "Cannon"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "keyboard"
+    ],
+    "authoring_tools": [
+      "Blender"
+    ],
+    "demo": {
+      "url": "https://racing.pmnd.rs/",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "7816a5d954b75e6ad853ae4e4f0cbbd628072643",
+      "provider_id": 372334925,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/pmndrs/racing-game/tree/7816a5d954b75e6ad853ae4e4f0cbbd628072643",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/LICENSE.md",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/src/models/vehicle/Vehicle.tsx",
+          "claim": "Raycast vehicle entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/src/effects/Cameras.tsx",
+          "claim": "Camera mode switching entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/LICENSE.md",
+      "asset_status": "unreviewed",
+      "asset_notes": "README asserts CC0 assets only; individual models, sounds, fonts and preview rights still require scope review.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Raycast vehicle",
+        "category": "vehicle-controller",
+        "evidence_url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/src/models/vehicle/Vehicle.tsx",
+        "source_path": "src/models/vehicle/Vehicle.tsx",
+        "status": "source_inspected",
+        "notes": "Uses useRaycastVehicle, chassis and wheels; tightly coupled to the global store, effects and Cannon world."
+      },
+      {
+        "name": "Camera mode switching",
+        "category": "camera",
+        "evidence_url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/src/effects/Cameras.tsx",
+        "source_path": "src/effects/Cameras.tsx",
+        "status": "source_inspected",
+        "notes": "Switches perspective and orthographic cameras from shared store state; preserve target camera ownership."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://raw.githubusercontent.com/pmndrs/racing-game/7816a5d954b75e6ad853ae4e4f0cbbd628072643/thumbnail.webp",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "User-requested research lead.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort.",
+        "Older React 18/R3F 8/Cannon stack differs from current Ecctrl React 19/R3F 9/Rapier; no direct mashup compatibility is claimed."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  },
+  {
+    "id": "ecctrl",
+    "title": "Ecctrl",
+    "repo_url": "https://github.com/pmndrs/ecctrl",
+    "project_url": "https://ecctrl.app/",
+    "creator": "Erdong Chen and contributors",
+    "summary": "A modular physics controller toolkit spanning characters, vehicles, custom gravity and touch input.",
+    "subproject_path": "",
+    "content_kind": "toolkit",
+    "genres": [
+      "action",
+      "racing",
+      "exploration"
+    ],
+    "capability_tags": [
+      "character-controller",
+      "vehicle-controller",
+      "input"
+    ],
+    "visual_style": [
+      "configurable"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "third-person"
+    ],
+    "runtime": {
+      "name": "React Three Fiber / Rapier",
+      "language": "TypeScript",
+      "version": "Ecctrl 2.0.2; R3F >=9.4; Three.js >=0.184.0",
+      "version_status": "inspected"
+    },
+    "physics": [
+      "Rapier"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "keyboard",
+      "touch"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://ecctrl.app/",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "e2cab804f9f15661a642e76f52d09f0b2db63f35",
+      "provider_id": 692895155,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/pmndrs/ecctrl/tree/e2cab804f9f15661a642e76f52d09f0b2db63f35",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/readme.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/src/character/Ecctrl.tsx",
+          "claim": "ShapeCast character controller entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/src/vehicles/EcctrlVehicle.tsx",
+          "claim": "Vehicle controller entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/src/input/Joystick.tsx",
+          "claim": "Virtual joystick entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Demo montage and bundled model/audio rights not cleared by this inspection.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "ShapeCast character controller",
+        "category": "character-controller",
+        "evidence_url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/src/character/Ecctrl.tsx",
+        "source_path": "src/character/Ecctrl.tsx",
+        "status": "source_inspected",
+        "notes": "Movement and gravity state feed a Rapier rigid body. Requires compatible R3F/Rapier ownership and controller adaptation."
+      },
+      {
+        "name": "Vehicle controller",
+        "category": "vehicle-controller",
+        "evidence_url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/src/vehicles/EcctrlVehicle.tsx",
+        "source_path": "src/vehicles/EcctrlVehicle.tsx",
+        "status": "source_inspected",
+        "notes": "Gear ratios, torque curves and wheel state are implemented; wheel/propeller helpers and gravity stores remain dependencies."
+      },
+      {
+        "name": "Virtual joystick",
+        "category": "input",
+        "evidence_url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/src/input/Joystick.tsx",
+        "source_path": "src/input/Joystick.tsx",
+        "status": "source_inspected",
+        "notes": "Pointer tracking writes normalized joystick state; DOM layout and touch accessibility need target review."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://raw.githubusercontent.com/pmndrs/ecctrl/e2cab804f9f15661a642e76f52d09f0b2db63f35/docs/images/ecctrl-hero.gif",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "User-requested research lead.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  },
+  {
+    "id": "dungeon-forge",
+    "title": "Dungeon Forge",
+    "repo_url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon",
+    "project_url": "https://procedural-dungeon.netlify.app",
+    "creator": "majidmanzarpour and contributors",
+    "summary": "A dungeon generation showcase that exposes seeded room layouts, connectivity and themed decoration.",
+    "subproject_path": "",
+    "content_kind": "demo",
+    "genres": [
+      "dungeon",
+      "procedural-generation"
+    ],
+    "capability_tags": [
+      "procedural-generation",
+      "world-building"
+    ],
+    "visual_style": [
+      "procedural",
+      "stylized",
+      "themed"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "top-down",
+      "orbit"
+    ],
+    "runtime": {
+      "name": "Three.js",
+      "language": "JavaScript",
+      "version": "^0.185.0",
+      "version_status": "inspected"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "mouse"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://procedural-dungeon.netlify.app",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "0a2aa0980028cbbc77af6642b4232b45713dc5de",
+      "provider_id": 1290344168,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/tree/0a2aa0980028cbbc77af6642b4232b45713dc5de",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/src/main.js",
+          "claim": "Seeded dungeon layout entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/src/main.js",
+          "claim": "Room semantics and decoration entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "README says geometry/textures are generated in browser. Preview redistribution and transitive dependencies need review.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Seeded dungeon layout",
+        "category": "procedural-generation",
+        "evidence_url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/src/main.js",
+        "source_path": "src/main.js",
+        "status": "source_inspected",
+        "notes": "Inspected mulberry32, Delaunay and graph-generation entry points. Shared RNG and rendering live in one large module; extraction and determinism remain untested."
+      },
+      {
+        "name": "Room semantics and decoration",
+        "category": "world-building",
+        "evidence_url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/src/main.js",
+        "source_path": "src/main.js",
+        "status": "source_inspected",
+        "notes": "Room type constants and theme tables support encounter/decor roles; this is generation logic, not a complete combat game."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://raw.githubusercontent.com/majidmanzarpour/threejs-procedural-dungeon/0a2aa0980028cbbc77af6642b4232b45713dc5de/docs/preview.jpg",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "User-requested research lead.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort.",
+        "Source header still mentions r128; inspected package and README describe migration to ^0.185.0. Runtime behavior untested."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  },
+  {
+    "id": "3d-city",
+    "title": "3d.city",
+    "repo_url": "https://github.com/lo-th/3d.city",
+    "project_url": "https://lo-th.github.io/3d.city/index.html",
+    "creator": "lo-th and contributors",
+    "summary": "A browser city builder combining a Three.js city view with a worker-based Micropolis-derived simulation.",
+    "subproject_path": "",
+    "content_kind": "game",
+    "genres": [
+      "city-builder",
+      "simulation",
+      "management"
+    ],
+    "capability_tags": [
+      "simulation-clock",
+      "economy"
+    ],
+    "visual_style": [
+      "low-poly",
+      "urban"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "isometric",
+      "orbit"
+    ],
+    "runtime": {
+      "name": "Three.js / micropolisJS",
+      "language": "JavaScript",
+      "version": null,
+      "version_status": "unknown"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "mouse"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://lo-th.github.io/3d.city/index.html",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "60fc6de2451ac6cf4df211a7cdae6c55c97e73c7",
+      "provider_id": 20582326,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/lo-th/3d.city/tree/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/src/micro/Simulation.js",
+          "claim": "City simulation scheduling entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/src/micro/game/Budget.js",
+          "claim": "Municipal budget entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Textures and models need attribution review; code rights conflict must be resolved before extraction.",
+      "scope_reuse_status": "review_required",
+      "notes": "README claims MIT, while LICENSE/COPYING and inspected simulation/budget headers specify GPLv3 plus additional terms. Conflicting project-level claim; do not classify the whole project as MIT."
+    },
+    "building_blocks": [
+      {
+        "name": "City simulation scheduling",
+        "category": "simulation-clock",
+        "evidence_url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/src/micro/Simulation.js",
+        "source_path": "src/micro/Simulation.js",
+        "status": "source_inspected",
+        "notes": "Simulation aggregates map scanning, zones and services; depends on the Micropolis model and worker boundary."
+      },
+      {
+        "name": "Municipal budget",
+        "category": "economy",
+        "evidence_url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/src/micro/game/Budget.js",
+        "source_path": "src/micro/game/Budget.js",
+        "status": "source_inspected",
+        "notes": "Funds, tax and service spending appear in the budget class; coupled to Micro constants and messages."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://raw.githubusercontent.com/lo-th/3d.city/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/assets/img/preview01.jpg",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "User-requested research lead.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  },
+  {
+    "id": "slimcity",
+    "title": "SlimCity",
+    "repo_url": "https://github.com/rbenzing/SlimCityGame",
+    "project_url": "https://slimcity.netlify.app/",
+    "creator": "rbenzing and contributors",
+    "summary": "A compact city simulation with separate economic, road-network and rendering modules.",
+    "subproject_path": "",
+    "content_kind": "game",
+    "genres": [
+      "city-builder",
+      "simulation",
+      "management"
+    ],
+    "capability_tags": [
+      "economy",
+      "pathfinding"
+    ],
+    "visual_style": [
+      "stylized",
+      "urban"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "isometric",
+      "orbit"
+    ],
+    "runtime": {
+      "name": "Three.js",
+      "language": "TypeScript",
+      "version": "^0.185.1",
+      "version_status": "inspected"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "mouse",
+      "keyboard"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://slimcity.netlify.app/",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "73e065226b8134cf44901a641076aeed3281f9f1",
+      "provider_id": 1315174763,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/rbenzing/SlimCityGame/tree/73e065226b8134cf44901a641076aeed3281f9f1",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/src/sim/economy.ts",
+          "claim": "Economy and progression entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/src/world/pathfind.ts",
+          "claim": "Congestion-aware routing entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "AGPL-3.0-or-later",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Root AGPL license and README reviewed; procedural outputs, bundled audio and screenshot scope remain unreviewed.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Economy and progression",
+        "category": "economy",
+        "evidence_url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/src/sim/economy.ts",
+        "source_path": "src/sim/economy.ts",
+        "status": "source_inspected",
+        "notes": "Tax settlement, upkeep, loans and milestones are implemented against shared city/grid contracts."
+      },
+      {
+        "name": "Congestion-aware routing",
+        "category": "pathfinding",
+        "evidence_url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/src/world/pathfind.ts",
+        "source_path": "src/world/pathfind.ts",
+        "status": "source_inspected",
+        "notes": "Road graph routing uses directional capacity and junction delays; shared road profiles must accompany adaptation."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://raw.githubusercontent.com/rbenzing/SlimCityGame/73e065226b8134cf44901a641076aeed3281f9f1/screenshots/screenshot-01.png",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "User-requested research lead.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  },
+  {
+    "id": "fable-cities",
+    "title": "Fable Cities",
+    "repo_url": "https://github.com/rawprogress/fable-cities",
+    "project_url": "https://fablecities.rawscollections.com",
+    "creator": "rawprogress and contributors",
+    "summary": "A city-builder project with inspectable road, environment and simulation modules and a linked browser build.",
+    "subproject_path": "",
+    "content_kind": "game",
+    "genres": [
+      "city-builder",
+      "simulation",
+      "management"
+    ],
+    "capability_tags": [
+      "simulation-clock",
+      "construction"
+    ],
+    "visual_style": [
+      "urban",
+      "procedural"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "orbit",
+      "street-level"
+    ],
+    "runtime": {
+      "name": "Three.js",
+      "language": "JavaScript",
+      "version": "^0.185.1",
+      "version_status": "inspected"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "mouse",
+      "keyboard"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://fablecities.rawscollections.com",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "aea8b1035030952555395de0c1de14ba693a1427",
+      "provider_id": 1354628751,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/rawprogress/fable-cities/tree/aea8b1035030952555395de0c1de14ba693a1427",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/src/modules/simulation/clock.js",
+          "claim": "Simulation clock entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/src/modules/roads/RoadNetwork.js",
+          "claim": "Editable road graph entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/public/assets/CREDITS.md",
+          "claim": "Maintainer asset/library notices inspected; upstream asset grants not independently verified.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/THIRD-PARTY-NOTICES.md",
+          "claim": "Maintainer asset/library notices inspected; upstream asset grants not independently verified.",
+          "kind": "license"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/LICENSE",
+      "asset_status": "mixed",
+      "asset_notes": "LICENSE explicitly covers source code only. CC0 claims in public/assets/CREDITS.md apply to listed assets, not automatically to assets/hero.jpg or other promotional images.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Simulation clock",
+        "category": "simulation-clock",
+        "evidence_url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/src/modules/simulation/clock.js",
+        "source_path": "src/modules/simulation/clock.js",
+        "status": "source_inspected",
+        "notes": "Speed steps, calendar changes and pending minute ticks are implemented against world.time and events."
+      },
+      {
+        "name": "Editable road graph",
+        "category": "construction",
+        "evidence_url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/src/modules/roads/RoadNetwork.js",
+        "source_path": "src/modules/roads/RoadNetwork.js",
+        "status": "source_inspected",
+        "notes": "Road nodes and segments support topology changes and terrain profiles; curve/road configuration dependencies need extraction review."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://raw.githubusercontent.com/rawprogress/fable-cities/aea8b1035030952555395de0c1de14ba693a1427/assets/hero.jpg",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "User-requested research lead.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort.",
+        "Repository metadata description says source will ship later, but pinned tree contains the inspected code. Completeness versus the hosted demo is not established."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  },
+  {
+    "id": "gather-it",
+    "title": "Gather It",
+    "repo_url": "https://github.com/tweeres04/gather-it",
+    "project_url": "https://github.com/tweeres04/gather-it",
+    "creator": "tweeres04 and contributors",
+    "summary": "A small Unity resource-collection game organized around autonomous workers and purchasable upgrades.",
+    "subproject_path": "",
+    "content_kind": "game",
+    "genres": [
+      "resource-management",
+      "automation",
+      "simulation"
+    ],
+    "capability_tags": [
+      "autonomous-workers",
+      "economy"
+    ],
+    "visual_style": [
+      "minimal",
+      "stylized"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "top-down"
+    ],
+    "runtime": {
+      "name": "Unity",
+      "language": "C#",
+      "version": "2020.2.3f1",
+      "version_status": "inspected"
+    },
+    "physics": [
+      "Unity"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "mouse"
+    ],
+    "authoring_tools": [
+      "Unity Editor"
+    ],
+    "demo": {
+      "url": "https://tweeres04.github.io/gather-it/",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "8c74a133c9a2cb98a4bfb53eacafe751a0453286",
+      "provider_id": 334055413,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/tweeres04/gather-it/tree/8c74a133c9a2cb98a4bfb53eacafe751a0453286",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/tweeres04/gather-it/blob/8c74a133c9a2cb98a4bfb53eacafe751a0453286/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/tweeres04/gather-it/blob/8c74a133c9a2cb98a4bfb53eacafe751a0453286/Assets/Worker.cs",
+          "claim": "Worker resource loop entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/tweeres04/gather-it/blob/8c74a133c9a2cb98a4bfb53eacafe751a0453286/Assets/Shop.cs",
+          "claim": "Shop and base placement entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/tweeres04/gather-it/blob/8c74a133c9a2cb98a4bfb53eacafe751a0453286/ProjectSettings/ProjectVersion.txt",
+          "claim": "Unity editor version inspected.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": null,
+      "asset_status": "unreviewed",
+      "asset_notes": "No root code license was found in the pinned repository tree; source visibility does not grant extraction permission.",
+      "scope_reuse_status": "review_required",
+      "notes": "Pinned tree has no discovered root LICENSE/COPYING. Do not extract source without resolved permission."
+    },
+    "building_blocks": [
+      {
+        "name": "Worker resource loop",
+        "category": "autonomous-workers",
+        "evidence_url": "https://github.com/tweeres04/gather-it/blob/8c74a133c9a2cb98a4bfb53eacafe751a0453286/Assets/Worker.cs",
+        "source_path": "Assets/Worker.cs",
+        "status": "source_inspected",
+        "notes": "Idle, travel, gather and deliver states are explicit; depends on Unity scene tags, transforms and resource objects."
+      },
+      {
+        "name": "Shop and base placement",
+        "category": "economy",
+        "evidence_url": "https://github.com/tweeres04/gather-it/blob/8c74a133c9a2cb98a4bfb53eacafe751a0453286/Assets/Shop.cs",
+        "source_path": "Assets/Shop.cs",
+        "status": "source_inspected",
+        "notes": "Worker/base prices, prefabs and placement state are present; scene and input coupling preclude direct Three.js reuse."
+      }
+    ],
+    "preview": {
+      "status": "missing",
+      "source_url": null,
+      "notes": "No appropriate preview indexed in this pass; no generated artwork substituted."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "User-requested research lead.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "reference-only"
+    }
+  },
+  {
+    "id": "hextris",
+    "title": "Hextris",
+    "repo_url": "https://github.com/Hextris/hextris",
+    "project_url": "https://hextris.io",
+    "creator": "Logan Engstrom, Garrett Finucane, Noah Moroze, Michael Yang and contributors",
+    "summary": "A rotating-hexagon puzzle game with adjacent-color matching and escalating block waves.",
+    "subproject_path": "",
+    "content_kind": "game",
+    "genres": [
+      "puzzle",
+      "arcade"
+    ],
+    "capability_tags": [
+      "puzzle-rules",
+      "spawn-system"
+    ],
+    "visual_style": [
+      "geometric",
+      "flat-color"
+    ],
+    "dimension": "2d",
+    "camera": [
+      "fixed"
+    ],
+    "runtime": {
+      "name": "HTML5 Canvas",
+      "language": "JavaScript",
+      "version": null,
+      "version_status": "unknown"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "keyboard",
+      "touch"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://hextris.github.io/hextris",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "3f4847dc8fd7dab3d1c87e6324b9159d92fbd396",
+      "provider_id": 19886948,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/Hextris/hextris/tree/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/LICENSE.md",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/js/checking.js",
+          "claim": "Adjacent-color matching entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/js/wavegen.js",
+          "claim": "Wave difficulty progression entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "GPL-3.0-or-later",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/LICENSE.md",
+      "asset_status": "unreviewed",
+      "asset_notes": "Fonts, sounds and image rights not independently cleared; GPL README and license inspected.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Adjacent-color matching",
+        "category": "puzzle-rules",
+        "evidence_url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/js/checking.js",
+        "source_path": "js/checking.js",
+        "status": "source_inspected",
+        "notes": "Flood-fill and consolidation inspect neighbor blocks around hexagonal sides; depends on Hex block layout and global settings."
+      },
+      {
+        "name": "Wave difficulty progression",
+        "category": "spawn-system",
+        "evidence_url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/js/wavegen.js",
+        "source_path": "js/wavegen.js",
+        "status": "source_inspected",
+        "notes": "Spawn intervals and difficulty change after block destruction; global game clock/settings require an adapter."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://raw.githubusercontent.com/Hextris/hextris/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/twitter-opengraph.png",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across puzzle, arcade and reusable puzzle-rules, spawn-system.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "other-web-candidate"
+    }
+  },
+  {
+    "id": "2048",
+    "title": "2048",
+    "repo_url": "https://github.com/gabrielecirulli/2048",
+    "project_url": "https://play2048.co",
+    "creator": "Gabriele Cirulli and contributors",
+    "summary": "A compact sliding-tile puzzle whose input, board rules, presentation and persistence have separate modules.",
+    "subproject_path": "",
+    "content_kind": "game",
+    "genres": [
+      "puzzle",
+      "turn-based"
+    ],
+    "capability_tags": [
+      "puzzle-rules",
+      "persistence"
+    ],
+    "visual_style": [
+      "minimal",
+      "flat-color"
+    ],
+    "dimension": "2d",
+    "camera": [
+      "fixed"
+    ],
+    "runtime": {
+      "name": "HTML / CSS / JavaScript",
+      "language": "JavaScript",
+      "version": null,
+      "version_status": "unknown"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "keyboard",
+      "touch"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://play2048.co",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "478b6ec346e3787f589e4af751378d06ded4cbbc",
+      "provider_id": 17446152,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/gabrielecirulli/2048/tree/478b6ec346e3787f589e4af751378d06ded4cbbc",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/LICENSE.txt",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/js/game_manager.js",
+          "claim": "Tile merge and move rules entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/js/local_storage_manager.js",
+          "claim": "Local save storage entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/LICENSE.txt",
+      "asset_status": "unreviewed",
+      "asset_notes": "Font files and external screenshot ownership need separate review. Credit inspirations without treating them as imported code.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Tile merge and move rules",
+        "category": "puzzle-rules",
+        "evidence_url": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/js/game_manager.js",
+        "source_path": "js/game_manager.js",
+        "status": "source_inspected",
+        "notes": "Moves traverse the grid, merge compatible tiles and check available moves; depends on Grid/Tile and injected actuator/input/storage."
+      },
+      {
+        "name": "Local save storage",
+        "category": "persistence",
+        "evidence_url": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/js/local_storage_manager.js",
+        "source_path": "js/local_storage_manager.js",
+        "status": "source_inspected",
+        "notes": "Best score and board state use localStorage with a fallback store; storage keys and serialized schema need adaptation."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://cloud.githubusercontent.com/assets/1175750/8614312/280e5dc2-26f1-11e5-9f1f-5891c3ca8b26.png",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across puzzle, turn-based and reusable puzzle-rules, persistence.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "other-web-candidate"
+    }
+  },
+  {
+    "id": "clumsy-bird",
+    "title": "Clumsy Bird",
+    "repo_url": "https://github.com/ellisonleao/clumsy-bird",
+    "project_url": "https://ellisonleao.github.io/clumsy-bird/",
+    "creator": "ellisonleao and contributors",
+    "summary": "A melonJS bird-and-obstacle arcade example with explicit play-screen setup and entity collision behavior.",
+    "subproject_path": "",
+    "content_kind": "game",
+    "genres": [
+      "arcade",
+      "endless-runner"
+    ],
+    "capability_tags": [
+      "character-controller",
+      "game-state"
+    ],
+    "visual_style": [
+      "pixel-art"
+    ],
+    "dimension": "2d",
+    "camera": [
+      "side-view"
+    ],
+    "runtime": {
+      "name": "melonJS",
+      "language": "JavaScript",
+      "version": null,
+      "version_status": "unknown"
+    },
+    "physics": [
+      "melonJS"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "keyboard"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://ellisonleao.github.io/clumsy-bird/",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "fae3d487d5102af29fb3f78431cbd45e9b83aed3",
+      "provider_id": 16525746,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/ellisonleao/clumsy-bird/tree/fae3d487d5102af29fb3f78431cbd45e9b83aed3",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/LICENSE.md",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/js/entities/entities.js",
+          "claim": "Flap movement and obstacle entities entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/js/screens/play.js",
+          "claim": "Play-screen lifecycle entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/package.json",
+          "claim": "Package licenses array says MIT while root LICENSE.md says GPL-3.0; contradictory declarations block resolved code classification.",
+          "kind": "license"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": null,
+      "code_status": "unresolved",
+      "code_evidence_url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/LICENSE.md",
+      "asset_status": "unreviewed",
+      "asset_notes": "Bird imagery and audio require separate origin/permission checks; do not infer original-game art permission from this repository license.",
+      "scope_reuse_status": "review_required",
+      "notes": "Inspected package.json declares MIT and links LICENSE, but the actual root LICENSE.md is GPL-3.0. These declarations conflict; resolve selected-file rights before extraction or labeling the whole project GPL/MIT."
+    },
+    "building_blocks": [
+      {
+        "name": "Flap movement and obstacle entities",
+        "category": "character-controller",
+        "evidence_url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/js/entities/entities.js",
+        "source_path": "js/entities/entities.js",
+        "status": "source_inspected",
+        "notes": "Bird animation, gravity and collision callbacks are present; art and melonJS lifecycle are coupled."
+      },
+      {
+        "name": "Play-screen lifecycle",
+        "category": "game-state",
+        "evidence_url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/js/screens/play.js",
+        "source_path": "js/screens/play.js",
+        "status": "source_inspected",
+        "notes": "Resets score, binds the flap action and creates scene objects; source uses legacy melonJS APIs."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://i.imgur.com/Slbvt65.png",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across arcade, endless-runner and reusable character-controller, game-state.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "other-web-candidate"
+    }
+  },
+  {
+    "id": "hexgl",
+    "title": "HexGL",
+    "repo_url": "https://github.com/BKcore/HexGL",
+    "project_url": "https://hexgl.bkcore.com",
+    "creator": "Thibaut Despoulain and contributors",
+    "summary": "A futuristic browser racer with hovercraft-style movement and recorded race-state playback.",
+    "subproject_path": "",
+    "content_kind": "game",
+    "genres": [
+      "racing",
+      "arcade"
+    ],
+    "capability_tags": [
+      "vehicle-controller",
+      "replay"
+    ],
+    "visual_style": [
+      "futuristic",
+      "neon"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "chase"
+    ],
+    "runtime": {
+      "name": "Three.js",
+      "language": "JavaScript",
+      "version": null,
+      "version_status": "unknown"
+    },
+    "physics": [
+      "custom vehicle dynamics"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "keyboard"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://hexgl.bkcore.com",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "6addc95a2fce3bf05f4d751823cc054c61a16d68",
+      "provider_id": 6090347,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/BKcore/HexGL/tree/6addc95a2fce3bf05f4d751823cc054c61a16d68",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/bkcore/hexgl/ShipControls.js",
+          "claim": "Hover-racer movement entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/bkcore/hexgl/RaceData.js",
+          "claim": "Race recording and interpolation entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT with per-file exceptions",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/LICENSE",
+      "asset_status": "mixed",
+      "asset_notes": "README expressly preserves file-specific licenses. Selected movement/replay files are marked CC-BY-NC-3.0, so do not present them as permissive commercial building blocks. Assets also need per-file review.",
+      "scope_reuse_status": "review_required",
+      "notes": "README says MIT unless a file specifies otherwise. Inspected ShipControls.js and RaceData.js explicitly specify CC-BY-NC-3.0; those exceptions govern the suggested scope pending rights review."
+    },
+    "building_blocks": [
+      {
+        "name": "Hover-racer movement",
+        "category": "vehicle-controller",
+        "evidence_url": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/bkcore/hexgl/ShipControls.js",
+        "source_path": "bkcore/hexgl/ShipControls.js",
+        "status": "source_inspected",
+        "notes": "Thrust, boost, collision and height checks are present; this exact file retains a CC-BY-NC-3.0 header."
+      },
+      {
+        "name": "Race recording and interpolation",
+        "category": "replay",
+        "evidence_url": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/bkcore/hexgl/RaceData.js",
+        "source_path": "bkcore/hexgl/RaceData.js",
+        "status": "source_inspected",
+        "notes": "Samples position/rotation and supports interpolated playback/import/export; this exact file retains a CC-BY-NC-3.0 header."
+      }
+    ],
+    "preview": {
+      "status": "missing",
+      "source_url": null,
+      "notes": "No appropriate preview indexed in this pass; no generated artwork substituted."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across racing, arcade and reusable vehicle-controller, replay.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "reference-only"
+    }
+  },
+  {
+    "id": "browserquest",
+    "title": "BrowserQuest",
+    "repo_url": "https://github.com/mozilla/BrowserQuest",
+    "project_url": "https://github.com/mozilla/BrowserQuest",
+    "creator": "Little Workshop (Franck and Guillaume Lecollinet), Mozilla and contributors",
+    "summary": "An archived multiplayer RPG experiment useful for studying client navigation and server world replication.",
+    "subproject_path": "",
+    "content_kind": "game",
+    "genres": [
+      "action-rpg",
+      "multiplayer"
+    ],
+    "capability_tags": [
+      "pathfinding",
+      "networking"
+    ],
+    "visual_style": [
+      "pixel-art",
+      "fantasy"
+    ],
+    "dimension": "2d",
+    "camera": [
+      "top-down"
+    ],
+    "runtime": {
+      "name": "HTML5 Canvas / Node.js",
+      "language": "JavaScript",
+      "version": null,
+      "version_status": "unknown"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "mouse"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": null,
+      "kind": "none",
+      "source_relation": "unknown",
+      "interactive_status": "not_tested",
+      "notes": "Maintainer repository homepage historically linked http://browserquest.mozilla.org/. HTTPS equivalent failed DNS resolution on 2026-09-10 at 17:34Z; no current playable destination verified."
+    },
+    "source": {
+      "commit": "af32d247cac3495ca430d0effbb88dd5f3250b2c",
+      "provider_id": 2491285,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/mozilla/BrowserQuest/tree/af32d247cac3495ca430d0effbb88dd5f3250b2c",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/client/js/pathfinder.js",
+          "claim": "Grid pathfinding adapter entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/server/js/worldserver.js",
+          "claim": "World replication and entity groups entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MPL-2.0",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/LICENSE",
+      "asset_status": "mixed",
+      "asset_notes": "LICENSE separates MPL-2.0 code from CC-BY-SA-3.0 content; individual bundled third-party libraries still need review.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Grid pathfinding adapter",
+        "category": "pathfinding",
+        "evidence_url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/client/js/pathfinder.js",
+        "source_path": "client/js/pathfinder.js",
+        "status": "source_inspected",
+        "notes": "Wraps AStar and collision-grid/entity handling; AMD and Class dependencies are legacy integration work."
+      },
+      {
+        "name": "World replication and entity groups",
+        "category": "networking",
+        "evidence_url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/server/js/worldserver.js",
+        "source_path": "server/js/worldserver.js",
+        "status": "source_inspected",
+        "notes": "Entity groups, player queues and spawn/broadcast routing are present; server, shared protocol and map code form a substantial dependency scope."
+      }
+    ],
+    "preview": {
+      "status": "missing",
+      "source_url": null,
+      "notes": "No appropriate preview indexed in this pass; no generated artwork substituted."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across action-rpg, multiplayer and reusable pathfinding, networking.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort.",
+        "Repository is deprecated; historical Mozilla demo availability and server dependencies require rechecking."
+      ],
+      "integration_family": "reference-only"
+    }
+  },
+  {
+    "id": "a-dark-room",
+    "title": "A Dark Room",
+    "repo_url": "https://github.com/doublespeakgames/adarkroom",
+    "project_url": "https://github.com/doublespeakgames/adarkroom",
+    "creator": "doublespeakgames and contributors",
+    "summary": "A text adventure that grows from a small resource loop into village management and exploration.",
+    "subproject_path": "",
+    "content_kind": "game",
+    "genres": [
+      "incremental",
+      "adventure",
+      "resource-management"
+    ],
+    "capability_tags": [
+      "economy",
+      "game-state"
+    ],
+    "visual_style": [
+      "text-based",
+      "minimal"
+    ],
+    "dimension": "2d",
+    "camera": [
+      "text"
+    ],
+    "runtime": {
+      "name": "HTML / JavaScript",
+      "language": "JavaScript",
+      "version": null,
+      "version_status": "unknown"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "mouse"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://adarkroom.doublespeakgames.com",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7",
+      "provider_id": 11152831,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/doublespeakgames/adarkroom/tree/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/LICENSE.md",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/script/outside.js",
+          "claim": "Worker production chains entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/script/state_manager.js",
+          "claim": "Nested reactive game state entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MPL-2.0",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/LICENSE.md",
+      "asset_status": "unreviewed",
+      "asset_notes": "Text, translations, sounds and external promotional images have not been scoped individually.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Worker production chains",
+        "category": "economy",
+        "evidence_url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/script/outside.js",
+        "source_path": "script/outside.js",
+        "status": "source_inspected",
+        "notes": "Worker income recipes and population actions are explicit; localized UI and global state modules are coupled."
+      },
+      {
+        "name": "Nested reactive game state",
+        "category": "game-state",
+        "evidence_url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/script/state_manager.js",
+        "source_path": "script/state_manager.js",
+        "status": "source_inspected",
+        "notes": "Nested get/set operations, batch updates and income collection use state update events; save migration and global engine coupling need review."
+      }
+    ],
+    "preview": {
+      "status": "missing",
+      "source_url": null,
+      "notes": "No appropriate preview indexed in this pass; no generated artwork substituted."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across incremental, adventure, resource-management and reusable economy, game-state.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "other-web-candidate"
+    }
+  },
+  {
+    "id": "littlejs",
+    "title": "LittleJS",
+    "repo_url": "https://github.com/KilledByAPixel/LittleJS",
+    "project_url": "https://killedbyapixel.github.io/LittleJS/examples",
+    "creator": "Frank Force and contributors",
+    "summary": "A browser game engine and example collection covering sprite games, effects, synthesized audio and input.",
+    "subproject_path": "",
+    "content_kind": "engine",
+    "genres": [
+      "platformer",
+      "arcade",
+      "puzzle"
+    ],
+    "capability_tags": [
+      "audio",
+      "particles"
+    ],
+    "visual_style": [
+      "pixel-art",
+      "configurable"
+    ],
+    "dimension": "mixed",
+    "camera": [
+      "side-view",
+      "top-down"
+    ],
+    "runtime": {
+      "name": "LittleJS",
+      "language": "JavaScript",
+      "version": "1.18.30",
+      "version_status": "inspected"
+    },
+    "physics": [
+      "LittleJS built-in",
+      "optional Box2D"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "keyboard",
+      "mouse",
+      "gamepad",
+      "touch"
+    ],
+    "authoring_tools": [
+      "Tiled",
+      "Aseprite"
+    ],
+    "demo": {
+      "url": "https://killedbyapixel.github.io/LittleJS/examples",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "da1b3836552b2373522a56bd39d6fb9f4b530017",
+      "provider_id": 409749889,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/KilledByAPixel/LittleJS/tree/da1b3836552b2373522a56bd39d6fb9f4b530017",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/src/engineAudio.js",
+          "claim": "Synthesized and spatial audio entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/src/engineParticles.js",
+          "claim": "Particle emitters entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Library code license inspected; individual example textures, fonts and audio still require scope review.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Synthesized and spatial audio",
+        "category": "audio",
+        "evidence_url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/src/engineAudio.js",
+        "source_path": "src/engineAudio.js",
+        "status": "source_inspected",
+        "notes": "Sound and instance classes combine Web Audio, generated sound and positional attenuation; engine globals and audio lifecycle remain dependencies."
+      },
+      {
+        "name": "Particle emitters",
+        "category": "particles",
+        "evidence_url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/src/engineParticles.js",
+        "source_path": "src/engineParticles.js",
+        "status": "source_inspected",
+        "notes": "Emitter/particle classes implement randomized motion, gradients and tile collisions; depends on EngineObject and drawing/math helpers."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://raw.githubusercontent.com/KilledByAPixel/LittleJS/da1b3836552b2373522a56bd39d6fb9f4b530017/examples/screenshot.jpg",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across platformer, arcade, puzzle and reusable audio, particles.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "other-web-candidate"
+    }
+  },
+  {
+    "id": "phaser-dungeon-crawler",
+    "title": "Phaser Dungeon Crawler Starter",
+    "repo_url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter",
+    "project_url": "https://ourcade.co/templates/dungeon-crawler-starter",
+    "creator": "ourcade and contributors",
+    "summary": "A Phaser starter demonstrating animated top-down combat, damage state, treasure and simple enemies.",
+    "subproject_path": "",
+    "content_kind": "game",
+    "genres": [
+      "dungeon-crawler",
+      "action-rpg"
+    ],
+    "capability_tags": [
+      "combat",
+      "enemy-ai"
+    ],
+    "visual_style": [
+      "pixel-art",
+      "fantasy"
+    ],
+    "dimension": "2d",
+    "camera": [
+      "top-down"
+    ],
+    "runtime": {
+      "name": "Phaser",
+      "language": "TypeScript",
+      "version": "^3.22.0",
+      "version_status": "inspected"
+    },
+    "physics": [
+      "Phaser Arcade"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "keyboard"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://ourcade.co/templates/dungeon-crawler-starter",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "186705eb557af3d7042590fc61485a7cbed7b7f0",
+      "provider_id": 262600804,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/tree/186705eb557af3d7042590fc61485a7cbed7b7f0",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/readme.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/src/characters/Faune.ts",
+          "claim": "Player combat and damage state entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/src/enemies/Lizard.ts",
+          "claim": "Timed enemy wandering entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "README credits Dungeon Tileset II and Legend of Faune; assets are Git LFS objects, and their separate licenses have not been fetched.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Player combat and damage state",
+        "category": "combat",
+        "evidence_url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/src/characters/Faune.ts",
+        "source_path": "src/characters/Faune.ts",
+        "status": "source_inspected",
+        "notes": "Arcade sprite tracks health, knives and chest interaction; animation keys and scene events are coupled."
+      },
+      {
+        "name": "Timed enemy wandering",
+        "category": "enemy-ai",
+        "evidence_url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/src/enemies/Lizard.ts",
+        "source_path": "src/enemies/Lizard.ts",
+        "status": "source_inspected",
+        "notes": "Lizard sprite changes cardinal direction through a timer; adapt collision and timer cleanup to target lifecycle."
+      }
+    ],
+    "preview": {
+      "status": "missing",
+      "source_url": null,
+      "notes": "No appropriate preview indexed in this pass; no generated artwork substituted."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across dungeon-crawler, action-rpg and reusable combat, enemy-ai.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "other-web-candidate"
+    }
+  },
+  {
+    "id": "matter-js",
+    "title": "Matter.js",
+    "repo_url": "https://github.com/liabru/matter-js",
+    "project_url": "https://github.com/liabru/matter-js",
+    "creator": "liabru and contributors",
+    "summary": "A two-dimensional rigid-body simulation library with interactive examples and a separate simulation loop.",
+    "subproject_path": "",
+    "content_kind": "engine",
+    "genres": [
+      "physics-puzzle",
+      "sandbox"
+    ],
+    "capability_tags": [
+      "physics",
+      "physics-joints"
+    ],
+    "visual_style": [
+      "geometric",
+      "configurable"
+    ],
+    "dimension": "2d",
+    "camera": [
+      "configurable"
+    ],
+    "runtime": {
+      "name": "Matter.js",
+      "language": "JavaScript",
+      "version": "0.20.0",
+      "version_status": "inspected"
+    },
+    "physics": [
+      "Matter.js"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "mouse"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://brm.io/matter-js/demo/",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "acb99b6f8784c809b940f1d2cf745427e088e088",
+      "provider_id": 16986405,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/liabru/matter-js/tree/acb99b6f8784c809b940f1d2cf745427e088e088",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/src/core/Engine.js",
+          "claim": "Rigid-body simulation step entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/src/constraint/Constraint.js",
+          "claim": "Distance and spring constraints entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Core library scope inspected; demo images, SVG inputs and external gallery projects are separate scopes.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Rigid-body simulation step",
+        "category": "physics",
+        "evidence_url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/src/core/Engine.js",
+        "source_path": "src/core/Engine.js",
+        "status": "source_inspected",
+        "notes": "Engine.update coordinates sleeping, collision detection and resolution; preserve one physics-world owner."
+      },
+      {
+        "name": "Distance and spring constraints",
+        "category": "physics-joints",
+        "evidence_url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/src/constraint/Constraint.js",
+        "source_path": "src/constraint/Constraint.js",
+        "status": "source_inspected",
+        "notes": "Constraint module maintains body/world-space distances with stiffness; units and solver timing need target tests."
+      }
+    ],
+    "preview": {
+      "status": "missing",
+      "source_url": null,
+      "notes": "No appropriate preview indexed in this pass; no generated artwork substituted."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across physics-puzzle, sandbox and reusable physics, physics-joints.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "other-web-candidate"
+    }
+  },
+  {
+    "id": "three-pathfinding",
+    "title": "three-pathfinding",
+    "repo_url": "https://github.com/donmccurdy/three-pathfinding",
+    "project_url": "https://three-pathfinding.donmccurdy.com/",
+    "creator": "donmccurdy and contributors",
+    "summary": "Navigation-mesh utilities for Three.js with zone construction, path search and constrained movement.",
+    "subproject_path": "",
+    "content_kind": "toolkit",
+    "genres": [
+      "navigation",
+      "exploration"
+    ],
+    "capability_tags": [
+      "pathfinding"
+    ],
+    "visual_style": [
+      "configurable"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "configurable"
+    ],
+    "runtime": {
+      "name": "Three.js",
+      "language": "JavaScript",
+      "version": "library 1.3.0; Three.js 0.x.x peer range",
+      "version_status": "inspected"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "mouse"
+    ],
+    "authoring_tools": [
+      "Blender"
+    ],
+    "demo": {
+      "url": "https://three-pathfinding.donmccurdy.com/",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "1526c84afed0d596cb13f4b7be36401fd2c6a430",
+      "provider_id": 102173984,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/donmccurdy/three-pathfinding/tree/1526c84afed0d596cb13f4b7be36401fd2c6a430",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/src/Pathfinding.js",
+          "claim": "Navigation mesh route search entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/src/Channel.js",
+          "claim": "Funnel path smoothing entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Maintainer credits PatrolJS ancestry. Demo mesh/screenshot provenance needs review.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Navigation mesh route search",
+        "category": "pathfinding",
+        "evidence_url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/src/Pathfinding.js",
+        "source_path": "src/Pathfinding.js",
+        "status": "source_inspected",
+        "notes": "Zone-based search wraps Builder, AStar and Channel; navmesh validity and geometry coordinates need verification."
+      },
+      {
+        "name": "Funnel path smoothing",
+        "category": "pathfinding",
+        "evidence_url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/src/Channel.js",
+        "source_path": "src/Channel.js",
+        "status": "source_inspected",
+        "notes": "String-pulling processes portal edges into waypoints; Utils predicates and degenerate portal cases require tests."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://user-images.githubusercontent.com/1848368/34424850-d79e5a24-ebf4-11e7-87c4-afc75cdc41bd.png",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across navigation, exploration and reusable pathfinding, pathfinding.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  },
+  {
+    "id": "yuka",
+    "title": "Yuka",
+    "repo_url": "https://github.com/Mugen87/yuka",
+    "project_url": "https://mugen87.github.io/yuka/",
+    "creator": "Mugen87 and contributors",
+    "summary": "Game-AI modules for steering, stateful agents, navigation and perception, independent of the renderer.",
+    "subproject_path": "",
+    "content_kind": "toolkit",
+    "genres": [
+      "strategy",
+      "simulation",
+      "action"
+    ],
+    "capability_tags": [
+      "enemy-ai",
+      "steering"
+    ],
+    "visual_style": [
+      "configurable"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "configurable"
+    ],
+    "runtime": {
+      "name": "Engine-independent JavaScript",
+      "language": "JavaScript",
+      "version": "0.7.8",
+      "version_status": "inspected"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://mugen87.github.io/yuka/examples/",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "10591304811222d6856020d5de129b39ef43b58d",
+      "provider_id": 96577416,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/Mugen87/yuka/tree/10591304811222d6856020d5de129b39ef43b58d",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/src/fsm/StateMachine.js",
+          "claim": "Finite-state agents entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/src/steering/behaviors/SeekBehavior.js",
+          "claim": "Seek steering force entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Core code license inspected; example models and textures have separate unreviewed scope.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Finite-state agents",
+        "category": "enemy-ai",
+        "evidence_url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/src/fsm/StateMachine.js",
+        "source_path": "src/fsm/StateMachine.js",
+        "status": "source_inspected",
+        "notes": "StateMachine manages current/previous/global state and serialization; depends on State and owner entity contracts."
+      },
+      {
+        "name": "Seek steering force",
+        "category": "steering",
+        "evidence_url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/src/steering/behaviors/SeekBehavior.js",
+        "source_path": "src/steering/behaviors/SeekBehavior.js",
+        "status": "source_inspected",
+        "notes": "Computes steering toward a target using its own Vector3 type; bridge simulation units and update timing to the host."
+      }
+    ],
+    "preview": {
+      "status": "missing",
+      "source_url": null,
+      "notes": "No appropriate preview indexed in this pass; no generated artwork substituted."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across strategy, simulation, action and reusable enemy-ai, steering.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  },
+  {
+    "id": "three-mesh-bvh",
+    "title": "three-mesh-bvh",
+    "repo_url": "https://github.com/gkjohnson/three-mesh-bvh",
+    "project_url": "https://gkjohnson.github.io/three-mesh-bvh/example/bundle/raycast.html",
+    "creator": "gkjohnson and contributors",
+    "summary": "Geometry acceleration structures and queries that can support picking, collision and character movement.",
+    "subproject_path": "",
+    "content_kind": "toolkit",
+    "genres": [
+      "spatial-query",
+      "exploration"
+    ],
+    "capability_tags": [
+      "collision-query",
+      "background-processing"
+    ],
+    "visual_style": [
+      "configurable"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "configurable"
+    ],
+    "runtime": {
+      "name": "Three.js",
+      "language": "JavaScript",
+      "version": "library 0.9.15; Three.js >=0.159.0",
+      "version_status": "inspected"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://gkjohnson.github.io/three-mesh-bvh/example/bundle/raycast.html",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab",
+      "provider_id": 118064695,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/gkjohnson/three-mesh-bvh/tree/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/src/core/MeshBVH.js",
+          "claim": "Mesh spatial queries entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/src/workers/GenerateMeshBVHWorker.js",
+          "claim": "Worker BVH construction entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Library source license inspected; third-party demonstration models/screenshots remain unreviewed. No performance numbers were measured.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Mesh spatial queries",
+        "category": "collision-query",
+        "evidence_url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/src/core/MeshBVH.js",
+        "source_path": "src/core/MeshBVH.js",
+        "status": "source_inspected",
+        "notes": "BVH implements geometry queries and serialization; local/world transform handling and geometry mutation need integration tests."
+      },
+      {
+        "name": "Worker BVH construction",
+        "category": "background-processing",
+        "evidence_url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/src/workers/GenerateMeshBVHWorker.js",
+        "source_path": "src/workers/GenerateMeshBVHWorker.js",
+        "status": "source_inspected",
+        "notes": "Transfers geometry buffers while building asynchronously; unavailable geometry during transfer and worker disposal must be handled."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://raw.githubusercontent.com/gkjohnson/three-mesh-bvh/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/docs/example-sm.gif",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across spatial-query, exploration and reusable collision-query, background-processing.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  },
+  {
+    "id": "react-three-rapier",
+    "title": "React Three Rapier",
+    "repo_url": "https://github.com/pmndrs/react-three-rapier",
+    "project_url": "https://react-three-rapier.pmnd.rs",
+    "creator": "pmndrs and contributors",
+    "summary": "React bindings for Rapier bodies, colliders and joints inside an existing React Three Fiber scene.",
+    "subproject_path": "",
+    "content_kind": "toolkit",
+    "genres": [
+      "physics",
+      "sandbox"
+    ],
+    "capability_tags": [
+      "physics",
+      "physics-joints"
+    ],
+    "visual_style": [
+      "configurable"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "configurable"
+    ],
+    "runtime": {
+      "name": "React Three Fiber / Rapier",
+      "language": "TypeScript",
+      "version": "2.2.0; R3F ^9.0.4; Rapier 0.19.2",
+      "version_status": "inspected"
+    },
+    "physics": [
+      "Rapier"
+    ],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://react-three-rapier.pmnd.rs",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98",
+      "provider_id": 487288999,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/pmndrs/react-three-rapier/tree/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/readme.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/src/components/RigidBody.tsx",
+          "claim": "Rigid-body lifecycle entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/src/hooks/joints.ts",
+          "claim": "Physics joint hooks entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Core binding code license inspected; Rapier/WASM transitive license and demo assets remain separate checks.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Rigid-body lifecycle",
+        "category": "physics",
+        "evidence_url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/src/components/RigidBody.tsx",
+        "source_path": "packages/react-three-rapier/src/components/RigidBody.tsx",
+        "status": "source_inspected",
+        "notes": "Creates a Rapier body and binds it to object state; requires the existing Physics context and lifecycle ownership."
+      },
+      {
+        "name": "Physics joint hooks",
+        "category": "physics-joints",
+        "evidence_url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/src/hooks/joints.ts",
+        "source_path": "packages/react-three-rapier/src/hooks/joints.ts",
+        "status": "source_inspected",
+        "notes": "Hooks create fixed, revolute, rope and spring impulse joints; body refs and simulation lifecycle need target tests."
+      }
+    ],
+    "preview": {
+      "status": "missing",
+      "source_url": null,
+      "notes": "No appropriate preview indexed in this pass; no generated artwork substituted."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across physics, sandbox and reusable physics, physics-joints.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  },
+  {
+    "id": "three-terrain",
+    "title": "THREE.Terrain",
+    "repo_url": "https://github.com/IceCreamYou/THREE.Terrain",
+    "project_url": "https://icecreamyou.github.io/THREE.Terrain/",
+    "creator": "Isaac Sukin and contributors",
+    "summary": "Procedural heightfields and mesh-scattering utilities for configurable Three.js landscapes.",
+    "subproject_path": "",
+    "content_kind": "toolkit",
+    "genres": [
+      "procedural-generation",
+      "exploration"
+    ],
+    "capability_tags": [
+      "terrain",
+      "world-building"
+    ],
+    "visual_style": [
+      "procedural",
+      "naturalistic"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "orbit"
+    ],
+    "runtime": {
+      "name": "Three.js",
+      "language": "JavaScript",
+      "version": "library 3.1.1; Three.js >=0.160.0",
+      "version_status": "inspected"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [
+      "mouse"
+    ],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://icecreamyou.github.io/THREE.Terrain/",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "434d977ffdbac604cd5c6fd332c4d005f7f9ec68",
+      "provider_id": 18877591,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/IceCreamYou/THREE.Terrain/tree/434d977ffdbac604cd5c6fd332c4d005f7f9ec68",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/LICENSE.txt",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/src/generators.js",
+          "claim": "Heightfield generation entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/src/scatter.js",
+          "claim": "Vegetation and object scattering entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/LICENSE.txt",
+      "asset_status": "unreviewed",
+      "asset_notes": "README distinguishes npm library from demo assets and credits ez-tree; terrain textures and preview rights not cleared.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Heightfield generation",
+        "category": "terrain",
+        "evidence_url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/src/generators.js",
+        "source_path": "src/generators.js",
+        "status": "source_inspected",
+        "notes": "Generator functions compose heightmap methods using TerrainNS and supplied randomness; seeded output needs a target determinism test."
+      },
+      {
+        "name": "Vegetation and object scattering",
+        "category": "world-building",
+        "evidence_url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/src/scatter.js",
+        "source_path": "src/scatter.js",
+        "status": "source_inspected",
+        "notes": "Transforms scattered meshes with random placement and minimum-distance helpers; supplied mesh/material rights and instancing strategy need review."
+      }
+    ],
+    "preview": {
+      "status": "upstream_reference",
+      "source_url": "https://raw.githubusercontent.com/IceCreamYou/THREE.Terrain/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/demo/img/screenshot2.jpg",
+      "notes": "Maintainer-linked visual reference only; not a locally captured or rights-cleared preview."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across procedural-generation, exploration and reusable terrain, world-building.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  },
+  {
+    "id": "drei",
+    "title": "Drei",
+    "repo_url": "https://github.com/pmndrs/drei",
+    "project_url": "https://docs.pmnd.rs/drei",
+    "creator": "pmndrs and contributors",
+    "summary": "Reusable scene helpers for cameras, materials, loading and interaction in React Three Fiber.",
+    "subproject_path": "",
+    "content_kind": "toolkit",
+    "genres": [
+      "rendering",
+      "exploration"
+    ],
+    "capability_tags": [
+      "camera",
+      "materials"
+    ],
+    "visual_style": [
+      "configurable"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "configurable"
+    ],
+    "runtime": {
+      "name": "React Three Fiber / Three.js",
+      "language": "TypeScript",
+      "version": "R3F ^9.0.0; React ^19; Three.js >=0.159",
+      "version_status": "inspected"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://drei.pmnd.rs/",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "ffa15b956e320391b0e86084cb58c8da0445abe3",
+      "provider_id": 259117468,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/pmndrs/drei/tree/ffa15b956e320391b0e86084cb58c8da0445abe3",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/src/core/CameraControls.tsx",
+          "claim": "Camera control binding entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/src/core/MeshReflectorMaterial.tsx",
+          "claim": "Planar reflective material entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Helper code license inspected; external HDRIs, fonts, demos and models are separate rights scopes.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Camera control binding",
+        "category": "camera",
+        "evidence_url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/src/core/CameraControls.tsx",
+        "source_path": "src/core/CameraControls.tsx",
+        "status": "source_inspected",
+        "notes": "Wraps camera-controls and connects camera/DOM events to R3F; preserve active camera and input ownership."
+      },
+      {
+        "name": "Planar reflective material",
+        "category": "materials",
+        "evidence_url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/src/core/MeshReflectorMaterial.tsx",
+        "source_path": "src/core/MeshReflectorMaterial.tsx",
+        "status": "source_inspected",
+        "notes": "Renders a reflected scene to render targets with optional blur; rendering cost and cleanup require measurement and lifecycle tests."
+      }
+    ],
+    "preview": {
+      "status": "missing",
+      "source_url": null,
+      "notes": "No appropriate preview indexed in this pass; no generated artwork substituted."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across rendering, exploration and reusable camera, materials.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  },
+  {
+    "id": "threejs",
+    "title": "Three.js",
+    "repo_url": "https://github.com/mrdoob/three.js",
+    "project_url": "https://threejs.org/",
+    "creator": "mrdoob and contributors",
+    "summary": "The 3D rendering library underlying the initial integration family, with reusable animation and visual-effect examples.",
+    "subproject_path": "",
+    "content_kind": "toolkit",
+    "genres": [
+      "rendering",
+      "animation"
+    ],
+    "capability_tags": [
+      "animation",
+      "materials"
+    ],
+    "visual_style": [
+      "configurable"
+    ],
+    "dimension": "3d",
+    "camera": [
+      "configurable"
+    ],
+    "runtime": {
+      "name": "Three.js",
+      "language": "JavaScript",
+      "version": "0.186.0 (dev branch snapshot)",
+      "version_status": "inspected"
+    },
+    "physics": [],
+    "platforms": [
+      "browser"
+    ],
+    "controls": [],
+    "authoring_tools": [],
+    "demo": {
+      "url": "https://threejs.org/examples/",
+      "kind": "browser",
+      "source_relation": "maintainer_linked",
+      "interactive_status": "not_tested",
+      "notes": "URL from maintainer README or repository homepage; no source/deployment revision match established."
+    },
+    "source": {
+      "commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "provider_id": 576201,
+      "inspected_at": "2026-09-10T17:33:07Z",
+      "evidence": [
+        {
+          "url": "https://github.com/mrdoob/three.js/tree/5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+          "claim": "Repository identity and pinned source tree retrieved through GitHub API.",
+          "kind": "repository"
+        },
+        {
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/README.md",
+          "claim": "Project purpose, maintainer links and declared feature context inspected.",
+          "kind": "readme"
+        },
+        {
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/LICENSE",
+          "claim": "License text inspected; scope and exceptions retained in rights notes.",
+          "kind": "license"
+        },
+        {
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/package.json",
+          "claim": "Dependency/runtime declarations inspected; ranges are not tested compatibility guarantees.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/src/animation/AnimationMixer.js",
+          "claim": "Animation playback and blending entry points statically inspected; not executed.",
+          "kind": "source"
+        },
+        {
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/objects/Water.js",
+          "claim": "Reflective water effect entry points statically inspected; not executed.",
+          "kind": "source"
+        }
+      ]
+    },
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Library/addon code license inspected; examples include external models, textures and datasets whose licenses need independent checks.",
+      "scope_reuse_status": "review_required",
+      "notes": "License file inspected for repository code; selected files, dependencies and assets need a complete scope review before reuse."
+    },
+    "building_blocks": [
+      {
+        "name": "Animation playback and blending",
+        "category": "animation",
+        "evidence_url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/src/animation/AnimationMixer.js",
+        "source_path": "src/animation/AnimationMixer.js",
+        "status": "source_inspected",
+        "notes": "Mixer binds actions/tracks to objects and maintains caches; blend policy and uncache cleanup remain target responsibilities."
+      },
+      {
+        "name": "Reflective water effect",
+        "category": "materials",
+        "evidence_url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/objects/Water.js",
+        "source_path": "examples/jsm/objects/Water.js",
+        "status": "source_inspected",
+        "notes": "Planar reflection shader uses a render target and normal map; explicitly WebGL-only, with separate WebGPU WaterMesh recommended by source."
+      }
+    ],
+    "preview": {
+      "status": "missing",
+      "source_url": null,
+      "notes": "No appropriate preview indexed in this pass; no generated artwork substituted."
+    },
+    "research": {
+      "author": "research_web (coder/author agent)",
+      "started_at": "2026-09-10T17:28:36Z",
+      "completed_at": "2026-09-10T17:33:07Z",
+      "elapsed_minutes": 4.517,
+      "selection_reason": "Broadens discovery across rendering, animation and reusable animation, materials.",
+      "known_unknowns": [
+        "External demo has not been interactively tested; deployed revision is unknown.",
+        "No extraction, integration, compatibility or performance test has been run.",
+        "Research timing is shared batch wall-clock time, not independent per-record effort."
+      ],
+      "integration_family": "threejs-r3f-candidate"
+    }
+  }
+]

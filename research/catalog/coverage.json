@@ -1,0 +1,352 @@
+{
+  "records": 43,
+  "building_blocks": 87,
+  "media": 12,
+  "pinned_source_records": 43,
+  "genres": {
+    "4x": 2,
+    "action": 6,
+    "action-rpg": 2,
+    "adventure": 1,
+    "animation": 1,
+    "arcade": 6,
+    "automation": 2,
+    "builder": 7,
+    "city-builder": 3,
+    "colony-management": 1,
+    "crafting": 1,
+    "driving": 1,
+    "dungeon": 1,
+    "dungeon-crawler": 1,
+    "economy": 4,
+    "endless-runner": 1,
+    "exploration": 8,
+    "fantasy": 1,
+    "incremental": 1,
+    "management": 5,
+    "multiplayer": 1,
+    "navigation": 1,
+    "navigation-demo": 1,
+    "physics": 1,
+    "physics-puzzle": 1,
+    "platformer": 4,
+    "procedural-generation": 2,
+    "puzzle": 3,
+    "racing": 4,
+    "rendering": 2,
+    "resource-management": 6,
+    "roguelike": 1,
+    "rpg": 2,
+    "rts": 4,
+    "sandbox": 4,
+    "simulation": 8,
+    "space": 1,
+    "spatial-query": 1,
+    "strategy": 3,
+    "strategy-toolkit": 1,
+    "survival": 1,
+    "tactics": 1,
+    "tower-defense": 1,
+    "trading": 1,
+    "transport": 1,
+    "turn-based": 1,
+    "turn-based-strategy": 4,
+    "tycoon": 2,
+    "vehicle-demo": 1
+  },
+  "content_kind": {
+    "demo": 5,
+    "engine": 4,
+    "game": 26,
+    "toolkit": 8
+  },
+  "dimension": {
+    "2d": 21,
+    "3d": 21,
+    "mixed": 1
+  },
+  "runtimes": {
+    "Arc / JVM": 1,
+    "Cataclysm native engine": 1,
+    "Endless Sky / SDL / OpenGL": 1,
+    "Engine-independent JavaScript": 1,
+    "Freeciv native engine": 1,
+    "Godot": 4,
+    "HTML / CSS / JavaScript": 1,
+    "HTML / JavaScript": 1,
+    "HTML5 Canvas": 1,
+    "HTML5 Canvas / Node.js": 1,
+    "JVM / FreeCol": 1,
+    "LittleJS": 1,
+    "Luanti": 1,
+    "Matter.js": 1,
+    "OpenRA / .NET": 1,
+    "OpenRCT2 native engine": 1,
+    "OpenTTD native engine": 1,
+    "Phaser": 1,
+    "Pyrogenesis": 1,
+    "React Three Fiber / Rapier": 2,
+    "React Three Fiber / Three.js": 2,
+    "SuperTux native engine": 1,
+    "SuperTuxKart native engine": 1,
+    "Three.js": 8,
+    "Three.js / micropolisJS": 1,
+    "Unity": 1,
+    "Veloren native engine": 1,
+    "Wesnoth native engine": 1,
+    "Widelands / SDL": 1,
+    "libGDX": 1,
+    "melonJS": 1
+  },
+  "field_completeness": {
+    "source_commit": 43,
+    "provider_id": 43,
+    "code_license_inspected": 40,
+    "demo_destination": 42,
+    "browser_demo_destination": 26,
+    "source_inspected_blocks": 87,
+    "preview_reference": 23
+  },
+  "all_contract_field_completeness": {
+    "authoring_tools": {
+      "records": 43,
+      "populated": 9,
+      "null_empty_or_missing": 34
+    },
+    "building_blocks": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "camera": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "capability_tags": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "content_kind": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "controls": {
+      "records": 43,
+      "populated": 23,
+      "null_empty_or_missing": 20
+    },
+    "creator": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "demo.interactive_status": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "demo.kind": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "demo.notes": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "demo.source_relation": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "demo.url": {
+      "records": 43,
+      "populated": 42,
+      "null_empty_or_missing": 1
+    },
+    "dimension": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "genres": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "id": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "physics": {
+      "records": 43,
+      "populated": 13,
+      "null_empty_or_missing": 30
+    },
+    "platforms": {
+      "records": 43,
+      "populated": 42,
+      "null_empty_or_missing": 1
+    },
+    "preview.notes": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "preview.source_url": {
+      "records": 43,
+      "populated": 23,
+      "null_empty_or_missing": 20
+    },
+    "preview.status": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "project_url": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "repo_url": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "research.author": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "research.completed_at": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "research.elapsed_minutes": {
+      "records": 43,
+      "populated": 23,
+      "null_empty_or_missing": 20
+    },
+    "research.integration_family": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "research.known_unknowns": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "research.selection_reason": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "research.started_at": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "rights.asset_notes": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "rights.asset_status": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "rights.code_evidence_url": {
+      "records": 43,
+      "populated": 42,
+      "null_empty_or_missing": 1
+    },
+    "rights.code_license": {
+      "records": 43,
+      "populated": 40,
+      "null_empty_or_missing": 3
+    },
+    "rights.code_status": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "rights.notes": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "rights.scope_reuse_status": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "runtime.language": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "runtime.name": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "runtime.version": {
+      "records": 43,
+      "populated": 20,
+      "null_empty_or_missing": 23
+    },
+    "runtime.version_status": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "source.commit": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "source.evidence": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "source.inspected_at": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "source.provider_id": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "subproject_path": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "summary": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "title": {
+      "records": 43,
+      "populated": 43,
+      "null_empty_or_missing": 0
+    },
+    "visual_style": {
+      "records": 43,
+      "populated": 26,
+      "null_empty_or_missing": 17
+    }
+  }
+}

@@ -6,3 +6,7 @@
 *.jpeg binary
 *.webp binary
 *.zip binary
+*.sqlite binary
+
+# Python CSV exports use standard CRLF record terminators.
+research/catalog/catalog.csv whitespace=cr-at-eol

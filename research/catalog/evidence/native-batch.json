@@ -1,0 +1,889 @@
+{
+  "author": "design_flex_author (native research author subagent)",
+  "started_at": "2026-09-10T17:29:06Z",
+  "completed_at": "2026-09-10T17:34:56.320282+00:00",
+  "elapsed_minutes": 5.839,
+  "timing_method": "Wall-clock time for concurrent batch research and authoring, not per-record effort; record elapsed_minutes is null. Does not include later independent review.",
+  "record_count": 20,
+  "metadata_method": "Read-only GitHub API repository/commit/recursive-tree lookups; canonical Gitea repository and commit API for 0 A.D.; GitLab project metadata for Veloren. No upstream code was executed.",
+  "source_inspection_method": "Fetched README, license and selected source files, then inspected relevant declarations and behavior sections. This is a bounded source-candidate review, not full-file correctness or transitive extraction audit.",
+  "non_github_identities": [
+    {
+      "repo_url": "https://gitea.wildfiregames.com/0ad/0ad",
+      "provider": "gitea",
+      "provider_id": 1
+    },
+    {
+      "repo_url": "https://gitlab.com/veloren/veloren",
+      "provider": "gitlab",
+      "provider_id": 10174980,
+      "mirror": "https://github.com/veloren/veloren",
+      "mirror_provider_id": 135222855
+    }
+  ],
+  "fetches": [
+    {
+      "repo": "SuperTux/supertux",
+      "path": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/SuperTux/supertux/d7bde40da60e295ac801cd7ef928427920a254d2/LICENSE.txt",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "retrieved_at": "2026-09-10T17:30:15.938450+00:00",
+      "status": 200
+    },
+    {
+      "repo": "SuperTux/supertux",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/SuperTux/supertux/d7bde40da60e295ac801cd7ef928427920a254d2/README.md",
+      "bytes": 5294,
+      "sha256": "273cc2f062930f9e5b2fe0b16d9e99ae737969af4727764b4ae62f6819aaec91",
+      "retrieved_at": "2026-09-10T17:30:15.911676+00:00",
+      "status": 200
+    },
+    {
+      "repo": "SuperTux/supertux",
+      "path": "src/object/camera.cpp",
+      "url": "https://raw.githubusercontent.com/SuperTux/supertux/d7bde40da60e295ac801cd7ef928427920a254d2/src/object/camera.cpp",
+      "bytes": 27576,
+      "sha256": "22c74c2116f2cb449c0f6882eeb23f617bb254ba631948376ba3ca2bb61b980f",
+      "retrieved_at": "2026-09-10T17:30:15.939950+00:00",
+      "status": 200
+    },
+    {
+      "repo": "SuperTux/supertux",
+      "path": "src/object/player.cpp",
+      "url": "https://raw.githubusercontent.com/SuperTux/supertux/d7bde40da60e295ac801cd7ef928427920a254d2/src/object/player.cpp",
+      "bytes": 93806,
+      "sha256": "61464f83956e6859b65fdf3bfeade5d4886be4fbeb1dfab09351173b4f25a705",
+      "retrieved_at": "2026-09-10T17:30:15.972401+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenRA/OpenRA",
+      "path": "COPYING",
+      "url": "https://raw.githubusercontent.com/OpenRA/OpenRA/f3ec7f8e1593b482f85fd101652deb740c33dee6/COPYING",
+      "bytes": 35151,
+      "sha256": "e79e9c8a0c85d735ff98185918ec94ed7d175efc377012787aebcf3b80f0d90b",
+      "retrieved_at": "2026-09-10T17:30:15.944486+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenRA/OpenRA",
+      "path": "OpenRA.Mods.Common/Traits/Harvester.cs",
+      "url": "https://raw.githubusercontent.com/OpenRA/OpenRA/f3ec7f8e1593b482f85fd101652deb740c33dee6/OpenRA.Mods.Common/Traits/Harvester.cs",
+      "bytes": 10521,
+      "sha256": "c1110ab4587d20f2483214da0e88ff6789dfb7176fc624b1280aa8a7e9452e2b",
+      "retrieved_at": "2026-09-10T17:30:15.950264+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenRA/OpenRA",
+      "path": "OpenRA.Mods.Common/Traits/Player/ProductionQueue.cs",
+      "url": "https://raw.githubusercontent.com/OpenRA/OpenRA/f3ec7f8e1593b482f85fd101652deb740c33dee6/OpenRA.Mods.Common/Traits/Player/ProductionQueue.cs",
+      "bytes": 25407,
+      "sha256": "6ce2d2b33fd87b6d13d31c12a879502ad18882e854fa8e7c2ac573afa308f3bb",
+      "retrieved_at": "2026-09-10T17:30:16.038921+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenRA/OpenRA",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/OpenRA/OpenRA/f3ec7f8e1593b482f85fd101652deb740c33dee6/README.md",
+      "bytes": 3490,
+      "sha256": "1bec5138e3033212ed382167a655e80cffbed9cba35cb8d84e962ecca2da3c2a",
+      "retrieved_at": "2026-09-10T17:30:15.950050+00:00",
+      "status": 200
+    },
+    {
+      "repo": "Anuken/Mindustry",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/Anuken/Mindustry/7c5f29e6fb1ac49bc7b4e1806f42685cbcc8b499/LICENSE",
+      "bytes": 32422,
+      "sha256": "963392e038d7bea128e55cc67dd691c204593db3527060667f0c82f0f0a1be64",
+      "retrieved_at": "2026-09-10T17:30:16.048705+00:00",
+      "status": 200
+    },
+    {
+      "repo": "Anuken/Mindustry",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/Anuken/Mindustry/7c5f29e6fb1ac49bc7b4e1806f42685cbcc8b499/README.md",
+      "bytes": 4770,
+      "sha256": "081a1768fef37945f4925a147ce271e45ad797c3b8d42991129fbd2f37eed8a5",
+      "retrieved_at": "2026-09-10T17:30:15.907646+00:00",
+      "status": 200
+    },
+    {
+      "repo": "Anuken/Mindustry",
+      "path": "core/src/mindustry/world/blocks/distribution/Conveyor.java",
+      "url": "https://raw.githubusercontent.com/Anuken/Mindustry/7c5f29e6fb1ac49bc7b4e1806f42685cbcc8b499/core/src/mindustry/world/blocks/distribution/Conveyor.java",
+      "bytes": 16241,
+      "sha256": "5966a66df0252c98e8d5dd4479164e09c07b173d9c7aaa593a29c874719d1ba7",
+      "retrieved_at": "2026-09-10T17:30:16.512192+00:00",
+      "status": 200
+    },
+    {
+      "repo": "Anuken/Mindustry",
+      "path": "core/src/mindustry/world/blocks/production/GenericCrafter.java",
+      "url": "https://raw.githubusercontent.com/Anuken/Mindustry/7c5f29e6fb1ac49bc7b4e1806f42685cbcc8b499/core/src/mindustry/world/blocks/production/GenericCrafter.java",
+      "bytes": 12397,
+      "sha256": "d1477eff3acc2fd0c578dcd0f20cc34226c576defc4a6301fc267ef42d13a200",
+      "retrieved_at": "2026-09-10T17:30:16.064078+00:00",
+      "status": 200
+    },
+    {
+      "repo": "FreeCol/freecol",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/FreeCol/freecol/e45ac6fd9592c8f032b2686658f63447c115d9d7/LICENSE",
+      "bytes": 18046,
+      "sha256": "db296f2f7f35bca3a174efb0eb392b3b17bd94b341851429a3dff411b1c2fc73",
+      "retrieved_at": "2026-09-10T17:30:16.078721+00:00",
+      "status": 200
+    },
+    {
+      "repo": "FreeCol/freecol",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/FreeCol/freecol/e45ac6fd9592c8f032b2686658f63447c115d9d7/README.md",
+      "bytes": 3543,
+      "sha256": "3e6b6115a82b79603e5b10f6e64477765ff22358d2cbc5e71f4fa4a426972b98",
+      "retrieved_at": "2026-09-10T17:30:16.053356+00:00",
+      "status": 200
+    },
+    {
+      "repo": "FreeCol/freecol",
+      "path": "src/net/sf/freecol/common/model/Colony.java",
+      "url": "https://raw.githubusercontent.com/FreeCol/freecol/e45ac6fd9592c8f032b2686658f63447c115d9d7/src/net/sf/freecol/common/model/Colony.java",
+      "bytes": 115188,
+      "sha256": "8fa627631e214603d9fcef98ffeaffef7f83c202205b45fa83e2945d14efdb11",
+      "retrieved_at": "2026-09-10T17:30:16.639703+00:00",
+      "status": 200
+    },
+    {
+      "repo": "FreeCol/freecol",
+      "path": "src/net/sf/freecol/common/model/Unit.java",
+      "url": "https://raw.githubusercontent.com/FreeCol/freecol/e45ac6fd9592c8f032b2686658f63447c115d9d7/src/net/sf/freecol/common/model/Unit.java",
+      "bytes": 169909,
+      "sha256": "22cd60f2e0179bec601829ba88a2d3565daac2d52fe24f9501eeab5080ccaab2",
+      "retrieved_at": "2026-09-10T17:30:16.097527+00:00",
+      "status": 200
+    },
+    {
+      "repo": "supertuxkart/stk-code",
+      "path": "COPYING",
+      "url": "https://raw.githubusercontent.com/supertuxkart/stk-code/dbf200ccba14025bac7dc8d0318dcf5e55b6da18/COPYING",
+      "bytes": 35245,
+      "sha256": "d27207a5213f746aac53893e9ecc18456e9595d3ffa662bd1ec9eb10787c214a",
+      "retrieved_at": "2026-09-10T17:30:16.089749+00:00",
+      "status": 200
+    },
+    {
+      "repo": "supertuxkart/stk-code",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/supertuxkart/stk-code/dbf200ccba14025bac7dc8d0318dcf5e55b6da18/README.md",
+      "bytes": 3048,
+      "sha256": "94b14f9f8cf52a59195564fec22784d3f506a892df0c87220bf866765ef59b86",
+      "retrieved_at": "2026-09-10T17:30:16.511332+00:00",
+      "status": 200
+    },
+    {
+      "repo": "supertuxkart/stk-code",
+      "path": "src/graphics/camera/camera_normal.cpp",
+      "url": "https://raw.githubusercontent.com/supertuxkart/stk-code/dbf200ccba14025bac7dc8d0318dcf5e55b6da18/src/graphics/camera/camera_normal.cpp",
+      "bytes": 23244,
+      "sha256": "da670b2d592d857223f6d54e1fe23d1b123326729a3d4b7d2e6e843dc2df82c9",
+      "retrieved_at": "2026-09-10T17:30:16.511930+00:00",
+      "status": 200
+    },
+    {
+      "repo": "supertuxkart/stk-code",
+      "path": "src/karts/kart.cpp",
+      "url": "https://raw.githubusercontent.com/supertuxkart/stk-code/dbf200ccba14025bac7dc8d0318dcf5e55b6da18/src/karts/kart.cpp",
+      "bytes": 134292,
+      "sha256": "3b5019b174fbdbec424ba5a1e88f1be0d3d6af032ab34df99f1c2eaa086f999a",
+      "retrieved_at": "2026-09-10T17:30:16.640276+00:00",
+      "status": 200
+    },
+    {
+      "repo": "yairm210/Unciv",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/yairm210/Unciv/0d7d1e43cd4776e04cd3f9eaf752527885123e62/LICENSE",
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+      "retrieved_at": "2026-09-10T17:30:16.513193+00:00",
+      "status": 200
+    },
+    {
+      "repo": "yairm210/Unciv",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/yairm210/Unciv/0d7d1e43cd4776e04cd3f9eaf752527885123e62/README.md",
+      "bytes": 7968,
+      "sha256": "92be0c7f80e518f3b14c47b525e091aed8b7988f9881b737147ad88a16a575d3",
+      "retrieved_at": "2026-09-10T17:30:16.512645+00:00",
+      "status": 200
+    },
+    {
+      "repo": "yairm210/Unciv",
+      "path": "core/src/com/unciv/logic/city/CityConstructions.kt",
+      "url": "https://raw.githubusercontent.com/yairm210/Unciv/0d7d1e43cd4776e04cd3f9eaf752527885123e62/core/src/com/unciv/logic/city/CityConstructions.kt",
+      "bytes": 55431,
+      "sha256": "8fd487017e1b472b4c9a9f50fa0f2c83bc6b1d7ebc75970c0019441642f9d37b",
+      "retrieved_at": "2026-09-10T17:30:16.548673+00:00",
+      "status": 200
+    },
+    {
+      "repo": "yairm210/Unciv",
+      "path": "core/src/com/unciv/logic/map/mapunit/movement/UnitMovement.kt",
+      "url": "https://raw.githubusercontent.com/yairm210/Unciv/0d7d1e43cd4776e04cd3f9eaf752527885123e62/core/src/com/unciv/logic/map/mapunit/movement/UnitMovement.kt",
+      "bytes": 50536,
+      "sha256": "386c1ab65679893012951fd9632d7eff28886c406068929a2ea0bda9840bf56c",
+      "retrieved_at": "2026-09-10T17:30:17.125125+00:00",
+      "status": 200
+    },
+    {
+      "repo": "wesnoth/wesnoth",
+      "path": "COPYING",
+      "url": "https://raw.githubusercontent.com/wesnoth/wesnoth/12b8f63f5b7a163c9a159705d288919bc53cc54b/COPYING",
+      "bytes": 18011,
+      "sha256": "e6d6a009505e345fe949e1310334fcb0747f28dae2856759de102ab66b722cb4",
+      "retrieved_at": "2026-09-10T17:30:17.059442+00:00",
+      "status": 200
+    },
+    {
+      "repo": "wesnoth/wesnoth",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/wesnoth/wesnoth/12b8f63f5b7a163c9a159705d288919bc53cc54b/README.md",
+      "bytes": 5309,
+      "sha256": "37539c6ba20f53e714237a530aa427898a1334cfa20fae2b0e7ccd6325388d50",
+      "retrieved_at": "2026-09-10T17:30:17.059109+00:00",
+      "status": 200
+    },
+    {
+      "repo": "wesnoth/wesnoth",
+      "path": "copyright",
+      "url": "https://raw.githubusercontent.com/wesnoth/wesnoth/12b8f63f5b7a163c9a159705d288919bc53cc54b/copyright",
+      "bytes": 456,
+      "sha256": "ca7c927b2c42d1d764c169de128457696f121077284d4481a1f574e489d8d3de",
+      "retrieved_at": "2026-09-10T17:30:17.964468+00:00",
+      "status": 200
+    },
+    {
+      "repo": "wesnoth/wesnoth",
+      "path": "data/COPYING.txt",
+      "url": "https://raw.githubusercontent.com/wesnoth/wesnoth/12b8f63f5b7a163c9a159705d288919bc53cc54b/data/COPYING.txt",
+      "bytes": 18121,
+      "sha256": "72b3707e670b087636c7784de63fe704b855b972e43f7226f2dc842323066385",
+      "retrieved_at": "2026-09-10T17:30:17.059930+00:00",
+      "status": 200
+    },
+    {
+      "repo": "wesnoth/wesnoth",
+      "path": "src/actions/attack.cpp",
+      "url": "https://raw.githubusercontent.com/wesnoth/wesnoth/12b8f63f5b7a163c9a159705d288919bc53cc54b/src/actions/attack.cpp",
+      "bytes": 47935,
+      "sha256": "336bf909f7426915cb66df6bb96ee3fbc5acec58a6fd78649ecf0c06aab68878",
+      "retrieved_at": "2026-09-10T17:30:17.124922+00:00",
+      "status": 200
+    },
+    {
+      "repo": "wesnoth/wesnoth",
+      "path": "src/pathfind/pathfind.cpp",
+      "url": "https://raw.githubusercontent.com/wesnoth/wesnoth/12b8f63f5b7a163c9a159705d288919bc53cc54b/src/pathfind/pathfind.cpp",
+      "bytes": 35420,
+      "sha256": "d317747df03001babd389b511a7fb27399b99d8e3a3474a692fd7f8c113e605d",
+      "retrieved_at": "2026-09-10T17:30:17.966879+00:00",
+      "status": 200
+    },
+    {
+      "repo": "CleverRaven/Cataclysm-DDA",
+      "path": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/7b123884d93a9a8432d690d528698f6a907d5cce/LICENSE.txt",
+      "bytes": 9144,
+      "sha256": "6e3d17bae7a8f0dee4b0d0c6af5bdf4396a0e685455efa8c2ad4ce52acdd99e2",
+      "retrieved_at": "2026-09-10T17:30:17.482608+00:00",
+      "status": 200
+    },
+    {
+      "repo": "CleverRaven/Cataclysm-DDA",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/7b123884d93a9a8432d690d528698f6a907d5cce/README.md",
+      "bytes": 5878,
+      "sha256": "9bd90745df78314fa649f415dc025137c9d459a6ef0e803c7e3834b613731b3e",
+      "retrieved_at": "2026-09-10T17:30:17.599776+00:00",
+      "status": 200
+    },
+    {
+      "repo": "CleverRaven/Cataclysm-DDA",
+      "path": "src/crafting.cpp",
+      "url": "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/7b123884d93a9a8432d690d528698f6a907d5cce/src/crafting.cpp",
+      "bytes": 198181,
+      "sha256": "199130ef1c6bdf39452bdbf8b68345ede80f6b097566bbd8108ea771b5f84ae4",
+      "retrieved_at": "2026-09-10T17:30:18.023698+00:00",
+      "status": 200
+    },
+    {
+      "repo": "CleverRaven/Cataclysm-DDA",
+      "path": "src/mapgen.cpp",
+      "url": "https://raw.githubusercontent.com/CleverRaven/Cataclysm-DDA/7b123884d93a9a8432d690d528698f6a907d5cce/src/mapgen.cpp",
+      "bytes": 330091,
+      "sha256": "b7df88867fbb6b8d6a60555b739202a2e120b5db9b608221795423090d85389b",
+      "retrieved_at": "2026-09-10T17:30:18.066474+00:00",
+      "status": 200
+    },
+    {
+      "repo": "widelands/widelands",
+      "path": "COPYING",
+      "url": "https://raw.githubusercontent.com/widelands/widelands/187e4e257c2e127ec2c607f8c7765f774e2474ec/COPYING",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "retrieved_at": "2026-09-10T17:30:17.672259+00:00",
+      "status": 200
+    },
+    {
+      "repo": "widelands/widelands",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/widelands/widelands/187e4e257c2e127ec2c607f8c7765f774e2474ec/README.md",
+      "bytes": 9084,
+      "sha256": "66389163eb1c3b8247134afdcc12bea34fe21182e7db98489d80f8e3eef7a366",
+      "retrieved_at": "2026-09-10T17:30:17.961375+00:00",
+      "status": 200
+    },
+    {
+      "repo": "widelands/widelands",
+      "path": "debian/copyright",
+      "url": "https://raw.githubusercontent.com/widelands/widelands/187e4e257c2e127ec2c607f8c7765f774e2474ec/debian/copyright",
+      "bytes": 20902,
+      "sha256": "91f24ce2f9f659d7cecebca5bdebb14a192eca4c2db72acb516651cf157288f1",
+      "retrieved_at": "2026-09-10T17:30:17.709346+00:00",
+      "status": 200
+    },
+    {
+      "repo": "widelands/widelands",
+      "path": "src/economy/economy.cc",
+      "url": "https://raw.githubusercontent.com/widelands/widelands/187e4e257c2e127ec2c607f8c7765f774e2474ec/src/economy/economy.cc",
+      "bytes": 44334,
+      "sha256": "c41aa9bc723c538ff10b4ed55d61831e35c1e80cfc222dd39a0d58d8ec3fc285",
+      "retrieved_at": "2026-09-10T17:30:17.972905+00:00",
+      "status": 200
+    },
+    {
+      "repo": "widelands/widelands",
+      "path": "src/logic/map_objects/tribes/productionsite.cc",
+      "url": "https://raw.githubusercontent.com/widelands/widelands/187e4e257c2e127ec2c607f8c7765f774e2474ec/src/logic/map_objects/tribes/productionsite.cc",
+      "bytes": 47664,
+      "sha256": "7f80fa5c0e5247da12110199e4a02d8a758340b7194b8a5b74c07b0adbb41681",
+      "retrieved_at": "2026-09-10T17:30:17.973101+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenTTD/OpenTTD",
+      "path": "COPYING.md",
+      "url": "https://raw.githubusercontent.com/OpenTTD/OpenTTD/d1af18d1b66da003551fcc2139080ae28fd0630c/COPYING.md",
+      "bytes": 17949,
+      "sha256": "50ac792e113700dd23ecb25ed6f341eb383bed36cb8fd87aa164f4e44f2760b3",
+      "retrieved_at": "2026-09-10T17:30:17.967190+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenTTD/OpenTTD",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/OpenTTD/OpenTTD/d1af18d1b66da003551fcc2139080ae28fd0630c/README.md",
+      "bytes": 9747,
+      "sha256": "1d3ef552927e7e52239eab89c2b213fffd3c006f008bacfd13187018a534dd86",
+      "retrieved_at": "2026-09-10T17:30:18.056297+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenTTD/OpenTTD",
+      "path": "src/economy.cpp",
+      "url": "https://raw.githubusercontent.com/OpenTTD/OpenTTD/d1af18d1b66da003551fcc2139080ae28fd0630c/src/economy.cpp",
+      "bytes": 77965,
+      "sha256": "e07049655f528d0c68d6bb6027a75394fdcf2f93f0476d056cf4ad94d8e00040",
+      "retrieved_at": "2026-09-10T17:30:18.171979+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenTTD/OpenTTD",
+      "path": "src/pathfinder/yapf/yapf_road.cpp",
+      "url": "https://raw.githubusercontent.com/OpenTTD/OpenTTD/d1af18d1b66da003551fcc2139080ae28fd0630c/src/pathfinder/yapf/yapf_road.cpp",
+      "bytes": 16620,
+      "sha256": "9548251cf401081843ef80544f59bb45137ec70e2565dc4dcb12eb2f173ef154",
+      "retrieved_at": "2026-09-10T17:30:18.120626+00:00",
+      "status": 200
+    },
+    {
+      "repo": "0ad/0ad",
+      "path": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/0ad/0ad/61a3b9507d974084e6badb88a0826bd89a6d5b8b/LICENSE.txt",
+      "bytes": 3049,
+      "sha256": "cb9eb5e8768328e8086b0d17bd1b95f07b51bc9ab74fa1b509ee09c7894b2f53",
+      "retrieved_at": "2026-09-10T17:30:18.135040+00:00",
+      "status": 200
+    },
+    {
+      "repo": "0ad/0ad",
+      "path": "README.txt",
+      "url": "https://raw.githubusercontent.com/0ad/0ad/61a3b9507d974084e6badb88a0826bd89a6d5b8b/README.txt",
+      "bytes": 2044,
+      "sha256": "4e9a76e58ec1ba7d5e58cc69cf6ddf5b9cd332b9a2b6f988f3a8d8aca98511f2",
+      "retrieved_at": "2026-09-10T17:30:18.121206+00:00",
+      "status": 200
+    },
+    {
+      "repo": "0ad/0ad",
+      "path": "binaries/data/mods/public/simulation/components/ProductionQueue.js",
+      "url": "https://raw.githubusercontent.com/0ad/0ad/61a3b9507d974084e6badb88a0826bd89a6d5b8b/binaries/data/mods/public/simulation/components/ProductionQueue.js",
+      "bytes": 13689,
+      "sha256": "9ac44fa5b32721a0783c6e14d7aaa88830a8948031ebc6b6aeaa8aad5e86e10a",
+      "retrieved_at": "2026-09-10T17:30:18.135635+00:00",
+      "status": 200
+    },
+    {
+      "repo": "0ad/0ad",
+      "path": "binaries/data/mods/public/simulation/components/ResourceGatherer.js",
+      "url": "https://raw.githubusercontent.com/0ad/0ad/61a3b9507d974084e6badb88a0826bd89a6d5b8b/binaries/data/mods/public/simulation/components/ResourceGatherer.js",
+      "bytes": 15284,
+      "sha256": "07808dfac8d4b9528b5332c1d0f8788952fb004cf1e8c03a0a43b23401863d53",
+      "retrieved_at": "2026-09-10T17:30:18.145357+00:00",
+      "status": 200
+    },
+    {
+      "repo": "freeciv/freeciv",
+      "path": "COPYING",
+      "url": "https://raw.githubusercontent.com/freeciv/freeciv/61db53503f9243aca417848a72864be69635235e/COPYING",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "retrieved_at": "2026-09-10T17:30:18.119837+00:00",
+      "status": 200
+    },
+    {
+      "repo": "freeciv/freeciv",
+      "path": "README",
+      "url": "https://raw.githubusercontent.com/freeciv/freeciv/61db53503f9243aca417848a72864be69635235e/README",
+      "bytes": 74,
+      "sha256": "6e4774d36ed96ca69b9d5f4c70b7023dee4133c66aa501bde2704af326595e21",
+      "retrieved_at": "2026-09-10T17:30:18.120844+00:00",
+      "status": 200
+    },
+    {
+      "repo": "freeciv/freeciv",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/freeciv/freeciv/61db53503f9243aca417848a72864be69635235e/README.md",
+      "bytes": 770,
+      "sha256": "b6b586009a8c2825e5645ee53ea0d43ead8160baac53c330c5153a0ed020f7fa",
+      "retrieved_at": "2026-09-10T17:30:18.482575+00:00",
+      "status": 200
+    },
+    {
+      "repo": "freeciv/freeciv",
+      "path": "common/aicore/path_finding.c",
+      "url": "https://raw.githubusercontent.com/freeciv/freeciv/61db53503f9243aca417848a72864be69635235e/common/aicore/path_finding.c",
+      "bytes": 145538,
+      "sha256": "436a309cc0471c0f40bbf7eb45bf3b8bf20cd0e3be8290ed59452635fe13b0d6",
+      "retrieved_at": "2026-09-10T17:30:18.580556+00:00",
+      "status": 200
+    },
+    {
+      "repo": "freeciv/freeciv",
+      "path": "server/cityturn.c",
+      "url": "https://raw.githubusercontent.com/freeciv/freeciv/61db53503f9243aca417848a72864be69635235e/server/cityturn.c",
+      "bytes": 185870,
+      "sha256": "dd37e9cb5e53d583a8af2c8482a504845d69b912173d827ab301021580cf8ff5",
+      "retrieved_at": "2026-09-10T17:30:18.582376+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenRCT2/OpenRCT2",
+      "path": "debian/copyright",
+      "url": "https://raw.githubusercontent.com/OpenRCT2/OpenRCT2/bb118516646347d73e7eb0d30de9eef2f5b16043/debian/copyright",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retrieved_at": "2026-09-10T17:30:18.482136+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenRCT2/OpenRCT2",
+      "path": "licence.txt",
+      "url": "https://raw.githubusercontent.com/OpenRCT2/OpenRCT2/bb118516646347d73e7eb0d30de9eef2f5b16043/licence.txt",
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "retrieved_at": "2026-09-10T17:30:18.493919+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenRCT2/OpenRCT2",
+      "path": "readme.md",
+      "url": "https://raw.githubusercontent.com/OpenRCT2/OpenRCT2/bb118516646347d73e7eb0d30de9eef2f5b16043/readme.md",
+      "bytes": 14349,
+      "sha256": "419d4446c76e96ea3a8b76cd7b926bca9a7bc10cb27be22e36467794890de9a9",
+      "retrieved_at": "2026-09-10T17:30:18.482815+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenRCT2/OpenRCT2",
+      "path": "src/openrct2/management/Finance.cpp",
+      "url": "https://raw.githubusercontent.com/OpenRCT2/OpenRCT2/bb118516646347d73e7eb0d30de9eef2f5b16043/src/openrct2/management/Finance.cpp",
+      "bytes": 10605,
+      "sha256": "d5ac9947f06dc5de19f89bc285f0890d9e9bad31e5be7ba0b886460b76d595dd",
+      "retrieved_at": "2026-09-10T17:30:18.494581+00:00",
+      "status": 200
+    },
+    {
+      "repo": "OpenRCT2/OpenRCT2",
+      "path": "src/openrct2/peep/GuestPathfinding.cpp",
+      "url": "https://raw.githubusercontent.com/OpenRCT2/OpenRCT2/bb118516646347d73e7eb0d30de9eef2f5b16043/src/openrct2/peep/GuestPathfinding.cpp",
+      "bytes": 88697,
+      "sha256": "9aed51892e17efd48283823209b2e9c5a5a8bd38b2fee2a8c170ade76d886c12",
+      "retrieved_at": "2026-09-10T17:30:18.533776+00:00",
+      "status": 200
+    },
+    {
+      "repo": "luanti-org/luanti",
+      "path": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/luanti-org/luanti/c5ba5f754af552a3451f1ded86955d393de82c29/LICENSE.txt",
+      "bytes": 8793,
+      "sha256": "f37450f476f997f14fbed7a1ba96462864fe4f689024b6903f71cf31973e84a5",
+      "retrieved_at": "2026-09-10T17:30:18.524661+00:00",
+      "status": 200
+    },
+    {
+      "repo": "luanti-org/luanti",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/luanti-org/luanti/c5ba5f754af552a3451f1ded86955d393de82c29/README.md",
+      "bytes": 7395,
+      "sha256": "1b08c200e5e5172058758d0a7d5df81f734c3077992dc59e98ad63803d223389",
+      "retrieved_at": "2026-09-10T17:30:18.546733+00:00",
+      "status": 200
+    },
+    {
+      "repo": "luanti-org/luanti",
+      "path": "src/mapgen/mapgen_v7.cpp",
+      "url": "https://raw.githubusercontent.com/luanti-org/luanti/c5ba5f754af552a3451f1ded86955d393de82c29/src/mapgen/mapgen_v7.cpp",
+      "bytes": 20577,
+      "sha256": "800f49ec979debe5e468db6d768c4c6e41acab02734910471a616623e6bb7ebb",
+      "retrieved_at": "2026-09-10T17:30:18.669731+00:00",
+      "status": 200
+    },
+    {
+      "repo": "luanti-org/luanti",
+      "path": "src/pathfinder.cpp",
+      "url": "https://raw.githubusercontent.com/luanti-org/luanti/c5ba5f754af552a3451f1ded86955d393de82c29/src/pathfinder.cpp",
+      "bytes": 39423,
+      "sha256": "e57b2ccffd5d20c394d5f67410ff69a30a08494a1b0750c2bd23d6544584d794",
+      "retrieved_at": "2026-09-10T17:30:18.687097+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "2d/navigation_astar/README.md",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/README.md",
+      "bytes": 424,
+      "sha256": "bb2e218f9c6ed2031c1e8b190aaf5a501b5217ef9baed642b55b19b294e11ea2",
+      "retrieved_at": "2026-09-10T17:30:18.671077+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "2d/navigation_astar/character.gd",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/character.gd",
+      "bytes": 1976,
+      "sha256": "f4641acbd94fc0d9fc63a7772c1b7ebf7b50f0b4a613c946a09bfe977ef15cf3",
+      "retrieved_at": "2026-09-10T17:30:18.714776+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "2d/navigation_astar/pathfind_astar.gd",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/pathfind_astar.gd",
+      "bytes": 2854,
+      "sha256": "5a0a52dbadf602c4dbe1dbf3089b6cd0bf4783d133cbf13556dca2bc6d12fdf6",
+      "retrieved_at": "2026-09-10T17:30:18.670719+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "2d/navigation_astar/project.godot",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/project.godot",
+      "bytes": 1876,
+      "sha256": "c5af8c43325f0569be997b2b221fa27b2a49473497dcad71f9fdc306e9246847",
+      "retrieved_at": "2026-09-10T17:30:18.670922+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "2d/platformer/README.md",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/README.md",
+      "bytes": 1607,
+      "sha256": "0bea2336f460e14c14c9c27991e893d0406272d140ffdc3e0c7c497ad286b681",
+      "retrieved_at": "2026-09-10T17:30:18.686874+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "2d/platformer/gui/pause_menu.gd",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/gui/pause_menu.gd",
+      "bytes": 1727,
+      "sha256": "dd6b35bf9128c11f6ee12cb730c7140565577aa168ce58d037e5349c0faf4deb",
+      "retrieved_at": "2026-09-10T17:30:18.714497+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "2d/platformer/player/player.gd",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/player/player.gd",
+      "bytes": 2620,
+      "sha256": "48820dec4ffa62fc0432f891bad027b81d0e4d8f8cb5fdb50fb3ca58f95031c9",
+      "retrieved_at": "2026-09-10T17:30:18.713968+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "2d/platformer/project.godot",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/project.godot",
+      "bytes": 13424,
+      "sha256": "46b02143b3cd454c0bd5f00e5baf9856ef4dfe18dfc2fd34475be14bb6804f3c",
+      "retrieved_at": "2026-09-10T17:30:18.714116+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "3d/platformer/README.md",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/README.md",
+      "bytes": 602,
+      "sha256": "1b3cc9b1c1be2d1f7f8f7587b406ec416d66e6f34a378a75a8d1e80d1b2c5055",
+      "retrieved_at": "2026-09-10T17:30:19.014518+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "3d/platformer/player/follow_camera.gd",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/player/follow_camera.gd",
+      "bytes": 2886,
+      "sha256": "571a9d9e9d26183981d5ff20b79adf5041ca19ae696672ecd470bed8fc413423",
+      "retrieved_at": "2026-09-10T17:30:19.007200+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "3d/platformer/player/player.gd",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/player/player.gd",
+      "bytes": 6337,
+      "sha256": "bc8f935a1f0301a1b4715cd0a7de16e574ed6c7ad496e9029b0ad3fb4b646a54",
+      "retrieved_at": "2026-09-10T17:30:19.006587+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "3d/platformer/project.godot",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/project.godot",
+      "bytes": 12570,
+      "sha256": "262c4dccd8b889e7b40607e106c651ee852155947b133fe181dbe4afe89452f0",
+      "retrieved_at": "2026-09-10T17:30:19.007637+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "3d/truck_town/README.md",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/README.md",
+      "bytes": 2848,
+      "sha256": "a583213bba6c64023adfac17f200877e0af050cf763b6e7a71d7da5a525ca20b",
+      "retrieved_at": "2026-09-10T17:30:19.006183+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "3d/truck_town/project.godot",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/project.godot",
+      "bytes": 16256,
+      "sha256": "a1e78b6b36157d4d15d670a1bebc38300507f4eaf9102a19dacad422057b474e",
+      "retrieved_at": "2026-09-10T17:30:19.007530+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "3d/truck_town/vehicles/follow_camera.gd",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/vehicles/follow_camera.gd",
+      "bytes": 3039,
+      "sha256": "3c3e5e44c78646b3ec96b70a311e19ae64defe0b1cadee90ed4bfe2f91679677",
+      "retrieved_at": "2026-09-10T17:30:19.006786+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "3d/truck_town/vehicles/vehicle.gd",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/vehicles/vehicle.gd",
+      "bytes": 4296,
+      "sha256": "2a05112e3d56dfdb11e40735f0c1587bb3aa01f43bd41b207614e08fc2740b12",
+      "retrieved_at": "2026-09-10T17:30:19.007083+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "LICENSE.md",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "bytes": 1134,
+      "sha256": "0339177149b474f7ff676d32218ecb3a8f2538955610023c3769763720d09e4c",
+      "retrieved_at": "2026-09-10T17:30:19.004893+00:00",
+      "status": 200
+    },
+    {
+      "repo": "godotengine/godot-demo-projects",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/godotengine/godot-demo-projects/a3b5c113112f77291d5f3d1360f33a882fdc52f7/README.md",
+      "bytes": 2263,
+      "sha256": "4c121fc88a1412b8e381263146ac67937c485386e79641569117a6516dd64ba3",
+      "retrieved_at": "2026-09-10T17:30:19.005920+00:00",
+      "status": 200
+    },
+    {
+      "repo": "endless-sky/endless-sky",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/endless-sky/endless-sky/88ec756f5d1868b3d8a024c9211011f6928bb9c0/README.md",
+      "bytes": 3920,
+      "sha256": "190cf9d7b8eabfd2c87af5f602822a6a88f3f6f29cdf1f8ed9ed4efb70e2ba89",
+      "retrieved_at": "2026-09-10T17:30:19.145365+00:00",
+      "status": 200
+    },
+    {
+      "repo": "endless-sky/endless-sky",
+      "path": "copyright",
+      "url": "https://raw.githubusercontent.com/endless-sky/endless-sky/88ec756f5d1868b3d8a024c9211011f6928bb9c0/copyright",
+      "bytes": 183927,
+      "sha256": "640e26854ddc39cd496f68caa41e034bf0f9a475dae5c586126c56a1efdd2fe3",
+      "retrieved_at": "2026-09-10T17:30:19.237284+00:00",
+      "status": 200
+    },
+    {
+      "repo": "endless-sky/endless-sky",
+      "path": "license.txt",
+      "url": "https://raw.githubusercontent.com/endless-sky/endless-sky/88ec756f5d1868b3d8a024c9211011f6928bb9c0/license.txt",
+      "bytes": 35141,
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+      "retrieved_at": "2026-09-10T17:30:19.132334+00:00",
+      "status": 200
+    },
+    {
+      "repo": "endless-sky/endless-sky",
+      "path": "source/AI.cpp",
+      "url": "https://raw.githubusercontent.com/endless-sky/endless-sky/88ec756f5d1868b3d8a024c9211011f6928bb9c0/source/AI.cpp",
+      "bytes": 187293,
+      "sha256": "4d9b5e4858ee4358a18db0276e61f80e8296d81430717e005290549d980f4491",
+      "retrieved_at": "2026-09-10T17:30:19.529788+00:00",
+      "status": 200
+    },
+    {
+      "repo": "endless-sky/endless-sky",
+      "path": "source/TradingPanel.cpp",
+      "url": "https://raw.githubusercontent.com/endless-sky/endless-sky/88ec756f5d1868b3d8a024c9211011f6928bb9c0/source/TradingPanel.cpp",
+      "bytes": 12264,
+      "sha256": "5aef8ab2040c44d534f6b4867c6bd9e2857e294fcbc5aeb0117cd29ddacf0144",
+      "retrieved_at": "2026-09-10T17:30:19.237448+00:00",
+      "status": 200
+    },
+    {
+      "repo": "veloren/veloren",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/veloren/veloren/5a8d6dc9d1bc543a59bed976007abecc248d9195/LICENSE",
+      "bytes": 35087,
+      "sha256": "d456cea09bced6a05ff960bd69f7a739c78582baeb79e1cb5edefe6846a78cc5",
+      "retrieved_at": "2026-09-10T17:30:19.146347+00:00",
+      "status": 200
+    },
+    {
+      "repo": "veloren/veloren",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/veloren/veloren/5a8d6dc9d1bc543a59bed976007abecc248d9195/README.md",
+      "bytes": 6418,
+      "sha256": "2af6629c480325ab17aec0dcc0a8b062c9e76844f27c1bf5efaea6691278e880",
+      "retrieved_at": "2026-09-10T17:30:19.112460+00:00",
+      "status": 200
+    },
+    {
+      "repo": "veloren/veloren",
+      "path": "common/src/combat.rs",
+      "url": "https://raw.githubusercontent.com/veloren/veloren/5a8d6dc9d1bc543a59bed976007abecc248d9195/common/src/combat.rs",
+      "bytes": 92238,
+      "sha256": "a21e13aa3f218e676a802d54da2b01e50b79434da075f6d7769a99706a3c60f5",
+      "retrieved_at": "2026-09-10T17:30:19.225542+00:00",
+      "status": 200
+    },
+    {
+      "repo": "veloren/veloren",
+      "path": "common/src/path.rs",
+      "url": "https://raw.githubusercontent.com/veloren/veloren/5a8d6dc9d1bc543a59bed976007abecc248d9195/common/src/path.rs",
+      "bytes": 52988,
+      "sha256": "539b2661c4e63fde9bf6d323fc2fde81db873cdc3f9b5c895bec74bb80dd7b45",
+      "retrieved_at": "2026-09-10T17:30:19.529428+00:00",
+      "status": 200
+    },
+    {
+      "repo": "0ad-primary",
+      "path": "README.md",
+      "url": "https://gitea.wildfiregames.com/0ad/0ad/raw/commit/58e2c5946621b15f96d8da8f5e0201f278f7ac99/README.md",
+      "bytes": 3866,
+      "sha256": "903d2a3200ecaa363eaee6681d0efd40671a7286362735758f75bc1fcd5931df",
+      "retrieved_at": "2026-09-10T17:32:10.308789+00:00",
+      "status": 200
+    },
+    {
+      "path": "README.txt",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "LICENSE.txt",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "repo": "0ad-primary",
+      "path": "license_gpl-2.0.txt",
+      "url": "https://gitea.wildfiregames.com/0ad/0ad/raw/commit/58e2c5946621b15f96d8da8f5e0201f278f7ac99/license_gpl-2.0.txt",
+      "bytes": 17987,
+      "sha256": "ab15fd526bd8dd18a9e77ebc139656bf4d33e97fc7238cd11bf60e2b9b8666c6",
+      "retrieved_at": "2026-09-10T17:32:10.826304+00:00",
+      "status": 200
+    },
+    {
+      "repo": "0ad-primary",
+      "path": "binaries/data/mods/public/art/LICENSE.txt",
+      "url": "https://gitea.wildfiregames.com/0ad/0ad/raw/commit/58e2c5946621b15f96d8da8f5e0201f278f7ac99/binaries/data/mods/public/art/LICENSE.txt",
+      "bytes": 1426,
+      "sha256": "ef98babd771c206032e005f3d440a1e610df409d9a9191f03e64deaa4abefbd9",
+      "retrieved_at": "2026-09-10T17:32:10.310368+00:00",
+      "status": 200
+    },
+    {
+      "repo": "0ad-primary",
+      "path": "binaries/data/mods/public/audio/LICENSE.txt",
+      "url": "https://gitea.wildfiregames.com/0ad/0ad/raw/commit/58e2c5946621b15f96d8da8f5e0201f278f7ac99/binaries/data/mods/public/audio/LICENSE.txt",
+      "bytes": 836,
+      "sha256": "dabb2ee881522112ee70539aec179f3a639b8fc58e6a7ca06df2791fabd51537",
+      "retrieved_at": "2026-09-10T17:32:10.310053+00:00",
+      "status": 200
+    },
+    {
+      "repo": "0ad-primary",
+      "path": "binaries/data/mods/public/simulation/components/ResourceGatherer.js",
+      "url": "https://gitea.wildfiregames.com/0ad/0ad/raw/commit/58e2c5946621b15f96d8da8f5e0201f278f7ac99/binaries/data/mods/public/simulation/components/ResourceGatherer.js",
+      "bytes": 16103,
+      "sha256": "a51573fea3ed9177778536317720ed79fe7f90d875ddfdef362086f00e4f28e2",
+      "retrieved_at": "2026-09-10T17:32:10.310811+00:00",
+      "status": 200
+    },
+    {
+      "repo": "0ad-primary",
+      "path": "binaries/data/mods/public/simulation/components/ProductionQueue.js",
+      "url": "https://gitea.wildfiregames.com/0ad/0ad/raw/commit/58e2c5946621b15f96d8da8f5e0201f278f7ac99/binaries/data/mods/public/simulation/components/ProductionQueue.js",
+      "bytes": 13888,
+      "sha256": "aede6eef28572355d4fcf61aab0194ebba731b7d5889343142ad1b3fdfa540d1",
+      "retrieved_at": "2026-09-10T17:32:10.311434+00:00",
+      "status": 200
+    },
+    {
+      "repo": "0ad-primary",
+      "path": "LICENSE.md",
+      "url": "https://gitea.wildfiregames.com/0ad/0ad/raw/commit/58e2c5946621b15f96d8da8f5e0201f278f7ac99/LICENSE.md",
+      "bytes": 3019,
+      "sha256": "d3150187644372bfdc41ad287e1670cb7f7f0e34d162a5d493bfb3eb92ee5f31",
+      "status": 200,
+      "retrieved_at": "2026-09-10T17:34:56.320282+00:00"
+    }
+  ]
+}

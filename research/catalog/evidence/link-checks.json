@@ -1,0 +1,4112 @@
+{
+  "started_at": "2026-09-10T17:38:32.507170+00:00",
+  "completed_at": "2026-09-10T17:39:05.945848+00:00",
+  "record_count": 43,
+  "unique_url_count": 125,
+  "all_evidence": false,
+  "method": "HEAD with at most one GET fallback for 403/405; public-address-pinned connections; manual validated redirects; no project execution.",
+  "limits": {
+    "socket_timeout_seconds": 15.0,
+    "concurrency": 4,
+    "body_bytes_per_response": 1024,
+    "redirects": 5,
+    "fallback_gets_per_url": 1
+  },
+  "limitations": [
+    "HTTP reachability never establishes gameplay, source/demo revision identity, rights clearance or integration readiness.",
+    "15-second timeout applies to socket operations; system DNS resolution follows the operating system resolver timeout.",
+    "Blocked/rate-limited services and temporarily failed IPv4/IPv6 routes remain explicit; no proxy or credential bypass is attempted.",
+    "Credential-bearing redirect query strings are removed from durable URLs; url_redactions identifies changed fields."
+  ],
+  "counts": {
+    "reachable": 119,
+    "blocked": 1,
+    "restricted": 1,
+    "error": 4
+  },
+  "checks": [
+    {
+      "url": "https://adarkroom.doublespeakgames.com",
+      "checked_at": "2026-09-10T17:38:32.508630+00:00",
+      "final_url": "https://adarkroom.doublespeakgames.com",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://adarkroom.doublespeakgames.com",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "104.21.24.195",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.811,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "a-dark-room",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://anuke.itch.io/mindustry",
+      "checked_at": "2026-09-10T17:38:32.508746+00:00",
+      "final_url": "https://anuke.itch.io/mindustry",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://anuke.itch.io/mindustry",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "172.67.69.99",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.334,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "mindustry",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://brm.io/matter-js/demo/",
+      "checked_at": "2026-09-10T17:38:32.508825+00:00",
+      "final_url": "https://brm.io/matter-js/demo/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://brm.io/matter-js/demo/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "216.239.34.21",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.86,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "matter-js",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://cataclysmdda.org/",
+      "checked_at": "2026-09-10T17:38:32.508894+00:00",
+      "final_url": "https://cataclysmdda.org/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://cataclysmdda.org/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "104.21.76.9",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.333,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "cataclysm-dda",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://cataclysmdda.org/releases/",
+      "checked_at": "2026-09-10T17:38:33.319674+00:00",
+      "final_url": "https://cataclysmdda.org/releases/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://cataclysmdda.org/releases/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "104.21.76.9",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.12,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "cataclysm-dda",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://cloud.githubusercontent.com/assets/1175750/8614312/280e5dc2-26f1-11e5-9f1f-5891c3ca8b26.png",
+      "checked_at": "2026-09-10T17:38:33.439745+00:00",
+      "final_url": "https://cloud.githubusercontent.com/assets/1175750/8614312/280e5dc2-26f1-11e5-9f1f-5891c3ca8b26.png",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://cloud.githubusercontent.com/assets/1175750/8614312/280e5dc2-26f1-11e5-9f1f-5891c3ca8b26.png",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/png",
+          "bytes_read": 0,
+          "connected_address": "185.199.109.133",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.486,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "2048",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://docs.pmnd.rs/drei",
+      "checked_at": "2026-09-10T17:38:33.841538+00:00",
+      "final_url": "http://drei.docs.pmnd.rs",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://docs.pmnd.rs/drei",
+          "method": "HEAD",
+          "http_status": 308,
+          "location": "https://pmndrs.github.io/drei",
+          "content_type": "text/plain",
+          "bytes_read": 0,
+          "connected_address": "104.21.31.12",
+          "body_skipped": false
+        },
+        {
+          "url": "https://pmndrs.github.io/drei",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "http://drei.docs.pmnd.rs",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        },
+        {
+          "url": "http://drei.docs.pmnd.rs",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.74,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "drei",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://drei.pmnd.rs/",
+      "checked_at": "2026-09-10T17:38:33.842827+00:00",
+      "final_url": "https://drei.pmnd.rs/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://drei.pmnd.rs/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "104.21.31.12",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.685,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "drei",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://ecctrl.app/",
+      "checked_at": "2026-09-10T17:38:34.368651+00:00",
+      "final_url": "https://ecctrl.app/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://ecctrl.app/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "216.198.79.1",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.57,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "ecctrl",
+          "field": "project_url"
+        },
+        {
+          "record_id": "ecctrl",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://ellisonleao.github.io/clumsy-bird/",
+      "checked_at": "2026-09-10T17:38:34.527910+00:00",
+      "final_url": "https://ellisonleao.github.io/clumsy-bird/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://ellisonleao.github.io/clumsy-bird/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.397,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "clumsy-bird",
+          "field": "project_url"
+        },
+        {
+          "record_id": "clumsy-bird",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://endless-sky.github.io/",
+      "checked_at": "2026-09-10T17:38:34.925263+00:00",
+      "final_url": "https://endless-sky.github.io/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://endless-sky.github.io/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.110.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.586,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "endless-sky",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://fablecities.rawscollections.com",
+      "checked_at": "2026-09-10T17:38:34.925998+00:00",
+      "final_url": "https://fablecities.rawscollections.com",
+      "method": "HEAD",
+      "http_status": null,
+      "result": "blocked",
+      "error": {
+        "type": "UnsafeURL",
+        "message": "Destination resolves to a non-public address"
+      },
+      "attempts": [],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.05,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "fable-cities",
+          "field": "project_url"
+        },
+        {
+          "record_id": "fable-cities",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://gitea.wildfiregames.com/0ad/0ad",
+      "checked_at": "2026-09-10T17:38:34.938371+00:00",
+      "final_url": "https://gitea.wildfiregames.com/0ad/0ad",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://gitea.wildfiregames.com/0ad/0ad",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.524,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "zero-ad",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Anuken/Mindustry",
+      "checked_at": "2026-09-10T17:38:34.976151+00:00",
+      "final_url": "https://github.com/Anuken/Mindustry",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/Anuken/Mindustry",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.002,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "mindustry",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/BKcore/HexGL",
+      "checked_at": "2026-09-10T17:38:35.581168+00:00",
+      "final_url": "https://github.com/BKcore/HexGL",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/BKcore/HexGL",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.917,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "hexgl",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/CleverRaven/Cataclysm-DDA",
+      "checked_at": "2026-09-10T17:38:35.978031+00:00",
+      "final_url": "https://github.com/CleverRaven/Cataclysm-DDA",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/CleverRaven/Cataclysm-DDA",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.624,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "cataclysm-dda",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/CleverRaven/Cataclysm-DDA/blob/7b123884d93a9a8432d690d528698f6a907d5cce/data/screenshots/ultica-showcase-sep-2021.png",
+      "checked_at": "2026-09-10T17:38:36.462117+00:00",
+      "final_url": "https://github.com/CleverRaven/Cataclysm-DDA/blob/7b123884d93a9a8432d690d528698f6a907d5cce/data/screenshots/ultica-showcase-sep-2021.png",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/CleverRaven/Cataclysm-DDA/blob/7b123884d93a9a8432d690d528698f6a907d5cce/data/screenshots/ultica-showcase-sep-2021.png",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.566,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "cataclysm-dda",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/FreeCol/freecol",
+      "checked_at": "2026-09-10T17:38:36.498519+00:00",
+      "final_url": "https://github.com/FreeCol/freecol",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/FreeCol/freecol",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.49,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "freecol",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/FreeCol/freecol/releases",
+      "checked_at": "2026-09-10T17:38:36.511297+00:00",
+      "final_url": "https://github.com/FreeCol/freecol/releases",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/FreeCol/freecol/releases",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.006,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "freecol",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Hextris/hextris",
+      "checked_at": "2026-09-10T17:38:36.601734+00:00",
+      "final_url": "https://github.com/Hextris/hextris",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/Hextris/hextris",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.917,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "hextris",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/IceCreamYou/THREE.Terrain",
+      "checked_at": "2026-09-10T17:38:36.988108+00:00",
+      "final_url": "https://github.com/IceCreamYou/THREE.Terrain",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/IceCreamYou/THREE.Terrain",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.678,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "three-terrain",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/KilledByAPixel/LittleJS",
+      "checked_at": "2026-09-10T17:38:37.028476+00:00",
+      "final_url": "https://github.com/KilledByAPixel/LittleJS",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/KilledByAPixel/LittleJS",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.487,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "littlejs",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/Mugen87/yuka",
+      "checked_at": "2026-09-10T17:38:37.515474+00:00",
+      "final_url": "https://github.com/Mugen87/yuka",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/Mugen87/yuka",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.526,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "yuka",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/OpenRA/OpenRA",
+      "checked_at": "2026-09-10T17:38:37.517443+00:00",
+      "final_url": "https://github.com/OpenRA/OpenRA",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/OpenRA/OpenRA",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.522,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "openra",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/OpenRCT2/OpenRCT2",
+      "checked_at": "2026-09-10T17:38:37.518705+00:00",
+      "final_url": "https://github.com/OpenRCT2/OpenRCT2",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/OpenRCT2/OpenRCT2",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.618,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "openrct2",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/OpenTTD/OpenTTD",
+      "checked_at": "2026-09-10T17:38:37.666071+00:00",
+      "final_url": "https://github.com/OpenTTD/OpenTTD",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/OpenTTD/OpenTTD",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.902,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "openttd",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/SuperTux/supertux",
+      "checked_at": "2026-09-10T17:38:38.039309+00:00",
+      "final_url": "https://github.com/SuperTux/supertux",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/SuperTux/supertux",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.631,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "supertux",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/donmccurdy/three-pathfinding",
+      "checked_at": "2026-09-10T17:38:38.041111+00:00",
+      "final_url": "https://github.com/donmccurdy/three-pathfinding",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/donmccurdy/three-pathfinding",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.528,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "three-pathfinding",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/doublespeakgames/adarkroom",
+      "checked_at": "2026-09-10T17:38:38.137257+00:00",
+      "final_url": "https://github.com/doublespeakgames/adarkroom",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/doublespeakgames/adarkroom",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.969,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "a-dark-room",
+          "field": "repo_url"
+        },
+        {
+          "record_id": "a-dark-room",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/ellisonleao/clumsy-bird",
+      "checked_at": "2026-09-10T17:38:38.568250+00:00",
+      "final_url": "https://github.com/ellisonleao/clumsy-bird",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/ellisonleao/clumsy-bird",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.569,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "clumsy-bird",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/endless-sky/endless-sky",
+      "checked_at": "2026-09-10T17:38:38.569427+00:00",
+      "final_url": "https://github.com/endless-sky/endless-sky",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/endless-sky/endless-sky",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.517,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "endless-sky",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/endless-sky/endless-sky/releases/latest",
+      "checked_at": "2026-09-10T17:38:38.670071+00:00",
+      "final_url": "https://github.com/endless-sky/endless-sky/releases/tag/v0.11.2",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/endless-sky/endless-sky/releases/latest",
+          "method": "HEAD",
+          "http_status": 302,
+          "location": "https://github.com/endless-sky/endless-sky/releases/tag/v0.11.2",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        },
+        {
+          "url": "https://github.com/endless-sky/endless-sky/releases/tag/v0.11.2",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.94,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "endless-sky",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/freeciv/freeciv",
+      "checked_at": "2026-09-10T17:38:39.086572+00:00",
+      "final_url": "https://github.com/freeciv/freeciv",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/freeciv/freeciv",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.526,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "freeciv",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/gabrielecirulli/2048",
+      "checked_at": "2026-09-10T17:38:39.106638+00:00",
+      "final_url": "https://github.com/gabrielecirulli/2048",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/gabrielecirulli/2048",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.505,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "2048",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/gkjohnson/three-mesh-bvh",
+      "checked_at": "2026-09-10T17:38:39.137363+00:00",
+      "final_url": "https://github.com/gkjohnson/three-mesh-bvh",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/gkjohnson/three-mesh-bvh",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.636,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "three-mesh-bvh",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/godotengine/godot-demo-projects",
+      "checked_at": "2026-09-10T17:38:39.609930+00:00",
+      "final_url": "https://github.com/godotengine/godot-demo-projects",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/godotengine/godot-demo-projects",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.555,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-platformer-2d",
+          "field": "repo_url"
+        },
+        {
+          "record_id": "godot-platformer-3d",
+          "field": "repo_url"
+        },
+        {
+          "record_id": "godot-truck-town",
+          "field": "repo_url"
+        },
+        {
+          "record_id": "godot-astar-grid-2d",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/README.md",
+      "checked_at": "2026-09-10T17:38:39.611795+00:00",
+      "final_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/README.md",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/README.md",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.52,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-astar-grid-2d",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/screenshots/navigation_astar.webp",
+      "checked_at": "2026-09-10T17:38:39.612711+00:00",
+      "final_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/screenshots/navigation_astar.webp",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/navigation_astar/screenshots/navigation_astar.webp",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.521,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-astar-grid-2d",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/README.md",
+      "checked_at": "2026-09-10T17:38:39.773597+00:00",
+      "final_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/README.md",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/README.md",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.885,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-platformer-2d",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/screenshots/platformer.webp",
+      "checked_at": "2026-09-10T17:38:40.132302+00:00",
+      "final_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/screenshots/platformer.webp",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/2d/platformer/screenshots/platformer.webp",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.524,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-platformer-2d",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/README.md",
+      "checked_at": "2026-09-10T17:38:40.133986+00:00",
+      "final_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/README.md",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/README.md",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.523,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-platformer-3d",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/screenshots/platformer.webp",
+      "checked_at": "2026-09-10T17:38:40.165058+00:00",
+      "final_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/screenshots/platformer.webp",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/platformer/screenshots/platformer.webp",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.519,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-platformer-3d",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/README.md",
+      "checked_at": "2026-09-10T17:38:40.656311+00:00",
+      "final_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/README.md",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/README.md",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.525,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-truck-town",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/screenshots/truck_town.webp",
+      "checked_at": "2026-09-10T17:38:40.657339+00:00",
+      "final_url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/screenshots/truck_town.webp",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/3d/truck_town/screenshots/truck_town.webp",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.522,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-truck-town",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/liabru/matter-js",
+      "checked_at": "2026-09-10T17:38:40.658668+00:00",
+      "final_url": "https://github.com/liabru/matter-js",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/liabru/matter-js",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.592,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "matter-js",
+          "field": "repo_url"
+        },
+        {
+          "record_id": "matter-js",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/lo-th/3d.city",
+      "checked_at": "2026-09-10T17:38:40.684547+00:00",
+      "final_url": "https://github.com/lo-th/3d.city",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/lo-th/3d.city",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.019,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "3d-city",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/luanti-org/luanti",
+      "checked_at": "2026-09-10T17:38:41.179126+00:00",
+      "final_url": "https://github.com/luanti-org/luanti",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/luanti-org/luanti",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.579,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "luanti",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon",
+      "checked_at": "2026-09-10T17:38:41.181073+00:00",
+      "final_url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.524,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "dungeon-forge",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/mozilla/BrowserQuest",
+      "checked_at": "2026-09-10T17:38:41.250391+00:00",
+      "final_url": "https://github.com/mozilla/BrowserQuest",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/mozilla/BrowserQuest",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.981,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "browserquest",
+          "field": "repo_url"
+        },
+        {
+          "record_id": "browserquest",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/mrdoob/three.js",
+      "checked_at": "2026-09-10T17:38:41.703304+00:00",
+      "final_url": "https://github.com/mrdoob/three.js",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/mrdoob/three.js",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.525,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "threejs",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter",
+      "checked_at": "2026-09-10T17:38:41.705208+00:00",
+      "final_url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.052,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "phaser-dungeon-crawler",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/pmndrs/drei",
+      "checked_at": "2026-09-10T17:38:41.758125+00:00",
+      "final_url": "https://github.com/pmndrs/drei",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/pmndrs/drei",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.473,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "drei",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/pmndrs/ecctrl",
+      "checked_at": "2026-09-10T17:38:42.228737+00:00",
+      "final_url": "https://github.com/pmndrs/ecctrl",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/pmndrs/ecctrl",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.692,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "ecctrl",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/pmndrs/racing-game",
+      "checked_at": "2026-09-10T17:38:42.230722+00:00",
+      "final_url": "https://github.com/pmndrs/racing-game",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/pmndrs/racing-game",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.649,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "pmndrs-racing-game",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/pmndrs/react-three-rapier",
+      "checked_at": "2026-09-10T17:38:42.231723+00:00",
+      "final_url": "https://github.com/pmndrs/react-three-rapier",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/pmndrs/react-three-rapier",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.049,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "react-three-rapier",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/rawprogress/fable-cities",
+      "checked_at": "2026-09-10T17:38:42.757689+00:00",
+      "final_url": "https://github.com/rawprogress/fable-cities",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/rawprogress/fable-cities",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.581,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "fable-cities",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/rbenzing/SlimCityGame",
+      "checked_at": "2026-09-10T17:38:42.879419+00:00",
+      "final_url": "https://github.com/rbenzing/SlimCityGame",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/rbenzing/SlimCityGame",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.003,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "slimcity",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/supertuxkart/stk-code",
+      "checked_at": "2026-09-10T17:38:42.920421+00:00",
+      "final_url": "https://github.com/supertuxkart/stk-code",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/supertuxkart/stk-code",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.987,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "supertuxkart",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/supertuxkart/stk-code/releases/latest",
+      "checked_at": "2026-09-10T17:38:43.280546+00:00",
+      "final_url": "https://github.com/supertuxkart/stk-code/releases/tag/1.5",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/supertuxkart/stk-code/releases/latest",
+          "method": "HEAD",
+          "http_status": 302,
+          "location": "https://github.com/supertuxkart/stk-code/releases/tag/1.5",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        },
+        {
+          "url": "https://github.com/supertuxkart/stk-code/releases/tag/1.5",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.05,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "supertuxkart",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/tweeres04/gather-it",
+      "checked_at": "2026-09-10T17:38:43.338911+00:00",
+      "final_url": "https://github.com/tweeres04/gather-it",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/tweeres04/gather-it",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.991,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "gather-it",
+          "field": "repo_url"
+        },
+        {
+          "record_id": "gather-it",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/user-attachments/assets/fa893cc8-1484-4751-94be-4ead00a6c8f9",
+      "checked_at": "2026-09-10T17:38:43.881966+00:00",
+      "final_url": "https://github-production-user-asset-6210df.s3.amazonaws.com/1478678/573678031-fa893cc8-1484-4751-94be-4ead00a6c8f9.webp",
+      "method": "GET",
+      "http_status": 403,
+      "result": "restricted",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/user-attachments/assets/fa893cc8-1484-4751-94be-4ead00a6c8f9",
+          "method": "HEAD",
+          "http_status": 302,
+          "location": "https://github-production-user-asset-6210df.s3.amazonaws.com/1478678/573678031-fa893cc8-1484-4751-94be-4ead00a6c8f9.webp",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        },
+        {
+          "url": "https://github-production-user-asset-6210df.s3.amazonaws.com/1478678/573678031-fa893cc8-1484-4751-94be-4ead00a6c8f9.webp",
+          "method": "HEAD",
+          "http_status": 403,
+          "location": null,
+          "content_type": "application/xml",
+          "bytes_read": 0,
+          "connected_address": "52.217.192.97",
+          "body_skipped": false
+        },
+        {
+          "url": "https://github-production-user-asset-6210df.s3.amazonaws.com/1478678/573678031-fa893cc8-1484-4751-94be-4ead00a6c8f9.webp",
+          "method": "GET",
+          "http_status": 403,
+          "location": null,
+          "content_type": "application/xml",
+          "bytes_read": 1024,
+          "connected_address": "52.217.192.97",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.046,
+      "bytes_read": 1024,
+      "references": [
+        {
+          "record_id": "openrct2",
+          "field": "preview.source_url"
+        }
+      ],
+      "url_redactions": [
+        "final_url",
+        "attempts[0].location",
+        "attempts[1].url",
+        "attempts[2].url"
+      ]
+    },
+    {
+      "url": "https://github.com/wesnoth/wesnoth",
+      "checked_at": "2026-09-10T17:38:43.907079+00:00",
+      "final_url": "https://github.com/wesnoth/wesnoth",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/wesnoth/wesnoth",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.522,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "battle-for-wesnoth",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/widelands/widelands",
+      "checked_at": "2026-09-10T17:38:44.329517+00:00",
+      "final_url": "https://github.com/widelands/widelands",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/widelands/widelands",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.571,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "widelands",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/yairm210/Unciv",
+      "checked_at": "2026-09-10T17:38:44.330664+00:00",
+      "final_url": "https://github.com/yairm210/Unciv",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/yairm210/Unciv",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.538,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "unciv",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/extraImages/GithubPreviewImage.jpg",
+      "checked_at": "2026-09-10T17:38:44.429326+00:00",
+      "final_url": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/extraImages/GithubPreviewImage.jpg",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/extraImages/GithubPreviewImage.jpg",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "140.82.114.3",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 2.0,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "unciv",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://gitlab.com/veloren/veloren",
+      "checked_at": "2026-09-10T17:38:44.868561+00:00",
+      "final_url": "https://gitlab.com/veloren/veloren",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://gitlab.com/veloren/veloren",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "172.65.251.78",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.546,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "veloren",
+          "field": "repo_url"
+        }
+      ]
+    },
+    {
+      "url": "https://gkjohnson.github.io/three-mesh-bvh/example/bundle/raycast.html",
+      "checked_at": "2026-09-10T17:38:44.900203+00:00",
+      "final_url": "https://gkjohnson.github.io/three-mesh-bvh/example/bundle/raycast.html",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://gkjohnson.github.io/three-mesh-bvh/example/bundle/raycast.html",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.532,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "three-mesh-bvh",
+          "field": "project_url"
+        },
+        {
+          "record_id": "three-mesh-bvh",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://godotengine.github.io/godot-demo-projects/2d/navigation_astar/",
+      "checked_at": "2026-09-10T17:38:44.928099+00:00",
+      "final_url": "https://godotengine.github.io/godot-demo-projects/2d/navigation_astar/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://godotengine.github.io/godot-demo-projects/2d/navigation_astar/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.109.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.447,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-astar-grid-2d",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://godotengine.github.io/godot-demo-projects/2d/platformer/",
+      "checked_at": "2026-09-10T17:38:45.375151+00:00",
+      "final_url": "https://godotengine.github.io/godot-demo-projects/2d/platformer/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://godotengine.github.io/godot-demo-projects/2d/platformer/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.109.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.083,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-platformer-2d",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://godotengine.github.io/godot-demo-projects/3d/platformer/",
+      "checked_at": "2026-09-10T17:38:45.414863+00:00",
+      "final_url": "https://godotengine.github.io/godot-demo-projects/3d/platformer/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://godotengine.github.io/godot-demo-projects/3d/platformer/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.109.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.484,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-platformer-3d",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://godotengine.github.io/godot-demo-projects/3d/truck_town/",
+      "checked_at": "2026-09-10T17:38:45.431787+00:00",
+      "final_url": "https://godotengine.github.io/godot-demo-projects/3d/truck_town/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://godotengine.github.io/godot-demo-projects/3d/truck_town/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.109.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.465,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "godot-truck-town",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://hexgl.bkcore.com",
+      "checked_at": "2026-09-10T17:38:45.458579+00:00",
+      "final_url": "https://hexgl.bkcore.com",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://hexgl.bkcore.com",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "217.160.0.234",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 5.123,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "hexgl",
+          "field": "project_url"
+        },
+        {
+          "record_id": "hexgl",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://hextris.github.io/hextris",
+      "checked_at": "2026-09-10T17:38:45.897223+00:00",
+      "final_url": "https://hextris.io",
+      "method": "HEAD",
+      "http_status": 301,
+      "result": "error",
+      "error": {
+        "type": "gaierror",
+        "message": "[Errno 8] nodename nor servname provided, or not known"
+      },
+      "attempts": [
+        {
+          "url": "https://hextris.github.io/hextris",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://hextris.io",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.573,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "hextris",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://hextris.io",
+      "checked_at": "2026-09-10T17:38:45.898686+00:00",
+      "final_url": "https://hextris.io",
+      "method": "HEAD",
+      "http_status": null,
+      "result": "error",
+      "error": {
+        "type": "gaierror",
+        "message": "[Errno 8] nodename nor servname provided, or not known"
+      },
+      "attempts": [],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.106,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "hextris",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://i.imgur.com/Slbvt65.png",
+      "checked_at": "2026-09-10T17:38:46.004944+00:00",
+      "final_url": "https://i.imgur.com/Slbvt65.png",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://i.imgur.com/Slbvt65.png",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/png",
+          "bytes_read": 0,
+          "connected_address": "199.232.192.193",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.426,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "clumsy-bird",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://icecreamyou.github.io/THREE.Terrain/",
+      "checked_at": "2026-09-10T17:38:46.429276+00:00",
+      "final_url": "https://icecreamyou.github.io/THREE.Terrain/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://icecreamyou.github.io/THREE.Terrain/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.544,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "three-terrain",
+          "field": "project_url"
+        },
+        {
+          "record_id": "three-terrain",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://killedbyapixel.github.io/LittleJS/examples",
+      "checked_at": "2026-09-10T17:38:46.430501+00:00",
+      "final_url": "https://killedbyapixel.github.io/LittleJS/examples/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://killedbyapixel.github.io/LittleJS/examples",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://killedbyapixel.github.io/LittleJS/examples/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        },
+        {
+          "url": "https://killedbyapixel.github.io/LittleJS/examples/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.506,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "littlejs",
+          "field": "project_url"
+        },
+        {
+          "record_id": "littlejs",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://lo-th.github.io/3d.city/index.html",
+      "checked_at": "2026-09-10T17:38:46.469951+00:00",
+      "final_url": "https://lo-th.github.io/3d.city/index.html",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://lo-th.github.io/3d.city/index.html",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.111.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.395,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "3d-city",
+          "field": "project_url"
+        },
+        {
+          "record_id": "3d-city",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://mindustrygame.github.io/",
+      "checked_at": "2026-09-10T17:38:46.865265+00:00",
+      "final_url": "https://mindustrygame.github.io/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://mindustrygame.github.io/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.107,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "mindustry",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://mugen87.github.io/yuka/",
+      "checked_at": "2026-09-10T17:38:47.936440+00:00",
+      "final_url": "https://mugen87.github.io/yuka/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://mugen87.github.io/yuka/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.531,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "yuka",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://mugen87.github.io/yuka/examples/",
+      "checked_at": "2026-09-10T17:38:47.972276+00:00",
+      "final_url": "https://mugen87.github.io/yuka/examples/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://mugen87.github.io/yuka/examples/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.237,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "yuka",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://openrct2.io",
+      "checked_at": "2026-09-10T17:38:47.973046+00:00",
+      "final_url": "https://openrct2.io",
+      "method": "GET",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://openrct2.io",
+          "method": "HEAD",
+          "http_status": 405,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "104.21.46.33",
+          "body_skipped": false
+        },
+        {
+          "url": "https://openrct2.io",
+          "method": "GET",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 1024,
+          "connected_address": "172.67.223.33",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 2.269,
+      "bytes_read": 1024,
+      "references": [
+        {
+          "record_id": "openrct2",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://openrct2.io/download/release/latest",
+      "checked_at": "2026-09-10T17:38:49.209270+00:00",
+      "final_url": "https://openrct2.io/download/release/latest",
+      "method": "GET",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://openrct2.io/download/release/latest",
+          "method": "HEAD",
+          "http_status": 405,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "104.21.46.33",
+          "body_skipped": false
+        },
+        {
+          "url": "https://openrct2.io/download/release/latest",
+          "method": "GET",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 1024,
+          "connected_address": "172.67.223.33",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.278,
+      "bytes_read": 1024,
+      "references": [
+        {
+          "record_id": "openrct2",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://ourcade.co/templates/dungeon-crawler-starter",
+      "checked_at": "2026-09-10T17:38:49.467088+00:00",
+      "final_url": "https://ourcade.co/templates/dungeon-crawler-starter/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://ourcade.co/templates/dungeon-crawler-starter",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "/templates/dungeon-crawler-starter/",
+          "content_type": "text/plain",
+          "bytes_read": 0,
+          "connected_address": "151.101.65.195",
+          "body_skipped": false
+        },
+        {
+          "url": "https://ourcade.co/templates/dungeon-crawler-starter/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "151.101.65.195",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.751,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "phaser-dungeon-crawler",
+          "field": "project_url"
+        },
+        {
+          "record_id": "phaser-dungeon-crawler",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://play0ad.com/",
+      "checked_at": "2026-09-10T17:38:50.218208+00:00",
+      "final_url": "https://play0ad.com/",
+      "method": "HEAD",
+      "http_status": 301,
+      "result": "error",
+      "error": {
+        "type": "ValueError",
+        "message": "Redirect limit exceeded"
+      },
+      "attempts": [
+        {
+          "url": "https://play0ad.com/",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://play0ad.com/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        },
+        {
+          "url": "https://play0ad.com/",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://play0ad.com/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        },
+        {
+          "url": "https://play0ad.com/",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://play0ad.com/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        },
+        {
+          "url": "https://play0ad.com/",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://play0ad.com/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        },
+        {
+          "url": "https://play0ad.com/",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://play0ad.com/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        },
+        {
+          "url": "https://play0ad.com/",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://play0ad.com/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 6.166,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "zero-ad",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://play0ad.com/download/",
+      "checked_at": "2026-09-10T17:38:50.241668+00:00",
+      "final_url": "https://play0ad.com/download/",
+      "method": "HEAD",
+      "http_status": 301,
+      "result": "error",
+      "error": {
+        "type": "ValueError",
+        "message": "Redirect limit exceeded"
+      },
+      "attempts": [
+        {
+          "url": "https://play0ad.com/download/",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://play0ad.com/download/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        },
+        {
+          "url": "https://play0ad.com/download/",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://play0ad.com/download/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        },
+        {
+          "url": "https://play0ad.com/download/",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://play0ad.com/download/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        },
+        {
+          "url": "https://play0ad.com/download/",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://play0ad.com/download/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        },
+        {
+          "url": "https://play0ad.com/download/",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://play0ad.com/download/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        },
+        {
+          "url": "https://play0ad.com/download/",
+          "method": "HEAD",
+          "http_status": 301,
+          "location": "https://play0ad.com/download/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "142.132.137.205",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 6.145,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "zero-ad",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://play2048.co",
+      "checked_at": "2026-09-10T17:38:50.487732+00:00",
+      "final_url": "https://play2048.co",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://play2048.co",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "172.67.144.178",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.054,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "2048",
+          "field": "project_url"
+        },
+        {
+          "record_id": "2048",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://procedural-dungeon.netlify.app",
+      "checked_at": "2026-09-10T17:38:50.581637+00:00",
+      "final_url": "https://procedural-dungeon.netlify.app",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://procedural-dungeon.netlify.app",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "18.208.88.157",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.612,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "dungeon-forge",
+          "field": "project_url"
+        },
+        {
+          "record_id": "dungeon-forge",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://racing.pmnd.rs/",
+      "checked_at": "2026-09-10T17:38:51.193397+00:00",
+      "final_url": "https://racing.pmnd.rs/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://racing.pmnd.rs/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "104.21.31.12",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.426,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "pmndrs-racing-game",
+          "field": "project_url"
+        },
+        {
+          "record_id": "pmndrs-racing-game",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Hextris/hextris/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/twitter-opengraph.png",
+      "checked_at": "2026-09-10T17:38:51.541455+00:00",
+      "final_url": "https://raw.githubusercontent.com/Hextris/hextris/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/twitter-opengraph.png",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://raw.githubusercontent.com/Hextris/hextris/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/images/twitter-opengraph.png",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/png",
+          "bytes_read": 0,
+          "connected_address": "185.199.111.133",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.123,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "hextris",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/IceCreamYou/THREE.Terrain/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/demo/img/screenshot2.jpg",
+      "checked_at": "2026-09-10T17:38:51.619217+00:00",
+      "final_url": "https://raw.githubusercontent.com/IceCreamYou/THREE.Terrain/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/demo/img/screenshot2.jpg",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://raw.githubusercontent.com/IceCreamYou/THREE.Terrain/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/demo/img/screenshot2.jpg",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/jpeg",
+          "bytes_read": 0,
+          "connected_address": "185.199.111.133",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.106,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "three-terrain",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/KilledByAPixel/LittleJS/da1b3836552b2373522a56bd39d6fb9f4b530017/examples/screenshot.jpg",
+      "checked_at": "2026-09-10T17:38:51.664723+00:00",
+      "final_url": "https://raw.githubusercontent.com/KilledByAPixel/LittleJS/da1b3836552b2373522a56bd39d6fb9f4b530017/examples/screenshot.jpg",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://raw.githubusercontent.com/KilledByAPixel/LittleJS/da1b3836552b2373522a56bd39d6fb9f4b530017/examples/screenshot.jpg",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/jpeg",
+          "bytes_read": 0,
+          "connected_address": "185.199.111.133",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.106,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "littlejs",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/gkjohnson/three-mesh-bvh/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/docs/example-sm.gif",
+      "checked_at": "2026-09-10T17:38:51.725734+00:00",
+      "final_url": "https://raw.githubusercontent.com/gkjohnson/three-mesh-bvh/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/docs/example-sm.gif",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://raw.githubusercontent.com/gkjohnson/three-mesh-bvh/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/docs/example-sm.gif",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "application/octet-stream",
+          "bytes_read": 0,
+          "connected_address": "185.199.111.133",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.0,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "three-mesh-bvh",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/lo-th/3d.city/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/assets/img/preview01.jpg",
+      "checked_at": "2026-09-10T17:38:51.770734+00:00",
+      "final_url": "https://raw.githubusercontent.com/lo-th/3d.city/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/assets/img/preview01.jpg",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://raw.githubusercontent.com/lo-th/3d.city/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/assets/img/preview01.jpg",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/jpeg",
+          "bytes_read": 0,
+          "connected_address": "185.199.111.133",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.95,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "3d-city",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/majidmanzarpour/threejs-procedural-dungeon/0a2aa0980028cbbc77af6642b4232b45713dc5de/docs/preview.jpg",
+      "checked_at": "2026-09-10T17:38:52.721095+00:00",
+      "final_url": "https://raw.githubusercontent.com/majidmanzarpour/threejs-procedural-dungeon/0a2aa0980028cbbc77af6642b4232b45713dc5de/docs/preview.jpg",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://raw.githubusercontent.com/majidmanzarpour/threejs-procedural-dungeon/0a2aa0980028cbbc77af6642b4232b45713dc5de/docs/preview.jpg",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/jpeg",
+          "bytes_read": 0,
+          "connected_address": "185.199.111.133",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.519,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "dungeon-forge",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/pmndrs/ecctrl/e2cab804f9f15661a642e76f52d09f0b2db63f35/docs/images/ecctrl-hero.gif",
+      "checked_at": "2026-09-10T17:38:52.725370+00:00",
+      "final_url": "https://raw.githubusercontent.com/pmndrs/ecctrl/e2cab804f9f15661a642e76f52d09f0b2db63f35/docs/images/ecctrl-hero.gif",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://raw.githubusercontent.com/pmndrs/ecctrl/e2cab804f9f15661a642e76f52d09f0b2db63f35/docs/images/ecctrl-hero.gif",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/gif",
+          "bytes_read": 0,
+          "connected_address": "185.199.111.133",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.518,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "ecctrl",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/pmndrs/racing-game/7816a5d954b75e6ad853ae4e4f0cbbd628072643/thumbnail.webp",
+      "checked_at": "2026-09-10T17:38:53.240324+00:00",
+      "final_url": "https://raw.githubusercontent.com/pmndrs/racing-game/7816a5d954b75e6ad853ae4e4f0cbbd628072643/thumbnail.webp",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://raw.githubusercontent.com/pmndrs/racing-game/7816a5d954b75e6ad853ae4e4f0cbbd628072643/thumbnail.webp",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/webp",
+          "bytes_read": 0,
+          "connected_address": "185.199.111.133",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.523,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "pmndrs-racing-game",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rawprogress/fable-cities/aea8b1035030952555395de0c1de14ba693a1427/assets/hero.jpg",
+      "checked_at": "2026-09-10T17:38:53.243314+00:00",
+      "final_url": "https://raw.githubusercontent.com/rawprogress/fable-cities/aea8b1035030952555395de0c1de14ba693a1427/assets/hero.jpg",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://raw.githubusercontent.com/rawprogress/fable-cities/aea8b1035030952555395de0c1de14ba693a1427/assets/hero.jpg",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/jpeg",
+          "bytes_read": 0,
+          "connected_address": "185.199.111.133",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.119,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "fable-cities",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rbenzing/SlimCityGame/73e065226b8134cf44901a641076aeed3281f9f1/screenshots/screenshot-01.png",
+      "checked_at": "2026-09-10T17:38:53.362414+00:00",
+      "final_url": "https://raw.githubusercontent.com/rbenzing/SlimCityGame/73e065226b8134cf44901a641076aeed3281f9f1/screenshots/screenshot-01.png",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://raw.githubusercontent.com/rbenzing/SlimCityGame/73e065226b8134cf44901a641076aeed3281f9f1/screenshots/screenshot-01.png",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/png",
+          "bytes_read": 0,
+          "connected_address": "185.199.111.133",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.399,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "slimcity",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://react-three-rapier.pmnd.rs",
+      "checked_at": "2026-09-10T17:38:53.761828+00:00",
+      "final_url": "https://react-three-rapier.pmnd.rs",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://react-three-rapier.pmnd.rs",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "104.21.31.12",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.639,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "react-three-rapier",
+          "field": "project_url"
+        },
+        {
+          "record_id": "react-three-rapier",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://s3.eu-central-2.wasabisys.com/veloren-blog/cdn/common/2025-06-29_Hrom_bestest-banner.webp",
+      "checked_at": "2026-09-10T17:38:53.763484+00:00",
+      "final_url": "https://s3.eu-central-2.wasabisys.com/veloren-blog/cdn/common/2025-06-29_Hrom_bestest-banner.webp",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://s3.eu-central-2.wasabisys.com/veloren-blog/cdn/common/2025-06-29_Hrom_bestest-banner.webp",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/webp",
+          "bytes_read": 0,
+          "connected_address": "154.49.215.107",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 2.624,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "veloren",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://slimcity.netlify.app/",
+      "checked_at": "2026-09-10T17:38:54.400835+00:00",
+      "final_url": "https://slimcity.netlify.app/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://slimcity.netlify.app/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "98.84.224.111",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.939,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "slimcity",
+          "field": "project_url"
+        },
+        {
+          "record_id": "slimcity",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://supertuxkart.net/",
+      "checked_at": "2026-09-10T17:38:55.339665+00:00",
+      "final_url": "https://supertuxkart.net/Main_Page.html",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://supertuxkart.net/",
+          "method": "HEAD",
+          "http_status": 302,
+          "location": "https://supertuxkart.net/Main_Page.html",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "217.154.226.10",
+          "body_skipped": false
+        },
+        {
+          "url": "https://supertuxkart.net/Main_Page.html",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "217.154.226.10",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 2.615,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "supertuxkart",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://three-pathfinding.donmccurdy.com/",
+      "checked_at": "2026-09-10T17:38:56.384003+00:00",
+      "final_url": "https://three-pathfinding.donmccurdy.com/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://three-pathfinding.donmccurdy.com/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "66.33.60.129",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 2.098,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "three-pathfinding",
+          "field": "project_url"
+        },
+        {
+          "record_id": "three-pathfinding",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://threejs.org/",
+      "checked_at": "2026-09-10T17:38:56.386383+00:00",
+      "final_url": "https://threejs.org/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://threejs.org/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.522,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "threejs",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://threejs.org/examples/",
+      "checked_at": "2026-09-10T17:38:56.387944+00:00",
+      "final_url": "https://threejs.org/examples/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://threejs.org/examples/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.522,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "threejs",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://tweeres04.github.io/gather-it/",
+      "checked_at": "2026-09-10T17:38:56.908421+00:00",
+      "final_url": "https://tweeres04.github.io/gather-it/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://tweeres04.github.io/gather-it/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.525,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "gather-it",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://user-images.githubusercontent.com/1848368/34424850-d79e5a24-ebf4-11e7-87c4-afc75cdc41bd.png",
+      "checked_at": "2026-09-10T17:38:56.909622+00:00",
+      "final_url": "https://user-images.githubusercontent.com/1848368/34424850-d79e5a24-ebf4-11e7-87c4-afc75cdc41bd.png",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://user-images.githubusercontent.com/1848368/34424850-d79e5a24-ebf4-11e7-87c4-afc75cdc41bd.png",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/png",
+          "bytes_read": 0,
+          "connected_address": "185.199.110.133",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.523,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "three-pathfinding",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://veloren.net/",
+      "checked_at": "2026-09-10T17:38:57.432651+00:00",
+      "final_url": "https://veloren.net/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://veloren.net/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "35.185.44.232",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.092,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "veloren",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://veloren.net/download",
+      "checked_at": "2026-09-10T17:38:57.433664+00:00",
+      "final_url": "https://veloren.net:443/download/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://veloren.net/download",
+          "method": "HEAD",
+          "http_status": 302,
+          "location": "//veloren.net:443/download/",
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "35.185.44.232",
+          "body_skipped": false
+        },
+        {
+          "url": "https://veloren.net:443/download/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "35.185.44.232",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 2.248,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "veloren",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://wesnoth.itch.io/battle-for-wesnoth",
+      "checked_at": "2026-09-10T17:38:57.954632+00:00",
+      "final_url": "https://wesnoth.itch.io/battle-for-wesnoth",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://wesnoth.itch.io/battle-for-wesnoth",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "172.67.69.99",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.582,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "battle-for-wesnoth",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://www.freeciv.org/",
+      "checked_at": "2026-09-10T17:38:58.482366+00:00",
+      "final_url": "https://www.freeciv.org/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://www.freeciv.org/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "65.21.236.12",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 5.243,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "freeciv",
+          "field": "project_url"
+        },
+        {
+          "record_id": "freeciv",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://www.freecol.org/",
+      "checked_at": "2026-09-10T17:38:58.525140+00:00",
+      "final_url": "https://www.freecol.org/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://www.freecol.org/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "204.68.111.101",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.623,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "freecol",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://www.luanti.org/",
+      "checked_at": "2026-09-10T17:38:59.537065+00:00",
+      "final_url": "https://www.luanti.org/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://www.luanti.org/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.522,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "luanti",
+          "field": "project_url"
+        },
+        {
+          "record_id": "luanti",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://www.openra.net/",
+      "checked_at": "2026-09-10T17:38:59.681799+00:00",
+      "final_url": "https://www.openra.net/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://www.openra.net/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.943,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "openra",
+          "field": "project_url"
+        },
+        {
+          "record_id": "openra",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://www.openttd.org/",
+      "checked_at": "2026-09-10T17:39:00.059309+00:00",
+      "final_url": "https://www.openttd.org/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://www.openttd.org/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "104.26.8.176",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.688,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "openttd",
+          "field": "project_url"
+        },
+        {
+          "record_id": "openttd",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://www.supertux.org/",
+      "checked_at": "2026-09-10T17:39:00.147737+00:00",
+      "final_url": "https://www.supertux.org/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://www.supertux.org/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.017,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "supertux",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://www.supertux.org/download.html",
+      "checked_at": "2026-09-10T17:39:00.624833+00:00",
+      "final_url": "https://www.supertux.org/download.html",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://www.supertux.org/download.html",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.542,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "supertux",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://www.supertux.org/images/0_7_0/github_preview.png",
+      "checked_at": "2026-09-10T17:39:00.747504+00:00",
+      "final_url": "https://www.supertux.org/images/0_7_0/github_preview.png",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://www.supertux.org/images/0_7_0/github_preview.png",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/png",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 0.45,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "supertux",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://www.wesnoth.org/",
+      "checked_at": "2026-09-10T17:39:01.165102+00:00",
+      "final_url": "https://www.wesnoth.org/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://www.wesnoth.org/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "95.217.86.148",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.624,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "battle-for-wesnoth",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://www.widelands.org/",
+      "checked_at": "2026-09-10T17:39:01.167078+00:00",
+      "final_url": "https://www.widelands.org/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://www.widelands.org/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "85.235.66.69",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 2.037,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "widelands",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://www.widelands.org/static/img/welcome.jpg",
+      "checked_at": "2026-09-10T17:39:01.197098+00:00",
+      "final_url": "https://www.widelands.org/static/img/welcome.jpg",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://www.widelands.org/static/img/welcome.jpg",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "image/jpeg",
+          "bytes_read": 0,
+          "connected_address": "85.235.66.69",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.582,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "widelands",
+          "field": "preview.source_url"
+        }
+      ]
+    },
+    {
+      "url": "https://www.widelands.org/wiki/Download/",
+      "checked_at": "2026-09-10T17:39:02.779110+00:00",
+      "final_url": "https://www.widelands.org/wiki/Download/",
+      "method": "GET",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://www.widelands.org/wiki/Download/",
+          "method": "HEAD",
+          "http_status": 405,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "85.235.66.69",
+          "body_skipped": false
+        },
+        {
+          "url": "https://www.widelands.org/wiki/Download/",
+          "method": "GET",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 1024,
+          "connected_address": "85.235.66.69",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 3.166,
+      "bytes_read": 1024,
+      "references": [
+        {
+          "record_id": "widelands",
+          "field": "demo.url"
+        }
+      ]
+    },
+    {
+      "url": "https://yairm210.github.io/Unciv/",
+      "checked_at": "2026-09-10T17:39:02.789095+00:00",
+      "final_url": "https://yairm210.github.io/Unciv/",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://yairm210.github.io/Unciv/",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "185.199.108.153",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.004,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "unciv",
+          "field": "project_url"
+        }
+      ]
+    },
+    {
+      "url": "https://yairm210.itch.io/unciv",
+      "checked_at": "2026-09-10T17:39:03.204574+00:00",
+      "final_url": "https://yairm210.itch.io/unciv",
+      "method": "HEAD",
+      "http_status": 200,
+      "result": "reachable",
+      "error": null,
+      "attempts": [
+        {
+          "url": "https://yairm210.itch.io/unciv",
+          "method": "HEAD",
+          "http_status": 200,
+          "location": null,
+          "content_type": "text/html",
+          "bytes_read": 0,
+          "connected_address": "172.67.69.99",
+          "body_skipped": false
+        }
+      ],
+      "interactive_status": "not_tested",
+      "elapsed_seconds": 1.604,
+      "bytes_read": 0,
+      "references": [
+        {
+          "record_id": "unciv",
+          "field": "demo.url"
+        }
+      ]
+    }
+  ]
+}

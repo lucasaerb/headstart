@@ -1,0 +1,99 @@
+{
+  "pmndrs/racing-game": [
+    "src/models/vehicle/Vehicle.tsx",
+    "src/effects/Cameras.tsx"
+  ],
+  "pmndrs/ecctrl": [
+    "src/character/Ecctrl.tsx",
+    "src/vehicles/EcctrlVehicle.tsx",
+    "src/input/Joystick.tsx"
+  ],
+  "majidmanzarpour/threejs-procedural-dungeon": [
+    "src/main.js"
+  ],
+  "lo-th/3d.city": [
+    "src/micro/Simulation.js",
+    "src/micro/game/Budget.js"
+  ],
+  "rbenzing/SlimCityGame": [
+    "src/sim/economy.ts",
+    "src/world/pathfind.ts"
+  ],
+  "rawprogress/fable-cities": [
+    "src/modules/simulation/clock.js",
+    "src/modules/roads/RoadNetwork.js",
+    "public/assets/CREDITS.md",
+    "THIRD-PARTY-NOTICES.md"
+  ],
+  "hextris/hextris": [
+    "js/checking.js",
+    "js/wavegen.js"
+  ],
+  "gabrielecirulli/2048": [
+    "js/game_manager.js",
+    "js/local_storage_manager.js"
+  ],
+  "ellisonleao/clumsy-bird": [
+    "js/entities/entities.js",
+    "js/screens/play.js"
+  ],
+  "BKcore/HexGL": [
+    "bkcore/hexgl/ShipControls.js",
+    "bkcore/hexgl/RaceData.js"
+  ],
+  "mozilla/BrowserQuest": [
+    "client/js/pathfinder.js",
+    "server/js/worldserver.js"
+  ],
+  "doublespeakgames/adarkroom": [
+    "script/outside.js",
+    "script/state_manager.js"
+  ],
+  "KilledByAPixel/LittleJS": [
+    "src/engineAudio.js",
+    "src/engineParticles.js"
+  ],
+  "ourcade/phaser3-dungeon-crawler-starter": [
+    "src/characters/Faune.ts",
+    "src/enemies/Lizard.ts"
+  ],
+  "liabru/matter-js": [
+    "src/core/Engine.js",
+    "src/constraint/Constraint.js"
+  ],
+  "donmccurdy/three-pathfinding": [
+    "src/Pathfinding.js",
+    "src/Channel.js"
+  ],
+  "Mugen87/yuka": [
+    "src/fsm/StateMachine.js",
+    "src/steering/behaviors/SeekBehavior.js"
+  ],
+  "gkjohnson/three-mesh-bvh": [
+    "src/core/MeshBVH.js",
+    "src/workers/GenerateMeshBVHWorker.js"
+  ],
+  "pmndrs/react-three-rapier": [
+    "packages/react-three-rapier/readme.md",
+    "packages/react-three-rapier/package.json",
+    "packages/react-three-rapier/src/components/RigidBody.tsx",
+    "packages/react-three-rapier/src/hooks/joints.ts"
+  ],
+  "IceCreamYou/THREE.Terrain": [
+    "src/generators.js",
+    "src/scatter.js"
+  ],
+  "pmndrs/drei": [
+    "src/core/CameraControls.tsx",
+    "src/core/MeshReflectorMaterial.tsx"
+  ],
+  "mrdoob/three.js": [
+    "src/animation/AnimationMixer.js",
+    "examples/jsm/objects/Water.js"
+  ],
+  "tweeres04/gather-it": [
+    "Assets/Worker.cs",
+    "Assets/Shop.cs",
+    "ProjectSettings/ProjectVersion.txt"
+  ]
+}

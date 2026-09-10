@@ -20,6 +20,8 @@ The repository currently contains the PRD, design prototype, images, initial dat
 
 Build a structured research database of example games with real images, categories, playable/demo destinations, repository links, and traceable source and rights evidence. Start with that content, then build a working local discovery experience around it. Keep uncertain research separate from eligible published listings.
 
+The [first research database](research/catalog/README.md) now contains 43 entries and 87 candidate building blocks, with searchable SQLite/JSON/CSV exports and 12 authentic preview images. Browse the [index](research/catalog/INDEX.md), [shortlist](research/catalog/SHORTLIST.md), and [image contact sheet](research/catalog/contact-sheet.jpg). These are researched source leads with explicit limitations, not tested integrations.
+
 ## Local preview
 
 Python 3 can serve the supplied static design prototype:

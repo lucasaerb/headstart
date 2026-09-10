@@ -129,7 +129,8 @@
     "phase": "Local reuse",
     "depends_on": [
       "catalog-api",
-      "game-brief-collections"
+      "game-brief-collections",
+      "verified-email-access"
     ]
   },
   "catalog-mcp": {
@@ -263,6 +264,17 @@
       "review-capabilities",
       "reference-integrations",
       "local-release-pilot"
+    ]
+  },
+  "verified-email-access": {
+    "number": 27,
+    "url": "https://github.com/lucasaerb/headstart/issues/27",
+    "title": "12a \u00b7 Verify email before platform code access and agent handoff",
+    "priority": "P0",
+    "phase": "Local reuse",
+    "depends_on": [
+      "catalog-api",
+      "game-brief-collections"
     ]
   }
 }

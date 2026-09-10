@@ -1,0 +1,786 @@
+{
+  "definition": "Bounded internal link-only research display, not production publication or code/asset reuse eligibility. Native-only projects remain native references. HTTP response does not establish successful play.",
+  "target": 20,
+  "proposed_internal_references": 39,
+  "candidate_only": 4,
+  "records": [
+    {
+      "record_id": "2048",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/LICENSE.txt",
+      "source_commit": "478b6ec346e3787f589e4af751378d06ded4cbbc",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "3d-city",
+      "decision": "candidate_only",
+      "basis": "Contradictory project license declarations.",
+      "code_evidence": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/LICENSE",
+      "source_commit": "60fc6de2451ac6cf4df211a7cdae6c55c97e73c7",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "a-dark-room",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/LICENSE.md",
+      "source_commit": "1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "battle-for-wesnoth",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/wesnoth/wesnoth/blob/12b8f63f5b7a163c9a159705d288919bc53cc54b/COPYING",
+      "source_commit": "12b8f63f5b7a163c9a159705d288919bc53cc54b",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "browserquest",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/LICENSE",
+      "source_commit": "af32d247cac3495ca430d0effbb88dd5f3250b2c",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "cataclysm-dda",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/CleverRaven/Cataclysm-DDA/blob/7b123884d93a9a8432d690d528698f6a907d5cce/LICENSE.txt",
+      "source_commit": "7b123884d93a9a8432d690d528698f6a907d5cce",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "clumsy-bird",
+      "decision": "candidate_only",
+      "basis": "MIT package declaration conflicts with GPL root license.",
+      "code_evidence": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/LICENSE.md",
+      "source_commit": "fae3d487d5102af29fb3f78431cbd45e9b83aed3",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "drei",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/LICENSE",
+      "source_commit": "ffa15b956e320391b0e86084cb58c8da0445abe3",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "dungeon-forge",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/LICENSE",
+      "source_commit": "0a2aa0980028cbbc77af6642b4232b45713dc5de",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "ecctrl",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/LICENSE",
+      "source_commit": "e2cab804f9f15661a642e76f52d09f0b2db63f35",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "endless-sky",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/endless-sky/endless-sky/blob/88ec756f5d1868b3d8a024c9211011f6928bb9c0/license.txt",
+      "source_commit": "88ec756f5d1868b3d8a024c9211011f6928bb9c0",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "fable-cities",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/LICENSE",
+      "source_commit": "aea8b1035030952555395de0c1de14ba693a1427",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "freeciv",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/freeciv/freeciv/blob/61db53503f9243aca417848a72864be69635235e/COPYING",
+      "source_commit": "61db53503f9243aca417848a72864be69635235e",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "freecol",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/FreeCol/freecol/blob/e45ac6fd9592c8f032b2686658f63447c115d9d7/LICENSE",
+      "source_commit": "e45ac6fd9592c8f032b2686658f63447c115d9d7",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "gather-it",
+      "decision": "candidate_only",
+      "basis": "No code license established.",
+      "code_evidence": null,
+      "source_commit": "8c74a133c9a2cb98a4bfb53eacafe751a0453286",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "godot-astar-grid-2d",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "source_commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "godot-platformer-2d",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "source_commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "godot-platformer-3d",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "source_commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "godot-truck-town",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/godotengine/godot-demo-projects/blob/a3b5c113112f77291d5f3d1360f33a882fdc52f7/LICENSE.md",
+      "source_commit": "a3b5c113112f77291d5f3d1360f33a882fdc52f7",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "hexgl",
+      "decision": "candidate_only",
+      "basis": "Noncommercial per-file exceptions affect the showcased systems; do not classify as an open-source reusable candidate.",
+      "code_evidence": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/LICENSE",
+      "source_commit": "6addc95a2fce3bf05f4d751823cc054c61a16d68",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "hextris",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/LICENSE.md",
+      "source_commit": "3f4847dc8fd7dab3d1c87e6324b9159d92fbd396",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "littlejs",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/LICENSE",
+      "source_commit": "da1b3836552b2373522a56bd39d6fb9f4b530017",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "luanti",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/luanti-org/luanti/blob/c5ba5f754af552a3451f1ded86955d393de82c29/LICENSE.txt",
+      "source_commit": "c5ba5f754af552a3451f1ded86955d393de82c29",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "matter-js",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/LICENSE",
+      "source_commit": "acb99b6f8784c809b940f1d2cf745427e088e088",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "mindustry",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/Anuken/Mindustry/blob/7c5f29e6fb1ac49bc7b4e1806f42685cbcc8b499/LICENSE",
+      "source_commit": "7c5f29e6fb1ac49bc7b4e1806f42685cbcc8b499",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "openra",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/OpenRA/OpenRA/blob/f3ec7f8e1593b482f85fd101652deb740c33dee6/COPYING",
+      "source_commit": "f3ec7f8e1593b482f85fd101652deb740c33dee6",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "openrct2",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/OpenRCT2/OpenRCT2/blob/bb118516646347d73e7eb0d30de9eef2f5b16043/licence.txt",
+      "source_commit": "bb118516646347d73e7eb0d30de9eef2f5b16043",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "openttd",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/OpenTTD/OpenTTD/blob/d1af18d1b66da003551fcc2139080ae28fd0630c/COPYING.md",
+      "source_commit": "d1af18d1b66da003551fcc2139080ae28fd0630c",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "phaser-dungeon-crawler",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/LICENSE",
+      "source_commit": "186705eb557af3d7042590fc61485a7cbed7b7f0",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "pmndrs-racing-game",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/LICENSE.md",
+      "source_commit": "7816a5d954b75e6ad853ae4e4f0cbbd628072643",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "react-three-rapier",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/LICENSE",
+      "source_commit": "ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "slimcity",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/LICENSE",
+      "source_commit": "73e065226b8134cf44901a641076aeed3281f9f1",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "supertux",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/SuperTux/supertux/blob/d7bde40da60e295ac801cd7ef928427920a254d2/LICENSE.txt",
+      "source_commit": "d7bde40da60e295ac801cd7ef928427920a254d2",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "supertuxkart",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/supertuxkart/stk-code/blob/dbf200ccba14025bac7dc8d0318dcf5e55b6da18/COPYING",
+      "source_commit": "dbf200ccba14025bac7dc8d0318dcf5e55b6da18",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "three-mesh-bvh",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/LICENSE",
+      "source_commit": "8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "three-pathfinding",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/LICENSE",
+      "source_commit": "1526c84afed0d596cb13f4b7be36401fd2c6a430",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "three-terrain",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/LICENSE.txt",
+      "source_commit": "434d977ffdbac604cd5c6fd332c4d005f7f9ec68",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "threejs",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/LICENSE",
+      "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "unciv",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/yairm210/Unciv/blob/0d7d1e43cd4776e04cd3f9eaf752527885123e62/LICENSE",
+      "source_commit": "0d7d1e43cd4776e04cd3f9eaf752527885123e62",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "veloren",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/veloren/veloren/blob/5a8d6dc9d1bc543a59bed976007abecc248d9195/LICENSE",
+      "source_commit": "5a8d6dc9d1bc543a59bed976007abecc248d9195",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "widelands",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/widelands/widelands/blob/187e4e257c2e127ec2c607f8c7765f774e2474ec/COPYING",
+      "source_commit": "187e4e257c2e127ec2c607f8c7765f774e2474ec",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "yuka",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/LICENSE",
+      "source_commit": "10591304811222d6856020d5de129b39ef43b58d",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    },
+    {
+      "record_id": "zero-ad",
+      "decision": "internal_reference_ready",
+      "basis": "Pinned source and inspected project code-license evidence support factual link-only internal reference; asset and extraction scope remains unreviewed.",
+      "code_evidence": "https://gitea.wildfiregames.com/0ad/0ad/src/commit/58e2c5946621b15f96d8da8f5e0201f278f7ac99/LICENSE.md",
+      "source_commit": "58e2c5946621b15f96d8da8f5e0201f278f7ac99",
+      "scope": "Original research summary, classification and links; only specifically cleared media from media-manifest.json may be copied.",
+      "excluded_claims": [
+        "production publication approval",
+        "source-code export permission",
+        "asset extraction clearance",
+        "current playable attestation",
+        "tested integration"
+      ],
+      "reviewer": "/root/design_flex_reviewer",
+      "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+      "review_verdict": "PASS: bounded decision and exclusions supported by inspected evidence"
+    }
+  ],
+  "approved_internal_references": 39,
+  "independent_reviewer": "/root/design_flex_reviewer",
+  "reviewed_at": "2026-09-10T17:44:59.405719+00:00",
+  "review_verdict": "PASS for bounded internal research display only"
+}

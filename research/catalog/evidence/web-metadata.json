@@ -1,0 +1,419 @@
+{
+  "pmndrs/racing-game": {
+    "id": 372334925,
+    "full_name": "pmndrs/racing-game",
+    "default_branch": "main",
+    "description": "\ud83c\udfce Open source racing game developed by everyone willing",
+    "homepage": "https://racing.pmnd.rs/",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "7816a5d954b75e6ad853ae4e4f0cbbd628072643",
+    "truncated": false,
+    "tree_file_count": 91
+  },
+  "pmndrs/ecctrl": {
+    "id": 692895155,
+    "full_name": "pmndrs/ecctrl",
+    "default_branch": "main",
+    "description": "\ud83d\udd79\ufe0f A physics-driven controller toolkit for React Three Fiber + Rapier",
+    "homepage": "",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "e2cab804f9f15661a642e76f52d09f0b2db63f35",
+    "truncated": false,
+    "tree_file_count": 74
+  },
+  "majidmanzarpour/threejs-procedural-dungeon": {
+    "id": 1290344168,
+    "full_name": "majidmanzarpour/threejs-procedural-dungeon",
+    "default_branch": "main",
+    "description": "Real-time procedural dungeon generator in Three.js - deterministic seeds, Delaunay/MST graph layouts, room semantics, five themes, and a custom bloom/tilt-shift pipeline.",
+    "homepage": "",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "0a2aa0980028cbbc77af6642b4232b45713dc5de",
+    "truncated": false,
+    "tree_file_count": 11
+  },
+  "lo-th/3d.city": {
+    "id": 20582326,
+    "full_name": "lo-th/3d.city",
+    "default_branch": "gh-pages",
+    "description": "3d city builder game",
+    "homepage": "http://lo-th.github.io/3d.city/index.html",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    },
+    "message": null,
+    "commit": "60fc6de2451ac6cf4df211a7cdae6c55c97e73c7",
+    "truncated": false,
+    "tree_file_count": 356
+  },
+  "rbenzing/SlimCityGame": {
+    "id": 1315174763,
+    "full_name": "rbenzing/SlimCityGame",
+    "default_branch": "main",
+    "description": "A small-form-factor City Builder/Simulator in the browser \u2014 an engine showcase built on Three.js",
+    "homepage": "https://slimcity.netlify.app/",
+    "license": {
+      "key": "agpl-3.0",
+      "name": "GNU Affero General Public License v3.0",
+      "spdx_id": "AGPL-3.0",
+      "url": "https://api.github.com/licenses/agpl-3.0",
+      "node_id": "MDc6TGljZW5zZTE="
+    },
+    "message": null,
+    "commit": "73e065226b8134cf44901a641076aeed3281f9f1",
+    "truncated": false,
+    "tree_file_count": 403
+  },
+  "rawprogress/fable-cities": {
+    "id": 1354628751,
+    "full_name": "rawprogress/fable-cities",
+    "default_branch": "main",
+    "description": "A Cities: Skylines-class city builder running in the browser, built in Three.js by AI agents. Code ships when it's finished.",
+    "homepage": "https://x.com/raw_dev_x",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    },
+    "message": null,
+    "commit": "aea8b1035030952555395de0c1de14ba693a1427",
+    "truncated": false,
+    "tree_file_count": 609
+  },
+  "tweeres04/gather-it": {
+    "id": 334055413,
+    "full_name": "tweeres04/gather-it",
+    "default_branch": "main",
+    "description": "Learning Unity by building a tiny resource collection game",
+    "homepage": null,
+    "license": null,
+    "message": null,
+    "commit": "8c74a133c9a2cb98a4bfb53eacafe751a0453286",
+    "truncated": false,
+    "tree_file_count": 103
+  },
+  "hextris/hextris": {
+    "id": 19886948,
+    "full_name": "Hextris/hextris",
+    "default_branch": "gh-pages",
+    "description": "Fast paced HTML5 puzzle game inspired by Tetris!",
+    "homepage": "https://hextris.io",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    },
+    "message": null,
+    "commit": "3f4847dc8fd7dab3d1c87e6324b9159d92fbd396",
+    "truncated": false,
+    "tree_file_count": 74
+  },
+  "gabrielecirulli/2048": {
+    "id": 17446152,
+    "full_name": "gabrielecirulli/2048",
+    "default_branch": "master",
+    "description": "The source code for 2048 ",
+    "homepage": "https://play2048.co",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "478b6ec346e3787f589e4af751378d06ded4cbbc",
+    "truncated": false,
+    "tree_file_count": 34
+  },
+  "ellisonleao/clumsy-bird": {
+    "id": 16525746,
+    "full_name": "ellisonleao/clumsy-bird",
+    "default_branch": "master",
+    "description": ":bird: :video_game: A MelonJS port of the famous Flappy Bird Game",
+    "homepage": "http://ellisonleao.github.io/clumsy-bird/",
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "spdx_id": "GPL-3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0",
+      "node_id": "MDc6TGljZW5zZTk="
+    },
+    "message": null,
+    "commit": "fae3d487d5102af29fb3f78431cbd45e9b83aed3",
+    "truncated": false,
+    "tree_file_count": 51
+  },
+  "BKcore/HexGL": {
+    "id": 6090347,
+    "full_name": "BKcore/HexGL",
+    "default_branch": "master",
+    "description": "Source code of HexGL, a futuristic HTML5 racing game",
+    "homepage": "http://hexgl.bkcore.com",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "6addc95a2fce3bf05f4d751823cc054c61a16d68",
+    "truncated": false,
+    "tree_file_count": 198
+  },
+  "mozilla/BrowserQuest": {
+    "id": 2491285,
+    "full_name": "mozilla/BrowserQuest",
+    "default_branch": "master",
+    "description": "DEPRECATED - A HTML5/JavaScript multiplayer game experiment",
+    "homepage": "http://browserquest.mozilla.org/",
+    "license": {
+      "key": "other",
+      "name": "Other",
+      "spdx_id": "NOASSERTION",
+      "url": null,
+      "node_id": "MDc6TGljZW5zZTA="
+    },
+    "message": null,
+    "commit": "af32d247cac3495ca430d0effbb88dd5f3250b2c",
+    "truncated": false,
+    "tree_file_count": 452
+  },
+  "doublespeakgames/adarkroom": {
+    "id": 11152831,
+    "full_name": "doublespeakgames/adarkroom",
+    "default_branch": "main",
+    "description": "A Dark Room - A Minimalist Text Adventure",
+    "homepage": null,
+    "license": {
+      "key": "mpl-2.0",
+      "name": "Mozilla Public License 2.0",
+      "spdx_id": "MPL-2.0",
+      "url": "https://api.github.com/licenses/mpl-2.0",
+      "node_id": "MDc6TGljZW5zZTE0"
+    },
+    "message": null,
+    "commit": "1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7",
+    "truncated": false,
+    "tree_file_count": 231
+  },
+  "KilledByAPixel/LittleJS": {
+    "id": 409749889,
+    "full_name": "KilledByAPixel/LittleJS",
+    "default_branch": "main",
+    "description": "Tiny fast HTML5 game engine with many features and no dependencies.",
+    "homepage": "https://killedbyapixel.github.io/LittleJS/examples",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "da1b3836552b2373522a56bd39d6fb9f4b530017",
+    "truncated": false,
+    "tree_file_count": 380
+  },
+  "ourcade/phaser3-dungeon-crawler-starter": {
+    "id": 262600804,
+    "full_name": "ourcade/phaser3-dungeon-crawler-starter",
+    "default_branch": "master",
+    "description": "A starter project for creating a Dungeon Crawler with Phaser 3",
+    "homepage": "https://ourcade.co/templates/dungeon-crawler-starter",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "186705eb557af3d7042590fc61485a7cbed7b7f0",
+    "truncated": false,
+    "tree_file_count": 37
+  },
+  "liabru/matter-js": {
+    "id": 16986405,
+    "full_name": "liabru/matter-js",
+    "default_branch": "master",
+    "description": "a 2D rigid body physics engine for the web \u25b2\u25cf \u25a0",
+    "homepage": "",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "acb99b6f8784c809b940f1d2cf745427e088e088",
+    "truncated": false,
+    "tree_file_count": 127
+  },
+  "donmccurdy/three-pathfinding": {
+    "id": 102173984,
+    "full_name": "donmccurdy/three-pathfinding",
+    "default_branch": "main",
+    "description": "Navigation mesh utilities for three.js, based on PatrolJS.",
+    "homepage": "https://three-pathfinding.donmccurdy.com/",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "1526c84afed0d596cb13f4b7be36401fd2c6a430",
+    "truncated": false,
+    "tree_file_count": 40
+  },
+  "Mugen87/yuka": {
+    "id": 96577416,
+    "full_name": "Mugen87/yuka",
+    "default_branch": "master",
+    "description": "JavaScript library for developing Game AI.",
+    "homepage": "https://mugen87.github.io/yuka/",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "10591304811222d6856020d5de129b39ef43b58d",
+    "truncated": false,
+    "tree_file_count": 366
+  },
+  "gkjohnson/three-mesh-bvh": {
+    "id": 118064695,
+    "full_name": "gkjohnson/three-mesh-bvh",
+    "default_branch": "master",
+    "description": "A BVH implementation to speed up raycasting and enable spatial queries against three.js meshes.",
+    "homepage": "https://gkjohnson.github.io/three-mesh-bvh/example/bundle/raycast.html",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab",
+    "truncated": false,
+    "tree_file_count": 225
+  },
+  "pmndrs/react-three-rapier": {
+    "id": 487288999,
+    "full_name": "pmndrs/react-three-rapier",
+    "default_branch": "main",
+    "description": "\ud83e\udd3a Rapier physics in React",
+    "homepage": "https://react-three-rapier.pmnd.rs",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98",
+    "truncated": false,
+    "tree_file_count": 121
+  },
+  "IceCreamYou/THREE.Terrain": {
+    "id": 18877591,
+    "full_name": "IceCreamYou/THREE.Terrain",
+    "default_branch": "gh-pages",
+    "description": "A procedural terrain generation engine for use with the Three.js 3D graphics library for the web.",
+    "homepage": "https://icecreamyou.github.io/THREE.Terrain/",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "434d977ffdbac604cd5c6fd332c4d005f7f9ec68",
+    "truncated": false,
+    "tree_file_count": 123
+  },
+  "pmndrs/drei": {
+    "id": 259117468,
+    "full_name": "pmndrs/drei",
+    "default_branch": "master",
+    "description": "\ud83e\udd49 useful helpers for react-three-fiber",
+    "homepage": "https://docs.pmnd.rs/drei",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "ffa15b956e320391b0e86084cb58c8da0445abe3",
+    "truncated": false,
+    "tree_file_count": 511
+  },
+  "mrdoob/three.js": {
+    "id": 576201,
+    "full_name": "mrdoob/three.js",
+    "default_branch": "dev",
+    "description": "JavaScript 3D Library.",
+    "homepage": "https://threejs.org/",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "message": null,
+    "commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+    "truncated": false,
+    "tree_file_count": 5993
+  },
+  "yarnspinner-tool/YarnSpinner": {
+    "id": null,
+    "full_name": null,
+    "default_branch": null,
+    "description": null,
+    "homepage": null,
+    "license": null,
+    "message": "Not Found"
+  }
+}

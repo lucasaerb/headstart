@@ -1,0 +1,859 @@
+[
+  {
+    "repo_url": "https://github.com/pmndrs/racing-game",
+    "commit": "7816a5d954b75e6ad853ae4e4f0cbbd628072643",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE.md",
+        "url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/LICENSE.md",
+        "sha256": "dbfc837816301db3290d6feba54b00172a787fd63e2a602332de052b01ce9d87",
+        "bytes_utf8": 1078
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/README.md",
+        "sha256": "6019116ce35e14aaee8e739f66a6cf9f603628ac71c65d6126345e0d966f8e21",
+        "bytes_utf8": 975
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/package.json",
+        "sha256": "2452248602fa89ad45e57c64030a1b15f766eb98a9bddc275763330fc83dac5e",
+        "bytes_utf8": 1879
+      },
+      {
+        "path": "src/models/vehicle/Vehicle.tsx",
+        "url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/src/models/vehicle/Vehicle.tsx",
+        "sha256": "7e74015b9a1ba09cc99ce41e0c29842d86a483383ccf7c84045affa64235166d",
+        "bytes_utf8": 5235
+      },
+      {
+        "path": "src/effects/Cameras.tsx",
+        "url": "https://github.com/pmndrs/racing-game/blob/7816a5d954b75e6ad853ae4e4f0cbbd628072643/src/effects/Cameras.tsx",
+        "sha256": "55b218d40df961ac5f514f947781734c1cb141df40b7af82268414124f47bae2",
+        "bytes_utf8": 633
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/pmndrs/ecctrl",
+    "commit": "e2cab804f9f15661a642e76f52d09f0b2db63f35",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/LICENSE",
+        "sha256": "45f4d4f795549c054228269b835f7557b2e5db274e7fef9f6cb4c2e1f9024f7c",
+        "bytes_utf8": 1073
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/package.json",
+        "sha256": "6b552d9c7096add222bfa72230521f3f1fca17c530ab880fbb65b3657d8c6ed2",
+        "bytes_utf8": 3769
+      },
+      {
+        "path": "readme.md",
+        "url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/readme.md",
+        "sha256": "727b6fcc0aa8de844523e0c0a59b9d962e96ea2a9ff471aa32cff99b0ab94c53",
+        "bytes_utf8": 25404
+      },
+      {
+        "path": "src/character/Ecctrl.tsx",
+        "url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/src/character/Ecctrl.tsx",
+        "sha256": "d34442be3af7722d4f6550f725aa48b98f742f8d7afb6dbdcb376589017cb942",
+        "bytes_utf8": 54440
+      },
+      {
+        "path": "src/vehicles/EcctrlVehicle.tsx",
+        "url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/src/vehicles/EcctrlVehicle.tsx",
+        "sha256": "fa54c89b0eed5dfab97d95b3bc69c04003df7143d0386d45f33f88d2ca928790",
+        "bytes_utf8": 41091
+      },
+      {
+        "path": "src/input/Joystick.tsx",
+        "url": "https://github.com/pmndrs/ecctrl/blob/e2cab804f9f15661a642e76f52d09f0b2db63f35/src/input/Joystick.tsx",
+        "sha256": "cea4edf2a881e80c08cccc19e46f7bf3827b9125b07df8cda3d5b46a6788199d",
+        "bytes_utf8": 6324
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon",
+    "commit": "0a2aa0980028cbbc77af6642b4232b45713dc5de",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/LICENSE",
+        "sha256": "306512561953da83863404efe11ba8845c6a7cf47a8744321c7cbd67f9944304",
+        "bytes_utf8": 1073
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/README.md",
+        "sha256": "bb0cf36fbe6773ebe00b68f00c9ea33d73826e95ec0836e6fb7fe549f9ac2444",
+        "bytes_utf8": 8840
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/package.json",
+        "sha256": "2ff5622d45a0a206af610165b234e4c2dd1899ede2a98539276d1ee5e27bf397",
+        "bytes_utf8": 795
+      },
+      {
+        "path": "src/main.js",
+        "url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon/blob/0a2aa0980028cbbc77af6642b4232b45713dc5de/src/main.js",
+        "sha256": "bce0d92428af8e4040c6aa47b579db7163c46767bddab5a226f143403ec8f7e6",
+        "bytes_utf8": 106084
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/lo-th/3d.city",
+    "commit": "60fc6de2451ac6cf4df211a7cdae6c55c97e73c7",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "COPYING",
+        "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/COPYING",
+        "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "bytes_utf8": 35147
+      },
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/LICENSE",
+        "sha256": "ccf59fbc8eebda307b563c23e23104ace3a6e3943d5ade752c5128c2965abc96",
+        "bytes_utf8": 2360
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/README.md",
+        "sha256": "5af9035b75a318f70670b83539715087122789f16a515a45dbec617e10d3d3e8",
+        "bytes_utf8": 2073
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/package.json",
+        "sha256": "cda1ecb0636afbb76d4d05ceaaf442172538c84e207b075e23fb3c6ee4bf2c8e",
+        "bytes_utf8": 1235
+      },
+      {
+        "path": "src/micro/Simulation.js",
+        "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/src/micro/Simulation.js",
+        "sha256": "a2dc6a711e9da96e19c438e39128e9f724b04a7fae3c826a2f595a509a4c0079",
+        "bytes_utf8": 28020
+      },
+      {
+        "path": "src/micro/game/Budget.js",
+        "url": "https://github.com/lo-th/3d.city/blob/60fc6de2451ac6cf4df211a7cdae6c55c97e73c7/src/micro/game/Budget.js",
+        "sha256": "a76c5eea2fac02193817e6fa86b4bae00b8e3b7169f3a23a0cb3d74fab91173f",
+        "bytes_utf8": 16557
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/rbenzing/SlimCityGame",
+    "commit": "73e065226b8134cf44901a641076aeed3281f9f1",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/LICENSE",
+        "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+        "bytes_utf8": 34523
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/README.md",
+        "sha256": "c58fed5a7ee7f0b01f87bd11828bc0406b6785b12674152777457200ca89f5da",
+        "bytes_utf8": 11927
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/package.json",
+        "sha256": "b3e0dfc1794d60e1ea3a9c90af3b9d360898b297b35f5fff2f834c6bd183b5d3",
+        "bytes_utf8": 1372
+      },
+      {
+        "path": "src/sim/economy.ts",
+        "url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/src/sim/economy.ts",
+        "sha256": "66d817c40e48ac455461c1a477ba3c9a57dabcf2c0a58d6c7cf71ca423273ee1",
+        "bytes_utf8": 10377
+      },
+      {
+        "path": "src/world/pathfind.ts",
+        "url": "https://github.com/rbenzing/SlimCityGame/blob/73e065226b8134cf44901a641076aeed3281f9f1/src/world/pathfind.ts",
+        "sha256": "c02728349a05d09a04d86a2cf5984e34cb889f59b39531c8aaee65972654b4d0",
+        "bytes_utf8": 21632
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/rawprogress/fable-cities",
+    "commit": "aea8b1035030952555395de0c1de14ba693a1427",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/LICENSE",
+        "sha256": "c775f9da7fd7f635676a751e1a56bd436ba12a611fad7ca78d0c1c86262bfbff",
+        "bytes_utf8": 1456
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/README.md",
+        "sha256": "18924fdbe5ca7ee90414c40feeec5992d079ed069735d75466d2ab3b4f785e98",
+        "bytes_utf8": 11007
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/package.json",
+        "sha256": "0f788ea3ab7f92694f0bf17a1f7471e44acc67dd73105f3bef0afb01a35363cf",
+        "bytes_utf8": 689
+      },
+      {
+        "path": "src/modules/simulation/clock.js",
+        "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/src/modules/simulation/clock.js",
+        "sha256": "f60047a5ac068e7e7203554f7ec37f439a39d08f3ea8d932ddc833918088dbeb",
+        "bytes_utf8": 4651
+      },
+      {
+        "path": "src/modules/roads/RoadNetwork.js",
+        "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/src/modules/roads/RoadNetwork.js",
+        "sha256": "f457121c9e4615503d530395cec966e91c049e3a12af94a31d763e6affc1b262",
+        "bytes_utf8": 38795
+      },
+      {
+        "path": "public/assets/CREDITS.md",
+        "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/public/assets/CREDITS.md",
+        "sha256": "76f40a38cb44c178a7f662363027872ef29eac7247be993f6d640f4f14a61fd1",
+        "bytes_utf8": 5005
+      },
+      {
+        "path": "THIRD-PARTY-NOTICES.md",
+        "url": "https://github.com/rawprogress/fable-cities/blob/aea8b1035030952555395de0c1de14ba693a1427/THIRD-PARTY-NOTICES.md",
+        "sha256": "c0a5aa2d94a72833dfd06aa89884e7106552a3013f2065fe55e6f6546c7b69f8",
+        "bytes_utf8": 1775
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/tweeres04/gather-it",
+    "commit": "8c74a133c9a2cb98a4bfb53eacafe751a0453286",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://github.com/tweeres04/gather-it/blob/8c74a133c9a2cb98a4bfb53eacafe751a0453286/README.md",
+        "sha256": "841f10a9df55801d9c932255e1f9760c78dfbe74e2a78e2ce8b63844cb420292",
+        "bytes_utf8": 1754
+      },
+      {
+        "path": "Assets/Worker.cs",
+        "url": "https://github.com/tweeres04/gather-it/blob/8c74a133c9a2cb98a4bfb53eacafe751a0453286/Assets/Worker.cs",
+        "sha256": "0b59a5867f2874e4b47060c682d23c21a0ccd82497bc6e26b3b35e7b424a61d9",
+        "bytes_utf8": 6578
+      },
+      {
+        "path": "Assets/Shop.cs",
+        "url": "https://github.com/tweeres04/gather-it/blob/8c74a133c9a2cb98a4bfb53eacafe751a0453286/Assets/Shop.cs",
+        "sha256": "642696ff9ddbc87a0a62ac35fcb9cc63fb1795a1ad0de0dbbaa2f675c78df991",
+        "bytes_utf8": 3954
+      },
+      {
+        "path": "ProjectSettings/ProjectVersion.txt",
+        "url": "https://github.com/tweeres04/gather-it/blob/8c74a133c9a2cb98a4bfb53eacafe751a0453286/ProjectSettings/ProjectVersion.txt",
+        "sha256": "47c344e8ccd76bc691de5d5a173488b8ffe3e40f8a5ee804fa47728d47c07ff6",
+        "bytes_utf8": 83
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/Hextris/hextris",
+    "commit": "3f4847dc8fd7dab3d1c87e6324b9159d92fbd396",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE.md",
+        "url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/LICENSE.md",
+        "sha256": "ccb349b4132ed7737f25e5adebfe61f3d52dca33708df1e50352320438d1d4c2",
+        "bytes_utf8": 35178
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/README.md",
+        "sha256": "383ac7de93cc0f085ef6d5ffeb08f95e1baf599d33772afd6c51958187f75eaf",
+        "bytes_utf8": 1802
+      },
+      {
+        "path": "js/checking.js",
+        "url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/js/checking.js",
+        "sha256": "9f8761f25c184013fbbaf29d0e6141e3064c0b103132c6f97a1c93d8e0595821",
+        "bytes_utf8": 2894
+      },
+      {
+        "path": "js/wavegen.js",
+        "url": "https://github.com/Hextris/hextris/blob/3f4847dc8fd7dab3d1c87e6324b9159d92fbd396/js/wavegen.js",
+        "sha256": "05c9b4f996ea32f0aabf1e99ce4cb9ab8fe4cc4596dde9b2c06f63c8400e8150",
+        "bytes_utf8": 5391
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/gabrielecirulli/2048",
+    "commit": "478b6ec346e3787f589e4af751378d06ded4cbbc",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE.txt",
+        "url": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/LICENSE.txt",
+        "sha256": "57e12c39a6ad9d98b2e451065bfdfbd15fc9e0c2ed3bf4dc1d09acab41ff02fc",
+        "bytes_utf8": 1083
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/README.md",
+        "sha256": "3b624490f45eb6315b00bcaac65cefa713678401c42971b0e65cad8d8ff0ccfc",
+        "bytes_utf8": 2350
+      },
+      {
+        "path": "js/game_manager.js",
+        "url": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/js/game_manager.js",
+        "sha256": "b02baa6b75f8c8cad8606e680b6f73b7c843c61e3a643ee48410022499a649f0",
+        "bytes_utf8": 7627
+      },
+      {
+        "path": "js/local_storage_manager.js",
+        "url": "https://github.com/gabrielecirulli/2048/blob/478b6ec346e3787f589e4af751378d06ded4cbbc/js/local_storage_manager.js",
+        "sha256": "8e12c6a9aa34097c0b634b1f6690da091b1b4ac158ff914097a8ac83c86b5bc6",
+        "bytes_utf8": 1588
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/ellisonleao/clumsy-bird",
+    "commit": "fae3d487d5102af29fb3f78431cbd45e9b83aed3",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE.md",
+        "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/LICENSE.md",
+        "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+        "bytes_utf8": 35141
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/README.md",
+        "sha256": "25fb0c9f1de6235c5ce32b74ac11bf76679dd6538c2bf9659b23c665a4ddc52a",
+        "bytes_utf8": 967
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/package.json",
+        "sha256": "fe13394ae7eb029c81d713ca50b5ec400f4446aaf4b8e8c0c74b5bdba1c5ab65",
+        "bytes_utf8": 1000
+      },
+      {
+        "path": "js/entities/entities.js",
+        "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/js/entities/entities.js",
+        "sha256": "1666879b6dd306d9169325df414f77049644cdafa51bd4f8a108a7e04139e920",
+        "bytes_utf8": 7754
+      },
+      {
+        "path": "js/screens/play.js",
+        "url": "https://github.com/ellisonleao/clumsy-bird/blob/fae3d487d5102af29fb3f78431cbd45e9b83aed3/js/screens/play.js",
+        "sha256": "d300cd4669ceda082d332f7944b4e76fa7781d871609ceae5363ccf0a2144c51",
+        "bytes_utf8": 2260
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/BKcore/HexGL",
+    "commit": "6addc95a2fce3bf05f4d751823cc054c61a16d68",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/LICENSE",
+        "sha256": "546e4044d830dc6153713f0512c09042b9cc49b7f902f654a5a1d3b41ca07db1",
+        "bytes_utf8": 1085
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/README.md",
+        "sha256": "bc5a138aacde2ba3a13292faf6529c15ffefe5d59f73bfe3b66508caa3ddbf6e",
+        "bytes_utf8": 792
+      },
+      {
+        "path": "bkcore/hexgl/ShipControls.js",
+        "url": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/bkcore/hexgl/ShipControls.js",
+        "sha256": "aebd62ff65d587be6fc03af409465d4dec681ea78cada2aea47966c58ffdf8fe",
+        "bytes_utf8": 21576
+      },
+      {
+        "path": "bkcore/hexgl/RaceData.js",
+        "url": "https://github.com/BKcore/HexGL/blob/6addc95a2fce3bf05f4d751823cc054c61a16d68/bkcore/hexgl/RaceData.js",
+        "sha256": "9c7ad50f7210c93956d7507a7d7249e77929d494e178beeacf7495d0d8e24324",
+        "bytes_utf8": 2233
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/mozilla/BrowserQuest",
+    "commit": "af32d247cac3495ca430d0effbb88dd5f3250b2c",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/LICENSE",
+        "sha256": "5f6ce77eaba5f9dd5e1f769f33b425b6caca1728708d40ffdd20e1e84fa2fe61",
+        "bytes_utf8": 308
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/README.md",
+        "sha256": "b2476e05db1a50e4990707e8a66a8bbd052fadaf13da700f07e43ddab30ce934",
+        "bytes_utf8": 529
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/package.json",
+        "sha256": "d17125421cb8c43329020a2b31514d4c2eb70d0e4b5a75a66c9b48afc03c1ccb",
+        "bytes_utf8": 265
+      },
+      {
+        "path": "client/js/pathfinder.js",
+        "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/client/js/pathfinder.js",
+        "sha256": "4d71c6a23b679e917266e9eb1b5698b92dee7a1e4def5a8bbce991dd39bee118",
+        "bytes_utf8": 3195
+      },
+      {
+        "path": "server/js/worldserver.js",
+        "url": "https://github.com/mozilla/BrowserQuest/blob/af32d247cac3495ca430d0effbb88dd5f3250b2c/server/js/worldserver.js",
+        "sha256": "0e1cb2e8f13e9dd4389017e64e34a4fb3faaf802342b87121e7cab9eca673cee",
+        "bytes_utf8": 27103
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/doublespeakgames/adarkroom",
+    "commit": "1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE.md",
+        "url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/LICENSE.md",
+        "sha256": "d7fc444cae8da4b95b9d0356b145dfc530d45b16965da953fa02dbb9ce004572",
+        "bytes_utf8": 16734
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/README.md",
+        "sha256": "1dc4d624812f499a9ff84fe211915a7fd48f6744d6b44dc8bf224246adb038db",
+        "bytes_utf8": 2663
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/package.json",
+        "sha256": "164438835c71b2d5a8302e2b26b5c4397bb2bb2cee6188da3552587d9e65ed88",
+        "bytes_utf8": 446
+      },
+      {
+        "path": "script/outside.js",
+        "url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/script/outside.js",
+        "sha256": "3f770f7da741b964e016c78801722ca8a58980f1eb6f9748f922b573d341f451",
+        "bytes_utf8": 18489
+      },
+      {
+        "path": "script/state_manager.js",
+        "url": "https://github.com/doublespeakgames/adarkroom/blob/1fada4620b6c66bd07bf15a3f1eb8223df8bc1d7/script/state_manager.js",
+        "sha256": "85441d6f3143c99818938644dc15f0ba0a1fb740a4904b02d5d96347015e5826",
+        "bytes_utf8": 12672
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/KilledByAPixel/LittleJS",
+    "commit": "da1b3836552b2373522a56bd39d6fb9f4b530017",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/LICENSE",
+        "sha256": "c874c899f1d32eaea2e4231f57e709948aa0fd19586c1a3d2d1e2dc4144a51d1",
+        "bytes_utf8": 1098
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/README.md",
+        "sha256": "b98a612b6f7a740ccc469d141ecfda4bce963bda1f5c5a88f8aa46d44cf09c90",
+        "bytes_utf8": 12180
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/package.json",
+        "sha256": "7e5a793d77a7d1d4882663c36ba0f77c92c878db05d78f465be4271e35ccf788",
+        "bytes_utf8": 1428
+      },
+      {
+        "path": "src/engineAudio.js",
+        "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/src/engineAudio.js",
+        "sha256": "6ccfc507094d3817ccc6e21399c2a219139bf2c76d29d305ea7f86bb1a120243",
+        "bytes_utf8": 31849
+      },
+      {
+        "path": "src/engineParticles.js",
+        "url": "https://github.com/KilledByAPixel/LittleJS/blob/da1b3836552b2373522a56bd39d6fb9f4b530017/src/engineParticles.js",
+        "sha256": "21401a5d0f5b832ff01e608d73976915b67c111224089cb457ba7345380b2f48",
+        "bytes_utf8": 22950
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter",
+    "commit": "186705eb557af3d7042590fc61485a7cbed7b7f0",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/LICENSE",
+        "sha256": "efcb943c49321521e40f9bdd68ce5804c533dc7bba4be95360ffbf54db04d015",
+        "bytes_utf8": 1064
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/package.json",
+        "sha256": "ff7534fcc9cc125b9b06a047abd48a2d8beecf5783ef433d49c0a92123285461",
+        "bytes_utf8": 965
+      },
+      {
+        "path": "readme.md",
+        "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/readme.md",
+        "sha256": "0bc5fca02571cec45bcd95d4b75d9a8390e0474145af6d85c83fb7df46437a6b",
+        "bytes_utf8": 1207
+      },
+      {
+        "path": "src/characters/Faune.ts",
+        "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/src/characters/Faune.ts",
+        "sha256": "14d09cdd7aaeb8ecf24a7dc544b82a59d5a719d7003dd640309568e158337735",
+        "bytes_utf8": 4374
+      },
+      {
+        "path": "src/enemies/Lizard.ts",
+        "url": "https://github.com/ourcade/phaser3-dungeon-crawler-starter/blob/186705eb557af3d7042590fc61485a7cbed7b7f0/src/enemies/Lizard.ts",
+        "sha256": "090cdc53d11c8a4ca14b81bde12c76e6161a2c2317b2cd086a649ca1c35b87ea",
+        "bytes_utf8": 1527
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/liabru/matter-js",
+    "commit": "acb99b6f8784c809b940f1d2cf745427e088e088",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/LICENSE",
+        "sha256": "ed182087be5b26734aa6d4789743de3a97417950e8c1e3ff2e3d19c6462720d3",
+        "bytes_utf8": 1092
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/README.md",
+        "sha256": "d17d37655c45ca5ded135fb15ebc4271e268eb44ee4574b163dd147f75161da4",
+        "bytes_utf8": 9023
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/package.json",
+        "sha256": "4d8aa6501b2c06e2c1c46bdf294050096cc18631588810d19b451f8590e2ad9e",
+        "bytes_utf8": 3315
+      },
+      {
+        "path": "src/core/Engine.js",
+        "url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/src/core/Engine.js",
+        "sha256": "2b6a661b1468c0c74f2e929d316b774a3c803cd2d703b8f12180d781529e8721",
+        "bytes_utf8": 18621
+      },
+      {
+        "path": "src/constraint/Constraint.js",
+        "url": "https://github.com/liabru/matter-js/blob/acb99b6f8784c809b940f1d2cf745427e088e088/src/constraint/Constraint.js",
+        "sha256": "5a582cec20b9b301cad1badf8ebf715a2dc379b0bdbb299c1d405adb47ea040f",
+        "bytes_utf8": 17785
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/donmccurdy/three-pathfinding",
+    "commit": "1526c84afed0d596cb13f4b7be36401fd2c6a430",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/LICENSE",
+        "sha256": "fc62c5b6d81351781b537402cd2fa70b4be9fe8a95e7ee0f51adbb1481b8431c",
+        "bytes_utf8": 1079
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/README.md",
+        "sha256": "ee82fc35a8c0d8059f66ebc4c3cf4cc5933ad4838ebeef37905b5bdbbf76671e",
+        "bytes_utf8": 9541
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/package.json",
+        "sha256": "575b76ac71c96ff47c600c9f1d92057a8b4ef0ef6c33cdc11af409d5acb12909",
+        "bytes_utf8": 2075
+      },
+      {
+        "path": "src/Pathfinding.js",
+        "url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/src/Pathfinding.js",
+        "sha256": "2f220c9bd4b21752f913b4391350bda3255e65336d2863dd790a98fad0230eec",
+        "bytes_utf8": 8112
+      },
+      {
+        "path": "src/Channel.js",
+        "url": "https://github.com/donmccurdy/three-pathfinding/blob/1526c84afed0d596cb13f4b7be36401fd2c6a430/src/Channel.js",
+        "sha256": "26219d245d209ab47e36b6cf605f0a2296060ea77ac0478112a25937b13995f8",
+        "bytes_utf8": 2574
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/Mugen87/yuka",
+    "commit": "10591304811222d6856020d5de129b39ef43b58d",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/LICENSE",
+        "sha256": "2b75427a84abb4a68e331d02d14f61ba7405c0e0bbab2aea8d6afe3803580d83",
+        "bytes_utf8": 1072
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/README.md",
+        "sha256": "2ecb063afd665b7d07fbe0b8dc9f5d260a878f6ff815b626efbff721440f84e2",
+        "bytes_utf8": 2187
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/package.json",
+        "sha256": "787f606f5dd273f3017239e450d9f20306eab3eec91752aec2a04d41e605600a",
+        "bytes_utf8": 1571
+      },
+      {
+        "path": "src/fsm/StateMachine.js",
+        "url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/src/fsm/StateMachine.js",
+        "sha256": "ca6fe68605f845551579153a9ec67bad5e99fba427d43757781f7f732abb0645",
+        "bytes_utf8": 6657
+      },
+      {
+        "path": "src/steering/behaviors/SeekBehavior.js",
+        "url": "https://github.com/Mugen87/yuka/blob/10591304811222d6856020d5de129b39ef43b58d/src/steering/behaviors/SeekBehavior.js",
+        "sha256": "df276769933ab59714e72640e7b770fb50df0a9697a42a12b11c318fcdc7afca",
+        "bytes_utf8": 2224
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/gkjohnson/three-mesh-bvh",
+    "commit": "8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/LICENSE",
+        "sha256": "b106ef6198a9862ed2b5b873e944ecf3583c631a84a7462d400ecc1910ce7fee",
+        "bytes_utf8": 1072
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/README.md",
+        "sha256": "9729ab38a2ff95e72f1bd721c4830d60828078a5b76f38f7570b5342ac9bdfc5",
+        "bytes_utf8": 13857
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/package.json",
+        "sha256": "432efade300e352e8d7a605c463ce228658be81ea49a21b92e6b5ba0fa713b61",
+        "bytes_utf8": 2646
+      },
+      {
+        "path": "src/core/MeshBVH.js",
+        "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/src/core/MeshBVH.js",
+        "sha256": "1f917667d86e7d8e04060104bf760b7021432311ce691645f232beff2ebefff2",
+        "bytes_utf8": 27986
+      },
+      {
+        "path": "src/workers/GenerateMeshBVHWorker.js",
+        "url": "https://github.com/gkjohnson/three-mesh-bvh/blob/8747a3c418f1dafa7c3ab1b3c1ffdecc531a2eab/src/workers/GenerateMeshBVHWorker.js",
+        "sha256": "e5e630bcc4b913afd555ffedf51b5b31cacc0ae160a48656ece3d6452348942f",
+        "bytes_utf8": 4155
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/pmndrs/react-three-rapier",
+    "commit": "ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/LICENSE",
+        "sha256": "cd14add33d47bcecae9fed5559224ae135c5ec41e1d3a126601f5fbd82291834",
+        "bytes_utf8": 1067
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/package.json",
+        "sha256": "cbacb58dcf881d65eb5319cc101a4f44b73f95191a33e78c964311deeec02810",
+        "bytes_utf8": 2028
+      },
+      {
+        "path": "readme.md",
+        "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/readme.md",
+        "sha256": "68613574268e36adb46f70fe4f7dc4f472f228291a58b23007983dd700a51afb",
+        "bytes_utf8": 37
+      },
+      {
+        "path": "packages/react-three-rapier/readme.md",
+        "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/readme.md",
+        "sha256": "eb0038a166a45b72e336812da6db8b2de051fac67a48214c66315d660ccf13ee",
+        "bytes_utf8": 34459
+      },
+      {
+        "path": "packages/react-three-rapier/package.json",
+        "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/package.json",
+        "sha256": "41071155785dab9ffa7935210903c966431efdbb0a0e1188f95b7b279cfbe69a",
+        "bytes_utf8": 905
+      },
+      {
+        "path": "packages/react-three-rapier/src/components/RigidBody.tsx",
+        "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/src/components/RigidBody.tsx",
+        "sha256": "788caf41ed6636508c62a0320a6e6d04e6dd4f6379a6f4994cb928360d6ae3a6",
+        "bytes_utf8": 3791
+      },
+      {
+        "path": "packages/react-three-rapier/src/hooks/joints.ts",
+        "url": "https://github.com/pmndrs/react-three-rapier/blob/ae5c3fede5ca489fd7eaa8271e9d9c5eabc88e98/packages/react-three-rapier/src/hooks/joints.ts",
+        "sha256": "455b356a29da6d98eae2bb59b41944b2aa2ae7280348782055c6ac7e306d1c9a",
+        "bytes_utf8": 6011
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/IceCreamYou/THREE.Terrain",
+    "commit": "434d977ffdbac604cd5c6fd332c4d005f7f9ec68",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE.txt",
+        "url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/LICENSE.txt",
+        "sha256": "8a15ff970a854e22d3a3d5b72147abc019774255f4271f0a5a690c603fc05130",
+        "bytes_utf8": 1077
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/README.md",
+        "sha256": "88faeb691af5846887b8c1c94cb6fda87cc0382df8d335b89763fe61190a8cbc",
+        "bytes_utf8": 9599
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/package.json",
+        "sha256": "6ea6d1657c9e1ffd58d14299e1b70e5f4b3736d8563a51999056ac0337723ca3",
+        "bytes_utf8": 1793
+      },
+      {
+        "path": "src/generators.js",
+        "url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/src/generators.js",
+        "sha256": "481a96211053b739f5babc1c1c00e98de12cc5e53046465570770b61dbfa5bb1",
+        "bytes_utf8": 25957
+      },
+      {
+        "path": "src/scatter.js",
+        "url": "https://github.com/IceCreamYou/THREE.Terrain/blob/434d977ffdbac604cd5c6fd332c4d005f7f9ec68/src/scatter.js",
+        "sha256": "371cc066045d38ff7351cbe887b8cb70e62522a5d2bb898a683743a9e5ca5114",
+        "bytes_utf8": 27958
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/pmndrs/drei",
+    "commit": "ffa15b956e320391b0e86084cb58c8da0445abe3",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/LICENSE",
+        "sha256": "2e36b208b403882158daf95cae207087bbb830db4d434a79ebafffca177244c8",
+        "bytes_utf8": 1069
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/README.md",
+        "sha256": "26718342352d21f3d2011829bb58bc515f06d25d51b19025df5a9eb3ab66299a",
+        "bytes_utf8": 27833
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/package.json",
+        "sha256": "889bb72a2d8c9639454a93fef951ada9b601b1068cb565658015be087a521036",
+        "bytes_utf8": 4956
+      },
+      {
+        "path": "src/core/CameraControls.tsx",
+        "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/src/core/CameraControls.tsx",
+        "sha256": "3d7700ad2bea88fe5a98403a454e87f14e9a76098df6de842752d775c1ec95d9",
+        "bytes_utf8": 6767
+      },
+      {
+        "path": "src/core/MeshReflectorMaterial.tsx",
+        "url": "https://github.com/pmndrs/drei/blob/ffa15b956e320391b0e86084cb58c8da0445abe3/src/core/MeshReflectorMaterial.tsx",
+        "sha256": "e905f769a55d74359c4540f03cad8edac1fbddd6bbd1ece237f7eecbb777cc48",
+        "bytes_utf8": 9009
+      }
+    ]
+  },
+  {
+    "repo_url": "https://github.com/mrdoob/three.js",
+    "commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+    "retrieval_method": "GitHub REST metadata/tree via gh api; pinned raw.githubusercontent.com text fetches; static source excerpts inspected, no upstream execution.",
+    "files": [
+      {
+        "path": "LICENSE",
+        "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/LICENSE",
+        "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+        "bytes_utf8": 1081
+      },
+      {
+        "path": "README.md",
+        "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/README.md",
+        "sha256": "d553d824625a07d7690de93af6f8daf13d6aaed42700929d7ce4e725fa5ef10d",
+        "bytes_utf8": 2969
+      },
+      {
+        "path": "package.json",
+        "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/package.json",
+        "sha256": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+        "bytes_utf8": 3672
+      },
+      {
+        "path": "src/animation/AnimationMixer.js",
+        "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/src/animation/AnimationMixer.js",
+        "sha256": "7b05af5507aa4edfe3d6b5debcda23c8f0d9b910928debff7fc50748954d533c",
+        "bytes_utf8": 19624
+      },
+      {
+        "path": "examples/jsm/objects/Water.js",
+        "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/objects/Water.js",
+        "sha256": "3386670ba86003a32f5efe449041bd108d4cf1e0661849caa814741a2aaf395b",
+        "bytes_utf8": 12894
+      }
+    ]
+  }
+]

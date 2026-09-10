@@ -1,0 +1,742 @@
+[
+  {
+    "pageid": 49259653,
+    "title": "File:SuperTux 0.4.0 1st level.png",
+    "revision": 1104799162,
+    "observed_at": "2026-09-10T17:32:37.260932+00:00",
+    "imageinfo": {
+      "timestamp": "2016-06-05T18:53:13Z",
+      "size": 783801,
+      "width": 1301,
+      "height": 744,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/SuperTux_0.4.0_1st_level.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:SuperTux_0.4.0_1st_level.png",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=49259653",
+      "sha1": "73c52b7d6aaeacc6a8dc707b5bfc3b0680e749b1",
+      "extmetadata": {
+        "ImageDescription": {
+          "value": "The first level of SuperTux 0.4.0.",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2016-06-05",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "I took a screenshot.",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.supertux.org/contact.html\">SuperTux Development Team</a>",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "GPL",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "GNU General Public License",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "http://www.gnu.org/licenses/gpl.html",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        }
+      }
+    }
+  },
+  {
+    "pageid": 24565903,
+    "title": "File:SuperTuxKart 0.8 screenshot.jpg",
+    "revision": 1210223221,
+    "observed_at": "2026-09-10T17:32:37.260932+00:00",
+    "imageinfo": {
+      "timestamp": "2013-02-10T01:18:31Z",
+      "size": 232159,
+      "width": 1280,
+      "height": 720,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/SuperTuxKart_0.8_screenshot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:SuperTuxKart_0.8_screenshot.jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=24565903",
+      "sha1": "df345c5be9e735bfa71679d21ded007cb7d9238f",
+      "extmetadata": {
+        "ImageDescription": {
+          "value": "A screenshot of the island track from the <i>SuperTuxKart</i> game",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<a rel=\"nofollow\" class=\"external free\" href=\"http://supertuxkart.sourceforge.net/File:Sshot_island.jpg\">http://supertuxkart.sourceforge.net/File:Sshot_island.jpg</a>",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "SuperTuxKart development team",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "CC BY-SA 3.0",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Creative Commons Attribution-Share Alike 3.0",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "https://creativecommons.org/licenses/by-sa/3.0",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        }
+      }
+    }
+  },
+  {
+    "pageid": 102892949,
+    "title": "File:OpenTTD-1.11.0-nl.png",
+    "revision": 879978866,
+    "observed_at": "2026-09-10T17:32:37.260932+00:00",
+    "imageinfo": {
+      "timestamp": "2021-04-02T11:48:59Z",
+      "size": 843702,
+      "width": 1920,
+      "height": 1080,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/OpenTTD-1.11.0-nl.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:OpenTTD-1.11.0-nl.png",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=102892949",
+      "sha1": "8b94b877f2a347af1ed1b91ef0c26fccc8046df3",
+      "extmetadata": {
+        "ImageDescription": {
+          "value": "Screenshot of the game OpenTTD 1.11.0 (Dutch version) with graphicsset: OpenGFX.",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2021-04-02",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "Self made screenshot",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "<ul><li><a rel=\"nofollow\" class=\"external free\" href=\"https://github.com/OpenTTD/OpenGFX/blob/master/README.md#60-credits\">https://github.com/OpenTTD/OpenGFX/blob/master/README.md#60-credits</a></li>\n<li><a rel=\"nofollow\" class=\"external free\" href=\"https://www.openttd.org/about.html\">https://www.openttd.org/about.html</a></li></ul>",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "GPLv2",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "GNU General Public License v2",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        }
+      }
+    }
+  },
+  {
+    "pageid": 76113842,
+    "title": "File:0 A.D. Alpha 23.jpg",
+    "revision": 740095193,
+    "observed_at": "2026-09-10T17:32:37.260932+00:00",
+    "imageinfo": {
+      "timestamp": "2019-01-26T16:03:57Z",
+      "size": 840537,
+      "width": 1750,
+      "height": 979,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/0_A.D._Alpha_23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:0_A.D._Alpha_23.jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=76113842",
+      "sha1": "f141f0bc388059497aaa46609262fdfecfe78cef",
+      "extmetadata": {
+        "ImageDescription": {
+          "value": "This is a screenshot of a free and open-source game 0 A.D. Alpha 23 “Ken Wood”, taken by me. The game media are licensed under CC-BY-SA.",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2019-01-26",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "Screenshot",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "0 A.D. Developers",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "CC BY-SA 3.0",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Creative Commons Attribution-Share Alike 3.0",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "https://creativecommons.org/licenses/by-sa/3.0",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        }
+      }
+    }
+  },
+  {
+    "pageid": 21184024,
+    "title": "File:Minetest screenshot.png",
+    "revision": 1177730923,
+    "observed_at": "2026-09-10T17:32:37.260932+00:00",
+    "imageinfo": {
+      "timestamp": "2012-09-08T20:40:36Z",
+      "size": 603206,
+      "width": 1018,
+      "height": 600,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Minetest_screenshot.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Minetest_screenshot.png",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=21184024",
+      "sha1": "e92824b3944f8d884a8c8c3361ef68e97beac9ea",
+      "extmetadata": {
+        "ImageDescription": {
+          "value": "Screenshot from the game, showing the varied terrain, from the Author's website.",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2012-09-08 16:39:08",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "Game author's website",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "Perttu \"celeron55\" Ahola, Vanessa Ezekowitz, et.al",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "CC BY-SA 3.0",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Creative Commons Attribution-Share Alike 3.0",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "https://creativecommons.org/licenses/by-sa/3.0",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        }
+      }
+    }
+  },
+  {
+    "pageid": 78927094,
+    "title": "File:Four tribes in Widelands Build 20.jpg",
+    "revision": 1166155186,
+    "observed_at": "2026-09-10T17:32:37.260932+00:00",
+    "imageinfo": {
+      "timestamp": "2019-05-13T20:13:28Z",
+      "size": 994338,
+      "width": 1821,
+      "height": 1025,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Four_tribes_in_Widelands_Build_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Four_tribes_in_Widelands_Build_20.jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=78927094",
+      "sha1": "b60e1e4bf9194b42919a65ef960789dd3d415897",
+      "extmetadata": {
+        "ImageDescription": {
+          "value": "Screenshot of the Widelands fantasy real-time strategy game",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2019-01-03",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://wl.widelands.org/wlmedia/wlscreens/screens/Build%2020/Four_Tribes_2.jpeg\">https://wl.widelands.org/wlmedia/wlscreens/screens/Build%2020/Four_Tribes_2.jpeg</a>",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "Widelands Development Team",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "GPL",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "GNU General Public License",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "http://www.gnu.org/licenses/gpl.html",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        }
+      }
+    }
+  },
+  {
+    "pageid": 26535067,
+    "title": "File:The Battle for Wesnoth Map Screenshot 000.jpg",
+    "revision": 1243649444,
+    "observed_at": "2026-09-10T17:32:37.260932+00:00",
+    "imageinfo": {
+      "timestamp": "2013-06-07T18:01:07Z",
+      "size": 1976917,
+      "width": 1152,
+      "height": 900,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/The_Battle_for_Wesnoth_Map_Screenshot_000.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_Battle_for_Wesnoth_Map_Screenshot_000.jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=26535067",
+      "sha1": "1849c7d16b907b96c04d6f5507ac63c9bb3fc8d7",
+      "extmetadata": {
+        "ImageDescription": {
+          "value": "The Battle for Wesnoth map",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2013-06-07",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "The Battle for Wesnoth Tutorial",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "Mirgov",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "GPL",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "GNU General Public License",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "http://www.gnu.org/licenses/gpl.html",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        }
+      }
+    }
+  },
+  {
+    "pageid": 151687194,
+    "title": "File:Mindustry multiplayer.jpg",
+    "revision": 1221300694,
+    "observed_at": "2026-09-10T17:32:37.260932+00:00",
+    "imageinfo": {
+      "timestamp": "2024-08-22T01:08:22Z",
+      "size": 700461,
+      "width": 1920,
+      "height": 1080,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Mindustry_multiplayer.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Mindustry_multiplayer.jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=151687194",
+      "sha1": "222e1cf93696090e961f8439c85fad8b6af036a3",
+      "extmetadata": {
+        "ImageDescription": {
+          "value": "Мультиплеер сервер Mindustry в режиме \"атака\"",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2024-08-22",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:TheVanillChaos&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:TheVanillChaos (page does not exist)\">TheVanillChaos</a>",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "GPLv3",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "GNU General Public License v3",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "http://www.gnu.org/licenses/gpl-3.0.html",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        }
+      }
+    }
+  },
+  {
+    "pageid": 94052242,
+    "title": "File:Endless Sky 0.9.12 title screen.png",
+    "revision": 950568784,
+    "observed_at": "2026-09-10T17:32:37.260932+00:00",
+    "imageinfo": {
+      "timestamp": "2020-09-12T13:25:19Z",
+      "size": 791081,
+      "width": 1960,
+      "height": 1120,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Endless_Sky_0.9.12_title_screen.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Endless_Sky_0.9.12_title_screen.png",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=94052242",
+      "sha1": "bf0563e96f082f622cb33dd1d67e50547093c7af",
+      "extmetadata": {
+        "ImageDescription": {
+          "value": "The title screen of Endless Sky version 0.9.12",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2020-09-12",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "Endless Sky developers",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "Endless Sky developers",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "GPLv3",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "GNU General Public License v3",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "http://www.gnu.org/licenses/gpl-3.0.html",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        }
+      }
+    }
+  },
+  {
+    "pageid": 161212233,
+    "title": "File:CDDA 0.A screenshot humvee.png",
+    "revision": 1105531411,
+    "observed_at": "2026-09-10T17:32:37.260932+00:00",
+    "imageinfo": {
+      "timestamp": "2014-11-05T12:52:38Z",
+      "size": 127482,
+      "width": 1358,
+      "height": 741,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/CDDA_0.A_screenshot_humvee.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:CDDA_0.A_screenshot_humvee.png",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=161212233",
+      "sha1": "606c7a54eb5d43329eb4679da3be7983f7b5867d",
+      "extmetadata": {
+        "ImageDescription": {
+          "value": "Скріншот Cataclysm: Dark Days Ahead, персонаж поруч з модифікованим Humvee",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2014-11-05",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "Cataclysm: Dark Days Ahead",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "tivasyk",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "CC BY-SA 3.0",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "Creative Commons Attribution-Share Alike 3.0",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "https://creativecommons.org/licenses/by-sa/3.0",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        }
+      }
+    }
+  },
+  {
+    "pageid": 31695218,
+    "title": "File:2048 Screenshot.png",
+    "revision": 774775920,
+    "observed_at": "2026-09-10T17:32:37.260932+00:00",
+    "imageinfo": {
+      "timestamp": "2014-03-19T16:21:39Z",
+      "size": 12981,
+      "width": 548,
+      "height": 549,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/2048_Screenshot.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:2048_Screenshot.png",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=31695218",
+      "sha1": "5cf69191ecc26b24d87cb2c5f5ebbca557ec673d",
+      "extmetadata": {
+        "ImageDescription": {
+          "value": "A screenshot of a game of 2048 in progress.",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2014-03-19 12:20:41",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://github.com/gabrielecirulli/2048\">https://github.com/gabrielecirulli/2048</a>",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "Gabriele Cirulli",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "MIT",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "MIT license",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "http://opensource.org/licenses/mit-license.php",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        }
+      }
+    }
+  },
+  {
+    "pageid": 145872399,
+    "title": "File:Veloren Savannah Screenshot.jpg",
+    "revision": 1206827967,
+    "observed_at": "2026-09-10T17:32:37.260932+00:00",
+    "imageinfo": {
+      "timestamp": "2024-02-27T04:16:39Z",
+      "size": 3502263,
+      "width": 2520,
+      "height": 1362,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Veloren_Savannah_Screenshot.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "descriptionurl": "https://commons.wikimedia.org/wiki/File:Veloren_Savannah_Screenshot.jpg",
+      "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=145872399",
+      "sha1": "a9626641bb4117ec824e641ffa305e3f6c87d347",
+      "extmetadata": {
+        "ImageDescription": {
+          "value": "Veloren Savannah Screenshot",
+          "source": "commons-desc-page"
+        },
+        "DateTimeOriginal": {
+          "value": "2023-01-18",
+          "source": "commons-desc-page"
+        },
+        "Credit": {
+          "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://book.veloren.net/contributors/journalists/press-kit.html\">https://book.veloren.net/contributors/journalists/press-kit.html</a>",
+          "source": "commons-desc-page"
+        },
+        "Artist": {
+          "value": "Veloren Project",
+          "source": "commons-desc-page"
+        },
+        "LicenseShortName": {
+          "value": "GPLv3",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "UsageTerms": {
+          "value": "GNU General Public License v3",
+          "source": "commons-desc-page"
+        },
+        "AttributionRequired": {
+          "value": "true",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "LicenseUrl": {
+          "value": "http://www.gnu.org/licenses/gpl-3.0.html",
+          "source": "commons-desc-page"
+        },
+        "Copyrighted": {
+          "value": "True",
+          "source": "commons-desc-page",
+          "hidden": ""
+        },
+        "Restrictions": {
+          "value": "",
+          "source": "commons-desc-page",
+          "hidden": ""
+        }
+      }
+    }
+  }
+]

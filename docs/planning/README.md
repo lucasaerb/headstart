@@ -22,7 +22,8 @@ Every issue requires a coder/author subagent, a separate critical reviewer, mean
 | 10 | P0 | [10 · Curate source maps and rights for the first 30 reusable capabilities](https://github.com/lucasaerb/headstart/issues/10) | [#9](https://github.com/lucasaerb/headstart/issues/9) |
 | 11 | P0 | [11 · Add semantic intent retrieval and a held-out search quality suite](https://github.com/lucasaerb/headstart/issues/11) | [#5](https://github.com/lucasaerb/headstart/issues/5), [#8](https://github.com/lucasaerb/headstart/issues/8) |
 | 12 | P0 | [12 · Implement versioned submissions, curator review and rights corrections](https://github.com/lucasaerb/headstart/issues/12) | [#9](https://github.com/lucasaerb/headstart/issues/9), [#7](https://github.com/lucasaerb/headstart/issues/7) |
-| 13 | P0 | [13 · Generate reproducible agent handoffs with scoped rights and credits](https://github.com/lucasaerb/headstart/issues/13) | [#5](https://github.com/lucasaerb/headstart/issues/5), [#8](https://github.com/lucasaerb/headstart/issues/8) |
+| 12a | P0 | [12a · Verify email before platform code access and agent handoff](https://github.com/lucasaerb/headstart/issues/27) | [#5](https://github.com/lucasaerb/headstart/issues/5), [#8](https://github.com/lucasaerb/headstart/issues/8) |
+| 13 | P0 | [13 · Generate reproducible agent handoffs with scoped rights and credits](https://github.com/lucasaerb/headstart/issues/13) | [#5](https://github.com/lucasaerb/headstart/issues/5), [#8](https://github.com/lucasaerb/headstart/issues/8), [#27](https://github.com/lucasaerb/headstart/issues/27) |
 | 14 | P0 | [14 · Expose and test a real read-only catalog MCP connector](https://github.com/lucasaerb/headstart/issues/14) | [#13](https://github.com/lucasaerb/headstart/issues/13) |
 | 15 | P0 | [15 · Ship the six core skills with verified client setup and connection states](https://github.com/lucasaerb/headstart/issues/15) | [#14](https://github.com/lucasaerb/headstart/issues/14) |
 | 16 | P0 | [16 · Implement bounded Three.js/R3F inspection, planning, edits and rollback](https://github.com/lucasaerb/headstart/issues/16) | [#15](https://github.com/lucasaerb/headstart/issues/15), [#10](https://github.com/lucasaerb/headstart/issues/10) |
@@ -42,4 +43,4 @@ Every issue requires a coder/author subagent, a separate critical reviewer, mean
 - [Product direction v0.4](../../HeadStart-Starter-Package/Product-Direction-v0.4.md)
 - [Project instructions](../../AGENTS.md)
 
-`issues.json` preserves the reviewed initial issue definitions; `github-issues.json` maps their stable keys to live GitHub issues. GitHub issues hold ongoing implementation status. Update the local planning mirror when scope or dependency changes, rather than silently allowing contradictory plans.
+`issues.json` preserves the reviewed issue definitions; `github-issues.json` maps their stable keys to live GitHub issues. GitHub issues hold ongoing implementation status. Update the local planning mirror when scope or dependency changes, rather than silently allowing contradictory plans.
