@@ -6,7 +6,6 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
-import tempfile
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
@@ -59,7 +58,7 @@ def package(destination):
     (destination / '.python-version').write_text('3.12\n')
     (destination / 'package.json').write_text(json.dumps({'name':'headstart-production','private':True,'type':'module','engines':{'node':'22.x'},'dependencies':{'@vercel/blob':'2.8.0'}}, indent=2)+'\n')
     (destination / 'build.mjs').write_text('// Assets are verified and assembled by tools/deploy/package.py.\n')
-    configuration = {'$schema':'https://openapi.vercel.sh/vercel.json','framework':None,'buildCommand':'node build.mjs','outputDirectory':'public','functions':{'api/catalog.py':{'maxDuration':60,'excludeFiles':'{public/**,node_modules/**,api/subscribe.js,package-lock.json}'},'api/subscribe.js':{'excludeFiles':'{runtime/**,services/**,contracts/**,public/**}'}},'rewrites':[{'source':'/api/research','destination':'/api/catalog'},{'source':'/api/catalog/search','destination':'/api/catalog'},{'source':'/v1/:path*','destination':'/api/catalog'}]}
+    configuration = {'$schema':'https://openapi.vercel.sh/vercel.json','framework':None,'buildCommand':'node build.mjs','outputDirectory':'public','functions':{'api/catalog.py':{'maxDuration':60,'excludeFiles':'{public/**,node_modules/**,api/subscribe.js,package-lock.json}'},'api/subscribe.js':{'excludeFiles':'{runtime/**,services/**,contracts/**,public/**}'}},'routes':[{'src':'^/api/research$','dest':'/api/catalog'},{'src':'^/api/catalog/search$','dest':'/api/catalog'},{'src':'^/v1/.*$','dest':'/api/catalog'},{'handle':'filesystem'}]}
     (destination / 'vercel.json').write_text(json.dumps(configuration, indent=2)+'\n')
     print(json.dumps({'directory':str(destination),**manifest}))
     return manifest

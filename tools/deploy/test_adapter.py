@@ -44,6 +44,7 @@ class AdapterTests(unittest.TestCase):
         self.assertEqual(adapter.response('POST','/api/research')[0],405)
         self.assertEqual(adapter.response('GET','/v1/projects/nonexistent')[0],404)
         self.assertEqual(adapter.response('GET','/api/research?unknown=x')[0],400)
+        self.assertEqual(adapter.response('GET','/v1/search?path=search')[0],400)
         self.assertEqual(adapter.response('GET','/v1/search?q='+('x'*9000))[0],400)
 
     def test_local_api_parity(self):
@@ -78,5 +79,32 @@ class AdapterTests(unittest.TestCase):
         config=json.loads((STAGE/'vercel.json').read_text())
         self.assertIn('public/**',config['functions']['api/catalog.py']['excludeFiles'])
         self.assertTrue((STAGE/'public/downloads').is_dir())
+        for path in (STAGE/'public').rglob('*'):
+            self.assertFalse(path.is_symlink())
+            self.assertNotIn(path.suffix, {'.py', '.pyc', '.sqlite', '.sqlite3', '.onnx'})
+            self.assertFalse(path.name.startswith('.env'))
+
+    def test_routes_add_no_query_capture_parameters(self):
+        import re
+        config=json.loads((STAGE/'vercel.json').read_text())
+        self.assertNotIn('rewrites',config)
+        for route in ['/v1/search','/v1/projects/2048','/v1/components/tile/versions/1','/api/research','/api/catalog/search']:
+            matches=[r for r in config['routes'] if 'src' in r and re.fullmatch(r['src'],route)]
+            self.assertEqual(len(matches),1)
+            self.assertEqual(re.compile(matches[0]['src']).groups,0)
+            self.assertEqual(matches[0]['dest'],'/api/catalog')
+        self.assertEqual(config['routes'][-1],{'handle':'filesystem'})
+
+    def test_runtime_bytes_match_manifest(self):
+        import hashlib
+        manifest=json.loads((STAGE/'runtime/snapshot.json').read_text())
+        self.assertEqual(hashlib.sha256((STAGE/'runtime/catalog.sqlite3').read_bytes()).hexdigest(),manifest['databaseSha256'])
+        for path in (STAGE/'runtime/evidence').iterdir():
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(),path.name)
+        model=json.loads((STAGE/'services/retrieval/model-manifest.json').read_text())
+        for name, entry in model['files'].items():
+            content=(STAGE/'runtime/model'/name).read_bytes()
+            self.assertEqual(len(content),entry['bytes'])
+            self.assertEqual(hashlib.sha256(content).hexdigest(),entry['sha256'])
 
 if __name__=='__main__':unittest.main()
