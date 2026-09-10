@@ -70,16 +70,25 @@ function renderBag(){
 $('remix-idea').addEventListener('input',event=>{brief=event.target.value.slice(0,BRIEF_LIMIT);saveBag();refreshPrompt();});
 function currentPrompt(){return window.HeadStartGauntlet.buildPrompt({games:[...selected].map(id=>gamesById.get(id)),brief});}
 function refreshPrompt(){
- const available=selected.size>0;for(const id of ['copy-prompt','download-bag'])$(id).disabled=!available;
+ const available=selected.size>0;for(const id of ['continue-astra','download-bag'])$(id).disabled=!available;
  $('gauntlet-prompt').value='';
- $('prompt-status').textContent='Paste into a new agent chat to begin. Exporting does not start the agent.';
+ $('chatgpt-fallback').hidden=true;
+ $('prompt-status').textContent='Opens ChatGPT and copies this prompt. Paste it into a chat with Astra; your bag is not synced automatically.';
  if(!available){$('prompt-preview').open=false;return;}
- try{$('gauntlet-prompt').value=currentPrompt();}catch(error){for(const id of ['copy-prompt','download-bag'])$(id).disabled=true;$('prompt-status').textContent='The prompt could not be prepared. Reload this page and try again.';}
+ try{$('gauntlet-prompt').value=currentPrompt();}catch(error){for(const id of ['continue-astra','download-bag'])$(id).disabled=true;$('prompt-status').textContent='The prompt could not be prepared. Reload this page and try again.';}
 }
-$('copy-prompt').addEventListener('click',async()=>{
+$('continue-astra').addEventListener('click',async()=>{
  if(!selected.size)return;
- try{const prompt=currentPrompt();if(!navigator.clipboard?.writeText)throw new Error('Clipboard unavailable');await navigator.clipboard.writeText(prompt);$('prompt-status').textContent='Prompt copied. Paste it into a new agent chat to begin.';toast('Gauntlet Loop prompt copied.');}
- catch(error){$('prompt-preview').open=true;const preview=$('gauntlet-prompt');preview.focus();preview.select();$('prompt-status').textContent='Clipboard access is unavailable. Copy the selected prompt below or download the Markdown file.';}
+ const fallback=$('chatgpt-fallback');fallback.hidden=true;
+ try{
+  const result=await window.HeadStartAstra.continueWithAstra(currentPrompt());
+  fallback.hidden=result.opened;
+  if(result.copied&&result.opened){$('prompt-status').textContent='ChatGPT opened and the prompt was copied. Choose Astra, then paste the prompt into the new chat.';toast('ChatGPT opened. Prompt copied.');return;}
+  if(result.copied){$('prompt-status').textContent='The prompt was copied, but the new tab was blocked. Use Open ChatGPT, then paste it into a chat with Astra.';toast('Prompt copied. Open ChatGPT to continue.');return;}
+  $('prompt-preview').open=true;const preview=$('gauntlet-prompt');preview.focus();preview.select();
+  $('prompt-status').textContent=result.opened?'ChatGPT opened, but clipboard access is unavailable. Return here to copy the selected prompt or download it.':'The new tab and clipboard were unavailable. Use Open ChatGPT, then copy the selected prompt or download it.';
+ }
+ catch(error){fallback.hidden=false;$('prompt-preview').open=true;const preview=$('gauntlet-prompt');preview.focus();preview.select();$('prompt-status').textContent='Continue could not finish. Use Open ChatGPT, then copy the selected prompt or download it.';}
 });
 $('download-bag').addEventListener('click',()=>{
  if(!selected.size)return;

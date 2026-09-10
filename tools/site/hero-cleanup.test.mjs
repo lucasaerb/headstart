@@ -17,6 +17,9 @@ test('hero has one direct browse action and no simulated idea search', () => {
   for (const removed of ['start-form', 'edit-idea', 'brief-strip', 'start-card']) {
     assert.doesNotMatch(html + app + css, new RegExp(removed));
   }
+  for (const removed of ['Get HeadStart updates', 'id="email-signup"', 'signup-card']) {
+    assert.doesNotMatch(html + app + css, new RegExp(removed));
+  }
 });
 
 test('browse activation uses the accessible catalog entry point', () => {

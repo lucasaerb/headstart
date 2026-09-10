@@ -29,11 +29,9 @@ class FakeElement {
 
 function createHarness({ stored = null, storageThrows = false, responseOk = true, fetchError = null } = {}) {
   const elements = Object.fromEntries([
-    'email-signup', 'signup-status', 'remembered-email', 'remembered-email-value', 'forget-email',
+    'remembered-email', 'remembered-email-value', 'email-preference-status', 'forget-email',
     'demo-email-dialog', 'demo-email-form', 'demo-launch', 'demo-email-status', 'demo-email-context', 'demo-email'
   ].map(id => [id, new FakeElement(id)]));
-  elements['email-signup'].elements = { email: elements['signup-email'] = new FakeElement('signup-email'), website: new FakeElement() };
-  elements['email-signup'].submitButton = new FakeElement();
   elements['demo-email-form'].elements = { email: elements['demo-email'], website: new FakeElement(), updates: new FakeElement() };
   elements['demo-email-form'].submitButton = new FakeElement();
   const documentListeners = new Map();
@@ -72,7 +70,6 @@ test('remembered email prefills without creating marketing consent and bypasses 
   assert.equal(harness.elements['signup-email'].value, email);
   assert.equal(harness.elements['remembered-email'].hidden, false);
   assert.equal(harness.elements['remembered-email-value'].textContent, email);
-  assert.equal(harness.elements['email-signup'].hidden, false);
   assert.equal(harness.requests.length, 0);
   assert.equal((await harness.clickDemo()).prevented, false);
 });
@@ -115,7 +112,7 @@ test('forgetting clears the preference and restores email entry', async () => {
   await harness.elements['forget-email'].dispatch('click');
   assert.equal(harness.data.size, 0);
   assert.equal(harness.elements['remembered-email'].hidden, true);
-  assert.equal(harness.elements['signup-email'].focused, true);
+  assert.match(harness.elements['email-preference-status'].textContent, /no longer remembers/i);
   assert.equal((await harness.clickDemo()).prevented, true);
 });
 
@@ -131,13 +128,4 @@ test('blocked or corrupt storage fails safely and success remains usable for the
   assert.equal((await blocked.clickDemo()).prevented, false);
   const reload = createHarness({ storageThrows: true });
   assert.equal((await reload.clickDemo()).prevented, true);
-});
-
-test('homepage updates still require deliberate submission when email is prefilled', async () => {
-  const harness = createHarness({ stored: JSON.stringify({ version: 1, email: 'saved@example.com' }) });
-  assert.equal(harness.requests.length, 0);
-  await harness.elements['email-signup'].dispatch('submit');
-  assert.equal(harness.requests.length, 1);
-  assert.equal(harness.requests[0].body.email, 'saved@example.com');
-  assert.equal(harness.requests[0].body.purpose, undefined);
 });

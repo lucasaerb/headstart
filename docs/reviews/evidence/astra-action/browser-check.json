@@ -1,0 +1,36 @@
+{
+  "route": "http://127.0.0.1:8877/site/dist/",
+  "catalogCount": 69,
+  "homepageSignupPresent": false,
+  "demoGatePresent": true,
+  "action": {
+    "openedUrl": "https://chatgpt.com/",
+    "copiedPromptIncludesSelectedGamesAndBrief": true,
+    "status": "ChatGPT opened and the prompt was copied. Choose Astra, then paste the prompt into the new chat.",
+    "label": "Continue with Astra"
+  },
+  "blockedFallback": {
+    "fallbackVisible": true,
+    "previewOpen": true,
+    "status": "The new tab and clipboard were unavailable. Use Open ChatGPT, then copy the selected prompt or download it."
+  },
+  "screenshots": [
+    {
+      "path": "home-desktop-1440.png",
+      "viewport": "1440x1000"
+    },
+    {
+      "path": "bag-desktop-1440.png",
+      "viewport": "1440x1000"
+    },
+    {
+      "path": "bag-mobile-390.png",
+      "viewport": "390x844"
+    },
+    {
+      "path": "bag-mobile-fallbacks-390.png",
+      "viewport": "390x844",
+      "state": "dialog scrolled to fallback actions"
+    }
+  ]
+}

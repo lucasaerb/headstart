@@ -2,11 +2,11 @@
 
 ## Issue contract
 
-Requested 10 September 2026. Remove the nonfunctional hero “What are you making?” search instead of replacing it with another simulated brief/search path. Keep a single primary **Browse all games** action that moves keyboard and visual users into the real `#games` catalog. Preserve catalog search/filtering, C4/C4b living-world art and motion controls, homepage update signup, the three-game bag, its `remix-idea` brief, and Gauntlet Loop prompt export.
+Requested 10 September 2026. Remove the nonfunctional hero “What are you making?” search instead of replacing it with another simulated brief/search path. Keep a single primary **Browse all games** action that moves keyboard and visual users into the real `#games` catalog. Preserve catalog search/filtering, C4/C4b living-world art and motion controls, the three-game bag, its `remix-idea` brief, and Gauntlet Loop prompt export. The user subsequently requested removal of the homepage update signup; the separate pre-demo email flow remains.
 
 The user subsequently asked to enter an email only once. After `/api/subscribe` confirms a homepage or demo-access save, remember the normalized email in this browser under the versioned key `headstart.remembered-email.v1`. A remembered email bypasses later demo prompts while leaving every exact external demo URL unchanged. Provide an accessible **Forget email** action. Failed or timed-out requests must not create the preference; corrupt, invalid, or unavailable storage must fail safely. Remembering is unverified browser convenience, not an account or the verified-email code/handoff gate.
 
-Marketing consent remains purpose-specific. A demo-only save does not opt the visitor into updates, and a remembered/prefilled email never submits the homepage updates form automatically.
+Marketing consent remains purpose-specific. A demo-only save does not opt the visitor into updates unless the visitor selects the optional checkbox.
 
 ## Acceptance checks
 

@@ -17,48 +17,23 @@ function clearRememberedEmail() {
   catch { return false; }
 }
 
-const signup = document.getElementById('email-signup');
 const rememberedPanel = document.getElementById('remembered-email');
 const rememberedValue = document.getElementById('remembered-email-value');
+const preferenceStatus = document.getElementById('email-preference-status');
 let rememberedEmail = readRememberedEmail();
 let demoSessionSaved = Boolean(rememberedEmail);
 function renderRememberedEmail() {
   rememberedPanel.hidden = !rememberedEmail;
   rememberedValue.textContent = rememberedEmail;
-  if (rememberedEmail) signup.elements.email.value = rememberedEmail;
 }
 renderRememberedEmail();
 document.getElementById('forget-email').addEventListener('click', () => {
-  const status = document.getElementById('signup-status');
   const cleared = clearRememberedEmail();
   rememberedEmail = '';
   demoSessionSaved = false;
-  signup.elements.email.value = '';
   renderRememberedEmail();
-  status.textContent = cleared ? 'This browser no longer remembers your email.' : 'This browser could not clear its saved preference. You can still re-enter your email.';
-  signup.elements.email.focus();
+  preferenceStatus.textContent = cleared ? 'This browser no longer remembers your email.' : 'This browser could not clear its saved preference. You can still enter your email before opening a demo.';
 });
-if (signup) signup.addEventListener('submit', async event => {
-  event.preventDefault();
-  if (!signup.reportValidity()) return;
-  const button = signup.querySelector('button[type="submit"]');
-  const status = document.getElementById('signup-status');
-  button.disabled = true; button.textContent = 'Saving…'; status.textContent = '';
-  try {
-    const response = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: signup.elements.email.value, website: signup.elements.website.value, consentVersion: 'headstart-updates-2026-09-10' }), signal: AbortSignal.timeout(15000) });
-    const result = await response.json();
-    if (!response.ok) throw new Error(result.message || 'We couldn’t save your signup. Please try again.');
-    const email = normalizeEmail(signup.elements.email.value);
-    const remembered = writeRememberedEmail(email);
-    rememberedEmail = remembered ? email : '';
-    demoSessionSaved = true;
-    signup.reset();
-    renderRememberedEmail();
-    status.textContent = result.message + (remembered ? ' This browser will remember your email for demos.' : ' Your email was saved, but this browser could not remember it for later demos.');
-  } catch (error) { status.textContent = error.name === 'TimeoutError' ? 'The request timed out. Please retry; a duplicate won’t create another signup.' : error instanceof TypeError || error instanceof SyntaxError ? 'We couldn’t reach signups. Please try again later.' : error.message; }
-  finally { button.disabled = false; button.textContent = 'Sign me up'; }
-});
-
 const demoDialog = document.getElementById('demo-email-dialog');
 const demoForm = document.getElementById('demo-email-form');
 let demoChoice = null;
