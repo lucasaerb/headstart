@@ -4,6 +4,12 @@
 
 HeadStart is the current app and plugin name. Original specification files retain their historical filenames.
 
+**Live:** [headstart-virid.vercel.app](https://headstart-virid.vercel.app/)
+
+![HeadStart production landing page](docs/reviews/evidence/release-review/production/landing-desktop.png)
+
+<video src="https://github.com/lucasaerb/headstart/raw/main/headstart-demo/renders/headstart-demo-40s-final.mp4" controls width="100%"></video>
+
 ## Start here
 
 - [Project instructions](AGENTS.md)
@@ -39,6 +45,18 @@ Localhost comes first. Vercel is the intended website host; Railway is an option
 Every issue uses a separate coder/author subagent and critical reviewer subagent. The reviewer evaluates the implementation, meaningful tests, and visual evidence where relevant. Findings return to the coder for correction and re-review until the issue's acceptance criteria pass. See the [workflow](docs/development-workflow.md) for the required evidence and completion rules.
 
 Private reference recordings and the redundant full-package archive remain local and are excluded from Git. Existing upstream licensing and attribution records are preserved; no blanket license is assigned to third-party material by this repository.
+
+## Built with GPT-6 Astra
+
+GPT-6 Astra was used end to end on this project, not for a single feature. Early product and
+market research — the problem framing, the game-dev market sizing, the initial spec — came out
+of planning conversations with Astra via ChatGPT. From there, the research catalog, the
+coding-agent plugin, and the local MCP server behind it were written by Astra running as the
+coding agent through Codex. The [coder/reviewer workflow](docs/development-workflow.md) formalizes
+this: every issue is built by a dedicated coder/author agent and checked by a separate
+critical-reviewer agent, both running on Astra via Codex, iterating until the reviewer's
+acceptance criteria pass. The plugin HeadStart ships is itself packaged in the Codex plugin
+format, so the tool being built and the tool building it are the same model family.
 
 ## Codex plugin
 

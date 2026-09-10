@@ -10,3 +10,9 @@
 
 # Python CSV exports use standard CRLF record terminators.
 research/catalog/catalog.csv whitespace=cr-at-eol
+
+# Large walkthrough and site media added after the initial release.
+HeadStartDemo.mp4 filter=lfs diff=lfs merge=lfs -text
+headstart-walkthrough/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+headstart-walkthrough/**/*.m4a filter=lfs diff=lfs merge=lfs -text
+HeadStart-Starter-Package/site/dist/assets/how-it-works.mp4 filter=lfs diff=lfs merge=lfs -text

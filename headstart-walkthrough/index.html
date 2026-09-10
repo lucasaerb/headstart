@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600..900&family=Space+Grotesk:wght@400;500;600;700&display=swap" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        margin: 0; width: 1920px; height: 1080px; overflow: hidden;
+        background: #10162b;
+      }
+      body { font-family: "Space Grotesk", sans-serif; color: #f6f1e6; }
+
+      :root {
+        --cream: #f6f1e6; --paper: #fffdf8; --navy: #10162b;
+        --slate: #3a4256; --blue: #3b5bff; --terracotta: #e2703a;
+      }
+
+      /* ---------- base screen recording ---------- */
+      #base-wrap {
+        position: absolute; inset: 0; overflow: hidden; z-index: 1; background: #10162b;
+      }
+      #base-wrap video {
+        position: absolute; top: 50%; left: 50%;
+        width: auto; height: auto; min-width: 100%; min-height: 100%;
+        transform: translate(-50%, -50%);
+      }
+      #dim {
+        position: absolute; inset: 0; z-index: 2; background: #0a0f20; opacity: 0;
+        pointer-events: none;
+      }
+
+      /* ---------- b-roll cutaways ---------- */
+      .cut-wrap {
+        position: absolute; inset: 0; overflow: hidden;
+        background: transparent; z-index: 5; opacity: 0;
+      }
+      .cut-wrap video {
+        position: absolute; top: 50%; left: 50%;
+        width: auto; height: auto; min-width: 100%; min-height: 100%;
+        transform: translate(-50%, -50%);
+      }
+      #c1-v { transform: translate(-43%, -68%) scale(1.62); }
+      #c2-v { transform: translate(-50%, -52%) scale(1.08); }
+      #c3-v { transform: translate(-50%, -56%) scale(1.36); }
+      #c4-v { transform: translate(-50%, -50%) scale(1.14); }
+      #c5-v { transform: translate(-50%, -62%) scale(1.34); }
+      #c6-v { transform: translate(-50%, -62%) scale(1.34); }
+      #c7-v { transform: translate(-50%, -56%) scale(1.36); }
+      #c8-v { transform: translate(-50%, -50%) scale(1.14); }
+
+      .cut-chip {
+        position: absolute; left: 84px; top: 76px; z-index: 12;
+        display: flex; align-items: stretch; gap: 16px;
+        background: rgba(16, 22, 43, 0.86);
+        backdrop-filter: blur(6px);
+        padding: 14px 26px 14px 20px; border-radius: 10px;
+      }
+      .cut-chip .bar { width: 5px; border-radius: 3px; background: var(--terracotta); flex: none; }
+      .cut-chip .txt { display: flex; flex-direction: column; gap: 3px; }
+      .cut-chip b { font-size: 25px; font-weight: 700; color: var(--cream); }
+      .cut-chip i {
+        font-style: normal; font-size: 16px; font-weight: 500;
+        color: rgba(246, 241, 230, 0.86);
+        text-transform: uppercase; letter-spacing: 0.09em;
+      }
+
+      /* ---------- ambience PiP ---------- */
+      #pip-wrap {
+        position: absolute; right: 78px; top: 150px; z-index: 8;
+        width: 430px; height: 262px; border-radius: 16px; overflow: hidden;
+        box-shadow: 0 26px 60px rgba(10, 15, 32, 0.45);
+        border: 2px solid rgba(255, 255, 255, 0.55);
+        opacity: 0;
+      }
+      #pip-wrap video {
+        position: absolute; top: 50%; left: 50%;
+        width: auto; height: auto; min-width: 100%; min-height: 100%;
+        transform: translate(-50%, -52%) scale(1.06);
+      }
+      #pip-label {
+        position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+        padding: 26px 16px 10px;
+        background: linear-gradient(to top, rgba(16,22,43,0.9), rgba(16,22,43,0));
+        font-size: 15px; font-weight: 600; letter-spacing: 0.08em;
+        text-transform: uppercase; color: rgba(246, 241, 230, 0.95);
+      }
+
+      /* ---------- captions ---------- */
+      #cap-layer {
+        position: absolute; left: 110px; right: 470px; bottom: 74px;
+        z-index: 30; height: 150px; pointer-events: none;
+      }
+      .cap {
+        position: absolute; left: 0; right: 0; bottom: 0;
+        text-align: center; opacity: 0;
+      }
+      .cap span {
+        display: inline-block; max-width: 100%;
+        background: rgba(10, 15, 30, 0.78);
+        padding: 13px 28px; border-radius: 14px;
+        font-size: 44px; font-weight: 700; line-height: 1.22;
+        letter-spacing: -0.01em; color: #ffffff;
+        box-shadow: 0 10px 34px rgba(6, 10, 22, 0.4);
+      }
+
+      /* ---------- end card ---------- */
+      #endcard {
+        position: absolute; inset: 0; z-index: 40; opacity: 0;
+        background: var(--navy);
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        gap: 30px; text-align: center;
+      }
+      #ec-glow {
+        position: absolute; top: 50%; left: 50%; width: 1100px; height: 1100px;
+        transform: translate(-50%, -50%); border-radius: 50%;
+        background: rgba(59, 91, 255, 0.2); filter: blur(60px); pointer-events: none;
+      }
+      #ec-logo {
+        font-family: "Fraunces", serif; font-weight: 900; font-size: 122px;
+        color: var(--cream); letter-spacing: -0.02em; position: relative;
+      }
+      #ec-tag { font-size: 33px; color: rgba(246, 241, 230, 0.8); position: relative; }
+      #ec-url {
+        display: inline-flex; align-items: center; gap: 14px; position: relative;
+        background: var(--blue); color: #fff; font-weight: 700; font-size: 26px;
+        padding: 20px 40px; border-radius: 100px;
+      }
+      #ec-sub { font-size: 20px; color: rgba(246, 241, 230, 0.62); position: relative; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="74.0"
+         data-width="1920" data-height="1080">
+
+      <div id="base-wrap" data-layout-allow-overflow>
+        <video id="base-v" class="clip" data-start="0" data-duration="71.8"
+               data-track-index="0" src="assets/walkthrough.mp4" muted playsinline></video>
+      </div>
+      <audio id="vo" data-start="0" data-duration="71.8" data-track-index="1"
+             src="assets/narration.m4a" data-volume="1"></audio>
+
+      <div id="dim"></div>
+
+        <div id="c1-wrap" class="cut-wrap" data-layout-allow-overflow>
+          <video id="c1-v" class="clip" data-start="4.0" data-duration="3.7"
+                 data-track-index="2" src="assets/cut2_sf.mp4" muted playsinline></video>
+          <div id="c1-chip" class="cut-chip">
+            <span class="bar"></span>
+            <span class="txt"><b>San Francisco</b><i>Open world</i></span>
+          </div>
+        </div>
+        <div id="c2-wrap" class="cut-wrap" data-layout-allow-overflow>
+          <video id="c2-v" class="clip" data-start="7.7" data-duration="3.1"
+                 data-track-index="3" src="assets/cut3_city.mp4" muted playsinline></video>
+          <div id="c2-chip" class="cut-chip">
+            <span class="bar"></span>
+            <span class="txt"><b>Fable Cities</b><i>City builder</i></span>
+          </div>
+        </div>
+        <div id="c3-wrap" class="cut-wrap" data-layout-allow-overflow>
+          <video id="c3-v" class="clip" data-start="10.8" data-duration="2.9"
+                 data-track-index="2" src="assets/cut4_r3f.mp4" muted playsinline></video>
+          <div id="c3-chip" class="cut-chip">
+            <span class="bar"></span>
+            <span class="txt"><b>Ecctrl Sandbox</b><i>Three.js</i></span>
+          </div>
+        </div>
+        <div id="c4-wrap" class="cut-wrap" data-layout-allow-overflow>
+          <video id="c4-v" class="clip" data-start="13.7" data-duration="2.5"
+                 data-track-index="3" src="assets/cut5_boating.mp4" muted playsinline></video>
+          <div id="c4-chip" class="cut-chip">
+            <span class="bar"></span>
+            <span class="txt"><b>Copper Water</b><i>Stylized world</i></span>
+          </div>
+        </div>
+        <div id="c5-wrap" class="cut-wrap" data-layout-allow-overflow>
+          <video id="c5-v" class="clip" data-start="16.2" data-duration="2.1"
+                 data-track-index="2" src="assets/cut6_blackwater.mp4" muted playsinline></video>
+          <div id="c5-chip" class="cut-chip">
+            <span class="bar"></span>
+            <span class="txt"><b>Blackwater</b><i>FPS shooter</i></span>
+          </div>
+        </div>
+        <div id="c6-wrap" class="cut-wrap" data-layout-allow-overflow>
+          <video id="c6-v" class="clip" data-start="52.0" data-duration="3.4"
+                 data-track-index="3" src="assets/cut7_shooter.mp4" muted playsinline></video>
+          <div id="c6-chip" class="cut-chip">
+            <span class="bar"></span>
+            <span class="txt"><b>Blackwater</b><i>Shooter</i></span>
+          </div>
+        </div>
+        <div id="c7-wrap" class="cut-wrap" data-layout-allow-overflow>
+          <video id="c7-v" class="clip" data-start="55.4" data-duration="1.8"
+                 data-track-index="2" src="assets/cut8_driving.mp4" muted playsinline></video>
+          <div id="c7-chip" class="cut-chip">
+            <span class="bar"></span>
+            <span class="txt"><b>Ecctrl Sandbox</b><i>Driving</i></span>
+          </div>
+        </div>
+        <div id="c8-wrap" class="cut-wrap" data-layout-allow-overflow>
+          <video id="c8-v" class="clip" data-start="57.2" data-duration="4.9"
+                 data-track-index="3" src="assets/cut9_stylized.mp4" muted playsinline></video>
+          <div id="c8-chip" class="cut-chip">
+            <span class="bar"></span>
+            <span class="txt"><b>Copper Water</b><i>Stylized world</i></span>
+          </div>
+        </div>
+
+      <div id="pip-wrap" data-layout-allow-overflow>
+        <video id="pip-v" class="clip" data-start="38.0" data-duration="6.2"
+               data-track-index="4" src="assets/pip_city.mp4" muted playsinline></video>
+        <div id="pip-label">Fable Cities &middot; in the catalog</div>
+      </div>
+
+      <div id="cap-layer">
+        <div class="cap" id="cap-0"><span>Roblox's top creators are pulling</span></div>
+        <div class="cap" id="cap-1"><span>in millions of dollars a year.</span></div>
+        <div class="cap" id="cap-2"><span>The games industry is now 10</span></div>
+        <div class="cap" id="cap-3"><span>times bigger than Hollywood itself.</span></div>
+        <div class="cap" id="cap-4"><span>And today's models can already build</span></div>
+        <div class="cap" id="cap-5"><span>amazing games.</span></div>
+        <div class="cap" id="cap-6"><span>Three.js running buttery smooth on</span></div>
+        <div class="cap" id="cap-7"><span>your browser, full Blender grade</span></div>
+        <div class="cap" id="cap-8"><span>worlds, entire Unity engine titles.</span></div>
+        <div class="cap" id="cap-9"><span>Unity even built an AI</span></div>
+        <div class="cap" id="cap-10"><span>straight into their own editor</span></div>
+        <div class="cap" id="cap-11"><span>now with a connector direct</span></div>
+        <div class="cap" id="cap-12"><span>to Claude.</span></div>
+        <div class="cap" id="cap-13"><span>And more is coming soon.</span></div>
+        <div class="cap" id="cap-14"><span>But almost everybody building AI games</span></div>
+        <div class="cap" id="cap-15"><span>right now starts the same</span></div>
+        <div class="cap" id="cap-16"><span>way.</span></div>
+        <div class="cap" id="cap-17"><span>A blank canvas.</span></div>
+        <div class="cap" id="cap-18"><span>So I present to you HeadStart.</span></div>
+        <div class="cap" id="cap-19"><span>Not a blank canvas,</span></div>
+        <div class="cap" id="cap-20"><span>a head start.</span></div>
+        <div class="cap" id="cap-21"><span>On this platform you have</span></div>
+        <div class="cap" id="cap-22"><span>everything you need for the</span></div>
+        <div class="cap" id="cap-23"><span>under layer of a game's</span></div>
+        <div class="cap" id="cap-24"><span>development.</span></div>
+        <div class="cap" id="cap-25"><span>Accounts, monetization on ad platforming,</span></div>
+        <div class="cap" id="cap-26"><span>the hard stuff every game</span></div>
+        <div class="cap" id="cap-27"><span>needs.</span></div>
+        <div class="cap" id="cap-28"><span>Turn it on or if</span></div>
+        <div class="cap" id="cap-29"><span>you'd like you can skip it.</span></div>
+        <div class="cap" id="cap-30"><span>Then you have a large</span></div>
+        <div class="cap" id="cap-31"><span>variety of previously existing open</span></div>
+        <div class="cap" id="cap-32"><span>source games.</span></div>
+        <div class="cap" id="cap-33"><span>You can take multiple of</span></div>
+        <div class="cap" id="cap-34"><span>them and remix them.</span></div>
+        <div class="cap" id="cap-35"><span>Say you want a game</span></div>
+        <div class="cap" id="cap-36"><span>that has the same mechanics</span></div>
+        <div class="cap" id="cap-37"><span>of another shooter but also</span></div>
+        <div class="cap" id="cap-38"><span>has the mechanics of a</span></div>
+        <div class="cap" id="cap-39"><span>driving title.</span></div>
+        <div class="cap" id="cap-40"><span>And the graphics of something</span></div>
+        <div class="cap" id="cap-41"><span>like a medieval game you</span></div>
+        <div class="cap" id="cap-42"><span>can combine all three</span></div>
+        <div class="cap" id="cap-43"><span>together with one simple prompt.</span></div>
+        <div class="cap" id="cap-44"><span>It also comes with a</span></div>
+        <div class="cap" id="cap-45"><span>plugin direct into Astra.</span></div>
+        <div class="cap" id="cap-46"><span>And so not only this</span></div>
+        <div class="cap" id="cap-47"><span>but you can remix multiple</span></div>
+        <div class="cap" id="cap-48"><span>games and if you're a</span></div>
+        <div class="cap" id="cap-49"><span>game developer you can make</span></div>
+        <div class="cap" id="cap-50"><span>ad revenue off of your</span></div>
+        <div class="cap" id="cap-51"><span>game.</span></div>
+      </div>
+
+      <div id="endcard">
+        <div id="ec-glow"></div>
+        <div id="ec-logo">HeadStart</div>
+        <div id="ec-tag">Every great game starts somewhere.</div>
+        <div id="ec-url">headstart-virid.vercel.app <span>&rarr;</span></div>
+        <div id="ec-sub">Browse the catalog &middot; remix with your own agent</div>
+      </div>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      /* ---- base recording: slow push-ins on the static stretches ---- */
+      tl.fromTo("#base-wrap", { scale: 1.0 }, { scale: 1.05, duration: 7.4, ease: "none" }, 18.6);
+      tl.to("#base-wrap", { scale: 1.08, duration: 6.0, ease: "none" }, 26.0);
+      tl.to("#base-wrap", { scale: 1.0, duration: 0.7, ease: "power2.out" }, 32.0);
+      tl.to("#base-wrap", { scale: 1.045, duration: 10.0, ease: "none" }, 36.0);
+      tl.to("#base-wrap", { scale: 1.0, duration: 1.2, ease: "power1.inOut" }, 46.0);
+
+      /* ---- "a blank canvas" dim, lifted on the HeadStart reveal ---- */
+      tl.to("#dim", { opacity: 0.5, duration: 2.0, ease: "power1.in" }, 26.4);
+      tl.to("#dim", { opacity: 0, duration: 0.5, ease: "power2.out" }, 32.0);
+
+      /* ---- b-roll cutaways ---- */
+      const CUTS = [
+        {id:"c1", start:4.0, dur:3.7, enter:"fade", exit:"cut"},
+        {id:"c2", start:7.7, dur:3.1, enter:"cut", exit:"cut"},
+        {id:"c3", start:10.8, dur:2.9, enter:"cut", exit:"cut"},
+        {id:"c4", start:13.7, dur:2.5, enter:"cut", exit:"cut"},
+        {id:"c5", start:16.2, dur:2.1, enter:"cut", exit:"fade"},
+        {id:"c6", start:52.0, dur:3.4, enter:"fade", exit:"cut"},
+        {id:"c7", start:55.4, dur:1.8, enter:"cut", exit:"cut"},
+        {id:"c8", start:57.2, dur:4.9, enter:"cut", exit:"fade"}
+      ];
+      CUTS.forEach(function (c) {
+        const w = "#" + c.id + "-wrap";
+        const chip = "#" + c.id + "-chip";
+        const end = c.start + c.dur;
+        if (c.enter === "fade") {
+          tl.fromTo(w, { opacity: 0 }, { opacity: 1, duration: 0.26, ease: "power2.inOut" }, c.start);
+        } else {
+          tl.set(w, { opacity: 1 }, c.start);
+        }
+        if (c.exit === "fade") {
+          tl.to(w, { opacity: 0, duration: 0.32, ease: "power2.inOut" }, end - 0.32);
+        }
+        tl.set(w, { opacity: 0 }, end);
+        tl.fromTo(chip, { y: 16, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.3, ease: "power2.out" }, c.start + 0.12);
+        tl.to(chip, { opacity: 0, duration: 0.2, ease: "power1.in" }, end - 0.3);
+        tl.set(chip, { opacity: 0 }, end);
+      });
+
+      /* ---- ambience PiP over the static monetization stretch ---- */
+      tl.fromTo("#pip-wrap", { opacity: 0, y: 22, scale: 0.96 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "back.out(1.4)" }, 38.0);
+      tl.to("#pip-wrap", { opacity: 0, duration: 0.35, ease: "power2.in" }, 43.85);
+      tl.set("#pip-wrap", { opacity: 0 }, 44.2);
+
+      /* ---- captions ---- */
+      const CAPS = [
+        {s:0, e:2.48},
+        {s:2.48, e:4},
+        {s:4, e:6.1},
+        {s:6.1, e:8},
+        {s:8, e:10.1},
+        {s:10.1, e:11},
+        {s:11, e:13.08},
+        {s:13.08, e:15.36},
+        {s:15.36, e:18},
+        {s:18, e:19.52},
+        {s:19.52, e:21.72},
+        {s:21.72, e:23.41},
+        {s:23.41, e:24},
+        {s:24, e:26},
+        {s:26, e:28.71},
+        {s:28.71, e:30.44},
+        {s:30.44, e:31},
+        {s:31, e:32},
+        {s:32, e:34},
+        {s:34, e:35.11},
+        {s:35.11, e:36},
+        {s:36, e:37.11},
+        {s:37.11, e:38.33},
+        {s:38.33, e:39.33},
+        {s:39.33, e:40},
+        {s:40, e:42.07},
+        {s:42.07, e:43.42},
+        {s:43.42, e:44},
+        {s:44, e:44.66},
+        {s:44.66, e:46},
+        {s:46, e:47.07},
+        {s:47.07, e:49.04},
+        {s:49.04, e:50},
+        {s:50, e:51},
+        {s:51, e:52},
+        {s:52, e:52.81},
+        {s:52.81, e:54.07},
+        {s:54.07, e:55.31},
+        {s:55.31, e:56.35},
+        {s:56.35, e:57},
+        {s:57, e:58.59},
+        {s:58.59, e:59.85},
+        {s:59.85, e:61.31},
+        {s:61.35, e:63},
+        {s:63, e:63.79},
+        {s:63.79, e:65},
+        {s:65, e:66.07},
+        {s:66.07, e:67.56},
+        {s:67.56, e:68.47},
+        {s:68.47, e:69.56},
+        {s:69.56, e:70.69},
+        {s:70.69, e:71.35}
+      ];
+      CAPS.forEach(function (g, i) {
+        const el = "#cap-" + i;
+        tl.fromTo(el, { opacity: 0, y: 12 },
+          { opacity: 1, y: 0, duration: 0.16, ease: "power2.out" }, g.s);
+        tl.to(el, { opacity: 0, duration: 0.1, ease: "power2.in" }, g.e - 0.1);
+        tl.set(el, { opacity: 0, visibility: "hidden" }, g.e);
+      });
+
+      /* ---- end card ---- */
+      tl.fromTo("#endcard", { opacity: 0 }, { opacity: 1, duration: 0.7, ease: "power2.inOut" }, 71.2);
+      tl.fromTo("#ec-logo", { scale: 0.88, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.55, ease: "expo.out" }, 71.5);
+      tl.fromTo("#ec-tag", { y: 22, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 71.8);
+      tl.fromTo("#ec-url", { y: 18, opacity: 0, scale: 0.92 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.7)" }, 72.05);
+      tl.fromTo("#ec-sub", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "sine.out" }, 72.35);
+      tl.fromTo("#ec-glow", { scale: 0.95, opacity: 0.7 },
+        { scale: 1.08, opacity: 1, duration: 2.4, ease: "sine.inOut" }, 71.4);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
