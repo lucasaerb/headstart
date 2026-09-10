@@ -122,10 +122,28 @@ try {
     await expect(page.locator('.game-card')).toHaveCount(1);
     await page.locator('#bag-open').click();
     await expect(page.locator('#bag-items')).toContainText('Yuka');
-    await expect(page.locator('#copy-prompt')).toBeEnabled();
+    await expect(page.locator('#continue-astra')).toBeEnabled();
+    // Exercise the integrated action without opening an external website or
+    // sending this local test prompt anywhere. Real helper unit tests cover it.
+    await page.evaluate(()=>{
+      window.open=()=>null;
+      Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw new Error('Test clipboard unavailable');}}});
+    });
+    await page.locator('#continue-astra').click();
+    await expect(page.locator('#prompt-status')).toContainText('unavailable');
+    await expect(page.locator('#chatgpt-fallback')).toBeVisible();
+    await expect(page.locator('#gauntlet-prompt')).toHaveValue(/Yuka/);
+    await page.screenshot({path:`${output}/${name}-astra-fallback.png`});
     await page.locator('[data-close="bag-dialog"]').click();
     await page.evaluate(()=>document.getElementById('game-grid').scrollIntoView({block:'start',behavior:'instant'}));
     await page.screenshot({path:`${output}/${name}-missing-preview.png`});
+    // A synthetic remembered preference must remain visible and removable.
+    await page.evaluate(()=>localStorage.setItem('headstart.remembered-email.v1',JSON.stringify({version:1,email:'browser-test@example.com'})));
+    await page.reload();
+    await expect(page.locator('#remembered-email-value')).toHaveText('browser-test@example.com');
+    await page.locator('#forget-email').click();
+    await expect(page.locator('#remembered-email')).toBeHidden();
+    if(await page.evaluate(()=>localStorage.getItem('headstart.remembered-email.v1'))!==null)throw new Error('Forget email did not remove preference');
     if(errors.length) throw new Error(errors.join('; '));
     await page.close();
   }

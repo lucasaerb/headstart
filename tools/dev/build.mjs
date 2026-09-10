@@ -9,6 +9,7 @@ for (const file of [
   "plugin.html",
   "styles.css",
   "app.js",
+  "astra-action.js",
   "signup.js",
   "catalog.js",
   "gauntlet-prompt.js",

@@ -23,6 +23,7 @@ $('mobile-bag').addEventListener('click', () => { renderBag(); openDialog('bag-d
 $('how-open').addEventListener('click', () => openDialog('how-dialog', $('how-open')));
 $('how-footer').addEventListener('click', () => openDialog('how-dialog', $('how-footer')));
 function visitLibrary() { $('games').scrollIntoView({behavior: motionPreference.matches ? 'instant' : 'smooth'}); $('library-title').focus({preventScroll:true}); }
+$('hero-browse').addEventListener('click', event => { event.preventDefault(); visitLibrary(); });
 $('bag-browse').addEventListener('click', () => { $('bag-dialog').close(); visitLibrary(); });
 $('how-browse').addEventListener('click', () => { $('how-dialog').close(); visitLibrary(); });
 function isBrowser(game) { return game.platformKind === 'browser'; }
@@ -68,26 +69,32 @@ function renderBag(){
  for(const id of selected){const game=gamesById.get(id);if(!game){const row=node('article','bag-item');row.append(node('p','','Selected project metadata unavailable: '+id));const remove=node('button','','Remove');remove.addEventListener('click',()=>{selected.delete(id);saveBag();renderBag();});row.append(remove);$('bag-items').append(row);continue;}const row=node('article','bag-item');if(imageCleared(game)){const img=node('img');img.src=game.preview.src;img.alt='';row.append(img);}else row.append(node('span','bag-thumb'));const text=node('div');text.append(node('h3','',game.title),node('p','',pretty(game.genres[0])+' · '+(platformLabel(game))));const remove=node('button','','×');remove.setAttribute('aria-label','Remove '+game.title+' from bag');remove.addEventListener('click',()=>{toggleGame(id);const next=$('bag-items').querySelector('button');(next||$('bag-browse')).focus();});row.append(text,remove);$('bag-items').append(row);}
  refreshPrompt();$('remix-idea').value=brief;document.querySelector('.bag-local').textContent=storageAvailable?'Saved in this browser.':'Changes are not saved. Browser storage is unavailable; keep this page open or download your prompt.';
 }
-function syncBrief(){ $('idea').value=brief;$('remix-idea').value=brief;$('brief-text').textContent=brief;$('brief-strip').hidden=!brief; }
 async function restoreSelectedMetadata(){
  const missing=[...selected].filter(id=>!gamesById.has(id));if(!missing.length)return;
  try{const response=await fetch('/api/research?'+new URLSearchParams({ids:missing.join(',')}));const data=await response.json();if(!response.ok||data.schemaVersion!=='headstart-research-api-1'||data.eligibility!=='research_only'||!Array.isArray(data.items))throw new Error('Unavailable');for(const game of data.items)if(missing.includes(game.id))gamesById.set(game.id,game);renderBag();}catch{renderBag();}
 }
-$('remix-idea').addEventListener('input',event=>{brief=event.target.value.slice(0,BRIEF_LIMIT);saveBag();$('idea').value=brief;$('brief-text').textContent=brief;$('brief-strip').hidden=!brief;refreshPrompt();});
-$('start-form').addEventListener('submit',event=>{event.preventDefault();brief=$('idea').value.trim().slice(0,BRIEF_LIMIT);saveBag();syncBrief();clearFilters();const mappings=[['racing','racing'],['racer','racing'],['platform','platformer'],['city','simulation'],['builder','simulation'],['strategy','strategy'],['puzzle','puzzle']];const match=mappings.find(([word,tag])=>brief.toLowerCase().includes(word)&&[...$('genre').options].some(option=>option.value===tag));if(match)$('genre').value=match[1];else if(brief && brief.split(/\s+/).length<4)$('search-games').value=brief;renderGames();visitLibrary();});
-$('edit-idea').addEventListener('click',()=>{$('home').scrollIntoView({behavior:motionPreference.matches?'instant':'smooth'});$('idea').focus({preventScroll:true});});
+$('remix-idea').addEventListener('input',event=>{brief=event.target.value.slice(0,BRIEF_LIMIT);saveBag();refreshPrompt();});
 function currentPrompt(){return window.HeadStartGauntlet.buildPrompt({games:[...selected].map(id=>gamesById.get(id)),brief});}
 function refreshPrompt(){
- const available=selected.size>0;for(const id of ['copy-prompt','download-bag'])$(id).disabled=!available;
+ const available=selected.size>0&&[...selected].every(id=>gamesById.has(id));for(const id of ['continue-astra','download-bag'])$(id).disabled=!available;
  $('gauntlet-prompt').value='';
- $('prompt-status').textContent='Paste into a new agent chat to begin. Exporting does not start the agent.';
+ $('chatgpt-fallback').hidden=true;
+ $('prompt-status').textContent='Opens ChatGPT and copies this prompt. Paste it into a chat with Astra; your bag is not synced automatically.';
  if(!available){$('prompt-preview').open=false;return;}
- try{$('gauntlet-prompt').value=currentPrompt();}catch(error){for(const id of ['copy-prompt','download-bag'])$(id).disabled=true;$('prompt-status').textContent='The prompt could not be prepared. Reload this page and try again.';}
+ try{$('gauntlet-prompt').value=currentPrompt();}catch(error){for(const id of ['continue-astra','download-bag'])$(id).disabled=true;$('prompt-status').textContent='The prompt could not be prepared. Reload this page and try again.';}
 }
-$('copy-prompt').addEventListener('click',async()=>{
+$('continue-astra').addEventListener('click',async()=>{
  if(!selected.size)return;
- try{const prompt=currentPrompt();if(!navigator.clipboard?.writeText)throw new Error('Clipboard unavailable');await navigator.clipboard.writeText(prompt);$('prompt-status').textContent='Prompt copied. Paste it into a new agent chat to begin.';toast('Gauntlet Loop prompt copied.');}
- catch(error){$('prompt-preview').open=true;const preview=$('gauntlet-prompt');preview.focus();preview.select();$('prompt-status').textContent='Clipboard access is unavailable. Copy the selected prompt below or download the Markdown file.';}
+ const fallback=$('chatgpt-fallback');fallback.hidden=true;
+ try{
+  const result=await window.HeadStartAstra.continueWithAstra(currentPrompt());
+  fallback.hidden=result.opened;
+  if(result.copied&&result.opened){$('prompt-status').textContent='ChatGPT opened and the prompt was copied. Choose Astra, then paste the prompt into the new chat.';toast('ChatGPT opened. Prompt copied.');return;}
+  if(result.copied){$('prompt-status').textContent='The prompt was copied, but the new tab was blocked. Use Open ChatGPT, then paste it into a chat with Astra.';toast('Prompt copied. Open ChatGPT to continue.');return;}
+  $('prompt-preview').open=true;const preview=$('gauntlet-prompt');preview.focus();preview.select();
+  $('prompt-status').textContent=result.opened?'ChatGPT opened, but clipboard access is unavailable. Return here to copy the selected prompt or download it.':'The new tab and clipboard were unavailable. Use Open ChatGPT, then copy the selected prompt or download it.';
+ }
+ catch(error){fallback.hidden=false;$('prompt-preview').open=true;const preview=$('gauntlet-prompt');preview.focus();preview.select();$('prompt-status').textContent='Continue could not finish. Use Open ChatGPT, then copy the selected prompt or download it.';}
 });
 $('download-bag').addEventListener('click',()=>{
  if(!selected.size)return;
@@ -124,9 +131,9 @@ function animate(time){frame=0;if(paused||!inView||document.hidden)return;const 
 function runWorld(){syncVideo();if(!paused&&inView&&!document.hidden&&!frame){lastTime=0;frame=requestAnimationFrame(animate);}}
 function setPaused(value,remember=true){paused=value;hero.dataset.paused=String(paused);$('pause-world').setAttribute('aria-pressed',String(paused));$('pause-label').textContent=paused?'Play world':'Pause world';$('pause-icon').textContent=paused?'▶':'Ⅱ';$('world-instructions').textContent=paused?'The world is resting.':matchMedia('(pointer:coarse)').matches?'Tap the bridge to explore':'Move your cursor to explore';companion.classList.remove('moving');if(paused){cancelAnimationFrame(frame);frame=0;worldVideo.pause();}else runWorld();if(remember)try{localStorage.setItem('headstart.world-paused',JSON.stringify(paused));}catch{} }
 $('pause-world').addEventListener('click',()=>setPaused(!paused));motionPreference.addEventListener('change',event=>{if(event.matches)setPaused(true,false);});
-function pointWorld(event){if(paused||event.target.closest('a,button,input,textarea,select,.start-card'))return;const rect=hero.getBoundingClientRect();const px=event.clientX-rect.left,py=event.clientY-rect.top;targetParallaxX=(.5-px/rect.width)*11;targetParallaxY=(.5-py/rect.height)*7;targetX=clamp((px-sceneX-parallaxX)/sceneScale,...walkerLimits());targetMarker.style.opacity='.8';runWorld();}
+function pointWorld(event){if(paused||event.target.closest('a,button,input,textarea,select'))return;const rect=hero.getBoundingClientRect();const px=event.clientX-rect.left,py=event.clientY-rect.top;targetParallaxX=(.5-px/rect.width)*11;targetParallaxY=(.5-py/rect.height)*7;targetX=clamp((px-sceneX-parallaxX)/sceneScale,...walkerLimits());targetMarker.style.opacity='.8';runWorld();}
 hero.addEventListener('pointermove',event=>{if(event.pointerType!=='touch')pointWorld(event);});hero.addEventListener('pointerdown',event=>{if(event.pointerType==='touch')pointWorld(event);});hero.addEventListener('pointerleave',()=>{targetParallaxX=0;targetParallaxY=0;targetMarker.style.opacity='0';});
 companion.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();const [min,max]=walkerLimits();targetX=event.key==='Home'?min:event.key==='End'?max:clamp(targetX+(event.key==='ArrowRight'?90:-90),min,max);if(paused){direction=targetX>=walkerX?1:-1;walkerX=targetX;renderWorld();}else runWorld();});companion.addEventListener('click',()=>{const words=['Let’s find your starting point.','Three games. One new idea.','Follow your curiosity.'];const current=words.indexOf($('companion-speech').textContent);$('companion-speech').textContent=words[(current+1)%words.length];});
 new ResizeObserver(layoutWorld).observe(hero);new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;document.body.classList.toggle('hero-away',!inView);hero.classList.toggle('offscreen',!inView);if(!inView){cancelAnimationFrame(frame);frame=0;worldVideo.pause();}else runWorld();},{threshold:.02}).observe(hero);document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0;worldVideo.pause();}else runWorld();});
 for(const id of ['foreground','world-art'])$(id).addEventListener('error',()=>{$(id).hidden=true;});
-syncBrief();discovery.restore();discovery.load();renderBag();restoreSelectedMetadata();layoutWorld();setPaused(paused,false);
+discovery.restore();discovery.load();renderBag();restoreSelectedMetadata();layoutWorld();setPaused(paused,false);

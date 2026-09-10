@@ -15,7 +15,7 @@
     "dev": "node --env-file-if-exists=.env tools/dev/server.mjs",
     "check": "node tools/dev/check.mjs",
     "format:check": "prettier --check tools/dev .github/workflows package.json",
-    "test": "node --test tools/dev/*.test.mjs tools/signup/*.test.mjs",
+    "test": "node --test tools/dev/*.test.mjs tools/signup/*.test.mjs tools/site/*.test.mjs HeadStart-Starter-Package/site/dist/astra-action.test.mjs",
     "test:browser": "node tools/dev/browser.mjs",
     "test:discovery": "node tests/discovery-ui.mjs",
     "build": "node tools/dev/build.mjs"

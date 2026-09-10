@@ -34,10 +34,16 @@ try {
     )
       throw new Error(`${name}: horizontal overflow`);
     await page.screenshot({ path: `${output}/${name}.png` });
-    await page.locator("#signup-email").fill("local-test@example.com");
-    await page.locator('#email-signup button[type="submit"]').click();
-    await expect(page.locator("#signup-status")).toContainText("unavailable");
+    await expect(page.locator("#hero-browse")).toBeVisible();
+    await expect(page.locator("#email-signup")).toHaveCount(0);
+    await page.locator("[data-demo-game]").first().click();
+    await page.locator("#demo-email").fill("local-test@example.com");
+    await page.locator('#demo-email-form button[type="submit"]').click();
+    await expect(page.locator("#demo-email-status")).toContainText(
+      "unavailable",
+    );
     await page.screenshot({ path: `${output}/${name}-email-unavailable.png` });
+    await page.locator('[data-close="demo-email-dialog"]').click();
     await page.locator("#search-games").fill("nonexistent-project-749183");
     await expect(page.locator("#empty-games")).toBeVisible();
     await page.screenshot({ path: `${output}/${name}-empty.png` });
