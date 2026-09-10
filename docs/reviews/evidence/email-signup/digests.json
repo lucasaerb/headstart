@@ -1,0 +1,12 @@
+{
+  "HeadStart-Starter-Package/site/dist/index.html": "ec6f3f99b21e4673ea8014db627eb6ab40077804c11b245c6488dc229ff1b73e",
+  "HeadStart-Starter-Package/site/dist/styles.css": "9022e0dae7f6208aba62223e36865ebf1e7d9ecc03b19b049e953ef1f9e56b2e",
+  "HeadStart-Starter-Package/site/dist/app.js": "7de53dae28e73db1e8735b99496b00d49e411ede7802eff7e6190600cfb93c4a",
+  "HeadStart-Starter-Package/site/dist/signup.js": "122e89fa9d220da0ee84d3cd6e50e2815ef0848f20234eab9f9098390f066f37",
+  "HeadStart-Starter-Package/site/dist/api/subscribe.js": "5542c2d3c21248365dbfd774f51db7a1bc78a328a4a66358c20785142ff24a9a",
+  "HeadStart-Starter-Package/site/dist/build.mjs": "697fac6057c78687eb0312afe0564f0c6fb68b9fe309930550d6a691651eae56",
+  "HeadStart-Starter-Package/site/dist/vercel.json": "3b083038135f13da00eb74850cf58885d05c1f489c646f86a5ca16eb63789ed6",
+  "HeadStart-Starter-Package/site/dist/package.json": "ebb6d5ac9e01efb21046a8f0ad8c4d2cc353ea308d6e7dedb67dcbd990a1b245",
+  "tools/signup/manage.mjs": "f5fa09f922355ef8329127d958fc53a4deea197c4f8fe1d46fe4e76cddee1e90",
+  "tools/signup/subscribe.test.mjs": "896f175e610fd2c458199e88383ea9207ef44d55669e41ae3fa374a825bf7028"
+}

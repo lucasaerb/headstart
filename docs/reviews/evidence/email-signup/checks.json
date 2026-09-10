@@ -1,0 +1,40 @@
+[
+  {
+    "width": 1440,
+    "box": {
+      "x": 96.46875,
+      "y": 639.0625,
+      "width": 520,
+      "height": 157
+    },
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "box": {
+      "x": 20,
+      "y": 537.03125,
+      "width": 350,
+      "height": 183
+    },
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "box": {
+      "x": 20,
+      "y": 598.84375,
+      "width": 280,
+      "height": 181
+    },
+    "overflow": false
+  },
+  {
+    "error": "We couldn\u2019t save your signup. Please try again later.",
+    "inputPreserved": true
+  },
+  {
+    "success": "Thanks \u2014 your interest is saved. You can keep exploring HeadStart.",
+    "reset": ""
+  }
+]
