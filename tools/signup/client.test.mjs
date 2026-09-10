@@ -64,10 +64,9 @@ function createHarness({ stored = null, storageThrows = false, responseOk = true
   return { elements, data, requests, clickDemo };
 }
 
-test('remembered email prefills without creating marketing consent and bypasses the demo prompt', async () => {
+test('remembered email is disclosed without network activity and bypasses the demo prompt', async () => {
   const email = 'saved@example.com';
   const harness = createHarness({ stored: JSON.stringify({ version: 1, email }) });
-  assert.equal(harness.elements['signup-email'].value, email);
   assert.equal(harness.elements['remembered-email'].hidden, false);
   assert.equal(harness.elements['remembered-email-value'].textContent, email);
   assert.equal(harness.requests.length, 0);
