@@ -32,3 +32,12 @@ test('header action pair has responsive sizing without hiding either action', ()
   assert.match(css, /\.site-header \.header-project-actions>a\{min-height:40px;padding:9px 10px;font-size:12px\}/);
   assert.doesNotMatch(css, /\.header-github-cta[^}]*display:none/);
 });
+
+test('narrow header gives the complete action pair its own full-width row', () => {
+  const narrow = css.match(/@media\(max-width:420px\)\{[\s\S]*?\}\}/)?.[0] || '';
+  assert.match(narrow, /\.site-header \.header-project-actions\{grid-column:1\/-1;grid-row:3;display:grid;/);
+  assert.match(narrow, /grid-template-columns:minmax\(0,1\.35fr\) minmax\(0,1fr\)/);
+  assert.match(narrow, /justify-self:stretch;width:100%;gap:8px/);
+  assert.match(narrow, /\.site-header \.header-project-actions>a\{width:100%;min-width:0;padding:9px 8px;font-size:12px\}/);
+  assert.doesNotMatch(narrow, /text-overflow|overflow:hidden|display:none/);
+});
