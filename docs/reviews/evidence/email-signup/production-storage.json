@@ -1,0 +1,13 @@
+{
+  "deployment": "https://headstart-anzyi4bge-lucasaerbs-projects.vercel.app",
+  "checks": {
+    "demoOnlyWithoutMarketing": true,
+    "homepageConsentPersisted": true,
+    "duplicatePreservesRecord": true,
+    "serverFilesNotPublic": true,
+    "foreignOriginRejected": true,
+    "privateReadDenied": true,
+    "syntheticRecordsDeleted": true
+  },
+  "verdict": "PASS"
+}

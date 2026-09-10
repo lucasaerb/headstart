@@ -1,0 +1,41 @@
+[
+  {
+    "width": 1440,
+    "dialog": true,
+    "marketingChecked": false
+  },
+  {
+    "failure": "Save unavailable",
+    "launchHidden": true
+  },
+  {
+    "launchPreserved": true,
+    "localStorageNoEmail": true
+  },
+  {
+    "width": 390,
+    "dialog": true,
+    "marketingChecked": false
+  },
+  {
+    "failure": "Save unavailable",
+    "launchHidden": true
+  },
+  {
+    "launchPreserved": true,
+    "localStorageNoEmail": true
+  },
+  {
+    "width": 320,
+    "dialog": true,
+    "marketingChecked": false
+  },
+  {
+    "failure": "Save unavailable",
+    "launchHidden": true
+  },
+  {
+    "launchPreserved": true,
+    "localStorageNoEmail": true
+  }
+]
