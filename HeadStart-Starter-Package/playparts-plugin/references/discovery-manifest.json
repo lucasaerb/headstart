@@ -1,0 +1,8 @@
+{
+  "snapshot_sha256": "74158df1e700bba85e8bd578e3bc075738d1bfb7cfecc72b35b511545cc2f48a",
+  "source_catalog_sha256": "956a2c6464ba2eab77367ac77512943e2368e711779d97dc187440ae3fd53105",
+  "source_review_sha256": "67207b421ffa7e6f41d760a24ff53e405f2533ec1570ef1c336c885d267d8ab7",
+  "source_schema_version": "research-0.1",
+  "scope": "Bounded internal link-only research display, not production publication or code/asset reuse eligibility. Native-only projects remain native references. HTTP response does not establish successful play.",
+  "record_count": 39
+}

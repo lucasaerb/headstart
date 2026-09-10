@@ -1,22 +1,22 @@
 {
   "name": "playparts-plugin",
-  "version": "0.1.0",
-  "description": "Preloaded game building-block discovery, inspection, integration and validation skills. Starter package without a live catalog connector.",
+  "version": "0.2.0",
+  "description": "Discover game codebase starting points through a local, read-only research catalog and six focused coding-agent skills.",
   "author": {
-    "name": "Playparts concept project"
+    "name": "HeadStart project"
   },
   "skills": "./skills/",
   "interface": {
-    "displayName": "Playparts",
-    "shortDescription": "Find and reuse game building blocks with preloaded skills",
-    "longDescription": "Six focused skills for discovery, source inspection, integration planning, authorized local adaptation, validation and credits. Includes reference knowledge and research candidates. Live catalog connection is implementation work.",
-    "developerName": "Playparts concept project",
+    "displayName": "HeadStart",
+    "shortDescription": "Find game starting points inside Codex",
+    "longDescription": "Search 39 source-inspected game and framework references locally, compare evidence and inspect pinned starting points. Six skills guide discovery through authorized local work. Source exports, email verification, website bag sync and tested integrations are not implemented.",
+    "developerName": "HeadStart project",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
-      "Find a building block for this game.",
-      "Inspect this capability and my project.",
-      "Integrate this block and verify it."
+      "Find starting points for my dream game.",
+      "Find a camera system for my Three.js game.",
+      "Compare game codebases for a browser city builder."
     ],
     "brandColor": "#315BE8"
   },
