@@ -1,0 +1,54 @@
+[
+  {
+    "width": 1440,
+    "signupVisible": true,
+    "overflow": false
+  },
+  {
+    "demoVisible": true,
+    "marketingUnchecked": true
+  },
+  {
+    "cancelCloses": true
+  },
+  {
+    "width": 390,
+    "signupVisible": true,
+    "overflow": false
+  },
+  {
+    "demoVisible": true,
+    "marketingUnchecked": true
+  },
+  {
+    "cancelCloses": true
+  },
+  {
+    "width": 320,
+    "signupVisible": true,
+    "overflow": false
+  },
+  {
+    "demoVisible": true,
+    "marketingUnchecked": true
+  },
+  {
+    "cancelCloses": true
+  },
+  {
+    "file": "signup.js",
+    "hashMatch": true
+  },
+  {
+    "file": "app.js",
+    "hashMatch": true
+  },
+  {
+    "file": "index.html",
+    "hashMatch": true
+  },
+  {
+    "file": "styles.css",
+    "hashMatch": true
+  }
+]
