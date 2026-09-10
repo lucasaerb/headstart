@@ -1,0 +1,72 @@
+[
+  {
+    "path": "/api/research?q=driving",
+    "status": 200,
+    "expected": 200
+  },
+  {
+    "path": "/api/catalog/search?limit=1",
+    "status": 200,
+    "expected": 200
+  },
+  {
+    "path": "/api/catalog/search?runtime=Godot",
+    "status": 200,
+    "expected": 200
+  },
+  {
+    "path": "/api/catalog/search?readiness=integration_tested",
+    "status": 200,
+    "expected": 200
+  },
+  {
+    "path": "/api/catalog/search?cursor=tampered",
+    "status": 400,
+    "expected": 400
+  },
+  {
+    "path": "/api/research?unknown=x",
+    "status": 400,
+    "expected": 400
+  },
+  {
+    "path": "/runtime/catalog.sqlite3",
+    "status": 404,
+    "expected": 404
+  },
+  {
+    "path": "/runtime/model/model.onnx",
+    "status": 404,
+    "expected": 404
+  },
+  {
+    "path": "/runtime/snapshot.json",
+    "status": 404,
+    "expected": 404
+  },
+  {
+    "path": "/.env",
+    "status": 404,
+    "expected": 404
+  },
+  {
+    "path": "/services/catalog/store.py",
+    "status": 404,
+    "expected": 404
+  },
+  {
+    "path": "/contracts/entity.schema.json",
+    "status": 404,
+    "expected": 404
+  },
+  {
+    "path": "/api/subscribe.js",
+    "status": 405,
+    "expected": 404
+  },
+  {
+    "path": "/package.json",
+    "status": 404,
+    "expected": 404
+  }
+]

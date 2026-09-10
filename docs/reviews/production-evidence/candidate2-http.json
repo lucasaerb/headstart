@@ -1,0 +1,112 @@
+[
+  {
+    "path": "/api/research?q=driving",
+    "method": "GET",
+    "status": 200
+  },
+  {
+    "path": "/v1/search?limit=1",
+    "method": "GET",
+    "status": 200
+  },
+  {
+    "path": "/v1/search?limit=1&cursor=[valid-signed-cursor]",
+    "method": "GET",
+    "status": 200
+  },
+  {
+    "path": "/v1/projects/2048",
+    "method": "GET",
+    "status": 200
+  },
+  {
+    "path": "/v1/projects/2048",
+    "method": "GET",
+    "status": 200
+  },
+  {
+    "path": "/v1/search?runtime=Godot",
+    "method": "GET",
+    "status": 200
+  },
+  {
+    "path": "/v1/search?readiness=integration_tested",
+    "method": "GET",
+    "status": 200
+  },
+  {
+    "path": "/v1/search?cursor=tampered",
+    "method": "GET",
+    "status": 400
+  },
+  {
+    "path": "/v1/search?path=search",
+    "method": "GET",
+    "status": 400
+  },
+  {
+    "path": "/api/research?unknown=x",
+    "method": "GET",
+    "status": 400
+  },
+  {
+    "path": "/v1/projects/nonexistent",
+    "method": "GET",
+    "status": 404
+  },
+  {
+    "path": "/v1/search",
+    "method": "POST",
+    "status": 405
+  },
+  {
+    "path": "/runtime/catalog.sqlite3",
+    "method": "GET",
+    "status": 404
+  },
+  {
+    "path": "/runtime/model/model.onnx",
+    "method": "GET",
+    "status": 404
+  },
+  {
+    "path": "/runtime/snapshot.json",
+    "method": "GET",
+    "status": 404
+  },
+  {
+    "path": "/.env",
+    "method": "GET",
+    "status": 404
+  },
+  {
+    "path": "/services/catalog/store.py",
+    "method": "GET",
+    "status": 404
+  },
+  {
+    "path": "/contracts/entity.schema.json",
+    "method": "GET",
+    "status": 404
+  },
+  {
+    "path": "/package.json",
+    "method": "GET",
+    "status": 404
+  },
+  {
+    "path": "/api/subscribe",
+    "method": "GET",
+    "status": 405
+  },
+  {
+    "path": "/api/subscribe.js",
+    "method": "GET",
+    "status": 405
+  },
+  {
+    "path": "/api/subscribe",
+    "method": "POST",
+    "status": 400
+  }
+]
