@@ -1,0 +1,8 @@
+# Preserve supplied document/image/archive bytes and avoid text diff heuristics.
+*.pdf binary
+*.docx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.zip binary

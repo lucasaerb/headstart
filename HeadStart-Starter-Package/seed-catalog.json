@@ -1,0 +1,97 @@
+[
+  {
+    "title": "pmndrs Racing Game",
+    "source_url": "https://github.com/pmndrs/racing-game",
+    "demo_url": "https://racing.pmnd.rs/",
+    "runtime": [
+      "Three.js",
+      "React Three Fiber"
+    ],
+    "authoring_tools": [
+      "Blender"
+    ],
+    "repository_license_reported": "MIT",
+    "eligibility": "candidate",
+    "source_commit": null,
+    "checked_date": "2026-09-10",
+    "interactive_play_tested": false,
+    "note": "Research candidate. Review source revision, selected file and asset rights, demo/source pairing and exact capability evidence before publishing as reusable."
+  },
+  {
+    "title": "Ecctrl",
+    "source_url": "https://github.com/pmndrs/ecctrl",
+    "demo_url": "https://ecctrl.app/",
+    "runtime": [
+      "Three.js",
+      "React Three Fiber",
+      "Rapier"
+    ],
+    "authoring_tools": [],
+    "repository_license_reported": "MIT",
+    "eligibility": "candidate",
+    "source_commit": null,
+    "checked_date": "2026-09-10",
+    "interactive_play_tested": false,
+    "note": "Research candidate. Review source revision, selected file and asset rights, demo/source pairing and exact capability evidence before publishing as reusable."
+  },
+  {
+    "title": "Dungeon Forge",
+    "source_url": "https://github.com/majidmanzarpour/threejs-procedural-dungeon",
+    "demo_url": "https://procedural-dungeon.netlify.app/",
+    "runtime": [
+      "Three.js"
+    ],
+    "authoring_tools": [],
+    "repository_license_reported": "MIT",
+    "eligibility": "candidate",
+    "source_commit": null,
+    "checked_date": "2026-09-10",
+    "interactive_play_tested": false,
+    "note": "Research candidate. Review source revision, selected file and asset rights, demo/source pairing and exact capability evidence before publishing as reusable."
+  },
+  {
+    "title": "Godot Demo Projects",
+    "source_url": "https://github.com/godotengine/godot-demo-projects",
+    "demo_url": "https://godotengine.github.io/godot-demo-projects/",
+    "runtime": [
+      "Godot"
+    ],
+    "authoring_tools": [],
+    "repository_license_reported": null,
+    "eligibility": "per-subproject review",
+    "source_commit": null,
+    "checked_date": "2026-09-10",
+    "interactive_play_tested": false,
+    "note": "Research candidate. Review source revision, selected file and asset rights, demo/source pairing and exact capability evidence before publishing as reusable."
+  },
+  {
+    "title": "Gather It",
+    "source_url": "https://github.com/tweeres04/gather-it",
+    "demo_url": "https://tweeres04.github.io/gather-it/",
+    "runtime": [
+      "Unity"
+    ],
+    "authoring_tools": [],
+    "repository_license_reported": null,
+    "eligibility": "research only: license unresolved",
+    "source_commit": null,
+    "checked_date": "2026-09-10",
+    "interactive_play_tested": false,
+    "note": "Research candidate. Review source revision, selected file and asset rights, demo/source pairing and exact capability evidence before publishing as reusable."
+  },
+  {
+    "title": "San Francisco game",
+    "source_url": null,
+    "demo_url": "https://sf.thijs.gg/",
+    "runtime": [
+      "Unverified"
+    ],
+    "authoring_tools": [],
+    "repository_license_reported": null,
+    "eligibility": "research only: source and license unresolved",
+    "source_commit": null,
+    "checked_date": "2026-09-10",
+    "interactive_play_tested": false,
+    "note": "Research candidate. Review source revision, selected file and asset rights, demo/source pairing and exact capability evidence before publishing as reusable."
+  }
+]

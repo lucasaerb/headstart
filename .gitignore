@@ -1,0 +1,25 @@
+.DS_Store
+*.screenstudio/
+/Sf.mp4
+/citybuilder.mp4
+/r3f.mp4
+/HeadStart-Starter-Package/Playparts-Complete-Package.zip
+
+# Local configuration and generated output
+.env
+.env.*
+!.env.example
+node_modules/
+.next/
+dist/
+coverage/
+test-results/
+playwright-report/
+.vercel/
+__pycache__/
+*.pyc
+.venv/
+.worktrees/
+
+# Keep reviewed evidence intentionally; do not commit raw private captures/logs.
+/tmp/

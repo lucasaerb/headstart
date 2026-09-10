@@ -1,0 +1,30 @@
+{
+  "name": "playparts-plugin",
+  "version": "0.1.0",
+  "description": "Preloaded game building-block discovery, inspection, integration and validation skills. Starter package without a live catalog connector.",
+  "author": {
+    "name": "Playparts concept project"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Playparts",
+    "shortDescription": "Find and reuse game building blocks with preloaded skills",
+    "longDescription": "Six focused skills for discovery, source inspection, integration planning, authorized local adaptation, validation and credits. Includes reference knowledge and research candidates. Live catalog connection is implementation work.",
+    "developerName": "Playparts concept project",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Find a building block for this game.",
+      "Inspect this capability and my project.",
+      "Integrate this block and verify it."
+    ],
+    "brandColor": "#315BE8"
+  },
+  "keywords": [
+    "games",
+    "building-blocks",
+    "skills",
+    "threejs",
+    "provenance"
+  ]
+}

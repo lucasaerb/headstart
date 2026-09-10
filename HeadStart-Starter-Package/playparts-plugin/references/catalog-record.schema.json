@@ -1,0 +1,557 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:playparts:catalog-record:0.1",
+  "title": "Playparts catalog record v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "components"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "project": {
+      "$ref": "#/$defs/project"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/component"
+      }
+    }
+  },
+  "$defs": {
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://"
+    },
+    "sha": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "code_spdx",
+        "asset_status",
+        "evidence",
+        "notices"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "unresolved",
+            "review_required",
+            "scope_cleared",
+            "ineligible"
+          ]
+        },
+        "code_spdx": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "asset_status": {
+          "enum": [
+            "unreviewed",
+            "scope_cleared",
+            "excluded",
+            "not_applicable"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "notices": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "source_commit",
+        "claim",
+        "origin",
+        "reviewed_at"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$"
+        },
+        "source_commit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "symbol": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "line_start": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "line_end": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "claim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "origin": {
+          "enum": [
+            "maintainer",
+            "parser",
+            "ai_proposal",
+            "curator",
+            "executed_test"
+          ]
+        },
+        "reviewed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "repository_url",
+        "subproject_path",
+        "source_commit",
+        "publication_state",
+        "demo",
+        "runtime",
+        "authoring_tools",
+        "rights",
+        "attribution"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repository_url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "subproject_path": {
+          "type": "string"
+        },
+        "source_commit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "publication_state": {
+          "enum": [
+            "candidate",
+            "review",
+            "published",
+            "tombstoned"
+          ]
+        },
+        "demo": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "url",
+            "source_relation",
+            "health",
+            "checked_at"
+          ],
+          "properties": {
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://"
+            },
+            "source_relation": {
+              "enum": [
+                "proven",
+                "maintainer_claimed",
+                "unknown"
+              ]
+            },
+            "health": {
+              "enum": [
+                "unverified",
+                "reachable",
+                "interactive",
+                "broken",
+                "embed_blocked"
+              ]
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            }
+          }
+        },
+        "runtime": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "authoring_tools": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rights": {
+          "$ref": "#/$defs/rights"
+        },
+        "attribution": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "publication_state": {
+                "const": "published"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "source_commit": {
+                "type": "string"
+              },
+              "rights": {
+                "properties": {
+                  "status": {
+                    "const": "scope_cleared"
+                  }
+                }
+              },
+              "demo": {
+                "properties": {
+                  "checked_at": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "project_id",
+        "name",
+        "concept_ids",
+        "ontology_version",
+        "readiness",
+        "source_commit",
+        "scope",
+        "dependencies",
+        "compatibility",
+        "rights",
+        "evidence",
+        "verification"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "project_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "concept_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]+$"
+          }
+        },
+        "ontology_version": {
+          "type": "string"
+        },
+        "readiness": {
+          "enum": [
+            "suggested",
+            "source_reviewed",
+            "isolated",
+            "integration_tested"
+          ]
+        },
+        "source_commit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "scope": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "required_files",
+            "optional_files",
+            "excluded_systems",
+            "coupling_notes"
+          ],
+          "properties": {
+            "required_files": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "optional_files": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "excluded_systems": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "coupling_notes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "kind",
+              "version",
+              "optional"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "kind": {
+                "enum": [
+                  "code",
+                  "asset",
+                  "build",
+                  "service",
+                  "dataset"
+                ]
+              },
+              "version": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "optional": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "compatibility": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "runtime",
+              "version_range",
+              "support"
+            ],
+            "properties": {
+              "runtime": {
+                "type": "string"
+              },
+              "version_range": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "support": {
+                "enum": [
+                  "unknown",
+                  "candidate",
+                  "reference_only",
+                  "tested"
+                ]
+              }
+            }
+          }
+        },
+        "rights": {
+          "$ref": "#/$defs/rights"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        },
+        "verification": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "source_commit",
+            "target_commit",
+            "recipe_digest",
+            "result",
+            "evidence_uri"
+          ],
+          "properties": {
+            "source_commit": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "target_commit": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{40}$"
+            },
+            "recipe_digest": {
+              "type": "string"
+            },
+            "result": {
+              "enum": [
+                "passed",
+                "failed"
+              ]
+            },
+            "evidence_uri": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "readiness": {
+                "enum": [
+                  "source_reviewed",
+                  "isolated",
+                  "integration_tested"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "source_commit": {
+                "type": "string"
+              },
+              "evidence": {
+                "minItems": 1
+              },
+              "rights": {
+                "properties": {
+                  "status": {
+                    "const": "scope_cleared"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "readiness": {
+                "const": "integration_tested"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "verification": {
+                "type": "object",
+                "properties": {
+                  "result": {
+                    "const": "passed"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

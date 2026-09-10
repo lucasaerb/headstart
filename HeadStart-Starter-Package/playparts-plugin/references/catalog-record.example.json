@@ -1,0 +1,90 @@
+{
+  "schema_version": "0.1",
+  "project": {
+    "id": "pmndrs-racing-game",
+    "title": "pmndrs Racing Game",
+    "repository_url": "https://github.com/pmndrs/racing-game",
+    "subproject_path": "",
+    "source_commit": null,
+    "publication_state": "candidate",
+    "demo": {
+      "url": "https://racing.pmnd.rs/",
+      "source_relation": "unknown",
+      "health": "unverified",
+      "checked_at": null
+    },
+    "runtime": [
+      "Three.js",
+      "React Three Fiber"
+    ],
+    "authoring_tools": [
+      "Blender"
+    ],
+    "rights": {
+      "status": "review_required",
+      "code_spdx": "MIT",
+      "asset_status": "unreviewed",
+      "evidence": [],
+      "notices": [
+        "Resolve notices from selected files at a pinned source commit."
+      ]
+    },
+    "attribution": [
+      "pmndrs community; preserve original file-level authors and notices."
+    ]
+  },
+  "components": [
+    {
+      "id": "pmndrs-racing-camera-candidate",
+      "project_id": "pmndrs-racing-game",
+      "name": "Chase camera candidate",
+      "concept_ids": [
+        "camera.chase",
+        "movement.driving"
+      ],
+      "ontology_version": "0.1",
+      "readiness": "suggested",
+      "source_commit": null,
+      "scope": {
+        "required_files": [],
+        "optional_files": [],
+        "excluded_systems": [
+          "Vehicle physics",
+          "Race UI"
+        ],
+        "coupling_notes": [
+          "Exact source boundary is unresolved. This is a candidate fixture, not a reviewed extraction."
+        ]
+      },
+      "dependencies": [],
+      "compatibility": [
+        {
+          "runtime": "React Three Fiber",
+          "version_range": null,
+          "support": "candidate"
+        },
+        {
+          "runtime": "Unity",
+          "version_range": null,
+          "support": "reference_only"
+        },
+        {
+          "runtime": "Godot",
+          "version_range": null,
+          "support": "reference_only"
+        }
+      ],
+      "rights": {
+        "status": "review_required",
+        "code_spdx": "MIT",
+        "asset_status": "unreviewed",
+        "evidence": [],
+        "notices": [
+          "Resolve notices from selected files at a pinned source commit."
+        ]
+      },
+      "evidence": [],
+      "verification": null
+    }
+  ]
+}

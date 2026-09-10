@@ -1,0 +1,47 @@
+[
+  {
+    "id": "discover",
+    "title": "Discover playable building blocks",
+    "note": "The catalog starts with capabilities and curated demos. No sign-in is needed to explore."
+  },
+  {
+    "id": "search",
+    "title": "Search by intent and taxonomy",
+    "note": "Project and component results share a search surface. Explain why a match appeared and show reuse readiness."
+  },
+  {
+    "id": "tour",
+    "title": "Take a tour of a real project",
+    "note": "The playable experience sits beside a decomposition into useful capabilities. The real demo opens externally."
+  },
+  {
+    "id": "capability",
+    "title": "Inspect a reusable capability",
+    "note": "Show extraction scope, compatibility and source evidence before offering the handoff."
+  },
+  {
+    "id": "integrate",
+    "title": "Use in my game",
+    "note": "The plugin is the primary workflow. A portable agent brief remains available; hosted repository execution is a later phase."
+  },
+  {
+    "id": "review",
+    "title": "Review a connected integration",
+    "note": "Later-phase concept: show changes, actual validation evidence and a reviewable patch before acceptance."
+  },
+  {
+    "id": "submit",
+    "title": "Submit and onboard a developer",
+    "note": "A demo and repository are enough to begin. Licensing and extraction review happen before publication."
+  },
+  {
+    "id": "provenance",
+    "title": "Preserve optional remix provenance",
+    "note": "Later-phase graph tracks composition and forks. Source notices are required where applicable; public sharing is optional."
+  },
+  {
+    "id": "plugin",
+    "title": "Install the preloaded skills plugin",
+    "note": "The core MVP includes six skills and a read-only catalog connection. This deliverable contains a skills starter; the live connector still needs implementation."
+  }
+]

@@ -1,0 +1,7 @@
+# Game concept artwork
+
+Generated with the built-in image-generation tool. Saved as `assets/game-concepts.png`. The UI uses individual panels as illustrative previews, not as factual screenshots of the linked projects.
+
+## Exact prompt
+
+Use case: stylized-concept. Create one high-resolution landscape game-art contact sheet of exactly four equal rectangular panels in a clean 2 by 2 grid, zero gutters, no text or labels or UI. Each panel is a fictional illustrative playable-game preview for a game-building-block discovery app. Top left: polished low-poly blue rally car seen third person drifting on an orange desert race track, turquoise sky, red rock arch, white tire smoke, rendered real-time 3D game. Top right: isometric procedural dungeon with interconnected rooms, charcoal stone, small cyan magic lights, orange torches, moss and stairs, beautiful diorama. Bottom left: small white robot character jumping between mint-green floating platforms in a cobalt blue physics playground, clear shapes and crisp shadows, rendered 3D. Bottom right: explorable stylized coastal city with cream-colored buildings, tree-lined streets and blue water, aerial oblique view, geospatial city simulation game. Distinct high-quality scenes, visually sophisticated game art, no trademarks, no captions, no watermarks. Wide 3:2 overall sheet. These are illustrative artwork, not screenshots of existing projects.
