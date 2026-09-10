@@ -1,0 +1,26 @@
+{
+  "index.html": {
+    "sha256": "80c23dd43f67028c113413d2d095913f0fea2a10d861b7c0d5b166380c5a09d4",
+    "matches_review": true
+  },
+  "plugin.html": {
+    "sha256": "13fe97c6a2dc974477da5cec7521d3dc61ca2615a6dacb5985b5ae50ac0fd724",
+    "matches_review": true
+  },
+  "styles.css": {
+    "sha256": "42029945e22cb7bc2fe5c78762e70e1c0a896ef41fba2bb63a747708a3aba992",
+    "matches_review": true
+  },
+  "app.js": {
+    "sha256": "5ebb7b3f1b4a677d2b9e5ae7e1c96bbacb63ba483a8e4be11414ac30872676e6",
+    "matches_review": true
+  },
+  "catalog.js": {
+    "sha256": "c1713bdef2ec3e92dfa53785c5356ffe6506fa9d56ed2b870c92f109ee0f1577",
+    "matches_review": true
+  },
+  "downloads/headstart-plugin-0.3.0.zip": {
+    "sha256": "3644bcc2f48975f996d979be3e6ade7aca8276133acb8b4b86fc1d4dd512d1f3",
+    "matches_review": true
+  }
+}

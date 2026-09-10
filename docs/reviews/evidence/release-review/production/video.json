@@ -1,0 +1,14 @@
+{
+  "playing": {
+    "currentTime": 0.2242,
+    "paused": false,
+    "width": 1620,
+    "height": 1080
+  },
+  "paused": {
+    "currentTime": 0.432048,
+    "paused": true,
+    "width": 1620,
+    "height": 1080
+  }
+}

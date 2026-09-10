@@ -26,3 +26,9 @@ The landing retains the selected C4/C4b castle, open sea, smaller companion and 
 ## Limits
 
 This is an unsigned local plugin preview with bundled research metadata. Linux/Windows installation remains unverified. The review establishes static release readiness and download integrity, not a shared production catalog backend, authenticated handoff, royalty agreement or settlement service. Existing landing/video review records remain the evidence for the unchanged ambient-video controls.
+
+## Production smoke verification — PASS
+
+Independently verified [headstart-virid.vercel.app](https://headstart-virid.vercel.app) after deployment of stable commit `4a3bbc2` (release cleanup `411bb7d`), deployment `headstart-8vfm5nniy-lucasaerbs-projects.vercel.app`. Public home and plugin routes load without authentication. Repeated desktop, 390px and 320px browser checks: 43 catalog cards, no JavaScript errors, no page overflow, successful actual ZIP download. The served HTML, CSS, JavaScript, catalog and ZIP each match the reviewed staged SHA-256 exactly; see [production hashes](evidence/release-review/production/hashes.json).
+
+The production video decodes at 1620×1080, advances its playback time, and pauses using the world control. Independently viewed the live mobile landing and plugin captures: the world composition, primary action and download/install flow remain legible. Evidence is under [production checks](evidence/release-review/production/checks.json), [video checks](evidence/release-review/production/video.json), [mobile landing](evidence/release-review/production/landing-mobile.png), and [mobile plugin](evidence/release-review/production/plugin-390.png). The production smoke verdict is **PASS** for this bounded static release.
