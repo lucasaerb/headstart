@@ -13,3 +13,14 @@ For Python contracts use `python3 -m venv .venv`, `.venv/bin/pip install -r requ
 `npm run catalog:init` explicitly imports the current research JSON and display projection and idempotently inserts the reviewed2048 two-file scope. It does not run on startup and never resets existing catalog records or tombstones. To refresh an intentionally changed research projection rerun it. Data and the mode0600 cursor signing key live in ignored `.local/`. See `services/catalog/README.md` for backup/reset; stop the server before resetting local metadata and retain evidence. Resetting the signing key intentionally invalidates cursors. `HEADSTART_CATALOG_DB`, `HEADSTART_EVIDENCE_DIR`, and `HEADSTART_PYTHON` override server-owned local paths/interpreter. They never come from visitor input.
 
 The API uses Python subprocesses and local SQLite in this local milestone; `.local-build` is not a standalone hosted API. Vercel production requires a separate persistent database/API adapter before deploying this API-driven frontend. No production deployment is performed by these commands.
+
+### Public video assets
+
+Git LFS must be installed for the walkthrough video. After a clone with smudging
+skipped, run `npm run assets:fetch` from the repository root before building or
+running browser media checks. This fetches only `site/dist/assets/*.mp4` LFS
+objects; it does not download the separate root demo or walkthrough source media.
+CI performs the same selective pull. Both local and Vercel build entry points
+reject unresolved LFS pointers anywhere under public assets and name this command.
+`npm run test:media` checks the 320/390/1440 header and real video decoding/playback,
+including pause/reset on dialog close and Escape. No video content is changed.

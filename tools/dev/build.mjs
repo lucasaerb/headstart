@@ -1,5 +1,7 @@
 import { cp, mkdir, rm } from "node:fs/promises";
 import { siteRoot } from "./server.mjs";
+import { verifyPublicAssets } from "../../HeadStart-Starter-Package/site/dist/verify-assets.mjs";
+await verifyPublicAssets();
 // One explicit public allowlist; no API sources, secrets or research evidence exposed.
 const output = new URL("../../.local-build/", import.meta.url);
 await rm(output, { recursive: true, force: true });

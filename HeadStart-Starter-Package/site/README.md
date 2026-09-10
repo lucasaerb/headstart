@@ -2,15 +2,9 @@
 
 A frontend using HTML, CSS and JavaScript, based on the user-selected C4/C4b direction, plus a Vercel email-capture function backed by private Blob storage. Art assets are original generated illustrations. The interactive world uses a generated ambient motion plate behind independent CSS atmosphere, foreground foliage and companion layers; it is a landing scene, not a running external game.
 
-From the workspace root:
+Follow [local development setup](../../docs/architecture/development.md) from the workspace root, then run `npm run catalog:init` and `npm run dev`. Open `http://127.0.0.1:8767/`. The current library requires its local API.
 
-```sh
-python3 -m http.server 8765 --bind 127.0.0.1 --directory HeadStart-Starter-Package
-```
-
-Open `http://127.0.0.1:8765/site/dist/`.
-
-The static server can preview the visuals alongside the mockup library and storyboard, but cannot save email submissions. Deployment runs `npm ci` and `node build.mjs` from `site/dist`, producing an explicit public-file allowlist and a separately bundled `/api/subscribe` function. See [email capture operations](../../tools/signup/README.md) for private storage, consent, owner export/delete and rate-limit cleanup.
+A reference-only static server can preview the visuals alongside the mockup library and storyboard, but does not provide catalog queries or save email submissions. Deployment runs `npm ci` and `node build.mjs` from `site/dist`, producing an explicit public-file allowlist and a separately bundled `/api/subscribe` function. See [email capture operations](../../tools/signup/README.md) for private storage, consent, owner export/delete and rate-limit cleanup.
 
 The homepage does not show a general updates signup. Play demo actions still ask for an email before revealing their original external link; demo-only consent never opts into updates unless the user selects the optional checkbox. A successful demo save remembers the normalized address in that browser so later demos open directly; the footer's **Forget email** action clears only that browser preference. Failed saves do not create the preference. This is unverified lead capture, not an account, identity verification or source-access authorization. No email is sent by this implementation.
 
@@ -31,7 +25,7 @@ The current ZIP SHA-256 is `3644bcc2f48975f996d979be3e6ade7aca8276133acb8b4b86fc
 - Separate sky, landscape, foreground foliage, birds/water and transparent companion layers. Pointer parallax leaves HTML copy and controls stationary. The explorer moves along a fixed bridge path in world coordinates, including after resize.
 - An 8-second local Seedance ambient video animates the existing world (windmill, flags, waterfalls, ocean and boats) after the hero enters view. The C4b still image remains the poster and fallback; pause, reduced-motion, hidden-tab and offscreen states stop video playback as well as CSS motion.
 - Pointer following, touch-to-explore and keyboard arrow/Home/End movement. Pause stops decorative motion; reduced-motion starts paused. Work suspends when the hero is offscreen or the document hidden.
-- 69 image-backed research-preview projects selected from 76 research records, including browser games, demos and toolkits; search and Genre/Category/Platform/Style/Runtime/Model filters; creator-reported model evidence; dated repository star counts and Most GitHub stars sorting; list/grid layouts. Every displayed row has a record-specific game image with source, credit, license evidence and preserved notices.
+- 69 image-backed research-preview projects selected from 76 research records, including browser games, demos and toolkits; search and Genre/Category/Platform/Style/Runtime/Model filters; creator-reported model evidence; dated repository star counts and Most GitHub stars sorting; list/grid layouts. Cards display approved record-specific images where available and explicit missing-image states otherwise.
 - Browser-local bag capped at three, editable 4,000-character brief, reload persistence, empty/removal states and storage-failure messages. “Continue with Astra” assembles the HeadStart Gauntlet Loop prompt, opens `https://chatgpt.com/` from the user gesture, and attempts to copy the prompt for the user to paste there. The visible prompt preview, manual copy selection, direct ChatGPT link and Markdown download cover blocked tabs or clipboard access.
 - Honest Astra connection state. ChatGPT has no supported prompt-prefill link in this flow, so the site does not claim to submit the prompt or synchronize the bag automatically. No live connector, code remix, royalty record service or payment service is implemented.
 
@@ -63,7 +57,7 @@ python3 research/catalog/scripts/media_contact_sheet.py
 python3 research/catalog/scripts/sync_site_provenance.py
 ```
 
-The projection includes only records with reviewed local previews, so the seven records without reviewed record-specific image evidence remain in the 76-record research database and stay off the 69-row dashboard. Model labels require creator attribution; unknown attribution stays unknown. Repository star counts are shared by subprojects, dated, and separate from rights or integration readiness. Missing and non-GitHub counts remain unavailable instead of zero. The default order favors browser projects and evidenced preferred models; popularity sorting preserves active filters.
+The legacy bundled display projection contains 69 records. `catalog:init` merges all 76 raw research records through `services/catalog/display_projection.py`, adding honest missing-preview rows for the remaining seven. The API-driven dashboard uses that complete research projection and a separate scoped component catalog. Model labels require creator attribution; unknown attribution stays unknown. Repository star counts are shared by subprojects, dated, and separate from rights or integration readiness. Missing and non-GitHub counts remain unavailable instead of zero. The default order favors browser projects and evidenced preferred models; popularity sorting preserves active filters.
 
 ## Gauntlet Loop prompt
 

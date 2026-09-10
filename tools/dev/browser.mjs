@@ -44,7 +44,10 @@ try {
     );
     await page.screenshot({ path: `${output}/${name}-email-unavailable.png` });
     await page.locator('[data-close="demo-email-dialog"]').click();
-    await page.goto(base + "/?retrieval=lexical&interpret=off&q=nonexistent-project-749183#games");
+    await page.goto(
+      base +
+        "/?retrieval=lexical&interpret=off&q=nonexistent-project-749183#games",
+    );
     await expect(page.locator("#empty-games")).toBeVisible();
     await page.screenshot({ path: `${output}/${name}-empty.png` });
     await page.locator("#reset-games").click();

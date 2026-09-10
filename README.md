@@ -15,20 +15,26 @@ HeadStart is the current app and plugin name. Original specification files retai
 - [Project instructions](AGENTS.md)
 - [Prioritized build backlog](docs/planning/README.md)
 - [Coder and reviewer workflow](docs/development-workflow.md)
-- [Provisional design direction](docs/design-direction.md)
+- [Selected design direction](docs/design-direction.md)
 - [Latest product direction](HeadStart-Starter-Package/Product-Direction-v0.4.md)
 - [Technical PRD](HeadStart-Starter-Package/Playparts-Technical-PRD-v0.3.md)
 - [Review package inventory](HeadStart-Starter-Package/START-HERE.md)
 
-The repository currently contains the PRD, design prototype, images, initial data contracts, research seeds, and six-skill plugin starter. The production catalog, application, and live catalog connector remain to be implemented through the issue backlog.
+The repository includes the C4 living-world site, local Node/Python catalog API, versioned contracts, SQLite evidence storage, research inventory, scoped component reviews, local briefs/comparisons and optional semantic retrieval. Production catalog hosting, verified identity, automatic website-bag retrieval and tested game integration remain separate backlog work.
 
 ## First deliverable
 
 Build a structured research database of example games with real images, categories, playable/demo destinations, repository links, and traceable source and rights evidence. Start with that content, then build a working local discovery experience around it. Keep uncertain research separate from eligible published listings.
 
-The [first research database](research/catalog/README.md) now contains 72 entries and 145 candidate building blocks, with searchable SQLite/JSON/CSV exports and 12 authentic preview images. Browse the [index](research/catalog/INDEX.md), [shortlist](research/catalog/SHORTLIST.md), and [image contact sheet](research/catalog/contact-sheet.jpg). These are researched source leads with explicit limitations, not tested integrations. The [browser expansion](research/catalog/BROWSER-EXPANSION.md) adds 29 browser projects and creator-reported model attribution.
+The [first research database](research/catalog/README.md) currently contains 76 research entries and 153 candidate building blocks, with searchable SQLite/JSON/CSV exports and 12 authentic preview images. Browse the [index](research/catalog/INDEX.md), [shortlist](research/catalog/SHORTLIST.md), and [image contact sheet](research/catalog/contact-sheet.jpg). These are researched source leads with explicit limitations, not tested integrations. The [browser expansion](research/catalog/BROWSER-EXPANSION.md) adds 29 browser projects and creator-reported model attribution.
 
-## Local preview
+## Local application
+
+Follow [the reproducible setup](docs/architecture/development.md) for Node, Python and required public media. The normal sequence is `npm ci --ignore-scripts`, create `.venv`, install `requirements-dev.txt`, run `npm run catalog:init`, then `npm run dev`. Open http://127.0.0.1:8767/ . The API separates 76 research references from 30 scoped source-reviewed components; none of those components is labeled integration-tested.
+
+[Optional local semantic search](services/retrieval/README.md) uses pinned model weights; an unconfigured model falls back explicitly to lexical search. The local API is not a production Vercel service. See [batch reviews](docs/planning/batches/README.md) for exact acceptance and remaining work.
+
+## Reference prototype
 
 Python 3 can serve the supplied static design prototype:
 
@@ -36,7 +42,7 @@ Python 3 can serve the supplied static design prototype:
 python3 -m http.server 8000 --bind 127.0.0.1 --directory HeadStart-Starter-Package
 ```
 
-Open [the prototype](http://127.0.0.1:8000/Playparts-UI-Prototype.html). This previews sample interactions; it does not start a catalog backend or install the plugin. Application setup and test commands will be added when implemented.
+Open [the prototype](http://127.0.0.1:8000/Playparts-UI-Prototype.html). This previews sample interactions; it does not start a catalog backend or install the plugin. Use the Node/Python setup above for the current API-backed site.
 
 ## Delivery approach
 

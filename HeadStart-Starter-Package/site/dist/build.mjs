@@ -1,4 +1,6 @@
 import { cp, mkdir, rm } from 'node:fs/promises';
+import { verifyPublicAssets } from './verify-assets.mjs';
+await verifyPublicAssets();
 // Explicit public allowlist. API sources, package files, dependencies and local env never ship as static files.
 await rm('public', { recursive: true, force: true });
 await mkdir('public');
