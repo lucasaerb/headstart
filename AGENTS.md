@@ -101,7 +101,28 @@ Work through the prioritized GitHub backlog mirrored in `docs/planning/`. Resear
 
 Keep changes focused and preserve the reference package. Before creating application infrastructure, establish the actual project layout and document the chosen stack and real development commands. Once tests/build tooling exists, run checks appropriate to the changed behavior and update this guidance.
 
+The current backlog branch uses the preserved static C4 frontend with a Node 22 local development server, Python versioned contracts and SQLite metadata/evidence storage. See `docs/architecture/development.md` for installation and `docs/planning/batches/README.md` for delivery sequencing. Historical statements above describing an entirely specification-only workspace predate this implementation; a local catalog backend does not establish a deployed catalog, verified identity, MCP integration or royalty service.
+
+For the current backlog, the user's latest instruction sets batches of five author tasks with multiple builders, followed by one separate critical review of all five and repeated fixes/review until acceptance. Tests and interface coordination run during implementation; no issue is complete before independent acceptance. Preserve the C4 world and integrate new controls into its existing visual language.
+
 Commands available from the workspace root:
+
+```sh
+npm ci --ignore-scripts
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-dev.txt
+npm run catalog:init
+npm run dev # http://127.0.0.1:8767/
+npm run check
+npm run format:check
+npm test
+npm run test:python
+npm run build
+npm run test:browser
+npm run test:discovery
+```
+
+Reference-only static servers and inspection commands:
 
 ```sh
 # Serve only the supplied static prototype locally; no production backend is started.

@@ -1,0 +1,8 @@
+{
+  "contracts/entity.schema.json": "eec7e766b6c19a57efd46ad0425d5734e250090ed9765e2338d31bc57458e274",
+  "contracts/ontology.schema.json": "5154365177b785484f12ebd00243182ae4ff1df02b1ae1e6baf38c2ad09b0975",
+  "contracts/ontology.json": "ddb1769931b50de4f9b06aab923be0dabdc8685d169f9df8e83a7d105adb58e9",
+  "contracts/research-mapping.json": "30285bf068cbe1c04dedeb2455742dcd8fcea25b801f1f6ad0b6a4b44dd4a00b",
+  "contracts/validate.py": "15490015a5e9e9ca3ced9660f735d0fdd98a666cc378d1eeed5312f5c131646e",
+  "contracts/tests/test_contracts.py": "1034e83d135d723f9d9ab7d6b1096bf8ad659b113e25301cf4e97d39d3b3aee4"
+}

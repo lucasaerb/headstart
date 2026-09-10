@@ -1,0 +1,27 @@
+{
+  "name": "headstart-workspace",
+  "private": true,
+  "engines": {
+    "node": "22.x",
+    "npm": "10.x"
+  },
+  "packageManager": "npm@10.9.8",
+  "workspaces": [
+    "HeadStart-Starter-Package/site/dist"
+  ],
+  "scripts": {
+    "catalog:init": "node tools/dev/python.mjs -m services.catalog.initialize",
+    "test:python": "node tools/dev/python.mjs -m unittest discover -s contracts/tests && node tools/dev/python.mjs -m unittest discover -s services/catalog/tests",
+    "dev": "node --env-file-if-exists=.env tools/dev/server.mjs",
+    "check": "node tools/dev/check.mjs",
+    "format:check": "prettier --check tools/dev .github/workflows package.json",
+    "test": "node --test tools/dev/*.test.mjs tools/signup/*.test.mjs",
+    "test:browser": "node tools/dev/browser.mjs",
+    "test:discovery": "node tests/discovery-ui.mjs",
+    "build": "node tools/dev/build.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "prettier": "3.6.2"
+  }
+}

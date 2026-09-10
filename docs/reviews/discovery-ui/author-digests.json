@@ -1,0 +1,10 @@
+{
+  "HeadStart-Starter-Package/site/dist/app.js": "fb4732d431649cec2812958614722c576e8f1d5c75592b0977334a2dac9ca3d4",
+  "HeadStart-Starter-Package/site/dist/index.html": "ca7ca30e3c8151f1e4203d02a24102701951d8a80c04435d194fae86bae40e8d",
+  "HeadStart-Starter-Package/site/dist/styles.css": "110896b29b95801a76d669bf812be3f51e7ebc81c91181e398882b70a4bd9d66",
+  "HeadStart-Starter-Package/site/dist/discovery.js": "112eb111da0dc12a8482875c18d85e16bb16861cc6191e5f14d7ea6b9ccb46ec",
+  "HeadStart-Starter-Package/site/dist/reviewed-systems.js": "bd1b1a6cd55932ee3197ae89498d360d9cd2b5b881e79e6c12a02d9b7a32d6a0",
+  "services/catalog/display_projection.py": "43f8f9bf4621db43370433933db1601f51c35ae501d6dee5f75dd3d055350ec1",
+  "services/catalog/initialize.py": "3e17e5cfc1c7e1268578bf80f326b7f7309b4bafb6ee01a9e074e7f32437d81a",
+  "tests/discovery-ui.mjs": "f46e3adebb40b80077f71893883583ed239f4d9fa305e1c7ba35deb101b1a8b3"
+}
