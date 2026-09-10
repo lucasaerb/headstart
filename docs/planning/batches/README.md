@@ -16,7 +16,11 @@ Builders own separate paths. Contracts and storage/API interfaces must agree bef
 
 ## Batch 2 — detail, briefs and evidence pipeline
 
-Proposed: #7 details/tours, #8 editable brief/comparisons, #9 bounded intake, #10 source capability curation, #11 semantic retrieval. Begin only after batch 1 review and fixes pass; reassess prerequisites against actual evidence.
+Active after independent batch 1 PASS at `9a85fde`: #7 details/tours (builder `batch1_foundation`), #8 editable brief/comparisons (`batch2_brief`), #9 bounded intake (`batch1_data`), then #10 source capability curation and #11 semantic retrieval as their interfaces become available. Authors coordinate dependencies; final acceptance follows the combined independent review.
+
+## Batch 1 accepted checkpoint
+
+Issues #2–#6 passed independent review by `batch1_reviewer` at `9a85fde`. [Review and fix rounds](../../reviews/batches/batch1-review.md) and the adjacent final digest manifest record the exact implementation. The branch also integrates committed main through `508b91c`, preserving the simplified hero, remembered demo email and Astra action. All blocking findings were fixed; the email race received an additional delayed-response regression. The local catalog has 76 research references and one bounded source-reviewed component; no production API or game integration claim follows from this checkpoint. GitHub issues remain open until the reviewed branch is merged.
 
 ## Design constraint
 
