@@ -1,0 +1,268 @@
+{
+  "catalog-research": {
+    "number": 1,
+    "url": "https://github.com/lucasaerb/headstart/issues/1",
+    "title": "01 \u00b7 Research the example-game database, real previews, categories and source links",
+    "priority": "P0",
+    "phase": "Research foundation",
+    "depends_on": []
+  },
+  "local-foundation": {
+    "number": 2,
+    "url": "https://github.com/lucasaerb/headstart/issues/2",
+    "title": "02 \u00b7 Establish a reproducible localhost application and engineering checks",
+    "priority": "P0",
+    "phase": "Local foundation",
+    "depends_on": [
+      "catalog-research"
+    ]
+  },
+  "catalog-contracts": {
+    "number": 3,
+    "url": "https://github.com/lucasaerb/headstart/issues/3",
+    "title": "03 \u00b7 Define versioned catalog, ontology, brief and evidence contracts",
+    "priority": "P0",
+    "phase": "Local foundation",
+    "depends_on": [
+      "catalog-research",
+      "local-foundation"
+    ]
+  },
+  "catalog-persistence": {
+    "number": 4,
+    "url": "https://github.com/lucasaerb/headstart/issues/4",
+    "title": "04 \u00b7 Persist reviewed catalog data with enforced publication and rights gates",
+    "priority": "P0",
+    "phase": "Local foundation",
+    "depends_on": [
+      "catalog-contracts"
+    ]
+  },
+  "catalog-api": {
+    "number": 5,
+    "url": "https://github.com/lucasaerb/headstart/issues/5",
+    "title": "05 \u00b7 Serve the reviewed catalog and exact filtered lexical search",
+    "priority": "P0",
+    "phase": "Discovery MVP",
+    "depends_on": [
+      "catalog-persistence"
+    ]
+  },
+  "discovery-ui": {
+    "number": 6,
+    "url": "https://github.com/lucasaerb/headstart/issues/6",
+    "title": "06 \u00b7 Build responsive visual discovery with real game previews and capability filters",
+    "priority": "P0",
+    "phase": "Discovery MVP",
+    "depends_on": [
+      "catalog-api"
+    ]
+  },
+  "project-detail-demo": {
+    "number": 7,
+    "url": "https://github.com/lucasaerb/headstart/issues/7",
+    "title": "07 \u00b7 Create source-backed detail pages, capability tours and honest demo launch",
+    "priority": "P0",
+    "phase": "Discovery MVP",
+    "depends_on": [
+      "discovery-ui"
+    ]
+  },
+  "game-brief-collections": {
+    "number": 8,
+    "url": "https://github.com/lucasaerb/headstart/issues/8",
+    "title": "08 \u00b7 Add an editable game brief and local saved comparisons",
+    "priority": "P0",
+    "phase": "Discovery MVP",
+    "depends_on": [
+      "project-detail-demo",
+      "catalog-contracts"
+    ]
+  },
+  "safe-ingestion": {
+    "number": 9,
+    "url": "https://github.com/lucasaerb/headstart/issues/9",
+    "title": "09 \u00b7 Build bounded source intake and static inspection jobs",
+    "priority": "P0",
+    "phase": "Evidence pipeline",
+    "depends_on": [
+      "catalog-persistence"
+    ]
+  },
+  "review-capabilities": {
+    "number": 10,
+    "url": "https://github.com/lucasaerb/headstart/issues/10",
+    "title": "10 \u00b7 Curate source maps and rights for the first 30 reusable capabilities",
+    "priority": "P0",
+    "phase": "Evidence pipeline",
+    "depends_on": [
+      "safe-ingestion"
+    ]
+  },
+  "hybrid-search-evaluation": {
+    "number": 11,
+    "url": "https://github.com/lucasaerb/headstart/issues/11",
+    "title": "11 \u00b7 Add semantic intent retrieval and a held-out search quality suite",
+    "priority": "P0",
+    "phase": "Discovery MVP",
+    "depends_on": [
+      "catalog-api",
+      "game-brief-collections"
+    ]
+  },
+  "curator-submissions": {
+    "number": 12,
+    "url": "https://github.com/lucasaerb/headstart/issues/12",
+    "title": "12 \u00b7 Implement versioned submissions, curator review and rights corrections",
+    "priority": "P0",
+    "phase": "Catalog operations",
+    "depends_on": [
+      "safe-ingestion",
+      "project-detail-demo"
+    ]
+  },
+  "handoff-notices": {
+    "number": 13,
+    "url": "https://github.com/lucasaerb/headstart/issues/13",
+    "title": "13 \u00b7 Generate reproducible agent handoffs with scoped rights and credits",
+    "priority": "P0",
+    "phase": "Local reuse",
+    "depends_on": [
+      "catalog-api",
+      "game-brief-collections"
+    ]
+  },
+  "catalog-mcp": {
+    "number": 14,
+    "url": "https://github.com/lucasaerb/headstart/issues/14",
+    "title": "14 \u00b7 Expose and test a real read-only catalog MCP connector",
+    "priority": "P0",
+    "phase": "Local reuse",
+    "depends_on": [
+      "handoff-notices"
+    ]
+  },
+  "plugin-core": {
+    "number": 15,
+    "url": "https://github.com/lucasaerb/headstart/issues/15",
+    "title": "15 \u00b7 Ship the six core skills with verified client setup and connection states",
+    "priority": "P0",
+    "phase": "Local reuse",
+    "depends_on": [
+      "catalog-mcp"
+    ]
+  },
+  "local-integration-workflow": {
+    "number": 16,
+    "url": "https://github.com/lucasaerb/headstart/issues/16",
+    "title": "16 \u00b7 Implement bounded Three.js/R3F inspection, planning, edits and rollback",
+    "priority": "P0",
+    "phase": "Local reuse",
+    "depends_on": [
+      "plugin-core",
+      "review-capabilities"
+    ]
+  },
+  "reference-integrations": {
+    "number": 17,
+    "url": "https://github.com/lucasaerb/headstart/issues/17",
+    "title": "17 \u00b7 Reproduce ten reference integrations across a declared Three.js/R3F matrix",
+    "priority": "P0",
+    "phase": "Local reuse",
+    "depends_on": [
+      "local-integration-workflow"
+    ]
+  },
+  "expert-review-skills": {
+    "number": 18,
+    "url": "https://github.com/lucasaerb/headstart/issues/18",
+    "title": "18 \u00b7 Add art direction, performance review and code review skills with evidence rubrics",
+    "priority": "P1",
+    "phase": "Expert guidance",
+    "depends_on": [
+      "plugin-core",
+      "local-integration-workflow",
+      "catalog-contracts"
+    ]
+  },
+  "recipes-recommendations": {
+    "number": 19,
+    "url": "https://github.com/lucasaerb/headstart/issues/19",
+    "title": "19 \u00b7 Publish curated recipes and target-aware recommendations with alternatives",
+    "priority": "P1",
+    "phase": "Expert guidance",
+    "depends_on": [
+      "hybrid-search-evaluation",
+      "expert-review-skills",
+      "reference-integrations"
+    ]
+  },
+  "catalog-health-outcomes": {
+    "number": 20,
+    "url": "https://github.com/lucasaerb/headstart/issues/20",
+    "title": "20 \u00b7 Track demo freshness, catalog health and privacy-preserving reuse outcomes",
+    "priority": "P1",
+    "phase": "Catalog operations",
+    "depends_on": [
+      "curator-submissions",
+      "catalog-mcp",
+      "reference-integrations"
+    ]
+  },
+  "local-quality-gates": {
+    "number": 21,
+    "url": "https://github.com/lucasaerb/headstart/issues/21",
+    "title": "21 \u00b7 Harden the complete localhost journey for security, accessibility and performance",
+    "priority": "P1",
+    "phase": "Local acceptance",
+    "depends_on": [
+      "recipes-recommendations",
+      "catalog-health-outcomes"
+    ]
+  },
+  "local-release-pilot": {
+    "number": 22,
+    "url": "https://github.com/lucasaerb/headstart/issues/22",
+    "title": "22 \u00b7 Package the local MVP and validate discovery and reuse with pilot users",
+    "priority": "P1",
+    "phase": "Local acceptance",
+    "depends_on": [
+      "local-quality-gates"
+    ]
+  },
+  "vercel-deployment": {
+    "number": 23,
+    "url": "https://github.com/lucasaerb/headstart/issues/23",
+    "title": "23 \u00b7 Deploy the proven website to Vercel and add Railway only for demonstrated backend needs",
+    "priority": "P2",
+    "phase": "Deferred hosting",
+    "depends_on": [
+      "local-release-pilot"
+    ]
+  },
+  "reproducible-benchmarks": {
+    "number": 24,
+    "url": "https://github.com/lucasaerb/headstart/issues/24",
+    "title": "24 \u00b7 Expand comparable browser-game benchmark profiles and before/after reports",
+    "priority": "P2",
+    "phase": "Deferred measured guidance",
+    "depends_on": [
+      "expert-review-skills",
+      "reference-integrations",
+      "local-release-pilot"
+    ]
+  },
+  "assisted-analysis-evaluation": {
+    "number": 25,
+    "url": "https://github.com/lucasaerb/headstart/issues/25",
+    "title": "25 \u00b7 Evaluate bounded AI capability decomposition against a held-out expert set",
+    "priority": "P2",
+    "phase": "Deferred assisted verification",
+    "depends_on": [
+      "safe-ingestion",
+      "review-capabilities",
+      "reference-integrations",
+      "local-release-pilot"
+    ]
+  }
+}
