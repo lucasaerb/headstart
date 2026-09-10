@@ -63,4 +63,4 @@ Acceptance contracts: [plugin discovery](plugin-discovery/issue.md), [browser/mo
 
 ## Current five-issue implementation batches
 
-The user requested a separate backlog branch with multiple builders, five author tasks followed by an independent review/fix loop, then the next five. See [batch status](batches/README.md). Issues #2–#6 have independent PASS at `9a85fde` on `feat/backlog-batches`; #7–#11 are the next active batch. This is local implementation and review, not production release or an issue-closure claim.
+The user requested a separate backlog branch with multiple builders, five author tasks followed by an independent review/fix loop, then the next five. See [batch status](batches/README.md). Issues #2–#6 have independent PASS at `9a85fde` on `feat/backlog-batches`; #7–#11 also have independent PASS at `7eb0dce`. This is local implementation and review, not production release or an issue-closure claim.

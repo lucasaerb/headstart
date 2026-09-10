@@ -16,7 +16,7 @@ Builders own separate paths. Contracts and storage/API interfaces must agree bef
 
 ## Batch 2 — detail, briefs and evidence pipeline
 
-Active after independent batch 1 PASS at `9a85fde`: #7 details/tours (builder `batch1_foundation`), #8 editable brief/comparisons (`batch2_brief`), #9 bounded intake (`batch1_data`), then #10 source capability curation and #11 semantic retrieval as their interfaces become available. Authors coordinate dependencies; final acceptance follows the combined independent review.
+Completed after independent batch 1 PASS at `9a85fde`: #7 details/tours (builder `batch1_foundation`), #8 editable brief/comparisons (`batch2_brief`), #9 bounded intake (`batch1_data`), then #10 source capability curation and #11 semantic retrieval as their interfaces become available. Authors coordinate dependencies; final acceptance follows the combined independent review.
 
 ## Batch 1 accepted checkpoint
 
@@ -31,3 +31,9 @@ Preserve C4/C4b world layers, motion/video, companion, typography, navy/blue pal
 This branch is implementation/review work. The existing production site remains the stable baseline during batch development. Record per-issue tests, reviewer verdicts, commits, unresolved prerequisites and batch results in `docs/reviews/batches/`. Commercial terms, creator agreements, live account verification, real upstream execution and measured results require their actual prerequisites; never manufacture them to close an issue.
 
 Remote CI also passed for the accepted batch checkpoint: [GitHub Actions run34538155899](https://github.com/lucasaerb/headstart/actions/runs/34538155899). This validates the configured clean Linux install/check/test/build/browser pipeline; it is not production deployment.
+
+## Batch 2 accepted checkpoint
+
+Issues #7–#11 passed independent review by `batch2_reviewer` at `7eb0dce`. [Review and fix rounds](../../reviews/batches/batch2-review.md) record all four resolved findings, the exact implementation digest, independent source and judgment audits, desktop/mobile visual review, and actual-model evaluation. This checkpoint integrates committed main through `f12ff21`, including the GitHub header and walkthrough media. The final reviewed stack passed 68 Python tests, 40 Node tests, both builds and the relevant browser flows.
+
+The two requested five-issue batches are implemented and independently accepted on this branch. Remaining backlog work (#12 onward, including verified identity, automatic bag/MCP handoff, actual integrations and production catalog hosting) is not claimed complete. The PR remains a draft for these local milestones; the issues remain open until merge. Production was not redeployed by this backlog task.
