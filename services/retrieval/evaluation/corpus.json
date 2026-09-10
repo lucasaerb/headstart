@@ -1,0 +1,3582 @@
+{
+  "schemaVersion": "headstart-eval-corpus-1",
+  "scope": "eligible-component-metadata-only",
+  "documents": [
+    {
+      "id": "2048-tile",
+      "versionId": "2048-tile-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "2048",
+      "title": "2048 tile state and serialization",
+      "repositoryUrl": "https://github.com/gabrielecirulli/2048",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "JavaScript",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "2048-tile",
+        "dependencies": [],
+        "evidence": [
+          {
+            "claim": "Static inspection: standalone Tile position/value state, savePosition, updatePosition and serialize; no imports; no execution or target compatibility test.",
+            "claim_type": "inspected",
+            "digest": "13699e51d62179a6d36874108831a29901a98d6e11329918e64cfb5ee82d58e3",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "js/tile.js",
+            "reviewer": "batch1_data static source review",
+            "source_commit": "478b6ec346e3787f589e4af751378d06ded4cbbc"
+          },
+          {
+            "claim": "MIT license text names Gabriele Cirulli, 2014; preserve copyright and permission notice for this two-file scope.",
+            "claim_type": "inspected",
+            "digest": "57e12c39a6ad9d98b2e451065bfdfbd15fc9e0c2ed3bf4dc1d09acab41ff02fc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE.txt",
+            "reviewer": "batch1_data static source review",
+            "source_commit": "478b6ec346e3787f589e4af751378d06ded4cbbc"
+          }
+        ],
+        "project_version": {
+          "id": "2048-tile-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "MIT license text names Gabriele Cirulli, 2014; preserve copyright and permission notice for this two-file scope.",
+              "claim_type": "inspected",
+              "digest": "57e12c39a6ad9d98b2e451065bfdfbd15fc9e0c2ed3bf4dc1d09acab41ff02fc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE.txt",
+              "reviewer": "batch1_data static source review",
+              "source_commit": "478b6ec346e3787f589e4af751378d06ded4cbbc"
+            }
+          ],
+          "notices": [
+            "The MIT License (MIT)\n\nCopyright (c) 2014 Gabriele Cirulli\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n"
+          ],
+          "scope": [
+            "js/tile.js",
+            "LICENSE.txt"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Global Tile constructor uses mutable position/value fields. An adapter is needed for a modules-based target; no target integration has been tested."
+          ],
+          "excluded_systems": [
+            "board rules",
+            "input",
+            "rendering",
+            "CSS",
+            "images",
+            "audio",
+            "complete game"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "js/tile.js",
+            "LICENSE.txt"
+          ]
+        },
+        "source_commit": "478b6ec346e3787f589e4af751378d06ded4cbbc",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-boxlinegeometry",
+      "versionId": "three-boxlinegeometry-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Subdivided wire box geometry",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-boxlinegeometry",
+        "dependencies": [
+          {
+            "id": "three-boxlinegeometry-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "5f4bd99627f84e1fe81cf1927ca867ac2968c9354d5e54b11849d0887170ad51",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/geometries/BoxLineGeometry.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/geometries/BoxLineGeometry.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "LineSegments-ready subdivided box, with independent width/height/depth segment counts.",
+            "Caller supplies line material and disposes geometry; world-unit dimensions.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Expected wire bounds/segment counts; teardown disposes geometry/material owned by adapter."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/geometries/BoxLineGeometry.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-camerautils",
+      "versionId": "three-camerautils-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Camera frustum from rectangle",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-camerautils",
+        "dependencies": [
+          {
+            "id": "three-camerautils-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "9d3fd8e3dbc94f50a45acf41b18a8f1d14254af403e90a19573036d127567def",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/utils/CameraUtils.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/utils/CameraUtils.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "frameCorners sets off-axis projection from three world-space screen corners and camera position.",
+            "Mutates existing camera matrices; no input or frame loop; caller owns near/far and ordered nondegenerate corners.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Projected rectangle fills expected viewport; invalid/degenerate corners rejected by adapter."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/utils/CameraUtils.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-capsule",
+      "versionId": "three-capsule-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Capsule bounds queries",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-capsule",
+        "dependencies": [
+          {
+            "id": "three-capsule-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "be54c3c58483a7f6b0184dbc6ffdcea58ac13515a7d9fd19ed675b9edfc5f319",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/math/Capsule.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/math/Capsule.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Capsule endpoints/radius and axis-aligned box intersection; not a collider solver. Coordinates use target world units.",
+            "Mutable math data; no physics world, timestep, impulses or collision response.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Known intersecting/disjoint capsule-box cases pass without creating a physics world."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/math/Capsule.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-colorconverter",
+      "versionId": "three-colorconverter-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "HSV color conversion",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-colorconverter",
+        "dependencies": [
+          {
+            "id": "three-colorconverter-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "316925abf09f332ab8f1d55dcb6f55bf491e199360a46ab8f60d721c0904cf5a",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/math/ColorConverter.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/math/ColorConverter.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "HSV setters/getters convert through Three Color HSL; hue wraps and saturation/value clamp. Retain inline xpansive reference.",
+            "Pure color mutation; honor target color-management policy; no renderer ownership.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Boundary hue and saturation round trips match expected conversions without changing renderer output settings."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/math/ColorConverter.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-convexgeometry",
+      "versionId": "three-convexgeometry-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Convex hull mesh geometry",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-convexgeometry",
+        "dependencies": [
+          {
+            "id": "three-convexgeometry-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "f52f4c5f0cc42eaef25d7330e912693ae1d7a9b0df0a599cd35f5854e9ecb34e",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/geometries/ConvexGeometry.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "7b7d53ed4533556f555440676d2cbc3680ffab32b1a910c79c9a522019bd3a06",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/math/ConvexHull.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/geometries/ConvexGeometry.js",
+            "examples/jsm/math/ConvexHull.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Point set becomes convex hull geometry using complete local ConvexHull dependency; keep quickhull attribution comments.",
+            "Caller owns point quality and output disposal; not a physics collider or concave decomposition.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Known tetrahedron produces closed hull; degenerate inputs handled by adapter; output geometry released."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/geometries/ConvexGeometry.js",
+            "examples/jsm/math/ConvexHull.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-css2drenderer",
+      "versionId": "three-css2drenderer-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "DOM labels in 3D scenes",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-css2drenderer",
+        "dependencies": [
+          {
+            "id": "three-css2drenderer-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "256abfc6ae1aa20eb83c10d7a0e26534527df65872e4d52da6354bee78288c34",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/renderers/CSS2DRenderer.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/renderers/CSS2DRenderer.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "CSS2DObject plus DOM projection renderer; translation-only labels and z-order from camera/world transforms.",
+            "Own separate DOM overlay, not WebGL renderer; synchronize size/render with existing loop; remove nodes/listeners on teardown.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Labels follow camera/object positions; hidden/out-of-view nodes behave; overlay teardown restores pointer navigation."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/renderers/CSS2DRenderer.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-css3drenderer",
+      "versionId": "three-css3drenderer-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "3D transformed DOM panels",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-css3drenderer",
+        "dependencies": [
+          {
+            "id": "three-css3drenderer-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "cd1f6bfaff0e2efa8a95b8cca6e96b0eea957d6a6057d875de8bab720b49057b",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/renderers/CSS3DRenderer.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/renderers/CSS3DRenderer.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "CSS3DObject/Sprite plus DOM perspective transforms; does not support normal mesh materials or geometry.",
+            "Separate DOM overlay synchronized with existing camera/loop; account for zoom limitations and pointer layering.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Panel transforms align with camera, sprites face correctly; removing objects clears DOM without breaking canvas input."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/renderers/CSS3DRenderer.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-decalgeometry",
+      "versionId": "three-decalgeometry-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Projected decal geometry",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-decalgeometry",
+        "dependencies": [
+          {
+            "id": "three-decalgeometry-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "6b2da6ea840926dfb0278841f96067c02964c73644c7f189720e89fe9baa2b10",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/geometries/DecalGeometry.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/geometries/DecalGeometry.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Clips mesh triangles against projector box; position/orientation/size supplied by caller.",
+            "Caller supplies mesh/material/texture rights and disposes output; no decal image bundled.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Projection clips to box and follows expected transform; supplied owned texture renders without new scene renderer."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/geometries/DecalGeometry.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-firstpersoncontrols",
+      "versionId": "three-firstpersoncontrols-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "First-person free movement",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-firstpersoncontrols",
+        "dependencies": [
+          {
+            "id": "three-firstpersoncontrols-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "4f6c4bf60c8956a1201c966de1592f4f035be47b4f6fe97879a782898945992c",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/controls/FirstPersonControls.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/controls/FirstPersonControls.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Keyboard/pointer movement with look constraints; free camera, no floor/collision/gravity.",
+            "One camera/input owner; update(delta seconds); dispose listeners and respect disabled state.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Look/move/release work; preserved physics target never receives a second controller or world."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/controls/FirstPersonControls.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-flycontrols",
+      "versionId": "three-flycontrols-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Six-axis flying controls",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-flycontrols",
+        "dependencies": [
+          {
+            "id": "three-flycontrols-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8063858389f2ccd5cd6f0968562752dbab4b21a03c7a6e1dcbb5cc746fc06373",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/controls/FlyControls.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/controls/FlyControls.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Keyboard and pointer move/roll camera with delta-scaled motion. movementSpeed uses world units per second.",
+            "Existing update(delta seconds) loop; connect/disconnect listeners; no collision solver.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Matched elapsed time gives consistent movement; key release/cancel stops motion; teardown removes listeners."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/controls/FlyControls.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-improvednoise",
+      "versionId": "three-improvednoise-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Improved Perlin noise",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-improvednoise",
+        "dependencies": [
+          {
+            "id": "three-improvednoise-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "d3821241e25bf0c8bfc13cec941924573bbaaf8f599a4fa07d60664b97832b39",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/math/ImprovedNoise.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/math/ImprovedNoise.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Fixed permutation 3D noise; same coordinates repeat. Output sampling scale is caller-owned.",
+            "Pure sampling; no lifecycle or render/input/physics ownership.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Same coordinates return stable values; integrating sampler preserves caller terrain seed policy."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/math/ImprovedNoise.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-lightprobehelper",
+      "versionId": "three-lightprobehelper-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Light probe visualization",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-lightprobehelper",
+        "dependencies": [
+          {
+            "id": "three-lightprobehelper-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "4b4731f9e5d350bb809353cd16cf6e4c993803cae08f6ac15baa91d2560b9657",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/helpers/LightProbeHelper.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/helpers/LightProbeHelper.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Sphere shader visualizes supplied spherical-harmonic probe coefficients/intensity; inline shader included.",
+            "Existing probe target-owned; dispose helper geometry/material; no HDR/image acquisition.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Probe coefficient/intensity change updates visualization; disposal leaves target light probe unchanged."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/helpers/LightProbeHelper.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-mapcontrols",
+      "versionId": "three-mapcontrols-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Map camera navigation",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-mapcontrols",
+        "dependencies": [
+          {
+            "id": "three-mapcontrols-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "5a686152c498914389d1503b60121f484d06f15cb4f7405c15fb6b8ddcc1bdb6",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/controls/MapControls.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/controls/MapControls.js",
+            "examples/jsm/controls/OrbitControls.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "OrbitControls subclass adjusts mouse/touch maps and map-plane interaction; includes complete OrbitControls dependency.",
+            "Same lifecycle/ownership as OrbitControls; disable competing camera controllers.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Map pan and constrained rotation work on selected camera; dispose removes parent listeners."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/controls/MapControls.js",
+            "examples/jsm/controls/OrbitControls.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-obb",
+      "versionId": "three-obb-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Oriented box intersection queries",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-obb",
+        "dependencies": [
+          {
+            "id": "three-obb-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "3297db79bdf0a33525ef06fe7478fd921dcffb7699df1059e189bbdf2c0fae58",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/math/OBB.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/math/OBB.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "OBB transforms and sphere/plane/ray/box intersection; matrix axes/extents must match world transforms.",
+            "Pure query objects; preserve target physics ownership; no response integration.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Rotated intersecting and separated boxes produce expected booleans; units remain consistent."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/math/OBB.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-orbitcontrols",
+      "versionId": "three-orbitcontrols-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Orbit camera controls",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-orbitcontrols",
+        "dependencies": [
+          {
+            "id": "three-orbitcontrols-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/controls/OrbitControls.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Orbit/pan/dolly around target; perspective/orthographic handling, pointer/wheel/key input and optional damping.",
+            "One owner of camera and DOM input; connect/disconnect/dispose listeners. Call update from existing loop; no new renderer.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Orbit/pan/dolly work; disabling restores target control; unmount removes listeners; damping updates through existing frame loop."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/controls/OrbitControls.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-parametricgeometry",
+      "versionId": "three-parametricgeometry-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Parametric surface geometry",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-parametricgeometry",
+        "dependencies": [
+          {
+            "id": "three-parametricgeometry-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "f25b69d9f8a5a7f8e206bb151875609349dabaf9bd81830779033ed2521e8a7a",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/geometries/ParametricGeometry.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/geometries/ParametricGeometry.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Samples caller(u,v,target) over slices/stacks and finite-difference normals. Callback domain normalized 0..1.",
+            "Callback code and geometry disposal caller-owned; no scene/input/runtime loop.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Known plane callback creates expected vertices/normals/UVs; bounds and subdivisions match requested values."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/geometries/ParametricGeometry.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-pointerlockcontrols",
+      "versionId": "three-pointerlockcontrols-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Pointer-lock camera look",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-pointerlockcontrols",
+        "dependencies": [
+          {
+            "id": "three-pointerlockcontrols-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "40d58db8018b85038939d4d8bff7112d4b8a0ad0367b37ae6f969eeee4310c25",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/controls/PointerLockControls.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/controls/PointerLockControls.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Pointer Lock API camera yaw/pitch plus moveForward/moveRight helpers; browser gesture required.",
+            "Request lock after user gesture; handle lock loss; disconnect/dispose; no position physics.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Gesture locks, escape unlocks, mouse look clamps correctly, teardown removes document listeners."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/controls/PointerLockControls.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-positionalaudiohelper",
+      "versionId": "three-positionalaudiohelper-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Directional audio cone visualization",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-positionalaudiohelper",
+        "dependencies": [
+          {
+            "id": "three-positionalaudiohelper-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "027531f7208bea6c63281465cb95ca9a1246cd0b7ea3e1e9d605ae813abdf67b",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/helpers/PositionalAudioHelper.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/helpers/PositionalAudioHelper.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Visualizes existing positional audio panner cone angles; no audio files or playback engine.",
+            "Existing audio node remains target-owned; update when cone changes; dispose generated geometry/materials.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Cone matches inner/outer panner angles; removing helper does not stop or recreate target audio context."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/helpers/PositionalAudioHelper.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-reflector",
+      "versionId": "three-reflector-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Planar reflection surface",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-reflector",
+        "dependencies": [
+          {
+            "id": "three-reflector-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "57836df976f02a474b2dcfbb6609bca8bde0ccc6e77159ad8e418fa11c065d3b",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/objects/Reflector.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/objects/Reflector.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Planar mirror with internal render target, virtual camera and inline clipping/shader logic.",
+            "Uses existing WebGL renderer in onBeforeRender; budget extra pass and dispose render target/material; no second renderer.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Mirror scene reflects expected plane; render state restored; removal releases owned target/material."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/objects/Reflector.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-refractor",
+      "versionId": "three-refractor-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Planar refraction surface",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-refractor",
+        "dependencies": [
+          {
+            "id": "three-refractor-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "512c4ec056b8af3c7aa24f80a74d606dfd10c06697686b2b73df8dbe7f2f9d78",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/objects/Refractor.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/objects/Refractor.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Planar refraction using internal target and oblique camera clip plane; inline shader included.",
+            "Existing WebGL render loop callback; own target/material disposal; caller geometry and texture ownership separate.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Refraction samples expected scene through plane; state restored and targets released on removal."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/objects/Refractor.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-roundedboxgeometry",
+      "versionId": "three-roundedboxgeometry-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Rounded box mesh geometry",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-roundedboxgeometry",
+        "dependencies": [
+          {
+            "id": "three-roundedboxgeometry-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "c5feab96123858ed8823c889b238dc8734adab7e760e3cfd21e7f3f2f3e348e3",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/geometries/RoundedBoxGeometry.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/geometries/RoundedBoxGeometry.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "BoxGeometry-derived rounded normals/positions and UV mapping; dimensions/radius in target units.",
+            "Caller owns geometry disposal and material; no assets, renderer, input or physics.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Expected bounds and rounded corners; repeated mount/unmount releases geometry."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/geometries/RoundedBoxGeometry.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-sceneutils",
+      "versionId": "three-sceneutils-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Scene mesh conversion utilities",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-sceneutils",
+        "dependencies": [
+          {
+            "id": "three-sceneutils-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "84f75b6d514411cac05e519383c54a6bf4fd5d6fc9a74acd3f532dedb92b0db1",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/utils/BufferGeometryUtils.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "d2d1673d80cdb919232f8e22fd341f79ec5b6f1c8d7df3fe884ceb8c8fbedc07",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/utils/SceneUtils.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/utils/BufferGeometryUtils.js",
+            "examples/jsm/utils/SceneUtils.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Instanced/multi-material mesh conversions, vertex reduction and instance sorting; includes BufferGeometryUtils source closure.",
+            "Generated object/geometry ownership must be explicit; supplied materials may be shared. No new renderer.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Converted meshes preserve world placement/material groups; instance sorting preserves matching per-instance attributes."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/utils/BufferGeometryUtils.js",
+            "examples/jsm/utils/SceneUtils.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-simplexnoise",
+      "versionId": "three-simplexnoise-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Seedable simplex noise",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-simplexnoise",
+        "dependencies": [],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/math/SimplexNoise.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/math/SimplexNoise.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "2D/3D/4D noise; constructor accepts RNG object, default Math random is not reproducible.",
+            "Construct once with seeded RNG for deterministic worlds; no rendering or physics.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Equal seeded generators produce matching sample arrays; changed seed changes generated terrain."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/math/SimplexNoise.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-skeletonutils",
+      "versionId": "three-skeletonutils-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Skeleton clone and retarget utilities",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-skeletonutils",
+        "dependencies": [
+          {
+            "id": "three-skeletonutils-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/utils/SkeletonUtils.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/utils/SkeletonUtils.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Clone skinned hierarchies and retarget poses/clips; maps bone names and samples animation tracks.",
+            "Caller owns assets/bone-map compatibility and animation mixer lifecycle; no animation assets copied.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Cloned skeletons animate independently; retarget preserves declared mapped bones and source animation state."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/utils/SkeletonUtils.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-sky",
+      "versionId": "three-sky-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Procedural atmospheric sky",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-sky",
+        "dependencies": [
+          {
+            "id": "three-sky-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "34121b60a3bd9adc004a5a637f6135e9d2b72757eeb9e476ae1988fe2db6a9fb",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/objects/Sky.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/objects/Sky.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Inline atmospheric/cloud shader on skydome mesh; supplied sun direction/turbidity parameters, no fetched imagery.",
+            "Caller owns sky scale and uniform updates, geometry/material disposal; existing renderer/color pipeline.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Sun/turbidity changes alter sky predictably; pause respects host loop; no network image request or extra renderer."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/objects/Sky.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-trackballcontrols",
+      "versionId": "three-trackballcontrols-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Trackball camera navigation",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-trackballcontrols",
+        "dependencies": [
+          {
+            "id": "three-trackballcontrols-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "cce95baddf589c16fea901b70f2038eca4557357937e1b03f8c76fe7ffe7457f",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/controls/TrackballControls.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/controls/TrackballControls.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Trackball rotation/pan/zoom with pointer/touch state; track screen rectangle and resize.",
+            "Own camera input only while enabled; handleResize after layout change; dispose listeners.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Free rotation and zoom work after resize; switching controllers leaves no residual input handlers."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/controls/TrackballControls.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-vertexnormalshelper",
+      "versionId": "three-vertexnormalshelper-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Vertex normal visualization",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-vertexnormalshelper",
+        "dependencies": [
+          {
+            "id": "three-vertexnormalshelper-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "666a1219d95010e4d5d290f08774af2c327b7bcd368ebdec29a111805c8b7ecc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/helpers/VertexNormalsHelper.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/helpers/VertexNormalsHelper.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Draws world-transformed vertex normals from existing mesh geometry.",
+            "Call update after transform/geometry changes; dispose helper resources only; no target geometry disposal.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Normals track object transforms and configured world length; helper cleanup preserves original mesh."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/helpers/VertexNormalsHelper.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-vertextangentshelper",
+      "versionId": "three-vertextangentshelper-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Vertex tangent visualization",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-vertextangentshelper",
+        "dependencies": [
+          {
+            "id": "three-vertextangentshelper-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "b0d38d36af91eb8f5a119cae0a12861f2d0d27f35a1bdf70462fb53976a752eb",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/helpers/VertexTangentsHelper.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/helpers/VertexTangentsHelper.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Draws tangent vectors from existing tangent buffer attribute; input attribute is a precondition.",
+            "Update after source changes; dispose helper resources; original mesh remains caller-owned.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Known tangent attribute draws expected directions; missing attribute is rejected by adapter; teardown preserves mesh."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/helpers/VertexTangentsHelper.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    },
+    {
+      "id": "three-water",
+      "versionId": "three-water-v1",
+      "version": "1",
+      "type": "component",
+      "projectId": "threejs",
+      "title": "Reflective water surface",
+      "repositoryUrl": "https://github.com/mrdoob/three.js",
+      "aliases": [],
+      "readiness": "source_reviewed",
+      "data": {
+        "compatibility": [
+          {
+            "runtime": "Three.js",
+            "support": "reference_only",
+            "version_range": "0.186.0"
+          },
+          {
+            "runtime": "React Three Fiber",
+            "support": "reference_only",
+            "version_range": null
+          }
+        ],
+        "component_id": "three-water",
+        "dependencies": [
+          {
+            "id": "three-water-engine-peer",
+            "version": "1"
+          }
+        ],
+        "evidence": [
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "3386670ba86003a32f5efe449041bd108d4cf1e0661849caa814741a2aaf395b",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "examples/jsm/objects/Water.js",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "LICENSE",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+            "claim_type": "inspected",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "observed_at": "2026-09-10T00:00:00Z",
+            "origin": "curator",
+            "path": "package.json",
+            "reviewer": "batch1_data static curation",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "project_version": {
+          "id": "threejs-reviewed-addon-source",
+          "version": "1"
+        },
+        "readiness": "source_reviewed",
+        "rights": {
+          "asset_status": "excluded",
+          "code_spdx": "MIT",
+          "evidence": [
+            {
+              "claim": "Pinned selected-source review; exact ranges and boundary in reviewed-source-maps.json. No execution or integration success.",
+              "claim_type": "inspected",
+              "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+              "observed_at": "2026-09-10T00:00:00Z",
+              "origin": "curator",
+              "path": "LICENSE",
+              "reviewer": "batch1_data static curation",
+              "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+            }
+          ],
+          "notices": [
+            "The MIT License\n\nCopyright © 2010-2026 three.js authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+            "Retain inline contributor and algorithm references in complete selected source files."
+          ],
+          "scope": [
+            "examples/jsm/objects/Water.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "status": "scope_cleared"
+        },
+        "scope": {
+          "coupling_notes": [
+            "Inline water shader plus reflection target; caller supplies normal texture and advances time uniform.",
+            "Caller texture rights required separately; existing renderer callback, additional pass, explicit target/material cleanup adapter required.",
+            "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+            "Reuse form: copy_scoped_module_with_adapter_and_external_engine_peer",
+            "External Three peer declared 0.186.0 at pinned source; compatibility is proposed, not tested.",
+            "Validation proposal: Owned normal texture animates under host time; reflection state preserved; teardown releases internal targets via adapter."
+          ],
+          "excluded_systems": [
+            "Full engine implementation",
+            "Demo application",
+            "Caller textures, audio, fonts, models",
+            "Target renderer/input/physics ownership"
+          ],
+          "optional_files": [],
+          "required_files": [
+            "examples/jsm/objects/Water.js",
+            "LICENSE",
+            "package.json"
+          ]
+        },
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "verification": null
+      }
+    }
+  ]
+}

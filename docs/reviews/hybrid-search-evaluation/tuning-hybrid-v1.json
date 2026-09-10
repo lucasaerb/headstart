@@ -1,0 +1,1998 @@
+{
+  "schemaVersion": "headstart-evaluation-result-1",
+  "requestedMode": "hybrid",
+  "split": "tuning",
+  "frozenDigests": {
+    "queries.json": "ca9d32a79cc3ddfb79bd2e2cd864e472df9f2f9aca796a651657aec16421ccc6",
+    "corpus.json": "faf76c07af191536556741698688059e9ac07d4e6a4c4f3cf3c8f506d2f2ed79",
+    "query_spec.py": "9481edb42900abaa3ca09fe74b2670226f291c43e3da96d82a151bda05ff27c0"
+  },
+  "summary": {
+    "queries": 50,
+    "answerable": 40,
+    "noAnswer": 10,
+    "ndcgAt10": 0.7974019096296548,
+    "recallAt20": 0.7791666666666667,
+    "hardFilterViolations": 0,
+    "duplicateResults": 0,
+    "noAnswerQueriesReturningResults": 0,
+    "medianLatencyMs": 9.734,
+    "p95LatencyMs": 11.533,
+    "actualModes": {
+      "hybrid": 50
+    },
+    "targetsMet": {
+      "ndcgAt10": true,
+      "recallAt20": false,
+      "hardFilterViolations": true
+    }
+  },
+  "queries": [
+    {
+      "id": "Q001",
+      "category": "title",
+      "returnedIds": [
+        "three-improvednoise"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 37.46,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Improved Perlin noise",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q002",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-improvednoise"
+      ],
+      "metrics": {
+        "ndcgAt10": 0.7871546029909718,
+        "recallAt20": 0.5
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 460.584,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Sample smooth three dimensional noise deterministically",
+          "capabilities": [],
+          "style": [
+            "3D"
+          ],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q005",
+      "category": "title",
+      "returnedIds": [
+        "three-capsule"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 0.971,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Capsule bounds queries",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q006",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-capsule"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 9.991,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Test whether a pill shaped bounding volume overlaps a box",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q009",
+      "category": "title",
+      "returnedIds": [
+        "three-colorconverter"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 0.984,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "HSV color conversion",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q010",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-colorconverter"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.032,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Convert hue saturation and brightness into a color",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q013",
+      "category": "title",
+      "returnedIds": [
+        "three-mapcontrols",
+        "three-trackballcontrols"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 1.0,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Map camera navigation",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q014",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-mapcontrols",
+        "three-trackballcontrols"
+      ],
+      "metrics": {
+        "ndcgAt10": 0.7871546029909718,
+        "recallAt20": 0.5
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.785,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Pan a map from above using the mouse or one finger",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q017",
+      "category": "title",
+      "returnedIds": [
+        "three-flycontrols"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 0.969,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Six-axis flying controls",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q018",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-camerautils",
+        "three-css3drenderer",
+        "three-trackballcontrols",
+        "three-mapcontrols",
+        "three-orbitcontrols"
+      ],
+      "metrics": {
+        "ndcgAt10": 0.0,
+        "recallAt20": 0.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 9.639,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Move and roll a camera freely through three dimensional space",
+          "capabilities": [],
+          "style": [
+            "3D"
+          ],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q021",
+      "category": "title",
+      "returnedIds": [
+        "three-pointerlockcontrols"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 1.021,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Pointer-lock camera look",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q022",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-firstpersoncontrols",
+        "three-pointerlockcontrols"
+      ],
+      "metrics": {
+        "ndcgAt10": 0.6309297535714575,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 9.565,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Capture the mouse after a click for first person looking then escape to release",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q025",
+      "category": "title",
+      "returnedIds": [
+        "three-decalgeometry"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 1.053,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Projected decal geometry",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q026",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-convexgeometry"
+      ],
+      "metrics": {
+        "ndcgAt10": 0.0,
+        "recallAt20": 0.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.47,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Project a patch onto the triangles of an existing mesh",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q029",
+      "category": "title",
+      "returnedIds": [
+        "three-parametricgeometry"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 1.058,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Parametric surface geometry",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q030",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-parametricgeometry"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.384,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Generate a surface by sampling a function of two parameters",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q033",
+      "category": "title",
+      "returnedIds": [
+        "three-positionalaudiohelper"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 0.963,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Directional audio cone visualization",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q034",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-positionalaudiohelper"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 11.533,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Show which direction an existing spatial sound is pointing",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q037",
+      "category": "title",
+      "returnedIds": [
+        "three-vertextangentshelper",
+        "three-vertexnormalshelper"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 1.068,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Vertex tangent visualization",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q038",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-vertextangentshelper"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 9.556,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Visualize the tangent vectors already stored on a mesh",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q041",
+      "category": "title",
+      "returnedIds": [
+        "three-camerautils"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 1.004,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Camera frustum from rectangle",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q042",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-camerautils",
+        "three-decalgeometry"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.227,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Set a perspective camera projection to fit three corners of a rectangle",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q045",
+      "category": "title",
+      "returnedIds": [
+        "three-skeletonutils"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 0.991,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Skeleton clone and retarget utilities",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q046",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-skeletonutils"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.302,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Duplicate a rigged character so its bones can animate independently",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q049",
+      "category": "title",
+      "returnedIds": [
+        "three-refractor",
+        "three-reflector"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 1.262,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Planar refraction surface",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q050",
+      "category": "ordinary-language",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": 0.0,
+        "recallAt20": 0.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 9.704,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "A planar window that bends the view behind it",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q053",
+      "category": "title",
+      "returnedIds": [
+        "three-water"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 0.995,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Reflective water surface",
+          "capabilities": [
+            "water rendering"
+          ],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q054",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-water",
+        "three-reflector",
+        "three-refractor"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.418,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Render a flat reflective water plane using my own normal texture",
+          "capabilities": [
+            "water rendering"
+          ],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q057",
+      "category": "title",
+      "returnedIds": [
+        "three-css3drenderer"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 1.079,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "3D transformed DOM panels",
+          "capabilities": [],
+          "style": [
+            "3D"
+          ],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "lookup": "exact_or_source_lookup"
+      },
+      "indexVersion": "c39c9842463390aa287355a718633f293dac4aa47280b5e287f5d0c48a989d62"
+    },
+    {
+      "id": "Q058",
+      "category": "ordinary-language",
+      "returnedIds": [
+        "three-css3drenderer",
+        "three-css2drenderer",
+        "three-decalgeometry",
+        "three-camerautils"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.266,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Place HTML panels in perspective with three dimensional transforms",
+          "capabilities": [],
+          "style": [
+            "3D"
+          ],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q061",
+      "category": "composite",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": 0.0,
+        "recallAt20": 0.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.347,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "A city builder with bird eye map panning and HTML names over buildings",
+          "capabilities": [
+            "construction progression"
+          ],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q063",
+      "category": "composite",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": 0.0,
+        "recallAt20": 0.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.761,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "For an RTS editor rotate selection from above and display bounds of rotated objects",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q065",
+      "category": "composite",
+      "returnedIds": [
+        "2048-tile"
+      ],
+      "metrics": {
+        "ndcgAt10": 0.6131471927654584,
+        "recallAt20": 0.5
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 11.473,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "A puzzle diorama needs rounded blocks and serializable tile state",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q067",
+      "category": "composite",
+      "returnedIds": [
+        "three-sky",
+        "three-water"
+      ],
+      "metrics": {
+        "ndcgAt10": 0.9580414003446834,
+        "recallAt20": 0.6666666666666666
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.205,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "A river environment with a reflective water plane and generated atmospheric sky",
+          "capabilities": [
+            "water rendering"
+          ],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q069",
+      "category": "composite",
+      "returnedIds": [
+        "three-positionalaudiohelper"
+      ],
+      "metrics": {
+        "ndcgAt10": 0.6131471927654584,
+        "recallAt20": 0.5
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 9.816,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Inspect sound direction and the illumination inside a scene editor",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q071",
+      "category": "composite",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": 0.0,
+        "recallAt20": 0.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.298,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "For geospatial exploration pan a bird eye map with an HTML label for each point",
+          "capabilities": [
+            "geospatial terrain"
+          ],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q073",
+      "category": "composite",
+      "returnedIds": [
+        "three-capsule",
+        "three-firstpersoncontrols",
+        "three-trackballcontrols",
+        "three-pointerlockcontrols",
+        "three-mapcontrols",
+        "three-flycontrols",
+        "three-orbitcontrols"
+      ],
+      "metrics": {
+        "ndcgAt10": 0.8933544469917324,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.148,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "A first person prototype needs mouse capture and a capsule bounds check",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q075",
+      "category": "composite",
+      "returnedIds": [
+        "three-reflector",
+        "three-refractor"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 9.953,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Display a refractive window beside a reflecting mirror",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q077",
+      "category": "composite",
+      "returnedIds": [
+        "three-convexgeometry",
+        "three-parametricgeometry"
+      ],
+      "metrics": {
+        "ndcgAt10": 0.6131471927654584,
+        "recallAt20": 0.5
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 9.94,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Build a convex hull and show the surface normal directions",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q079",
+      "category": "composite",
+      "returnedIds": [
+        "three-colorconverter",
+        "three-sky"
+      ],
+      "metrics": {
+        "ndcgAt10": 1.0,
+        "recallAt20": 1.0
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.06,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "A color picker needs HSV conversion beside a procedural sky preview",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q081",
+      "category": "geospatial",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": null,
+        "recallAt20": null
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 9.558,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Convert latitude and longitude into map tiles",
+          "capabilities": [
+            "geospatial terrain"
+          ],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q083",
+      "category": "simulation-rts",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": null,
+        "recallAt20": null
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 9.74,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Find paths for an army and maintain RTS construction queues",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q085",
+      "category": "service",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": null,
+        "recallAt20": null
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 9.728,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "A database for player accounts and cloud saves",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q087",
+      "category": "service",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": null,
+        "recallAt20": null
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 9.788,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Generate royalty payments for reused game code",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q089",
+      "category": "simulation-rts",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": null,
+        "recallAt20": null
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 10.631,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Run a deterministic RTS simulation clock and production economy",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        },
+        "embeddingIndexVersion": "9758652a0cd43b7885ec3ffd0886f9447c7ecf4855c7ccc4f5c0ad5f85365b2e"
+      },
+      "indexVersion": "c7fa700a12fd3fae90dcbc462c2dec76c6b474bbb18c5f7b8ab196510afac581"
+    },
+    {
+      "id": "Q091",
+      "category": "hard-filter",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": null,
+        "recallAt20": null
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 0.8,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Orbit camera",
+          "capabilities": [
+            "camera controls"
+          ],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        }
+      },
+      "indexVersion": "8dd0bf9bcc122fe640685a12dd1c63d52ccc8f41389ddf2620e7a167a70c743d"
+    },
+    {
+      "id": "Q093",
+      "category": "hard-filter",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": null,
+        "recallAt20": null
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 0.781,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "2048 tile state",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        }
+      },
+      "indexVersion": "8dd0bf9bcc122fe640685a12dd1c63d52ccc8f41389ddf2620e7a167a70c743d"
+    },
+    {
+      "id": "Q095",
+      "category": "hard-filter",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": null,
+        "recallAt20": null
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 0.714,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Camera controls",
+          "capabilities": [
+            "camera controls"
+          ],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        }
+      },
+      "indexVersion": "8dd0bf9bcc122fe640685a12dd1c63d52ccc8f41389ddf2620e7a167a70c743d"
+    },
+    {
+      "id": "Q097",
+      "category": "hard-filter",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": null,
+        "recallAt20": null
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 0.727,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "DOM labels",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        }
+      },
+      "indexVersion": "8dd0bf9bcc122fe640685a12dd1c63d52ccc8f41389ddf2620e7a167a70c743d"
+    },
+    {
+      "id": "Q099",
+      "category": "hard-filter",
+      "returnedIds": [],
+      "metrics": {
+        "ndcgAt10": null,
+        "recallAt20": null
+      },
+      "hardFilterViolations": 0,
+      "duplicateResults": 0,
+      "latencyMs": 0.937,
+      "retrieval": {
+        "version": "headstart-rrf-1",
+        "mode": "hybrid",
+        "modelVersion": "sentence-transformers/all-MiniLM-L6-v2@1110a243fdf4706b3f48f1d95db1a4f5529b4d41:mean-l2-256-v1",
+        "fallbackReason": null,
+        "textVersion": "public-metadata-1",
+        "interpretationVersion": "headstart-intent-1",
+        "threshold": 0.32,
+        "weights": {
+          "lexical": 0.65,
+          "semantic": 0.35,
+          "rrfK": 20
+        },
+        "configurationDigest": "b2ea9783aefe084ecb383dcbc38ab65d4bb60d18c95e406068a4c3244e34ebc9",
+        "interpretation": {
+          "version": "headstart-intent-1",
+          "originalQuery": "Atmospheric sky",
+          "capabilities": [],
+          "style": [],
+          "compatibility": "Only explicit filters constrain compatibility; semantic similarity never establishes tested support.",
+          "editable": true
+        }
+      },
+      "indexVersion": "8dd0bf9bcc122fe640685a12dd1c63d52ccc8f41389ddf2620e7a167a70c743d"
+    }
+  ]
+}

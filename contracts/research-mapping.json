@@ -1,0 +1,276 @@
+{
+  "version": "0.2",
+  "source_version": "research-0.1",
+  "fields": {
+    "ai_provenance.evidence[]": {
+      "destination": "research_only.ai_provenance.evidence[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "ai_provenance.evidence[].claim": {
+      "destination": "research_only.ai_provenance.evidence[].claim",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "ai_provenance.evidence[].url": {
+      "destination": "research_only.ai_provenance.evidence[].url",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "ai_provenance.models[]": {
+      "destination": "research_only.ai_provenance.models[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "ai_provenance.notes": {
+      "destination": "research_only.ai_provenance.notes",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "ai_provenance.status": {
+      "destination": "research_only.ai_provenance.status",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "authoring_tools[]": {
+      "destination": "research_only.authoring_tools[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "building_blocks[]": {
+      "destination": "research_only.building_blocks[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "building_blocks[].category": {
+      "destination": "research_only.building_blocks[].category",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "building_blocks[].evidence_url": {
+      "destination": "research_only.building_blocks[].evidence_url",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "building_blocks[].name": {
+      "destination": "research_only.building_blocks[].name",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "building_blocks[].notes": {
+      "destination": "research_only.building_blocks[].notes",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "building_blocks[].source_path": {
+      "destination": "research_only.building_blocks[].source_path",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "building_blocks[].status": {
+      "destination": "research_only.building_blocks[].status",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "camera[]": {
+      "destination": "research_only.camera[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "capability_tags[]": {
+      "destination": "research_only.capability_tags[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "content_kind": {
+      "destination": "research_only.content_kind",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "controls[]": {
+      "destination": "research_only.controls[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "creator": {
+      "destination": "research_only.creator",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "demo.interactive_status": {
+      "destination": "research_only.demo.interactive_status",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "demo.kind": {
+      "destination": "research_only.demo.kind",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "demo.notes": {
+      "destination": "research_only.demo.notes",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "demo.source_relation": {
+      "destination": "research_only.demo.source_relation",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "demo.url": {
+      "destination": "research_only.demo.url",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "dimension": {
+      "destination": "research_only.dimension",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "genres[]": {
+      "destination": "research_only.genres[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "id": {
+      "destination": "project.id",
+      "reason": "Copy only after canonical validation; original remains immutable research evidence."
+    },
+    "physics[]": {
+      "destination": "research_only.physics[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "platforms[]": {
+      "destination": "research_only.platforms[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "preview.notes": {
+      "destination": "research_only.preview.notes",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "preview.source_url": {
+      "destination": "research_only.preview.source_url",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "preview.status": {
+      "destination": "research_only.preview.status",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "project_url": {
+      "destination": "research_only.project_url",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "repo_url": {
+      "destination": "project.data.repository_url",
+      "reason": "Copy only after canonical validation; original remains immutable research evidence."
+    },
+    "research.author": {
+      "destination": "research_only.research.author",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "research.completed_at": {
+      "destination": "research_only.research.completed_at",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "research.elapsed_minutes": {
+      "destination": "research_only.research.elapsed_minutes",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "research.integration_family": {
+      "destination": "research_only.research.integration_family",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "research.known_unknowns[]": {
+      "destination": "research_only.research.known_unknowns[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "research.selection_reason": {
+      "destination": "research_only.research.selection_reason",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "research.started_at": {
+      "destination": "research_only.research.started_at",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "rights.asset_notes": {
+      "destination": "research_only.rights.asset_notes",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "rights.asset_status": {
+      "destination": "research_only.rights.asset_status",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "rights.code_evidence_url": {
+      "destination": "research_only.rights.code_evidence_url",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "rights.code_license": {
+      "destination": "research_only.rights.code_license",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "rights.code_status": {
+      "destination": "research_only.rights.code_status",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "rights.notes": {
+      "destination": "research_only.rights.notes",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "rights.scope_reuse_status": {
+      "destination": "research_only.rights.scope_reuse_status",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "runtime.language": {
+      "destination": "research_only.runtime.language",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "runtime.name": {
+      "destination": "research_only.runtime.name",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "runtime.version": {
+      "destination": "research_only.runtime.version",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "runtime.version_status": {
+      "destination": "research_only.runtime.version_status",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "source.commit": {
+      "destination": "project_version.data.source_commit",
+      "reason": "Copy only after canonical validation; original remains immutable research evidence."
+    },
+    "source.evidence[]": {
+      "destination": "research_only.source.evidence[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "source.evidence[].claim": {
+      "destination": "research_only.source.evidence[].claim",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "source.evidence[].kind": {
+      "destination": "research_only.source.evidence[].kind",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "source.evidence[].url": {
+      "destination": "research_only.source.evidence[].url",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "source.inspected_at": {
+      "destination": "research_only.source.inspected_at",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "source.provider_id": {
+      "destination": "research_only.source.provider_id",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "subproject_path": {
+      "destination": "research_only.subproject_path",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "summary": {
+      "destination": "research_only.summary",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "title": {
+      "destination": "project.data.title",
+      "reason": "Copy only after canonical validation; original remains immutable research evidence."
+    },
+    "visual_style[]": {
+      "destination": "research_only.visual_style[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    }
+  },
+  "export_fields": {
+    "schema_version": {
+      "destination": "research_only.export.schema_version",
+      "reason": "Retain original research export identity, count, status and source digest manifest; not canonical evidence promotion."
+    },
+    "status": {
+      "destination": "research_only.export.status",
+      "reason": "Retain original research export identity, count, status and source digest manifest; not canonical evidence promotion."
+    },
+    "record_count": {
+      "destination": "research_only.export.record_count",
+      "reason": "Retain original research export identity, count, status and source digest manifest; not canonical evidence promotion."
+    },
+    "record_sources": {
+      "destination": "research_only.export.record_sources",
+      "reason": "Retain original research export identity, count, status and source digest manifest; not canonical evidence promotion."
+    }
+  }
+}

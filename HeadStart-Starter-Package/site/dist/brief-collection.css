@@ -1,0 +1,124 @@
+.project-tools {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.project-dialog {
+  width: min(920px, calc(100vw - 28px));
+  max-height: 88dvh;
+  overflow: auto;
+}
+.project-dialog .project-intro {
+  color: #536781;
+  line-height: 1.6;
+}
+.project-tabs {
+  display: flex;
+  gap: 10px;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+.project-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.project-field {
+  display: grid;
+  gap: 6px;
+  color: #172952;
+  font-weight: 600;
+}
+.project-field input,
+.project-field select {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #cad8ec;
+  border-radius: 10px;
+  padding: 11px;
+  background: #fff;
+  color: #142550;
+  font: inherit;
+}
+.project-field select {
+  font-size: 12px;
+  padding: 7px;
+  font-weight: 400;
+}
+.project-fields .project-field:first-child {
+  grid-column: 1/-1;
+}
+.project-dialog .project-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.project-warning {
+  padding: 12px;
+  background: #fff3d8;
+  color: #68491a;
+  border-radius: 10px;
+}
+.project-saves {
+  display: grid;
+  gap: 12px;
+}
+.project-save {
+  border: 1px solid #d5e1f2;
+  border-radius: 14px;
+  padding: 16px;
+  background: #f8fbff;
+}
+.project-save h3 {
+  margin: 0 0 8px;
+}
+.project-version {
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  color: #596e8d;
+}
+.project-compare {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.project-compare dl {
+  margin: 0;
+}
+.project-compare dt {
+  font-weight: 700;
+  margin-top: 12px;
+}
+.project-compare dd {
+  margin: 5px 0;
+  color: #536781;
+  overflow-wrap: anywhere;
+}
+.project-save-button {
+  font-size: 12px !important;
+  white-space: nowrap;
+}
+.project-dialog [hidden] {
+  display: none !important;
+}
+.project-dialog input:focus-visible,
+.project-dialog select:focus-visible {
+  outline: 3px solid #2575ee;
+  outline-offset: 2px;
+}
+@media (max-width: 600px) {
+  .project-fields {
+    grid-template-columns: 1fr;
+  }
+  .project-dialog {
+    padding: 20px;
+  }
+  .project-tools {
+    justify-content: flex-start;
+  }
+  .project-compare {
+    grid-template-columns: 1fr;
+  }
+}

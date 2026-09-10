@@ -30,7 +30,7 @@ test('browse activation uses the accessible catalog entry point', () => {
 
 test('real catalog search and bag remix brief remain present', () => {
   assert.match(html, /id="search-games" type="search"/);
-  assert.match(app, /\$\('search-games'\)\.addEventListener\('input',renderGames\)/);
+  assert.match(app, /\$\('search-games'\)\.addEventListener\('input',discovery\.search\)/);
   assert.match(html, /<textarea id="remix-idea"/);
   assert.match(app, /\$\('remix-idea'\)\.addEventListener\('input'/);
   assert.match(app, /window\.HeadStartGauntlet\.buildPrompt/);

@@ -1,0 +1,46 @@
+{
+  "request": {
+    "paths": [
+      "LICENSE.txt",
+      "js/tile.js"
+    ],
+    "repository": "https://github.com/gabrielecirulli/2048",
+    "revision": "478b6ec346e3787f589e4af751378d06ded4cbbc",
+    "subproject": ""
+  },
+  "scope": "selected files only; not complete repository tree",
+  "tree_digest": "69b3426556ec664f321b015e553b2e6e5b2561d8737671527b83319f0564b366",
+  "manifest_digests": {},
+  "lockfile_digests": {},
+  "excluded": [],
+  "analysis": {
+    "analyzer": "static-js-0.1",
+    "method": "bounded literal static inspection; comments can contain inert references; no scripts executed",
+    "files": [
+      {
+        "path": "LICENSE.txt",
+        "digest": "57e12c39a6ad9d98b2e451065bfdfbd15fc9e0c2ed3bf4dc1d09acab41ff02fc",
+        "bytes": 1083,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 21
+        },
+        "references": [],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "js/tile.js",
+        "digest": "13699e51d62179a6d36874108831a29901a98d6e11329918e64cfb5ee82d58e3",
+        "bytes": 594,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 27
+        },
+        "references": [],
+        "unknowns": [],
+        "manifest": null
+      }
+    ]
+  }
+}

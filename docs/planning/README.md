@@ -60,3 +60,7 @@ Acceptance contracts: [plugin discovery](plugin-discovery/issue.md), [browser/mo
 [#31 · Adopt HeadStart app and plugin naming](https://github.com/lucasaerb/headstart/issues/31) is complete after independent PASS; it migrated the active plugin/package and skills to the selected app name; see the [migration contract](headstart-rename.md).
 
 [#32 · Gauntlet Loop prompt](https://github.com/lucasaerb/headstart/issues/32) is complete after independent PASS: bag notes are replaced by a detailed interview → mockups → builder/reviewer workflow; [acceptance contract](gauntlet-prompt.md).
+
+## Current five-issue implementation batches
+
+The user requested a separate backlog branch with multiple builders, five author tasks followed by an independent review/fix loop, then the next five. See [batch status](batches/README.md). Issues #2–#6 have independent PASS at `9a85fde` on `feat/backlog-batches`; #7–#11 also have independent PASS at `7eb0dce`. This is local implementation and review, not production release or an issue-closure claim.

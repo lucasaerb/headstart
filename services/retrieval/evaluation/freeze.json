@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "headstart-evaluation-freeze-1",
+  "status": "frozen-before-ranking-evaluation",
+  "digests": {
+    "queries.json": "ca9d32a79cc3ddfb79bd2e2cd864e472df9f2f9aca796a651657aec16421ccc6",
+    "corpus.json": "faf76c07af191536556741698688059e9ac07d4e6a4c4f3cf3c8f506d2f2ed79",
+    "query_spec.py": "9481edb42900abaa3ca09fe74b2670226f291c43e3da96d82a151bda05ff27c0"
+  },
+  "queryCount": 100,
+  "tuning": 50,
+  "heldout": 50,
+  "canonicalComponents": 30,
+  "targets": {
+    "ndcgAt10": 0.75,
+    "recallAt20": 0.9,
+    "hardFilterViolations": 0
+  }
+}

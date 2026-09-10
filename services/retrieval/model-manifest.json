@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "dimension": 384,
+  "pooling": "attention-mask mean then L2 normalization",
+  "maxTokens": 256,
+  "files": {
+    "model.onnx": {
+      "path": "onnx/model.onnx",
+      "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+      "bytes": 90405214
+    },
+    "tokenizer.json": {
+      "path": "tokenizer.json",
+      "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+      "bytes": 466247
+    },
+    "MODEL-CARD.md": {
+      "path": "README.md",
+      "sha256": "dcd602d2fd35c203a247304a06fec6654a12f7941b739f9221a064fe8dc3b7f0",
+      "bytes": 10502
+    }
+  }
+}

@@ -1,0 +1,3083 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:headstart:entity:0.2",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.2"
+    },
+    "entity_type": {
+      "enum": [
+        "project",
+        "project_version",
+        "demo",
+        "demo_check",
+        "component",
+        "component_version",
+        "asset",
+        "rights",
+        "claim",
+        "dependency",
+        "recipe",
+        "integration",
+        "game_brief",
+        "style_profile",
+        "review_finding",
+        "benchmark_run",
+        "recommendation"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "data": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "entity_type",
+    "id",
+    "version",
+    "data"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "project"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "repository_url": {
+                "type": "string",
+                "minLength": 1,
+                "format": "uri",
+                "pattern": "^https://"
+              },
+              "provider_repository_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "subproject_path": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                  },
+                  {
+                    "const": ""
+                  }
+                ]
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1
+              },
+              "content_kind": {
+                "type": "string",
+                "minLength": 1
+              },
+              "creator_attribution": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "moderation_status": {
+                "enum": [
+                  "candidate",
+                  "review",
+                  "approved",
+                  "rejected"
+                ]
+              },
+              "created_at": {
+                "type": "string",
+                "minLength": 1,
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "title",
+              "repository_url"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "project_version"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "project_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_commit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{40}$"
+              },
+              "publication_state": {
+                "enum": [
+                  "candidate",
+                  "review",
+                  "published",
+                  "tombstoned"
+                ]
+              },
+              "rights": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "unresolved",
+                      "review_required",
+                      "scope_cleared",
+                      "ineligible"
+                    ]
+                  },
+                  "scope": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "minItems": 1
+                  },
+                  "code_spdx": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "asset_status": {
+                    "enum": [
+                      "unreviewed",
+                      "scope_cleared",
+                      "excluded",
+                      "not_applicable"
+                    ]
+                  },
+                  "notices": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "path": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                        },
+                        "digest": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^[a-f0-9]{64}$"
+                        },
+                        "source_commit": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^[a-f0-9]{40}$"
+                        },
+                        "origin": {
+                          "enum": [
+                            "maintainer",
+                            "parser",
+                            "ai_proposal",
+                            "curator",
+                            "executed_test"
+                          ]
+                        },
+                        "claim_type": {
+                          "enum": [
+                            "declared",
+                            "editorial",
+                            "inspected",
+                            "measured"
+                          ]
+                        },
+                        "reviewer": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "observed_at": {
+                          "type": "string",
+                          "minLength": 1,
+                          "format": "date-time"
+                        },
+                        "claim": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "path",
+                        "digest",
+                        "source_commit",
+                        "origin",
+                        "claim_type",
+                        "reviewer",
+                        "observed_at",
+                        "claim"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 0
+                  }
+                },
+                "required": [
+                  "status",
+                  "scope",
+                  "code_spdx",
+                  "asset_status",
+                  "notices",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "digest": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "source_commit": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{40}$"
+                    },
+                    "origin": {
+                      "enum": [
+                        "maintainer",
+                        "parser",
+                        "ai_proposal",
+                        "curator",
+                        "executed_test"
+                      ]
+                    },
+                    "claim_type": {
+                      "enum": [
+                        "declared",
+                        "editorial",
+                        "inspected",
+                        "measured"
+                      ]
+                    },
+                    "reviewer": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "observed_at": {
+                      "type": "string",
+                      "minLength": 1,
+                      "format": "date-time"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "digest",
+                    "source_commit",
+                    "origin",
+                    "claim_type",
+                    "reviewer",
+                    "observed_at",
+                    "claim"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "default_branch": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "tree_digest": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "manifest_digests": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "minItems": 0
+              },
+              "lockfile_digests": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "minItems": 0
+              },
+              "snapshot_at": {
+                "type": "string",
+                "minLength": 1,
+                "format": "date-time"
+              },
+              "declared_stack": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "observed_stack": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "ingestion_job_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "project_id",
+              "source_commit",
+              "publication_state",
+              "rights",
+              "evidence"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "demo"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "project_version": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "version": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "version"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "url": {
+                "type": "string",
+                "minLength": 1,
+                "format": "uri",
+                "pattern": "^https://"
+              },
+              "source_relation": {
+                "enum": [
+                  "proven",
+                  "maintainer_claimed",
+                  "unknown"
+                ]
+              },
+              "health": {
+                "enum": [
+                  "unverified",
+                  "reachable",
+                  "interactive",
+                  "broken",
+                  "embed_blocked"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "digest": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "source_commit": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{40}$"
+                    },
+                    "origin": {
+                      "enum": [
+                        "maintainer",
+                        "parser",
+                        "ai_proposal",
+                        "curator",
+                        "executed_test"
+                      ]
+                    },
+                    "claim_type": {
+                      "enum": [
+                        "declared",
+                        "editorial",
+                        "inspected",
+                        "measured"
+                      ]
+                    },
+                    "reviewer": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "observed_at": {
+                      "type": "string",
+                      "minLength": 1,
+                      "format": "date-time"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "digest",
+                    "source_commit",
+                    "origin",
+                    "claim_type",
+                    "reviewer",
+                    "observed_at",
+                    "claim"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "launch_mode": {
+                "enum": [
+                  "external",
+                  "isolated_embed",
+                  "native"
+                ]
+              },
+              "claimed_revision": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-f0-9]{40}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "platform_requirements": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "declared_controls": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "project_version",
+              "url",
+              "source_relation",
+              "health",
+              "evidence"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "demo_check"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "demo": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              "checked_at": {
+                "type": "string",
+                "minLength": 1,
+                "format": "date-time"
+              },
+              "final_url": {
+                "type": "string",
+                "minLength": 1,
+                "format": "uri",
+                "pattern": "^https://"
+              },
+              "reachable": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "interactive": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "environment": {
+                "type": "string",
+                "minLength": 1
+              },
+              "duration_ms": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "error": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "digest": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "source_commit": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{40}$"
+                    },
+                    "origin": {
+                      "enum": [
+                        "maintainer",
+                        "parser",
+                        "ai_proposal",
+                        "curator",
+                        "executed_test"
+                      ]
+                    },
+                    "claim_type": {
+                      "enum": [
+                        "declared",
+                        "editorial",
+                        "inspected",
+                        "measured"
+                      ]
+                    },
+                    "reviewer": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "observed_at": {
+                      "type": "string",
+                      "minLength": 1,
+                      "format": "date-time"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "digest",
+                    "source_commit",
+                    "origin",
+                    "claim_type",
+                    "reviewer",
+                    "observed_at",
+                    "claim"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "demo",
+              "checked_at",
+              "final_url",
+              "reachable",
+              "interactive",
+              "environment",
+              "duration_ms",
+              "error",
+              "evidence"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "component"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "project_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "concept_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "ontology_version": {
+                "const": "0.2"
+              }
+            },
+            "required": [
+              "project_id",
+              "name",
+              "concept_ids",
+              "ontology_version"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "component_version"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "component_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "project_version": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              "source_commit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{40}$"
+              },
+              "readiness": {
+                "enum": [
+                  "suggested",
+                  "source_reviewed",
+                  "isolated",
+                  "integration_tested"
+                ]
+              },
+              "scope": {
+                "type": "object",
+                "properties": {
+                  "required_files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "minItems": 1
+                  },
+                  "optional_files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "minItems": 0
+                  },
+                  "excluded_systems": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "coupling_notes": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "required": [
+                  "required_files",
+                  "optional_files",
+                  "excluded_systems",
+                  "coupling_notes"
+                ],
+                "additionalProperties": false
+              },
+              "dependencies": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "version": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "version"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "compatibility": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "runtime": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "version_range": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "support": {
+                      "enum": [
+                        "unknown",
+                        "candidate",
+                        "reference_only",
+                        "tested"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "runtime",
+                    "version_range",
+                    "support"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "rights": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "unresolved",
+                      "review_required",
+                      "scope_cleared",
+                      "ineligible"
+                    ]
+                  },
+                  "scope": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "minItems": 1
+                  },
+                  "code_spdx": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "asset_status": {
+                    "enum": [
+                      "unreviewed",
+                      "scope_cleared",
+                      "excluded",
+                      "not_applicable"
+                    ]
+                  },
+                  "notices": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "path": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                        },
+                        "digest": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^[a-f0-9]{64}$"
+                        },
+                        "source_commit": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^[a-f0-9]{40}$"
+                        },
+                        "origin": {
+                          "enum": [
+                            "maintainer",
+                            "parser",
+                            "ai_proposal",
+                            "curator",
+                            "executed_test"
+                          ]
+                        },
+                        "claim_type": {
+                          "enum": [
+                            "declared",
+                            "editorial",
+                            "inspected",
+                            "measured"
+                          ]
+                        },
+                        "reviewer": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "observed_at": {
+                          "type": "string",
+                          "minLength": 1,
+                          "format": "date-time"
+                        },
+                        "claim": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "path",
+                        "digest",
+                        "source_commit",
+                        "origin",
+                        "claim_type",
+                        "reviewer",
+                        "observed_at",
+                        "claim"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 0
+                  }
+                },
+                "required": [
+                  "status",
+                  "scope",
+                  "code_spdx",
+                  "asset_status",
+                  "notices",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "digest": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "source_commit": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{40}$"
+                    },
+                    "origin": {
+                      "enum": [
+                        "maintainer",
+                        "parser",
+                        "ai_proposal",
+                        "curator",
+                        "executed_test"
+                      ]
+                    },
+                    "claim_type": {
+                      "enum": [
+                        "declared",
+                        "editorial",
+                        "inspected",
+                        "measured"
+                      ]
+                    },
+                    "reviewer": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "observed_at": {
+                      "type": "string",
+                      "minLength": 1,
+                      "format": "date-time"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "digest",
+                    "source_commit",
+                    "origin",
+                    "claim_type",
+                    "reviewer",
+                    "observed_at",
+                    "claim"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "verification": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "source_commit": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "^[a-f0-9]{40}$"
+                      },
+                      "target_commit": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "^[a-f0-9]{40}$"
+                      },
+                      "recipe_digest": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "result": {
+                        "enum": [
+                          "passed",
+                          "failed"
+                        ]
+                      },
+                      "checks": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "minItems": 1
+                      },
+                      "evidence": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "path": {
+                              "type": "string",
+                              "minLength": 1,
+                              "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                            },
+                            "digest": {
+                              "type": "string",
+                              "minLength": 1,
+                              "pattern": "^[a-f0-9]{64}$"
+                            },
+                            "source_commit": {
+                              "type": "string",
+                              "minLength": 1,
+                              "pattern": "^[a-f0-9]{40}$"
+                            },
+                            "origin": {
+                              "enum": [
+                                "maintainer",
+                                "parser",
+                                "ai_proposal",
+                                "curator",
+                                "executed_test"
+                              ]
+                            },
+                            "claim_type": {
+                              "enum": [
+                                "declared",
+                                "editorial",
+                                "inspected",
+                                "measured"
+                              ]
+                            },
+                            "reviewer": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "observed_at": {
+                              "type": "string",
+                              "minLength": 1,
+                              "format": "date-time"
+                            },
+                            "claim": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "path",
+                            "digest",
+                            "source_commit",
+                            "origin",
+                            "claim_type",
+                            "reviewer",
+                            "observed_at",
+                            "claim"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "minItems": 1
+                      },
+                      "recipe": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "version": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "version"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "target": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "version": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "version"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "scope_digest": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      }
+                    },
+                    "required": [
+                      "source_commit",
+                      "target_commit",
+                      "recipe_digest",
+                      "result",
+                      "checks",
+                      "evidence",
+                      "recipe",
+                      "target",
+                      "scope_digest"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "component_id",
+              "project_version",
+              "source_commit",
+              "readiness",
+              "scope",
+              "dependencies",
+              "compatibility",
+              "rights",
+              "evidence",
+              "verification"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "asset"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "source_version": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              "source_commit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{40}$"
+              },
+              "path": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+              },
+              "digest": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "format": {
+                "type": "string",
+                "minLength": 1
+              },
+              "author": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "rights": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "unresolved",
+                      "review_required",
+                      "scope_cleared",
+                      "ineligible"
+                    ]
+                  },
+                  "scope": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "minItems": 1
+                  },
+                  "code_spdx": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "asset_status": {
+                    "enum": [
+                      "unreviewed",
+                      "scope_cleared",
+                      "excluded",
+                      "not_applicable"
+                    ]
+                  },
+                  "notices": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "path": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                        },
+                        "digest": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^[a-f0-9]{64}$"
+                        },
+                        "source_commit": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^[a-f0-9]{40}$"
+                        },
+                        "origin": {
+                          "enum": [
+                            "maintainer",
+                            "parser",
+                            "ai_proposal",
+                            "curator",
+                            "executed_test"
+                          ]
+                        },
+                        "claim_type": {
+                          "enum": [
+                            "declared",
+                            "editorial",
+                            "inspected",
+                            "measured"
+                          ]
+                        },
+                        "reviewer": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "observed_at": {
+                          "type": "string",
+                          "minLength": 1,
+                          "format": "date-time"
+                        },
+                        "claim": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "path",
+                        "digest",
+                        "source_commit",
+                        "origin",
+                        "claim_type",
+                        "reviewer",
+                        "observed_at",
+                        "claim"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 0
+                  }
+                },
+                "required": [
+                  "status",
+                  "scope",
+                  "code_spdx",
+                  "asset_status",
+                  "notices",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "source_files_available": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "external_terms": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "type": {
+                "enum": [
+                  "image",
+                  "model",
+                  "font",
+                  "audio",
+                  "dataset",
+                  "other"
+                ]
+              }
+            },
+            "required": [
+              "source_version",
+              "source_commit",
+              "path",
+              "digest",
+              "format",
+              "author",
+              "rights"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "rights"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "enum": [
+                  "unresolved",
+                  "review_required",
+                  "scope_cleared",
+                  "ineligible"
+                ]
+              },
+              "scope": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                },
+                "minItems": 1
+              },
+              "code_spdx": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "asset_status": {
+                "enum": [
+                  "unreviewed",
+                  "scope_cleared",
+                  "excluded",
+                  "not_applicable"
+                ]
+              },
+              "notices": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "digest": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "source_commit": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{40}$"
+                    },
+                    "origin": {
+                      "enum": [
+                        "maintainer",
+                        "parser",
+                        "ai_proposal",
+                        "curator",
+                        "executed_test"
+                      ]
+                    },
+                    "claim_type": {
+                      "enum": [
+                        "declared",
+                        "editorial",
+                        "inspected",
+                        "measured"
+                      ]
+                    },
+                    "reviewer": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "observed_at": {
+                      "type": "string",
+                      "minLength": 1,
+                      "format": "date-time"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "digest",
+                    "source_commit",
+                    "origin",
+                    "claim_type",
+                    "reviewer",
+                    "observed_at",
+                    "claim"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "status",
+              "scope",
+              "code_spdx",
+              "asset_status",
+              "notices",
+              "evidence"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "claim"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+              },
+              "digest": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "source_commit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{40}$"
+              },
+              "origin": {
+                "enum": [
+                  "maintainer",
+                  "parser",
+                  "ai_proposal",
+                  "curator",
+                  "executed_test"
+                ]
+              },
+              "claim_type": {
+                "enum": [
+                  "declared",
+                  "editorial",
+                  "inspected",
+                  "measured"
+                ]
+              },
+              "reviewer": {
+                "type": "string",
+                "minLength": 1
+              },
+              "observed_at": {
+                "type": "string",
+                "minLength": 1,
+                "format": "date-time"
+              },
+              "claim": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "path",
+              "digest",
+              "source_commit",
+              "origin",
+              "claim_type",
+              "reviewer",
+              "observed_at",
+              "claim"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "dependency"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "from_version": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              "to_version": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "version": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "version"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "external_package": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "kind": {
+                "enum": [
+                  "imports",
+                  "requires",
+                  "asset",
+                  "build",
+                  "service",
+                  "dataset"
+                ]
+              },
+              "version_constraint": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "resolved_version": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "optional": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "from_version",
+              "to_version",
+              "external_package",
+              "kind",
+              "version_constraint",
+              "resolved_version",
+              "optional"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "recipe"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "components": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "version": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "version"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              },
+              "assets": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "version": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "version"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "brief": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              "source_commit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{40}$"
+              },
+              "target_commit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{40}$"
+              },
+              "digest": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "adapters": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "compatibility_assumptions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "rights": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "unresolved",
+                      "review_required",
+                      "scope_cleared",
+                      "ineligible"
+                    ]
+                  },
+                  "scope": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "minItems": 1
+                  },
+                  "code_spdx": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "asset_status": {
+                    "enum": [
+                      "unreviewed",
+                      "scope_cleared",
+                      "excluded",
+                      "not_applicable"
+                    ]
+                  },
+                  "notices": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "path": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                        },
+                        "digest": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^[a-f0-9]{64}$"
+                        },
+                        "source_commit": {
+                          "type": "string",
+                          "minLength": 1,
+                          "pattern": "^[a-f0-9]{40}$"
+                        },
+                        "origin": {
+                          "enum": [
+                            "maintainer",
+                            "parser",
+                            "ai_proposal",
+                            "curator",
+                            "executed_test"
+                          ]
+                        },
+                        "claim_type": {
+                          "enum": [
+                            "declared",
+                            "editorial",
+                            "inspected",
+                            "measured"
+                          ]
+                        },
+                        "reviewer": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "observed_at": {
+                          "type": "string",
+                          "minLength": 1,
+                          "format": "date-time"
+                        },
+                        "claim": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      },
+                      "required": [
+                        "path",
+                        "digest",
+                        "source_commit",
+                        "origin",
+                        "claim_type",
+                        "reviewer",
+                        "observed_at",
+                        "claim"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 0
+                  }
+                },
+                "required": [
+                  "status",
+                  "scope",
+                  "code_spdx",
+                  "asset_status",
+                  "notices",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "status": {
+                "enum": [
+                  "candidate",
+                  "tested"
+                ]
+              },
+              "verification": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "source_commit": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "^[a-f0-9]{40}$"
+                      },
+                      "target_commit": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "^[a-f0-9]{40}$"
+                      },
+                      "recipe_digest": {
+                        "type": "string",
+                        "minLength": 1,
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "result": {
+                        "enum": [
+                          "passed",
+                          "failed"
+                        ]
+                      },
+                      "checks": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "minItems": 1
+                      },
+                      "evidence": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "path": {
+                              "type": "string",
+                              "minLength": 1,
+                              "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                            },
+                            "digest": {
+                              "type": "string",
+                              "minLength": 1,
+                              "pattern": "^[a-f0-9]{64}$"
+                            },
+                            "source_commit": {
+                              "type": "string",
+                              "minLength": 1,
+                              "pattern": "^[a-f0-9]{40}$"
+                            },
+                            "origin": {
+                              "enum": [
+                                "maintainer",
+                                "parser",
+                                "ai_proposal",
+                                "curator",
+                                "executed_test"
+                              ]
+                            },
+                            "claim_type": {
+                              "enum": [
+                                "declared",
+                                "editorial",
+                                "inspected",
+                                "measured"
+                              ]
+                            },
+                            "reviewer": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "observed_at": {
+                              "type": "string",
+                              "minLength": 1,
+                              "format": "date-time"
+                            },
+                            "claim": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "path",
+                            "digest",
+                            "source_commit",
+                            "origin",
+                            "claim_type",
+                            "reviewer",
+                            "observed_at",
+                            "claim"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "minItems": 1
+                      },
+                      "recipe": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "version": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "version"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "target": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "version": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "version"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "scope_digest": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      }
+                    },
+                    "required": [
+                      "source_commit",
+                      "target_commit",
+                      "recipe_digest",
+                      "result",
+                      "checks",
+                      "evidence",
+                      "recipe",
+                      "target",
+                      "scope_digest"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "rollback": {
+                "type": "string",
+                "minLength": 1
+              },
+              "limitations": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "components",
+              "assets",
+              "brief",
+              "source_commit",
+              "target_commit",
+              "digest",
+              "adapters",
+              "compatibility_assumptions",
+              "rights",
+              "status",
+              "verification",
+              "rollback",
+              "limitations"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "integration"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "source_commit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{40}$"
+              },
+              "target_commit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{40}$"
+              },
+              "recipe_digest": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "result": {
+                "enum": [
+                  "passed",
+                  "failed"
+                ]
+              },
+              "checks": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "digest": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "source_commit": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{40}$"
+                    },
+                    "origin": {
+                      "enum": [
+                        "maintainer",
+                        "parser",
+                        "ai_proposal",
+                        "curator",
+                        "executed_test"
+                      ]
+                    },
+                    "claim_type": {
+                      "enum": [
+                        "declared",
+                        "editorial",
+                        "inspected",
+                        "measured"
+                      ]
+                    },
+                    "reviewer": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "observed_at": {
+                      "type": "string",
+                      "minLength": 1,
+                      "format": "date-time"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "digest",
+                    "source_commit",
+                    "origin",
+                    "claim_type",
+                    "reviewer",
+                    "observed_at",
+                    "claim"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "source_commit",
+              "target_commit",
+              "recipe_digest",
+              "result",
+              "checks",
+              "evidence"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "game_brief"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "intent": {
+                "type": "string",
+                "minLength": 1
+              },
+              "runtime": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "runtime_version": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "platform": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "device": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "visual_references": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "format": "uri",
+                  "pattern": "^https://"
+                },
+                "minItems": 0
+              },
+              "camera": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "input": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "budgets": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "metric": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "value": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "minimum": 0
+                    },
+                    "unit": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "metric",
+                    "value",
+                    "unit"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "preserved_systems": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "constraints": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "constraint": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "origin": {
+                      "enum": [
+                        "explicit",
+                        "inferred"
+                      ]
+                    },
+                    "hard": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "constraint",
+                    "origin",
+                    "hard"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "intent",
+              "runtime",
+              "runtime_version",
+              "platform",
+              "device",
+              "visual_references",
+              "camera",
+              "input",
+              "scope",
+              "budgets",
+              "preserved_systems",
+              "constraints"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "style_profile"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "ontology_version": {
+                "const": "0.2"
+              },
+              "palette": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "materials": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "geometry": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "animation": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "asset_scope": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                },
+                "minItems": 0
+              },
+              "previews": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "format": "uri",
+                  "pattern": "^https://"
+                },
+                "minItems": 0
+              },
+              "reviewer": {
+                "type": "string",
+                "minLength": 1
+              },
+              "rationale": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "ontology_version",
+              "palette",
+              "materials",
+              "geometry",
+              "animation",
+              "asset_scope",
+              "previews",
+              "reviewer",
+              "rationale"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "review_finding"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "subject": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              "source_commit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{40}$"
+              },
+              "rubric_version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "category": {
+                "type": "string",
+                "minLength": 1
+              },
+              "finding": {
+                "type": "string",
+                "minLength": 1
+              },
+              "impact": {
+                "type": "string",
+                "minLength": 1
+              },
+              "author_type": {
+                "enum": [
+                  "maintainer",
+                  "parser",
+                  "ai_proposal",
+                  "curator",
+                  "executed_test"
+                ]
+              },
+              "reviewer": {
+                "type": "string",
+                "minLength": 1
+              },
+              "observed_at": {
+                "type": "string",
+                "minLength": 1,
+                "format": "date-time"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "path": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                    },
+                    "digest": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "source_commit": {
+                      "type": "string",
+                      "minLength": 1,
+                      "pattern": "^[a-f0-9]{40}$"
+                    },
+                    "origin": {
+                      "enum": [
+                        "maintainer",
+                        "parser",
+                        "ai_proposal",
+                        "curator",
+                        "executed_test"
+                      ]
+                    },
+                    "claim_type": {
+                      "enum": [
+                        "declared",
+                        "editorial",
+                        "inspected",
+                        "measured"
+                      ]
+                    },
+                    "reviewer": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "observed_at": {
+                      "type": "string",
+                      "minLength": 1,
+                      "format": "date-time"
+                    },
+                    "claim": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "path",
+                    "digest",
+                    "source_commit",
+                    "origin",
+                    "claim_type",
+                    "reviewer",
+                    "observed_at",
+                    "claim"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              },
+              "assumptions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "subject",
+              "source_commit",
+              "rubric_version",
+              "category",
+              "finding",
+              "impact",
+              "author_type",
+              "reviewer",
+              "observed_at",
+              "evidence",
+              "assumptions"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "benchmark_run"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "source_commit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{40}$"
+              },
+              "target_commit": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[a-f0-9]{40}$"
+              },
+              "workload": {
+                "type": "string",
+                "minLength": 1
+              },
+              "device": {
+                "type": "string",
+                "minLength": 1
+              },
+              "os": {
+                "type": "string",
+                "minLength": 1
+              },
+              "engine_version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "browser_version": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "resolution": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "height": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "required": [
+                  "width",
+                  "height"
+                ],
+                "additionalProperties": false
+              },
+              "settings": {
+                "type": "string",
+                "minLength": 1
+              },
+              "warmup": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sampling_method": {
+                "type": "string",
+                "minLength": 1
+              },
+              "raw_results": {
+                "type": "object",
+                "properties": {
+                  "path": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^(?!/)(?!.*\\\\)(?!.*:)(?!.*%)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*[\\x00-\\x1f]).+$"
+                  },
+                  "digest": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "source_commit": {
+                    "type": "string",
+                    "minLength": 1,
+                    "pattern": "^[a-f0-9]{40}$"
+                  },
+                  "origin": {
+                    "enum": [
+                      "maintainer",
+                      "parser",
+                      "ai_proposal",
+                      "curator",
+                      "executed_test"
+                    ]
+                  },
+                  "claim_type": {
+                    "enum": [
+                      "declared",
+                      "editorial",
+                      "inspected",
+                      "measured"
+                    ]
+                  },
+                  "reviewer": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "observed_at": {
+                    "type": "string",
+                    "minLength": 1,
+                    "format": "date-time"
+                  },
+                  "claim": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "path",
+                  "digest",
+                  "source_commit",
+                  "origin",
+                  "claim_type",
+                  "reviewer",
+                  "observed_at",
+                  "claim"
+                ],
+                "additionalProperties": false
+              },
+              "measurements": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "metric": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "value": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "minimum": 0
+                    },
+                    "unit": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "metric",
+                    "value",
+                    "unit"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "source_commit",
+              "target_commit",
+              "workload",
+              "device",
+              "os",
+              "engine_version",
+              "browser_version",
+              "resolution",
+              "settings",
+              "warmup",
+              "sampling_method",
+              "raw_results",
+              "measurements",
+              "summary"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "entity_type": {
+            "const": "recommendation"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "brief": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "id",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              "chosen": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "version": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "version"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              },
+              "reasons": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "alternatives": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "version": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "version"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "constraint_matches": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "constraint": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "result": {
+                      "enum": [
+                        "match",
+                        "conflict",
+                        "unknown"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "constraint",
+                    "result"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "findings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "version": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "version"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              },
+              "unknowns": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "brief",
+              "chosen",
+              "reasons",
+              "alternatives",
+              "constraint_matches",
+              "findings",
+              "unknowns"
+            ],
+            "additionalProperties": false
+          }
+        }
+      }
+    }
+  ]
+}

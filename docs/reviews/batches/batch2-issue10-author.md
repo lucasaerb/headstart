@@ -1,0 +1,13 @@
+# Batch 2 / issue #10 author evidence
+
+Author `/root/batch1_data`. Reviewer: pending batch 2 independent review. Prerequisite #9 author evidence complete; independent batch acceptance remains pending. No self-approval or tested badge.
+
+Implemented `services/curation/` and explicit initializer hook: **29 new Three.js addons + existing 2048 tile = 30 source-reviewed components**, across 13 addon categories plus game-state. `reviewed-source-maps.json` records all new immutable source maps, symbols/ranges/digests, complete local addon import closure, external engine peer boundaries, input/assets/lifecycle/units/coupling, notices, author/date and proposed pass/fail behavior. Full exact source files and root MIT license retained. The 2048 evidence remains in its independently reviewed catalog fixture. Source scope is not whole-project or caller-asset clearance.
+
+Three pin: `5c5a575bd8cc0cf440026ce8dcf6a77862067684`, repository `https://github.com/mrdoob/three.js`, declared package version `0.186.0`. Intake fetched 33 selected files and a separate LightProbeHelper/LICENSE pair with no upstream execution. Full raw snapshots preserve even withheld Water2 for review; loader publishes only scoped reviewed modules. Water2 is withheld for unresolved default normal-map imagery and private lifecycle adaptation. Local addon imports are recursively included; engine peer implementation is outside copied scope. Original root MIT and inline algorithm/contributor references retained.
+
+`COMPATIBILITY.md` proposes ten bounded Three/R3F integration candidates, effort bands, assumptions and concrete pass/fail behavior including resource/input ownership. Actual target inspection and runtime testing remain future work; R3F version is unknown and all compatibility is reference-only. First ten favor small math/geometry/helpers plus existing-loop camera adapters. No generalized engine conversion is claimed.
+
+Checks: `/tmp/headstart-contracts-venv/bin/python -m unittest discover -s services/curation/tests -v`: **2 passed**, iterating all 30 components and all source maps/evidence/rights scopes, ≥6 categories, closure completeness, repeated import identity and false tested promotion. Existing catalog/API suite: **28 passed**. Initializer successfully produces 30 components and two bounded parent source versions. Complete starters remain in existing research browsing, and no research candidate is silently promoted.
+
+Files affecting UI: catalog initializer adds data only; foundation/brief authors own UI verification for expanded retrieval. No CSS/layout changes by this author. Source-map/rights review applies; independent reviewer must trace all 30 before final acceptance. No commit or production deployment.

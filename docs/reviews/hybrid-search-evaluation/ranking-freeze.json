@@ -1,0 +1,27 @@
+{
+  "status": "configuration frozen after tuning v2 and before heldout evaluation",
+  "files": {
+    "services/retrieval/engine.py": "e99fac2507f8f86c0db3cd3f0ccb0ea2465fc2ca567d611c4f70e8089cda374e",
+    "services/retrieval/aliases.json": "4a0e0b77b34280e2588b51f3704d6f15246683a1c608bf0592908acd87faea5f",
+    "services/retrieval/model-manifest.json": "073752ee8133edf602393e3c36173d6c978972c685196e0d257eed7faca5a0e3",
+    "services/catalog/search.py": "546bbaac3999bbf76cde534040f36e00183bc149f87617b5cf1a1769a01d8e35"
+  },
+  "proposal": {
+    "cosineMinimum": 0.25,
+    "lexicalRRFWeight": 0.65,
+    "semanticRRFWeight": 0.35,
+    "rrfK": 20
+  },
+  "tuningArtifacts": [
+    "tuning-hybrid-v1.json",
+    "tuning-hybrid-v2.json"
+  ],
+  "selectedRationale": "Retain more relevant candidates by removing repeated legal boilerplate from public semantic text and using a lower similarity floor. Two tuning no-answer false positives are explicitly retained as a limitation.",
+  "postFreezeDocumentationEdits": [
+    {
+      "path": "services/catalog/search.py",
+      "sha256": "b8a3f3eb3dc7091adc8caf9c6c08d989d45a56ce6f7c0bd7c61fb9cd59821854",
+      "change": "Module docstring updated to describe the implemented optional semantics. No ranking behavior changed; original pre-heldout file digest retained above."
+    }
+  ]
+}

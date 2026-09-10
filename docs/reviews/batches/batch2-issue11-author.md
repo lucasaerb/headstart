@@ -1,0 +1,28 @@
+# Issue #11 author report — local semantic retrieval
+
+Author: batch2_brief; independent frozen query/corpus author: batch1_foundation. Author-ready on the batch 2 working tree after batch 1 independently PASS `9a85fde`. Independent review remains required for this issue and the entire batch. Full implementation/design/validation details: `services/retrieval/README.md` and `services/retrieval/evaluation/README.md`.
+
+Implemented pinned local ONNX MiniLM inference, explicit optional install and dependency lock, checked public-metadata vector cache, editable rule-based capability/style interpretation, weighted lexical/vector fusion and parent diversity. Hard filters and eligible record gates run first. Original query, actual fallback reason, model/index/configuration versions and match reasons remain inspectable. Private source and captures never enter the text projection or leave the machine; no request-time model download exists. Precise existing title/repo/source/typo lookup behavior is preserved. Missing model/dependencies, corrupt weights and embedding version mismatch return honest original-query lexical fallback. Cursor keys include the actual mode/configuration/index, preventing a silent mid-pagination switch.
+
+The C4 hero is unchanged. Search results add a small optional **How these matches were found** disclosure, public metadata match explanation and **Use exact words / Edit search** actions. Compatibility is explicitly separate from relevance; no tested-support badges are inferred. Research and canonical scoped endpoints remain distinct. New module/CSS are on local and production build allowlists, but this branch has not been deployed.
+
+## Frozen evaluation and observed results
+
+- 100 graded queries, independently authored before ranking runs; 50 tuning/50 heldout. Titles, ordinary language, composites, geospatial/simulation/RTS intent, hard filters and no-answer cases. Corpus is 30 scoped components from two parent repos; does not establish whole-game or broad runtime coverage.
+- Query SHA256 `ca9d32a79cc3ddfb79bd2e2cd864e472df9f2f9aca796a651657aec16421ccc6`; corpus SHA256 `faf76c07af191536556741698688059e9ac07d4e6a4c4f3cf3c8f506d2f2ed79`. `evaluation/freeze.json` also pins authoring specification. Judgments were not changed after evaluation.
+- Tuning v1: NDCG 0.7974, Recall 0.7792. Tuning v2 removed repeated legal boilerplate from embedding text and lowered candidate floor from 0.32 to 0.25; NDCG 0.8909, Recall 0.9375. Both hard-filter violations 0; v2 has two no-answer false positives. `ranking-freeze.json` freezes exact engine, alias, model manifest and API hashes **before heldout**.
+- Heldout ran exactly once per mode after freeze: 50 queries, **40 answerable + 10 no-answer**. Answerable lexical NDCG@10 / Recall@20 **0.375 / 0.375**; hybrid **0.9502579 / 0.9583333**. **Zero hard-filter violations**, zero duplicate results. No-answer queries are excluded from means and separately report **2/10 hybrid false positives**, versus 0 lexical. Related suggestions are not proof that an absent full system exists. No heldout tuning followed. The retained false positives are Q088 (satellite terrain/elevation → Sky) and Q090 (foot-placement inverse kinematics → FirstPersonControls); neither candidate implements the requested absent system.
+- Warm same-process local CPU timings: median 9.6985 ms, p95 10.961 ms. macOS ARM64 / Python 3.14 with model and vector caches. Excludes network/browser overhead. Full per-query data and actual retrieval modes are in `heldout-{lexical,hybrid}.json`; not production performance claims.
+- Model: official `sentence-transformers/all-MiniLM-L6-v2` revision `1110a243fdf4706b3f48f1d95db1a4f5529b4d41`, 384-dimensional attention-mask mean pooling + L2 normalization, 256-token limit; actual weight/tokenizer digests in `model-manifest.json`.
+
+## Validation evidence
+
+- `python -m unittest discover -s services/catalog/tests -p test_api.py`: 9 PASS with model installed, preserving prior exact lexical contracts.
+- `python -m unittest discover -s services/retrieval/tests`: 7 PASS including actual offline inference, missing/corrupt model, corrupt embedding cache, original editable intent, private field exclusion, explicit filter invariants and changed-model cursor rejection.
+- Independent evaluation author ran 3 metric/freeze tests; root suite includes them.
+- `HEADSTART_CHROME_CHANNEL=chrome node tests/retrieval-ui.mjs`: real Chrome desktop 1440×1000 and mobile 390×844 PASS. Interpreted capability/style, original query, comparison of relevance versus tested compatibility, exact-word fallback, empty result recovery, public research explanation, no JS errors or horizontal overflow. Captures in `docs/reviews/hybrid-search-evaluation/evidence/`.
+- Selected C2/C3/C4 design references and exact digests remain in `docs/design/C4-FINAL-STORYBOARD.md`; the C4 world is unchanged. Author screenshots are evidence for separate reviewer critique, not final design acceptance.
+
+Remaining limits: optional local weights required for semantics; unconfigured hosts transparently use lexical retrieval. Frozen corpus is narrow and no-answer related matches remain possible. Any model/metadata/configuration change requires a new measured run and version, not a carried-forward score. Independent review pending.
+
+Root `test:retrieval` and CI run the interpretation suite and upload artifacts; root check scans new JavaScript files, and explicit local/production static allowlists contain both new JS/CSS modules. `npm run check` and `npm run format:check` PASS. Optional dependency absence has its own honest fallback assertions; tests requiring actual installed weights explicitly skip when unavailable rather than simulating model output.

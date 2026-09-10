@@ -1,0 +1,2319 @@
+{
+  "ontology_version": "0.2",
+  "concepts": [
+    {
+      "id": "genre",
+      "facet": "genre",
+      "parent_id": null,
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.4x",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "4x"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.action",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "action"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.action-rpg",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "action-rpg"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.adventure",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "adventure"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.animation",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "animation"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.arcade",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "arcade"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.automation",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "automation"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.board-game",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "board-game"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.boating",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "boating"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.builder",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "builder"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.building",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "building"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.city-builder",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "city-builder"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.city-building",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "city-building"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.colony-management",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "colony-management"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.crafting",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "crafting"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.driving",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "driving"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.dungeon",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "dungeon"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.dungeon-crawler",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "dungeon-crawler"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.economy",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "economy"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.endless-runner",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "endless-runner"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.exploration",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "exploration"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.fantasy",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "fantasy"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.first-person-shooter",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "first-person-shooter"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.flight",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "flight"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.incremental",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "incremental"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.management",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "management"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.multiplayer",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "multiplayer"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.navigation",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "navigation"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.navigation-demo",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "navigation-demo"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.party",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "party"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.physics",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "physics"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.physics-puzzle",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "physics-puzzle"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.platformer",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "platformer"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.procedural-generation",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "procedural-generation"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.puzzle",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "puzzle"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.racing",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "racing"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.rendering",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "rendering"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.resource-management",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "resource-management"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.roguelike",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "roguelike"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.rpg",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "rpg"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.rts",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "rts"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.sandbox",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "sandbox"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.shooter",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "shooter"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.simulation",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "simulation"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.space",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "space"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.spatial-query",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "spatial-query"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.strategy",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "strategy"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.strategy-toolkit",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "strategy-toolkit"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.survival",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "survival"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.survival-horror",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "survival-horror"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.tactics",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "tactics"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.tower-defense",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "tower-defense"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.trading",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "trading"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.transport",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "transport"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.turn-based",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "turn-based"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.turn-based-strategy",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "turn-based-strategy"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.tycoon",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "tycoon"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "genre.vehicle-demo",
+      "facet": "genre",
+      "parent_id": "genre",
+      "aliases": [
+        "vehicle-demo"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability",
+      "facet": "capability",
+      "parent_id": null,
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.animation",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "animation"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.audio",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "audio"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.autonomous-agents",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "autonomous-agents"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.autonomous-workers",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "autonomous-workers"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.background-processing",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "background-processing"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.camera",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "camera"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.character",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "character"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.character-controller",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "character-controller"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.character-data",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "character-data"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.collision-query",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "collision-query"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.combat",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "combat"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.construction",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "construction"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.crafting",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "crafting"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.economy",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "economy"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.enemy-ai",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "enemy-ai"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.flight",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "flight"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.flight-control",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "flight-control"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.game-loop",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "game-loop"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.game-state",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "game-state"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.input",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "input"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.materials",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "materials"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.movement",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "movement"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.networking",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "networking"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.npc-ai",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "npc-ai"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.particles",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "particles"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.pathfinding",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "pathfinding"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.persistence",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "persistence"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.physics",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "physics"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.physics-joints",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "physics-joints"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.procedural-generation",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "procedural-generation"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.production-queues",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "production-queues"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.puzzle-rules",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "puzzle-rules"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.race-rules",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "race-rules"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.replay",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "replay"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.resource-loops",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "resource-loops"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.save-system",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "save-system"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.simulation",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "simulation"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.simulation-clock",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "simulation-clock"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.sites-hosted",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "sites-hosted"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.spawn-system",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "spawn-system"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.steering",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "steering"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.strategy",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "strategy"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.terrain",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "terrain"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.turn-system",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "turn-system"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.ui",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "ui"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.vegetation",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "vegetation"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.vehicle-controller",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "vehicle-controller"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.vehicle-physics",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "vehicle-physics"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.vfx",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "vfx"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.water",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "water"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.weapon",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "weapon"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.weather",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "weather"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.world",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "world"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "capability.world-building",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [
+        "world-building"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style",
+      "facet": "style",
+      "parent_id": null,
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.cinematic",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "cinematic"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.configurable",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "configurable"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.fantasy",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "fantasy"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.flat-color",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "flat-color"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.futuristic",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "futuristic"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.geometric",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "geometric"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.low-poly",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "low-poly"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.minimal",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "minimal"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.naturalistic",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "naturalistic"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.neon",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "neon"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.pixel-art",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "pixel-art"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.procedural",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "procedural"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.science-fiction",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "science-fiction"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.stylized",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "stylized"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.text-based",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "text-based"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.themed",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "themed"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.urban",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "urban"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "style.voxel",
+      "facet": "style",
+      "parent_id": "style",
+      "aliases": [
+        "voxel"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime",
+      "facet": "runtime",
+      "parent_id": null,
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.arc-jvm",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Arc / JVM"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.babylon-js",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Babylon.js"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.browser",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Browser"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.canvas-2d",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Canvas 2D"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.cataclysm-native-engine",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Cataclysm native engine"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.endless-sky-sdl-opengl",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Endless Sky / SDL / OpenGL"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.engine-independent-javascript",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Engine-independent JavaScript"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.freeciv-native-engine",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Freeciv native engine"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.godot",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Godot"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.html-css-javascript",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "HTML / CSS / JavaScript"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.html-javascript",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "HTML / JavaScript"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.html5-canvas",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "HTML5 Canvas"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.html5-canvas-node-js",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "HTML5 Canvas / Node.js"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.jvm-freecol",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "JVM / FreeCol"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.javascript-webgl",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "JavaScript / WebGL"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.littlejs",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "LittleJS"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.luanti",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Luanti"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.matter-js",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Matter.js"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.openra-net",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "OpenRA / .NET"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.openrct2-native-engine",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "OpenRCT2 native engine"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.openttd-native-engine",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "OpenTTD native engine"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.phaser",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Phaser"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.pyrogenesis",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Pyrogenesis"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.react",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "React"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.react-three-fiber-rapier",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "React Three Fiber / Rapier"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.react-three-fiber-three-js",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "React Three Fiber / Three.js"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.supertux-native-engine",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "SuperTux native engine"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.supertuxkart-native-engine",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "SuperTuxKart native engine"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.three-js",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Three.js"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.three-js-micropolisjs",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Three.js / micropolisJS"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.three-js-webgpu",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Three.js WebGPU"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.three-js-webgpu-webgl",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Three.js WebGPU / WebGL"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.unity",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Unity"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.veloren-native-engine",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Veloren native engine"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.wesnoth-native-engine",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Wesnoth native engine"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.widelands-sdl",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "Widelands / SDL"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.libgdx",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "libGDX"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "runtime.melonjs",
+      "facet": "runtime",
+      "parent_id": "runtime",
+      "aliases": [
+        "melonJS"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "authoring_tool",
+      "facet": "authoring_tool",
+      "parent_id": null,
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "authoring_tool.aseprite",
+      "facet": "authoring_tool",
+      "parent_id": "authoring_tool",
+      "aliases": [
+        "Aseprite"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "authoring_tool.blender",
+      "facet": "authoring_tool",
+      "parent_id": "authoring_tool",
+      "aliases": [
+        "Blender"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "authoring_tool.codex",
+      "facet": "authoring_tool",
+      "parent_id": "authoring_tool",
+      "aliases": [
+        "Codex"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "authoring_tool.godot-editor",
+      "facet": "authoring_tool",
+      "parent_id": "authoring_tool",
+      "aliases": [
+        "Godot Editor"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "authoring_tool.sites",
+      "facet": "authoring_tool",
+      "parent_id": "authoring_tool",
+      "aliases": [
+        "Sites"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "authoring_tool.tiled",
+      "facet": "authoring_tool",
+      "parent_id": "authoring_tool",
+      "aliases": [
+        "Tiled"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "authoring_tool.unity-editor",
+      "facet": "authoring_tool",
+      "parent_id": "authoring_tool",
+      "aliases": [
+        "Unity Editor"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "platform",
+      "facet": "platform",
+      "parent_id": null,
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "platform.android",
+      "facet": "platform",
+      "parent_id": "platform",
+      "aliases": [
+        "Android"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "platform.linux",
+      "facet": "platform",
+      "parent_id": "platform",
+      "aliases": [
+        "Linux"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "platform.sites",
+      "facet": "platform",
+      "parent_id": "platform",
+      "aliases": [
+        "Sites"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "platform.windows",
+      "facet": "platform",
+      "parent_id": "platform",
+      "aliases": [
+        "Windows"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "platform.browser",
+      "facet": "platform",
+      "parent_id": "platform",
+      "aliases": [
+        "browser"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "platform.browser-export",
+      "facet": "platform",
+      "parent_id": "platform",
+      "aliases": [
+        "browser export"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "platform.browser-desktop-webgpu",
+      "facet": "platform",
+      "parent_id": "platform",
+      "aliases": [
+        "browser-desktop-webgpu"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "platform.macos",
+      "facet": "platform",
+      "parent_id": "platform",
+      "aliases": [
+        "macOS"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "platform.native-godot-project",
+      "facet": "platform",
+      "parent_id": "platform",
+      "aliases": [
+        "native Godot project"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "input",
+      "facet": "input",
+      "parent_id": null,
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "input.gamepad",
+      "facet": "input",
+      "parent_id": "input",
+      "aliases": [
+        "gamepad"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "input.keyboard",
+      "facet": "input",
+      "parent_id": "input",
+      "aliases": [
+        "keyboard"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "input.mouse",
+      "facet": "input",
+      "parent_id": "input",
+      "aliases": [
+        "mouse"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "input.pointer-lock",
+      "facet": "input",
+      "parent_id": "input",
+      "aliases": [
+        "pointer-lock"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "input.touch",
+      "facet": "input",
+      "parent_id": "input",
+      "aliases": [
+        "touch"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics",
+      "facet": "physics",
+      "parent_id": null,
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.bullet",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "Bullet"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.cannon",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "Cannon"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.characterbody2d",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "CharacterBody2D"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.characterbody3d",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "CharacterBody3D"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.jolt-physics",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "Jolt Physics"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.littlejs-built-in",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "LittleJS built-in"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.matter-js",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "Matter.js"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.phaser-arcade",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "Phaser Arcade"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.rapier",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "Rapier"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.unity",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "Unity"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.vehiclebody3d",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "VehicleBody3D"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.custom",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "custom"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.custom-buoyancy",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "custom buoyancy"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.custom-gravity-and-terrain-collision",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "custom gravity and terrain collision"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.custom-vehicle-dynamics",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "custom vehicle dynamics"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.custom-water-simulation",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "custom water simulation"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.melonjs",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "melonJS"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.optional-box2d",
+      "facet": "physics",
+      "parent_id": "physics",
+      "aliases": [
+        "optional Box2D"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera",
+      "facet": "camera",
+      "parent_id": null,
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.chase",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "chase"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.configurable",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "configurable"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.first-person",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "first-person"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.fixed",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "fixed"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.free-fly",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "free-fly"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.hex-grid-overhead",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "hex-grid-overhead"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.interior",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "interior"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.isometric",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "isometric"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.map-overhead",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "map-overhead"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.orbit",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "orbit"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.overhead",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "overhead"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.side-scrolling",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "side-scrolling"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.side-view",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "side-view"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.street-level",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "street-level"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.text",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "text"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.third-person",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "third-person"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.top-down",
+      "facet": "camera",
+      "parent_id": "camera",
+      "aliases": [
+        "top-down"
+      ],
+      "deprecated_by": null
+    },
+    {
+      "id": "camera.first_person",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "movement.character",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "movement.flight",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "movement.driving",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.vehicle",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "physics.rigid_body",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "world.terrain",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "world.geospatial",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "world.streaming",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "generation.dungeon",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "generation.seeded",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "rendering.shader",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "rendering.particles",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "system.inventory",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "system.combat",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "system.multiplayer",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    },
+    {
+      "id": "ui.hud",
+      "facet": "capability",
+      "parent_id": "capability",
+      "aliases": [],
+      "deprecated_by": null
+    }
+  ],
+  "migrations": [
+    {
+      "from_version": "0.1",
+      "from_id": "camera.chase",
+      "to_id": "camera.chase",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "camera.first_person",
+      "to_id": "camera.first_person",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "movement.character",
+      "to_id": "movement.character",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "movement.flight",
+      "to_id": "movement.flight",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "movement.driving",
+      "to_id": "movement.driving",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "physics.vehicle",
+      "to_id": "physics.vehicle",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "physics.rigid_body",
+      "to_id": "physics.rigid_body",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "world.terrain",
+      "to_id": "world.terrain",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "world.geospatial",
+      "to_id": "world.geospatial",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "world.streaming",
+      "to_id": "world.streaming",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "generation.dungeon",
+      "to_id": "generation.dungeon",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "generation.seeded",
+      "to_id": "generation.seeded",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "rendering.shader",
+      "to_id": "rendering.shader",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "rendering.particles",
+      "to_id": "rendering.particles",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "system.inventory",
+      "to_id": "system.inventory",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "system.combat",
+      "to_id": "system.combat",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "system.multiplayer",
+      "to_id": "system.multiplayer",
+      "reason": "Preserved stable legacy capability ID."
+    },
+    {
+      "from_version": "0.1",
+      "from_id": "ui.hud",
+      "to_id": "ui.hud",
+      "reason": "Preserved stable legacy capability ID."
+    }
+  ],
+  "changelog": [
+    {
+      "version": "0.2",
+      "change": "Initial canonical namespaced research aliases; historical evidence remains unchanged."
+    }
+  ]
+}

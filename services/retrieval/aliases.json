@@ -1,0 +1,21 @@
+{
+  "version": "headstart-intent-1",
+  "capabilities": {
+    "camera controls": ["orbit", "look around", "pan and zoom"],
+    "first person controls": ["walk around", "fps camera", "mouse look"],
+    "vehicle movement": ["arcade drifting", "drift racing"],
+    "pathfinding": ["find a route", "navigate obstacles"],
+    "worker economy": ["worker economies", "autonomous workers", "production chain"],
+    "construction progression": ["city builder", "build a town"],
+    "geospatial terrain": ["real world map", "geospatial", "map tiles"],
+    "spatial collision": ["collision detection", "ray intersection"],
+    "water rendering": ["ocean waves", "reflective water"],
+    "post processing": ["bloom", "depth of field", "screen effects"]
+  },
+  "styles": {
+    "pixel art": ["pixel", "retro pixels"],
+    "low poly": ["low-poly", "low poly"],
+    "2D": ["2d", "two dimensional"],
+    "3D": ["3d", "three dimensional"]
+  }
+}
