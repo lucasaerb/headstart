@@ -4,6 +4,14 @@
 
 Contract: `docs/planning/hero-discovery-cleanup.md`. Author agent: `/root/hero_search_author`. Independent reviewer: pending assignment by `/root`; this record does not claim PASS.
 
+Combined implementation source revision: `914e0a0`. Source SHA-256 values reviewed after the Astra/footer conflict resolution:
+
+- `index.html`: `d444b2bd94a71dc0ba358f327ddf0445df4ef9d041531c1097e3fc9897d71915`
+- `app.js`: `d48791e61b157e467afe51526a7b643b7db334765a620b42a3394bc6ff7e6c9e`
+- `signup.js`: `39fc7b7faa25b731900ff92fad35771bc5c8daafad0672f73eaa0e197890bd9a`
+- `styles.css`: `9b592d0ca219741066657b6d808dfd36242004e4f66c0351760b0c477d0bbe9f`
+- `astra-action.js`: `4190e2b33d2c15f9acb28adc379f21819f131db3010f45a599ac0bc2232bd58a`
+
 ## Changed behavior
 
 - `site/dist/index.html`: replaces the broken hero idea form with one Browse all games CTA; removes the orphaned idea strip and homepage update signup; preserves the incoming Astra action and adds a footer remembered-email disclosure with Forget email.
