@@ -29,3 +29,5 @@ Preserve C4/C4b world layers, motion/video, companion, typography, navy/blue pal
 ## Release boundary
 
 This branch is implementation/review work. The existing production site remains the stable baseline during batch development. Record per-issue tests, reviewer verdicts, commits, unresolved prerequisites and batch results in `docs/reviews/batches/`. Commercial terms, creator agreements, live account verification, real upstream execution and measured results require their actual prerequisites; never manufacture them to close an issue.
+
+Remote CI also passed for the accepted batch checkpoint: [GitHub Actions run34538155899](https://github.com/lucasaerb/headstart/actions/runs/34538155899). This validates the configured clean Linux install/check/test/build/browser pipeline; it is not production deployment.

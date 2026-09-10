@@ -55,7 +55,7 @@ window.HeadStartDiscovery = function ({ fields, draw, onItems }) {
     const timeout = setTimeout(() => controller.abort(), 15000);
     const params = new URLSearchParams(location.search);
     const query = new URLSearchParams();
-    for (const key of [...Object.keys(fields), 'cursor']) {
+    for (const key of [...Object.keys(fields), 'cursor', 'retrieval', 'interpret']) {
       if (params.has(key)) query.set(key, params.get(key));
     }
     query.set('limit', '12');
@@ -66,6 +66,7 @@ window.HeadStartDiscovery = function ({ fields, draw, onItems }) {
     restartPage = false;
     get('game-grid').setAttribute('aria-busy', 'true');
     get('game-grid').replaceChildren();
+    document.getElementById('retrieval-research')?.remove();
     get('empty-games').hidden = true;
     get('pagination').hidden = true;
     get('clear-filters').hidden = ![...Object.keys(fields)].some(key => key !== 'sort' && params.has(key));
@@ -92,6 +93,7 @@ window.HeadStartDiscovery = function ({ fields, draw, onItems }) {
       }
       onItems(result.items);
       draw(result.items, result.total);
+      window.HeadStartRetrieval?.show(result);
       nextCursor = result.nextCursor || null;
       get('discovery-status').hidden = true;
       get('pagination').hidden = !(params.has('cursor') || nextCursor);

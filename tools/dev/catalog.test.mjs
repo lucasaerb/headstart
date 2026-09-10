@@ -27,7 +27,7 @@ test("real HTTP catalog routes, signed cursor, selected research and no mutation
     let response = await fetch(base + "/v1/search?limit=1");
     assert.equal(response.status, 200);
     const first = await response.json();
-    assert.equal(first.total, 2);
+    assert.equal(first.total, 32); // 30 reviewed component scopes + 2 parent source scopes.
     response = await fetch(
       base +
         "/v1/search?limit=1&cursor=" +

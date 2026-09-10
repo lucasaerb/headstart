@@ -1,0 +1,33 @@
+.retrieval-panel {
+  margin: 12px 0 20px;
+  border: 1px solid #d5e1f2;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: #f8fbff;
+  color: #536781;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.retrieval-panel summary {
+  cursor: pointer;
+  color: #17386d;
+  font-weight: 600;
+}
+.retrieval-panel p {
+  margin: 10px 0;
+}
+.retrieval-controls {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.retrieval-reason {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #5a7090;
+  margin: 10px 0 0;
+}
+.retrieval-panel button:focus-visible {
+  outline: 3px solid #2575ee;
+  outline-offset: 3px;
+}

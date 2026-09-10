@@ -38,16 +38,19 @@
     retry.hidden = true;
     more.hidden = true;
     results.replaceChildren();
+    document.getElementById('retrieval-systems')?.remove();
     const query = new URLSearchParams({type:'component',limit:'12'});
     const params = new URLSearchParams(location.search);
     const text = params.get('systems_q') || '';
     if (text) query.set('q',text);
+    for(const key of ['retrieval','interpret'])if(params.get('systems_'+key))query.set(key,params.get('systems_'+key));
     if (params.get('systems_cursor')) query.set('cursor',params.get('systems_cursor'));
     try {
       const response = await fetch('/api/catalog/search?'+query,{signal:current.signal});
       const payload = await response.json();
       if(!response.ok || payload.schemaVersion!=='headstart-catalog-api-1' || !Array.isArray(payload.items)) throw new Error('Unavailable');
       if(current!==controller)return;
+      window.HeadStartCollection?.observe(payload.items,'component');
       for(const item of payload.items) {
         if(item.type!=='component')continue;
         const card=element('article',undefined,'reviewed-system');
@@ -68,8 +71,9 @@
           details.append(paragraph);
         }
         for(const notice of item.data.rights.notices)details.append(element('pre',notice));
-        card.append(details);results.append(card);
+        card.append(details);const inspect=element('button','Inspect component','secondary');inspect.type='button';inspect.addEventListener('click',()=>window.HeadStartDetails.showComponent(item,inspect));card.append(inspect);const save=window.HeadStartCollection?.button(item,'component');if(save)card.append(save);results.append(card);
       }
+      window.HeadStartRetrieval?.show(payload,'systems');
       status.textContent=payload.total ? payload.total+' source-reviewed '+(payload.total===1?'system':'systems')+'. Check the scope before reuse.' : 'No reviewed systems match. Try another search or clear the search field.';
       cursor=payload.nextCursor || null;more.hidden=!cursor;loaded=true;
     } catch(error) {

@@ -1,0 +1,1583 @@
+{
+  "scope": "29 authored Three addon capabilities; existing2048tile is capability30; no tested integrations",
+  "capabilities": [
+    {
+      "id": "three-improvednoise",
+      "title": "Improved Perlin noise",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "generation",
+      "concept": "capability.procedural-generation",
+      "source_path": "examples/jsm/math/ImprovedNoise.js",
+      "symbols": [
+        "fade",
+        "grad",
+        "ImprovedNoise"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/math/ImprovedNoise.js",
+          "digest": "d3821241e25bf0c8bfc13cec941924573bbaaf8f599a4fa07d60664b97832b39",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/math/ImprovedNoise.js",
+          "line_start": 1,
+          "line_end": 88,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/math/ImprovedNoise.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Fixed permutation 3D noise; same coordinates repeat. Output sampling scale is caller-owned.",
+      "lifecycle": "Pure sampling; no lifecycle or render/input/physics ownership.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Pure sampling; no lifecycle or render/input/physics ownership.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "small",
+      "proposed_validation": "Same coordinates return stable values; integrating sampler preserves caller terrain seed policy."
+    },
+    {
+      "id": "three-simplexnoise",
+      "title": "Seedable simplex noise",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "generation",
+      "concept": "capability.procedural-generation",
+      "source_path": "examples/jsm/math/SimplexNoise.js",
+      "symbols": [
+        "SimplexNoise"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/math/SimplexNoise.js",
+          "digest": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/math/SimplexNoise.js",
+          "line_start": 1,
+          "line_end": 470,
+          "imports": []
+        }
+      ],
+      "required_files": [
+        "examples/jsm/math/SimplexNoise.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "2D/3D/4D noise; constructor accepts RNG object, default Math random is not reproducible.",
+      "lifecycle": "Construct once with seeded RNG for deterministic worlds; no rendering or physics.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Construct once with seeded RNG for deterministic worlds; no rendering or physics.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": null,
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "small",
+      "proposed_validation": "Equal seeded generators produce matching sample arrays; changed seed changes generated terrain."
+    },
+    {
+      "id": "three-capsule",
+      "title": "Capsule bounds queries",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "collision",
+      "concept": "capability.collision-query",
+      "source_path": "examples/jsm/math/Capsule.js",
+      "symbols": [
+        "Capsule",
+        "checkAABBAxis"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/math/Capsule.js",
+          "digest": "be54c3c58483a7f6b0184dbc6ffdcea58ac13515a7d9fd19ed675b9edfc5f319",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/math/Capsule.js",
+          "line_start": 1,
+          "line_end": 159,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/math/Capsule.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Capsule endpoints/radius and axis-aligned box intersection; not a collider solver. Coordinates use target world units.",
+      "lifecycle": "Mutable math data; no physics world, timestep, impulses or collision response.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Mutable math data; no physics world, timestep, impulses or collision response.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "small",
+      "proposed_validation": "Known intersecting/disjoint capsule-box cases pass without creating a physics world."
+    },
+    {
+      "id": "three-obb",
+      "title": "Oriented box intersection queries",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "collision",
+      "concept": "capability.collision-query",
+      "source_path": "examples/jsm/math/OBB.js",
+      "symbols": [
+        "OBB"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/math/OBB.js",
+          "digest": "3297db79bdf0a33525ef06fe7478fd921dcffb7699df1059e189bbdf2c0fae58",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/math/OBB.js",
+          "line_start": 1,
+          "line_end": 535,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/math/OBB.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "OBB transforms and sphere/plane/ray/box intersection; matrix axes/extents must match world transforms.",
+      "lifecycle": "Pure query objects; preserve target physics ownership; no response integration.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Pure query objects; preserve target physics ownership; no response integration.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "small",
+      "proposed_validation": "Rotated intersecting and separated boxes produce expected booleans; units remain consistent."
+    },
+    {
+      "id": "three-colorconverter",
+      "title": "HSV color conversion",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "materials",
+      "concept": "capability.materials",
+      "source_path": "examples/jsm/math/ColorConverter.js",
+      "symbols": [
+        "ColorConverter"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/math/ColorConverter.js",
+          "digest": "316925abf09f332ab8f1d55dcb6f55bf491e199360a46ab8f60d721c0904cf5a",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/math/ColorConverter.js",
+          "line_start": 1,
+          "line_end": 58,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/math/ColorConverter.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "HSV setters/getters convert through Three Color HSL; hue wraps and saturation/value clamp. Retain inline xpansive reference.",
+      "lifecycle": "Pure color mutation; honor target color-management policy; no renderer ownership.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Pure color mutation; honor target color-management policy; no renderer ownership.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "small",
+      "proposed_validation": "Boundary hue and saturation round trips match expected conversions without changing renderer output settings."
+    },
+    {
+      "id": "three-orbitcontrols",
+      "title": "Orbit camera controls",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "camera",
+      "concept": "capability.camera",
+      "source_path": "examples/jsm/controls/OrbitControls.js",
+      "symbols": [
+        "OrbitControls",
+        "onPointerDown",
+        "onPointerMove",
+        "onPointerUp",
+        "onMouseDown",
+        "onMouseMove",
+        "onMouseWheel",
+        "onKeyDown",
+        "onTouchStart",
+        "onTouchMove",
+        "onContextMenu",
+        "interceptControlDown",
+        "interceptControlUp"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/controls/OrbitControls.js",
+          "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/controls/OrbitControls.js",
+          "line_start": 1,
+          "line_end": 1972,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/controls/OrbitControls.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Orbit/pan/dolly around target; perspective/orthographic handling, pointer/wheel/key input and optional damping.",
+      "lifecycle": "One owner of camera and DOM input; connect/disconnect/dispose listeners. Call update from existing loop; no new renderer.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. One owner of camera and DOM input; connect/disconnect/dispose listeners. Call update from existing loop; no new renderer.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Orbit/pan/dolly work; disabling restores target control; unmount removes listeners; damping updates through existing frame loop."
+    },
+    {
+      "id": "three-mapcontrols",
+      "title": "Map camera navigation",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "camera",
+      "concept": "capability.camera",
+      "source_path": "examples/jsm/controls/MapControls.js",
+      "symbols": [
+        "MapControls"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/controls/MapControls.js",
+          "digest": "5a686152c498914389d1503b60121f484d06f15cb4f7405c15fb6b8ddcc1bdb6",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/controls/MapControls.js",
+          "line_start": 1,
+          "line_end": 116,
+          "imports": [
+            "three",
+            "./OrbitControls.js"
+          ]
+        },
+        {
+          "path": "examples/jsm/controls/OrbitControls.js",
+          "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/controls/OrbitControls.js",
+          "line_start": 1,
+          "line_end": 1972,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/controls/MapControls.js",
+        "examples/jsm/controls/OrbitControls.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "OrbitControls subclass adjusts mouse/touch maps and map-plane interaction; includes complete OrbitControls dependency.",
+      "lifecycle": "Same lifecycle/ownership as OrbitControls; disable competing camera controllers.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Same lifecycle/ownership as OrbitControls; disable competing camera controllers.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Map pan and constrained rotation work on selected camera; dispose removes parent listeners."
+    },
+    {
+      "id": "three-trackballcontrols",
+      "title": "Trackball camera navigation",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "camera",
+      "concept": "capability.camera",
+      "source_path": "examples/jsm/controls/TrackballControls.js",
+      "symbols": [
+        "TrackballControls",
+        "onPointerDown",
+        "onPointerMove",
+        "onPointerUp",
+        "onPointerCancel",
+        "onKeyUp",
+        "onKeyDown",
+        "onMouseDown",
+        "onMouseMove",
+        "onMouseUp",
+        "onMouseWheel",
+        "onContextMenu",
+        "onTouchStart",
+        "onTouchMove",
+        "onTouchEnd"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/controls/TrackballControls.js",
+          "digest": "cce95baddf589c16fea901b70f2038eca4557357937e1b03f8c76fe7ffe7457f",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/controls/TrackballControls.js",
+          "line_start": 1,
+          "line_end": 1106,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/controls/TrackballControls.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Trackball rotation/pan/zoom with pointer/touch state; track screen rectangle and resize.",
+      "lifecycle": "Own camera input only while enabled; handleResize after layout change; dispose listeners.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Own camera input only while enabled; handleResize after layout change; dispose listeners.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Free rotation and zoom work after resize; switching controllers leaves no residual input handlers."
+    },
+    {
+      "id": "three-flycontrols",
+      "title": "Six-axis flying controls",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "camera",
+      "concept": "capability.flight-control",
+      "source_path": "examples/jsm/controls/FlyControls.js",
+      "symbols": [
+        "FlyControls",
+        "onKeyDown",
+        "onKeyUp",
+        "onPointerDown",
+        "onPointerMove",
+        "onPointerUp",
+        "onPointerCancel",
+        "onContextMenu"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/controls/FlyControls.js",
+          "digest": "8063858389f2ccd5cd6f0968562752dbab4b21a03c7a6e1dcbb5cc746fc06373",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/controls/FlyControls.js",
+          "line_start": 1,
+          "line_end": 384,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/controls/FlyControls.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Keyboard and pointer move/roll camera with delta-scaled motion. movementSpeed uses world units per second.",
+      "lifecycle": "Existing update(delta seconds) loop; connect/disconnect listeners; no collision solver.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Existing update(delta seconds) loop; connect/disconnect listeners; no collision solver.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Matched elapsed time gives consistent movement; key release/cancel stops motion; teardown removes listeners."
+    },
+    {
+      "id": "three-firstpersoncontrols",
+      "title": "First-person free movement",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "camera",
+      "concept": "capability.character-controller",
+      "source_path": "examples/jsm/controls/FirstPersonControls.js",
+      "symbols": [
+        "FirstPersonControls",
+        "onPointerDown",
+        "onPointerUp",
+        "onPointerMove",
+        "onKeyDown",
+        "onKeyUp",
+        "onContextMenu"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/controls/FirstPersonControls.js",
+          "digest": "4f6c4bf60c8956a1201c966de1592f4f035be47b4f6fe97879a782898945992c",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/controls/FirstPersonControls.js",
+          "line_start": 1,
+          "line_end": 512,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/controls/FirstPersonControls.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Keyboard/pointer movement with look constraints; free camera, no floor/collision/gravity.",
+      "lifecycle": "One camera/input owner; update(delta seconds); dispose listeners and respect disabled state.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. One camera/input owner; update(delta seconds); dispose listeners and respect disabled state.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Look/move/release work; preserved physics target never receives a second controller or world."
+    },
+    {
+      "id": "three-pointerlockcontrols",
+      "title": "Pointer-lock camera look",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "camera",
+      "concept": "capability.input",
+      "source_path": "examples/jsm/controls/PointerLockControls.js",
+      "symbols": [
+        "PointerLockControls",
+        "onMouseMove",
+        "onPointerlockChange",
+        "onPointerlockError"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/controls/PointerLockControls.js",
+          "digest": "40d58db8018b85038939d4d8bff7112d4b8a0ad0367b37ae6f969eeee4310c25",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/controls/PointerLockControls.js",
+          "line_start": 1,
+          "line_end": 264,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/controls/PointerLockControls.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Pointer Lock API camera yaw/pitch plus moveForward/moveRight helpers; browser gesture required.",
+      "lifecycle": "Request lock after user gesture; handle lock loss; disconnect/dispose; no position physics.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Request lock after user gesture; handle lock loss; disconnect/dispose; no position physics.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Gesture locks, escape unlocks, mouse look clamps correctly, teardown removes document listeners."
+    },
+    {
+      "id": "three-roundedboxgeometry",
+      "title": "Rounded box mesh geometry",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "geometry",
+      "concept": "capability.procedural-generation",
+      "source_path": "examples/jsm/geometries/RoundedBoxGeometry.js",
+      "symbols": [
+        "getUv",
+        "RoundedBoxGeometry"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/geometries/RoundedBoxGeometry.js",
+          "digest": "c5feab96123858ed8823c889b238dc8734adab7e760e3cfd21e7f3f2f3e348e3",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/geometries/RoundedBoxGeometry.js",
+          "line_start": 1,
+          "line_end": 216,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/geometries/RoundedBoxGeometry.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "BoxGeometry-derived rounded normals/positions and UV mapping; dimensions/radius in target units.",
+      "lifecycle": "Caller owns geometry disposal and material; no assets, renderer, input or physics.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Caller owns geometry disposal and material; no assets, renderer, input or physics.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "small",
+      "proposed_validation": "Expected bounds and rounded corners; repeated mount/unmount releases geometry."
+    },
+    {
+      "id": "three-decalgeometry",
+      "title": "Projected decal geometry",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "geometry",
+      "concept": "capability.materials",
+      "source_path": "examples/jsm/geometries/DecalGeometry.js",
+      "symbols": [
+        "DecalGeometry",
+        "DecalVertex"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/geometries/DecalGeometry.js",
+          "digest": "6b2da6ea840926dfb0278841f96067c02964c73644c7f189720e89fe9baa2b10",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/geometries/DecalGeometry.js",
+          "line_start": 1,
+          "line_end": 420,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/geometries/DecalGeometry.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Clips mesh triangles against projector box; position/orientation/size supplied by caller.",
+      "lifecycle": "Caller supplies mesh/material/texture rights and disposes output; no decal image bundled.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Caller supplies mesh/material/texture rights and disposes output; no decal image bundled.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Projection clips to box and follows expected transform; supplied owned texture renders without new scene renderer."
+    },
+    {
+      "id": "three-convexgeometry",
+      "title": "Convex hull mesh geometry",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "geometry",
+      "concept": "capability.procedural-generation",
+      "source_path": "examples/jsm/geometries/ConvexGeometry.js",
+      "symbols": [
+        "ConvexGeometry"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/geometries/ConvexGeometry.js",
+          "digest": "f52f4c5f0cc42eaef25d7330e912693ae1d7a9b0df0a599cd35f5854e9ecb34e",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/geometries/ConvexGeometry.js",
+          "line_start": 1,
+          "line_end": 72,
+          "imports": [
+            "three",
+            "../math/ConvexHull.js"
+          ]
+        },
+        {
+          "path": "examples/jsm/math/ConvexHull.js",
+          "digest": "7b7d53ed4533556f555440676d2cbc3680ffab32b1a910c79c9a522019bd3a06",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/math/ConvexHull.js",
+          "line_start": 1,
+          "line_end": 1695,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/geometries/ConvexGeometry.js",
+        "examples/jsm/math/ConvexHull.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Point set becomes convex hull geometry using complete local ConvexHull dependency; keep quickhull attribution comments.",
+      "lifecycle": "Caller owns point quality and output disposal; not a physics collider or concave decomposition.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Caller owns point quality and output disposal; not a physics collider or concave decomposition.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Known tetrahedron produces closed hull; degenerate inputs handled by adapter; output geometry released."
+    },
+    {
+      "id": "three-parametricgeometry",
+      "title": "Parametric surface geometry",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "geometry",
+      "concept": "capability.procedural-generation",
+      "source_path": "examples/jsm/geometries/ParametricGeometry.js",
+      "symbols": [
+        "ParametricGeometry"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/geometries/ParametricGeometry.js",
+          "digest": "f25b69d9f8a5a7f8e206bb151875609349dabaf9bd81830779033ed2521e8a7a",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/geometries/ParametricGeometry.js",
+          "line_start": 1,
+          "line_end": 172,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/geometries/ParametricGeometry.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Samples caller(u,v,target) over slices/stacks and finite-difference normals. Callback domain normalized 0..1.",
+      "lifecycle": "Callback code and geometry disposal caller-owned; no scene/input/runtime loop.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Callback code and geometry disposal caller-owned; no scene/input/runtime loop.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "small",
+      "proposed_validation": "Known plane callback creates expected vertices/normals/UVs; bounds and subdivisions match requested values."
+    },
+    {
+      "id": "three-boxlinegeometry",
+      "title": "Subdivided wire box geometry",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "geometry",
+      "concept": "capability.procedural-generation",
+      "source_path": "examples/jsm/geometries/BoxLineGeometry.js",
+      "symbols": [
+        "BoxLineGeometry"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/geometries/BoxLineGeometry.js",
+          "digest": "5f4bd99627f84e1fe81cf1927ca867ac2968c9354d5e54b11849d0887170ad51",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/geometries/BoxLineGeometry.js",
+          "line_start": 1,
+          "line_end": 92,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/geometries/BoxLineGeometry.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "LineSegments-ready subdivided box, with independent width/height/depth segment counts.",
+      "lifecycle": "Caller supplies line material and disposes geometry; world-unit dimensions.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Caller supplies line material and disposes geometry; world-unit dimensions.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "small",
+      "proposed_validation": "Expected wire bounds/segment counts; teardown disposes geometry/material owned by adapter."
+    },
+    {
+      "id": "three-positionalaudiohelper",
+      "title": "Directional audio cone visualization",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "audio",
+      "concept": "capability.audio",
+      "source_path": "examples/jsm/helpers/PositionalAudioHelper.js",
+      "symbols": [
+        "PositionalAudioHelper"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/helpers/PositionalAudioHelper.js",
+          "digest": "027531f7208bea6c63281465cb95ca9a1246cd0b7ea3e1e9d605ae813abdf67b",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/helpers/PositionalAudioHelper.js",
+          "line_start": 1,
+          "line_end": 169,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/helpers/PositionalAudioHelper.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Visualizes existing positional audio panner cone angles; no audio files or playback engine.",
+      "lifecycle": "Existing audio node remains target-owned; update when cone changes; dispose generated geometry/materials.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Existing audio node remains target-owned; update when cone changes; dispose generated geometry/materials.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "small",
+      "proposed_validation": "Cone matches inner/outer panner angles; removing helper does not stop or recreate target audio context."
+    },
+    {
+      "id": "three-vertexnormalshelper",
+      "title": "Vertex normal visualization",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "debug",
+      "concept": "capability.ui",
+      "source_path": "examples/jsm/helpers/VertexNormalsHelper.js",
+      "symbols": [
+        "VertexNormalsHelper"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/helpers/VertexNormalsHelper.js",
+          "digest": "666a1219d95010e4d5d290f08774af2c327b7bcd368ebdec29a111805c8b7ecc",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/helpers/VertexNormalsHelper.js",
+          "line_start": 1,
+          "line_end": 155,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/helpers/VertexNormalsHelper.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Draws world-transformed vertex normals from existing mesh geometry.",
+      "lifecycle": "Call update after transform/geometry changes; dispose helper resources only; no target geometry disposal.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Call update after transform/geometry changes; dispose helper resources only; no target geometry disposal.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "small",
+      "proposed_validation": "Normals track object transforms and configured world length; helper cleanup preserves original mesh."
+    },
+    {
+      "id": "three-vertextangentshelper",
+      "title": "Vertex tangent visualization",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "debug",
+      "concept": "capability.ui",
+      "source_path": "examples/jsm/helpers/VertexTangentsHelper.js",
+      "symbols": [
+        "VertexTangentsHelper"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/helpers/VertexTangentsHelper.js",
+          "digest": "b0d38d36af91eb8f5a119cae0a12861f2d0d27f35a1bdf70462fb53976a752eb",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/helpers/VertexTangentsHelper.js",
+          "line_start": 1,
+          "line_end": 133,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/helpers/VertexTangentsHelper.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Draws tangent vectors from existing tangent buffer attribute; input attribute is a precondition.",
+      "lifecycle": "Update after source changes; dispose helper resources; original mesh remains caller-owned.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Update after source changes; dispose helper resources; original mesh remains caller-owned.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "small",
+      "proposed_validation": "Known tangent attribute draws expected directions; missing attribute is rejected by adapter; teardown preserves mesh."
+    },
+    {
+      "id": "three-lightprobehelper",
+      "title": "Light probe visualization",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "lighting",
+      "concept": "capability.materials",
+      "source_path": "examples/jsm/helpers/LightProbeHelper.js",
+      "symbols": [
+        "LightProbeHelper"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/helpers/LightProbeHelper.js",
+          "digest": "4b4731f9e5d350bb809353cd16cf6e4c993803cae08f6ac15baa91d2560b9657",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/helpers/LightProbeHelper.js",
+          "line_start": 1,
+          "line_end": 166,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/helpers/LightProbeHelper.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Sphere shader visualizes supplied spherical-harmonic probe coefficients/intensity; inline shader included.",
+      "lifecycle": "Existing probe target-owned; dispose helper geometry/material; no HDR/image acquisition.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Existing probe target-owned; dispose helper geometry/material; no HDR/image acquisition.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "small",
+      "proposed_validation": "Probe coefficient/intensity change updates visualization; disposal leaves target light probe unchanged."
+    },
+    {
+      "id": "three-camerautils",
+      "title": "Camera frustum from rectangle",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "camera",
+      "concept": "capability.camera",
+      "source_path": "examples/jsm/utils/CameraUtils.js",
+      "symbols": [
+        "frameCorners"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/utils/CameraUtils.js",
+          "digest": "9d3fd8e3dbc94f50a45acf41b18a8f1d14254af403e90a19573036d127567def",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/utils/CameraUtils.js",
+          "line_start": 1,
+          "line_end": 82,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/utils/CameraUtils.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "frameCorners sets off-axis projection from three world-space screen corners and camera position.",
+      "lifecycle": "Mutates existing camera matrices; no input or frame loop; caller owns near/far and ordered nondegenerate corners.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Mutates existing camera matrices; no input or frame loop; caller owns near/far and ordered nondegenerate corners.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Projected rectangle fills expected viewport; invalid/degenerate corners rejected by adapter."
+    },
+    {
+      "id": "three-sceneutils",
+      "title": "Scene mesh conversion utilities",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "scene",
+      "concept": "capability.world",
+      "source_path": "examples/jsm/utils/SceneUtils.js",
+      "symbols": [
+        "createMeshesFromInstancedMesh",
+        "createMeshesFromMultiMaterialMesh",
+        "createMultiMaterialObject",
+        "reduceVertices",
+        "sortInstancedMesh"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/utils/BufferGeometryUtils.js",
+          "digest": "84f75b6d514411cac05e519383c54a6bf4fd5d6fc9a74acd3f532dedb92b0db1",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/utils/BufferGeometryUtils.js",
+          "line_start": 1,
+          "line_end": 1520,
+          "imports": [
+            "three"
+          ]
+        },
+        {
+          "path": "examples/jsm/utils/SceneUtils.js",
+          "digest": "d2d1673d80cdb919232f8e22fd341f79ec5b6f1c8d7df3fe884ceb8c8fbedc07",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/utils/SceneUtils.js",
+          "line_start": 1,
+          "line_end": 363,
+          "imports": [
+            "three",
+            "./BufferGeometryUtils.js"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/utils/BufferGeometryUtils.js",
+        "examples/jsm/utils/SceneUtils.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Instanced/multi-material mesh conversions, vertex reduction and instance sorting; includes BufferGeometryUtils source closure.",
+      "lifecycle": "Generated object/geometry ownership must be explicit; supplied materials may be shared. No new renderer.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Generated object/geometry ownership must be explicit; supplied materials may be shared. No new renderer.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Converted meshes preserve world placement/material groups; instance sorting preserves matching per-instance attributes."
+    },
+    {
+      "id": "three-skeletonutils",
+      "title": "Skeleton clone and retarget utilities",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "animation",
+      "concept": "capability.animation",
+      "source_path": "examples/jsm/utils/SkeletonUtils.js",
+      "symbols": [
+        "getBoneName",
+        "retarget",
+        "retargetClip",
+        "clone",
+        "getBoneByName",
+        "getBones",
+        "getHelperFromSkeleton",
+        "parallelTraverse"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/utils/SkeletonUtils.js",
+          "digest": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/utils/SkeletonUtils.js",
+          "line_start": 1,
+          "line_end": 496,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/utils/SkeletonUtils.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Clone skinned hierarchies and retarget poses/clips; maps bone names and samples animation tracks.",
+      "lifecycle": "Caller owns assets/bone-map compatibility and animation mixer lifecycle; no animation assets copied.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Caller owns assets/bone-map compatibility and animation mixer lifecycle; no animation assets copied.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "large",
+      "proposed_validation": "Cloned skeletons animate independently; retarget preserves declared mapped bones and source animation state."
+    },
+    {
+      "id": "three-reflector",
+      "title": "Planar reflection surface",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "rendering",
+      "concept": "capability.materials",
+      "source_path": "examples/jsm/objects/Reflector.js",
+      "symbols": [
+        "Reflector"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/objects/Reflector.js",
+          "digest": "57836df976f02a474b2dcfbb6609bca8bde0ccc6e77159ad8e418fa11c065d3b",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/objects/Reflector.js",
+          "line_start": 1,
+          "line_end": 385,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/objects/Reflector.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Planar mirror with internal render target, virtual camera and inline clipping/shader logic.",
+      "lifecycle": "Uses existing WebGL renderer in onBeforeRender; budget extra pass and dispose render target/material; no second renderer.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Uses existing WebGL renderer in onBeforeRender; budget extra pass and dispose render target/material; no second renderer.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "large",
+      "proposed_validation": "Mirror scene reflects expected plane; render state restored; removal releases owned target/material."
+    },
+    {
+      "id": "three-refractor",
+      "title": "Planar refraction surface",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "rendering",
+      "concept": "capability.materials",
+      "source_path": "examples/jsm/objects/Refractor.js",
+      "symbols": [
+        "Refractor"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/objects/Refractor.js",
+          "digest": "512c4ec056b8af3c7aa24f80a74d606dfd10c06697686b2b73df8dbe7f2f9d78",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/objects/Refractor.js",
+          "line_start": 1,
+          "line_end": 389,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/objects/Refractor.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Planar refraction using internal target and oblique camera clip plane; inline shader included.",
+      "lifecycle": "Existing WebGL render loop callback; own target/material disposal; caller geometry and texture ownership separate.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Existing WebGL render loop callback; own target/material disposal; caller geometry and texture ownership separate.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "large",
+      "proposed_validation": "Refraction samples expected scene through plane; state restored and targets released on removal."
+    },
+    {
+      "id": "three-sky",
+      "title": "Procedural atmospheric sky",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "world",
+      "concept": "capability.weather",
+      "source_path": "examples/jsm/objects/Sky.js",
+      "symbols": [
+        "Sky"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/objects/Sky.js",
+          "digest": "34121b60a3bd9adc004a5a637f6135e9d2b72757eeb9e476ae1988fe2db6a9fb",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/objects/Sky.js",
+          "line_start": 1,
+          "line_end": 342,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/objects/Sky.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Inline atmospheric/cloud shader on skydome mesh; supplied sun direction/turbidity parameters, no fetched imagery.",
+      "lifecycle": "Caller owns sky scale and uniform updates, geometry/material disposal; existing renderer/color pipeline.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Caller owns sky scale and uniform updates, geometry/material disposal; existing renderer/color pipeline.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Sun/turbidity changes alter sky predictably; pause respects host loop; no network image request or extra renderer."
+    },
+    {
+      "id": "three-water",
+      "title": "Reflective water surface",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "world",
+      "concept": "capability.water",
+      "source_path": "examples/jsm/objects/Water.js",
+      "symbols": [
+        "Water"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/objects/Water.js",
+          "digest": "3386670ba86003a32f5efe449041bd108d4cf1e0661849caa814741a2aaf395b",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/objects/Water.js",
+          "line_start": 1,
+          "line_end": 374,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/objects/Water.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "Inline water shader plus reflection target; caller supplies normal texture and advances time uniform.",
+      "lifecycle": "Caller texture rights required separately; existing renderer callback, additional pass, explicit target/material cleanup adapter required.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Caller texture rights required separately; existing renderer callback, additional pass, explicit target/material cleanup adapter required.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "large",
+      "proposed_validation": "Owned normal texture animates under host time; reflection state preserved; teardown releases internal targets via adapter."
+    },
+    {
+      "id": "three-css2drenderer",
+      "title": "DOM labels in 3D scenes",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "ui",
+      "concept": "capability.ui",
+      "source_path": "examples/jsm/renderers/CSS2DRenderer.js",
+      "symbols": [
+        "CSS2DObject",
+        "CSS2DRenderer"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/renderers/CSS2DRenderer.js",
+          "digest": "256abfc6ae1aa20eb83c10d7a0e26534527df65872e4d52da6354bee78288c34",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/renderers/CSS2DRenderer.js",
+          "line_start": 1,
+          "line_end": 352,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/renderers/CSS2DRenderer.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "CSS2DObject plus DOM projection renderer; translation-only labels and z-order from camera/world transforms.",
+      "lifecycle": "Own separate DOM overlay, not WebGL renderer; synchronize size/render with existing loop; remove nodes/listeners on teardown.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Own separate DOM overlay, not WebGL renderer; synchronize size/render with existing loop; remove nodes/listeners on teardown.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Labels follow camera/object positions; hidden/out-of-view nodes behave; overlay teardown restores pointer navigation."
+    },
+    {
+      "id": "three-css3drenderer",
+      "title": "3D transformed DOM panels",
+      "parent": "threejs",
+      "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "category": "ui",
+      "concept": "capability.ui",
+      "source_path": "examples/jsm/renderers/CSS3DRenderer.js",
+      "symbols": [
+        "CSS3DObject",
+        "CSS3DSprite",
+        "CSS3DRenderer"
+      ],
+      "files": [
+        {
+          "path": "examples/jsm/renderers/CSS3DRenderer.js",
+          "digest": "cd1f6bfaff0e2efa8a95b8cca6e96b0eea957d6a6057d875de8bab720b49057b",
+          "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/renderers/CSS3DRenderer.js",
+          "line_start": 1,
+          "line_end": 454,
+          "imports": [
+            "three"
+          ]
+        }
+      ],
+      "required_files": [
+        "examples/jsm/renderers/CSS3DRenderer.js",
+        "LICENSE",
+        "package.json"
+      ],
+      "optional_files": [],
+      "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+      "boundary": "CSS3DObject/Sprite plus DOM perspective transforms; does not support normal mesh materials or geometry.",
+      "lifecycle": "Separate DOM overlay synchronized with existing camera/loop; account for zoom limitations and pointer layering.",
+      "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+      "render_input_physics": "No independent WebGL renderer or physics world is introduced. Separate DOM overlay synchronized with existing camera/loop; account for zoom limitations and pointer layering.",
+      "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+      "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+      "external_peer": {
+        "package": "three",
+        "declared_version": "0.186.0",
+        "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+        "scope": "Existing target engine peer; engine implementation not copied by these components.",
+        "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+      },
+      "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+      "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+      "reviewer": "batch1_data static curation",
+      "reviewed_at": "2026-09-10T00:00:00Z",
+      "readiness": "source_reviewed",
+      "integration_effort": "medium",
+      "proposed_validation": "Panel transforms align with camera, sprites face correctly; removing objects clears DOM without breaking canvas input."
+    }
+  ],
+  "withheld": [
+    {
+      "path": "examples/jsm/objects/Water2.js",
+      "reason": "Default normal maps trigger TextureLoader requests for two unreviewed images; private reflector/refractor/timer lifecycle needs an explicit adapter. Retained reference only, not counted as source-reviewed eligible capability."
+    }
+  ],
+  "shared_digests": {
+    "LICENSE": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+    "package.json": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89"
+  }
+}

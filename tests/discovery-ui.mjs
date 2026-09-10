@@ -50,7 +50,9 @@ try {
     await expect(page.locator('#result-count')).toContainText('matching projects');
     await page.evaluate(()=>document.getElementById('games').scrollIntoView({block:'start',behavior:'instant'}));
     await page.screenshot({path:`${output}/${name}-search.png`});
-    await page.locator('#search-games').fill('no-such-game-921743');
+    // Test deterministic lexical emptiness; semantic no-answer quality has its
+    // own frozen evaluation and must not depend on this invented phrase.
+    await page.goto(base+'?retrieval=lexical&interpret=off&q=no-such-game-921743#games');
     await expect(page.locator('#empty-games')).toBeVisible();
     await page.evaluate(()=>document.getElementById('empty-games').scrollIntoView({block:'center',behavior:'instant'}));
     await page.screenshot({path:`${output}/${name}-empty.png`});
@@ -67,6 +69,8 @@ try {
     const researchPage = new URL(page.url()).searchParams.get('cursor');
     const researchFirst = await page.locator('.game-card').first().getAttribute('data-game');
     await page.locator('#reviewed-systems > summary').click();
+    await page.locator('#systems-query').fill('2048 tile state and serialization');
+    await page.locator('#systems-search button').click();
     await expect(page.locator('.reviewed-system')).toHaveCount(1);
     await expect(page.locator('.reviewed-system')).toContainText('2048 tile state and serialization');
     await expect(page.locator('.reviewed-system')).toContainText('full game and its assets are outside this scope');
@@ -86,7 +90,7 @@ try {
     await page.evaluate(()=>document.getElementById('reviewed-systems').scrollIntoView({block:'start',behavior:'instant'}));
     await page.screenshot({path:`${output}/${name}-scoped-reload.png`});
     await page.goBack();
-    await expect(page.locator('#systems-query')).toHaveValue('');
+    await expect(page.locator('#systems-query')).toHaveValue('2048 tile state and serialization');
     await expect(page.locator('.reviewed-system')).toHaveCount(1);
     if(new URL(page.url()).searchParams.get('cursor')!==researchPage)throw new Error('Scoped back lost research cursor');
     await page.screenshot({path:`${output}/${name}-scoped-back.png`});

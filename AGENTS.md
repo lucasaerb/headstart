@@ -101,7 +101,7 @@ Work through the prioritized GitHub backlog mirrored in `docs/planning/`. Resear
 
 Keep changes focused and preserve the reference package. Before creating application infrastructure, establish the actual project layout and document the chosen stack and real development commands. Once tests/build tooling exists, run checks appropriate to the changed behavior and update this guidance.
 
-The current backlog branch uses the preserved static C4 frontend with a Node 22 local development server, Python versioned contracts and SQLite metadata/evidence storage. See `docs/architecture/development.md` for installation and `docs/planning/batches/README.md` for delivery sequencing. Historical statements above describing an entirely specification-only workspace predate this implementation; a local catalog backend does not establish a deployed catalog, verified identity, MCP integration or royalty service.
+The current backlog branch uses the preserved static C4 frontend with a Node 22 local development server, Python versioned contracts and SQLite metadata/evidence storage. The second batch adds scoped details, a versioned local brief/collection, bounded static intake, 30 curated source-reviewed components and optional local ONNX semantic search. These additions are under independent review until the batch record reports PASS. Source-reviewed does not mean integration-tested. See `docs/architecture/development.md` for installation and `docs/planning/batches/README.md` for delivery sequencing. Historical statements above describing an entirely specification-only workspace predate this implementation; a local catalog backend does not establish a deployed catalog, verified identity, MCP integration or royalty service.
 
 For the current backlog, the user's latest instruction sets batches of five author tasks with multiple builders, followed by one separate critical review of all five and repeated fixes/review until acceptance. Tests and interface coordination run during implementation; no issue is complete before independent acceptance. Preserve the C4 world and integrate new controls into its existing visual language.
 
@@ -120,6 +120,9 @@ npm run test:python
 npm run build
 npm run test:browser
 npm run test:discovery
+npm run test:detail
+npm run test:brief
+npm run test:retrieval
 ```
 
 Reference-only static servers and inspection commands:
@@ -143,3 +146,5 @@ python3 -m json.tool HeadStart-Starter-Package/catalog-record.schema.json > /dev
 For contract changes, validate schema and fixtures, including rejection of unresolved candidates promoted to published/tested states, and check bundled copies. For plugin changes, validate manifest/skill discovery and the actual affected workflow; do not report a live catalog test when no connector exists. For UI changes, verify the changed desktop/mobile flow, navigation, source/demo links, empty/error states, and relevant downloads.
 
 For integration changes, exercise capability behavior and lifecycle as well as builds: controller input/collisions, camera ownership, generator determinism/connectivity, or cleanup as applicable. Run meaningful checks against the declared compatibility matrix. Report what changed, what was verified, and concrete remaining limits; do not repeat historical package verification as if it were run in the current task.
+
+Optional semantic search setup and frozen evaluation are documented in `services/retrieval/README.md`; ordinary browsing must fall back honestly when its model is unavailable. Generated model weights, vector caches, SQLite files and source-intake working data remain ignored local artifacts. Never commit them or expose them through the public static allowlist.

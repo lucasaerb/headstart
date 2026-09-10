@@ -1,9 +1,10 @@
-"""Bounded lexical retrieval. No embeddings, source delivery or target writes."""
+"""Bounded public retrieval with optional local semantics; no source delivery or target writes."""
 import base64
 import hashlib
 import hmac
 import json
 import re
+from services.retrieval import engine as retrieval
 from .store import encode
 
 API_VERSION = 'headstart-catalog-api-1'
@@ -23,8 +24,10 @@ def public_documents(store):
     # unpublished envelopes are never returned as a shortcut to detail lookup.
     live=store.records(False)
     parents={(r['entity_type'],r['id']):r for r in live}
+    dependencies={(r['id'],r['version']):r for r in live if r['entity_type']=='dependency'}
+    eligible=store.records()
     result=[]
-    for record in store.records():
+    for record in eligible:
         data=record['data']
         if data.get('visibility','public')!='public' or data.get('rights',{}).get('status')!='scope_cleared': continue
         if record['entity_type']=='component_version':
@@ -41,7 +44,21 @@ def public_documents(store):
         try:
             for evidence in data.get('evidence',[])+data['rights'].get('evidence',[]): store.get_blob(evidence['digest'])
         except (ValueError,OSError): continue
-        result.append({'id':identity['id'],'versionId':record['id'],'version':record['version'],'type':kind,'projectId':group,'title':name,'repositoryUrl':project['data']['repository_url'],'aliases':identity['data'].get('aliases',[]),'readiness':data.get('readiness','source_reviewed'),'data':data})
+        resolved=[]
+        for ref in data.get('dependencies',[]):
+            edge=dependencies.get((ref['id'],ref['version']))
+            descriptor={'status':'unknown','kind':None,'optional':None}
+            if edge:
+                dep=edge['data']; owner=dep.get('from_version',{})
+                target=dep.get('to_version')
+                # Internal targets need their own public evidence gate; do not expose raw links.
+                safe_target=target is None
+                if owner=={'id':record['id'],'version':record['version']} and dep.get('visibility','public')=='public' and safe_target:
+                    descriptor={'status':'reviewed_metadata','kind':dep.get('kind'),'optional':dep.get('optional'),'package':dep.get('external_package'),'versionConstraint':dep.get('version_constraint'),'resolvedVersion':dep.get('resolved_version'),'targetVersion':target,'scope':'Required external peer for the selected files; not bundled or integration-tested.' if dep.get('external_package') else 'Dependency of the selected file scope.'}
+                    if 'package.json' in data.get('scope',{}).get('required_files',[]):
+                        descriptor['sourceUrl']=project['data']['repository_url'].rstrip('/')+'/blob/'+data['source_commit']+'/package.json'
+            resolved.append(descriptor)
+        result.append({'id':identity['id'],'versionId':record['id'],'version':record['version'],'type':kind,'projectId':group,'title':name,'repositoryUrl':project['data']['repository_url'],'aliases':identity['data'].get('aliases',[]),'readiness':data.get('readiness','source_reviewed'),'data':data,'compatibility':data.get('compatibility',[]),'resolvedDependencies':resolved})
     return result
 
 def models(row):
@@ -61,7 +78,7 @@ def values(row,key,research=False):
 
 def query_options(pairs,documents,research=False):
     facets=['genre','capability','runtime','style','platform','kind','model'] if research else ['runtime','runtime_version','platform','rights','readiness','type']
-    allowed=set(facets+['q','cursor','limit']+(['sort','ids'] if research else []))
+    allowed=set(facets+['q','cursor','limit','retrieval','interpret']+(['sort','ids'] if research else []))
     query={}; seen=set()
     for key,value in pairs:
         if key not in allowed or key in seen: raise ApiError('INVALID_QUERY','Unknown or duplicate query field: '+key)
@@ -72,6 +89,8 @@ def query_options(pairs,documents,research=False):
     raw_limit=query.get('limit','24')
     if not re.fullmatch('[0-9]{1,3}',raw_limit) or not 1<=int(raw_limit)<=100: raise ApiError('INVALID_QUERY','Limit must be between 1 and 100.')
     query['limit']=int(raw_limit)
+    if query.get('retrieval','hybrid') not in ['lexical','hybrid']: raise ApiError('INVALID_QUERY','Unknown retrieval mode.')
+    if query.get('interpret','on') not in ['on','off']: raise ApiError('INVALID_QUERY','Unknown interpretation mode.')
     if query.get('runtime_version') and not query.get('runtime'): raise ApiError('UNSUPPORTED_COMBINATION','A runtime version requires its runtime.',422)
     if research and query.get('sort','recommended') not in ['recommended','stars']: raise ApiError('INVALID_QUERY','Unknown sort order.')
     if 'ids' in query:
@@ -113,9 +132,25 @@ def text_score(row,q,research=False):
         if similarity>=0.45:return round(20*similarity),['Approximate title match (character trigrams)']
     return None,[]
 
-def search(documents,pairs,secret,research=False):
+def search(documents,pairs,secret,research=False,retrieval_mode=None):
     query,facets,keys=query_options(pairs,documents,research)
-    version=fingerprint({'schema':API_VERSION,'documents':documents})
+    mode=retrieval_mode or query.get('retrieval','hybrid')
+    candidates=[]
+    for row in documents:
+        if not research and query.get('runtime_version'):
+            # Runtime and tested version are one compatibility assertion. Never
+            # combine a runtime from one row with another runtime's tested version.
+            if not any(compat.get('runtime')==query['runtime']
+                       and compat.get('version_range')==query['runtime_version']
+                       and compat.get('support')=='tested'
+                       for compat in row['data'].get('compatibility',[])):
+                continue
+        if any(query.get(facet) and query[facet] not in values(row,facet,research) for facet in keys): continue
+        if query.get('ids') and row['id'] not in query['ids'].split(','): continue
+        candidates.append(row)
+    ranked,retrieval_info=retrieval.rank(candidates,query.get('q',''),text_score,research,mode,query.get('interpret','on')!='off')
+    retrieval_context={k:v for k,v in retrieval_info.items() if k!='interpretation'}
+    version=fingerprint({'schema':API_VERSION,'documents':documents,'retrieval':retrieval_context})
     normalized={k:v for k,v in query.items() if k!='cursor'}
     key=fingerprint({'query':normalized,'index':version,'schema':API_VERSION,'research':research})
     offset=0
@@ -130,28 +165,12 @@ def search(documents,pairs,secret,research=False):
             offset=state['offset']
         except ApiError: raise
         except (ValueError,KeyError,TypeError): raise ApiError('INVALID_CURSOR','Cursor is invalid or belongs to another query.')
-    ranked=[]
-    for row in documents:
-        if not research and query.get('runtime_version'):
-            # Runtime and tested version are one compatibility assertion. Never
-            # combine a runtime from one row with another runtime's tested version.
-            if not any(compat.get('runtime')==query['runtime']
-                       and compat.get('version_range')==query['runtime_version']
-                       and compat.get('support')=='tested'
-                       for compat in row['data'].get('compatibility',[])):
-                continue
-        if any(query.get(facet) and query[facet] not in values(row,facet,research) for facet in keys): continue
-        if query.get('ids') and row['id'] not in query['ids'].split(','): continue
-        score,reasons=text_score(row,query.get('q',''),research)
-        if score is None: continue
-        ranked.append((score,row,reasons))
     if research and query.get('sort')=='stars':
         ranked.sort(key=lambda item:(-(item[1].get('githubStars') if type(item[1].get('githubStars')) is int else -1),item[1]['id']))
-    else: ranked.sort(key=lambda item:(-item[0],item[1]['id'],item[1].get('version',''),item[1].get('versionId','')))
     page=ranked[offset:offset+query['limit']]
     items=[dict(row,matchReasons=reasons,**({'eligibility':'research_only'} if research else {})) for _,row,reasons in page]
     next_cursor=None
     if offset+len(items)<len(ranked):
         token=base64.urlsafe_b64encode(encode({'offset':offset+len(items),'index':version,'key':key}).encode()).decode().rstrip('=')
         next_cursor=token+'.'+hmac.new(secret,token.encode(),'sha256').hexdigest()
-    return {'schemaVersion':'headstart-research-api-1' if research else API_VERSION,'indexVersion':version,'cacheKey':key,'items':items,'total':len(ranked),'nextCursor':next_cursor,'appliedFilters':normalized,'facets':facets,**({'eligibility':'research_only'} if research else {'groups':sorted({r['projectId'] for r in items})})}
+    return {'schemaVersion':'headstart-research-api-1' if research else API_VERSION,'indexVersion':version,'cacheKey':key,'items':items,'total':len(ranked),'nextCursor':next_cursor,'appliedFilters':normalized,'facets':facets,'retrieval':retrieval_info,**({'eligibility':'research_only'} if research else {'groups':sorted({r['projectId'] for r in items})})}

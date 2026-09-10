@@ -1,0 +1,4242 @@
+{
+  "schemaVersion": "headstart-judgments-1",
+  "author": "batch1_foundation independent of retrieval implementation",
+  "gradeScale": {
+    "0": "No scoped support",
+    "1": "Useful partial piece or weak alternative",
+    "2": "Substantial related capability",
+    "3": "Direct scoped match"
+  },
+  "pairSplit": "Exact title and its paraphrase stay together; alternating component groups. Composites and negatives alternate independently.",
+  "queries": [
+    {
+      "id": "Q001",
+      "split": "tuning",
+      "category": "title",
+      "q": "Improved Perlin noise",
+      "filters": {
+        "type": "component",
+        "rights": "MIT"
+      },
+      "relevance": {
+        "three-improvednoise": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Fixed permutation 3D noise; same coordinates repeat. Output sampling scale is caller-owned.",
+      "evidence": {
+        "three-improvednoise": [
+          {
+            "path": "examples/jsm/math/ImprovedNoise.js",
+            "digest": "d3821241e25bf0c8bfc13cec941924573bbaaf8f599a4fa07d60664b97832b39",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "rights": "MIT"
+        }
+      }
+    },
+    {
+      "id": "Q002",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Sample smooth three dimensional noise deterministically",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-improvednoise": 3,
+        "three-simplexnoise": 2
+      },
+      "defaultGrade": 0,
+      "rationale": "Fixed permutation 3D noise; same coordinates repeat. Output sampling scale is caller-owned. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-improvednoise": [
+          {
+            "path": "examples/jsm/math/ImprovedNoise.js",
+            "digest": "d3821241e25bf0c8bfc13cec941924573bbaaf8f599a4fa07d60664b97832b39",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-simplexnoise": [
+          {
+            "path": "examples/jsm/math/SimplexNoise.js",
+            "digest": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q003",
+      "split": "heldout",
+      "category": "title",
+      "q": "Seedable simplex noise",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-simplexnoise": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. 2D/3D/4D noise; constructor accepts RNG object, default Math random is not reproducible.",
+      "evidence": {
+        "three-simplexnoise": [
+          {
+            "path": "examples/jsm/math/SimplexNoise.js",
+            "digest": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q004",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "A procedural noise sampler that accepts a seeded random generator",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-simplexnoise": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "2D/3D/4D noise; constructor accepts RNG object, default Math random is not reproducible. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-simplexnoise": [
+          {
+            "path": "examples/jsm/math/SimplexNoise.js",
+            "digest": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q005",
+      "split": "tuning",
+      "category": "title",
+      "q": "Capsule bounds queries",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-capsule": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Capsule endpoints/radius and axis-aligned box intersection; not a collider solver. Coordinates use target world units.",
+      "evidence": {
+        "three-capsule": [
+          {
+            "path": "examples/jsm/math/Capsule.js",
+            "digest": "be54c3c58483a7f6b0184dbc6ffdcea58ac13515a7d9fd19ed675b9edfc5f319",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q006",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Test whether a pill shaped bounding volume overlaps a box",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-capsule": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Capsule endpoints/radius and axis-aligned box intersection; not a collider solver. Coordinates use target world units. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-capsule": [
+          {
+            "path": "examples/jsm/math/Capsule.js",
+            "digest": "be54c3c58483a7f6b0184dbc6ffdcea58ac13515a7d9fd19ed675b9edfc5f319",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q007",
+      "split": "heldout",
+      "category": "title",
+      "q": "Oriented box intersection queries",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-obb": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. OBB transforms and sphere/plane/ray/box intersection; matrix axes/extents must match world transforms.",
+      "evidence": {
+        "three-obb": [
+          {
+            "path": "examples/jsm/math/OBB.js",
+            "digest": "3297db79bdf0a33525ef06fe7478fd921dcffb7699df1059e189bbdf2c0fae58",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q008",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Intersection queries between rotated bounding boxes",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-obb": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "OBB transforms and sphere/plane/ray/box intersection; matrix axes/extents must match world transforms. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-obb": [
+          {
+            "path": "examples/jsm/math/OBB.js",
+            "digest": "3297db79bdf0a33525ef06fe7478fd921dcffb7699df1059e189bbdf2c0fae58",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q009",
+      "split": "tuning",
+      "category": "title",
+      "q": "HSV color conversion",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-colorconverter": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. HSV setters/getters convert through Three Color HSL; hue wraps and saturation/value clamp. Retain inline xpansive reference.",
+      "evidence": {
+        "three-colorconverter": [
+          {
+            "path": "examples/jsm/math/ColorConverter.js",
+            "digest": "316925abf09f332ab8f1d55dcb6f55bf491e199360a46ab8f60d721c0904cf5a",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q010",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Convert hue saturation and brightness into a color",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-colorconverter": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "HSV setters/getters convert through Three Color HSL; hue wraps and saturation/value clamp. Retain inline xpansive reference. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-colorconverter": [
+          {
+            "path": "examples/jsm/math/ColorConverter.js",
+            "digest": "316925abf09f332ab8f1d55dcb6f55bf491e199360a46ab8f60d721c0904cf5a",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q011",
+      "split": "heldout",
+      "category": "title",
+      "q": "Orbit camera controls",
+      "filters": {
+        "type": "component",
+        "rights": "MIT"
+      },
+      "relevance": {
+        "three-orbitcontrols": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Orbit/pan/dolly around target; perspective/orthographic handling, pointer/wheel/key input and optional damping.",
+      "evidence": {
+        "three-orbitcontrols": [
+          {
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "rights": "MIT"
+        }
+      }
+    },
+    {
+      "id": "Q012",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Rotate the view around a selected object and zoom toward it",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-orbitcontrols": 3,
+        "three-trackballcontrols": 2,
+        "three-mapcontrols": 1
+      },
+      "defaultGrade": 0,
+      "rationale": "Orbit/pan/dolly around target; perspective/orthographic handling, pointer/wheel/key input and optional damping. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-orbitcontrols": [
+          {
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-trackballcontrols": [
+          {
+            "path": "examples/jsm/controls/TrackballControls.js",
+            "digest": "cce95baddf589c16fea901b70f2038eca4557357937e1b03f8c76fe7ffe7457f",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-mapcontrols": [
+          {
+            "path": "examples/jsm/controls/MapControls.js",
+            "digest": "5a686152c498914389d1503b60121f484d06f15cb4f7405c15fb6b8ddcc1bdb6",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q013",
+      "split": "tuning",
+      "category": "title",
+      "q": "Map camera navigation",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-mapcontrols": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. OrbitControls subclass adjusts mouse/touch maps and map-plane interaction; includes complete OrbitControls dependency.",
+      "evidence": {
+        "three-mapcontrols": [
+          {
+            "path": "examples/jsm/controls/MapControls.js",
+            "digest": "5a686152c498914389d1503b60121f484d06f15cb4f7405c15fb6b8ddcc1bdb6",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q014",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Pan a map from above using the mouse or one finger",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-mapcontrols": 3,
+        "three-orbitcontrols": 2
+      },
+      "defaultGrade": 0,
+      "rationale": "OrbitControls subclass adjusts mouse/touch maps and map-plane interaction; includes complete OrbitControls dependency. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-mapcontrols": [
+          {
+            "path": "examples/jsm/controls/MapControls.js",
+            "digest": "5a686152c498914389d1503b60121f484d06f15cb4f7405c15fb6b8ddcc1bdb6",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-orbitcontrols": [
+          {
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q015",
+      "split": "heldout",
+      "category": "title",
+      "q": "Trackball camera navigation",
+      "filters": {
+        "type": "component",
+        "readiness": "source_reviewed"
+      },
+      "relevance": {
+        "three-trackballcontrols": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Trackball rotation/pan/zoom with pointer/touch state; track screen rectangle and resize.",
+      "evidence": {
+        "three-trackballcontrols": [
+          {
+            "path": "examples/jsm/controls/TrackballControls.js",
+            "digest": "cce95baddf589c16fea901b70f2038eca4557357937e1b03f8c76fe7ffe7457f",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "readiness": "source_reviewed"
+        }
+      }
+    },
+    {
+      "id": "Q016",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Rotate the view freely without preserving a fixed up direction",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-trackballcontrols": 3,
+        "three-flycontrols": 1
+      },
+      "defaultGrade": 0,
+      "rationale": "Trackball rotation/pan/zoom with pointer/touch state; track screen rectangle and resize. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-trackballcontrols": [
+          {
+            "path": "examples/jsm/controls/TrackballControls.js",
+            "digest": "cce95baddf589c16fea901b70f2038eca4557357937e1b03f8c76fe7ffe7457f",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-flycontrols": [
+          {
+            "path": "examples/jsm/controls/FlyControls.js",
+            "digest": "8063858389f2ccd5cd6f0968562752dbab4b21a03c7a6e1dcbb5cc746fc06373",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q017",
+      "split": "tuning",
+      "category": "title",
+      "q": "Six-axis flying controls",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-flycontrols": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Keyboard and pointer move/roll camera with delta-scaled motion. movementSpeed uses world units per second.",
+      "evidence": {
+        "three-flycontrols": [
+          {
+            "path": "examples/jsm/controls/FlyControls.js",
+            "digest": "8063858389f2ccd5cd6f0968562752dbab4b21a03c7a6e1dcbb5cc746fc06373",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q018",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Move and roll a camera freely through three dimensional space",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-flycontrols": 3,
+        "three-firstpersoncontrols": 2
+      },
+      "defaultGrade": 0,
+      "rationale": "Keyboard and pointer move/roll camera with delta-scaled motion. movementSpeed uses world units per second. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-flycontrols": [
+          {
+            "path": "examples/jsm/controls/FlyControls.js",
+            "digest": "8063858389f2ccd5cd6f0968562752dbab4b21a03c7a6e1dcbb5cc746fc06373",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-firstpersoncontrols": [
+          {
+            "path": "examples/jsm/controls/FirstPersonControls.js",
+            "digest": "4f6c4bf60c8956a1201c966de1592f4f035be47b4f6fe97879a782898945992c",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q019",
+      "split": "heldout",
+      "category": "title",
+      "q": "First-person free movement",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-firstpersoncontrols": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Keyboard/pointer movement with look constraints; free camera, no floor/collision/gravity.",
+      "evidence": {
+        "three-firstpersoncontrols": [
+          {
+            "path": "examples/jsm/controls/FirstPersonControls.js",
+            "digest": "4f6c4bf60c8956a1201c966de1592f4f035be47b4f6fe97879a782898945992c",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q020",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Keyboard movement and mouse look for a free camera without gravity",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-firstpersoncontrols": 3,
+        "three-flycontrols": 2,
+        "three-pointerlockcontrols": 2
+      },
+      "defaultGrade": 0,
+      "rationale": "Keyboard/pointer movement with look constraints; free camera, no floor/collision/gravity. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-firstpersoncontrols": [
+          {
+            "path": "examples/jsm/controls/FirstPersonControls.js",
+            "digest": "4f6c4bf60c8956a1201c966de1592f4f035be47b4f6fe97879a782898945992c",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-flycontrols": [
+          {
+            "path": "examples/jsm/controls/FlyControls.js",
+            "digest": "8063858389f2ccd5cd6f0968562752dbab4b21a03c7a6e1dcbb5cc746fc06373",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-pointerlockcontrols": [
+          {
+            "path": "examples/jsm/controls/PointerLockControls.js",
+            "digest": "40d58db8018b85038939d4d8bff7112d4b8a0ad0367b37ae6f969eeee4310c25",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q021",
+      "split": "tuning",
+      "category": "title",
+      "q": "Pointer-lock camera look",
+      "filters": {
+        "type": "component",
+        "rights": "MIT"
+      },
+      "relevance": {
+        "three-pointerlockcontrols": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Pointer Lock API camera yaw/pitch plus moveForward/moveRight helpers; browser gesture required.",
+      "evidence": {
+        "three-pointerlockcontrols": [
+          {
+            "path": "examples/jsm/controls/PointerLockControls.js",
+            "digest": "40d58db8018b85038939d4d8bff7112d4b8a0ad0367b37ae6f969eeee4310c25",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "rights": "MIT"
+        }
+      }
+    },
+    {
+      "id": "Q022",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Capture the mouse after a click for first person looking then escape to release",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-pointerlockcontrols": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Pointer Lock API camera yaw/pitch plus moveForward/moveRight helpers; browser gesture required. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-pointerlockcontrols": [
+          {
+            "path": "examples/jsm/controls/PointerLockControls.js",
+            "digest": "40d58db8018b85038939d4d8bff7112d4b8a0ad0367b37ae6f969eeee4310c25",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q023",
+      "split": "heldout",
+      "category": "title",
+      "q": "Rounded box mesh geometry",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-roundedboxgeometry": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. BoxGeometry-derived rounded normals/positions and UV mapping; dimensions/radius in target units.",
+      "evidence": {
+        "three-roundedboxgeometry": [
+          {
+            "path": "examples/jsm/geometries/RoundedBoxGeometry.js",
+            "digest": "c5feab96123858ed8823c889b238dc8734adab7e760e3cfd21e7f3f2f3e348e3",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q024",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Create a cube with curved edges and rounded corners",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-roundedboxgeometry": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "BoxGeometry-derived rounded normals/positions and UV mapping; dimensions/radius in target units. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-roundedboxgeometry": [
+          {
+            "path": "examples/jsm/geometries/RoundedBoxGeometry.js",
+            "digest": "c5feab96123858ed8823c889b238dc8734adab7e760e3cfd21e7f3f2f3e348e3",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q025",
+      "split": "tuning",
+      "category": "title",
+      "q": "Projected decal geometry",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-decalgeometry": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Clips mesh triangles against projector box; position/orientation/size supplied by caller.",
+      "evidence": {
+        "three-decalgeometry": [
+          {
+            "path": "examples/jsm/geometries/DecalGeometry.js",
+            "digest": "6b2da6ea840926dfb0278841f96067c02964c73644c7f189720e89fe9baa2b10",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q026",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Project a patch onto the triangles of an existing mesh",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-decalgeometry": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Clips mesh triangles against projector box; position/orientation/size supplied by caller. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-decalgeometry": [
+          {
+            "path": "examples/jsm/geometries/DecalGeometry.js",
+            "digest": "6b2da6ea840926dfb0278841f96067c02964c73644c7f189720e89fe9baa2b10",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q027",
+      "split": "heldout",
+      "category": "title",
+      "q": "Convex hull mesh geometry",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-convexgeometry": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Point set becomes convex hull geometry using complete local ConvexHull dependency; keep quickhull attribution comments.",
+      "evidence": {
+        "three-convexgeometry": [
+          {
+            "path": "examples/jsm/geometries/ConvexGeometry.js",
+            "digest": "f52f4c5f0cc42eaef25d7330e912693ae1d7a9b0df0a599cd35f5854e9ecb34e",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "examples/jsm/math/ConvexHull.js",
+            "digest": "7b7d53ed4533556f555440676d2cbc3680ffab32b1a910c79c9a522019bd3a06",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q028",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Build a closed convex mesh enclosing a set of points",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-convexgeometry": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Point set becomes convex hull geometry using complete local ConvexHull dependency; keep quickhull attribution comments. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-convexgeometry": [
+          {
+            "path": "examples/jsm/geometries/ConvexGeometry.js",
+            "digest": "f52f4c5f0cc42eaef25d7330e912693ae1d7a9b0df0a599cd35f5854e9ecb34e",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "examples/jsm/math/ConvexHull.js",
+            "digest": "7b7d53ed4533556f555440676d2cbc3680ffab32b1a910c79c9a522019bd3a06",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q029",
+      "split": "tuning",
+      "category": "title",
+      "q": "Parametric surface geometry",
+      "filters": {
+        "type": "component",
+        "readiness": "source_reviewed"
+      },
+      "relevance": {
+        "three-parametricgeometry": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Samples caller(u,v,target) over slices/stacks and finite-difference normals. Callback domain normalized 0..1.",
+      "evidence": {
+        "three-parametricgeometry": [
+          {
+            "path": "examples/jsm/geometries/ParametricGeometry.js",
+            "digest": "f25b69d9f8a5a7f8e206bb151875609349dabaf9bd81830779033ed2521e8a7a",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "readiness": "source_reviewed"
+        }
+      }
+    },
+    {
+      "id": "Q030",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Generate a surface by sampling a function of two parameters",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-parametricgeometry": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Samples caller(u,v,target) over slices/stacks and finite-difference normals. Callback domain normalized 0..1. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-parametricgeometry": [
+          {
+            "path": "examples/jsm/geometries/ParametricGeometry.js",
+            "digest": "f25b69d9f8a5a7f8e206bb151875609349dabaf9bd81830779033ed2521e8a7a",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q031",
+      "split": "heldout",
+      "category": "title",
+      "q": "Subdivided wire box geometry",
+      "filters": {
+        "type": "component",
+        "rights": "MIT"
+      },
+      "relevance": {
+        "three-boxlinegeometry": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. LineSegments-ready subdivided box, with independent width/height/depth segment counts.",
+      "evidence": {
+        "three-boxlinegeometry": [
+          {
+            "path": "examples/jsm/geometries/BoxLineGeometry.js",
+            "digest": "5f4bd99627f84e1fe81cf1927ca867ac2968c9354d5e54b11849d0887170ad51",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "rights": "MIT"
+        }
+      }
+    },
+    {
+      "id": "Q032",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Draw the subdivided edges of a rectangular box",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-boxlinegeometry": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "LineSegments-ready subdivided box, with independent width/height/depth segment counts. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-boxlinegeometry": [
+          {
+            "path": "examples/jsm/geometries/BoxLineGeometry.js",
+            "digest": "5f4bd99627f84e1fe81cf1927ca867ac2968c9354d5e54b11849d0887170ad51",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q033",
+      "split": "tuning",
+      "category": "title",
+      "q": "Directional audio cone visualization",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-positionalaudiohelper": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Visualizes existing positional audio panner cone angles; no audio files or playback engine.",
+      "evidence": {
+        "three-positionalaudiohelper": [
+          {
+            "path": "examples/jsm/helpers/PositionalAudioHelper.js",
+            "digest": "027531f7208bea6c63281465cb95ca9a1246cd0b7ea3e1e9d605ae813abdf67b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q034",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Show which direction an existing spatial sound is pointing",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-positionalaudiohelper": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Visualizes existing positional audio panner cone angles; no audio files or playback engine. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-positionalaudiohelper": [
+          {
+            "path": "examples/jsm/helpers/PositionalAudioHelper.js",
+            "digest": "027531f7208bea6c63281465cb95ca9a1246cd0b7ea3e1e9d605ae813abdf67b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q035",
+      "split": "heldout",
+      "category": "title",
+      "q": "Vertex normal visualization",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-vertexnormalshelper": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Draws world-transformed vertex normals from existing mesh geometry.",
+      "evidence": {
+        "three-vertexnormalshelper": [
+          {
+            "path": "examples/jsm/helpers/VertexNormalsHelper.js",
+            "digest": "666a1219d95010e4d5d290f08774af2c327b7bcd368ebdec29a111805c8b7ecc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q036",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Draw arrows showing the direction each mesh vertex faces",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-vertexnormalshelper": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Draws world-transformed vertex normals from existing mesh geometry. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-vertexnormalshelper": [
+          {
+            "path": "examples/jsm/helpers/VertexNormalsHelper.js",
+            "digest": "666a1219d95010e4d5d290f08774af2c327b7bcd368ebdec29a111805c8b7ecc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q037",
+      "split": "tuning",
+      "category": "title",
+      "q": "Vertex tangent visualization",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-vertextangentshelper": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Draws tangent vectors from existing tangent buffer attribute; input attribute is a precondition.",
+      "evidence": {
+        "three-vertextangentshelper": [
+          {
+            "path": "examples/jsm/helpers/VertexTangentsHelper.js",
+            "digest": "b0d38d36af91eb8f5a119cae0a12861f2d0d27f35a1bdf70462fb53976a752eb",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q038",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Visualize the tangent vectors already stored on a mesh",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-vertextangentshelper": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Draws tangent vectors from existing tangent buffer attribute; input attribute is a precondition. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-vertextangentshelper": [
+          {
+            "path": "examples/jsm/helpers/VertexTangentsHelper.js",
+            "digest": "b0d38d36af91eb8f5a119cae0a12861f2d0d27f35a1bdf70462fb53976a752eb",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q039",
+      "split": "heldout",
+      "category": "title",
+      "q": "Light probe visualization",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-lightprobehelper": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Sphere shader visualizes supplied spherical-harmonic probe coefficients/intensity; inline shader included.",
+      "evidence": {
+        "three-lightprobehelper": [
+          {
+            "path": "examples/jsm/helpers/LightProbeHelper.js",
+            "digest": "4b4731f9e5d350bb809353cd16cf6e4c993803cae08f6ac15baa91d2560b9657",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q040",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Display a sphere showing the lighting captured by a light probe",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-lightprobehelper": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Sphere shader visualizes supplied spherical-harmonic probe coefficients/intensity; inline shader included. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-lightprobehelper": [
+          {
+            "path": "examples/jsm/helpers/LightProbeHelper.js",
+            "digest": "4b4731f9e5d350bb809353cd16cf6e4c993803cae08f6ac15baa91d2560b9657",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q041",
+      "split": "tuning",
+      "category": "title",
+      "q": "Camera frustum from rectangle",
+      "filters": {
+        "type": "component",
+        "rights": "MIT"
+      },
+      "relevance": {
+        "three-camerautils": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. frameCorners sets off-axis projection from three world-space screen corners and camera position.",
+      "evidence": {
+        "three-camerautils": [
+          {
+            "path": "examples/jsm/utils/CameraUtils.js",
+            "digest": "9d3fd8e3dbc94f50a45acf41b18a8f1d14254af403e90a19573036d127567def",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "rights": "MIT"
+        }
+      }
+    },
+    {
+      "id": "Q042",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Set a perspective camera projection to fit three corners of a rectangle",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-camerautils": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "frameCorners sets off-axis projection from three world-space screen corners and camera position. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-camerautils": [
+          {
+            "path": "examples/jsm/utils/CameraUtils.js",
+            "digest": "9d3fd8e3dbc94f50a45acf41b18a8f1d14254af403e90a19573036d127567def",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q043",
+      "split": "heldout",
+      "category": "title",
+      "q": "Scene mesh conversion utilities",
+      "filters": {
+        "type": "component",
+        "readiness": "source_reviewed"
+      },
+      "relevance": {
+        "three-sceneutils": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Instanced/multi-material mesh conversions, vertex reduction and instance sorting; includes BufferGeometryUtils source closure.",
+      "evidence": {
+        "three-sceneutils": [
+          {
+            "path": "examples/jsm/utils/BufferGeometryUtils.js",
+            "digest": "84f75b6d514411cac05e519383c54a6bf4fd5d6fc9a74acd3f532dedb92b0db1",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "examples/jsm/utils/SceneUtils.js",
+            "digest": "d2d1673d80cdb919232f8e22fd341f79ec5b6f1c8d7df3fe884ceb8c8fbedc07",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "readiness": "source_reviewed"
+        }
+      }
+    },
+    {
+      "id": "Q044",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Convert an instanced mesh into separate scene meshes",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-sceneutils": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Instanced/multi-material mesh conversions, vertex reduction and instance sorting; includes BufferGeometryUtils source closure. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-sceneutils": [
+          {
+            "path": "examples/jsm/utils/BufferGeometryUtils.js",
+            "digest": "84f75b6d514411cac05e519383c54a6bf4fd5d6fc9a74acd3f532dedb92b0db1",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "examples/jsm/utils/SceneUtils.js",
+            "digest": "d2d1673d80cdb919232f8e22fd341f79ec5b6f1c8d7df3fe884ceb8c8fbedc07",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q045",
+      "split": "tuning",
+      "category": "title",
+      "q": "Skeleton clone and retarget utilities",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-skeletonutils": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Clone skinned hierarchies and retarget poses/clips; maps bone names and samples animation tracks.",
+      "evidence": {
+        "three-skeletonutils": [
+          {
+            "path": "examples/jsm/utils/SkeletonUtils.js",
+            "digest": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q046",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Duplicate a rigged character so its bones can animate independently",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-skeletonutils": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Clone skinned hierarchies and retarget poses/clips; maps bone names and samples animation tracks. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-skeletonutils": [
+          {
+            "path": "examples/jsm/utils/SkeletonUtils.js",
+            "digest": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q047",
+      "split": "heldout",
+      "category": "title",
+      "q": "Planar reflection surface",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-reflector": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Planar mirror with internal render target, virtual camera and inline clipping/shader logic.",
+      "evidence": {
+        "three-reflector": [
+          {
+            "path": "examples/jsm/objects/Reflector.js",
+            "digest": "57836df976f02a474b2dcfbb6609bca8bde0ccc6e77159ad8e418fa11c065d3b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q048",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "A flat mirror that reflects the scene",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-reflector": 3,
+        "three-water": 1
+      },
+      "defaultGrade": 0,
+      "rationale": "Planar mirror with internal render target, virtual camera and inline clipping/shader logic. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-reflector": [
+          {
+            "path": "examples/jsm/objects/Reflector.js",
+            "digest": "57836df976f02a474b2dcfbb6609bca8bde0ccc6e77159ad8e418fa11c065d3b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-water": [
+          {
+            "path": "examples/jsm/objects/Water.js",
+            "digest": "3386670ba86003a32f5efe449041bd108d4cf1e0661849caa814741a2aaf395b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q049",
+      "split": "tuning",
+      "category": "title",
+      "q": "Planar refraction surface",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-refractor": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Planar refraction using internal target and oblique camera clip plane; inline shader included.",
+      "evidence": {
+        "three-refractor": [
+          {
+            "path": "examples/jsm/objects/Refractor.js",
+            "digest": "512c4ec056b8af3c7aa24f80a74d606dfd10c06697686b2b73df8dbe7f2f9d78",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q050",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "A planar window that bends the view behind it",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-refractor": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Planar refraction using internal target and oblique camera clip plane; inline shader included. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-refractor": [
+          {
+            "path": "examples/jsm/objects/Refractor.js",
+            "digest": "512c4ec056b8af3c7aa24f80a74d606dfd10c06697686b2b73df8dbe7f2f9d78",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q051",
+      "split": "heldout",
+      "category": "title",
+      "q": "Procedural atmospheric sky",
+      "filters": {
+        "type": "component",
+        "rights": "MIT"
+      },
+      "relevance": {
+        "three-sky": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Inline atmospheric/cloud shader on skydome mesh; supplied sun direction/turbidity parameters, no fetched imagery.",
+      "evidence": {
+        "three-sky": [
+          {
+            "path": "examples/jsm/objects/Sky.js",
+            "digest": "34121b60a3bd9adc004a5a637f6135e9d2b72757eeb9e476ae1988fe2db6a9fb",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "rights": "MIT"
+        }
+      }
+    },
+    {
+      "id": "Q052",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Generate the appearance of daylight and atmosphere without loading a sky image",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-sky": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Inline atmospheric/cloud shader on skydome mesh; supplied sun direction/turbidity parameters, no fetched imagery. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-sky": [
+          {
+            "path": "examples/jsm/objects/Sky.js",
+            "digest": "34121b60a3bd9adc004a5a637f6135e9d2b72757eeb9e476ae1988fe2db6a9fb",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q053",
+      "split": "tuning",
+      "category": "title",
+      "q": "Reflective water surface",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-water": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Inline water shader plus reflection target; caller supplies normal texture and advances time uniform.",
+      "evidence": {
+        "three-water": [
+          {
+            "path": "examples/jsm/objects/Water.js",
+            "digest": "3386670ba86003a32f5efe449041bd108d4cf1e0661849caa814741a2aaf395b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q054",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Render a flat reflective water plane using my own normal texture",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-water": 3,
+        "three-reflector": 1
+      },
+      "defaultGrade": 0,
+      "rationale": "Inline water shader plus reflection target; caller supplies normal texture and advances time uniform. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-water": [
+          {
+            "path": "examples/jsm/objects/Water.js",
+            "digest": "3386670ba86003a32f5efe449041bd108d4cf1e0661849caa814741a2aaf395b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-reflector": [
+          {
+            "path": "examples/jsm/objects/Reflector.js",
+            "digest": "57836df976f02a474b2dcfbb6609bca8bde0ccc6e77159ad8e418fa11c065d3b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q055",
+      "split": "heldout",
+      "category": "title",
+      "q": "DOM labels in 3D scenes",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-css2drenderer": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. CSS2DObject plus DOM projection renderer; translation-only labels and z-order from camera/world transforms.",
+      "evidence": {
+        "three-css2drenderer": [
+          {
+            "path": "examples/jsm/renderers/CSS2DRenderer.js",
+            "digest": "256abfc6ae1aa20eb83c10d7a0e26534527df65872e4d52da6354bee78288c34",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q056",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Attach readable HTML text labels to objects in a three dimensional scene",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-css2drenderer": 3,
+        "three-css3drenderer": 1
+      },
+      "defaultGrade": 0,
+      "rationale": "CSS2DObject plus DOM projection renderer; translation-only labels and z-order from camera/world transforms. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-css2drenderer": [
+          {
+            "path": "examples/jsm/renderers/CSS2DRenderer.js",
+            "digest": "256abfc6ae1aa20eb83c10d7a0e26534527df65872e4d52da6354bee78288c34",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-css3drenderer": [
+          {
+            "path": "examples/jsm/renderers/CSS3DRenderer.js",
+            "digest": "cd1f6bfaff0e2efa8a95b8cca6e96b0eea957d6a6057d875de8bab720b49057b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q057",
+      "split": "tuning",
+      "category": "title",
+      "q": "3D transformed DOM panels",
+      "filters": {
+        "type": "component",
+        "readiness": "source_reviewed"
+      },
+      "relevance": {
+        "three-css3drenderer": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. CSS3DObject/Sprite plus DOM perspective transforms; does not support normal mesh materials or geometry.",
+      "evidence": {
+        "three-css3drenderer": [
+          {
+            "path": "examples/jsm/renderers/CSS3DRenderer.js",
+            "digest": "cd1f6bfaff0e2efa8a95b8cca6e96b0eea957d6a6057d875de8bab720b49057b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "readiness": "source_reviewed"
+        }
+      }
+    },
+    {
+      "id": "Q058",
+      "split": "tuning",
+      "category": "ordinary-language",
+      "q": "Place HTML panels in perspective with three dimensional transforms",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-css3drenderer": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "CSS3DObject/Sprite plus DOM perspective transforms; does not support normal mesh materials or geometry. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "three-css3drenderer": [
+          {
+            "path": "examples/jsm/renderers/CSS3DRenderer.js",
+            "digest": "cd1f6bfaff0e2efa8a95b8cca6e96b0eea957d6a6057d875de8bab720b49057b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q059",
+      "split": "heldout",
+      "category": "title",
+      "q": "2048 tile state and serialization",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "2048-tile": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Exact requested scoped component identity. Inspected Tile constructor, savePosition/updatePosition and serialize; no renderer, game rules, cloud persistence or restore loader.",
+      "evidence": {
+        "2048-tile": [
+          {
+            "path": "js/tile.js",
+            "digest": "13699e51d62179a6d36874108831a29901a98d6e11329918e64cfb5ee82d58e3",
+            "source_commit": "478b6ec346e3787f589e4af751378d06ded4cbbc"
+          },
+          {
+            "path": "LICENSE.txt",
+            "digest": "57e12c39a6ad9d98b2e451065bfdfbd15fc9e0c2ed3bf4dc1d09acab41ff02fc",
+            "source_commit": "478b6ec346e3787f589e4af751378d06ded4cbbc"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q060",
+      "split": "heldout",
+      "category": "ordinary-language",
+      "q": "Serialize a numbered puzzle tile position and value as plain data",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "2048-tile": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Inspected Tile constructor, savePosition/updatePosition and serialize; no renderer, game rules, cloud persistence or restore loader. Other nonzero judgments are useful partial source alternatives; not equivalent tested integrations.",
+      "evidence": {
+        "2048-tile": [
+          {
+            "path": "js/tile.js",
+            "digest": "13699e51d62179a6d36874108831a29901a98d6e11329918e64cfb5ee82d58e3",
+            "source_commit": "478b6ec346e3787f589e4af751378d06ded4cbbc"
+          },
+          {
+            "path": "LICENSE.txt",
+            "digest": "57e12c39a6ad9d98b2e451065bfdfbd15fc9e0c2ed3bf4dc1d09acab41ff02fc",
+            "source_commit": "478b6ec346e3787f589e4af751378d06ded4cbbc"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q061",
+      "split": "tuning",
+      "category": "composite",
+      "q": "A city builder with bird eye map panning and HTML names over buildings",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-mapcontrols": 3,
+        "three-css2drenderer": 3,
+        "three-orbitcontrols": 2,
+        "three-css3drenderer": 1
+      },
+      "defaultGrade": 0,
+      "rationale": "Map camera interaction and projected DOM labels are inspected; city simulation is not supplied.",
+      "evidence": {
+        "three-mapcontrols": [
+          {
+            "path": "examples/jsm/controls/MapControls.js",
+            "digest": "5a686152c498914389d1503b60121f484d06f15cb4f7405c15fb6b8ddcc1bdb6",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-css2drenderer": [
+          {
+            "path": "examples/jsm/renderers/CSS2DRenderer.js",
+            "digest": "256abfc6ae1aa20eb83c10d7a0e26534527df65872e4d52da6354bee78288c34",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-orbitcontrols": [
+          {
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-css3drenderer": [
+          {
+            "path": "examples/jsm/renderers/CSS3DRenderer.js",
+            "digest": "cd1f6bfaff0e2efa8a95b8cca6e96b0eea957d6a6057d875de8bab720b49057b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q062",
+      "split": "heldout",
+      "category": "composite",
+      "q": "A flight exploration scene needs a free rolling camera and a procedural daytime sky",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-flycontrols": 3,
+        "three-sky": 3,
+        "three-firstpersoncontrols": 1
+      },
+      "defaultGrade": 0,
+      "rationale": "Flying camera plus atmospheric sky; no flight physics claim.",
+      "evidence": {
+        "three-flycontrols": [
+          {
+            "path": "examples/jsm/controls/FlyControls.js",
+            "digest": "8063858389f2ccd5cd6f0968562752dbab4b21a03c7a6e1dcbb5cc746fc06373",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-sky": [
+          {
+            "path": "examples/jsm/objects/Sky.js",
+            "digest": "34121b60a3bd9adc004a5a637f6135e9d2b72757eeb9e476ae1988fe2db6a9fb",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-firstpersoncontrols": [
+          {
+            "path": "examples/jsm/controls/FirstPersonControls.js",
+            "digest": "4f6c4bf60c8956a1201c966de1592f4f035be47b4f6fe97879a782898945992c",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q063",
+      "split": "tuning",
+      "category": "composite",
+      "q": "For an RTS editor rotate selection from above and display bounds of rotated objects",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-mapcontrols": 3,
+        "three-obb": 3,
+        "three-orbitcontrols": 2
+      },
+      "defaultGrade": 0,
+      "rationale": "Map view and oriented bounds queries support editor inspection, not unit AI.",
+      "evidence": {
+        "three-mapcontrols": [
+          {
+            "path": "examples/jsm/controls/MapControls.js",
+            "digest": "5a686152c498914389d1503b60121f484d06f15cb4f7405c15fb6b8ddcc1bdb6",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-obb": [
+          {
+            "path": "examples/jsm/math/OBB.js",
+            "digest": "3297db79bdf0a33525ef06fe7478fd921dcffb7699df1059e189bbdf2c0fae58",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-orbitcontrols": [
+          {
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q064",
+      "split": "heldout",
+      "category": "composite",
+      "q": "Inspect normal and tangent directions on a character mesh",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-vertexnormalshelper": 3,
+        "three-vertextangentshelper": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Separate helpers render existing normal and tangent attributes.",
+      "evidence": {
+        "three-vertexnormalshelper": [
+          {
+            "path": "examples/jsm/helpers/VertexNormalsHelper.js",
+            "digest": "666a1219d95010e4d5d290f08774af2c327b7bcd368ebdec29a111805c8b7ecc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-vertextangentshelper": [
+          {
+            "path": "examples/jsm/helpers/VertexTangentsHelper.js",
+            "digest": "b0d38d36af91eb8f5a119cae0a12861f2d0d27f35a1bdf70462fb53976a752eb",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q065",
+      "split": "tuning",
+      "category": "composite",
+      "q": "A puzzle diorama needs rounded blocks and serializable tile state",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-roundedboxgeometry": 3,
+        "2048-tile": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Rounded geometry and tile serialization are separate inspected pieces.",
+      "evidence": {
+        "three-roundedboxgeometry": [
+          {
+            "path": "examples/jsm/geometries/RoundedBoxGeometry.js",
+            "digest": "c5feab96123858ed8823c889b238dc8734adab7e760e3cfd21e7f3f2f3e348e3",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "2048-tile": [
+          {
+            "path": "js/tile.js",
+            "digest": "13699e51d62179a6d36874108831a29901a98d6e11329918e64cfb5ee82d58e3",
+            "source_commit": "478b6ec346e3787f589e4af751378d06ded4cbbc"
+          },
+          {
+            "path": "LICENSE.txt",
+            "digest": "57e12c39a6ad9d98b2e451065bfdfbd15fc9e0c2ed3bf4dc1d09acab41ff02fc",
+            "source_commit": "478b6ec346e3787f589e4af751378d06ded4cbbc"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q066",
+      "split": "heldout",
+      "category": "composite",
+      "q": "Retarget a motion clip and clone a rigged character for independent playback",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-skeletonutils": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Both retarget and skeleton-safe clone are in the inspected utility scope.",
+      "evidence": {
+        "three-skeletonutils": [
+          {
+            "path": "examples/jsm/utils/SkeletonUtils.js",
+            "digest": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q067",
+      "split": "tuning",
+      "category": "composite",
+      "q": "A river environment with a reflective water plane and generated atmospheric sky",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-water": 3,
+        "three-sky": 3,
+        "three-reflector": 1
+      },
+      "defaultGrade": 0,
+      "rationale": "Reflective water plus sky; fluid simulation and asset clearance remain absent.",
+      "evidence": {
+        "three-water": [
+          {
+            "path": "examples/jsm/objects/Water.js",
+            "digest": "3386670ba86003a32f5efe449041bd108d4cf1e0661849caa814741a2aaf395b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-sky": [
+          {
+            "path": "examples/jsm/objects/Sky.js",
+            "digest": "34121b60a3bd9adc004a5a637f6135e9d2b72757eeb9e476ae1988fe2db6a9fb",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-reflector": [
+          {
+            "path": "examples/jsm/objects/Reflector.js",
+            "digest": "57836df976f02a474b2dcfbb6609bca8bde0ccc6e77159ad8e418fa11c065d3b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q068",
+      "split": "heldout",
+      "category": "composite",
+      "q": "A museum scene uses a flat mirror and perspective HTML information panels",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-reflector": 3,
+        "three-css3drenderer": 3,
+        "three-css2drenderer": 1
+      },
+      "defaultGrade": 0,
+      "rationale": "Mirror pass and DOM transforms are independently supported.",
+      "evidence": {
+        "three-reflector": [
+          {
+            "path": "examples/jsm/objects/Reflector.js",
+            "digest": "57836df976f02a474b2dcfbb6609bca8bde0ccc6e77159ad8e418fa11c065d3b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-css3drenderer": [
+          {
+            "path": "examples/jsm/renderers/CSS3DRenderer.js",
+            "digest": "cd1f6bfaff0e2efa8a95b8cca6e96b0eea957d6a6057d875de8bab720b49057b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-css2drenderer": [
+          {
+            "path": "examples/jsm/renderers/CSS2DRenderer.js",
+            "digest": "256abfc6ae1aa20eb83c10d7a0e26534527df65872e4d52da6354bee78288c34",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q069",
+      "split": "tuning",
+      "category": "composite",
+      "q": "Inspect sound direction and the illumination inside a scene editor",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-positionalaudiohelper": 3,
+        "three-lightprobehelper": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Visualization helpers only; no sound synthesis or lighting bake.",
+      "evidence": {
+        "three-positionalaudiohelper": [
+          {
+            "path": "examples/jsm/helpers/PositionalAudioHelper.js",
+            "digest": "027531f7208bea6c63281465cb95ca9a1246cd0b7ea3e1e9d605ae813abdf67b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-lightprobehelper": [
+          {
+            "path": "examples/jsm/helpers/LightProbeHelper.js",
+            "digest": "4b4731f9e5d350bb809353cd16cf6e4c993803cae08f6ac15baa91d2560b9657",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q070",
+      "split": "heldout",
+      "category": "composite",
+      "q": "Create arbitrary parametric surfaces then examine their vertex normals",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-parametricgeometry": 3,
+        "three-vertexnormalshelper": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Surface generation and normal display compose as source leads.",
+      "evidence": {
+        "three-parametricgeometry": [
+          {
+            "path": "examples/jsm/geometries/ParametricGeometry.js",
+            "digest": "f25b69d9f8a5a7f8e206bb151875609349dabaf9bd81830779033ed2521e8a7a",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-vertexnormalshelper": [
+          {
+            "path": "examples/jsm/helpers/VertexNormalsHelper.js",
+            "digest": "666a1219d95010e4d5d290f08774af2c327b7bcd368ebdec29a111805c8b7ecc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q071",
+      "split": "tuning",
+      "category": "composite",
+      "q": "For geospatial exploration pan a bird eye map with an HTML label for each point",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-mapcontrols": 3,
+        "three-css2drenderer": 3,
+        "three-orbitcontrols": 2
+      },
+      "defaultGrade": 0,
+      "rationale": "Camera and labels apply to map exploration; no map data ingestion or coordinate conversion.",
+      "evidence": {
+        "three-mapcontrols": [
+          {
+            "path": "examples/jsm/controls/MapControls.js",
+            "digest": "5a686152c498914389d1503b60121f484d06f15cb4f7405c15fb6b8ddcc1bdb6",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-css2drenderer": [
+          {
+            "path": "examples/jsm/renderers/CSS2DRenderer.js",
+            "digest": "256abfc6ae1aa20eb83c10d7a0e26534527df65872e4d52da6354bee78288c34",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-orbitcontrols": [
+          {
+            "path": "examples/jsm/controls/OrbitControls.js",
+            "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q072",
+      "split": "heldout",
+      "category": "composite",
+      "q": "A simulation debug view needs pill bounds queries and oriented box intersection tests",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-capsule": 3,
+        "three-obb": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Two bounded query primitives, no collision response or simulation engine.",
+      "evidence": {
+        "three-capsule": [
+          {
+            "path": "examples/jsm/math/Capsule.js",
+            "digest": "be54c3c58483a7f6b0184dbc6ffdcea58ac13515a7d9fd19ed675b9edfc5f319",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-obb": [
+          {
+            "path": "examples/jsm/math/OBB.js",
+            "digest": "3297db79bdf0a33525ef06fe7478fd921dcffb7699df1059e189bbdf2c0fae58",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q073",
+      "split": "tuning",
+      "category": "composite",
+      "q": "A first person prototype needs mouse capture and a capsule bounds check",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-pointerlockcontrols": 3,
+        "three-capsule": 3,
+        "three-firstpersoncontrols": 1
+      },
+      "defaultGrade": 0,
+      "rationale": "Mouse-look and capsule math are separate; gravity and controller collision integration absent.",
+      "evidence": {
+        "three-pointerlockcontrols": [
+          {
+            "path": "examples/jsm/controls/PointerLockControls.js",
+            "digest": "40d58db8018b85038939d4d8bff7112d4b8a0ad0367b37ae6f969eeee4310c25",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-capsule": [
+          {
+            "path": "examples/jsm/math/Capsule.js",
+            "digest": "be54c3c58483a7f6b0184dbc6ffdcea58ac13515a7d9fd19ed675b9edfc5f319",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-firstpersoncontrols": [
+          {
+            "path": "examples/jsm/controls/FirstPersonControls.js",
+            "digest": "4f6c4bf60c8956a1201c966de1592f4f035be47b4f6fe97879a782898945992c",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q074",
+      "split": "heldout",
+      "category": "composite",
+      "q": "Use seeded noise for repeatable terrain and sample a parametric surface",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-simplexnoise": 3,
+        "three-parametricgeometry": 3,
+        "three-improvednoise": 1
+      },
+      "defaultGrade": 0,
+      "rationale": "Seeded sampler and callback mesh generation; terrain assembly itself untested.",
+      "evidence": {
+        "three-simplexnoise": [
+          {
+            "path": "examples/jsm/math/SimplexNoise.js",
+            "digest": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-parametricgeometry": [
+          {
+            "path": "examples/jsm/geometries/ParametricGeometry.js",
+            "digest": "f25b69d9f8a5a7f8e206bb151875609349dabaf9bd81830779033ed2521e8a7a",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-improvednoise": [
+          {
+            "path": "examples/jsm/math/ImprovedNoise.js",
+            "digest": "d3821241e25bf0c8bfc13cec941924573bbaaf8f599a4fa07d60664b97832b39",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q075",
+      "split": "tuning",
+      "category": "composite",
+      "q": "Display a refractive window beside a reflecting mirror",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-refractor": 3,
+        "three-reflector": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Separate flat refraction and reflection effects.",
+      "evidence": {
+        "three-refractor": [
+          {
+            "path": "examples/jsm/objects/Refractor.js",
+            "digest": "512c4ec056b8af3c7aa24f80a74d606dfd10c06697686b2b73df8dbe7f2f9d78",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-reflector": [
+          {
+            "path": "examples/jsm/objects/Reflector.js",
+            "digest": "57836df976f02a474b2dcfbb6609bca8bde0ccc6e77159ad8e418fa11c065d3b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q076",
+      "split": "heldout",
+      "category": "composite",
+      "q": "Project visual markings onto rounded box meshes",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-decalgeometry": 3,
+        "three-roundedboxgeometry": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Decal projection and rounded mesh; supplied texture rights remain separate.",
+      "evidence": {
+        "three-decalgeometry": [
+          {
+            "path": "examples/jsm/geometries/DecalGeometry.js",
+            "digest": "6b2da6ea840926dfb0278841f96067c02964c73644c7f189720e89fe9baa2b10",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-roundedboxgeometry": [
+          {
+            "path": "examples/jsm/geometries/RoundedBoxGeometry.js",
+            "digest": "c5feab96123858ed8823c889b238dc8734adab7e760e3cfd21e7f3f2f3e348e3",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q077",
+      "split": "tuning",
+      "category": "composite",
+      "q": "Build a convex hull and show the surface normal directions",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-convexgeometry": 3,
+        "three-vertexnormalshelper": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Convex mesh generation and normal helper, not concave decomposition.",
+      "evidence": {
+        "three-convexgeometry": [
+          {
+            "path": "examples/jsm/geometries/ConvexGeometry.js",
+            "digest": "f52f4c5f0cc42eaef25d7330e912693ae1d7a9b0df0a599cd35f5854e9ecb34e",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "examples/jsm/math/ConvexHull.js",
+            "digest": "7b7d53ed4533556f555440676d2cbc3680ffab32b1a910c79c9a522019bd3a06",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-vertexnormalshelper": [
+          {
+            "path": "examples/jsm/helpers/VertexNormalsHelper.js",
+            "digest": "666a1219d95010e4d5d290f08774af2c327b7bcd368ebdec29a111805c8b7ecc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q078",
+      "split": "heldout",
+      "category": "composite",
+      "q": "Turn instanced scene objects into individual meshes and label them with HTML",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-sceneutils": 3,
+        "three-css2drenderer": 3,
+        "three-css3drenderer": 1
+      },
+      "defaultGrade": 0,
+      "rationale": "Mesh conversion and DOM labels are scoped utilities.",
+      "evidence": {
+        "three-sceneutils": [
+          {
+            "path": "examples/jsm/utils/BufferGeometryUtils.js",
+            "digest": "84f75b6d514411cac05e519383c54a6bf4fd5d6fc9a74acd3f532dedb92b0db1",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "examples/jsm/utils/SceneUtils.js",
+            "digest": "d2d1673d80cdb919232f8e22fd341f79ec5b6f1c8d7df3fe884ceb8c8fbedc07",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-css2drenderer": [
+          {
+            "path": "examples/jsm/renderers/CSS2DRenderer.js",
+            "digest": "256abfc6ae1aa20eb83c10d7a0e26534527df65872e4d52da6354bee78288c34",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-css3drenderer": [
+          {
+            "path": "examples/jsm/renderers/CSS3DRenderer.js",
+            "digest": "cd1f6bfaff0e2efa8a95b8cca6e96b0eea957d6a6057d875de8bab720b49057b",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q079",
+      "split": "tuning",
+      "category": "composite",
+      "q": "A color picker needs HSV conversion beside a procedural sky preview",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-colorconverter": 3,
+        "three-sky": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "HSV math and sky display do not themselves implement a picker UI.",
+      "evidence": {
+        "three-colorconverter": [
+          {
+            "path": "examples/jsm/math/ColorConverter.js",
+            "digest": "316925abf09f332ab8f1d55dcb6f55bf491e199360a46ab8f60d721c0904cf5a",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-sky": [
+          {
+            "path": "examples/jsm/objects/Sky.js",
+            "digest": "34121b60a3bd9adc004a5a637f6135e9d2b72757eeb9e476ae1988fe2db6a9fb",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q080",
+      "split": "heldout",
+      "category": "composite",
+      "q": "Frame a screen from its corners and draw a wire box around the installation",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {
+        "three-camerautils": 3,
+        "three-boxlinegeometry": 3
+      },
+      "defaultGrade": 0,
+      "rationale": "Off-axis camera frustum plus line geometry.",
+      "evidence": {
+        "three-camerautils": [
+          {
+            "path": "examples/jsm/utils/CameraUtils.js",
+            "digest": "9d3fd8e3dbc94f50a45acf41b18a8f1d14254af403e90a19573036d127567def",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ],
+        "three-boxlinegeometry": [
+          {
+            "path": "examples/jsm/geometries/BoxLineGeometry.js",
+            "digest": "5f4bd99627f84e1fe81cf1927ca867ac2968c9354d5e54b11849d0887170ad51",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "LICENSE",
+            "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          },
+          {
+            "path": "package.json",
+            "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684"
+          }
+        ]
+      },
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q081",
+      "split": "tuning",
+      "category": "geospatial",
+      "q": "Convert latitude and longitude into map tiles",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "No geospatial coordinate or tile service primitive in the canonical snapshot.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q082",
+      "split": "heldout",
+      "category": "simulation-rts",
+      "q": "Autonomous workers collect ore and manage a factory economy",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "No workers, resource economy or production simulation in this scoped snapshot.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q083",
+      "split": "tuning",
+      "category": "simulation-rts",
+      "q": "Find paths for an army and maintain RTS construction queues",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "Camera controls do not implement pathfinding or build queues.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q084",
+      "split": "heldout",
+      "category": "gameplay",
+      "q": "Arcade drifting vehicle physics with tire traction",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "No vehicle physics or drift controller in the canonical snapshot.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q085",
+      "split": "tuning",
+      "category": "service",
+      "q": "A database for player accounts and cloud saves",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "Tile serialization does not implement accounts or cloud persistence.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q086",
+      "split": "heldout",
+      "category": "withheld",
+      "q": "A flowing water effect driven by flow maps",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "Water2 is withheld; Water does not expose that flow-map scope.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q087",
+      "split": "tuning",
+      "category": "service",
+      "q": "Generate royalty payments for reused game code",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "No economic agreement, payment or ledger primitive in this catalog.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q088",
+      "split": "heldout",
+      "category": "geospatial",
+      "q": "Stream satellite terrain with geospatial elevation data",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "No tile streaming/elevation/data-rights scope in canonical results.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q089",
+      "split": "tuning",
+      "category": "simulation-rts",
+      "q": "Run a deterministic RTS simulation clock and production economy",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "No simulation clock or economy component in canonical data.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q090",
+      "split": "heldout",
+      "category": "animation",
+      "q": "An inverse kinematics solver for foot placement",
+      "filters": {
+        "type": "component"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "Skeleton retargeting is not a foot-placement IK solver.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {}
+      }
+    },
+    {
+      "id": "Q091",
+      "split": "tuning",
+      "category": "hard-filter",
+      "q": "Orbit camera",
+      "filters": {
+        "type": "component",
+        "runtime": "Unity"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "All eligible orbit implementation is Three.js; no Unity adapter.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "runtime": "Unity"
+        }
+      }
+    },
+    {
+      "id": "Q092",
+      "split": "heldout",
+      "category": "hard-filter",
+      "q": "Map camera navigation",
+      "filters": {
+        "type": "component",
+        "runtime": "Godot"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "No Godot-tested or reference adapter is in this snapshot.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "runtime": "Godot"
+        }
+      }
+    },
+    {
+      "id": "Q093",
+      "split": "tuning",
+      "category": "hard-filter",
+      "q": "2048 tile state",
+      "filters": {
+        "type": "component",
+        "runtime": "JavaScript",
+        "runtime_version": "1"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "Tile is reference_only with unknown tested version.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "runtime": "JavaScript",
+          "runtime_version": "1"
+        }
+      }
+    },
+    {
+      "id": "Q094",
+      "split": "heldout",
+      "category": "hard-filter",
+      "q": "Water surface",
+      "filters": {
+        "type": "component",
+        "runtime": "Three.js",
+        "runtime_version": "0.186.0"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "Source inspection is not tested runtime support.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "runtime": "Three.js",
+          "runtime_version": "0.186.0"
+        }
+      }
+    },
+    {
+      "id": "Q095",
+      "split": "tuning",
+      "category": "hard-filter",
+      "q": "Camera controls",
+      "filters": {
+        "type": "component",
+        "readiness": "integration_tested"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "No target-integration tests established by this curation.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "readiness": "integration_tested"
+        }
+      }
+    },
+    {
+      "id": "Q096",
+      "split": "heldout",
+      "category": "hard-filter",
+      "q": "Procedural geometry",
+      "filters": {
+        "type": "component",
+        "readiness": "isolated"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "Source-reviewed scopes have not passed isolated runtime harnesses.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "readiness": "isolated"
+        }
+      }
+    },
+    {
+      "id": "Q097",
+      "split": "tuning",
+      "category": "hard-filter",
+      "q": "DOM labels",
+      "filters": {
+        "type": "component",
+        "rights": "GPL-3.0-only"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "The scoped Three.js source is MIT, not GPL-3.0-only.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "rights": "GPL-3.0-only"
+        }
+      }
+    },
+    {
+      "id": "Q098",
+      "split": "heldout",
+      "category": "hard-filter",
+      "q": "Capsule collision",
+      "filters": {
+        "type": "component",
+        "platform": "mobile"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "Mobile compatibility evidence is absent; unknown must fail hard filter.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "platform": "mobile"
+        }
+      }
+    },
+    {
+      "id": "Q099",
+      "split": "tuning",
+      "category": "hard-filter",
+      "q": "Atmospheric sky",
+      "filters": {
+        "type": "component",
+        "platform": "browser"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "No tested platform claim is encoded in these scoped compatibility records.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "platform": "browser"
+        }
+      }
+    },
+    {
+      "id": "Q100",
+      "split": "heldout",
+      "category": "hard-filter",
+      "q": "Retarget animation",
+      "filters": {
+        "type": "component",
+        "runtime": "Phaser"
+      },
+      "relevance": {},
+      "defaultGrade": 0,
+      "rationale": "No Phaser implementation in this source snapshot.",
+      "evidence": {},
+      "intent": {
+        "capabilities": [],
+        "style": [],
+        "compatibility": {
+          "runtime": "Phaser"
+        }
+      }
+    }
+  ]
+}

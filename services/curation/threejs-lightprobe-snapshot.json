@@ -1,0 +1,68 @@
+{
+  "request": {
+    "paths": [
+      "LICENSE",
+      "examples/jsm/helpers/LightProbeHelper.js"
+    ],
+    "repository": "https://github.com/mrdoob/three.js",
+    "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+    "subproject": ""
+  },
+  "scope": "selected files only; not complete repository tree",
+  "tree_digest": "8ae2fea88738e5e9e1148667901b958b3048bf2259197004a384222c6b633a35",
+  "manifest_digests": {},
+  "lockfile_digests": {},
+  "excluded": [],
+  "analysis": {
+    "analyzer": "static-js-0.1",
+    "method": "bounded literal static inspection; comments can contain inert references; no scripts executed",
+    "files": [
+      {
+        "path": "LICENSE",
+        "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+        "bytes": 1081,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 21
+        },
+        "references": [],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/helpers/LightProbeHelper.js",
+        "digest": "4b4731f9e5d350bb809353cd16cf6e4c993803cae08f6ac15baa91d2560b9657",
+        "bytes": 3663,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 166
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 5,
+            "line_end": 5,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/helpers/LightProbeHelper.js",
+            "kind": "runtime",
+            "line_start": 19,
+            "line_end": 19,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "https://graphics.stanford.edu",
+            "kind": "service",
+            "line_start": 70,
+            "line_end": 70,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      }
+    ]
+  }
+}

@@ -11,14 +11,17 @@
   ],
   "scripts": {
     "catalog:init": "node tools/dev/python.mjs -m services.catalog.initialize",
-    "test:python": "node tools/dev/python.mjs -m unittest discover -s contracts/tests && node tools/dev/python.mjs -m unittest discover -s services/catalog/tests",
+    "test:python": "node tools/dev/python.mjs -m unittest discover -s contracts/tests && node tools/dev/python.mjs -m unittest discover -s services/catalog/tests && node tools/dev/python.mjs -m unittest discover -s services/intake/tests && node tools/dev/python.mjs -m unittest discover -s services/curation/tests && node tools/dev/python.mjs -m unittest discover -s services/retrieval/tests && node tools/dev/python.mjs -m unittest services.retrieval.evaluation.test_evaluation",
     "dev": "node --env-file-if-exists=.env tools/dev/server.mjs",
     "check": "node tools/dev/check.mjs",
     "format:check": "prettier --check tools/dev .github/workflows package.json",
     "test": "node --test tools/dev/*.test.mjs tools/signup/*.test.mjs tools/site/*.test.mjs HeadStart-Starter-Package/site/dist/astra-action.test.mjs",
     "test:browser": "node tools/dev/browser.mjs",
     "test:discovery": "node tests/discovery-ui.mjs",
-    "build": "node tools/dev/build.mjs"
+    "test:detail": "node tests/detail-ui.mjs && node tests/dependency-details-ui.mjs",
+    "build": "node tools/dev/build.mjs",
+    "test:brief": "node tests/brief-collections-ui.mjs",
+    "test:retrieval": "node tests/retrieval-ui.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",

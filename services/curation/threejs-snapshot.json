@@ -1,0 +1,1287 @@
+{
+  "request": {
+    "paths": [
+      "LICENSE",
+      "examples/jsm/controls/FirstPersonControls.js",
+      "examples/jsm/controls/FlyControls.js",
+      "examples/jsm/controls/MapControls.js",
+      "examples/jsm/controls/OrbitControls.js",
+      "examples/jsm/controls/PointerLockControls.js",
+      "examples/jsm/controls/TrackballControls.js",
+      "examples/jsm/geometries/BoxLineGeometry.js",
+      "examples/jsm/geometries/ConvexGeometry.js",
+      "examples/jsm/geometries/DecalGeometry.js",
+      "examples/jsm/geometries/ParametricGeometry.js",
+      "examples/jsm/geometries/RoundedBoxGeometry.js",
+      "examples/jsm/helpers/PositionalAudioHelper.js",
+      "examples/jsm/helpers/VertexNormalsHelper.js",
+      "examples/jsm/helpers/VertexTangentsHelper.js",
+      "examples/jsm/math/Capsule.js",
+      "examples/jsm/math/ColorConverter.js",
+      "examples/jsm/math/ConvexHull.js",
+      "examples/jsm/math/ImprovedNoise.js",
+      "examples/jsm/math/OBB.js",
+      "examples/jsm/math/SimplexNoise.js",
+      "examples/jsm/objects/Reflector.js",
+      "examples/jsm/objects/Refractor.js",
+      "examples/jsm/objects/Sky.js",
+      "examples/jsm/objects/Water.js",
+      "examples/jsm/objects/Water2.js",
+      "examples/jsm/renderers/CSS2DRenderer.js",
+      "examples/jsm/renderers/CSS3DRenderer.js",
+      "examples/jsm/utils/BufferGeometryUtils.js",
+      "examples/jsm/utils/CameraUtils.js",
+      "examples/jsm/utils/SceneUtils.js",
+      "examples/jsm/utils/SkeletonUtils.js",
+      "package.json"
+    ],
+    "repository": "https://github.com/mrdoob/three.js",
+    "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+    "subproject": ""
+  },
+  "scope": "selected files only; not complete repository tree",
+  "tree_digest": "b87c4441759ef3abbee2b19594dcac420fa8a469ea641bfb7a5edf1b2b4a9f4f",
+  "manifest_digests": {
+    "package.json": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89"
+  },
+  "lockfile_digests": {},
+  "excluded": [],
+  "analysis": {
+    "analyzer": "static-js-0.1",
+    "method": "bounded literal static inspection; comments can contain inert references; no scripts executed",
+    "files": [
+      {
+        "path": "LICENSE",
+        "digest": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+        "bytes": 1081,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 21
+        },
+        "references": [],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/controls/FirstPersonControls.js",
+        "digest": "4f6c4bf60c8956a1201c966de1592f4f035be47b4f6fe97879a782898945992c",
+        "bytes": 11889,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 512
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 6,
+            "line_end": 6,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/controls/FirstPersonControls.js",
+            "kind": "runtime",
+            "line_start": 18,
+            "line_end": 18,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/controls/FlyControls.js",
+        "digest": "8063858389f2ccd5cd6f0968562752dbab4b21a03c7a6e1dcbb5cc746fc06373",
+        "bytes": 9025,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 384
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 5,
+            "line_end": 5,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/controls/FlyControls.js",
+            "kind": "runtime",
+            "line_start": 24,
+            "line_end": 24,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/controls/MapControls.js",
+        "digest": "5a686152c498914389d1503b60121f484d06f15cb4f7405c15fb6b8ddcc1bdb6",
+        "bytes": 3070,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 116
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 1,
+            "line_end": 1,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "./OrbitControls.js",
+            "kind": "runtime",
+            "line_start": 3,
+            "line_end": 3,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/controls/MapControls.js",
+            "kind": "runtime",
+            "line_start": 20,
+            "line_end": 20,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/controls/OrbitControls.js",
+        "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+        "bytes": 40755,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 1972
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 12,
+            "line_end": 12,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/controls/OrbitControls.js",
+            "kind": "runtime",
+            "line_start": 86,
+            "line_end": 86,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/controls/PointerLockControls.js",
+        "digest": "40d58db8018b85038939d4d8bff7112d4b8a0ad0367b37ae6f969eeee4310c25",
+        "bytes": 5890,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 264
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 5,
+            "line_end": 5,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/controls/PointerLockControls.js",
+            "kind": "runtime",
+            "line_start": 59,
+            "line_end": 59,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "https://developer.mozilla.org",
+            "kind": "service",
+            "line_start": 38,
+            "line_end": 38,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/controls/TrackballControls.js",
+        "digest": "cce95baddf589c16fea901b70f2038eca4557357937e1b03f8c76fe7ffe7457f",
+        "bytes": 24048,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 1106
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 8,
+            "line_end": 8,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/controls/TrackballControls.js",
+            "kind": "runtime",
+            "line_start": 54,
+            "line_end": 54,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/geometries/BoxLineGeometry.js",
+        "digest": "5f4bd99627f84e1fe81cf1927ca867ac2968c9354d5e54b11849d0887170ad51",
+        "bytes": 3082,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 92
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 4,
+            "line_end": 4,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/geometries/BoxLineGeometry.js",
+            "kind": "runtime",
+            "line_start": 17,
+            "line_end": 17,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/geometries/ConvexGeometry.js",
+        "digest": "f52f4c5f0cc42eaef25d7330e912693ae1d7a9b0df0a599cd35f5854e9ecb34e",
+        "bytes": 1710,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 72
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 4,
+            "line_end": 4,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "../math/ConvexHull.js",
+            "kind": "runtime",
+            "line_start": 5,
+            "line_end": 5,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/geometries/ConvexGeometry.js",
+            "kind": "runtime",
+            "line_start": 19,
+            "line_end": 19,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/geometries/DecalGeometry.js",
+        "digest": "6b2da6ea840926dfb0278841f96067c02964c73644c7f189720e89fe9baa2b10",
+        "bytes": 10100,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 420
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 9,
+            "line_end": 9,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/geometries/DecalGeometry.js",
+            "kind": "runtime",
+            "line_start": 28,
+            "line_end": 28,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "https://github.com",
+            "kind": "service",
+            "line_start": 16,
+            "line_end": 16,
+            "resolution": "host_only_query_redacted"
+          },
+          {
+            "reference": "http://blog.wolfire.com",
+            "kind": "service",
+            "line_start": 18,
+            "line_end": 18,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/geometries/ParametricGeometry.js",
+        "digest": "f25b69d9f8a5a7f8e206bb151875609349dabaf9bd81830779033ed2521e8a7a",
+        "bytes": 3808,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 172
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 5,
+            "line_end": 5,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/geometries/ParametricGeometry.js",
+            "kind": "runtime",
+            "line_start": 20,
+            "line_end": 20,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "https://prideout.net",
+            "kind": "service",
+            "line_start": 10,
+            "line_end": 10,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/geometries/RoundedBoxGeometry.js",
+        "digest": "c5feab96123858ed8823c889b238dc8734adab7e760e3cfd21e7f3f2f3e348e3",
+        "bytes": 6470,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 216
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 4,
+            "line_end": 4,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/geometries/RoundedBoxGeometry.js",
+            "kind": "runtime",
+            "line_start": 52,
+            "line_end": 52,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/helpers/PositionalAudioHelper.js",
+        "digest": "027531f7208bea6c63281465cb95ca9a1246cd0b7ea3e1e9d605ae813abdf67b",
+        "bytes": 4384,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 169
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 7,
+            "line_end": 7,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/helpers/PositionalAudioHelper.js",
+            "kind": "runtime",
+            "line_start": 24,
+            "line_end": 24,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/helpers/VertexNormalsHelper.js",
+        "digest": "666a1219d95010e4d5d290f08774af2c327b7bcd368ebdec29a111805c8b7ecc",
+        "bytes": 3458,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 155
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 8,
+            "line_end": 8,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/helpers/VertexNormalsHelper.js",
+            "kind": "runtime",
+            "line_start": 30,
+            "line_end": 30,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/helpers/VertexTangentsHelper.js",
+        "digest": "b0d38d36af91eb8f5a119cae0a12861f2d0d27f35a1bdf70462fb53976a752eb",
+        "bytes": 2955,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 133
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 7,
+            "line_end": 7,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/helpers/VertexTangentsHelper.js",
+            "kind": "runtime",
+            "line_start": 23,
+            "line_end": 23,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/math/Capsule.js",
+        "digest": "be54c3c58483a7f6b0184dbc6ffdcea58ac13515a7d9fd19ed675b9edfc5f319",
+        "bytes": 3543,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 159
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 3,
+            "line_end": 3,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/math/Capsule.js",
+            "kind": "runtime",
+            "line_start": 11,
+            "line_end": 11,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/math/ColorConverter.js",
+        "digest": "316925abf09f332ab8f1d55dcb6f55bf491e199360a46ab8f60d721c0904cf5a",
+        "bytes": 1487,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 58
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 1,
+            "line_end": 1,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/math/ColorConverter.js",
+            "kind": "runtime",
+            "line_start": 9,
+            "line_end": 9,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "https://gist.github.com",
+            "kind": "service",
+            "line_start": 24,
+            "line_end": 24,
+            "resolution": "host_only_query_redacted"
+          },
+          {
+            "reference": "https://gist.github.com",
+            "kind": "service",
+            "line_start": 45,
+            "line_end": 45,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/math/ConvexHull.js",
+        "digest": "7b7d53ed4533556f555440676d2cbc3680ffab32b1a910c79c9a522019bd3a06",
+        "bytes": 32974,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 1695
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 6,
+            "line_end": 6,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/math/ConvexHull.js",
+            "kind": "runtime",
+            "line_start": 24,
+            "line_end": 24,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "face",
+            "kind": "runtime",
+            "line_start": 291,
+            "line_end": 291,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "eyeVertex.face",
+            "kind": "runtime",
+            "line_start": 994,
+            "line_end": 994,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "https://github.com",
+            "kind": "service",
+            "line_start": 21,
+            "line_end": 21,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/math/ImprovedNoise.js",
+        "digest": "d3821241e25bf0c8bfc13cec941924573bbaaf8f599a4fa07d60664b97832b39",
+        "bytes": 3034,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 88
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 1,
+            "line_end": 1,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/math/ImprovedNoise.js",
+            "kind": "runtime",
+            "line_start": 42,
+            "line_end": 42,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "https://cs.nyu.edu",
+            "kind": "service",
+            "line_start": 39,
+            "line_end": 39,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/math/OBB.js",
+        "digest": "3297db79bdf0a33525ef06fe7478fd921dcffb7699df1059e189bbdf2c0fae58",
+        "bytes": 13862,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 535
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 8,
+            "line_end": 8,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/math/OBB.js",
+            "kind": "runtime",
+            "line_start": 43,
+            "line_end": 43,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/math/SimplexNoise.js",
+        "digest": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072",
+        "bytes": 15148,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 470
+        },
+        "references": [
+          {
+            "reference": "three/addons/math/SimplexNoise.js",
+            "kind": "runtime",
+            "line_start": 7,
+            "line_end": 7,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "https://web.archive.org",
+            "kind": "service",
+            "line_start": 4,
+            "line_end": 4,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/objects/Reflector.js",
+        "digest": "57836df976f02a474b2dcfbb6609bca8bde0ccc6e77159ad8e418fa11c065d3b",
+        "bytes": 10943,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 385
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 12,
+            "line_end": 12,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/objects/Reflector.js",
+            "kind": "runtime",
+            "line_start": 34,
+            "line_end": 34,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "http://www.terathon.com",
+            "kind": "service",
+            "line_start": 170,
+            "line_end": 170,
+            "resolution": "host_only_query_redacted"
+          },
+          {
+            "reference": "http://www.terathon.com",
+            "kind": "service",
+            "line_start": 171,
+            "line_end": 171,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/objects/Refractor.js",
+        "digest": "512c4ec056b8af3c7aa24f80a74d606dfd10c06697686b2b73df8dbe7f2f9d78",
+        "bytes": 10176,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 389
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 14,
+            "line_end": 14,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/objects/Refractor.js",
+            "kind": "runtime",
+            "line_start": 36,
+            "line_end": 36,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "http://developer.download.nvidia.com",
+            "kind": "service",
+            "line_start": 205,
+            "line_end": 205,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/objects/Sky.js",
+        "digest": "34121b60a3bd9adc004a5a637f6135e9d2b72757eeb9e476ae1988fe2db6a9fb",
+        "bytes": 11526,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 342
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 8,
+            "line_end": 8,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/objects/Sky.js",
+            "kind": "runtime",
+            "line_start": 40,
+            "line_end": 40,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "https://www.researchgate.net",
+            "kind": "service",
+            "line_start": 11,
+            "line_end": 11,
+            "resolution": "host_only_query_redacted"
+          },
+          {
+            "reference": "http://simonwallner.at",
+            "kind": "service",
+            "line_start": 19,
+            "line_end": 19,
+            "resolution": "host_only_query_redacted"
+          },
+          {
+            "reference": "http://blenderartists.org",
+            "kind": "service",
+            "line_start": 20,
+            "line_end": 20,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/objects/Water.js",
+        "digest": "3386670ba86003a32f5efe449041bd108d4cf1e0661849caa814741a2aaf395b",
+        "bytes": 12894,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 374
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 15,
+            "line_end": 15,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/objects/Water.js",
+            "kind": "runtime",
+            "line_start": 30,
+            "line_end": 30,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "https://github.com",
+            "kind": "service",
+            "line_start": 25,
+            "line_end": 25,
+            "resolution": "host_only_query_redacted"
+          },
+          {
+            "reference": "https://home.adelphi.edu",
+            "kind": "service",
+            "line_start": 26,
+            "line_end": 26,
+            "resolution": "host_only_query_redacted"
+          },
+          {
+            "reference": "http://29a.ch",
+            "kind": "service",
+            "line_start": 27,
+            "line_end": 27,
+            "resolution": "host_only_query_redacted"
+          },
+          {
+            "reference": "http://www.terathon.com",
+            "kind": "service",
+            "line_start": 288,
+            "line_end": 288,
+            "resolution": "host_only_query_redacted"
+          },
+          {
+            "reference": "http://www.terathon.com",
+            "kind": "service",
+            "line_start": 289,
+            "line_end": 289,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/objects/Water2.js",
+        "digest": "80180ce0b031169883e14a79374e2c4d899b7726a1af4897dd7a9efc9d9240f7",
+        "bytes": 10459,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 403
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 13,
+            "line_end": 13,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "../objects/Reflector.js",
+            "kind": "runtime",
+            "line_start": 14,
+            "line_end": 14,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "../objects/Refractor.js",
+            "kind": "runtime",
+            "line_start": 15,
+            "line_end": 15,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/objects/Water2.js",
+            "kind": "runtime",
+            "line_start": 31,
+            "line_end": 31,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "textures/water/Water_1_M_Normal.jpg",
+            "kind": "asset",
+            "line_start": 71,
+            "line_end": 71,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "textures/water/Water_2_M_Normal.jpg",
+            "kind": "asset",
+            "line_start": 72,
+            "line_end": 72,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "https://alex.vlachos.com",
+            "kind": "service",
+            "line_start": 27,
+            "line_end": 27,
+            "resolution": "host_only_query_redacted"
+          },
+          {
+            "reference": "http://graphicsrunner.blogspot.de",
+            "kind": "service",
+            "line_start": 28,
+            "line_end": 28,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/renderers/CSS2DRenderer.js",
+        "digest": "256abfc6ae1aa20eb83c10d7a0e26534527df65872e4d52da6354bee78288c34",
+        "bytes": 7990,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 352
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 6,
+            "line_end": 6,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/renderers/CSS2DRenderer.js",
+            "kind": "runtime",
+            "line_start": 12,
+            "line_end": 12,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/renderers/CSS2DRenderer.js",
+            "kind": "runtime",
+            "line_start": 120,
+            "line_end": 120,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/renderers/CSS3DRenderer.js",
+        "digest": "cd1f6bfaff0e2efa8a95b8cca6e96b0eea957d6a6057d875de8bab720b49057b",
+        "bytes": 11126,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 454
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 6,
+            "line_end": 6,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/renderers/CSS3DRenderer.js",
+            "kind": "runtime",
+            "line_start": 18,
+            "line_end": 18,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/renderers/CSS3DRenderer.js",
+            "kind": "runtime",
+            "line_start": 91,
+            "line_end": 91,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/renderers/CSS3DRenderer.js",
+            "kind": "runtime",
+            "line_start": 155,
+            "line_end": 155,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "http://www.emagix.net",
+            "kind": "service",
+            "line_start": 8,
+            "line_end": 8,
+            "resolution": "host_only_query_redacted"
+          },
+          {
+            "reference": "https://www.w3schools.com",
+            "kind": "service",
+            "line_start": 142,
+            "line_end": 142,
+            "resolution": "host_only_query_redacted"
+          },
+          {
+            "reference": "http://swiftcoder.wordpress.com",
+            "kind": "service",
+            "line_start": 387,
+            "line_end": 387,
+            "resolution": "host_only_query_redacted"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/utils/BufferGeometryUtils.js",
+        "digest": "84f75b6d514411cac05e519383c54a6bf4fd5d6fc9a74acd3f532dedb92b0db1",
+        "bytes": 38436,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 1520
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 12,
+            "line_end": 12,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/utils/BufferGeometryUtils.js",
+            "kind": "runtime",
+            "line_start": 16,
+            "line_end": 16,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/utils/CameraUtils.js",
+        "digest": "9d3fd8e3dbc94f50a45acf41b18a8f1d14254af403e90a19573036d127567def",
+        "bytes": 3204,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 82
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 5,
+            "line_end": 5,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/utils/CameraUtils.js",
+            "kind": "runtime",
+            "line_start": 9,
+            "line_end": 9,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/utils/SceneUtils.js",
+        "digest": "d2d1673d80cdb919232f8e22fd341f79ec5b6f1c8d7df3fe884ceb8c8fbedc07",
+        "bytes": 8634,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 363
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 9,
+            "line_end": 9,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "./BufferGeometryUtils.js",
+            "kind": "runtime",
+            "line_start": 11,
+            "line_end": 11,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/utils/SceneUtils.js",
+            "kind": "runtime",
+            "line_start": 15,
+            "line_end": 15,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "examples/jsm/utils/SkeletonUtils.js",
+        "digest": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+        "bytes": 11535,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 496
+        },
+        "references": [
+          {
+            "reference": "three",
+            "kind": "runtime",
+            "line_start": 10,
+            "line_end": 10,
+            "resolution": "literal_reference"
+          },
+          {
+            "reference": "three/addons/utils/SkeletonUtils.js",
+            "kind": "runtime",
+            "line_start": 14,
+            "line_end": 14,
+            "resolution": "literal_reference"
+          }
+        ],
+        "unknowns": [],
+        "manifest": null
+      },
+      {
+        "path": "package.json",
+        "digest": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89",
+        "bytes": 3672,
+        "source_range": {
+          "line_start": 1,
+          "line_end": 116
+        },
+        "references": [
+          {
+            "reference": "@eslint/js",
+            "kind": "build",
+            "version": "^9.0.0",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "@rollup/plugin-node-resolve",
+            "kind": "build",
+            "version": "^16.0.0",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "@rollup/plugin-terser",
+            "kind": "build",
+            "version": "^1.0.0",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "eslint",
+            "kind": "build",
+            "version": "^10.8.0",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "eslint-config-mdcs",
+            "kind": "build",
+            "version": "^5.0.0",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "eslint-plugin-compat",
+            "kind": "build",
+            "version": "^7.0.0",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "eslint-plugin-html",
+            "kind": "build",
+            "version": "^8.1.3",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "eslint-plugin-jsdoc",
+            "kind": "build",
+            "version": "^64.0.0",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "globals",
+            "kind": "build",
+            "version": "^17.0.0",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "jpeg-js",
+            "kind": "build",
+            "version": "^0.4.4",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "jsdoc",
+            "kind": "build",
+            "version": "^4.0.5",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "magic-string",
+            "kind": "build",
+            "version": "^1.0.0",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "pngjs",
+            "kind": "build",
+            "version": "^7.0.0",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "puppeteer",
+            "kind": "build",
+            "version": "^25.0.0",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "rollup",
+            "kind": "build",
+            "version": "^4.6.0",
+            "resolution": "declared_only"
+          },
+          {
+            "reference": "turndown",
+            "kind": "build",
+            "version": "^7.2.2",
+            "resolution": "declared_only"
+          }
+        ],
+        "unknowns": [],
+        "manifest": {
+          "dependencies": {},
+          "devDependencies": {
+            "@eslint/js": "^9.0.0",
+            "@rollup/plugin-node-resolve": "^16.0.0",
+            "@rollup/plugin-terser": "^1.0.0",
+            "eslint": "^10.8.0",
+            "eslint-config-mdcs": "^5.0.0",
+            "eslint-plugin-compat": "^7.0.0",
+            "eslint-plugin-html": "^8.1.3",
+            "eslint-plugin-jsdoc": "^64.0.0",
+            "globals": "^17.0.0",
+            "jpeg-js": "^0.4.4",
+            "jsdoc": "^4.0.5",
+            "magic-string": "^1.0.0",
+            "pngjs": "^7.0.0",
+            "puppeteer": "^25.0.0",
+            "rollup": "^4.6.0",
+            "turndown": "^7.2.2"
+          },
+          "peerDependencies": {},
+          "engines": {}
+        }
+      }
+    ]
+  }
+}
