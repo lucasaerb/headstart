@@ -4,7 +4,9 @@ Production: https://headstart-virid.vercel.app/
 
 Plugin installation and download: https://headstart-virid.vercel.app/plugin.html
 
-Current production release: `4ec72c1` on `feat/email-signup`, including the homepage plugin CTA and email collection. Deployment `dpl_DvvYygj9jNUTKyWiPff1Z6yY9ksZ` adds `/api/subscribe` and private Vercel Blob storage (`headstart-email-signups`). Homepage update signup and pre-demo email capture are live; demo marketing consent is optional and unchecked. Neither creates a verified account or sends email. Owner export/deletion instructions are in [tools/signup/README.md](../tools/signup/README.md); evidence is in [email-signup review](reviews/email-signup.md).
+Current production release: `2f059a5` on `main`. Deployment `dpl_3RuMfr5R1ZGFN5y3aYhUY54Z6mc8` removes the homepage updates signup, keeps the pre-demo email flow and remembered-browser preference, and makes **Continue with Astra** copy the selected Gauntlet Loop prompt while opening `https://chatgpt.com/`. The site states that prompt pasting is still required because automatic bag sync is not implemented. Independent review is recorded in [the combined Astra action review](reviews/astra-action/FINAL-COMBINED-REVIEW.md).
+
+The earlier email release `4ec72c1` introduced `/api/subscribe` and private Vercel Blob storage (`headstart-email-signups`). Demo marketing consent remains optional and unchecked. It does not create a verified account or send email. Owner export/deletion instructions are in [tools/signup/README.md](../tools/signup/README.md); backend evidence is in [email-signup review](reviews/email-signup.md).
 
 The first production deployment on 10 September 2026 serves the independently reviewed static snapshot in commit `4a3bbc2` on `feat/plugin-discovery`. Follow-up `411bb7d` excludes a local catalog cache. Deployment ID: `dpl_H5z7SCKTavaqXcZQFyUbi3vZyAuF`; Vercel project `lucasaerbs-projects/headstart`.
 
