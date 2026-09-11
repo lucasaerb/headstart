@@ -8,14 +8,14 @@ The initial curation matrix's OrbitControls and PointerLockControls rows are rep
 | --- | --- | --- |
 | SimplexNoise | Seeded rolling terrain within existing indexed world | Equal seed reproduces, another differs, nonconstant bounded values and graph connectivity; constant replacement fails. |
 | ImprovedNoise | Coordinate-stable rolling terrain within the same generator interface | Known origin and nontrivial coordinates, repeated sampling and connected surface; constant replacement fails. Exact target MathUtils peer retained. |
-| Capsule | Explorer proximity/collision-query overlay against a fixed world obstacle | Separated/touching/intersecting and translated capsule cases alter visible query state; no response, gravity or physics engine claimed. |
+| Capsule | Explorer proximity/collision-query overlay against a fixed world obstacle | Separated/strict-overlap/exact-tangency and translated capsule cases alter visible query state; no response, gravity or physics engine claimed. |
 | OBB | Rotated world obstacle proximity overlay | Known intersecting/separated/rotated arrangements and translated query state; fixed boolean replacement fails. |
 | RoundedBoxGeometry | Rounded landmark replaces target's plain landmark through its geometry slot | World bounds and radius produce vertices/normals distinct from sharp corners; sharp-box replacement fails. |
 | ParametricGeometry | Target displays a curved parametric landmark | Independently specified callback samples, subdivision/UV/normal and bounds; flat/no-op substitution fails. |
 | BoxLineGeometry | Visible subdivided construction frame around a target landmark | Expected endpoints/axis alignment/extents and segment positions; incorrect positions fail even if counts match. |
 | VertexNormalsHelper | Toggleable surface-normal overlay on transformed target landmark | Known normal origins/directions/world lengths after transform; original mesh remains owned by target. |
 | ConvexGeometry | Target landmark hull from authored extreme/interior points | All extreme points on hull, interior point excluded from boundary, face normals enclose all points and expected volume/bounds; complete ConvexHull closure. |
-| VertexTangentsHelper | Tangent-direction overlay for target surface debugging | Transformed tangent origins and endpoints from known signed tangent attributes; original geometry/material survive overlay cleanup. |
+| VertexTangentsHelper | Tangent-direction overlay for target surface debugging | Transformed tangent origins and endpoints from known tangent xyz attributes (handedness w is outside this helper scope); original geometry/material survive overlay cleanup. |
 
 Every row runs unchanged baseline and integrated scene at desktop/mobile, tests start/update/pause/reset/dispose and repeated mount/dispose, compares renderer/camera/input/loop ownership and retains source notices. No-op and missing-disposal mutants must fail capability/lifecycle checks. Common workflow regressions cover authorization, stale source/target/recipe, missing rights/dependencies, unrelated edits, instruction data, interruption and exact rollback. No numerical frame-time, loading or process-memory claim is planned.
 
