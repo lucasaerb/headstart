@@ -10,4 +10,4 @@ Only Glenn Explore had a defensible published player count during review: 47,093
 
 The editorial order in `editorial-ranking.json` is dated and subjective. Player/usage evidence leads, then playable games, observed stars, English interface evidence, breadth, and explicit preferred-model provenance. Model provenance is not treated as a quality claim.
 
-Reviewer-change author revision: pending. P(DOOM) now uses the pinned authentic `arrival.jpg` gameplay frame. The 41-row contact sheet and credits were regenerated; the 16-row approval request remains deliberately pending and cannot publish.
+Reviewer-change author revision: `30b03ee2145638834b27294190c91b278adf2e86`. P(DOOM) now uses the pinned authentic `arrival.jpg` gameplay frame. The 41-row contact sheet and credits were regenerated; the 16-row approval request remains deliberately pending and cannot publish.
