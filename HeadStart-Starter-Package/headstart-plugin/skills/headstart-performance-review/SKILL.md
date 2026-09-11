@@ -16,3 +16,12 @@ Emit a canonical `benchmark_run` only after executing the measurement: retain ra
 Compare only identical workload/device/runtime/resolution/settings/warmup/sampling profiles with the expected before/after target states. A mismatched run is rejected rather than normalized silently. Report distributions and uncertainty; a single sample does not establish general speedup. If only source inspection was done, return the plan and hypotheses, not a BenchmarkRun or FPS promise.
 
 Review-only requests do not edit target code. For an authorized bounded optimization, preserve existing ownership and behavior, apply the selected change, repeat the same workload and checks, then report actual benefits, regressions and limits. Keep private source, traces and captures local; do not upload to a profiler or service as a permissions workaround.
+
+
+When a `headstart-local-integration-1` record is available, run the packaged read-only helper with the actual selected `plan.json` and `packet.json`:
+
+```sh
+python3 scripts/integration_review_context.py /selected/job/plan.json /selected/job/packet.json --brief-revision CURRENT_REVISION
+```
+
+Resolve the script relative to this plugin, and replace the selected paths/revision with actual local context. Carry its same `headstart-review-context-1` object into this review and any companion art/code/performance reviews. It verifies plan/packet/brief continuity, not current target state or successful integration. Inspect current target files and modes, validation/evidence and the independent reviewer result using the checkout workflow when present. Changed state requires fresh review; historical plugin versions stay labeled. Keep this context local. Use `--authorization bounded_improvement` only for already authorized target changes; the flag itself grants no permission.

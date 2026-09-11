@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "headstart-plugin",
-  "version": "0.5.0",
-  "description": "Nine game-development skills with offline discovery and an explicitly configured localhost catalog and protected planning connection.",
+  "version": "0.6.0",
+  "description": "Twelve game-development skills with offline discovery and an explicitly configured localhost catalog and protected planning connection.",
   "author": {
     "name": "HeadStart project"
   },
@@ -18,7 +18,7 @@
       "interface": {
         "displayName": "HeadStart",
         "shortDescription": "Find game starting points inside Codex",
-        "longDescription": "Find pinned game starting points using the offline research snapshot, or configure the localhost service for real catalog lookup and browser-approved selected-bag planning. Nine skills guide local work; source delivery, hosted remix and royalties are not supplied.",
+        "longDescription": "Find pinned game starting points using the offline research snapshot, or configure the localhost service for real catalog lookup and browser-approved selected-bag planning. Twelve skills guide local work, including source-backed art, code and performance review. The separately checked-out local integration reference is narrowly scoped; hosted remix and royalties are not supplied.",
         "developerName": "HeadStart project",
         "category": "Productivity",
         "capabilities": [],

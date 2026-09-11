@@ -61,3 +61,8 @@ The portable `plugin.json` and `mcp.json` follow Agent Plugins 1.0.0. `.codex-pl
 Packaging and transport references: [OpenAI plugin packaging](https://developers.openai.com/plugins/build/plugins), [MCP stdio transport](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports), [MCP lifecycle](https://modelcontextprotocol.io/specification/2025-06-18/basic/lifecycle). Supported client evidence is recorded with the release; do not assume cloud ChatGPT hosts a local Python process.
 
 The packaged `configure_connection.py` helper intentionally updates only this extracted plugin’s MCP configuration and two local manifest versions. It never opens the credential contents, edits the user’s Codex configuration, or confirms installation. Codex re-add/new-thread steps remain explicit.
+
+
+## Candidate 0.6 review skills
+
+The working candidate contains twelve skills, adding Art Direction, Performance Review and Code Review. They use the shared versioned review rubric and the same pinned local integration context. `scripts/integration_review_context.py` reads the actual plan and packet without target edits; `scripts/review_evidence.py` checks real raw BenchmarkRun samples and compatible profiles. Neither helper invents profiler output, authorizes changes or attests successful reuse. The local integration reference remains a separate repository checkout; read `references/local-integration-workflow.md`. Release/client acceptance evidence must match this candidate before its download is promoted.

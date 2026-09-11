@@ -12,7 +12,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = '2025-06-18'
-VERSION = '0.5.0'
+VERSION = '0.6.0'
 MAX_LINE = 65536
 NOTICE = ('Local research snapshot; source-inspected references, not reusable packages. '
           'Demo play, integration, asset rights and performance remain unverified. '

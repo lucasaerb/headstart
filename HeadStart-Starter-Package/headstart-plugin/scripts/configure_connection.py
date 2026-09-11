@@ -46,8 +46,8 @@ def configure(root: Path, origin: str | None = None, credential: str | None = No
     if manifest.get('name') != 'headstart-plugin' or legacy.get('name') != 'headstart-plugin':
         raise ValueError('Not a HeadStart plugin.')
     base = manifest.get('version', '').split('+')[0]
-    if base != '0.5.0' or legacy.get('version', '').split('+')[0] != base:
-        raise ValueError('This helper requires HeadStart 0.5.0; do not mix releases.')
+    if base != '0.6.0' or legacy.get('version', '').split('+')[0] != base:
+        raise ValueError('This helper requires HeadStart 0.6.0; do not mix releases.')
     server = mcp.get('mcpServers', {}).get('headstart')
     if not isinstance(server, dict) or server.get('command') != 'python3' or server.get('args') != ['-B', '${PLUGIN_ROOT}/scripts/catalog_mcp.py']:
         raise ValueError('Unexpected MCP command; restore the complete archive first.')

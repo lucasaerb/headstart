@@ -1,6 +1,6 @@
 # HeadStart for Codex — local preview
 
-Describe your dream game in Codex and discover real codebase starting points, pinned source paths, and honest limitations. This package contains metadata and nine skills, including Three.js starter selection plus Unity and Blender guidance; it does not contain the games' source code or external editor connectors.
+Describe your dream game in Codex and discover real codebase starting points, pinned source paths, and honest limitations. This package contains metadata and twelve skills, including Three.js starter selection plus Unity and Blender guidance and source-backed art, code and performance review; it does not contain the games' source code or external editor connectors.
 
 ## Install
 
