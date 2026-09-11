@@ -29,7 +29,8 @@
     "test:handoff": "node tests/handoff-ui.mjs",
     "test:mcp": "node tools/dev/mcp-test.mjs",
     "test:plugin-setup": "node tests/plugin-setup-ui.mjs",
-    "test:review-skills": "node tools/review/review-fixture.mjs"
+    "test:review-skills": "node tools/review/review-fixture.mjs",
+    "test:integration": "node tools/dev/python.mjs -m tools.integration.fetch_engine && node tools/dev/python.mjs -m unittest discover -s tools/integration/tests -v"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",
