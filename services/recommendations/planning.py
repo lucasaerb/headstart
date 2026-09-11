@@ -79,3 +79,44 @@ def recommend(brief, documents, query='', constraints=None):
         result['alternative']=preferred if preferred in permitted else next((r['template']['id'] for r in eligible if r!=result),None)
         result.pop('score') # Transparent reasons, never an opaque public quality score.
     return {'schemaVersion':'headstart-recommendation-plan-1','briefRevision':brief['revision'],'briefDigest':hashlib.sha256(canonical(brief).encode()).hexdigest(),'hardConstraints':hard,'items':eligible,'excluded':excluded,'unknowns':['Composition performance is unmeasured.','A planning template is not a bound or tested integration recipe.','Target dependencies, ownership and caller assets need inspection.'],'emptyAction':None if eligible else 'No recipe meets all explicit constraints. Edit a constraint or browse components; no filter was relaxed.'}
+
+
+def handoff_context(brief, documents, template_ref, selections=None):
+    """Recompute persisted rationale from the immutable brief, never trust client prose."""
+    from .context import validate, digest
+    if not isinstance(template_ref,dict) or set(template_ref)!={'id','version','digest'}:
+        raise ValueError('Select an exact recipe template')
+    result=recommend(brief,documents)
+    row=next((r for r in result['items'] if {k:r['template'][k] for k in ('id','version','digest')}==template_ref),None)
+    if row is None:raise ValueError('Recipe is stale or no longer eligible for this brief')
+    recipe=row['template']
+    if selections is not None:
+        available={(p['versionId'],p['version']) for p in recipe['components']}
+        if not selections or any((p['id'],p['version']) not in available for p in selections):
+            raise ValueError('Selected source scope does not belong to this recipe')
+    value={'schemaVersion':'headstart-recommendation-context-1','template':template_ref,
+           'recommendationVersion':result['schemaVersion'],'briefRevision':brief['revision'],
+           'briefDigest':digest(brief),'reasons':row['reasons'],'tradeoffs':[recipe['tradeoff']],
+           'compositionStatus':'candidate','combinationValidation':None}
+    return validate(value,brief)
+
+
+def current_documents(store):
+    """Recommendation eligibility includes current scope freezes, without hiding public metadata."""
+    from services.catalog.search import public_documents
+    from services.submissions.store import assert_export_allowed
+    records={(r['id'],r['version']):r for r in store.records()}
+    output=[]
+    for doc in public_documents(store):
+        record=records.get((doc['versionId'],doc['version']))
+        if record is None:continue
+        scope=[record]
+        parent=record['data'].get('project_version')
+        if parent:
+            row=records.get((parent['id'],parent['version']))
+            if row is None:continue
+            scope.append(row)
+        try:assert_export_allowed(store,scope)
+        except ValueError:continue
+        output.append(doc)
+    return output

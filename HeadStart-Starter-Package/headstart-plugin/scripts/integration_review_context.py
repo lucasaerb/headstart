@@ -7,6 +7,9 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from recommendation_context import validate as validate_recommendation
 
 
 def sha(value):
@@ -38,6 +41,13 @@ def context(plan, packet, *, authorization='review_only', brief_revision=None):
     brief = bag['brief']
     if plan.get('brief') != brief or plan.get('intent') != bag.get('intent') or source.get('bagRevision') != packet.get('bagRevision'):
         raise ValueError('Brief or bag context drift')
+    recommendation = bag.get('recommendationContext')
+    if bag.get('schemaVersion') == 2:
+        validate_recommendation(recommendation,brief)
+        if packet.get('recommendationContext') != recommendation or plan.get('recommendationContext') != recommendation:
+            raise ValueError('Recommendation context contradicts plan or packet')
+    elif bag.get('schemaVersion') != 1 or any('recommendationContext' in item for item in (bag,packet,plan)):
+        raise ValueError('Unsupported recommendation bag contract')
     if packet.get('bagRevision') != sha(bag):
         raise ValueError('Bag revision digest mismatch')
     records = packet.get('records')
@@ -85,7 +95,7 @@ def context(plan, packet, *, authorization='review_only', brief_revision=None):
         raise ValueError('Missing source version')
     return {'schemaVersion':'headstart-review-context-1','rubricVersion':'headstart-review-rubric-1',
             'integrationRecord':{'schemaVersion':plan['schemaVersion'],'planDigest':plan['planDigest']},
-            'brief':brief,'briefVersion':plan['briefVersion'],'intent':plan['intent'],
+            'brief':brief,'briefVersion':plan['briefVersion'],'intent':plan['intent'],'recommendationContext':recommendation,
             'source':source,'targetRevision':state['head'],'targetState':state['stateDigest'],
             'recipe':recipe,'pluginVersion':plan['pluginVersion'],'preserve':plan['preserve'],
             'authorization':authorization,'currentTargetInspection':'required',

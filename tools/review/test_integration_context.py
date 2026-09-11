@@ -64,3 +64,14 @@ class IntegrationContextTests(unittest.TestCase):
         changed=copy.deepcopy(self.plan);changed['source']['packetDigest']=helper.sha(packet2)
         changed['planDigest']=helper.sha({k:v for k,v in changed.items() if k!='planDigest'})
         with self.assertRaises(ValueError):helper.context(changed,packet2)
+
+    def test_schema_two_preserves_informational_recommendation(self):
+        packet2=copy.deepcopy(self.packet)
+        brief=packet2['bag']['brief']
+        context={'schemaVersion':'headstart-recommendation-context-1','template':{'id':'flight-landscape','version':'1','digest':'a'*64},'recommendationVersion':'headstart-recommendation-plan-1','briefRevision':brief['revision'],'briefDigest':helper.sha(brief),'reasons':[{'type':'inspected','text':'Pinned noise module'},{'type':'editorial','text':'Open terrain proposal'}],'tradeoffs':['No flight physics supplied'],'compositionStatus':'candidate','combinationValidation':None}
+        packet2['bag']['schemaVersion']=2;packet2['bag']['recommendationContext']=context
+        packet2['bagRevision']=helper.sha(packet2['bag']);packet2['recommendationContext']=context
+        value=plan(self.target,packet2)
+        self.assertEqual(helper.context(value,packet2)['recommendationContext'],context)
+        value['recommendationContext']=None;value['planDigest']=helper.sha({k:v for k,v in value.items() if k!='planDigest'})
+        with self.assertRaises(ValueError):helper.context(value,packet2)
