@@ -12,4 +12,4 @@ The editorial order in `editorial-ranking.json` is dated and subjective. Player/
 
 Reviewer-change author revision: `30b03ee2145638834b27294190c91b278adf2e86`. P(DOOM) now uses the pinned authentic `arrival.jpg` gameplay frame. The 41-row contact sheet and credits were regenerated; the independently approved 16-row batch now publishes through the fail-closed gate.
 
-Independent media decision revision: `d9cf6065dc35bc1a154c861a2da94f37a1852a80`. The completed decision was consumed through the exact-set approval script; final 41-row exports, contact sheet, credits, API/site projection, and captures are under `docs/reviews/recent-vibe-games/final-screenshots/`. Final author regeneration revision: pending.
+Independent media decision revision: `d9cf6065dc35bc1a154c861a2da94f37a1852a80`. The completed decision was consumed through the exact-set approval script; final 41-row exports, contact sheet, credits, API/site projection, and captures are under `docs/reviews/recent-vibe-games/final-screenshots/`. Final author regeneration revision: `ec26787903dc5b99d05b01c8b89f54ca2ce75ec0`.
