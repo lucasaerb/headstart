@@ -1,0 +1,49 @@
+{
+  "files": {
+    "vendor/addons/examples/jsm/geometries/RoundedBoxGeometry.js": "c5feab96123858ed8823c889b238dc8734adab7e760e3cfd21e7f3f2f3e348e3",
+    "src/feature.js": "4c5906a3a1bcbb8608ea4dd06b0ff045c5235503a9f3f2e866db35db4dc0ecfc",
+    "HEADSTART-NOTICES.txt": "13d9297607fba933a356b8755b5d847a2b35f3b6d69ba101c95cbe712f7b5575"
+  },
+  "modes": {
+    "vendor/addons/examples/jsm/geometries/RoundedBoxGeometry.js": 420,
+    "src/feature.js": 420,
+    "HEADSTART-NOTICES.txt": 420
+  },
+  "state": {
+    "head": "75a9765b696a595052170e1045eedcc08b2f5ac0",
+    "files": {
+      "HEADSTART-NOTICES.txt": "13d9297607fba933a356b8755b5d847a2b35f3b6d69ba101c95cbe712f7b5575",
+      "vendor/addons/examples/jsm/geometries/RoundedBoxGeometry.js": "c5feab96123858ed8823c889b238dc8734adab7e760e3cfd21e7f3f2f3e348e3",
+      "AGENTS.md": "760af4b437268a06489b566daccede5e3167120b7a5f03403073fa3a32b15cb5",
+      "headstart-target.json": "5ef3c4f28fa95790c0c6804d861144929322ca26c0752f22af2d1f6843487e34",
+      "index.html": "0bd89d12101d0dabead3c16aef8c2c22fe7fe7d4d010737a19d16f6bcfcba59a",
+      "package-lock.json": "8493e603c5c27f7358a1fb3ae85a19c1b66a95b8adebafce9444852db61e4a47",
+      "package.json": "b184ceb02eea277af8920cb3cec72dda5b44dd822ce3bd60c6c5acc040e922b9",
+      "src/feature.js": "4c5906a3a1bcbb8608ea4dd06b0ff045c5235503a9f3f2e866db35db4dc0ecfc",
+      "src/game.js": "b9ee31269b4a78c045c2f52b38e354ec443d23370f377f5e479b09fb0dd452d7",
+      "src/terrain.js": "d9deb5681cb2524ecb82b169a9bd4115271973a9c557c2b0c112a1d51861dd29",
+      "vendor/THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "vendor/package.json": "35bd886c2d012e1911572a082eccaa96342fd94e2cde39abee56853c66bad806",
+      "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    "modes": {
+      "HEADSTART-NOTICES.txt": 420,
+      "vendor/addons/examples/jsm/geometries/RoundedBoxGeometry.js": 420,
+      "AGENTS.md": 420,
+      "headstart-target.json": 384,
+      "index.html": 420,
+      "package-lock.json": 420,
+      "package.json": 420,
+      "src/feature.js": 420,
+      "src/game.js": 420,
+      "src/terrain.js": 420,
+      "vendor/THREE-LICENSE.txt": 420,
+      "vendor/package.json": 420,
+      "vendor/three.core.js": 420,
+      "vendor/three.module.js": 420
+    },
+    "stateDigest": "eff83d92497a2d727bc19186823e0e03ad8061e8f3e8d40a0e07b4853bd3ee0c",
+    "unrelatedEdits": "M src/feature.js\n?? HEADSTART-NOTICES.txt\n?? vendor/addons/"
+  }
+}

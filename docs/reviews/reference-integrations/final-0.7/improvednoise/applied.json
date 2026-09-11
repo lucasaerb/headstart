@@ -1,0 +1,49 @@
+{
+  "files": {
+    "vendor/addons/examples/jsm/math/ImprovedNoise.js": "d3821241e25bf0c8bfc13cec941924573bbaaf8f599a4fa07d60664b97832b39",
+    "src/feature.js": "1ba6ba59d8126b2766d4b4872e96ac88c66b6397eeea43f133c82ed802e33c92",
+    "HEADSTART-NOTICES.txt": "306b9b51fec1e811292d858e820ef33f7f4c96b5094ce14c932b326828cbc94b"
+  },
+  "modes": {
+    "vendor/addons/examples/jsm/math/ImprovedNoise.js": 420,
+    "src/feature.js": 420,
+    "HEADSTART-NOTICES.txt": 420
+  },
+  "state": {
+    "head": "6728359937e400efe5ae7781479526d2a40014af",
+    "files": {
+      "HEADSTART-NOTICES.txt": "306b9b51fec1e811292d858e820ef33f7f4c96b5094ce14c932b326828cbc94b",
+      "vendor/addons/examples/jsm/math/ImprovedNoise.js": "d3821241e25bf0c8bfc13cec941924573bbaaf8f599a4fa07d60664b97832b39",
+      "AGENTS.md": "760af4b437268a06489b566daccede5e3167120b7a5f03403073fa3a32b15cb5",
+      "headstart-target.json": "5ef3c4f28fa95790c0c6804d861144929322ca26c0752f22af2d1f6843487e34",
+      "index.html": "4466d3a5b1b6d7ab6d03ee76b49060ec2366ad364bf6b146d744a546b0dfabfd",
+      "package-lock.json": "8493e603c5c27f7358a1fb3ae85a19c1b66a95b8adebafce9444852db61e4a47",
+      "package.json": "b184ceb02eea277af8920cb3cec72dda5b44dd822ce3bd60c6c5acc040e922b9",
+      "src/feature.js": "1ba6ba59d8126b2766d4b4872e96ac88c66b6397eeea43f133c82ed802e33c92",
+      "src/game.js": "b9ee31269b4a78c045c2f52b38e354ec443d23370f377f5e479b09fb0dd452d7",
+      "src/terrain.js": "d9deb5681cb2524ecb82b169a9bd4115271973a9c557c2b0c112a1d51861dd29",
+      "vendor/THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "vendor/package.json": "35bd886c2d012e1911572a082eccaa96342fd94e2cde39abee56853c66bad806",
+      "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    "modes": {
+      "HEADSTART-NOTICES.txt": 420,
+      "vendor/addons/examples/jsm/math/ImprovedNoise.js": 420,
+      "AGENTS.md": 420,
+      "headstart-target.json": 384,
+      "index.html": 420,
+      "package-lock.json": 420,
+      "package.json": 420,
+      "src/feature.js": 420,
+      "src/game.js": 420,
+      "src/terrain.js": 420,
+      "vendor/THREE-LICENSE.txt": 420,
+      "vendor/package.json": 420,
+      "vendor/three.core.js": 420,
+      "vendor/three.module.js": 420
+    },
+    "stateDigest": "f33e9904af40da0c41f9b3a85b9976c87a6e66f1a8fe04bc1a18589c6c3acda1",
+    "unrelatedEdits": "M src/feature.js\n?? HEADSTART-NOTICES.txt\n?? vendor/addons/"
+  }
+}

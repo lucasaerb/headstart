@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "headstart-reference-matrix-1",
+  "row": "vertexnormalshelper",
+  "author": "reuse_mcp",
+  "target": "/private/tmp/headstart-matrix-release07/vertexnormalshelper/base",
+  "base": {
+    "head": "e7413cb00c7edeb886e96137f5430dd7e821a175",
+    "files": {
+      "AGENTS.md": "760af4b437268a06489b566daccede5e3167120b7a5f03403073fa3a32b15cb5",
+      "headstart-target.json": "5ef3c4f28fa95790c0c6804d861144929322ca26c0752f22af2d1f6843487e34",
+      "index.html": "66bb62dc0a29f68b8c195f99fe9e8bfbe90c963f2aa2a762273700df4699f138",
+      "package-lock.json": "8493e603c5c27f7358a1fb3ae85a19c1b66a95b8adebafce9444852db61e4a47",
+      "package.json": "b184ceb02eea277af8920cb3cec72dda5b44dd822ce3bd60c6c5acc040e922b9",
+      "src/feature.js": "0ca5e7084978a23b3b12ecc3ef8be79be84730cdfec39b9717670017cbfa4aa2",
+      "src/game.js": "b9ee31269b4a78c045c2f52b38e354ec443d23370f377f5e479b09fb0dd452d7",
+      "src/terrain.js": "d9deb5681cb2524ecb82b169a9bd4115271973a9c557c2b0c112a1d51861dd29",
+      "vendor/THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "vendor/package.json": "35bd886c2d012e1911572a082eccaa96342fd94e2cde39abee56853c66bad806",
+      "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    "modes": {
+      "AGENTS.md": 420,
+      "headstart-target.json": 384,
+      "index.html": 420,
+      "package-lock.json": 420,
+      "package.json": 420,
+      "src/feature.js": 420,
+      "src/game.js": 420,
+      "src/terrain.js": 420,
+      "vendor/THREE-LICENSE.txt": 420,
+      "vendor/package.json": 420,
+      "vendor/three.core.js": 420,
+      "vendor/three.module.js": 420
+    },
+    "stateDigest": "fe9a4f6830949b4b05cdf80854f8cf18752bb7e7c30e4f1688088db4ee1d4f24",
+    "unrelatedEdits": ""
+  },
+  "source": {
+    "id": "three-vertexnormalshelper",
+    "title": "Vertex normal visualization",
+    "parent": "threejs",
+    "revision": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+    "category": "debug",
+    "concept": "capability.ui",
+    "source_path": "examples/jsm/helpers/VertexNormalsHelper.js",
+    "symbols": [
+      "VertexNormalsHelper"
+    ],
+    "files": [
+      {
+        "path": "examples/jsm/helpers/VertexNormalsHelper.js",
+        "digest": "666a1219d95010e4d5d290f08774af2c327b7bcd368ebdec29a111805c8b7ecc",
+        "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/helpers/VertexNormalsHelper.js",
+        "line_start": 1,
+        "line_end": 155,
+        "imports": [
+          "three"
+        ]
+      }
+    ],
+    "required_files": [
+      "examples/jsm/helpers/VertexNormalsHelper.js",
+      "LICENSE",
+      "package.json"
+    ],
+    "optional_files": [],
+    "reuse_form": "copy_scoped_module_with_adapter_and_external_engine_peer",
+    "boundary": "Draws world-transformed vertex normals from existing mesh geometry.",
+    "lifecycle": "Call update after transform/geometry changes; dispose helper resources only; no target geometry disposal.",
+    "units": "Three coordinate units are target-defined; angular parameters follow source API; no automatic engine conversion.",
+    "render_input_physics": "No independent WebGL renderer or physics world is introduced. Call update after transform/geometry changes; dispose helper resources only; no target geometry disposal.",
+    "assets": "No images/audio/fonts are included or cleared. Inline shader strings in selected files are included. Caller-supplied assets remain separately gated.",
+    "services": "No backend service integration. Comment/reference URLs are citations, not runtime endpoint permission.",
+    "external_peer": {
+      "package": "three",
+      "declared_version": "0.186.0",
+      "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+      "scope": "Existing target engine peer; engine implementation not copied by these components.",
+      "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+    },
+    "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+    "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+    "reviewer": "batch1_data static curation",
+    "reviewed_at": "2026-09-10T00:00:00Z",
+    "readiness": "source_reviewed",
+    "integration_effort": "small",
+    "proposed_validation": "Normals track object transforms and configured world length; helper cleanup preserves original mesh."
+  },
+  "sourceFiles": {
+    "examples/jsm/helpers/VertexNormalsHelper.js": "666a1219d95010e4d5d290f08774af2c327b7bcd368ebdec29a111805c8b7ecc",
+    "LICENSE": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+    "package.json": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89"
+  },
+  "recipe": {
+    "id": "world-feature-vertexnormalshelper-1",
+    "digest": "c9888d40f7f61235a8a9819a905d95b0e8ec417136b68d17902533e39b6e3ff7"
+  },
+  "pluginVersion": "0.7.0",
+  "briefVersion": 1,
+  "brief": {
+    "intent": "Add vertexnormalshelper to the existing world landmark slot",
+    "preserve": [
+      "renderer",
+      "camera",
+      "frame scheduler",
+      "keyboard explorer",
+      "flat world topology"
+    ],
+    "physics": "none",
+    "coordinates": "Y-up meters"
+  },
+  "authorization": "User-authorized bounded local source integration; no production handoff or identity claim",
+  "planDigest": "b017ef44cfd90a25c78bab7ebcf20954d364974ac181c483f4b30101132df5d3"
+}

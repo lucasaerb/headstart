@@ -1,0 +1,207 @@
+{
+  "schemaVersion": "headstart-reference-matrix-1",
+  "result": "PASS",
+  "readiness": "awaiting independent review",
+  "planDigest": "755155a03a4d530c3e394713f78faa17424350904b10fed7bdb78cb57f927a05",
+  "sourceCommit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+  "targetBase": {
+    "head": "7c3c7fc68c14fb3b9133e10fe9d4130ab079c9df",
+    "files": {
+      "AGENTS.md": "760af4b437268a06489b566daccede5e3167120b7a5f03403073fa3a32b15cb5",
+      "headstart-target.json": "5ef3c4f28fa95790c0c6804d861144929322ca26c0752f22af2d1f6843487e34",
+      "index.html": "86c5fe79d90f07ac4bf21577fbdf169cca6f2a199c7dc509d9f264b6b0c914ec",
+      "package-lock.json": "8493e603c5c27f7358a1fb3ae85a19c1b66a95b8adebafce9444852db61e4a47",
+      "package.json": "b184ceb02eea277af8920cb3cec72dda5b44dd822ce3bd60c6c5acc040e922b9",
+      "src/feature.js": "0ca5e7084978a23b3b12ecc3ef8be79be84730cdfec39b9717670017cbfa4aa2",
+      "src/game.js": "b9ee31269b4a78c045c2f52b38e354ec443d23370f377f5e479b09fb0dd452d7",
+      "src/terrain.js": "d9deb5681cb2524ecb82b169a9bd4115271973a9c557c2b0c112a1d51861dd29",
+      "vendor/THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "vendor/package.json": "35bd886c2d012e1911572a082eccaa96342fd94e2cde39abee56853c66bad806",
+      "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    "modes": {
+      "AGENTS.md": 420,
+      "headstart-target.json": 384,
+      "index.html": 420,
+      "package-lock.json": 420,
+      "package.json": 420,
+      "src/feature.js": 420,
+      "src/game.js": 420,
+      "src/terrain.js": 420,
+      "vendor/THREE-LICENSE.txt": 420,
+      "vendor/package.json": 420,
+      "vendor/three.core.js": 420,
+      "vendor/three.module.js": 420
+    },
+    "stateDigest": "b0301987034e82af5f4a447d9ae5701da99155f3d6e91b70e1618e883af475ee",
+    "unrelatedEdits": ""
+  },
+  "targetIntegrated": {
+    "head": "7c3c7fc68c14fb3b9133e10fe9d4130ab079c9df",
+    "files": {
+      "HEADSTART-NOTICES.txt": "ed44556af42c32cdc3eaa8d55eccf6be5c9ff9297505c53db67e010feb5dafe9",
+      "vendor/addons/examples/jsm/helpers/VertexTangentsHelper.js": "b0d38d36af91eb8f5a119cae0a12861f2d0d27f35a1bdf70462fb53976a752eb",
+      "AGENTS.md": "760af4b437268a06489b566daccede5e3167120b7a5f03403073fa3a32b15cb5",
+      "headstart-target.json": "5ef3c4f28fa95790c0c6804d861144929322ca26c0752f22af2d1f6843487e34",
+      "index.html": "86c5fe79d90f07ac4bf21577fbdf169cca6f2a199c7dc509d9f264b6b0c914ec",
+      "package-lock.json": "8493e603c5c27f7358a1fb3ae85a19c1b66a95b8adebafce9444852db61e4a47",
+      "package.json": "b184ceb02eea277af8920cb3cec72dda5b44dd822ce3bd60c6c5acc040e922b9",
+      "src/feature.js": "58c942eae306789591632dbab2d5f64b96b88feeb6788d742e70a1a288428e6b",
+      "src/game.js": "b9ee31269b4a78c045c2f52b38e354ec443d23370f377f5e479b09fb0dd452d7",
+      "src/terrain.js": "d9deb5681cb2524ecb82b169a9bd4115271973a9c557c2b0c112a1d51861dd29",
+      "vendor/THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "vendor/package.json": "35bd886c2d012e1911572a082eccaa96342fd94e2cde39abee56853c66bad806",
+      "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    "modes": {
+      "HEADSTART-NOTICES.txt": 420,
+      "vendor/addons/examples/jsm/helpers/VertexTangentsHelper.js": 420,
+      "AGENTS.md": 420,
+      "headstart-target.json": 384,
+      "index.html": 420,
+      "package-lock.json": 420,
+      "package.json": 420,
+      "src/feature.js": 420,
+      "src/game.js": 420,
+      "src/terrain.js": 420,
+      "vendor/THREE-LICENSE.txt": 420,
+      "vendor/package.json": 420,
+      "vendor/three.core.js": 420,
+      "vendor/three.module.js": 420
+    },
+    "stateDigest": "7e88adacc6e510755643586f3e0e4487b8f961651711e66b38ec083ed45a0c54",
+    "unrelatedEdits": "M src/feature.js\n?? HEADSTART-NOTICES.txt\n?? vendor/addons/"
+  },
+  "recipe": {
+    "id": "world-feature-vertextangentshelper-1",
+    "digest": "fc99c45354ee94fd11f8ad9e1dcde05a2a269ca31630ccc2eaadbd4783def095"
+  },
+  "pluginVersion": "0.7.0",
+  "briefVersion": 1,
+  "image": "sha256:c7acddd94000df88bc95cef1c1519bca02865e6607ab9ba496a1f608410decd5",
+  "results": {
+    "baseline-1280,800": {
+      "report": {
+        "schemaVersion": 1,
+        "result": "PASS",
+        "checks": [
+          "one renderer and no hidden initial loop",
+          "original input owner retained",
+          "unchanged plain landmark baseline",
+          "idempotent single existing frame scheduler",
+          "existing explorer movement preserved",
+          "keyup stops original movement",
+          "pause freezes loop and simulation",
+          "reset restores original explorer and seed",
+          "original renderer camera scene terrain owners preserved",
+          "feature disposes all owned resources exactly once",
+          "feature cleanup preserves original world",
+          "original world remains usable after feature disposal",
+          "target teardown removes listeners and frames",
+          "disposed target refuses restart",
+          "repeated mount cleanup returns baseline listeners"
+        ],
+        "phase": "baseline",
+        "row": "vertextangentshelper"
+      },
+      "browserTermination": "terminated after explicit result and capture",
+      "viewport": "1280,800"
+    },
+    "baseline-390,844": {
+      "report": {
+        "schemaVersion": 1,
+        "result": "PASS",
+        "checks": [
+          "one renderer and no hidden initial loop",
+          "original input owner retained",
+          "unchanged plain landmark baseline",
+          "idempotent single existing frame scheduler",
+          "existing explorer movement preserved",
+          "keyup stops original movement",
+          "pause freezes loop and simulation",
+          "reset restores original explorer and seed",
+          "original renderer camera scene terrain owners preserved",
+          "feature disposes all owned resources exactly once",
+          "feature cleanup preserves original world",
+          "original world remains usable after feature disposal",
+          "target teardown removes listeners and frames",
+          "disposed target refuses restart",
+          "repeated mount cleanup returns baseline listeners"
+        ],
+        "phase": "baseline",
+        "row": "vertextangentshelper"
+      },
+      "browserTermination": "terminated after explicit result and capture",
+      "viewport": "390,844"
+    },
+    "integrated-1280,800": {
+      "report": {
+        "schemaVersion": 1,
+        "result": "PASS",
+        "checks": [
+          "one renderer and no hidden initial loop",
+          "original input owner retained",
+          "transformed vertextangentshelper endpoints and world length",
+          "helper retains caller geometry material",
+          "idempotent single existing frame scheduler",
+          "existing explorer movement preserved",
+          "keyup stops original movement",
+          "pause freezes loop and simulation",
+          "reset restores original explorer and seed",
+          "original renderer camera scene terrain owners preserved",
+          "feature disposes all owned resources exactly once",
+          "feature cleanup preserves original world",
+          "original world remains usable after feature disposal",
+          "target teardown removes listeners and frames",
+          "disposed target refuses restart",
+          "repeated mount cleanup returns baseline listeners"
+        ],
+        "phase": "integrated",
+        "row": "vertextangentshelper"
+      },
+      "browserTermination": "terminated after explicit result and capture",
+      "viewport": "1280,800"
+    },
+    "integrated-390,844": {
+      "report": {
+        "schemaVersion": 1,
+        "result": "PASS",
+        "checks": [
+          "one renderer and no hidden initial loop",
+          "original input owner retained",
+          "transformed vertextangentshelper endpoints and world length",
+          "helper retains caller geometry material",
+          "idempotent single existing frame scheduler",
+          "existing explorer movement preserved",
+          "keyup stops original movement",
+          "pause freezes loop and simulation",
+          "reset restores original explorer and seed",
+          "original renderer camera scene terrain owners preserved",
+          "feature disposes all owned resources exactly once",
+          "feature cleanup preserves original world",
+          "original world remains usable after feature disposal",
+          "target teardown removes listeners and frames",
+          "disposed target refuses restart",
+          "repeated mount cleanup returns baseline listeners"
+        ],
+        "phase": "integrated",
+        "row": "vertextangentshelper"
+      },
+      "browserTermination": "terminated after explicit result and capture",
+      "viewport": "390,844"
+    }
+  },
+  "evidence": {
+    "integrated-390,844.log": "a22ca1b9017d7c6da2592db785433bab59f8e6c72e75f84ed51115d6265b2ec4",
+    "baseline-1280,800.log": "b337d76d2a03378e07ff85fe9c921d97df8f8f656f9bcad3548498b06e44cfb1",
+    "baseline-390,844.log": "15d8f3c74e89cab95c6659efd481044d2e872f588d71f08e3fe21ddccf3e072e",
+    "integrated-1280,800.png": "9722c7f87718577605313b57fea14e9fbe7e33c22862b668bd33adbe47a4d7bd",
+    "integrated-1280,800.log": "622be90523c540a498553af20b6cf42eccf5de010fb030e09c3a307076751cef",
+    "integrated-390,844.png": "aed8158ebe93e81a98bfc3a6498bf6db2f98f885531a3ad6b6de53292ce0928e",
+    "baseline-1280,800.png": "97f6e5880ae8f7a168cc4919de227732f1972f10f4d3a5d66c57e4a0046ad58b",
+    "baseline-390,844.png": "925db32af9613bc1eb6a5a638677bba4f8f1861ba397bf4818635cff72af150f"
+  },
+  "attestationDigest": "4b631811bd8a8f9a0384742d54e5f80303948eb428bbc51fd708a2103f9dee23"
+}
