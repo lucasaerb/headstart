@@ -13,7 +13,14 @@ from services.catalog.store import CatalogStore
 from services.curation.seed import seed_curated_capabilities
 from services.submissions.store import setup
 s=CatalogStore(os.environ['HEADSTART_CATALOG_DB'],os.environ['HEADSTART_EVIDENCE_DIR']);setup(s.db);seed_curated_capabilities(s);s.close()`],{env:process.env});
-const server=createDevServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));const base='http://127.0.0.1:'+server.address().port;process.env.HEADSTART_AUTH_ORIGIN=base;
+const server=createDevServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));const base='http://127.0.0.1:'+server.address().port;
+const publicBody=JSON.stringify({brief:{revision:1,constraints:{}},query:'',constraints:{}});
+const publicResponse=await fetch(base+'/api/recommendations',{method:'POST',headers:{Origin:base,'Content-Type':'application/json'},body:publicBody});
+expect(publicResponse.status).toBe(200);expect((await publicResponse.json()).items).toHaveLength(3);
+for(const origin of ['http://example.invalid',base+'/forged',base.replace('127.0.0.1','localhost')]){
+ const denied=await fetch(base+'/api/recommendations',{method:'POST',headers:{Origin:origin,'Content-Type':'application/json'},body:publicBody});expect(denied.status).toBe(403);
+}
+process.env.HEADSTART_AUTH_ORIGIN=base;
 const identity=JSON.parse(execFileSync(pythonCommand(),['-c',`import json
 from services.auth.store import connect,issue,verify
 db=connect();id,token=issue(db,'recipe@example.invalid','binding',{'action':'account','bagRevision':'a'*64,'selections':[]},'test');session,csrf,_=verify(db,id,token,'binding');print(json.dumps({'session':session}))`],{env:process.env,encoding:'utf8'}));
