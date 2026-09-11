@@ -29,7 +29,16 @@ HEADSTART_AUTH_ORIGIN=http://127.0.0.1:8767 python3 -m services.auth.cli connect
 
 This source-checkout command is not packaged in the ZIP. It creates a new mode0600 private file and prints a pairing URL. Open that URL in your verified browser and approve. It never asks for the credential in chat. Existing files are not overwritten: revoke the previous pairing by signing out, then explicitly remove only that old credential file before pairing again. Keep the credential outside your project and plugin folder.
 
-Configure the **local stdio process environment** with `HEADSTART_CATALOG_ORIGIN=http://127.0.0.1:8767` and `HEADSTART_CREDENTIAL_FILE` pointing to the absolute private file path. Neither value is a credential itself; never put the file contents in configuration or conversation. Use the supported client configuration documented with the tested release. Start a fresh thread after changing mode, then ask:
+In the **extracted archive folder** (not the source checkout), configure its local connector. Replace the origin and absolute file path with the ones you just paired:
+
+```sh
+python3 plugins/headstart-plugin/scripts/configure_connection.py localhost --origin http://127.0.0.1:8767 --credential-file /absolute/private/path/local-credential.json
+codex plugin add headstart-plugin@personal
+```
+
+The helper writes literal origin/file-path settings into this extracted plugin's `mcp.json`, and updates both manifests with a local cache version. It never reads or prints the credential contents. This is an intentional local configuration change: verify the original archive checksums before configuring; the modified three configuration files no longer match the original distribution manifest. Keep the unmodified archive for rollback. A fresh Codex thread is required after re-adding. Shell exports alone do not forward these variables through Codex's plugin process. No special URL scheme or installation acknowledgment is invented. For public service lookup only, omit `--credential-file`.
+
+Ask in a fresh thread:
 
 > Use HeadStart to retrieve my prepared website selection. Keep its exact source versions, brief and constraints. Inspect and plan only; do not edit my project yet.
 
@@ -41,11 +50,13 @@ Agent-first public discovery needs no identity: `catalog_info`, `search_componen
 
 Only an actual client acknowledgment **and** successful compatible catalog response establish a plugin connection. The website cannot inspect your local Codex installation. Its service check is only an HTTP check; downloading or clicking it never marks the plugin installed.
 
-- **Service offline:** restart the configured localhost server and retry. The live connector does not substitute stale snapshot data. To return deliberately to offline research, remove the two connection environment settings and start a new thread.
+- **Service offline:** restart the configured localhost server and retry. The live connector does not substitute stale snapshot data. To return deliberately to offline research, run `python3 plugins/headstart-plugin/scripts/configure_connection.py offline` from the extracted folder, re-add the plugin and start a new thread.
 - **Expired or denied pairing:** sign in again, create a new credential file and approve it in the browser. Sign-out revokes its child pairing. Do not request a token in chat.
 - **Unsupported contract:** update compatible plugin/service versions together or return to the prior complete archive; never mix files or reinterpret a mismatched version as current.
 - **Workspace denied:** retain the plan and ask the user to select an accessible intended workspace. Do not escalate permissions or upload private target files as a workaround.
 - **Unsupported client:** use the website's authenticated **Download Markdown / Download JSON** buttons after preparing a handoff. Each download rechecks the session and scope. The anonymous Gauntlet planning prompt contains public metadata only and cannot bypass this gate. Neither fallback starts an agent or claims automatic connection.
-- **Rollback:** keep the prior 0.3.0 archive. Remove only HeadStart, select the old archive's marketplace and re-add it using its README, then start a fresh thread with connection settings removed. Version 0.3.0 supports six skills and offline discovery only; current prepared packets remain on the local service, not silently consumed by an incompatible plugin.
+- **Rollback:** keep the prior 0.3.0 archive. Remove only HeadStart, select the old archive's marketplace and re-add it using its README, then start a fresh thread after configuring offline mode. Version 0.3.0 supports six skills and offline discovery only; current prepared packets remain on the local service, not silently consumed by an incompatible plugin.
 
 Both modes use the host agent for selected-target inspection and authorized writes. Preserve the packet digest, bag revision, selected component/source versions, brief, constraints, rights/notices and actual validation through Find → Inspect → Plan → Integrate → Validate → Credit. A passing build alone is not gameplay evidence. No hosted remix, automatic royalty terms, payment or settlement is supplied.
+
+Observed client contract: Codex CLI 0.154.0 accepts literal `mcp.json` stdio `env`; parent shell variables are not implicitly forwarded and `${HEADSTART_CATALOG_ORIGIN}` is not interpolated. Current packaging reference: https://developers.openai.com/plugins/build/plugins ; CLI help and generated app-server schemas were inspected locally for this release.
