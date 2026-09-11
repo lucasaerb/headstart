@@ -1,6 +1,8 @@
 """Bounded local public-URL reachability. This never runs game code."""
 import ipaddress
 import http.client
+import hashlib
+import json
 import socket
 import time
 from urllib.parse import urlsplit
@@ -94,6 +96,10 @@ class HealthJobs:
                 BEFORE UPDATE ON health_observations BEGIN SELECT RAISE(ABORT,'Health observations are immutable'); END;
             CREATE TRIGGER IF NOT EXISTS health_observations_no_delete
                 BEFORE DELETE ON health_observations BEGIN SELECT RAISE(ABORT,'Health observations are immutable'); END;
+            CREATE TABLE IF NOT EXISTS health_interactive_records (
+                digest TEXT PRIMARY KEY, target TEXT NOT NULL, observed_at INTEGER NOT NULL, payload TEXT NOT NULL);
+            CREATE TRIGGER IF NOT EXISTS health_interactive_no_update BEFORE UPDATE ON health_interactive_records BEGIN SELECT RAISE(ABORT,'Interactive evidence is immutable'); END;
+            CREATE TRIGGER IF NOT EXISTS health_interactive_no_delete BEFORE DELETE ON health_interactive_records BEGIN SELECT RAISE(ABORT,'Interactive evidence is immutable'); END;
             CREATE TABLE IF NOT EXISTS health_leases (
                 target TEXT PRIMARY KEY, expires_at INTEGER NOT NULL);
             CREATE TABLE IF NOT EXISTS health_hosts (
@@ -157,10 +163,31 @@ class HealthJobs:
             results.append({'target': target, 'kind': 'reachability', 'observedAt': now, 'category': category})
         return results
 
+    def record_interactive(self, target, plan, report):
+        from .browser import validate_plan
+        validate_plan(plan)
+        row=self.db.execute('SELECT url FROM health_targets WHERE id=?',(target,)).fetchone()
+        expected=hashlib.sha256(json.dumps(plan,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+        if not row or row[0]!=plan['url'] or not isinstance(report,dict) or report.get('schemaVersion')!='headstart-interactive-check-1' or report.get('planDigest')!=expected:
+            raise ValueError('Interactive report does not match the registered target and probe')
+        if report.get('category') not in ('interactive_passed','interactive_failed','navigation_only','worker_failed') or type(report.get('observedAt')) is not int:
+            raise ValueError('Invalid interactive result')
+        if report['category']=='interactive_passed' and (len(report.get('checks',[]))!=len(plan['steps'])+1 or not all(c.get('passed') is True for c in report['checks'])):
+            raise ValueError('Interactive success requires every declared outcome')
+        raw=json.dumps(report,sort_keys=True,separators=(',',':'))
+        if len(raw)>100000:raise ValueError('Interactive report too large')
+        identity=hashlib.sha256(raw.encode()).hexdigest()
+        with self.db:self.db.execute('INSERT OR IGNORE INTO health_interactive_records VALUES(?,?,?,?)',(identity,target,report['observedAt'],raw))
+        return identity
+
     def status(self):
         now = int(self.clock())
         output = []
         for target, url, featured in self.db.execute('SELECT id,url,featured FROM health_targets ORDER BY id'):
             row = self.db.execute("SELECT observed_at,category FROM health_observations WHERE target=? AND kind='reachability' ORDER BY id DESC LIMIT 1", (target,)).fetchone()
-            output.append({'target': target, 'reachability': None if not row else {'observedAt': row[0], 'category': row[1], 'stale': now - row[0] >= CADENCE['reachability']}, 'interactive': {'status': 'unchecked', 'observedAt': None, 'proposedCadenceSeconds': CADENCE['interactive'] if featured else None}})
+            actual=self.db.execute('SELECT digest,observed_at,payload FROM health_interactive_records WHERE target=? ORDER BY observed_at DESC LIMIT 1',(target,)).fetchone()
+            interactive={'status':'unchecked','observedAt':None,'proposedCadenceSeconds':CADENCE['interactive'] if featured else None}
+            if actual:
+                report=json.loads(actual[2]);interactive.update(status=report['category'],observedAt=actual[1],evidenceDigest=actual[0],stale=now-actual[1]>=CADENCE['interactive'])
+            output.append({'target': target, 'reachability': None if not row else {'observedAt': row[0], 'category': row[1], 'stale': now - row[0] >= CADENCE['reachability']}, 'interactive':interactive})
         return output
