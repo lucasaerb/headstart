@@ -13,7 +13,7 @@ def run(target,output,image,phase,viewport='1280,800'):
  staging=tempfile.TemporaryDirectory(prefix='headstart-sandbox-input-')
  clean=Path(staging.name);clean.chmod(0o755)
  for rel in state['files']:
-  source=safe_path(target,rel);destination=clean/rel;destination.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,destination)
+  source=safe_path(target,rel);destination=clean/rel;destination.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,destination);shutil.copymode(source,destination)
  name='headstart-check-'+os.urandom(8).hex()
  command=['docker','run','--rm','--name',name,'--pull','never','--network','none','--read-only','--cap-drop','ALL','--security-opt','no-new-privileges','--pids-limit','256','--cpus','2','--memory','1536m','--memory-swap','1536m','--tmpfs','/tmp:rw,nosuid,size=512m','--user','1000:1000','--mount',f'type=bind,source={clean},target=/app,readonly','--mount',f'type=bind,source={HERE},target=/harness,readonly','--mount',f'type=bind,source={output},target=/output',image,'node','/harness/browser-runner.mjs',phase,viewport]
  try:
