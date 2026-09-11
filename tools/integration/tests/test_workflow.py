@@ -10,6 +10,13 @@ class WorkflowTests(unittest.TestCase):
  def tearDown(self):self.tmp.cleanup()
  def test_inspection_pins_instructions_owners_locks_and_read_only(self):
   before=snapshot(self.base);result=inspect(self.base);self.assertEqual(result['state'],before);self.assertEqual(snapshot(self.base),before);self.assertIn('AGENTS.md',result['instructionFiles']);self.assertEqual(result['resolvedThree'],'0.186.0')
+ def test_post_apply_mode_drift_blocks_validation_and_rollback(self):
+  work=apply(self.plan,self.packet,self.job,True);changed=work/'src/terrain.js';changed.chmod(0o744)
+  with patch('tools.integration.sandbox.run') as run:
+   with self.assertRaises(IntegrationError):validate(self.job,'sha256:'+'a'*64)
+   run.assert_not_called()
+  with self.assertRaises(IntegrationError):rollback(self.job)
+  self.assertEqual(changed.stat().st_mode & 0o777,0o744)
  def test_unrelated_executable_mode_preserved_and_drift_rejected(self):
   helper=self.base/'helper.sh';helper.write_text('#!/bin/sh\nexit 0\n');helper.chmod(0o755)
   git(self.base,'add','helper.sh');git(self.base,'-c','user.name=Fixture','-c','user.email=fixture@example.invalid','commit','-qm','Executable helper')

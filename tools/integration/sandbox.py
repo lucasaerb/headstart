@@ -23,6 +23,13 @@ def run(target,output,image,phase,viewport='1280,800'):
   parsed=json.loads(result.stdout)
   if result.returncode or parsed['report']['result']!='PASS':raise ValueError('Runtime checks failed; inspect retained log')
   return parsed
+ except subprocess.TimeoutExpired as error:
+  stdout=error.stdout or b'';stderr=error.stderr or b''
+  if isinstance(stdout,bytes):stdout=stdout.decode('utf-8','replace')
+  if isinstance(stderr,bytes):stderr=stderr.decode('utf-8','replace')
+  (output/(phase+'-'+viewport+'.log')).write_text('Sandbox timed out at 60 seconds\n'+stdout[-64000:]+'\n'+stderr[-64000:])
+  subprocess.run(['docker','rm','-f',name],capture_output=True,timeout=10)
+  raise
  except BaseException:
   subprocess.run(['docker','rm','-f',name],capture_output=True,timeout=10)
   raise

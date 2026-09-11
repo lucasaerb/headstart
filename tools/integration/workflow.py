@@ -142,13 +142,13 @@ def apply(value,packet,job,authorized=False,cancel_after=None):
   raw=safe_path(value['context']['target'],rel).read_bytes()
   if sha(raw)!=digest:raise IntegrationError('Target changed during worktree creation')
   path=safe_path(target,rel);path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(raw);path.chmod(value['context']['state']['modes'][rel])
- event(job,'applying',branch=branch);written={}
+ event(job,'applying',branch=branch);written={};written_modes={}
  contents={'src/terrain.js':(HERE/'adapters/simplex-terrain.js').read_bytes(),'vendor/SimplexNoise.js':(SOURCE/'examples/jsm/math/SimplexNoise.js').read_bytes(),'HEADSTART-NOTICES.txt':(SOURCE/'LICENSE').read_bytes()+b'\nSimplexNoise retains Stefan Gustavson algorithm references in full original source. Adapter modifications: headstart simplex-terrain-1; actual integration requires matching validation/review.\n'}
  try:
   for i,(rel,raw) in enumerate(contents.items(),1):
    path=safe_path(target,rel)
    if path.exists() and rel!='src/terrain.js':raise IntegrationError('Refusing to replace existing source/notice additions')
-   path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(raw);written[rel]=sha(raw);write_json(job/'applied.json',written)
+   path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(raw);written[rel]=sha(raw);written_modes[rel]=path.stat().st_mode & 0o777;write_json(job/'applied.json',written);write_json(job/'applied-modes.json',written_modes)
    if cancel_after==i:raise InterruptedError('Cancellation requested')
   event(job,'applied',targetState=snapshot(target)['stateDigest'],changedFiles=written)
  except BaseException as error:
@@ -157,10 +157,10 @@ def apply(value,packet,job,authorized=False,cancel_after=None):
  return target
 
 def rollback(job):
- job=Path(job);value=read_json(job/'plan.json');target=job/'target';written=read_json(job/'applied.json')
+ job=Path(job);value=read_json(job/'plan.json');target=job/'target';written=read_json(job/'applied.json');written_modes=read_json(job/'applied-modes.json')
  for rel,digest in written.items():
   path=safe_path(target,rel)
-  if not path.is_file() or sha(path.read_bytes())!=digest:raise IntegrationError('Changed integration file; preserve edits and review rollback manually')
+  if not path.is_file() or sha(path.read_bytes())!=digest or (path.stat().st_mode & 0o777)!=written_modes.get(rel):raise IntegrationError('Changed integration file; preserve edits and review rollback manually')
  for rel in written:
   path=target/rel
   if rel in value['context']['state']['files']:
@@ -195,6 +195,8 @@ def validate(job,image):
  events=[json.loads(line) for line in (job/'events.jsonl').read_text().splitlines()]
  if events[-1]['stage'] not in ('applied','validation_failed'):raise IntegrationError('Apply must complete before validation')
  expected=read_json(job/'applied.json');current=snapshot(job/'target')
+ applied=next((item for item in reversed(events) if item['stage']=='applied'),None)
+ if not applied or current['stateDigest']!=applied.get('targetState'):raise IntegrationError('Applied target content or modes drifted')
  if current['files']!={**value['context']['state']['files'],**expected}:raise IntegrationError('Applied files drifted')
  event(job,'validating',targetState=current['stateDigest'])
  try:
