@@ -38,3 +38,7 @@ All first-five issues (#12, #27, #13, #14, #15) passed full critical review afte
 Resolved findings include repository default-reference ownership proof, malformed MCP response/session recovery, complete selected-bag validation, delayed auth recovery and deterministic browser selection. The final nine-skill 0.5.0 archive and actual Codex client evidence match. C4 styling and hero remain intact. The accepted delivery is local verified-preview identity plus metadata handoffs and prepared eligible-system context, not production verification, source bytes, a playable three-game remix or royalty services.
 
 Batch 4 (#16–#20) may now begin under its recorded prerequisite gates. `reuse_handoff` remains an independent reviewer for that batch and will not author its implementation. No production promotion or issue closure is implied by this acceptance record.
+
+## Remote verification checkpoint
+
+GitHub Actions run [34553406155](https://github.com/lucasaerb/headstart/actions/runs/34553406155) passed at `1daf49f`, including Node/Python checks, build, desktop/mobile browser workflows, actual MCP SDK checks and the new expert-review fixture harness. Earlier runs exposed a Python interpreter portability assumption and an asynchronous comparison-view replacement; fixes and independent review are recorded in `docs/reviews/reuse-batches/`. This is checkpoint verification, not full acceptance of unfinished #16–#20.
