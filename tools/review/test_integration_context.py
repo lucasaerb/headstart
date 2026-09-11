@@ -43,3 +43,24 @@ class IntegrationContextTests(unittest.TestCase):
 
     def test_unknown_authorization_rejected(self):
         with self.assertRaises(ValueError):helper.context(self.plan,self.packet,authorization='deploy')
+
+    def test_digest_consistent_contradictions_rejected(self):
+        mutations = [
+            lambda p: p['source'].update(commit='a'*40),
+            lambda p: p['source'].update(version='2'),
+            lambda p: p['source'].update(files={}),
+            lambda p: p['source'].update(repository='https://github.com/other/repo'),
+            lambda p: p['context']['state'].update(stateDigest='b'*64),
+        ]
+        for mutate in mutations:
+            changed=copy.deepcopy(self.plan);mutate(changed)
+            changed['planDigest']=helper.sha({k:v for k,v in changed.items() if k!='planDigest'})
+            with self.assertRaises(ValueError):helper.context(changed,self.packet)
+        packet2=copy.deepcopy(self.packet);packet2['bag']['intent']='changed'
+        changed=copy.deepcopy(self.plan);changed['intent']='changed';changed['source']['packetDigest']=helper.sha(packet2)
+        changed['planDigest']=helper.sha({k:v for k,v in changed.items() if k!='planDigest'})
+        with self.assertRaises(ValueError):helper.context(changed,packet2)
+        packet2=copy.deepcopy(self.packet);packet2['recordDigests'][0]['sha256']='c'*64
+        changed=copy.deepcopy(self.plan);changed['source']['packetDigest']=helper.sha(packet2)
+        changed['planDigest']=helper.sha({k:v for k,v in changed.items() if k!='planDigest'})
+        with self.assertRaises(ValueError):helper.context(changed,packet2)
