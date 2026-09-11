@@ -52,6 +52,9 @@ jobs:
       - run: npm run test:handoff
         env:
           SCREENSHOT_DIR: test-results/handoff
+      - run: npm run test:recipes
+        env:
+          SCREENSHOT_DIR: test-results/recipes
       - uses: actions/upload-artifact@v4
         if: always()
         with:
