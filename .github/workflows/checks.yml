@@ -101,4 +101,5 @@ jobs:
             ${{ runner.temp }}/headstart-run/plan.json
             ${{ runner.temp }}/headstart-run/packet.json
             ${{ runner.temp }}/headstart-run/applied.json
+            ${{ runner.temp }}/headstart-run/applied-modes.json
             ${{ runner.temp }}/headstart-run/events.jsonl
