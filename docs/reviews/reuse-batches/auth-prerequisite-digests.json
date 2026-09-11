@@ -1,0 +1,34 @@
+[
+  [
+    "HeadStart-Starter-Package/site/dist/auth.css",
+    "cf7aa9060d4fb75c836807b1889aa56296f05b37fb1fd98b419c3a227f6d33aa"
+  ],
+  [
+    "HeadStart-Starter-Package/site/dist/auth.html",
+    "7116e08ff0fe2951b7eb37f658aa32a448b95c48fcbdf1e2f158dd5e45cc64a1"
+  ],
+  [
+    "HeadStart-Starter-Package/site/dist/auth.js",
+    "83e2c7abcdf3d5d61b89c565e6c38b3af925d8a359cc492a09949b8c95ec2f99"
+  ],
+  [
+    "services/auth/__init__.py",
+    "ecef183682abd67ba7f4960217dd4061293ec2c40e49cbb6727ed94722f56756"
+  ],
+  [
+    "services/auth/api.py",
+    "df65813c631d6125d2ff013a8cbb1c5bea985f2ccef4299a75495cd91eb5e167"
+  ],
+  [
+    "services/auth/cli.py",
+    "06168cb7c497e8ef1871629311d3060c20d37790334fddb7532331294a24ece3"
+  ],
+  [
+    "services/auth/store.py",
+    "025ea33759ec5cb77918d0fee2576428b4d2fb51f53fc102b5cdda1209f9fc66"
+  ],
+  [
+    "tools/dev/auth-handler.mjs",
+    "efaba9985b9b557ba843d8559090d12ffe688c3ebab0d683cadff9820001b442"
+  ]
+]
