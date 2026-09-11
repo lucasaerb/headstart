@@ -25,3 +25,7 @@ This branch is implementation/review work. A passing test does not authorize aut
 ## Baseline verification
 
 At base `84795b9`, the coordinator ran the existing 40 Node tests and 68 Python tests successfully in the new worktree. Local dependencies were installed with `npm ci --ignore-scripts`; the existing reviewed Python environment and pinned ONNX model are reused via ignored local links. No production environment file was copied. Docker29.1.2 is available for the later disposable upstream-runtime harness. These are baseline checks, not acceptance of the new issues.
+
+## Batch 3 implementation checkpoint
+
+Auth author `reuse_auth` delivered `cc282d9` and copy/capture refinement `f736cf2`; curator author `reuse_curator` delivered `e883763`; handoff author `reuse_handoff` delivered `5c7ee1b` with route/browser work following auth prerequisite acceptance. Separate reviewer `reuse_reviewer` recorded a narrow #27 auth prerequisite PASS in `docs/reviews/reuse-batches/prerequisites.md`; this does not replace full combined issue acceptance. Service-backed MCP author is `reuse_mcp`. The coordinator added checks in `25e50dd`; 41 Node and 97 Python tests, syntax, formatting and local build passed at this checkpoint. New browser workflows are included in CI; full combined review remains pending.
