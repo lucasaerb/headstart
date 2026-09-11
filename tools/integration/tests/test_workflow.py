@@ -10,6 +10,15 @@ class WorkflowTests(unittest.TestCase):
  def tearDown(self):self.tmp.cleanup()
  def test_inspection_pins_instructions_owners_locks_and_read_only(self):
   before=snapshot(self.base);result=inspect(self.base);self.assertEqual(result['state'],before);self.assertEqual(snapshot(self.base),before);self.assertIn('AGENTS.md',result['instructionFiles']);self.assertEqual(result['resolvedThree'],'0.186.0')
+ def test_nested_and_git_owned_attributes_and_filters_reject(self):
+  nested=self.base/'src/.gitattributes';nested.write_text('terrain.js filter=probe')
+  with self.assertRaises(IntegrationError):inspect(self.base)
+  nested.unlink();info=self.base/'.git/info/attributes';info.write_text('src/terrain.js filter=probe')
+  with self.assertRaises(IntegrationError):inspect(self.base)
+  info.unlink();git(self.base,'config','filter.probe.smudge','touch /tmp/never-execute-headstart-filter')
+  with self.assertRaises(IntegrationError):inspect(self.base)
+  git(self.base,'config','--unset','filter.probe.smudge');git(self.base,'config','core.attributesFile','/tmp/attributes-untrusted')
+  with self.assertRaises(IntegrationError):inspect(self.base)
  def test_actual_scoped_apply_and_reversal_preserve_original(self):
   before=snapshot(self.base);work=apply(self.plan,self.packet,self.job,True);self.assertEqual(snapshot(self.base),before)
   self.assertIn('SimplexNoise',(work/'src/terrain.js').read_text());self.assertEqual((work/'vendor/SimplexNoise.js').read_bytes(),(SOURCE/'examples/jsm/math/SimplexNoise.js').read_bytes());self.assertIn('MIT License',(work/'HEADSTART-NOTICES.txt').read_text());self.assertEqual(rollback(self.job)['stateDigest'],before['stateDigest'])

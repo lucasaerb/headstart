@@ -19,7 +19,7 @@ def read_json(p):return json.loads(Path(p).read_text())
 def write_json(p,value):
  p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);temp=p.with_suffix('.new');temp.write_text(json.dumps(value,indent=2)+'\n');temp.chmod(0o600);temp.replace(p)
 def git(target,*args):
- result=subprocess.run(['git','-c','core.hooksPath=/dev/null','-c','core.fsmonitor=false','-C',str(target),*args],capture_output=True,text=True,timeout=30,env={**{k:v for k,v in os.environ.items() if not k.startswith('GIT_')},'GIT_CONFIG_NOSYSTEM':'1','GIT_CONFIG_GLOBAL':os.devnull,'GIT_TERMINAL_PROMPT':'0'})
+ result=subprocess.run(['git','-c','core.hooksPath=/dev/null','-c','core.fsmonitor=false','-c','core.attributesFile=/dev/null','-C',str(target),*args],capture_output=True,text=True,timeout=30,env={**{k:v for k,v in os.environ.items() if not k.startswith('GIT_')},'GIT_CONFIG_NOSYSTEM':'1','GIT_CONFIG_GLOBAL':os.devnull,'GIT_TERMINAL_PROMPT':'0'})
  if result.returncode:raise IntegrationError('Git operation failed; inspect target state without discarding edits.')
  return result.stdout.strip()
 def safe_path(root,rel):
@@ -32,9 +32,13 @@ def safe_path(root,rel):
 
 def snapshot(target):
  target=Path(target).resolve();files={};size=0
+ if any(line.lower().startswith('filter.') or (line.lower().startswith('core.attributesfile=') and line.split('=',1)[1]!='/dev/null') for line in git(target,'config','--list').splitlines()):raise IntegrationError('Repository filters/attributes config requires separate inspection')
+ attributes=Path(git(target,'rev-parse','--git-path','info/attributes'))
+ if not attributes.is_absolute():attributes=target/attributes
+ if attributes.exists() or attributes.is_symlink():raise IntegrationError('Repository info attributes require separate inspection')
  if git(target,'rev-parse','--show-toplevel')!=str(target):raise IntegrationError('Select the repository root')
  for rel in git(target,'ls-files','--cached','--others','--exclude-standard').splitlines():
-  if rel in ('.gitmodules','.gitattributes'):raise IntegrationError('Submodules/filters require a separately reviewed adapter')
+  if any(part in ('.gitmodules','.gitattributes') for part in Path(rel).parts):raise IntegrationError('Submodules/filters require a separately reviewed adapter')
   p=safe_path(target,rel)
   if not p.is_file():raise IntegrationError('Missing or nonregular target file')
   raw=p.read_bytes();size+=len(raw)
@@ -131,7 +135,13 @@ def apply(value,packet,job,authorized=False,cancel_after=None):
  if job.exists():raise IntegrationError('Choose a fresh job directory')
  job.mkdir(parents=True,mode=0o700);write_json(job/'plan.json',value);write_json(job/'packet.json',packet);event(job,'planned',planDigest=value['planDigest'])
  target=job/'target';branch='headstart/'+value['planDigest'][:12]+'-'+os.urandom(4).hex()
- git(value['context']['target'],'worktree','add','-b',branch,str(target),value['context']['state']['head'])
+ git(value['context']['target'],'worktree','add','--no-checkout','-b',branch,str(target),value['context']['state']['head'])
+ # Never ask Git to materialize target contents: checkout can invoke smudge filters.
+ git(target,'read-tree',value['context']['state']['head'])
+ for rel,digest in value['context']['state']['files'].items():
+  raw=safe_path(value['context']['target'],rel).read_bytes()
+  if sha(raw)!=digest:raise IntegrationError('Target changed during worktree creation')
+  path=safe_path(target,rel);path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(raw)
  event(job,'applying',branch=branch);written={}
  contents={'src/terrain.js':(HERE/'adapters/simplex-terrain.js').read_bytes(),'vendor/SimplexNoise.js':(SOURCE/'examples/jsm/math/SimplexNoise.js').read_bytes(),'HEADSTART-NOTICES.txt':(SOURCE/'LICENSE').read_bytes()+b'\nSimplexNoise retains Stefan Gustavson algorithm references in full original source. Adapter modifications: headstart simplex-terrain-1; actual integration requires matching validation/review.\n'}
  try:
