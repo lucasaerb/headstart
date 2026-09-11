@@ -2,7 +2,7 @@
 (() => {
   const button = document.getElementById("check-catalog");
   const status = document.getElementById("catalog-setup-status");
-  const local = location.protocol === "http:" && ["127.0.0.1", "[::1]"].includes(location.hostname);
+  const local = location.protocol === "http:" && location.hostname === "127.0.0.1";
   document.getElementById("local-signin").hidden = !local;
   button.addEventListener("click", async () => {
     button.disabled = true;
@@ -13,7 +13,7 @@
       });
       if (!response.ok) throw new Error("unavailable");
       const value = await response.json();
-      if (value.schemaVersion !== "headstart-catalog-api-1" || !Array.isArray(value.items)) {
+      if (!value || typeof value !== "object" || value.schemaVersion !== "headstart-catalog-api-1" || !Array.isArray(value.items)) {
         status.textContent = "This catalog contract is unsupported. Use compatible plugin and service versions. Your Codex connection is still unconfirmed.";
         return;
       }
