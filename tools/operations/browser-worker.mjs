@@ -16,7 +16,18 @@ lines.on('line', line => {
 });
 const send = value => process.stdout.write(JSON.stringify(value) + '\n');
 const config = await configuration;
-const browser = await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,args:['--no-sandbox','--disable-dev-shm-usage','--disable-background-networking']});
+let browser;
+try {
+  browser = await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,
+    env:{PATH:'/usr/bin:/bin',TMPDIR:'/tmp',XDG_CONFIG_HOME:'/tmp/headstart-browser-config',XDG_CACHE_HOME:'/tmp/headstart-browser-cache'},
+    args:['--no-sandbox','--disable-dev-shm-usage','--disable-background-networking']});
+} catch (error) {
+  // Fixed diagnostic categories only; Chromium messages can contain URLs/paths.
+  const message=String(error?.message||'');
+  const failure= /crashpad|read.only|permission denied/i.test(message) ? 'browser_profile_unwritable' : /executable.*doesn.t exist|ENOENT/i.test(message) ? 'browser_executable_missing' : 'browser_start_failed';
+  send({result:true,category:'worker_failed',checks:[],failure});
+  lines.close();process.exit(1);
+}
 try {
   const context = await browser.newContext({viewport:{width:960,height:540},serviceWorkers:'block',acceptDownloads:false,permissions:[]});
   await context.routeWebSocket('**/*', socket => socket.close());
