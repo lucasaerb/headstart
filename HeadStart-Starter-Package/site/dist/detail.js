@@ -69,6 +69,7 @@ window.HeadStartDetails = (() => {
       evidence.append(node('p','Code: '+data.rights.code_spdx+'. Assets: '+data.rights.asset_status+'. Data outside this scope is not cleared.'));
       for(const notice of data.rights.notices)evidence.append(node('pre',notice));
       content.append(summary,scope,evidence);
+      window.HeadStartHandoff?.mount(content,{id:detail.versionId,version:detail.version});
     }catch{if(request!==current)return;content.replaceChildren(node('p','This component is unavailable or no longer eligible. Return to the library and refresh; no source content has been exported.','detail-error'));}finally{clearTimeout(timeout);}
   }
   return {configure(options){openDialog=options.openDialog;document.getElementById('source-dialog').addEventListener('close',()=>{request?.abort();request=null;});},enhance,showComponent};
