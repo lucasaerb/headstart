@@ -7,15 +7,15 @@ export function createFeature(scene) {
  let geometry,mesh,helper,query=()=>null;
  const objects=[],owned=[];
  if(ROW==='roundedboxgeometry')geometry=new CAPABILITY_CLASS(4,4,4,3,.5);
- if(ROW==='parametricgeometry')geometry=new CAPABILITY_CLASS((u,v,out)=>out.set((u-.5)*6,2*u*u+v,(v-.5)*6),8,6);
+ if(ROW==='parametricgeometry')geometry=new CAPABILITY_CLASS((u,v,out)=>out.set((u-.5)*6,2*Math.sin(Math.PI*u)*Math.sin(Math.PI*v),(v-.5)*6),8,6);
  if(ROW==='boxlinegeometry')geometry=new CAPABILITY_CLASS(4,6,8,2,3,4);
  if(ROW==='convexgeometry')geometry=new CAPABILITY_CLASS([new T.Vector3(-2,-2,-2),new T.Vector3(2,-2,-2),new T.Vector3(0,2,-2),new T.Vector3(0,0,2),new T.Vector3(0,0,0)]);
  if(['vertexnormalshelper','vertextangentshelper'].includes(ROW)){
   geometry=new T.PlaneGeometry(4,4,2,2);geometry.computeTangents();
  }
- if(['capsule','obb'].includes(ROW))geometry=new T.BoxGeometry(4,4,4);
+ if(['capsule','obb'].includes(ROW)){geometry=new T.BoxGeometry(4,4,4);material.wireframe=true;}
  if(['simplexnoise','improvednoise'].includes(ROW)){geometry=new T.PlaneGeometry(12,12,15,15);geometry.rotateX(-Math.PI/2);}
- mesh=ROW==='boxlinegeometry'?new T.LineSegments(geometry,lineMaterial):new T.Mesh(geometry,material);mesh.position.y=2;scene.add(mesh);objects.push(mesh);owned.push(geometry,material,lineMaterial);
+ mesh=ROW==='boxlinegeometry'?new T.LineSegments(geometry,lineMaterial):new T.Mesh(geometry,material);mesh.position.set(4,2,0);scene.add(mesh);objects.push(mesh);owned.push(geometry,material,lineMaterial);
  if(['vertexnormalshelper','vertextangentshelper'].includes(ROW)){
   mesh.rotation.y=.4;mesh.rotation.z=.2;mesh.updateMatrixWorld(true);helper=new CAPABILITY_CLASS(mesh,1.5,0x183768);scene.add(helper);objects.push(helper);owned.push(helper.geometry,helper.material);
  }
@@ -31,7 +31,7 @@ export function createFeature(scene) {
   }
   helper?.update();
  }
- function update(playerX){if(disposed)return;if(['capsule','obb'].includes(ROW))mesh.visible=query(playerX);helper?.update();}
+ function update(playerX){if(disposed)return;if(['capsule','obb'].includes(ROW))mesh.visible=query(playerX-mesh.position.x);helper?.update();}
  refresh();
  return {row:ROW,mesh,geometry,material,helper,objects,owned,query,refresh,update,get seed(){return seed;},dispose(){if(disposed)return;disposed=true;for(const object of objects)scene.remove(object);for(const resource of new Set(owned))resource.dispose();}};
 }

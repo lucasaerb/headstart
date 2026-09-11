@@ -13,6 +13,11 @@ try{
  const tick=()=>{const values=[...callbacks.values()];callbacks.clear();for(const fn of values)fn(16);};
  game.start();game.start();check('idempotent single existing frame scheduler',callbacks.size===1);
  window.dispatchEvent(new KeyboardEvent('keydown',{code:'ArrowRight'}));tick();window.dispatchEvent(new KeyboardEvent('keyup',{code:'ArrowRight'}));check('existing explorer movement preserved',game.snapshot().playerX>.09);
+ if(phase==='integrated'&&['capsule','obb'].includes(row)){
+  check('world query initially outside translated landmark',!feature.mesh.visible);
+  window.dispatchEvent(new KeyboardEvent('keydown',{code:'ArrowRight'}));for(let i=0;i<40;i++)tick();window.dispatchEvent(new KeyboardEvent('keyup',{code:'ArrowRight'}));
+  check('actual explorer input reaches translated overlap query',game.snapshot().playerX>4&&feature.mesh.visible);
+ }
  const x=game.snapshot().playerX;tick();check('keyup stops original movement',game.snapshot().playerX===x);
  game.pause();const paused=game.snapshot().ticks;tick();game.update();check('pause freezes loop and simulation',callbacks.size===0&&game.snapshot().ticks===paused);
  game.reset();check('reset restores original explorer and seed',game.snapshot().playerX===0&&game.snapshot().ticks===0&&game.snapshot().seed===7);
@@ -29,6 +34,10 @@ try{
  window.requestAnimationFrame=request;window.cancelAnimationFrame=cancel;
  // Repeated full mount/unmount, then a stationary fresh scene for capture.
  const again=createGame(document.querySelector('canvas'));again.start();again.pause();again.reset();again.dispose();check('repeated mount cleanup returns baseline listeners',monitor.listeners()===0&&monitor.frames()===0);
- window.game=createGame(document.querySelector('canvas'));report.result='PASS';report.phase=phase;report.row=row;
+ window.game=createGame(document.querySelector('canvas'));
+ if(phase==='integrated'&&['capsule','obb'].includes(row)){
+  window.game.start();window.dispatchEvent(new KeyboardEvent('keydown',{code:'ArrowRight'}));for(let i=0;i<41;i++)window.game.update();window.dispatchEvent(new KeyboardEvent('keyup',{code:'ArrowRight'}));window.game.pause();report.captureState='Explorer moved by target keyboard/update path into query overlay';
+ }
+ report.result='PASS';report.phase=phase;report.row=row;
 }catch(error){report.error=String(error.message);}
 document.getElementById('result').textContent=JSON.stringify(report);document.documentElement.dataset.result=report.result;

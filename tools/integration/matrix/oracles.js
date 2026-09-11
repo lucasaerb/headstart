@@ -11,7 +11,7 @@ export function checkFeature(feature,row,check){
  }
  if(row==='parametricgeometry'){
   check('parametric subdivisions',p.count===63&&g.index.count===288);
-  let valid=true;for(let y=0;y<=6;y++)for(let x=0;x<=8;x++){const i=y*9+x,v=vector(p,i),u=x/8,w=y/6;valid&&=near(v.x,(u-.5)*6)&&near(v.y,2*u*u+w)&&near(v.z,(w-.5)*6);}
+  let valid=true;for(let y=0;y<=6;y++)for(let x=0;x<=8;x++){const i=y*9+x,v=vector(p,i),u=x/8,w=y/6;valid&&=near(v.x,(u-.5)*6)&&near(v.y,2*Math.sin(Math.PI*u)*Math.sin(Math.PI*w))&&near(v.z,(w-.5)*6);}
   check('independent parametric samples',valid);check('parametric UV endpoints',near(g.attributes.uv.getX(62),1)&&near(g.attributes.uv.getY(62),1));
   check('parametric nonzero normalized normals',Array.from({length:g.attributes.normal.count},(_,i)=>vector(g.attributes.normal,i).length()).every(x=>near(x,1)));
  }
@@ -38,7 +38,7 @@ export function checkFeature(feature,row,check){
   check('query intersects target obstacle',feature.query(0)===true);check('query separates from target obstacle',feature.query(10)===false);
   if(row==='capsule')check('capsule strict overlap excludes tangency',feature.query(2.49)===true&&feature.query(2.5)===false&&feature.query(2.51)===false);
   else check('rotated box intersection boundary',feature.query(3.2,Math.PI/4)===true&&feature.query(3.5,Math.PI/4)===false);
-  feature.update(0);check('query visible overlap state',feature.mesh.visible);feature.update(10);check('query visible separated state',!feature.mesh.visible);feature.update(0);
+  feature.update(feature.mesh.position.x);check('query visible overlap state',feature.mesh.visible);feature.update(feature.mesh.position.x+10);check('query visible separated state',!feature.mesh.visible);feature.update(feature.mesh.position.x);
  }
  if(['simplexnoise','improvednoise'].includes(row)){
   feature.refresh(7);const a=Array.from(p.array);feature.refresh(7);check('terrain repeatable seed coordinates',JSON.stringify(a)===JSON.stringify(Array.from(p.array)));feature.refresh(18);check('terrain changed seed changes actual mesh',JSON.stringify(a)!==JSON.stringify(Array.from(p.array)));
