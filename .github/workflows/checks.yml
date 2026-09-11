@@ -60,7 +60,7 @@ jobs:
 
   integration-reference:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -86,6 +86,10 @@ jobs:
         run: python -m tools.integration.workflow validate "$RUNNER_TEMP/headstart-run" --image "$(cat "$RUNNER_TEMP/headstart-image-id")"
       - name: Reject broken runtime mutants
         run: python -m tools.integration.tests.runtime_mutations --image "$(cat "$RUNNER_TEMP/headstart-image-id")" --output "$RUNNER_TEMP/headstart-negative"
+      - name: Reproduce ten pinned reference integrations
+        run: python -m tools.integration.matrix.run --row all --output "$RUNNER_TEMP/headstart-matrix" --image "$(cat "$RUNNER_TEMP/headstart-image-id")" --authorized
+      - name: Reject per-capability no-op and disposal mutants
+        run: python -m tools.integration.matrix.mutations --output "$RUNNER_TEMP/headstart-matrix-negative" --image "$(cat "$RUNNER_TEMP/headstart-image-id")"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -103,3 +107,11 @@ jobs:
             ${{ runner.temp }}/headstart-run/applied.json
             ${{ runner.temp }}/headstart-run/applied-modes.json
             ${{ runner.temp }}/headstart-run/events.jsonl
+            ${{ runner.temp }}/headstart-matrix/*/plan.json
+            ${{ runner.temp }}/headstart-matrix/*/applied.json
+            ${{ runner.temp }}/headstart-matrix/*/validation.json
+            ${{ runner.temp }}/headstart-matrix/*/execution-attestation.json
+            ${{ runner.temp }}/headstart-matrix/*/events.jsonl
+            ${{ runner.temp }}/headstart-matrix/*/evidence/
+            ${{ runner.temp }}/headstart-matrix-negative/negative-results.json
+            ${{ runner.temp }}/headstart-matrix-negative/*/negative-evidence/
