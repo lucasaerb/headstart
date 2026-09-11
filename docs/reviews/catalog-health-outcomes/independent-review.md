@@ -1,6 +1,6 @@
 # Issue20 independent operations review
 
-**CHANGES REQUESTED: one event instrumentation criterion remains open.** Reviewer `reuse_handoff`, reviewed checkpoints5685f31,76bda0c,d215b17 plus previously accepted92d009a/eee9a10 interfaces.
+**PASS — all issue20 criteria accepted within the documented local scope.** Reviewer `reuse_handoff`, reviewed checkpoints5685f31,76bda0c,d215b17 plus previously accepted92d009a/eee9a10 interfaces.
 
 The actual independent network-disabled Docker browser run passed the first-party click/change fixture and rejected the wrong expected result. A private subresource was denied; no external catalog game success is claimed. Raw report is `independent-browser.json`. I inspected broker DNS/public-IP pinning, no credentials/proxy/redirect/query forwarding, bounded resource bytes/deadlines, no container network, restricted mounts, dropped capabilities, memory/process/CPU limits and browser GET-only routing with websocket/service-worker blocking. This is bounded local checking, not a multi-tenant execution service.
 
@@ -11,3 +11,15 @@ The final31 operations tests passed, including pinned source/license bytes, host
 I reproduced a source reversion bug with A→B→A→C: deduplicated snapshot rows incorrectly reported B→C. Fixed atd215b17 by separate immutable observation sequence, retaining three distinct snapshots and four observation events. The regression now verifies A→C. Earlier duplicate correction dispatch is fixed by transactional claims and tested across real connections. Old tested evidence never transfers to change candidates; actual reviewed-reference aggregates remain labeled not user adoption.
 
 Remaining acceptance gap: plugin_lookup and first_plan currently have only event categories/manual emit capability, not actual successful lookup/plan instrumentation. The author is adding explicit opt-in local hooks; acceptance requires actual boundary tests, disabled/error behavior and minimal data. Handoff already emits only after a successful protected response. No other blocking finding remains in the reviewed UI/worker/recovery subset. Aggregate Batch4 PASS remains withheld until this final criterion is verified.
+
+## Final instrumentation and merge acceptance
+
+The remaining instrumentation gap is resolved byb342c03 and11bb204. I inspected the checkout-only wrapper around the unchanged actual MCP dispatch and local planner, then independently ran all35 operations tests. Successful actual stdio lookup increments plugin_lookup; failed lookup does not. First-plan increments only after real target/source validation and a successful plan-file write, deduplicates, and rejects failed plans/output writes. Public event submissions cannot claim these internal completed-action categories. The optional wrapper leaves the shipped plugin, runtime recipes and accepted matrix hashes unchanged. Its database/consent paths require owned private permissions; only minimal event fields persist, no raw tool/target material.
+
+I found and reproduced cached-consent leakage in a long-running MCP recorder after a separate forget action. Fix11bb204 rechecks the bounded consent file and token under a database write lock for every completion. The actual live stdio regression and my original two-recorder reproduction now retain zero events after deletion while the lookup itself succeeds. Disabled/unsafe consent leaves product actions usable. No blocker remains.
+
+I independently reran the final desktop/mobile suite including actual homepage search→opt-in server event, deletion, curator access and errors. The accepted actual Docker report also passes the dated HealthJobs persistence interface without rerunning unchanged browser execution. Source reversion, queue concurrency, active index-read recovery and every earlier finding remain closed.
+
+I inspected main merge8d86ad9: the only initializer conflict retains rights-policy setup and removes the superseded missing-reference expansion. A fresh isolated initialization returned exactly41 strict display records, the required rights table and all three eligible recipe templates. The separately approved catalog/media refresh is preserved; no catalog-driven source status promotion was inferred.
+
+Local CLI scheduling, first-party interactive fixture evidence and opt-in checkout event wrappers are the supported scope. Production cron/storage, automatic personal-plugin telemetry, real external-game interaction success and user adoption remain unclaimed. These limits match the issue’s local delivery boundary.

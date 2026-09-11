@@ -42,3 +42,7 @@ Batch 4 (#16–#20) may now begin under its recorded prerequisite gates. `reuse_
 ## Remote verification checkpoint
 
 GitHub Actions run [34553406155](https://github.com/lucasaerb/headstart/actions/runs/34553406155) passed at `1daf49f`, including Node/Python checks, build, desktop/mobile browser workflows, actual MCP SDK checks and the new expert-review fixture harness. Earlier runs exposed a Python interpreter portability assumption and an asynchronous comparison-view replacement; fixes and independent review are recorded in `docs/reviews/reuse-batches/`. This is checkpoint verification, not full acceptance of unfinished #16–#20.
+
+## Batch4 independent acceptance — PASS
+
+The second five issues (#16–#20) passed independent critical review by `reuse_handoff` at11bb204, after author handoffs, actual runtime/client/browser validation and all blocking fixes. See `docs/reviews/reuse-batches/batch4-review.md` and the completed batch4 checklist. Exact source/target/recipe/image pins, desktop/mobile captures,40 matrix phases and20 negative mutants, actual0.7 twelve-skill client evidence, source/rights controls, operations recovery and opt-in event boundaries are retained. Main merge8d86ad9 preserves the separately approved41-record catalog/media refresh. Acceptance is local and scope-specific; hosted verification/integration, a three-game remix/royalties and production scheduling remain separate work.
