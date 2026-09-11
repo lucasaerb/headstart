@@ -48,7 +48,9 @@ test("real HTTP catalog routes, signed cursor, selected research and no mutation
     assert.equal(research.total, 41);
     response = await fetch(base + "/api/research?ids=" + research.items[0].id);
     assert.equal((await response.json()).items.length, 1);
-    response = await fetch(base + "/api/research?ids=openai-sites-void-explorer");
+    response = await fetch(
+      base + "/api/research?ids=openai-sites-void-explorer",
+    );
     assert.equal((await response.json()).items.length, 0);
     response = await fetch(base + "/v1/search", { method: "POST" });
     assert.equal(response.status, 405);
