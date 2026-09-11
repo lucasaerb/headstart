@@ -1,6 +1,6 @@
 # Recent vibe-coded browser catalog — author evidence
 
-Author revision: pending commit on `feature/recent-vibe-browser-games`, 2026-09-11.
+Implementation revision: `6f8595d99549990a705dd985d5525ccf659b519c`; test-alignment follow-up: `b92d3bd5da78a7fc008c5438cbeb6f49a5517a52`, on `feature/recent-vibe-browser-games`, 2026-09-11. Desktop and mobile screenshots were captured from `6f8595d99549990a705dd985d5525ccf659b519c`; the follow-up changes tests only and does not affect the captured UI.
 
 The live index contains 41 records after applying six publication gates: pinned public source, inspected open-source code license, authentic gameplay media, positive GitHub stars from dated API evidence, browser demo, and reachable live-play URL. `research/catalog/exclusions/strict-gate-audit.json` records each decision; `excluded-records.json` preserves research removed from discovery. Custom `LicenseRef-*` projects, including all six Toy2Game noncommercial rows, fail the open-source gate.
 
