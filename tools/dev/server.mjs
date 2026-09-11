@@ -11,6 +11,8 @@ export const siteRoot = fileURLToPath(
 const files = new Set([
   "index.html",
   "plugin.html",
+  "plugin-setup.js",
+  "plugin-setup.css",
   "auth.html",
   "auth.js",
   "handoff.js",

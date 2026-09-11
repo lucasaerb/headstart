@@ -1,6 +1,6 @@
 # HeadStart for Codex
 
-Describe your dream game and find real codebase starting points without leaving your coding conversation. Version **0.4.0** combines nine skills with a local MCP catalog: **52 research references and 105 source-inspected building blocks**, including immutable source links, inspected paths and reuse limitations.
+Describe your dream game and find real codebase starting points without leaving your coding conversation. Version **0.5.0** combines nine skills with a local MCP catalog: **52 research references and 105 source-inspected building blocks**, including immutable source links, inspected paths and reuse limitations.
 
 ## Start here
 
@@ -14,6 +14,10 @@ The agent should first call `catalog_info`, search the actual snapshot, and show
 
 For developers working from this repository, `tools/plugin/README.md` at the repository root documents the portable distribution build and install checks. That tooling is outside this plugin directory; the generated archive carries its own install instructions.
 
+## Connect your local website selection
+
+The default install stays offline. To use the local HeadStart website, follow [connected setup](references/connected-setup.md). The explicit localhost mode supports real catalog queries and automatically retrieves your account’s most recently prepared eligible system selection, including exact versions, brief and constraints. Anonymous research-game bags are not synchronized. Authentication uses the development preview and browser-approved local credential bridge; hosted email delivery is not available.
+
 ## What works
 
 - **Find:** turn an idea into project/system searches and evidence-based comparisons.
@@ -24,19 +28,19 @@ For developers working from this repository, `tools/plugin/README.md` at the rep
 - **Plan / Integrate / Validate / Credit:** guide the host coding agent through authorized local work, actual checks and preserved notices. These are skill instructions, not a hosted execution service or pretested integration adapters.
 - **Local MCP:** `catalog_info`, `search_components`, `get_component`, `get_starting_project`; pinned versions, bounded pagination and exact filters. `prepare_handoff` remains a fail-closed protected-action boundary. See [catalog access](references/catalog-access.md).
 
-The MCP process reads only bundled metadata. It makes no network requests, reads no target project and writes no files. It includes no upstream game code or image bytes. Four starting-project records include reviewed public preview links and rights context; other projects return an explicit missing-preview state. Discovery is open; public repository and external demo links are available. Demo launch, source downloads and local work—when requested separately—use the host agent's existing capabilities and permissions.
+In default snapshot mode the MCP process reads only bundled metadata and makes no network requests. In explicitly configured localhost mode it calls the local service and may record a private planning handoff after browser-approved authentication. Neither mode reads or writes a target project. It includes no upstream game code or image bytes. Four starting-project records include reviewed public preview links and rights context; other projects return an explicit missing-preview state. Discovery is open; public repository and external demo links are available. Demo launch, source downloads and local work—when requested separately—use the host agent's existing capabilities and permissions.
 
 ## Honest limits
 
-This is an offline research snapshot. Source-inspected does not mean extracted, integration-tested, currently playable or cleared for code/asset reuse. Twenty candidates without completed scope review are excluded. Each result carries its own rights caveats and source commit; repository license filtering does not clear selected files or assets. Catalog, media-reference source and review SHA-256 values in [the manifest](references/discovery-manifest.json) bind the local release inputs, but are not a cryptographic publisher signature.
+The default discovery catalog is an offline research snapshot. Source-inspected does not mean extracted, integration-tested, currently playable or cleared for code/asset reuse. Twenty candidates without completed scope review are excluded. Each result carries its own rights caveats and source commit; repository license filtering does not clear selected files or assets. Catalog, media-reference source and review SHA-256 values in [the manifest](references/discovery-manifest.json) bind the local release inputs, but are not a cryptographic publisher signature.
 
-`prepare_handoff` always returns an actionable denial: verified-email identity and scope-rights services are not implemented. There is no email collection, login URL, code export or portable code-packet fallback in this release. Live website and bag synchronization, source-code remixing and royalty services are also unimplemented. Snapshot-backed `get_starting_project` is not a live website fetch. A user-provided list is not automatic bag retrieval. Public source links and independently authorized work on user-selected local sources remain separate.
+`prepare_handoff` is denied in snapshot mode. Configured localhost mode requires the approved credential and revalidates scope rights before returning a metadata-and-notices planning packet, never source bytes. There is no hosted sign-in, production website synchronization, source-code remixing or royalty service. Snapshot-backed `get_starting_project` is not a live website fetch. A user-provided list is not automatic bag retrieval. Public source links and independently authorized work on user-selected local sources remain separate.
 
 The download does not vendor `vibegameengine/web-starter-kit` because the inspected revision did not establish a root license for the whole starter. Unity editor connectivity uses Unity Technologies' official Unity MCP Server, supplied through the separately installed `com.unity.ai.assistant` package; Unity's separate official agent plugin supplies skills only. Neither is bundled by HeadStart. The community Blender MCP is also not bundled or auto-started: it can execute arbitrary Python, safe mode defaults off, and its published terms describe default-enabled rich telemetry plus minimal anonymous usage after opt-out. See [technology companions](references/technology-companions.md) for setup, rights, privacy and execution boundaries.
 
 ## Troubleshooting and development
 
-If the tools are absent, confirm the package was added using the distribution instructions and start a new thread. If Python cannot launch, make `python3` available to Codex and retry. A missing, modified or incompatible catalog returns `catalog_unavailable`: reinstall the same release; do not replace it with the historical seed fixture. The server runs offline, so lost network connectivity does not stop local metadata search, but external demos/source pages may be unavailable.
+If the tools are absent, confirm the package was added using the distribution instructions and start a new thread. If Python cannot launch, make `python3` available to Codex and retry. A missing, modified or incompatible catalog returns `catalog_unavailable`: reinstall the same release; do not replace it with the historical seed fixture. Snapshot discovery works offline; external demos/source pages may be unavailable. Configured localhost failure never silently switches to snapshot data: restart the service or explicitly remove the connection settings and start a new thread for research-only discovery.
 
 Maintainers working in the **source checkout only** can run the protocol suite from this plugin directory (tests and the snapshot builder are omitted from the portable archive):
 

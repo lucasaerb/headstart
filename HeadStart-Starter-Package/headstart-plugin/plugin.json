@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "headstart-plugin",
-  "version": "0.4.0",
-  "description": "Discover pinned game starting points through a local, read-only catalog and nine focused coding-agent skills, including Three.js, Unity and Blender guidance.",
+  "version": "0.5.0",
+  "description": "Nine game-development skills with offline discovery and an explicitly configured localhost catalog and protected planning connection.",
   "author": {
     "name": "HeadStart project"
   },
@@ -18,7 +18,7 @@
       "interface": {
         "displayName": "HeadStart",
         "shortDescription": "Find game starting points inside Codex",
-        "longDescription": "Search 52 source-inspected game and framework references locally, retrieve pinned project/repository and reviewed preview links, and use nine skills including Three.js starter selection plus Unity and Blender guidance. Live website/bag sync, source exports and tested integrations are not implemented.",
+        "longDescription": "Find pinned game starting points using the offline research snapshot, or configure the localhost service for real catalog lookup and browser-approved selected-bag planning. Nine skills guide local work; source delivery, hosted remix and royalties are not supplied.",
         "developerName": "HeadStart project",
         "category": "Productivity",
         "capabilities": [],

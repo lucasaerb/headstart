@@ -17,7 +17,7 @@ SOURCE = ROOT / 'HeadStart-Starter-Package/headstart-plugin'
 MAX_FILE = 8 * 1024 * 1024
 MAX_TOTAL = 32 * 1024 * 1024
 REQUIRED = {'.codex-plugin/plugin.json', 'plugin.json', 'mcp.json', 'README.md',
-            'scripts/catalog_mcp.py', 'scripts/inspect_project.py',
+            'scripts/catalog_mcp.py', 'scripts/inspect_project.py', 'scripts/live_catalog.py',
             'references/discovery-catalog.json', 'references/discovery-manifest.json',
             'references/starting-project-media.json', 'references/technology-companions.md'}
 REQUIRED |= {f'skills/headstart-{name}/SKILL.md' for name in
@@ -29,7 +29,7 @@ def allowed(path: str) -> bool:
     if path in {'.codex-plugin/plugin.json', 'plugin.json', 'mcp.json', 'README.md', 'LICENSE', 'LICENSE.md'}:
         return True
     if len(parts) == 2 and parts[0] == 'scripts':
-        return parts[1] in {'catalog_mcp.py', 'inspect_project.py'}
+        return parts[1] in {'catalog_mcp.py', 'inspect_project.py', 'live_catalog.py'}
     if len(parts) == 2 and parts[0] == 'references':
         return parts[1].endswith(('.md', '.json')) and not parts[1].startswith('.')
     if len(parts) == 3 and parts[0] == 'skills':

@@ -9,6 +9,8 @@ await mkdir(output);
 for (const file of [
   "index.html",
   "plugin.html",
+  "plugin-setup.js",
+  "plugin-setup.css",
   "auth.html",
   "auth.js",
   "handoff.js",
