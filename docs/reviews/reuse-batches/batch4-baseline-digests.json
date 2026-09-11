@@ -1,0 +1,9 @@
+{
+  "HeadStart-Starter-Package/site/dist/downloads/headstart-plugin-0.5.0.zip": "af4f44b9367e95f44900fc5e932f18f9a3ee7ec46a4609c9dd602762dc4301fd",
+  "contracts/entity.schema.json": "6237f58e1071a6d82db66c76bd0651c2cc9548ab90c9444a15f3419b22cef95e",
+  "contracts/ontology.json": "ddb1769931b50de4f9b06aab923be0dabdc8685d169f9df8e83a7d105adb58e9",
+  "contracts/validate.py": "d9f10df7d5a7db1676b25950b37a690e6aff7305c44d76e5dc72df70dfbf1da7",
+  "services/curation/COMPATIBILITY.md": "3573c1255ed934c1d72963fabcd8e7fc7bbd60f563361fdf8c580f828f2cd2fb",
+  "services/curation/reviewed-source-maps.json": "2fc5fd6695d5de20b6b2a06c8cb555ebc724d4840bc2d0936b21ee73e0c2229c",
+  "services/curation/seed.py": "f1ab3e577579e05cc919a572f61e329273cae0be3d390f68aa4dc40c7301ef8a"
+}
