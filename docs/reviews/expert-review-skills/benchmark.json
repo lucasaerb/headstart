@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.2",
+  "entity_type": "benchmark_run",
+  "id": "expert-review-cpu-fixture",
+  "version": "1",
+  "data": {
+    "source_commit": "d7354336bc2123ac6e8dffce721415c466c0f6e9",
+    "target_commit": "d49de999987ae3b9a123e04923a9ffb846621cb0",
+    "workload": "50000 toy World.step(1/60) calls per batch; no rendering/input; 10 batches",
+    "device": "Apple M4 Pro; arm64; GPU unused",
+    "os": "darwin 24.6.0",
+    "engine_version": "Node v22.22.3",
+    "browser_version": null,
+    "resolution": {
+      "width": 1,
+      "height": 1
+    },
+    "settings": "Headless CPU-only toy fixture, no rendering, non-rendered 1x1 placeholder. Background system load uncontrolled.",
+    "warmup": "3 batches of 50000 updates before collection",
+    "sampling_method": "performance.now monotonic wall time; 10 sequential batch durations; arithmetic mean milliseconds",
+    "raw_results": {
+      "path": "raw.json",
+      "digest": "0042fec8f3a6312c994ff8f5b35fbbd3c121262e8611af8fb686df8c0f55af77",
+      "source_commit": "d7354336bc2123ac6e8dffce721415c466c0f6e9",
+      "origin": "executed_test",
+      "claim_type": "measured",
+      "reviewer": "reuse_plugin fixture command",
+      "observed_at": "2026-09-11T01:59:58.285Z",
+      "claim": "Actual Node CPU-only toy-update durations; not gameplay FPS."
+    },
+    "measurements": [
+      {
+        "metric": "cpu-update-batch-mean",
+        "value": 0.03174589999998716,
+        "unit": "ms"
+      }
+    ],
+    "summary": "Single local CPU-only baseline. No before/after performance comparison or broad speedup is established."
+  }
+}
