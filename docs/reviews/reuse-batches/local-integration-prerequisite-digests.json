@@ -1,0 +1,43 @@
+{
+  "sourceRevision": "54583757c0b0bb0d7196dd5de9e78c9c3ae0a64d",
+  "files": {
+    "HeadStart-Starter-Package/headstart-plugin/references/local-integration-workflow.md": "d440bc7b77242c863a33f2a9e69cbf97df9b6d541d10df3a59b79a166233c52e",
+    "HeadStart-Starter-Package/headstart-plugin/skills/headstart-integrate/SKILL.md": "8571403712baa344d9b64c017b4f798362b9660825c0f8911169615795691ef7",
+    "HeadStart-Starter-Package/headstart-plugin/skills/headstart-plan/SKILL.md": "5d7268f5f195a5c236938faec0a46bc6ea912abae192170ba1322ed77f2d4e91",
+    "HeadStart-Starter-Package/headstart-plugin/skills/headstart-validate/SKILL.md": "153ae0874a8553c6063f9c272fd40dea36c9ee0dbb7de16793d72f41c0913d3c",
+    "tools/integration/Dockerfile": "53145a5617bd8e3ee7dc3f090af494a636dafb880d93676bdf3a8fcc8393e254",
+    "tools/integration/README.md": "ac281f5694fc82c55dce781952472e4184e1af165e906e656cf6f38fa374736a",
+    "tools/integration/adapters/simplex-terrain.js": "2546507059e5d4b16f0ad6c38057c302e7d6b466f0564c2f08f490abf1223ad7",
+    "tools/integration/browser-check.js": "06092c904cc9ca52345b89acec1ef14a1b327be7d598a85bab80f6e912f44f8e",
+    "tools/integration/browser-runner.mjs": "086205b0c09ebebc43acb604a6295a212bc71d6a413536b7c51c09c406f34052",
+    "tools/integration/engine-manifest.json": "373b13c11094fd3fa8a67075f4b3d7767e0d004a975e6bda3c8c5e3799ca8ca2",
+    "tools/integration/fetch_engine.py": "2c9a795d4a76ae226dcc064c4db2d580500de7c74fc4d83d15c124ecbd612165",
+    "tools/integration/fixture.py": "1dbdff96f901ebd59a74b897fa48afdf3945024177b2982f6140c1aeac38c6a9",
+    "tools/integration/fixtures/target/AGENTS.md": "f2c732232fa6fc5ee3ed72f2ad14fb294a8985723678fe69a8fefefedcf86b34",
+    "tools/integration/fixtures/target/headstart-target.json": "cd194c4faa14cf3f06b79c4bad0f9fad96d93028665b17d4248699d5f6148180",
+    "tools/integration/fixtures/target/index.html": "e681461ecf7a0ccfb32322a0459d2c3f9ad0426f22c23042035b07e08c71c789",
+    "tools/integration/fixtures/target/package-lock.json": "8493e603c5c27f7358a1fb3ae85a19c1b66a95b8adebafce9444852db61e4a47",
+    "tools/integration/fixtures/target/package.json": "b184ceb02eea277af8920cb3cec72dda5b44dd822ce3bd60c6c5acc040e922b9",
+    "tools/integration/fixtures/target/src/game.js": "a7e31d5dccae46e8e7e1b4b968f6a4670f065482cd13416c560682921f3cc557",
+    "tools/integration/fixtures/target/src/terrain.js": "d9deb5681cb2524ecb82b169a9bd4115271973a9c557c2b0c112a1d51861dd29",
+    "tools/integration/monitor.js": "69da47f47f766d7ada3b2e78f5b7f14db03f9e7f5f68b8ced8b6bd5e0dadf951",
+    "tools/integration/sandbox.py": "bcc763c2729cd7da501c2c48b0363c0d2c7e4f89f13acdcdf769ce68b062a746",
+    "tools/integration/tests/runtime_mutations.py": "c8fda79499a1c07d3d1ece90f3e9e038249a461235d86a5bf1a86696659ec496",
+    "tools/integration/tests/test_workflow.py": "cb0b5f4e96b2c791032e09cfcd9925a9ddb205ca6333b0eb5ad884f09e299dd2",
+    "tools/integration/workflow.py": "cc38c15e3f85e2ba660804a5ffcad31def5c5d188d749979d769eb9246118ab7"
+  },
+  "evidence": {
+    "plan.json": "30127f009d8bb6092fb0ab90d1d9dfba33f9adc278a0cf94c3422660dbee3cb9",
+    "events.jsonl": "a4223fa5cad1ee13060c90fcd9658d915cdb3ff154ddacfdc1446e858cdaee56",
+    "validation.json": "35562ecd3f6ad0bf63f28b3be732c04b48c40c3bc2cf36daccc51d945ea9c94b",
+    "mutation-results.json": "1b89894a3d731cc19c29c92b9ef8d4b8421f348ac58acfccd02ba1c5692cd31b",
+    "evidence/integrated-390,844.log": "8a161aac7876b075c08643f1a3b9aed9c535149f0c02fb98d82e98ab5deebb32",
+    "evidence/baseline-1280,800.log": "12044fb8dd96ff6d9b034b00c0b7bb4b4298f6a60597c7e1727557bf09103ad6",
+    "evidence/baseline-390,844.log": "b7d5e94fd54e2f599b3d1f25e8c87b99b6b2e988e9c50a2d768b024ce3586446",
+    "evidence/integrated-1280,800.png": "66532c404595ea5d7d8c1fdb8f9e2fa2bd5423021f3c79fe6cde04d18b6fc18f",
+    "evidence/integrated-1280,800.log": "e6f5bc75ca0917a2eba3f1a40ad9b3ff87e61c0caf2e6dea04e6fcf3e629cdad",
+    "evidence/integrated-390,844.png": "c3c22c63f8de96d6e05025a01ea1a3243be23ca4fc9278587706284dcfa3f731",
+    "evidence/baseline-1280,800.png": "5d79d930977fbc90f34265d721beb72517d38f4548f324d457fa8e31383fef2f",
+    "evidence/baseline-390,844.png": "2c94f166dccc6c71313af54d07db3108b54679011f3f18d188431686f230d1cc"
+  }
+}

@@ -1,6 +1,6 @@
 # #16 bounded integration prerequisite review
 
-Verdict: **CHANGES REQUESTED**, first source checkpoint `f3aaa3c20b3a9c58f9d7cdafde6c4d8fcb75923c`. Reviewer `reuse_handoff`; author `reuse_mcp`. No dependent runtime/continuity gate is approved yet.
+Current verdict: **PASS for the #16 prerequisite interface and declared reference runtime at `54583757c0b0bb0d7196dd5de9e78c9c3ae0a64d`**. Full issue/batch acceptance still follows the five author handoffs. Initial verdict was CHANGES REQUESTED at source checkpoint `f3aaa3c20b3a9c58f9d7cdafde6c4d8fcb75923c`. Reviewer `reuse_handoff`; author `reuse_mcp`. The initial findings and each fix round are retained below; the final scope is recorded at the end.
 
 Independent checks at that checkpoint:
 
@@ -23,3 +23,13 @@ Earlier pre-checkpoint feedback was addressed in `f3aaa3c`: mandatory rights and
 A new **P2** remains: materialization copies bytes but loses unrelated executable modes. Adding and committing an unrelated `helper.sh` with mode0755, then planning/applying, yields0644 in the worktree. Byte-only snapshots do not include this undeclared change. Preserve the relevant file mode and bind mode drift in state/validation; include a regression for preserved executables and stale mode.
 
 Fresh final runtime attempt `/tmp/headstart-review-integration-dff2046` timed out on the first baseline after60 seconds while another Docker run was active. It is a failed attempt, not new passing evidence or proof of a product regression. A sequential fresh run is required after the mode fix. Earlier exact-checkpoint runtime results remain historical evidence only.
+
+## Final prerequisite PASS at `5458375`
+
+`f76d1b6` preserves and pins original file modes. `33cb83f` additionally rejects mode/content drift from the recorded applied state and refuses rollback over changed integration-file modes; independently reran fourteen workflow tests, all PASS. The host filter marker probe is rejected before execution. Final review checks original target, source/packet/recipe/plugin bindings, progress history, current target and the exact eight retained screenshot/log digests.
+
+The two CLI timeout attempts remain failures. `5458375` replaces dependence on Chromium command completion with local CDP readiness, explicit runtime result retrieval and actual screenshot capture. The 60-second external resource bound remains; browser termination is reported as intentional after capture, not invented as exit0. Fresh sequential independent execution passed all four baseline/integrated desktop/mobile-viewport phases, eighteen checks each. Recipe digest `13577f4d862a4c37f0f730d7875c97d4d8e69e09360df2f18ad045009b042670`; validation digest `6540d39236347caffe2899b262c4e04291af899f38e81e8621e0699ffef694a7`. Fresh no-op, leaked-listener and duplicate-renderer mutants all failed the relevant runtime oracle.
+
+Repeated the original log-tamper probe against this actual validated run: changed bytes are rejected without a progress transition; restoring exact bytes permits the review guard. Event writing was suppressed for that probe, avoiding a synthetic promotion. All four final captures were visually inspected: the target's flat plane becomes a varied continuous surface, explorer and controls remain visible, and labels wrap on the narrow viewport. The narrower crop does not claim touch input, terrain collisions or R3F execution. The target's actual instructions, lockfile and renderer/camera/input/loop/disposal implementation were inspected alongside the external monitor and adapter.
+
+Reproduction evidence is retained under `evidence/local-integration/`; exact reviewed source/evidence hashes are in `local-integration-prerequisite-digests.json`. No C4 site assets/layout changed. This PASS permits #17 to build further separately tested adapters on this bounded workflow and #18 to bind review context to its accepted plan/validation records. It does not validate ten integrations, unsupported assemblies, hosted source execution, royalties or any new target/runtime by analogy. No unresolved blocking finding remains for this prerequisite scope.

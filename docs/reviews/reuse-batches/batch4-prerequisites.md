@@ -24,6 +24,6 @@ Exact current baseline digests are in `batch4-baseline-digests.json`. Screenshot
 
 ## Remaining dependency gates
 
-- #16 → #17/#18: pending actual authored integration interface and independent check.
+- #16 → #17/#18: PASS at `5458375` for the declared bounded workflow and Simplex terrain reference; see `local-integration-prerequisite.md` and exact digest manifest. Other adapters/compositions remain independently untested.
 - #17/#18 → #19 and applicable #20 inputs: pending authored evidence/interfaces and independent checks.
 - Final #16–#20 acceptance: pending five completed author handoffs, independent full review, fixes and explicit PASS.
