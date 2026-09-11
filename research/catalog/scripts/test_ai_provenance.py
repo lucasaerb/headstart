@@ -250,8 +250,11 @@ class AIProvenanceTests(unittest.TestCase):
         approvals = {item['record_id']: item for item in json.loads(approval_path.read_text())['records']}
         _, media = load()
         media_by_record = {item['record_id']: item for item in media}
-        self.assertEqual(len(audit_ids), 26)
-        for record_id in audit_ids:
+        # The strict live catalog keeps only the subset that also passes source,
+        # license, stars and live-play gates. Historical approvals remain audit
+        # evidence without forcing excluded records back into discovery.
+        active_audit_ids = audit_ids & media_by_record.keys()
+        for record_id in active_audit_ids:
             with self.subTest(record_id=record_id):
                 item = media_by_record[record_id]
                 approval = approvals[record_id]
@@ -267,50 +270,27 @@ class AIProvenanceTests(unittest.TestCase):
     def test_all_selected_media_has_record_specific_alt_text_before_download(self):
         _, media = load()
         record_ids = {item['record_id'] for item in media}
-        self.assertEqual(len(record_ids), 69)
-        self.assertEqual(record_ids - ALT.keys(), set())
-        require_alt_coverage(record_ids)
+        self.assertEqual(len(record_ids), 41)
+        self.assertTrue(all(item['alt'].strip() for item in media))
+        # Collector-owned historical rows still use its fixed pre-download map;
+        # newly pinned media carries its reviewed alt directly in the manifest.
+        require_alt_coverage(record_ids & ALT.keys())
         with self.assertRaises(ValueError):
             require_alt_coverage(record_ids | {'missing-alt-fixture'})
 
-    def test_official_sites_games_keep_source_and_rights_limits(self):
+    def test_source_less_official_sites_games_are_excluded_from_publication(self):
         records, media = load()
-        by_id = {row['id']: row for row in records}
-        media_by_record = {item['record_id']: item for item in media}
-        expected = {
-            'openai-sites-void-explorer': ('Three.js WebGPU / WebGL', '3d'),
-            'openai-sites-sunwake': ('Three.js', '3d'),
-            'openai-sites-hollowflux': ('Browser', '2d'),
-        }
-        for record_id, (runtime, dimension) in expected.items():
-            with self.subTest(record_id=record_id):
-                row = by_id[record_id]
-                self.assertEqual(row['runtime']['name'], runtime)
-                self.assertEqual(row['dimension'], dimension)
-                self.assertIn('Sites', row['platforms'])
-                self.assertEqual(row['ai_provenance']['models'], ['GPT-6 Astra'])
-                self.assertIsNone(row['source']['commit'])
-                self.assertIsNone(row['rights']['code_license'])
-                self.assertEqual(row['rights']['code_status'], 'unresolved')
-                self.assertEqual(media_by_record[record_id]['reviewer'], '/root/critical_review')
-                self.assertEqual(media_by_record[record_id]['independent_reviewed_at'], '2026-09-10T20:55:48Z')
-                self.assertTrue(media_by_record[record_id]['independent_review_verdict'].startswith('PASS'))
-                self.assertEqual(media_by_record[record_id]['rights_status'], 'official_source_local_display_rights_unresolved')
-        projected = {row['id']: row for row in project(records, media, require_previews=True)}
+        expected = {'openai-sites-void-explorer','openai-sites-sunwake','openai-sites-hollowflux'}
+        self.assertTrue(expected.isdisjoint({row['id'] for row in records}))
+        self.assertTrue(expected.isdisjoint({item['record_id'] for item in media}))
+        root = Path(__file__).resolve().parents[1]
+        audit = {item['record_id']: item for item in json.loads((root/'exclusions/strict-gate-audit.json').read_text())['records']}
+        archived = {item['id']: item for item in json.loads((root/'exclusions/excluded-records.json').read_text())['records']}
         for record_id in expected:
-            self.assertEqual(projected[record_id]['sourceAvailability'], 'no_public_source')
-            self.assertIn('Sites', projected[record_id]['platforms'])
-            self.assertEqual(projected[record_id]['aiProvenance']['models'], ['GPT-6 Astra'])
-            self.assertEqual(projected[record_id]['preview']['rightsStatus'], 'official_source_local_display_rights_unresolved')
-
-        unstamped_media = copy.deepcopy(media)
-        for item in unstamped_media:
-            if item['record_id'] in expected:
-                for field in ('reviewer', 'independent_reviewed_at', 'independent_review_verdict'):
-                    item.pop(field)
-        unstamped = {row['id']: row for row in project(records, unstamped_media, require_previews=True)}
-        for record_id in expected:
-            self.assertNotIn(record_id, unstamped)
+            self.assertFalse(audit[record_id]['listed'])
+            self.assertIn('pinned_public_source', audit[record_id]['reasons'])
+            self.assertIn('inspected_open_source_license', audit[record_id]['reasons'])
+            self.assertIn(record_id, archived)
 
 
 if __name__ == '__main__':
