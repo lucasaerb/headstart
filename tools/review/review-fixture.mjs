@@ -34,7 +34,7 @@ try {
   assert.equal(reviewOnlyDigest,sha(original));
   server=http.createServer(async(req,res)=>{try{const file=req.url?.split('?')[0]==='/game.mjs'?'game.mjs':'index.html';res.setHeader('Content-Type',file.endsWith('mjs')?'text/javascript':'text/html');res.setHeader('Cache-Control','no-store');res.end(await readFile(join(target,file)));}catch{res.statusCode=404;res.end();}});
   await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin=`http://127.0.0.1:${server.address().port}`;
-  browser=await chromium.launch({channel:process.env.HEADSTART_CHROME_CHANNEL||'chrome',headless:true});
+  browser=await chromium.launch(process.env.HEADSTART_CHROME_CHANNEL ? {channel:process.env.HEADSTART_CHROME_CHANNEL,headless:true} : {headless:true});
   const captures=[];
   async function capture(phase,commit){for(const [name,width,height] of [['desktop',1200,860],['mobile',390,844]]){const page=await browser.newPage({viewport:{width,height},reducedMotion:'reduce'});await page.goto(origin);await page.locator('#status').waitFor();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);const path=join(out,`${name}-${phase}.png`);await page.screenshot({path,fullPage:true});captures.push({file:`${name}-${phase}.png`,viewport:{width,height},target_commit:commit,sha256:sha(await readFile(path)),browser:browser.version()});await page.close();}}
   await capture('before',beforeCommit);
