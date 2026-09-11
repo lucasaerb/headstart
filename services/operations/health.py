@@ -40,6 +40,47 @@ def probe(url):
         connection.close()
 
 
+def _probe_worker(connection, url):
+    try:
+        result = probe(url)
+    except ValueError:
+        result = 'unsafe_destination'
+    except Exception:
+        # Only a fixed category crosses the process boundary; no exception data.
+        result = 'network_failure'
+    try:
+        connection.send(result)
+    finally:
+        connection.close()
+
+
+def bounded_probe(url):
+    """Bound DNS, TLS and HTTP together; terminate the disposable worker on timeout."""
+    import multiprocessing
+    context = multiprocessing.get_context('spawn')
+    receiver, sender = context.Pipe(duplex=False)
+    process = context.Process(target=_probe_worker, args=(sender, url), daemon=True)
+    try:
+        process.start()
+        sender.close()
+        if not receiver.poll(10):
+            return 'network_failure'
+        try:
+            return receiver.recv()
+        except EOFError:
+            return 'network_failure'
+    finally:
+        if process.pid is not None:
+            if process.is_alive():
+                process.terminate()
+            process.join(timeout=2)
+            if process.is_alive():
+                process.kill()
+                process.join(timeout=2)
+        receiver.close()
+        sender.close()
+
+
 class HealthJobs:
     def __init__(self, db, *, clock=time.time):
         self.db, self.clock = db, clock
@@ -53,6 +94,8 @@ class HealthJobs:
                 BEFORE UPDATE ON health_observations BEGIN SELECT RAISE(ABORT,'Health observations are immutable'); END;
             CREATE TRIGGER IF NOT EXISTS health_observations_no_delete
                 BEFORE DELETE ON health_observations BEGIN SELECT RAISE(ABORT,'Health observations are immutable'); END;
+            CREATE TABLE IF NOT EXISTS health_leases (
+                target TEXT PRIMARY KEY, expires_at INTEGER NOT NULL);
             CREATE TABLE IF NOT EXISTS health_hosts (
                 host TEXT PRIMARY KEY, retry_at INTEGER NOT NULL, failures INTEGER NOT NULL);
         ''')
@@ -69,13 +112,14 @@ class HealthJobs:
                 raise ValueError('Changed demo needs a new target revision')
             self.db.execute('INSERT OR IGNORE INTO health_targets VALUES(?,?,?)', (target_id, url, int(featured is True)))
 
-    def run(self, *, fetch=probe, limit=10):
+    def run(self, *, fetch=bounded_probe, limit=10, cancelled=lambda: False):
         if type(limit) is not int or not 1 <= limit <= 25:
             raise ValueError('Job limit must be between 1 and 25')
         now = int(self.clock())
         results, hosts = [], set()
+        deadline = time.monotonic() + 30
         for target, url, featured in self.db.execute('SELECT id,url,featured FROM health_targets ORDER BY id').fetchall():
-            if len(results) >= limit:
+            if len(results) >= limit or time.monotonic() >= deadline or cancelled():
                 break
             host = urlsplit(url).hostname
             if host in hosts:
@@ -86,6 +130,15 @@ class HealthJobs:
             latest = self.db.execute("SELECT MAX(observed_at) FROM health_observations WHERE target=? AND kind='reachability'", (target,)).fetchone()[0]
             if latest is not None and now - latest < CADENCE['reachability']:
                 continue
+            with self.db:
+                self.db.execute('BEGIN IMMEDIATE')
+                # Recheck under the write lock: another worker may have claimed the host.
+                current = self.db.execute('SELECT retry_at FROM health_hosts WHERE host=?', (host,)).fetchone()
+                lease = self.db.execute('SELECT expires_at FROM health_leases WHERE target=?', (target,)).fetchone()
+                if (current and current[0] > now) or (lease and lease[0] > now):
+                    continue
+                self.db.execute('INSERT INTO health_leases VALUES(?,?) ON CONFLICT(target) DO UPDATE SET expires_at=excluded.expires_at', (target, now + 60))
+                self.db.execute('INSERT INTO health_hosts VALUES(?,?,?) ON CONFLICT(host) DO UPDATE SET retry_at=excluded.retry_at', (host, now + 60, blocked[1] if blocked else 0))
             hosts.add(host)
             try:
                 category = fetch(url)
@@ -93,9 +146,10 @@ class HealthJobs:
                     category = 'network_failure'
             except ValueError:
                 category = 'unsafe_destination'
-            except (OSError, TimeoutError, http.client.HTTPException):
+            except Exception:
                 category = 'network_failure'
             with self.db:
+                self.db.execute('DELETE FROM health_leases WHERE target=?', (target,))
                 self.db.execute('INSERT INTO health_observations(target,kind,observed_at,category) VALUES(?,?,?,?)', (target, 'reachability', now, category))
                 failures = 0 if category == 'reachable' else min((blocked[1] if blocked else 0) + 1, 8)
                 delay = min(7 * 86400, 3600 * 2 ** failures) if failures else 60

@@ -1,7 +1,7 @@
 import sqlite3
 import unittest
 from unittest.mock import patch
-from services.operations.health import HealthJobs, probe
+from services.operations.health import HealthJobs, probe, bounded_probe
 
 
 class HealthTests(unittest.TestCase):
@@ -50,3 +50,26 @@ class HealthTests(unittest.TestCase):
         self.jobs.register('second-demo', 'https://example.com/two')
         rows = self.jobs.run(fetch=lambda _: {'secret': 'not persisted'})
         self.assertEqual(len(rows), 1)
+
+    def test_real_bounded_worker_rejects_unsafe_url_and_exits(self):
+        import multiprocessing
+        before = {p.pid for p in multiprocessing.active_children()}
+        self.assertEqual(bounded_probe('http://127.0.0.1/private'), 'unsafe_destination')
+        self.assertEqual({p.pid for p in multiprocessing.active_children()}, before)
+
+    def test_active_lease_prevents_duplicate_worker_and_crash_lease_expires(self):
+        def worker(url):
+            self.assertEqual(self.jobs.run(fetch=lambda _: self.fail('Concurrent duplicate')), [])
+            return 'reachable'
+        self.jobs.run(fetch=worker)
+        self.assertEqual(self.db.execute('SELECT COUNT(*) FROM health_leases').fetchone()[0], 0)
+        self.jobs.register('other-host', 'https://example.org/demo')
+        with self.db:
+            self.db.execute('INSERT INTO health_leases VALUES(?,?)', ('other-host', self.now + 60))
+        self.assertEqual(self.jobs.run(fetch=lambda _: self.fail('Live lease ignored')), [])
+        self.now += 61
+        self.assertEqual(self.jobs.run(fetch=lambda _: 'reachable')[0]['target'], 'other-host')
+
+    def test_cancellation_stops_before_network_and_preserves_observations(self):
+        self.assertEqual(self.jobs.run(fetch=lambda _: self.fail('Cancelled request ran'), cancelled=lambda: True), [])
+        self.assertEqual(self.jobs.status()[0]['reachability'], None)
