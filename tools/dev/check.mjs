@@ -5,6 +5,9 @@ for (const folder of [
   "tools/review",
   "tools/review/fixtures",
   "services/submissions",
+  "services/recommendations",
+  "services/operations",
+  "tools/operations",
   "HeadStart-Starter-Package/site/dist",
   "HeadStart-Starter-Package/site/dist/api",
 ]) {
