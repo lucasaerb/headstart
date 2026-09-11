@@ -27,6 +27,7 @@ window.HeadStartHandoff = (() => {
     });
     const result = await response.json();
     if (!response.ok) throw new Error([result.error?.message, result.error?.action].filter(Boolean).join(" ") || "Handoff unavailable. Verify your email and retry.");
+    if (url === "/v1/handoffs" && body) window.HeadStartTelemetry?.record("handoff");
     return result;
   }
   const makeBag = request => ({schemaVersion:request.schemaVersion,selections:request.selections,brief:request.brief,intent:request.intent,...(request.schemaVersion===2?{recommendationContext:request.recommendationContext}:{})});

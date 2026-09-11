@@ -1,0 +1,42 @@
+{
+  "scope": "first-party controlled fixture only",
+  "positive": {
+    "schemaVersion": "headstart-interactive-check-1",
+    "observedAt": 1789096577,
+    "planDigest": "f1c51785fd16988fc5cfb1d7927f5f61ebec2b5408ec4db10f8f6ac9887783b2",
+    "image": "sha256:c7acddd94000df88bc95cef1c1519bca02865e6607ab9ba496a1f608410decd5",
+    "network": "none_brokered_public_https",
+    "requestCount": 2,
+    "deniedRequests": 1,
+    "bytes": 204,
+    "category": "interactive_passed",
+    "checks": [
+      {
+        "name": "navigation",
+        "passed": true
+      },
+      {
+        "name": "button changes count",
+        "passed": true
+      }
+    ],
+    "captureDigest": "b54d0fb169d95fb2568db04dbb14e832f3877c4ba7272889d41e92f8f9318410"
+  },
+  "negative": {
+    "schemaVersion": "headstart-interactive-check-1",
+    "observedAt": 1789096585,
+    "planDigest": "61029442325f52c3bdabfc7112cef510897430972bb5547f347f0d66398efdff",
+    "image": "sha256:c7acddd94000df88bc95cef1c1519bca02865e6607ab9ba496a1f608410decd5",
+    "network": "none_brokered_public_https",
+    "requestCount": 2,
+    "deniedRequests": 1,
+    "bytes": 204,
+    "category": "interactive_failed",
+    "checks": [
+      {
+        "name": "declared_interaction",
+        "passed": false
+      }
+    ]
+  }
+}

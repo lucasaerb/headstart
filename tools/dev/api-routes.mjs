@@ -4,7 +4,12 @@ import { catalogHandler } from "./catalog-handler.mjs";
 import { authHandler, handoffHandler } from "./auth-handler.mjs";
 import { submissionsHandler } from "../../services/submissions/handler.mjs";
 import { recommendationsHandler } from "../../services/recommendations/handler.mjs";
+import { operationsHandler } from "../../services/operations/handler.mjs";
 export const routes = {
+  "/api/health": operationsHandler,
+  "/api/operations": operationsHandler,
+  "/api/events": operationsHandler,
+  "/api/events/forget": operationsHandler,
   "/api/recommendations": recommendationsHandler,
   "/api/research": catalogHandler,
   "/api/catalog/search": catalogHandler,

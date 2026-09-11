@@ -9,6 +9,7 @@ from services.submissions.store import Queue, assert_export_allowed
 from .events import EventStore
 from .health import HealthJobs
 from .changes import SourceChanges
+from .monitor import SourceMonitor
 ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -32,6 +33,7 @@ def serve(request):
         if action != 'operations' or not request.get('actor'): raise PermissionError('Curator access required')
         queue = Queue(store.db)
         SourceChanges(store.db)
+        SourceMonitor(store.db)
         blocked = 0
         for record in store.records():
             try: assert_export_allowed(store,[record])
@@ -44,6 +46,8 @@ def serve(request):
         return {'schemaVersion':'headstart-operations-1','checks':checks,'events':events.counts(),
                 'counts':{'eligibleVersions':len(documents),'reviewQueueOpen':sum(row['status'] in ('pending','changes_requested') for row in queue.all()),'blockedExports':blocked,'staleChecks':stale,'unreachableOrReviewRequired':broken,'registeredDemos':len(checks),'uncheckedDemos':sum(row['reachability'] is None for row in checks),'sourceCandidates':store.db.execute('SELECT COUNT(*) FROM source_change_candidates').fetchone()[0],'failedSourceJobs':failed,'pendingSourceJobs':pending},
                 'alerts':[{'kind':kind,'count':value} for kind,value in [('stale_checks',stale),('demo_attention',broken),('source_job_failed',failed),('exports_blocked',blocked)] if value],
+                'sourceJobs':[dict(zip(('id','status','nextCheck','attempts'),row)) for row in store.db.execute('SELECT id,status,next_check,attempts FROM source_monitors')],
+                'indexRecovery':'Published catalog remains readable during a transactional rebuild; failed or interrupted transactions retain the prior index.',
                 'scheduling':'Local CLI only; no production scheduler configured'}
     finally:
         store.close()
