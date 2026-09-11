@@ -68,7 +68,7 @@ def inspect(target):
  write_json(ROOT/'.cache/integration-context'/ (state['stateDigest']+'.json'),{'schemaVersion':VERSION,'stateDigest':state['stateDigest'],'manifestDigest':state['files']['package.json'],'lockDigest':state['files']['package-lock.json'],'runtime':profile.get('runtime'),'runtimeVersion':resolved,'physics':profile.get('physics'),'instructionDigests':list({k:v for k,v in state['files'].items() if Path(k).name in ('AGENTS.md','CLAUDE.md')}.values())})
  return {'schemaVersion':VERSION,'stage':'inspected','target':str(target),'state':state,'profile':profile,'dependencies':dependencies,'resolvedThree':resolved,'instructionFiles':{k:v for k,v in state['files'].items() if Path(k).name in ('AGENTS.md','CLAUDE.md')},'limitations':['Static signals do not prove architecture. Host agent must read target instructions and owner files before planning.','R3F/Phaser/Godot/Unity require a separate target-specific adapter; this recipe supports the declared Three.js terrain interface only.']}
 
-def recipe_digest():return sha({'id':RECIPE,'files':{p:sha((HERE/p).read_bytes()) for p in ['adapters/simplex-terrain.js','browser-check.js','monitor.js','browser-runner.mjs','sandbox.py','workflow.py','engine-manifest.json']}})
+def recipe_digest():return sha({'id':RECIPE,'contextValidator':sha((ROOT/'services/recommendations/context.py').read_bytes()),'files':{p:sha((HERE/p).read_bytes()) for p in ['adapters/simplex-terrain.js','browser-check.js','monitor.js','browser-runner.mjs','sandbox.py','workflow.py','engine-manifest.json']}})
 def source_manifest():
  manifest=read_json(ROOT/'services/curation/reviewed-source-maps.json')
  capability=next(x for x in manifest['capabilities'] if x['id']=='three-simplexnoise')
@@ -81,6 +81,13 @@ def source_manifest():
 def validate_packet(packet):
  if packet.get('schemaVersion')!='headstart-handoff-1' or packet.get('mode')!='source_reviewed_planning' or packet.get('recipe') is not None:raise IntegrationError('Unsupported prepared packet')
  bag=packet.get('bag',{})
+ from services.recommendations.context import validate as validate_context
+ if not isinstance(bag,dict) or type(bag.get('schemaVersion')) is not int or bag['schemaVersion'] not in (1,2):raise IntegrationError('Unsupported bag version')
+ if bag['schemaVersion']==2:
+  try:validate_context(bag.get('recommendationContext'),bag.get('brief'))
+  except ValueError as error:raise IntegrationError('Invalid recommendation context') from error
+  if packet.get('recommendationContext')!=bag['recommendationContext']:raise IntegrationError('Recommendation context handoff mismatch')
+ elif 'recommendationContext' in bag or packet.get('recommendationContext') is not None:raise IntegrationError('Recommendation context requires bag schema2')
  if bag.get('selections')!=[{'id':'three-simplexnoise-v1','version':'1'}] or packet.get('bagRevision')!=sha(bag):raise IntegrationError('Recipe requires exact prepared SimplexNoise selection')
  records=packet.get('records',[]);component=next((r for r in records if r.get('entity_type')=='component_version' and r.get('id')=='three-simplexnoise-v1'),None)
  if not component or component.get('version')!='1':raise IntegrationError('Missing exact component version')
@@ -110,6 +117,7 @@ def plan(target,packet,brief_version=1,author='local-builder'):
  if context['state']['unrelatedEdits']:raise IntegrationError('Preserve dirty target; create a clean isolated base before applying this recipe')
  if profile.get('runtime')!='Three.js' or profile.get('runtimeVersion')!='0.186.0' or context['resolvedThree']!='0.186.0' or profile.get('extension')!='terrain-heights-1' or profile.get('physics')!='none' or profile.get('coordinates')!='Y-up meters':raise IntegrationError('Incompatible runtime, physics, coordinate or extension contract')
  result={'schemaVersion':VERSION,'stage':'planned','context':context,'source':{'repository':'https://github.com/mrdoob/three.js','commit':COMMIT,'component':'three-simplexnoise-v1','version':'1','files':files,'packetDigest':sha(packet),'bagRevision':packet['bagRevision']},'recipe':{'id':RECIPE,'digest':recipe_digest()},'pluginVersion':read_json(ROOT/'HeadStart-Starter-Package/headstart-plugin/plugin.json')['version'],'briefVersion':brief_version,'brief':packet['bag']['brief'],'intent':packet['bag']['intent'],'author':author,'changes':['src/terrain.js','vendor/SimplexNoise.js','HEADSTART-NOTICES.txt'],'dependenciesChanged':[],'preserve':profile['preserve'],'assumptions':['Visual terrain only; no collision mesh or physics integration.','Target retains one renderer, loop, camera and input handlers.'],'rollback':'Restore only the exact changed files in the created worktree; retain unrelated edits and original target.'}
+ if packet['bag']['schemaVersion']==2:result['recommendationContext']=packet['recommendationContext']
  result['planDigest']=sha(result);return result
 
 def verify_plan(value,packet):
@@ -119,6 +127,7 @@ def verify_plan(value,packet):
  if value['recipe']!={'id':RECIPE,'digest':recipe_digest()}:raise IntegrationError('Recipe drift')
  if sha(packet)!=value['source']['packetDigest']:raise IntegrationError('Source packet drift')
  validate_packet(packet)
+ if value.get('recommendationContext')!=packet.get('recommendationContext'):raise IntegrationError('Plan recommendation context drift')
  if snapshot(value['context']['target'])!=value['context']['state']:raise IntegrationError('Stale target; re-inspect and replan')
 
 def event(job,stage,**data):

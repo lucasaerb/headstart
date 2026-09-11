@@ -10,6 +10,16 @@ class WorkflowTests(unittest.TestCase):
  def tearDown(self):self.tmp.cleanup()
  def test_inspection_pins_instructions_owners_locks_and_read_only(self):
   before=snapshot(self.base);result=inspect(self.base);self.assertEqual(result['state'],before);self.assertEqual(snapshot(self.base),before);self.assertIn('AGENTS.md',result['instructionFiles']);self.assertEqual(result['resolvedThree'],'0.186.0')
+ def test_schema2_recommendation_context_carried_without_executing_composition(self):
+  from services.recommendations.tests.test_context import ContextTests
+  fixture=ContextTests();fixture.setUp();changed=copy.deepcopy(self.packet);context=fixture.value
+  context['briefRevision']=changed['bag']['brief']['revision'];context['briefDigest']=sha(changed['bag']['brief'])
+  changed['bag']['schemaVersion']=2;changed['bag']['recommendationContext']=context;changed['recommendationContext']=copy.deepcopy(context);changed['bagRevision']=sha(changed['bag'])
+  value=plan(self.base,changed);self.assertEqual(value['recommendationContext'],context);self.assertEqual(value['recipe']['id'],'simplex-terrain-1');verify_plan(value,changed)
+  bad=copy.deepcopy(changed);bad['recommendationContext']['briefRevision']=99
+  with self.assertRaises(IntegrationError):plan(self.base,bad)
+  bad=copy.deepcopy(changed);bad['recipe']={'id':'flight-landscape','version':'1'}
+  with self.assertRaises(IntegrationError):plan(self.base,bad)
  def test_post_apply_mode_drift_blocks_validation_and_rollback(self):
   work=apply(self.plan,self.packet,self.job,True);changed=work/'src/terrain.js';changed.chmod(0o744)
   with patch('tools.integration.sandbox.run') as run:
