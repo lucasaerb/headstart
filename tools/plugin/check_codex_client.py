@@ -25,6 +25,8 @@ sys.path.insert(0, str(ROOT))
 from services.auth.store import connect, issue, verify, approve_bridge, digest, revoke
 from services.catalog.store import CatalogStore
 from services.catalog.seed import seed_reviewed_tile
+from services.curation.seed import seed_curated_capabilities
+from services.recommendations.planning import handoff_context, load_templates, current_documents
 from services.submissions.store import setup
 
 
@@ -110,7 +112,7 @@ def main():
         with socket.socket() as sock:sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]
         origin=f'http://127.0.0.1:{port}'
         os.environ.update(PORT=str(port),HEADSTART_AUTH_ORIGIN=origin,HEADSTART_AUTH_MODE='local-preview',HEADSTART_AUTH_DB=str(scratch/'auth.db'),HEADSTART_CATALOG_DB=str(scratch/'catalog.db'),HEADSTART_EVIDENCE_DIR=str(scratch/'evidence'),HEADSTART_PYTHON=str(ROOT/'.venv/bin/python'))
-        store=CatalogStore(scratch/'catalog.db',scratch/'evidence');setup(store.db);seed_reviewed_tile(store);store.close()
+        store=CatalogStore(scratch/'catalog.db',scratch/'evidence');setup(store.db);seed_reviewed_tile(store);seed_curated_capabilities(store);store.close()
         db=connect();intent={'action':'prepare_handoff','bagRevision':'a'*64,'selections':[{'id':'2048-tile-v1','version':'1','kind':'component'}]}
         ident,token=issue(db,'client-check@example.invalid','binding',intent,'codex')
         browser,csrf,_=verify(db,ident,token,'binding')
@@ -154,6 +156,23 @@ def main():
         assert handoff['value']['handoff']['bag']==bag['value']['bag']
         assert bag['value']['bag']['brief']==request['brief'] and bag['value']['bag']['intent']==request['intent']
         for key,value in [('agentFirstExactDetail',detail),('missingVersion',missing),('automaticPreparedBag',bag),('immutableHandoff',handoff)]:evidence['checks'][key]=value
+        # Real schema-two recipe context survives website preparation and automatic MCP retrieval.
+        store=CatalogStore(scratch/'catalog.db',scratch/'evidence')
+        brief2={'revision':4,'constraints':{'experience':{'origin':'explicit','value':'fly through an open landscape'}}}
+        template=next(t for t in load_templates() if t['id']=='flight-landscape')
+        context2=handoff_context(brief2,current_documents(store),{k:template[k] for k in ('id','version','digest')})
+        store.close()
+        request2={'schemaVersion':2,'selections':[{'id':'three-simplexnoise-v1','version':'1'}],'brief':brief2,'intent':'Use the terrain capability while preserving my camera','recipe':None,'recommendationContext':context2}
+        with urlopen(Request(origin+'/v1/handoffs',data=json.dumps(request2).encode(),headers={'Content-Type':'application/json','Origin':origin,'Cookie':'hs_session='+browser,'X-CSRF-Token':csrf}),timeout=20) as response:
+            prepared2=json.load(response)
+        bag2=client.tool('get_selected_bag',{});handoff2=client.tool('prepare_handoff',{})
+        assert not bag2['isError'] and not handoff2['isError']
+        assert bag2['value']['bagRevision']==prepared2['bagRevision']
+        assert bag2['value']['bag']['schemaVersion']==2 and bag2['value']['bag']['recommendationContext']==context2
+        assert handoff2['value']['handoff']['recommendationContext']==context2
+        assert handoff2['value']['handoff']['bag']==bag2['value']['bag']
+        evidence['checks']['recipeContextAutomaticBag']=bag2
+        evidence['checks']['recipeContextHandoff']=handoff2
         revoke(db,browser)
         denied=client.tool('prepare_handoff',{});assert denied['isError'];evidence['checks']['revokedDenied']=denied
         server.terminate();server.wait(timeout=10);server=None

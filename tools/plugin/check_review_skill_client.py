@@ -52,21 +52,22 @@ def main():
             prompt='''Apply the three attached HeadStart review skills in review-only mode to this first-party synthetic fixture. Read only files in this current working directory and the selected installed HeadStart plugin. Do not access credentials, other projects, network or write any files. Use actual host read tools and run the packaged integration_review_context.py on plan.json packet.json, plus review_evidence.py benchmark.json --root . (the raw file is raw.json). Review before.mjs versus after.mjs and the editable art-guide.md. Use the actual image-view tool to inspect captures/desktop-before.png, captures/desktop-after.png and captures/mobile-after.png, and cite an observed image region separately from editorial preference. Return a compact review with: the shared brief/source/target/recipe pins, one concrete editorial art mismatch, source-located leaked-listener and duplicate-world findings, and whether the supplied CPU benchmark supports an FPS or speedup claim. Label the runtime integration target and the separate visual toy fixture accurately; never treat toy checks as the Three.js integration's measurement. State that no edits were made. Do not execute either fixture's application code; the raw benchmark is previous measured evidence, not a new run. Stop after the review. Keep your answer under 600 words.'''
             inputs=[{'type':'text','text':prompt}]+[{'type':'skill','name':s['name'],'path':s['path']} for s in skills]
             result=client.call('turn/start',{'threadId':client.thread,'input':inputs})
-            deadline=time.time()+240;messages=[];commands=[];completed=False
+            deadline=time.time()+240;messages=[];commands=[];images=[];completed=False
             while time.time()<deadline:
                 try:item=client.queue.get(timeout=min(5,max(.1,deadline-time.time())))
                 except Exception:continue
                 if item.get('method')=='item/completed':
                     value=item['params']['item']
                     if value.get('type')=='agentMessage':messages.append(value.get('text',''))
+                    if value.get('type')=='imageView':images.append({k:value.get(k) for k in ('path','status')})
                     if value.get('type')=='commandExecution':commands.append({k:value.get(k) for k in ('command','status','exitCode')})
                 if item.get('method')=='turn/completed':
                     completed=item['params']['turn'].get('status')=='completed';break
             assert completed,'Review client did not complete'
             assert snapshot(fixture)==before
             assert files_before=={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in workspace.iterdir() if p.is_file()}
-            assert messages and commands,'Actual review/tool evidence missing'
-            evidence={'client':subprocess.check_output(['codex','--version'],text=True).strip(),'pluginId':plugin_id,'installedVersion':installed['version'],'skills':[s['name'] for s in skills],'sharedPlanDigest':v['planDigest'],'commands':commands,'responses':messages,'targetUnchanged':True,'fixtureFilesUnchanged':True,'scope':'Actual read-only client invocation on first-party synthetic fixtures; previous CPU samples checked, no new benchmark run. No credentials, private target or raw user captures supplied.'}
+            assert messages and commands and len(images)>=3,'Actual review/tool/image evidence missing'
+            evidence={'client':subprocess.check_output(['codex','--version'],text=True).strip(),'pluginId':plugin_id,'installedVersion':installed['version'],'skills':[s['name'] for s in skills],'sharedPlanDigest':v['planDigest'],'commands':commands,'imageViews':images,'responses':messages,'targetUnchanged':True,'fixtureFilesUnchanged':True,'scope':'Actual read-only client invocation on first-party synthetic fixtures; previous CPU samples checked, no new benchmark run. No credentials, private target or raw user captures supplied.'}
             args.output.write_text(json.dumps(evidence,indent=2)+'\n')
             print('PASS: actual three-skill client turn completed with host commands and no target changes')
         finally:client.close()

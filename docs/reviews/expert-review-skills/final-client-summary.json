@@ -1,0 +1,16 @@
+{
+  "client": "codex-cli 0.154.0",
+  "version": "0.7.0",
+  "skillCount": 12,
+  "actualReviewSkills": [
+    "headstart-plugin:headstart-art-direction",
+    "headstart-plugin:headstart-code-review",
+    "headstart-plugin:headstart-performance-review"
+  ],
+  "imageViews": 3,
+  "readOnlyTargetUnchanged": true,
+  "automaticRecipeContext": true,
+  "archiveSHA256": "b8038b0edaaefb63221befe0fd360fab117ac10a076bbd5a4679e42edada4d32",
+  "archiveRuntimeAndSkillBytesMatchClient": true,
+  "cleanup": "Distinct headstart-review15 plugin and marketplace removed; personal0.3 manifest remains0.3.0."
+}
