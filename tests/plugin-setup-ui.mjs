@@ -18,10 +18,10 @@ try{for(const [name,viewport] of [['desktop',{width:1440,height:1000}],['mobile'
  const page=await browser.newPage({viewport,reducedMotion:'reduce'});const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base+'/plugin.html');
  await expect(page.locator('#catalog-setup-status')).toContainText('cannot inspect or confirm');
- await expect(page.getByText('Nine skills. One continuous brief.')).toBeVisible();
+ await expect(page.getByText('Twelve skills. One continuous brief.')).toBeVisible();
  await page.screenshot({path:output+'/'+name+'-entry.png',fullPage:true});
  const download=page.waitForEvent('download');await page.locator('#plugin-download').click();const file=await download;
- expect(file.suggestedFilename()).toBe('headstart-plugin-0.5.0.zip');expect((await readFile(await file.path())).subarray(0,2).toString()).toBe('PK');
+ expect(file.suggestedFilename()).toBe('headstart-plugin-0.7.0.zip');expect((await readFile(await file.path())).subarray(0,2).toString()).toBe('PK');
  await page.locator('#check-catalog').focus();await page.keyboard.press('Enter');
  await expect(page.locator('#catalog-setup-status')).toContainText('local catalog responded with a compatible');
  await expect(page.locator('#catalog-setup-status')).toContainText('does not confirm plugin installation');
