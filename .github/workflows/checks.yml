@@ -40,6 +40,9 @@ jobs:
         env:
           SCREENSHOT_DIR: test-results/plugin-setup
       - run: npm run test:mcp
+      - run: npm run test:review-skills
+        env:
+          SCREENSHOT_DIR: test-results/review-skills
       - run: npm run test:auth
         env:
           SCREENSHOT_DIR: test-results/auth

@@ -2,6 +2,8 @@ import { readdir, readFile } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
 for (const folder of [
   "tools/dev",
+  "tools/review",
+  "tools/review/fixtures",
   "services/submissions",
   "HeadStart-Starter-Package/site/dist",
   "HeadStart-Starter-Package/site/dist/api",
