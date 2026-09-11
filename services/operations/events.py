@@ -51,7 +51,7 @@ class EventStore:
         event_id = token(event.get('eventId'))
         subject = self.subject(event.get('deletionToken'))
         kind = event.get('type')
-        if kind not in EVENTS:
+        if not isinstance(kind, str) or kind not in EVENTS:
             # Verified reuse has a separate reviewed-evidence boundary, not a client event.
             raise ValueError('Unsupported interaction event')
         catalog_id = event.get('catalogId')

@@ -11,3 +11,8 @@ Verified reuse is deliberately not accepted as a client event. Its metric curren
 ```sh
 .venv/bin/python -m unittest discover -s services/operations/tests -v
 ```
+
+
+`health.py` provides an inactive local reachability worker foundation: immutable dated observations, daily due checks, one request per host per batch, a 25-target maximum and exponential host backoff capped at one week. Public HTTPS destinations are DNS-checked and the validated address is pinned into the TLS socket. Redirects are recorded for review without following or retaining their destination. Responses store a bounded category, never response bodies or exception text. A changed demo URL requires a new target ID; previous observations stay unchanged. HEAD-only checks may need curator follow-up for servers that reject HEAD.
+
+A reachable response never produces interactive success. Featured demos display a proposed weekly interactive cadence with status unchecked and no fabricated timestamp. Actual interactive workers, wall-clock subprocess isolation (including DNS deadlines), durable job leases/retries, source-change candidates, queue integration, CLI and operations UI are still pending. These foundations do not yet establish the complete scheduled-job acceptance criteria.
