@@ -6,6 +6,8 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import select
+from contextlib import closing
 from tools.integration.fixture import target, packet
 from tools.integration.workflow import write_json
 
@@ -35,7 +37,7 @@ class InstrumentedTests(unittest.TestCase):
     def counts(self):
         if not self.db.exists():
             return {}
-        with sqlite3.connect(self.db) as db:
+        with closing(sqlite3.connect(self.db)) as db:
             return dict(db.execute('SELECT kind,COUNT(*) FROM interaction_events GROUP BY kind'))
 
     def lookup(self):
@@ -90,10 +92,39 @@ class InstrumentedTests(unittest.TestCase):
         (base / 'AGENTS.md').write_text('Unrelated user edit must block a clean plan')
         self.assertNotEqual(self.run_wrapper(args).returncode, 0)
         self.assertEqual(self.counts(), {'first_plan': 1})
-        with sqlite3.connect(self.db) as db:
+        with closing(sqlite3.connect(self.db)) as db:
             stored = json.dumps(list(db.execute('SELECT * FROM interaction_events')))
         self.assertNotIn(str(base), stored)
         self.assertNotIn('d' * 64, stored)
+
+    def test_running_mcp_observes_separate_process_forget(self):
+        process = subprocess.Popen([sys.executable, '-m', 'services.operations.instrumented', 'mcp'],
+                                   cwd=ROOT, env=self.env, stdin=subprocess.PIPE,
+                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        def send(frame, response=True):
+            process.stdin.write(json.dumps(frame) + '\n')
+            process.stdin.flush()
+            if response:
+                self.assertTrue(select.select([process.stdout], [], [], 5)[0], 'MCP response deadline')
+                return json.loads(process.stdout.readline())
+        try:
+            send({'jsonrpc': '2.0', 'id': 1, 'method': 'initialize', 'params': {'protocolVersion': '2025-03-26', 'capabilities': {}, 'clientInfo': {'name': 'deletion-test', 'version': '1'}}})
+            send({'jsonrpc': '2.0', 'method': 'notifications/initialized'}, False)
+            request = {'jsonrpc': '2.0', 'id': 2, 'method': 'tools/call', 'params': {'name': 'search_components', 'arguments': {'query': 'camera'}}}
+            self.assertFalse(send(request)['result']['isError'])
+            self.assertEqual(self.counts(), {'plugin_lookup': 1})
+            self.assertEqual(self.run_wrapper(['forget']).returncode, 0)
+            request['id'] = 3
+            self.assertFalse(send(request)['result']['isError'])
+            self.assertEqual(self.counts(), {})
+            process.stdin.close()
+            process.wait(timeout=5)
+        finally:
+            if process.poll() is None:
+                process.kill()
+                process.wait(timeout=5)
+            for stream in (process.stdin, process.stdout, process.stderr):
+                stream.close()
 
     def test_no_opt_in_and_unsafe_consent_never_collect(self):
         self.env['HEADSTART_TELEMETRY'] = '0'

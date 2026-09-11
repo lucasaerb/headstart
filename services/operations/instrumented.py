@@ -72,9 +72,16 @@ class Recorder:
         event_id = (hmac.new(self.store.salt, ('first_plan:' + self.deletion_token).encode(), hashlib.sha256).hexdigest()
                     if kind == 'first_plan' else secrets.token_hex(32))
         try:
-            self.store.collect({'eventId': event_id, 'deletionToken': self.deletion_token, 'type': kind},
-                               consent=True, completed_action=True)
-        except (ValueError, sqlite3.Error):
+            # Serialize against deletion, and never cache a long-lived MCP user's
+            # consent. Forget writes consent=false before taking this DB lock.
+            with self.db:
+                self.db.execute('BEGIN IMMEDIATE')
+                current = private_json(self.consent_path)
+                if current['consent'] is not True or current['deletionToken'] != self.deletion_token:
+                    return
+                self.store.collect({'eventId': event_id, 'deletionToken': self.deletion_token, 'type': kind},
+                                   consent=True, completed_action=True)
+        except (OSError, ValueError, sqlite3.Error):
             sys.stderr.write('Optional local outcome could not be recorded.\n')
 
     def close(self):
