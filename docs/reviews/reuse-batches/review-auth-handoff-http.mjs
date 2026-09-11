@@ -1,3 +1,4 @@
+import { pythonCommand } from "../../../tools/dev/catalog-handler.mjs";
 // Independent reviewer probes: real HTTP, synthetic local identities only.
 import assert from 'node:assert/strict';
 import { mkdtemp,rm } from 'node:fs/promises';
@@ -7,7 +8,7 @@ import { spawnSync } from 'node:child_process';
 import { createDevServer } from '../../../tools/dev/server.mjs';
 const tmp=await mkdtemp(join(tmpdir(),'headstart-review-http-'));
 Object.assign(process.env,{HEADSTART_AUTH_DB:join(tmp,'auth.db'),HEADSTART_AUTH_DELIVERY:'preview',HEADSTART_AUTH_PREVIEW_DIR:join(tmp,'preview'),HEADSTART_CATALOG_DB:join(tmp,'catalog.db'),HEADSTART_EVIDENCE_DIR:join(tmp,'evidence')});
-const result=spawnSync('.venv/bin/python',['-c',`import json,time
+const result=spawnSync(pythonCommand(),['-c',`import json,time
 from services.catalog.store import CatalogStore
 from services.catalog.seed import seed_reviewed_tile
 from services.submissions.store import setup

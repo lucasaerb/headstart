@@ -1,3 +1,4 @@
+import { pythonCommand } from "../../../tools/dev/catalog-handler.mjs";
 import { chromium, expect } from '@playwright/test';
 import { mkdtemp,mkdir,readFile,rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -7,7 +8,7 @@ import { createDevServer } from '../../../tools/dev/server.mjs';
 const dir=await mkdtemp(join(tmpdir(),'headstart-handoff-ui-'));
 process.env.HEADSTART_AUTH_DB=join(dir,'auth.sqlite3');process.env.HEADSTART_AUTH_PREVIEW_DIR=join(dir,'preview');process.env.HEADSTART_AUTH_DELIVERY='preview';
 process.env.HEADSTART_CATALOG_DB=join(dir,'catalog.sqlite3');process.env.HEADSTART_EVIDENCE_DIR=join(dir,'evidence');
-const seed=spawnSync('.venv/bin/python',['-c',"import os; from services.catalog.store import CatalogStore; from services.catalog.seed import seed_reviewed_tile; from services.submissions.store import setup; s=CatalogStore(os.environ['HEADSTART_CATALOG_DB'],os.environ['HEADSTART_EVIDENCE_DIR']); seed_reviewed_tile(s); setup(s.db); s.close()"],{encoding:'utf8'});if(seed.status)throw Error(seed.stderr);
+const seed=spawnSync(pythonCommand(),['-c',"import os; from services.catalog.store import CatalogStore; from services.catalog.seed import seed_reviewed_tile; from services.submissions.store import setup; s=CatalogStore(os.environ['HEADSTART_CATALOG_DB'],os.environ['HEADSTART_EVIDENCE_DIR']); seed_reviewed_tile(s); setup(s.db); s.close()"],{encoding:'utf8'});if(seed.error || seed.status!==0)throw Error(seed.error?.message || seed.stderr || "Seed process failed");
 const server=createDevServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));const base='http://127.0.0.1:'+server.address().port;process.env.HEADSTART_AUTH_ORIGIN=base;
 const output=process.env.SCREENSHOT_DIR||'/tmp/headstart-full-handoff-real-entry';await mkdir(output,{recursive:true});
 const browser=await chromium.launch(process.env.HEADSTART_CHROME_CHANNEL?{channel:process.env.HEADSTART_CHROME_CHANNEL}:{});

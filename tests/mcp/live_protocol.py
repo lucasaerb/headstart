@@ -19,7 +19,7 @@ async def run():
   scratch=Path(temp)
   with socket.socket() as sock:sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]
   origin=f'http://127.0.0.1:{port}'
-  env={**os.environ,'PORT':str(port),'HEADSTART_AUTH_ORIGIN':origin,'HEADSTART_AUTH_MODE':'local-preview','HEADSTART_AUTH_DB':str(scratch/'auth.db'),'HEADSTART_CATALOG_DB':str(scratch/'catalog.db'),'HEADSTART_EVIDENCE_DIR':str(scratch/'evidence'),'HEADSTART_PYTHON':str(ROOT/'.venv/bin/python')}
+  env={**os.environ,'PORT':str(port),'HEADSTART_AUTH_ORIGIN':origin,'HEADSTART_AUTH_MODE':'local-preview','HEADSTART_AUTH_DB':str(scratch/'auth.db'),'HEADSTART_CATALOG_DB':str(scratch/'catalog.db'),'HEADSTART_EVIDENCE_DIR':str(scratch/'evidence'),'HEADSTART_PYTHON':os.environ.get('HEADSTART_PYTHON',sys.executable)}
   # Never inherit ambient production configuration into this synthetic server.
   for k in ('BLOB_READ_WRITE_TOKEN','SIGNUP_HASH_SECRET','HEADSTART_ALLOWED_ORIGINS'):env.pop(k,None)
   prior=os.environ.copy();os.environ.update(env)

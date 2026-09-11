@@ -1,3 +1,4 @@
+import { pythonCommand } from "../tools/dev/catalog-handler.mjs";
 import { chromium, expect } from '@playwright/test';
 import { mkdtemp, mkdir, rm, readFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -6,7 +7,7 @@ import { execFileSync } from 'node:child_process';
 import { createDevServer } from '../tools/dev/server.mjs';
 const scratch=await mkdtemp(join(tmpdir(),'headstart-plugin-setup-'));
 process.env.HEADSTART_CATALOG_DB=join(scratch,'catalog.db');process.env.HEADSTART_EVIDENCE_DIR=join(scratch,'evidence');
-execFileSync(process.env.HEADSTART_PYTHON||'.venv/bin/python',['-c',`import os
+execFileSync(pythonCommand(),['-c',`import os
 from services.catalog.store import CatalogStore
 from services.catalog.seed import seed_reviewed_tile
 s=CatalogStore(os.environ['HEADSTART_CATALOG_DB'],os.environ['HEADSTART_EVIDENCE_DIR']);seed_reviewed_tile(s);s.close()`],{env:process.env});

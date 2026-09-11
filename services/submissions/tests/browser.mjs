@@ -1,3 +1,4 @@
+import { pythonCommand } from "../../../tools/dev/catalog-handler.mjs";
 import assert from "node:assert/strict";
 import { spawn, spawnSync } from "node:child_process";
 import { mkdtemp, cp, mkdir, rm } from "node:fs/promises";
@@ -15,7 +16,7 @@ const env = {
   HEADSTART_CATALOG_DB: join(temp, "catalog.db"),
 };
 const seeded = spawnSync(
-  ".venv/bin/python",
+  pythonCommand(),
   [
     "-c",
     `import json\nfrom services.auth.store import connect,issue,verify,authorize\ndb=connect();id,token=issue(db,'curator@example.invalid','binding',{'action':'account','bagRevision':'a'*64,'selections':[]},'test');session,csrf,_=verify(db,id,token,'binding');print(json.dumps({'session':session,'account':authorize(db,session,'session')['account']}))`,
