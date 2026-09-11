@@ -3,7 +3,9 @@
 import { catalogHandler } from "./catalog-handler.mjs";
 import { authHandler, handoffHandler } from "./auth-handler.mjs";
 import { submissionsHandler } from "../../services/submissions/handler.mjs";
+import { recommendationsHandler } from "../../services/recommendations/handler.mjs";
 export const routes = {
+  "/api/recommendations": recommendationsHandler,
   "/api/research": catalogHandler,
   "/api/catalog/search": catalogHandler,
   "/v1/search": catalogHandler,

@@ -29,7 +29,8 @@ window.HeadStartHandoff = (() => {
     if (!response.ok) throw new Error([result.error?.message, result.error?.action].filter(Boolean).join(" ") || "Handoff unavailable. Verify your email and retry.");
     return result;
   }
-  function mount(container, selection, restored = null) {
+  const makeBag = request => ({schemaVersion:request.schemaVersion,selections:request.selections,brief:request.brief,intent:request.intent,...(request.schemaVersion===2?{recommendationContext:request.recommendationContext}:{})});
+  function mount(container, selection, restored = null, recommendationContext = null) {
     const section = node("section", undefined, "detail-panel");
     section.append(node("h3", "Take this system into your game"), node("p", "Prepare a pinned source and notice packet for your coding agent. Email verification is required. You will still review and validate changes in your own project."));
     const label = node("label", "What should this system do in your game?");
@@ -46,7 +47,7 @@ window.HeadStartHandoff = (() => {
       prepare.disabled = true; downloads.replaceChildren();
       status.textContent = "Checking your verified session and selected source…";
       try {
-        const bag = {schemaVersion: 1, selections: request.selections, brief: request.brief, intent: request.intent};
+        const bag = makeBag(request);
         const authIntent = {action: "prepare_handoff", bagRevision: await digest(bag), selections: request.selections.map(r => ({...r, kind: "component"}))};
         sessionStorage.setItem(pendingKey, JSON.stringify({request, authIntent}));
         if (!await window.HeadStartAuth.require(authIntent)) return;
@@ -76,7 +77,7 @@ window.HeadStartHandoff = (() => {
     prepare.addEventListener("click", () => {
       if (!input.reportValidity()) return;
       const brief = window.HeadStartBriefStore.load(localStorage).state.brief;
-      run(restored ? {...restored, intent: input.value} : {schemaVersion: 1, selections: [selection], brief: {revision: brief.revision, constraints: brief.constraints}, intent: input.value, recipe: null});
+      run(restored ? {...restored, intent: input.value} : {schemaVersion: recommendationContext?2:1, selections: Array.isArray(selection)?selection:[selection], brief: {revision: brief.revision, constraints: brief.constraints}, intent: input.value, recipe: null,...(recommendationContext?{recommendationContext}:{})});
     });
     return {section, run};
   }
@@ -85,7 +86,7 @@ window.HeadStartHandoff = (() => {
       const pending = JSON.parse(sessionStorage.getItem(pendingKey) || "null");
       if (!pending || canonical(pending.authIntent) !== canonical(event.detail)) return;
       const {request} = pending;
-      const expected = await digest({schemaVersion: 1, selections: request.selections, brief: request.brief, intent: request.intent});
+      const expected = await digest(makeBag(request));
       if (expected !== event.detail.bagRevision) return;
       const content = document.getElementById("source-content");
       content.replaceChildren(); document.getElementById("source-title").textContent = "Your selected system";
