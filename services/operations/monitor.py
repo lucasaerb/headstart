@@ -13,6 +13,9 @@ class SourceMonitor:
         db.executescript('''
         CREATE TABLE IF NOT EXISTS source_monitors(id TEXT PRIMARY KEY,payload TEXT NOT NULL,next_check INTEGER NOT NULL DEFAULT 0,attempts INTEGER NOT NULL DEFAULT 0,status TEXT NOT NULL DEFAULT 'pending');
         CREATE TABLE IF NOT EXISTS source_snapshots(id TEXT NOT NULL,digest TEXT NOT NULL,observed_at INTEGER NOT NULL,payload TEXT NOT NULL,PRIMARY KEY(id,digest));
+        CREATE TABLE IF NOT EXISTS source_snapshot_observations(sequence INTEGER PRIMARY KEY,id TEXT NOT NULL,digest TEXT NOT NULL,observed_at INTEGER NOT NULL);
+        CREATE TRIGGER IF NOT EXISTS source_observations_no_update BEFORE UPDATE ON source_snapshot_observations BEGIN SELECT RAISE(ABORT,'Observations are immutable'); END;
+        CREATE TRIGGER IF NOT EXISTS source_observations_no_delete BEFORE DELETE ON source_snapshot_observations BEGIN SELECT RAISE(ABORT,'Observations are immutable'); END;
         CREATE TRIGGER IF NOT EXISTS source_snapshots_no_update BEFORE UPDATE ON source_snapshots BEGIN SELECT RAISE(ABORT,'Snapshots are immutable'); END;
         CREATE TRIGGER IF NOT EXISTS source_snapshots_no_delete BEFORE DELETE ON source_snapshots BEGIN SELECT RAISE(ABORT,'Snapshots are immutable'); END;
         ''');db.commit()
@@ -39,10 +42,12 @@ class SourceMonitor:
                 result=fetch_snapshot(config['repository'],config['paths'],config['licensePaths'])
                 from .changes import snapshot
                 snapshot(result['snapshot'])
-                previous=self.db.execute('SELECT payload FROM source_snapshots WHERE id=? ORDER BY observed_at DESC LIMIT 1',(identity,)).fetchone()
+                previous=self.db.execute('SELECT s.payload FROM source_snapshot_observations o JOIN source_snapshots s ON s.id=o.id AND s.digest=o.digest WHERE o.id=? ORDER BY o.sequence DESC LIMIT 1',(identity,)).fetchone()
+                if previous is None:previous=self.db.execute('SELECT payload FROM source_snapshots WHERE id=? ORDER BY observed_at DESC LIMIT 1',(identity,)).fetchone()
                 if previous:self.changes.observe(config['repository'],json.loads(previous[0])['snapshot'],result['snapshot'])
                 with self.db:
                     self.db.execute('INSERT OR IGNORE INTO source_snapshots VALUES(?,?,?,?)',(identity,digest(result),now,json.dumps(result,sort_keys=True)))
+                    self.db.execute('INSERT INTO source_snapshot_observations(id,digest,observed_at) VALUES(?,?,?)',(identity,digest(result),now))
                     self.db.execute("UPDATE source_monitors SET next_check=?,attempts=0,status='current' WHERE id=?",(now+7*86400,identity))
                 results.append({'id':identity,'status':'current'})
             except Exception:

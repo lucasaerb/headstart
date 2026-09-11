@@ -6,6 +6,18 @@ from services.operations.monitor import SourceMonitor
 from services.operations.health import HealthJobs
 
 class MonitorTests(unittest.TestCase):
+    def test_reverted_snapshot_remains_current_for_next_change(self):
+        db=sqlite3.connect(':memory:');now=[2000000000];monitor=SourceMonitor(db,clock=lambda:now[0])
+        monitor.register({'repository':'https://github.com/example/game','paths':['game.js'],'licensePaths':['LICENSE']})
+        for revision in ['a','b','a','c']:
+            value={'snapshot':{'sourceCommit':revision*40,'sourceDigest':revision*64,'licenseDigest':'d'*64}}
+            monitor.run_due(fetch_snapshot=lambda *args,v=value:v);now[0]+=604801
+        rows=[json.loads(r[0]) for r in db.execute('SELECT payload FROM source_change_candidates')]
+        last=next(row for row in rows if row['candidate']['sourceCommit']=='c'*40)
+        self.assertEqual(last['previous']['sourceCommit'],'a'*40)
+        self.assertEqual(db.execute('SELECT COUNT(*) FROM source_snapshots').fetchone()[0],3)
+        self.assertEqual(db.execute('SELECT COUNT(*) FROM source_snapshot_observations').fetchone()[0],4)
+        db.close()
     def test_weekly_changes_preserve_old_snapshot_and_retry(self):
         db=sqlite3.connect(':memory:');now=[2000000000]
         monitor=SourceMonitor(db,clock=lambda:now[0])
