@@ -7,7 +7,7 @@ from pathlib import Path
 from services.catalog.store import CatalogStore
 from services.catalog.seed import seed_reviewed_tile
 from services.submissions.store import setup as setup_submissions
-from services.handoff.service import build,create,retrieve,markdown,digest,HandoffError
+from services.handoff.service import build,create,retrieve,markdown,digest,HandoffError,current_bag
 
 class HandoffTests(unittest.TestCase):
     def setUp(self):
@@ -27,6 +27,16 @@ class HandoffTests(unittest.TestCase):
         self.assertNotIn('function Tile',json.dumps(packet))
         md=markdown(packet);self.assertEqual(json.loads(md.split('```json\n')[1].split('\n```')[0]),packet)
         for r in packet['records']:self.assertEqual(digest(r),next(d['sha256'] for d in packet['recordDigests'] if d['id']==r['id']))
+    def test_active_selection_is_explicit_owner_scoped_and_reselectable(self):
+        with self.assertRaises(HandoffError):current_bag(self.store,'alice')
+        a=create(self.store,'alice',self.request)
+        other=copy.deepcopy(self.request);other['intent']='Another intent'
+        b=create(self.store,'alice',other)
+        self.assertEqual(current_bag(self.store,'alice')[0],b['bagRevision'])
+        create(self.store,'alice',self.request)
+        self.assertEqual(current_bag(self.store,'alice')[0],a['bagRevision'])
+        with self.assertRaises(HandoffError):current_bag(self.store,'bob')
+
     def test_owner_and_brief_revision(self):
         a=create(self.store,'alice',self.request)
         with self.assertRaises(HandoffError):retrieve(self.store,'bob',a['digest'])

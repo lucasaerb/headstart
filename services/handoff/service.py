@@ -1,6 +1,7 @@
 """Immutable metadata handoffs. Catalog evidence is data, never agent instructions."""
 import hashlib
 import json
+import os
 import re
 from contracts.validate import validate_record, _walk
 from services.catalog.store import encode
@@ -47,9 +48,12 @@ def request_contract(request):
     return json.loads(encode(request))
 
 def setup(db):
-    if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='handoff_artifacts'").fetchone():
+    filename=db.execute("PRAGMA database_list").fetchone()[2]
+    if filename:os.chmod(filename,0o600)
+    if db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='handoff_current'").fetchone():
         return
     db.executescript('''
+    CREATE TABLE IF NOT EXISTS handoff_current(owner TEXT PRIMARY KEY,bag_digest TEXT NOT NULL);
     CREATE TABLE IF NOT EXISTS handoff_artifacts(owner TEXT NOT NULL,digest TEXT NOT NULL,bag_digest TEXT NOT NULL,request TEXT NOT NULL,payload TEXT NOT NULL,PRIMARY KEY(owner,digest));
     CREATE TRIGGER IF NOT EXISTS immutable_handoff_update BEFORE UPDATE ON handoff_artifacts BEGIN SELECT RAISE(ABORT,'Handoffs are immutable'); END;
     CREATE TRIGGER IF NOT EXISTS immutable_handoff_delete BEFORE DELETE ON handoff_artifacts BEGIN SELECT RAISE(ABORT,'Handoffs are immutable'); END;
@@ -137,7 +141,14 @@ def create(store, owner, request):
     payload=build(store,request); identifier=digest(payload)
     with store.transaction():
         store.db.execute('INSERT OR IGNORE INTO handoff_artifacts VALUES(?,?,?,?,?)',(owner,identifier,payload['bagRevision'],encode(request),encode(payload)))
+        store.db.execute('INSERT INTO handoff_current VALUES(?,?) ON CONFLICT(owner) DO UPDATE SET bag_digest=excluded.bag_digest',(owner,payload['bagRevision']))
     return {'digest':identifier,'bagRevision':payload['bagRevision'],'manifest':payload}
+
+def current_bag(store, owner):
+    setup(store.db)
+    row=store.db.execute('SELECT bag_digest FROM handoff_current WHERE owner=?',(owner,)).fetchone()
+    if row is None:raise HandoffError('NO_SELECTED_BAG','No source-reviewed bag has been prepared for this account.','Prepare an eligible system handoff on the website first; anonymous local collections are not synchronized.',404)
+    return row['bag_digest'],retrieve(store,owner,row['bag_digest'],True)
 
 def retrieve(store, owner, identifier, bag=False):
     if not isinstance(identifier,str) or not re.fullmatch('[0-9a-f]{64}',identifier):fail('NOT_FOUND','Handoff not found.')

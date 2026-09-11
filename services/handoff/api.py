@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 from services.auth.store import connect, authorize, rate, AuthError
 from services.catalog.store import CatalogStore
-from .service import create, retrieve, markdown, HandoffError, setup
+from .service import create, retrieve, markdown, HandoffError, setup, current_bag
 
 ROOT=Path(__file__).resolve().parents[2]
 
@@ -19,7 +19,8 @@ def serve(request):
         method=request.get('method'); url=request.get('url')
         match=re.fullmatch(r'/v1/handoffs/([0-9a-f]{64})/(json|markdown)',url or '')
         bag=re.fullmatch(r'/v1/bags/([0-9a-f]{64})',url or '')
-        if not ((method=='POST' and url=='/v1/handoffs') or (method=='GET' and (match or bag))):
+        selected=url=='/v1/bags/current'
+        if not ((method=='POST' and url=='/v1/handoffs') or (method=='GET' and (match or bag or selected))):
             return {'status':405,'body':{'error':{'code':'METHOD_NOT_ALLOWED','message':'Unsupported handoff route or method.'}}}
         rate(auth,'artifact:'+principal['account'],20,900)
         database=Path(os.environ.get('HEADSTART_CATALOG_DB',ROOT/'.local/catalog.sqlite3'))
@@ -33,6 +34,9 @@ def serve(request):
                 result=create(store,principal['account'],request.get('body'))
                 body={'schemaVersion':1,'digest':result['digest'],'bagRevision':result['bagRevision'],
                       'downloads':{kind:'/v1/handoffs/'+result['digest']+'/'+kind for kind in ('json','markdown')}}
+            elif selected:
+                bag_revision,result=current_bag(store,principal['account'])
+                body={'schemaVersion':1,'format':'json','bagRevision':bag_revision,'content':json.dumps(result,sort_keys=True,indent=2,ensure_ascii=False)}
             else:
                 result=retrieve(store,principal['account'],bag[1] if bag else match[1],bag=bool(bag))
                 body={'schemaVersion':1,'content':markdown(result) if match and match[2]=='markdown' else json.dumps(result,sort_keys=True,indent=2,ensure_ascii=False),'format':match[2] if match else 'json'}

@@ -12,7 +12,7 @@ const server=createDevServer();await new Promise(r=>server.listen(0,'127.0.0.1',
 const output=process.env.SCREENSHOT_DIR||'docs/reviews/handoff-notices/evidence';await mkdir(output,{recursive:true});
 const browser=await chromium.launch(process.env.HEADSTART_CHROME_CHANNEL?{channel:process.env.HEADSTART_CHROME_CHANNEL}:{});
 try{for(const [name,viewport] of [['desktop',{width:1440,height:1000}],['mobile',{width:390,height:844}]]){
- const page=await browser.newPage({viewport,reducedMotion:'reduce'});await page.goto(base);await page.waitForFunction(()=>window.HeadStartHandoff&&window.HeadStartAuth);
+ const context=await browser.newContext({viewport,reducedMotion:'reduce'});const page=await context.newPage();await page.route('**/handoff.js',async route=>{await new Promise(r=>setTimeout(r,150));await route.continue();});await page.goto(base);await page.waitForFunction(()=>window.HeadStartHandoff&&window.HeadStartAuth);
  // Mount the real reusable component action on its existing details surface.
  await page.evaluate(()=>{const content=document.getElementById('source-content');content.replaceChildren();document.getElementById('source-title').textContent='2048 tile state and serialization';window.HeadStartHandoff.mount(content,{id:'2048-tile-v1',version:'1'});document.getElementById('source-dialog').showModal();});
  await page.getByLabel('What should this system do in your game?').fill('Use tile state and preserve my existing camera.');await page.screenshot({path:output+'/'+name+'-entry.png'});
@@ -21,7 +21,7 @@ try{for(const [name,viewport] of [['desktop',{width:1440,height:1000}],['mobile'
  await expect(page.locator('#source-content')).toContainText('Your handoff is ready');await page.screenshot({path:output+'/'+name+'-ready.png'});
  const download=page.waitForEvent('download');await page.getByRole('button',{name:'Download JSON'}).click();const file=await download;const manifest=JSON.parse(await readFile(await file.path(),'utf8'));expect(manifest.bag.intent).toContain('preserve my existing camera');expect(manifest.records.some(r=>r.id==='2048-tile-v1')).toBe(true);
  // Revoke the real session in a separate tab; retained download button must fail.
- const logout=await page.context().newPage();await logout.goto(base+'/auth.html');await logout.locator('#auth-logout').click();await logout.close();await page.getByRole('button',{name:'Download Markdown'}).click();await expect(page.locator('#source-content')).toContainText('Verified identity');await page.screenshot({path:output+'/'+name+'-blocked.png'});
- expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await page.close();
+ const logout=await page.context().newPage();await logout.goto(base+'/auth.html');await logout.locator('#auth-logout').click();await logout.close();await page.getByRole('button',{name:'Download Markdown'}).click();await expect(page.locator('#source-content')).toContainText('Verify your email');await page.screenshot({path:output+'/'+name+'-blocked.png'});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await context.close();
 }}finally{await browser.close();await new Promise(r=>server.close(r));await rm(dir,{recursive:true,force:true});}
 console.log('Desktop/mobile real verified handoff resume, JSON content, revoked-download blocking passed.');

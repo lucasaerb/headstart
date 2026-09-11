@@ -27,6 +27,15 @@ class HandoffAuthTests(unittest.TestCase):
         self.assertIn('HeadStart source-reviewed',serve({'method':'GET','url':url,'credential':self.session,'credentialKind':'browser'})['body']['content'])
         revoke(self.auth,self.session)
         with self.assertRaises(AuthError):serve({'method':'GET','url':url,'credential':self.session,'credentialKind':'browser'})
+    def test_current_bag_authenticated_owner_and_withdrawal(self):
+        from services.handoff.service import HandoffError
+        with self.assertRaises(HandoffError):serve({'method':'GET','url':'/v1/bags/current','credential':self.session,'credentialKind':'browser'})
+        created=serve({'method':'POST','url':'/v1/handoffs','body':self.request,'credential':self.session,'credentialKind':'browser'})
+        result=serve({'method':'GET','url':'/v1/bags/current','credential':self.session,'credentialKind':'browser'})
+        self.assertEqual(result['body']['bagRevision'],created['body']['bagRevision'])
+        store=CatalogStore(os.environ['HEADSTART_CATALOG_DB'],os.environ['HEADSTART_EVIDENCE_DIR']);store.tombstone('component','2048-tile','Withdrawn');store.close()
+        with self.assertRaises(HandoffError):serve({'method':'GET','url':'/v1/bags/current','credential':self.session,'credentialKind':'browser'})
+
     def test_unverified_account_and_expired_session(self):
         self.auth.execute('UPDATE accounts SET verified=0')
         with self.assertRaises(AuthError):serve({'method':'POST','url':'/v1/handoffs','body':self.request,'credential':self.session,'credentialKind':'browser'})

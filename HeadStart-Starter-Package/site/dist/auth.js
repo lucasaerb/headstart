@@ -13,7 +13,16 @@
     },
   };
   if(!document.getElementById("auth-form")) {
-    try {const raw=sessionStorage.getItem(resume);if(raw){sessionStorage.removeItem(resume);setTimeout(()=>window.dispatchEvent(new CustomEvent("headstart-auth-resumed",{detail:JSON.parse(raw)})),0);}} catch {}
+    try {
+      const raw=sessionStorage.getItem(resume);
+      if(raw){
+        // Deferred consumers must finish loading before the recovery event.
+        // Keep the recovery intent until its consumer acknowledges success.
+        const dispatch=()=>window.dispatchEvent(new CustomEvent("headstart-auth-resumed",{detail:JSON.parse(raw)}));
+        if(document.readyState==="complete") setTimeout(dispatch,0);
+        else document.addEventListener("DOMContentLoaded",dispatch,{once:true});
+      }
+    } catch {}
     return;
   }
   const $=id=>document.getElementById(id),status=$("auth-status");

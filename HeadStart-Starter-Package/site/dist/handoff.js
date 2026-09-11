@@ -40,6 +40,7 @@ window.HeadStartHandoff = (() => {
     const prepare = node("button", "Prepare agent handoff", "secondary"); prepare.type = "button";
     const status = node("p"); status.setAttribute("role", "status"); status.setAttribute("aria-live", "polite");
     const downloads = node("div", undefined, "detail-actions");
+    Object.assign(downloads.style, {display: "flex", flexWrap: "wrap", gap: "8px"});
     section.append(label, prepare, status, downloads); container.append(section);
     async function run(request) {
       prepare.disabled = true; downloads.replaceChildren();
@@ -51,6 +52,7 @@ window.HeadStartHandoff = (() => {
         if (!await window.HeadStartAuth.require(authIntent)) return;
         const result = await api("/v1/handoffs", request);
         sessionStorage.removeItem(pendingKey);
+        sessionStorage.removeItem("headstart.auth.resume");
         status.textContent = "Your handoff is ready. Download it and open it in your coding agent. No agent is connected or started by this action.";
         for (const format of ["json", "markdown"]) {
           const button = node("button", format === "json" ? "Download JSON" : "Download Markdown", "secondary"); button.type = "button";
