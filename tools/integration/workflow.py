@@ -31,7 +31,7 @@ def safe_path(root,rel):
  return candidate
 
 def snapshot(target):
- target=Path(target).resolve();files={};size=0
+ target=Path(target).resolve();files={};modes={};size=0
  if any(line.lower().startswith('filter.') or (line.lower().startswith('core.attributesfile=') and line.split('=',1)[1]!='/dev/null') for line in git(target,'config','--list').splitlines()):raise IntegrationError('Repository filters/attributes config requires separate inspection')
  attributes=Path(git(target,'rev-parse','--git-path','info/attributes'))
  if not attributes.is_absolute():attributes=target/attributes
@@ -43,8 +43,8 @@ def snapshot(target):
   if not p.is_file():raise IntegrationError('Missing or nonregular target file')
   raw=p.read_bytes();size+=len(raw)
   if len(raw)>5_000_000 or size>30_000_000 or len(files)>500:raise IntegrationError('Target inspection exceeds bounded scope')
-  files[rel]=sha(raw)
- return {'head':git(target,'rev-parse','HEAD'),'files':files,'stateDigest':sha(files),'unrelatedEdits':git(target,'status','--porcelain')}
+  files[rel]=sha(raw);modes[rel]=p.stat().st_mode & 0o777
+ return {'head':git(target,'rev-parse','HEAD'),'files':files,'modes':modes,'stateDigest':sha({'files':files,'modes':modes}),'unrelatedEdits':git(target,'status','--porcelain')}
 
 def inspect(target):
  target=Path(target).resolve();state=snapshot(target)
@@ -141,7 +141,7 @@ def apply(value,packet,job,authorized=False,cancel_after=None):
  for rel,digest in value['context']['state']['files'].items():
   raw=safe_path(value['context']['target'],rel).read_bytes()
   if sha(raw)!=digest:raise IntegrationError('Target changed during worktree creation')
-  path=safe_path(target,rel);path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(raw)
+  path=safe_path(target,rel);path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(raw);path.chmod(value['context']['state']['modes'][rel])
  event(job,'applying',branch=branch);written={}
  contents={'src/terrain.js':(HERE/'adapters/simplex-terrain.js').read_bytes(),'vendor/SimplexNoise.js':(SOURCE/'examples/jsm/math/SimplexNoise.js').read_bytes(),'HEADSTART-NOTICES.txt':(SOURCE/'LICENSE').read_bytes()+b'\nSimplexNoise retains Stefan Gustavson algorithm references in full original source. Adapter modifications: headstart simplex-terrain-1; actual integration requires matching validation/review.\n'}
  try:
@@ -164,7 +164,7 @@ def rollback(job):
  for rel in written:
   path=target/rel
   if rel in value['context']['state']['files']:
-   raw=subprocess.run(['git','-C',str(target),'show',value['context']['state']['head']+':'+rel],capture_output=True,check=True).stdout;path.write_bytes(raw)
+   raw=subprocess.run(['git','-C',str(target),'show',value['context']['state']['head']+':'+rel],capture_output=True,check=True).stdout;path.write_bytes(raw);path.chmod(value['context']['state']['modes'][rel])
   else:path.unlink()
  event(job,'rolled_back',state=snapshot(target)['stateDigest'])
  return snapshot(target)
