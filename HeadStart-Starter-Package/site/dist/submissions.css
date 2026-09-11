@@ -1,0 +1,91 @@
+.plugin-main {
+  max-width: 850px;
+}
+.plugin-main h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+.review-card {
+  padding: 24px;
+  margin: 24px 0;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #c2d5ea;
+  border-radius: 20px;
+}
+.review-card label {
+  display: block;
+  margin: 16px 0 7px;
+  font-weight: 650;
+}
+.review-card label span,
+.hint {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #465675;
+}
+.review-card input:not([type="checkbox"]),
+.review-card textarea,
+.review-card select {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 7px;
+  border: 1px solid #aebfda;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fff;
+  color: #091535;
+  font: inherit;
+}
+.review-card button {
+  margin-top: 16px;
+  padding: 12px 18px;
+  border: 1px solid #94b3e4;
+  border-radius: 10px;
+  background: #f0f6ff;
+  color: #102755;
+  cursor: pointer;
+  font: inherit;
+}
+.review-card button.primary {
+  background: #2165ef;
+  color: white;
+}
+.review-card .check {
+  display: flex;
+  gap: 10px;
+}
+.review-card pre,
+.review-card code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.review-card summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.queue-item {
+  border-top: 1px solid #c2d5ea;
+  margin-top: 20px;
+  padding-top: 12px;
+}
+.review-card [hidden] {
+  display: none;
+}
+.review-card a {
+  color: #174ec4;
+}
+:focus-visible {
+  outline: 3px solid #2165ef;
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .review-card {
+    padding: 18px;
+  }
+  .plugin-main {
+    padding: 24px 18px;
+  }
+  .plugin-header {
+    padding: 22px 18px;
+  }
+}
