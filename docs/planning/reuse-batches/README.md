@@ -21,3 +21,7 @@ After batch 3 independent acceptance: #16 bounded local Three.js/R3F integration
 Preserve the selected C4/C4b world, layers, motion, existing header and typography. Add controls using existing navy/blue actions and light secondary surfaces; no hero redesign. Independent reviewers must inspect actual desktop/mobile captures against selected references. New account verification uses localhost delivery preview; no live mail/provider setup. Test with isolated local data and no production credentials. Authenticated source handoffs and public planning prompts are separate. Website and catalog reads remain open.
 
 This branch is implementation/review work. A passing test does not authorize automatic merges, target publication, economic agreements or production service activation. Report real capabilities and any unmet criteria explicitly. Main and the existing Vercel release remain stable while these batches are built.
+
+## Baseline verification
+
+At base `84795b9`, the coordinator ran the existing 40 Node tests and 68 Python tests successfully in the new worktree. Local dependencies were installed with `npm ci --ignore-scripts`; the existing reviewed Python environment and pinned ONNX model are reused via ignored local links. No production environment file was copied. Docker29.1.2 is available for the later disposable upstream-runtime harness. These are baseline checks, not acceptance of the new issues.
