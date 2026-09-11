@@ -7,6 +7,7 @@ from .store import CatalogStore,encode
 from .seed import seed_reviewed_tile
 from services.curation.seed import seed_curated_capabilities
 from .display_projection import include_missing_references
+from services.submissions.store import setup as setup_rights_policy
 
 ROOT=Path(__file__).resolve().parents[2]
 def initialize(database=None,evidence=None):
@@ -14,6 +15,7 @@ def initialize(database=None,evidence=None):
     evidence=evidence or os.environ.get('HEADSTART_EVIDENCE_DIR',ROOT/'.local/evidence')
     store=CatalogStore(database,evidence)
     try:
+        setup_rights_policy(store.db)
         count=store.import_research(ROOT/'research/catalog/catalog.json')
         seed_reviewed_tile(store)
         seed_curated_capabilities(store)

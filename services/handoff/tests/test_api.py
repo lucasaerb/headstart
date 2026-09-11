@@ -27,6 +27,14 @@ class HandoffAuthTests(unittest.TestCase):
         self.assertIn('HeadStart source-reviewed',serve({'method':'GET','url':url,'credential':self.session,'credentialKind':'browser'})['body']['content'])
         revoke(self.auth,self.session)
         with self.assertRaises(AuthError):serve({'method':'GET','url':url,'credential':self.session,'credentialKind':'browser'})
+    def test_fresh_catalog_init_enables_protected_handoff(self):
+        from services.catalog.initialize import initialize
+        fresh=Path(self.tmp.name)/'fresh.sqlite3'
+        initialize(fresh,Path(self.tmp.name)/'fresh-evidence')
+        with patch.dict(os.environ,{'HEADSTART_CATALOG_DB':str(fresh),'HEADSTART_EVIDENCE_DIR':str(Path(self.tmp.name)/'fresh-evidence')}):
+            result=serve({'method':'POST','url':'/v1/handoffs','body':self.request,'credential':self.session,'credentialKind':'browser'})
+            self.assertEqual(result['status'],200)
+
     def test_current_bag_authenticated_owner_and_withdrawal(self):
         from services.handoff.service import HandoffError
         with self.assertRaises(HandoffError):serve({'method':'GET','url':'/v1/bags/current','credential':self.session,'credentialKind':'browser'})
