@@ -59,6 +59,22 @@ class WorkflowTests(unittest.TestCase):
    with self.assertRaises(IntegrationError):review(self.job,'reviewer','PASS',sha(value))
   changed=copy.deepcopy(self.packet);changed['bag']['intent']='Different';write_json(self.job/'packet.json',changed)
   with self.assertRaises(IntegrationError):review(self.job,'reviewer','PASS',sha(value))
+ def test_review_rechecks_evidence_bytes_paths_and_bounds(self):
+  apply(self.plan,self.packet,self.job,True);folder=self.job/'evidence';folder.mkdir()
+  names={f'{phase}-{viewport}.{ext}' for phase in ('baseline','integrated') for viewport in ('1280,800','390,844') for ext in ('png','log')}
+  for name in names:(folder/name).write_bytes(b'unit evidence fixture')
+  value={'result':'PASS','targetState':snapshot(self.job/'target')['stateDigest'],'planDigest':self.plan['planDigest'],'recipe':self.plan['recipe'],'source':self.plan['source'],'evidence':{name:sha(b'unit evidence fixture') for name in names}}
+  write_json(self.job/'validation.json',value);event(self.job,'validated',validationDigest=sha(value));selected=folder/'baseline-1280,800.log'
+  for kind in ('tamper','missing','symlink','oversize'):
+   if selected.exists() or selected.is_symlink():selected.unlink()
+   if kind=='tamper':selected.write_bytes(b'changed')
+   elif kind=='symlink':selected.symlink_to(self.base/'AGENTS.md')
+   elif kind=='oversize':selected.write_bytes(b'x'*5_000_001)
+   with self.assertRaises(IntegrationError):review(self.job,'reviewer','PASS',sha(value))
+   self.assertEqual(json.loads((self.job/'events.jsonl').read_text().splitlines()[-1])['stage'],'validated')
+  selected.unlink();selected.write_bytes(b'unit evidence fixture')
+  with patch('tools.integration.workflow.event') as emit:
+   self.assertEqual(review(self.job,'reviewer','PASS',sha(value))['stage'],'integration_tested');emit.assert_called_once()
  def test_no_success_without_matching_validation_and_separate_review(self):
   apply(self.plan,self.packet,self.job,True)
   with self.assertRaises(FileNotFoundError):review(self.job,'reviewer','PASS','a'*64)

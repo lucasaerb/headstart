@@ -168,6 +168,14 @@ def review(job,reviewer,verdict,validation_digest):
  for i,item in enumerate(history):
   if item['sequence']!=i or item['previous']!=(sha(history[i-1]) if i else None):raise IntegrationError('Progress history changed')
  if validation_digest!=sha(validation) or validation['result']!='PASS' or validation['targetState']!=snapshot(job/'target')['stateDigest']:raise IntegrationError('Validation is stale or failed')
+ evidence=validation.get('evidence')
+ expected={f'{phase}-{viewport}.{ext}' for phase in ('baseline','integrated') for viewport in ('1280,800','390,844') for ext in ('png','log')}
+ if not isinstance(evidence,dict) or set(evidence)!=expected:raise IntegrationError('Missing or unsupported validation evidence')
+ for name,digest in evidence.items():
+  path=safe_path(job,'evidence/'+name)
+  if not isinstance(digest,str) or not re.fullmatch(r'[a-f0-9]{64}',digest) or not path.is_file() or path.stat().st_size>5_000_000:raise IntegrationError('Missing or unbounded validation evidence')
+  with path.open('rb') as handle:raw=handle.read(5_000_001)
+  if len(raw)>5_000_000 or sha(raw)!=digest:raise IntegrationError('Validation evidence changed')
  event(job,'integration_tested' if verdict=='PASS' else 'review_changes_requested',reviewer=reviewer,validationDigest=validation_digest)
  return {'schemaVersion':VERSION,'stage':'integration_tested' if verdict=='PASS' else 'review_changes_requested','scope':'Only this source/target/recipe digest combination; reviewer identity is a local assertion, not remote attestation.'}
 
