@@ -133,6 +133,22 @@ def validate(records, media, root=ROOT):
             string(row[key], f"{label}.{key}")
         for key in LIST_FIELDS:
             strings(row[key], f"{label}.{key}")
+        if "interface_languages" in row: strings(row["interface_languages"], label + ".interface_languages")
+        notoriety = row.get("notoriety")
+        if notoriety is not None:
+          if obj(notoriety, {"status", "metrics", "notes"}, label + ".notoriety"):
+            enum(notoriety["status"], {"unknown", "publisher_reported", "measured"}, label + ".notoriety.status")
+            string(notoriety["notes"], label + ".notoriety.notes")
+            if not isinstance(notoriety["metrics"], list): fail(label, "notoriety metrics must be an array")
+            else:
+                for metric in notoriety["metrics"]:
+                    if obj(metric, {"metric_type", "value", "checked_at", "evidence_url", "scope", "notes"}, label + ".notoriety.metric"):
+                        enum(metric["metric_type"], {"registered_players", "monthly_players", "concurrent_players", "plays", "downloads", "unique_players"}, label + ".notoriety.metric_type")
+                        if type(metric["value"]) is not int or metric["value"] <= 0: fail(label, "notoriety value must be a positive integer")
+                        timestamp(metric["checked_at"], label + ".notoriety.checked_at")
+                        url(metric["evidence_url"], label + ".notoriety.evidence_url")
+                        string(metric["scope"], label + ".notoriety.scope"); string(metric["notes"], label + ".notoriety.notes")
+            if notoriety["status"] == "unknown" and notoriety["metrics"]: fail(label, "unknown notoriety cannot contain metrics")
         enum(row["content_kind"], {"game", "toolkit", "demo", "engine", "asset-library"}, label + ".content_kind")
         enum(row["dimension"], {"2d", "3d", "mixed", "unknown"}, label + ".dimension")
         runtime = row["runtime"]
@@ -172,6 +188,8 @@ def validate(records, media, root=ROOT):
             url(rights["code_evidence_url"], label + ".rights.code_evidence_url", nullable=rights["code_status"] != "inspected")
             if rights["code_status"] == "inspected" and not rights["code_license"]:
                 fail(label, "inspected code license needs a license value")
+            if isinstance(rights["code_license"], str) and rights["code_license"].startswith("LicenseRef-"):
+                fail(label, "listed catalog requires an open-source license, not a custom LicenseRef")
             string(rights["asset_notes"], label + ".rights.asset_notes")
             string(rights["notes"], label + ".rights.notes")
         demo = row["demo"]
@@ -301,6 +319,21 @@ def load(root=ROOT):
         records.extend(rows)
     media = read_json(root / "media-manifest.json") if (root / "media-manifest.json").exists() else []
     errors = validate(records, media, root)
+    popularity_path = root / "github-popularity.json"
+    links_path = root / "evidence/link-checks.json"
+    if popularity_path.exists() and links_path.exists():
+        popularity = {p["repo_url"].rstrip("/").removesuffix(".git").casefold(): p for p in read_json(popularity_path)["repositories"]}
+        live = {ref["record_id"] for check in read_json(links_path)["checks"] if check["result"] == "reachable" for ref in check["references"] if ref["field"] == "demo.url"}
+        # Research rows may carry media awaiting the separate independent
+        # display decision. The frontend projection is the publication gate.
+        media_ids = {m["record_id"] for m in media}
+        for row in records:
+            pop = popularity.get(row["repo_url"].rstrip("/").removesuffix(".git").casefold())
+            if not row["source"]["commit"]: errors.append(row["id"] + ": strict gate requires pinned source")
+            if row["rights"]["code_status"] != "inspected" or not row["rights"]["code_license"] or str(row["rights"]["code_license"]).startswith("LicenseRef-"): errors.append(row["id"] + ": strict gate requires open-source license")
+            if row["id"] not in media_ids: errors.append(row["id"] + ": strict gate requires authentic reviewed media")
+            if not pop or pop.get("status") != "available" or type(pop.get("stars")) is not int or pop["stars"] <= 0: errors.append(row["id"] + ": strict gate requires positive observed GitHub stars")
+            if row["demo"]["kind"] != "browser" or row["id"] not in live: errors.append(row["id"] + ": strict gate requires reachable browser play URL")
     if errors:
         raise ValueError("\n".join(errors))
     if not records:

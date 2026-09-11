@@ -1,0 +1,1421 @@
+{
+  "schema_version": "1.0",
+  "assessed_at": "2026-09-11T01:32:47Z",
+  "policy": "Listed records require pinned public source, inspected open-source license, authentic reviewed media, positive dated GitHub stars, browser demo, and reachable live-play URL.",
+  "records": [
+    {
+      "record_id": "astra-mosswing",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "astra-melon-lab",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "magic-carpet-wizard",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": false,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license",
+        "positive_github_stars"
+      ]
+    },
+    {
+      "record_id": "blackwater",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "open-city-maker",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "dwellcraft",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "last-beacon",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "silent-meridian",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": false,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "positive_github_stars"
+      ]
+    },
+    {
+      "record_id": "jelly-baby",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "toy2game-balance-astronaut",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "toy2game-flip-match",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "toy2game-frog-feast",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "toy2game-parking-escape",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "toy2game-penguin-ice",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "toy2game-rabbit-trap",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "philolabs-union-square-sf",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "philolabs-union-square-sf-gpt-astra",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "philolabs-kyoto-higashiyama",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "philolabs-kyoto-higashiyama-gpt-astra",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "philolabs-death-star-trench-run",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "philolabs-death-star-trench-run-gpt-astra",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "astra-sunjing-puzzles",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "astra-three-kingdoms",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "astra-thunderfall",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "astra-apex-club",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "vesper-street",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "fable5-fpv-drone",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": false,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": false,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license",
+        "authentic_reviewed_media",
+        "browser_demo",
+        "live_play_reachable"
+      ]
+    },
+    {
+      "record_id": "fable5-plane-game",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": false,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": false,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license",
+        "authentic_reviewed_media",
+        "browser_demo",
+        "live_play_reachable"
+      ]
+    },
+    {
+      "record_id": "fable5-real-physics-engine",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": false,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license",
+        "browser_demo",
+        "live_play_reachable"
+      ]
+    },
+    {
+      "record_id": "fable5-laas",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "openai-sites-void-explorer",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": false,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": false,
+        "positive_github_stars": false,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "pinned_public_source",
+        "inspected_open_source_license",
+        "authentic_reviewed_media",
+        "positive_github_stars"
+      ]
+    },
+    {
+      "record_id": "openai-sites-sunwake",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": false,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": false,
+        "positive_github_stars": false,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "pinned_public_source",
+        "inspected_open_source_license",
+        "authentic_reviewed_media",
+        "positive_github_stars"
+      ]
+    },
+    {
+      "record_id": "openai-sites-hollowflux",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": false,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": false,
+        "positive_github_stars": false,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "pinned_public_source",
+        "inspected_open_source_license",
+        "authentic_reviewed_media",
+        "positive_github_stars"
+      ]
+    },
+    {
+      "record_id": "little-flock",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "p-doom",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "apex-formula",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "turbo-kart-rush",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "berlin-walk",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "skysprout",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "glenn-explore",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "neomud",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "openrct2",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "openttd",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "zero-ad",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": false,
+        "browser_demo": false,
+        "live_play_reachable": false,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "positive_github_stars",
+        "browser_demo",
+        "live_play_reachable"
+      ]
+    },
+    {
+      "record_id": "openra",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "widelands",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "luanti",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "supertux",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "supertuxkart",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "battle-for-wesnoth",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": false,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo",
+        "live_play_reachable"
+      ]
+    },
+    {
+      "record_id": "mindustry",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "unciv",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "cataclysm-dda",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "veloren",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": false,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "positive_github_stars",
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "endless-sky",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "freeciv",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "freecol",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo"
+      ]
+    },
+    {
+      "record_id": "godot-platformer-2d",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "godot-platformer-3d",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "godot-truck-town",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "godot-astar-grid-2d",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "pmndrs-racing-game",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "ecctrl",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "dungeon-forge",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "3d-city",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "slimcity",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "fable-cities",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "gather-it",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": false,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license",
+        "authentic_reviewed_media"
+      ]
+    },
+    {
+      "record_id": "hextris",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": false,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "live_play_reachable"
+      ]
+    },
+    {
+      "record_id": "2048",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "clumsy-bird",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": false,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "inspected_open_source_license"
+      ]
+    },
+    {
+      "record_id": "hexgl",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "browserquest",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": false,
+        "live_play_reachable": false,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "browser_demo",
+        "live_play_reachable"
+      ]
+    },
+    {
+      "record_id": "a-dark-room",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": false,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "authentic_reviewed_media"
+      ]
+    },
+    {
+      "record_id": "littlejs",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "phaser-dungeon-crawler",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": false,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "authentic_reviewed_media"
+      ]
+    },
+    {
+      "record_id": "matter-js",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": false,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "authentic_reviewed_media"
+      ]
+    },
+    {
+      "record_id": "three-pathfinding",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "yuka",
+      "listed": false,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": false,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": false
+      },
+      "reasons": [
+        "authentic_reviewed_media"
+      ]
+    },
+    {
+      "record_id": "three-mesh-bvh",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "react-three-rapier",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "three-terrain",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "drei",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "threejs",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "server-survival",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "moon-rover",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "operation-ironhold",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "emerald-bayou",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "cadle",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "jungle-trail",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "datacenter-survival",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    },
+    {
+      "record_id": "protocol-99-entry-001",
+      "listed": true,
+      "gates": {
+        "pinned_public_source": true,
+        "inspected_open_source_license": true,
+        "authentic_reviewed_media": true,
+        "positive_github_stars": true,
+        "browser_demo": true,
+        "live_play_reachable": true,
+        "independent_media_approval": true
+      },
+      "reasons": []
+    }
+  ]
+}

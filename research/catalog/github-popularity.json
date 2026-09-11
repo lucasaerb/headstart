@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "checked_at": "2026-09-10T19:48:26Z",
+  "checked_at": "2026-09-11T01:23:00Z",
   "repositories": [
     {
       "repo_url": "https://developers.openai.com/showcase/hollowflux",
@@ -33,6 +33,14 @@
       "checked_at": "2026-09-10T19:48:23Z",
       "evidence_url": "https://gitea.wildfiregames.com/0ad/0ad",
       "notes": "GitHub star metric does not apply to this repository host."
+    },
+    {
+      "repo_url": "https://github.com/adilzhanY/berlin-walk",
+      "stars": 1,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/adilzhanY/berlin-walk",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
     },
     {
       "repo_url": "https://github.com/Anuken/Mindustry",
@@ -75,6 +83,22 @@
       "notes": "Observed GitHub stargazers_count for the whole repository. A popularity signal, not quality, model performance or compatibility evidence."
     },
     {
+      "repo_url": "https://github.com/bridge-mind/apex-formula",
+      "stars": 2,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/bridge-mind/apex-formula",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
+    },
+    {
+      "repo_url": "https://github.com/bridge-mind/turbo-kart-rush",
+      "stars": 36,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/bridge-mind/turbo-kart-rush",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
+    },
+    {
       "repo_url": "https://github.com/CleverRaven/Cataclysm-DDA",
       "stars": 13113,
       "status": "available",
@@ -105,6 +129,14 @@
       "checked_at": "2026-09-10T19:48:25Z",
       "evidence_url": "https://api.github.com/repos/doublespeakgames/adarkroom",
       "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/DUBSOpenHub/skysprout",
+      "stars": 1,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/DUBSOpenHub/skysprout",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
     },
     {
       "repo_url": "https://github.com/ellisonleao/clumsy-bird",
@@ -355,6 +387,14 @@
       "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
     },
     {
+      "repo_url": "https://github.com/roomsmith-games/NeoMud",
+      "stars": 12,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/roomsmith-games/NeoMud",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
+    },
+    {
       "repo_url": "https://github.com/Ryan-fm/Dwellcraft",
       "stars": 1,
       "status": "available",
@@ -369,6 +409,14 @@
       "checked_at": "2026-09-10T19:48:26Z",
       "evidence_url": "https://api.github.com/repos/scottstts/Jelly-Baby",
       "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    },
+    {
+      "repo_url": "https://github.com/songkeys/little-flock",
+      "stars": 6,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/songkeys/little-flock",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
     },
     {
       "repo_url": "https://github.com/stackloomdev/last-beacon",
@@ -411,6 +459,14 @@
       "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
     },
     {
+      "repo_url": "https://github.com/transitive-bullshit/ai-safety-doom",
+      "stars": 6,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/transitive-bullshit/ai-safety-doom",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
+    },
+    {
       "repo_url": "https://github.com/tweeres04/gather-it",
       "stars": 1,
       "status": "available",
@@ -435,6 +491,14 @@
       "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
     },
     {
+      "repo_url": "https://github.com/WilliamAvHolmberg/glenn-explore",
+      "stars": 433,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/WilliamAvHolmberg/glenn-explore",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
+    },
+    {
       "repo_url": "https://github.com/winchxyz/vesper-street",
       "stars": 10,
       "status": "available",
@@ -457,6 +521,70 @@
       "checked_at": "2026-09-10T19:48:26Z",
       "evidence_url": "https://gitlab.com/veloren/veloren",
       "notes": "GitHub star metric does not apply to this repository host."
+    },
+    {
+      "repo_url": "https://github.com/pshenok/server-survival",
+      "stars": 6404,
+      "status": "available",
+      "checked_at": "2026-09-11T02:10:00Z",
+      "evidence_url": "https://api.github.com/repos/pshenok/server-survival",
+      "notes": "Public GitHub repository API observation; star counts change over time."
+    },
+    {
+      "repo_url": "https://github.com/winchxyz/moon-rover",
+      "stars": 120,
+      "status": "available",
+      "checked_at": "2026-09-11T02:10:00Z",
+      "evidence_url": "https://api.github.com/repos/winchxyz/moon-rover",
+      "notes": "Public GitHub repository API observation; star counts change over time."
+    },
+    {
+      "repo_url": "https://github.com/StarKnightt/operation-ironhold",
+      "stars": 89,
+      "status": "available",
+      "checked_at": "2026-09-11T02:10:00Z",
+      "evidence_url": "https://api.github.com/repos/StarKnightt/operation-ironhold",
+      "notes": "Public GitHub repository API observation; star counts change over time."
+    },
+    {
+      "repo_url": "https://github.com/Vheissu/emerald-bayou",
+      "stars": 11,
+      "status": "available",
+      "checked_at": "2026-09-11T02:30:00Z",
+      "evidence_url": "https://api.github.com/repos/Vheissu/emerald-bayou",
+      "notes": "Public GitHub API observation; count changes over time."
+    },
+    {
+      "repo_url": "https://github.com/Humpalumps/Cadle",
+      "stars": 18,
+      "status": "available",
+      "checked_at": "2026-09-11T02:30:00Z",
+      "evidence_url": "https://api.github.com/repos/Humpalumps/Cadle",
+      "notes": "Public GitHub API observation; count changes over time."
+    },
+    {
+      "repo_url": "https://github.com/StarKnightt/jungle-trail",
+      "stars": 292,
+      "status": "available",
+      "checked_at": "2026-09-11T02:30:00Z",
+      "evidence_url": "https://api.github.com/repos/StarKnightt/jungle-trail",
+      "notes": "Public GitHub API observation; count changes over time."
+    },
+    {
+      "repo_url": "https://github.com/pshenok/datacenter-survival",
+      "stars": 21,
+      "status": "available",
+      "checked_at": "2026-09-11T02:30:00Z",
+      "evidence_url": "https://api.github.com/repos/pshenok/datacenter-survival",
+      "notes": "Public GitHub API observation; count changes over time."
+    },
+    {
+      "repo_url": "https://github.com/aidong27/99-ai-games",
+      "stars": 1,
+      "status": "available",
+      "checked_at": "2026-09-11T02:30:00Z",
+      "evidence_url": "https://api.github.com/repos/aidong27/99-ai-games",
+      "notes": "Public GitHub API observation; count changes over time."
     }
   ]
 }

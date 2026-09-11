@@ -110,6 +110,46 @@
       "destination": "project.id",
       "reason": "Copy only after canonical validation; original remains immutable research evidence."
     },
+    "interface_languages[]": {
+      "destination": "research_only.interface_languages[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "notoriety.metrics[]": {
+      "destination": "research_only.notoriety.metrics[]",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "notoriety.metrics[].checked_at": {
+      "destination": "research_only.notoriety.metrics[].checked_at",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "notoriety.metrics[].evidence_url": {
+      "destination": "research_only.notoriety.metrics[].evidence_url",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "notoriety.metrics[].metric_type": {
+      "destination": "research_only.notoriety.metrics[].metric_type",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "notoriety.metrics[].notes": {
+      "destination": "research_only.notoriety.metrics[].notes",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "notoriety.metrics[].scope": {
+      "destination": "research_only.notoriety.metrics[].scope",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "notoriety.metrics[].value": {
+      "destination": "research_only.notoriety.metrics[].value",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "notoriety.notes": {
+      "destination": "research_only.notoriety.notes",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
+    "notoriety.status": {
+      "destination": "research_only.notoriety.status",
+      "reason": "Preserve provisional observation without production claim promotion."
+    },
     "physics[]": {
       "destination": "research_only.physics[]",
       "reason": "Preserve provisional observation without production claim promotion."

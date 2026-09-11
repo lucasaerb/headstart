@@ -1,0 +1,499 @@
+{
+  "schema_version": "1.0",
+  "assessed_at": "2026-09-11T02:20:00Z",
+  "methodology": "A dated editorial browse order, not an objective quality score. Verified player or usage evidence ranks first. Playable games and demos lead the discovery view; within that group, observed GitHub stars are considered before English interface evidence, genre/capability breadth, and explicit preferred-model provenance. Model provenance describes creation evidence, not game quality. Toolkits remain discoverable after playable projects.",
+  "records": [
+    {
+      "record_id": "glenn-explore",
+      "position": 1,
+      "rationale": "publisher-reported usage evidence; playable game/demo; 433 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": true,
+        "github_stars": 433,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 7
+      }
+    },
+    {
+      "record_id": "2048",
+      "position": 2,
+      "rationale": "playable game/demo; 13380 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 13380,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 4
+      }
+    },
+    {
+      "record_id": "godot-truck-town",
+      "position": 3,
+      "rationale": "playable game/demo; 9503 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 9503,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 5
+      }
+    },
+    {
+      "record_id": "godot-platformer-2d",
+      "position": 4,
+      "rationale": "playable game/demo; 9503 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 9503,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 4
+      }
+    },
+    {
+      "record_id": "godot-platformer-3d",
+      "position": 5,
+      "rationale": "playable game/demo; 9503 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 9503,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 4
+      }
+    },
+    {
+      "record_id": "godot-astar-grid-2d",
+      "position": 6,
+      "rationale": "playable game/demo; 9503 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 9503,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 4
+      }
+    },
+    {
+      "record_id": "server-survival",
+      "position": 7,
+      "rationale": "playable game/demo; 6404 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 6404,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 9
+      }
+    },
+    {
+      "record_id": "pmndrs-racing-game",
+      "position": 8,
+      "rationale": "playable game/demo; 2214 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 2214,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 4
+      }
+    },
+    {
+      "record_id": "hexgl",
+      "position": 9,
+      "rationale": "playable game/demo; 1742 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 1742,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 4
+      }
+    },
+    {
+      "record_id": "fable5-laas",
+      "position": 10,
+      "rationale": "playable game/demo; 718 GitHub stars observed; interface language unknown; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 718,
+        "english_interface": false,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 9
+      }
+    },
+    {
+      "record_id": "dungeon-forge",
+      "position": 11,
+      "rationale": "playable game/demo; 497 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 497,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 3
+      }
+    },
+    {
+      "record_id": "jungle-trail",
+      "position": 12,
+      "rationale": "playable game/demo; 292 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 292,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 5
+      }
+    },
+    {
+      "record_id": "jelly-baby",
+      "position": 13,
+      "rationale": "playable game/demo; 141 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 141,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 3
+      }
+    },
+    {
+      "record_id": "astra-thunderfall",
+      "position": 14,
+      "rationale": "playable game/demo; 135 GitHub stars observed; interface language unknown; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 135,
+        "english_interface": false,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 4
+      }
+    },
+    {
+      "record_id": "moon-rover",
+      "position": 15,
+      "rationale": "playable game/demo; 120 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 120,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 8
+      }
+    },
+    {
+      "record_id": "operation-ironhold",
+      "position": 16,
+      "rationale": "playable game/demo; 89 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 89,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 8
+      }
+    },
+    {
+      "record_id": "fable-cities",
+      "position": 17,
+      "rationale": "playable game/demo; 71 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 71,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 5
+      }
+    },
+    {
+      "record_id": "turbo-kart-rush",
+      "position": 18,
+      "rationale": "playable game/demo; 36 GitHub stars observed; English interface evidenced; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 36,
+        "english_interface": true,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 6
+      }
+    },
+    {
+      "record_id": "datacenter-survival",
+      "position": 19,
+      "rationale": "playable game/demo; 21 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 21,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 6
+      }
+    },
+    {
+      "record_id": "cadle",
+      "position": 20,
+      "rationale": "playable game/demo; 18 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 18,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 6
+      }
+    },
+    {
+      "record_id": "neomud",
+      "position": 21,
+      "rationale": "playable game/demo; 12 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 12,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 6
+      }
+    },
+    {
+      "record_id": "emerald-bayou",
+      "position": 22,
+      "rationale": "playable game/demo; 11 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 11,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 6
+      }
+    },
+    {
+      "record_id": "blackwater",
+      "position": 23,
+      "rationale": "playable game/demo; 11 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 11,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 3
+      }
+    },
+    {
+      "record_id": "vesper-street",
+      "position": 24,
+      "rationale": "playable game/demo; 10 GitHub stars observed; interface language unknown; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 10,
+        "english_interface": false,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 4
+      }
+    },
+    {
+      "record_id": "p-doom",
+      "position": 25,
+      "rationale": "playable game/demo; 6 GitHub stars observed; English interface evidenced; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 6,
+        "english_interface": true,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 6
+      }
+    },
+    {
+      "record_id": "little-flock",
+      "position": 26,
+      "rationale": "playable game/demo; 6 GitHub stars observed; non-English interface labeled; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 6,
+        "english_interface": false,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 7
+      }
+    },
+    {
+      "record_id": "open-city-maker",
+      "position": 27,
+      "rationale": "playable game/demo; 4 GitHub stars observed; interface language unknown; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 4,
+        "english_interface": false,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 4
+      }
+    },
+    {
+      "record_id": "apex-formula",
+      "position": 28,
+      "rationale": "playable game/demo; 2 GitHub stars observed; English interface evidenced; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 2,
+        "english_interface": true,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 6
+      }
+    },
+    {
+      "record_id": "slimcity",
+      "position": 29,
+      "rationale": "playable game/demo; 2 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 2,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 5
+      }
+    },
+    {
+      "record_id": "berlin-walk",
+      "position": 30,
+      "rationale": "playable game/demo; 1 GitHub stars observed; English interface evidenced; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 1,
+        "english_interface": true,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 6
+      }
+    },
+    {
+      "record_id": "protocol-99-entry-001",
+      "position": 31,
+      "rationale": "playable game/demo; 1 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 1,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 6
+      }
+    },
+    {
+      "record_id": "skysprout",
+      "position": 32,
+      "rationale": "playable game/demo; 1 GitHub stars observed; English interface evidenced; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 1,
+        "english_interface": true,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 5
+      }
+    },
+    {
+      "record_id": "last-beacon",
+      "position": 33,
+      "rationale": "playable game/demo; 1 GitHub stars observed; interface language unknown; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 1,
+        "english_interface": false,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 3
+      }
+    },
+    {
+      "record_id": "threejs",
+      "position": 34,
+      "rationale": "reusable toolkit/reference; 115380 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 115380,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 3
+      }
+    },
+    {
+      "record_id": "drei",
+      "position": 35,
+      "rationale": "reusable toolkit/reference; 9862 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 9862,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 4
+      }
+    },
+    {
+      "record_id": "littlejs",
+      "position": 36,
+      "rationale": "reusable toolkit/reference; 4175 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 4175,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 5
+      }
+    },
+    {
+      "record_id": "three-mesh-bvh",
+      "position": 37,
+      "rationale": "reusable toolkit/reference; 3483 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 3483,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 4
+      }
+    },
+    {
+      "record_id": "react-three-rapier",
+      "position": 38,
+      "rationale": "reusable toolkit/reference; 1431 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 1431,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 3
+      }
+    },
+    {
+      "record_id": "three-pathfinding",
+      "position": 39,
+      "rationale": "reusable toolkit/reference; 1372 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 1372,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 3
+      }
+    },
+    {
+      "record_id": "three-terrain",
+      "position": 40,
+      "rationale": "reusable toolkit/reference; 899 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 899,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 4
+      }
+    },
+    {
+      "record_id": "ecctrl",
+      "position": 41,
+      "rationale": "reusable toolkit/reference; 794 GitHub stars observed; interface language unknown.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 794,
+        "english_interface": false,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 6
+      }
+    }
+  ]
+}

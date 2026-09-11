@@ -69,7 +69,12 @@ def rank(candidates,query,text_score,research=False,mode='hybrid',expand=True):
         score,reasons=text_score(row,query,research)
         if score is not None:lexical.append((score,row,reasons))
     lexical.sort(key=lambda x:(-x[0],x[1]['id'],x[1].get('versionId','')))
-    if not query or settings['mode']=='lexical':return lexical,settings
+    if not query:
+        if research:
+            lexical.sort(key=lambda x:((x[1].get('editorialRank') or {}).get('position',10**9),x[1]['id']))
+            settings['recommendedOrder']='dated_editorial_ranking'
+        return lexical,settings
+    if settings['mode']=='lexical':return lexical,settings
     # Exact identity/source-path and typo recovery remain precise lookup operations.
     if any(score>=85 or any('trigrams' in reason for reason in reasons) for score,row,reasons in lexical) or '/' in query:
         settings['lookup']='exact_or_source_lookup'

@@ -6,7 +6,6 @@ from pathlib import Path
 from .store import CatalogStore,encode
 from .seed import seed_reviewed_tile
 from services.curation.seed import seed_curated_capabilities
-from .display_projection import include_missing_references
 from services.submissions.store import setup as setup_rights_policy
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -21,7 +20,6 @@ def initialize(database=None,evidence=None):
         seed_curated_capabilities(store)
         text=(ROOT/'HeadStart-Starter-Package/site/dist/catalog.js').read_text()
         projection=json.loads(text.removeprefix('window.HEADSTART_CATALOG = ').strip().removesuffix(';'))
-        projection=include_missing_references(projection,json.loads((ROOT/'research/catalog/catalog.json').read_text())['records'])
         if not isinstance(projection,list) or any(not isinstance(r,dict) or not r.get('id') for r in projection): raise ValueError('Invalid display projection')
         if len({r['id'] for r in projection})!=len(projection): raise ValueError('Duplicate display IDs')
         with store.transaction():
