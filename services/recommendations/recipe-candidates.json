@@ -1,0 +1,364 @@
+{
+  "schemaVersion": "headstart-recipe-template-catalog-1",
+  "templates": [
+    {
+      "id": "cozy-builder",
+      "title": "A quiet building world",
+      "components": [
+        {
+          "id": "three-mapcontrols",
+          "version": "1",
+          "versionId": "three-mapcontrols-v1",
+          "sourceCommit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+          "sourceFiles": [
+            {
+              "path": "examples/jsm/controls/MapControls.js",
+              "digest": "5a686152c498914389d1503b60121f484d06f15cb4f7405c15fb6b8ddcc1bdb6",
+              "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/controls/MapControls.js",
+              "line_start": 1,
+              "line_end": 116,
+              "imports": [
+                "three",
+                "./OrbitControls.js"
+              ]
+            },
+            {
+              "path": "examples/jsm/controls/OrbitControls.js",
+              "digest": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+              "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/controls/OrbitControls.js",
+              "line_start": 1,
+              "line_end": 1972,
+              "imports": [
+                "three"
+              ]
+            }
+          ],
+          "requiredFiles": [
+            "examples/jsm/controls/MapControls.js",
+            "examples/jsm/controls/OrbitControls.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "externalPeer": {
+            "package": "three",
+            "declared_version": "0.186.0",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+            "scope": "Existing target engine peer; engine implementation not copied by these components.",
+            "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+          },
+          "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+          "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+          "lifecycle": "Same lifecycle/ownership as OrbitControls; disable competing camera controllers.",
+          "reviewedAt": "2026-09-10T00:00:00Z",
+          "reviewer": "batch1_data static curation"
+        },
+        {
+          "id": "three-roundedboxgeometry",
+          "version": "1",
+          "versionId": "three-roundedboxgeometry-v1",
+          "sourceCommit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+          "sourceFiles": [
+            {
+              "path": "examples/jsm/geometries/RoundedBoxGeometry.js",
+              "digest": "c5feab96123858ed8823c889b238dc8734adab7e760e3cfd21e7f3f2f3e348e3",
+              "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/geometries/RoundedBoxGeometry.js",
+              "line_start": 1,
+              "line_end": 216,
+              "imports": [
+                "three"
+              ]
+            }
+          ],
+          "requiredFiles": [
+            "examples/jsm/geometries/RoundedBoxGeometry.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "externalPeer": {
+            "package": "three",
+            "declared_version": "0.186.0",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+            "scope": "Existing target engine peer; engine implementation not copied by these components.",
+            "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+          },
+          "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+          "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+          "lifecycle": "Caller owns geometry disposal and material; no assets, renderer, input or physics.",
+          "reviewedAt": "2026-09-10T00:00:00Z",
+          "reviewer": "batch1_data static curation"
+        }
+      ],
+      "brief": {
+        "experience": "A relaxed browser builder with a readable overhead view",
+        "style": "Muted palette, soft building silhouettes and clear zoning",
+        "camera": "overhead",
+        "platform": "browser",
+        "runtime": "Three.js",
+        "runtimeVersion": "0.186.0"
+      },
+      "tags": [
+        "builder",
+        "building",
+        "city",
+        "cozy",
+        "management",
+        "overhead",
+        "orthographic"
+      ],
+      "settings": {
+        "palette": [
+          "sage",
+          "slate",
+          "warm cream"
+        ],
+        "geometry": "Rounded block silhouettes for structures; keep roads and placement markers distinct",
+        "lighting": "Low-contrast diffuse lighting is an editorial proposal, not a supplied shader",
+        "camera": "Reuse the target camera and controls ownership; map-like pan/dolly interaction"
+      },
+      "reason": "MapControls specializes OrbitControls for map-style panning; rounded boxes provide a reusable soft block silhouette.",
+      "tradeoff": "No zoning, construction, simulation clock or economy is supplied. MapControls includes an OrbitControls source dependency; inspect target camera/input ownership.",
+      "alternative": "first-person-island",
+      "schemaVersion": "headstart-recipe-template-1",
+      "version": "1",
+      "assets": [],
+      "assetStatus": "No external assets bundled or cleared; caller assets need separate rights review.",
+      "status": "candidate",
+      "combinationValidation": null,
+      "targetBinding": null,
+      "performance": null,
+      "sourceMapDigest": "2fc5fd6695d5de20b6b2a06c8cb555ebc724d4840bc2d0936b21ee73e0c2229c",
+      "adapterStatus": "No assembled adapter is enabled for this composition. Individual integration evidence does not validate this template.",
+      "rationaleType": "editorial proposal informed by source inspection",
+      "rollback": "Plan in a separate target branch; preserve original renderer, input and simulation owners. No changes are applied by a recommendation.",
+      "digest": "17688abbae64b5aedc2edede5f06ecdce87eeaac89f129437c89bed72031b7c5"
+    },
+    {
+      "id": "first-person-island",
+      "title": "Explore a small island on foot",
+      "components": [
+        {
+          "id": "three-pointerlockcontrols",
+          "version": "1",
+          "versionId": "three-pointerlockcontrols-v1",
+          "sourceCommit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+          "sourceFiles": [
+            {
+              "path": "examples/jsm/controls/PointerLockControls.js",
+              "digest": "40d58db8018b85038939d4d8bff7112d4b8a0ad0367b37ae6f969eeee4310c25",
+              "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/controls/PointerLockControls.js",
+              "line_start": 1,
+              "line_end": 264,
+              "imports": [
+                "three"
+              ]
+            }
+          ],
+          "requiredFiles": [
+            "examples/jsm/controls/PointerLockControls.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "externalPeer": {
+            "package": "three",
+            "declared_version": "0.186.0",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+            "scope": "Existing target engine peer; engine implementation not copied by these components.",
+            "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+          },
+          "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+          "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+          "lifecycle": "Request lock after user gesture; handle lock loss; disconnect/dispose; no position physics.",
+          "reviewedAt": "2026-09-10T00:00:00Z",
+          "reviewer": "batch1_data static curation"
+        },
+        {
+          "id": "three-improvednoise",
+          "version": "1",
+          "versionId": "three-improvednoise-v1",
+          "sourceCommit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+          "sourceFiles": [
+            {
+              "path": "examples/jsm/math/ImprovedNoise.js",
+              "digest": "d3821241e25bf0c8bfc13cec941924573bbaaf8f599a4fa07d60664b97832b39",
+              "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/math/ImprovedNoise.js",
+              "line_start": 1,
+              "line_end": 88,
+              "imports": [
+                "three"
+              ]
+            }
+          ],
+          "requiredFiles": [
+            "examples/jsm/math/ImprovedNoise.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "externalPeer": {
+            "package": "three",
+            "declared_version": "0.186.0",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+            "scope": "Existing target engine peer; engine implementation not copied by these components.",
+            "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+          },
+          "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+          "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+          "lifecycle": "Pure sampling; no lifecycle or render/input/physics ownership.",
+          "reviewedAt": "2026-09-10T00:00:00Z",
+          "reviewer": "batch1_data static curation"
+        }
+      ],
+      "brief": {
+        "experience": "A compact first-person browser exploration game",
+        "style": "Simple landforms with a restrained coastal palette",
+        "camera": "first-person",
+        "platform": "browser",
+        "runtime": "Three.js",
+        "runtimeVersion": "0.186.0"
+      },
+      "tags": [
+        "explore",
+        "exploration",
+        "first-person",
+        "walking",
+        "island",
+        "terrain"
+      ],
+      "settings": {
+        "palette": [
+          "ocean blue",
+          "sand",
+          "grass green"
+        ],
+        "geometry": "Broad low-frequency terrain forms; separate distant scenery from reachable terrain",
+        "lighting": "Warm directional atmosphere is an editorial proposal",
+        "camera": "Desktop pointer-lock look; movement, collision and terrain mesh remain caller-owned"
+      },
+      "reason": "PointerLockControls offers mouse-look ownership and ImprovedNoise supplies repeatable coordinate sampling for terrain values.",
+      "tradeoff": "This is not a character controller: collisions, walking physics, terrain mesh construction and touch controls are not provided by these two parts.",
+      "alternative": "flight-landscape",
+      "schemaVersion": "headstart-recipe-template-1",
+      "version": "1",
+      "assets": [],
+      "assetStatus": "No external assets bundled or cleared; caller assets need separate rights review.",
+      "status": "candidate",
+      "combinationValidation": null,
+      "targetBinding": null,
+      "performance": null,
+      "sourceMapDigest": "2fc5fd6695d5de20b6b2a06c8cb555ebc724d4840bc2d0936b21ee73e0c2229c",
+      "adapterStatus": "No assembled adapter is enabled for this composition. Individual integration evidence does not validate this template.",
+      "rationaleType": "editorial proposal informed by source inspection",
+      "rollback": "Plan in a separate target branch; preserve original renderer, input and simulation owners. No changes are applied by a recommendation.",
+      "digest": "af3ee04b23bf914acb4521085af66ff5bf7bac884f99fa7c06bc1a3e2b91b5ac"
+    },
+    {
+      "id": "flight-landscape",
+      "title": "Fly through a procedural landscape",
+      "components": [
+        {
+          "id": "three-flycontrols",
+          "version": "1",
+          "versionId": "three-flycontrols-v1",
+          "sourceCommit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+          "sourceFiles": [
+            {
+              "path": "examples/jsm/controls/FlyControls.js",
+              "digest": "8063858389f2ccd5cd6f0968562752dbab4b21a03c7a6e1dcbb5cc746fc06373",
+              "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/controls/FlyControls.js",
+              "line_start": 1,
+              "line_end": 384,
+              "imports": [
+                "three"
+              ]
+            }
+          ],
+          "requiredFiles": [
+            "examples/jsm/controls/FlyControls.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "externalPeer": {
+            "package": "three",
+            "declared_version": "0.186.0",
+            "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+            "scope": "Existing target engine peer; engine implementation not copied by these components.",
+            "rights": "Peer Three.js uses retained root MIT notice; other target dependencies require target inspection."
+          },
+          "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+          "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+          "lifecycle": "Existing update(delta seconds) loop; connect/disconnect listeners; no collision solver.",
+          "reviewedAt": "2026-09-10T00:00:00Z",
+          "reviewer": "batch1_data static curation"
+        },
+        {
+          "id": "three-simplexnoise",
+          "version": "1",
+          "versionId": "three-simplexnoise-v1",
+          "sourceCommit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+          "sourceFiles": [
+            {
+              "path": "examples/jsm/math/SimplexNoise.js",
+              "digest": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072",
+              "url": "https://github.com/mrdoob/three.js/blob/5c5a575bd8cc0cf440026ce8dcf6a77862067684/examples/jsm/math/SimplexNoise.js",
+              "line_start": 1,
+              "line_end": 470,
+              "imports": []
+            }
+          ],
+          "requiredFiles": [
+            "examples/jsm/math/SimplexNoise.js",
+            "LICENSE",
+            "package.json"
+          ],
+          "externalPeer": null,
+          "rights": "MIT for selected source files and complete local addon closure; root LICENSE and inline notices preserved; excludes caller assets",
+          "creator": "three.js authors; retain all inline contributor/algorithm references from complete source files",
+          "lifecycle": "Construct once with seeded RNG for deterministic worlds; no rendering or physics.",
+          "reviewedAt": "2026-09-10T00:00:00Z",
+          "reviewer": "batch1_data static curation"
+        }
+      ],
+      "brief": {
+        "experience": "A small free-flight browser landscape explorer",
+        "style": "Large terrain shapes and atmospheric depth",
+        "camera": "free-flight",
+        "platform": "browser",
+        "runtime": "Three.js",
+        "runtimeVersion": "0.186.0"
+      },
+      "tags": [
+        "flight",
+        "fly",
+        "flying",
+        "landscape",
+        "procedural",
+        "free-flight"
+      ],
+      "settings": {
+        "palette": [
+          "cool horizon",
+          "muted terrain",
+          "one warm navigation accent"
+        ],
+        "geometry": "Use noise as an input to caller-owned terrain generation; broad forms before detail",
+        "lighting": "Haze and depth cues are editorial suggestions, not bundled assets",
+        "camera": "FlyControls owns a selected object\u2019s movement; coordinate policy and bounds remain explicit"
+      },
+      "reason": "FlyControls provides free-flight input, while SimplexNoise can take a caller-controlled random source for repeatable terrain sampling.",
+      "tradeoff": "No aircraft physics, collisions, generated terrain mesh or game loop is included. Unseeded randomness does not establish deterministic worlds.",
+      "alternative": "cozy-builder",
+      "schemaVersion": "headstart-recipe-template-1",
+      "version": "1",
+      "assets": [],
+      "assetStatus": "No external assets bundled or cleared; caller assets need separate rights review.",
+      "status": "candidate",
+      "combinationValidation": null,
+      "targetBinding": null,
+      "performance": null,
+      "sourceMapDigest": "2fc5fd6695d5de20b6b2a06c8cb555ebc724d4840bc2d0936b21ee73e0c2229c",
+      "adapterStatus": "No assembled adapter is enabled for this composition. Individual integration evidence does not validate this template.",
+      "rationaleType": "editorial proposal informed by source inspection",
+      "rollback": "Plan in a separate target branch; preserve original renderer, input and simulation owners. No changes are applied by a recommendation.",
+      "digest": "77a373d95eee2172cb780abd527cf8d3f3d51c171a4ceaaeac3d9252f662a224"
+    }
+  ]
+}
