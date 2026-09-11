@@ -2,8 +2,10 @@
 import base64
 import json
 import os
+import sqlite3
 from pathlib import Path
 from services.operations.browser import run
+from services.operations.health import HealthJobs
 
 def main():
     image=os.environ['HEADSTART_BROWSER_IMAGE']
@@ -14,6 +16,11 @@ def main():
         return {'status':200,'headers':{'content-type':'text/html'},'body':base64.b64encode(body).decode()}
     positive=run(plan,image=image,fetch=fetch)
     assert positive['category']=='interactive_passed',positive
+    database=sqlite3.connect(':memory:');jobs=HealthJobs(database)
+    jobs.register('controlled-demo-v1',plan['url'],featured=True)
+    evidence=jobs.record_interactive('controlled-demo-v1',plan,positive)
+    assert jobs.status()[0]['interactive']['evidenceDigest']==evidence
+    database.close()
     plan['steps'][0]['after']='2'
     negative=run(plan,image=image,fetch=fetch)
     assert negative['category']=='interactive_failed',negative
