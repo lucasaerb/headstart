@@ -1,6 +1,4 @@
-"""Compatibility helper: never restore records excluded by publication gates."""
-from urllib.parse import urlparse, quote
-
+"""Compatibility helper: retain the explicit research display projection."""
 
 def include_missing_references(projection, research):
     return list(projection)

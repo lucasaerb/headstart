@@ -7,7 +7,7 @@ window.HeadStartDetails = (() => {
   function panel(title){const section=node('section',undefined,'detail-panel');section.append(node('h3',title));return section;}
   function states(game){
     const section=panel('What is known');const list=node('dl',undefined,'detail-facts');
-    const pairs=[['Reuse readiness',game.readiness || 'Research reference — scope review required'],['Demo observation',(game.playReview?.status || game.interactiveStatus || 'Unknown')+' · '+date(game.playReview?.checked_at)],['Source / demo relationship',game.demoSourceRelation || 'Unknown — deployment not matched to source'],['Source revision',String(game.pinnedSourceUrl||'').match(/[a-f0-9]{40}/)?.[0] || 'Unresolved — repository link is mutable'],['Source inspection',date(game.sourceInspectedAt)],['Platform',game.platformKind || 'Unknown']];
+    const pairs=[['Reuse readiness',game.readiness || 'Research reference — scope review required'],['Demo observation',(game.playReview?.status || game.interactiveStatus || 'Unknown')+' · '+date(game.playReview?.checked_at)],['Source / demo relationship',game.demoSourceRelation || 'Unknown — deployment not matched to source'],['Source revision',game.sourceAvailability==='no_public_source'?'No public source available':String(game.pinnedSourceUrl||'').match(/[a-f0-9]{40}/)?.[0] || 'Unresolved — repository link is mutable'],[game.sourceAvailability==='no_public_source'?'Reference evidence review':'Source inspection',date(game.sourceInspectedAt)],['Platform',game.platformKind || 'Unknown']];
     for(const [label,value] of pairs)list.append(node('dt',label),node('dd',value.replaceAll('_',' ')));
     section.append(list);return section;
   }
@@ -16,7 +16,7 @@ window.HeadStartDetails = (() => {
     const status=game.playReview?.status || game.demoStatus || game.interactiveStatus || 'unknown';
     const unavailable=['broken','removed','unavailable'].includes(status);
     const native=game.platformKind==='desktop'||game.demoKind==='native-download';
-    section.append(node('p',native?'This project needs a desktop download. Save its source link for your desktop; it does not run inside HeadStart.':unavailable?'The demo is '+status+'. Use the source link below while availability is unresolved.':'The demo opens in a separate tab. HeadStart keeps your bag here. Close that tab to return; no game runs in this page.'));
+    section.append(node('p',game.demoKind==='none'?'No demo is available for this research reference. Use the project link below.':game.demoKind==='video'?'This reference provides a video preview, not a playable demo.':native?'This project needs a desktop download. Save its source link for your desktop; it does not run inside HeadStart.':unavailable?'The demo is '+status+'. Use the source link below while availability is unresolved.':'The demo opens in a separate tab. HeadStart keeps your bag here. Close that tab to return; no game runs in this page.'));
     section.append(node('p','Controls: '+(game.playReview?.scenario || game.controls || 'Not independently documented. Check the instructions on the project website.')));
     section.append(node('p','Availability: '+status.replaceAll('_',' ')+' · '+date(game.playReview?.checked_at || game.demoCheckedAt)+'. A past observation does not guarantee current availability.'));
     if(!native&&!unavailable&&game.demoKind==='browser'){

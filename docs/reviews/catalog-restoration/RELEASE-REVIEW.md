@@ -1,0 +1,13 @@
+# Independent release candidate review — catalog restoration
+
+**Verdict: PASS for the reviewed release source and precommit artifact.** Author `/root/restore_author`, release assembler `/root`, independent reviewer `/root/restore_reviewer`.
+
+Base is the deployed `3f893341cc69e961f0efb0e9ba806544a4e70978`. Changed production/data/test file hashes are pinned in `release-reviewed-files.json`, SHA256 `0251fc39447adb2d78c1ebf6607c5da9c94ce5b1d8ffcd69761aa91bdbb537a6`. Evidence/report files are excluded from that manifest. The final committed artifact must be repackaged with its true Git revision before deployment.
+
+Independently inspected release code and public allowlist. Only the restoration is carried over from main; new localhost authentication, handoff, operations, telemetry, submission and recipe pages are absent. The original production plugin/public surface is preserved. Independent final Chrome restoration suite passes against this checkout at desktop 1440×1000 and mobile 390×844, reduced motion. Screenshots in `release-reviewer-evidence/` show rank 41→42, restored native/no-source/no-preview/no-demo details. Desktop boundary and mobile BrowserQuest screenshots were visually inspected against the selected C3/C5 guidance and main reviewed captures; responsive content is readable without overflow, with correct no-demo/source-less messages and safe placeholders.
+
+Independently audited `/tmp/headstart-restored-candidate-1`: 92 public files, exactly 52 catalog image files, zero byte-hash matches for any withheld restored image anywhere under public. No auth/handoff/operations/submissions/recipes public additions. Snapshot reports 92 research records, 92 display records, 32 eligible scoped versions. Tracked research SQLite independently contains 92 projects. The precommit artifact's Git metadata intentionally still names the base; it is not the final deployable manifest.
+
+The existing 41 projected records retain their exact metadata/order, and all 51 archived records return below them. Scoped source eligibility remains separate. Eleven restored images have existing explicit redistribution permission and retained notices; other restored images use placeholders, with no inferred license grant. Root reports 10 adapter tests passed on candidate 1; the reviewer independently performed the file/hash/snapshot audit and browser suite above, not those adapter tests.
+
+No blocking source/candidate findings remain. Post-deployment endpoint and exact final artifact verification remain required before production promotion; this precommit review does not claim a live deployment.

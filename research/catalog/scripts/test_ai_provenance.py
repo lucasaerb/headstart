@@ -175,7 +175,7 @@ class AIProvenanceTests(unittest.TestCase):
             self.assertIn('data-catalog-total="1"', updated)
             self.assertIn('data-research-total="76"', updated)
             self.assertIn('<p id="result-count">1 projects</p>', updated)
-            self.assertIn('<span id="pictured-count">1 pictured of 76 research records</span>', updated)
+            self.assertIn('<span id="pictured-count">0 pictured of 76 research records</span>', updated)
             self.assertRegex(updated, r'catalog\.js\?v=[a-f0-9]{12}')
             versioned = updated
             update_site_index(path, rows, research_total=76)
@@ -272,7 +272,7 @@ class AIProvenanceTests(unittest.TestCase):
     def test_all_selected_media_has_record_specific_alt_text_before_download(self):
         _, media = load()
         record_ids = {item['record_id'] for item in media}
-        self.assertEqual(len(record_ids), 41)
+        self.assertEqual(len(record_ids), 79)
         self.assertTrue(all(item['alt'].strip() for item in media))
         # Collector-owned historical rows still use its fixed pre-download map;
         # newly pinned media carries its reviewed alt directly in the manifest.
@@ -280,11 +280,11 @@ class AIProvenanceTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             require_alt_coverage(record_ids | {'missing-alt-fixture'})
 
-    def test_source_less_official_sites_games_are_excluded_from_publication(self):
+    def test_source_less_official_sites_games_remain_research_only(self):
         records, media = load()
         expected = {'openai-sites-void-explorer','openai-sites-sunwake','openai-sites-hollowflux'}
-        self.assertTrue(expected.isdisjoint({row['id'] for row in records}))
-        self.assertTrue(expected.isdisjoint({item['record_id'] for item in media}))
+        self.assertTrue(expected <= {row['id'] for row in records})
+        self.assertTrue(expected <= {item['record_id'] for item in media})
         root = Path(__file__).resolve().parents[1]
         audit = {item['record_id']: item for item in json.loads((root/'exclusions/strict-gate-audit.json').read_text())['records']}
         archived = {item['id']: item for item in json.loads((root/'exclusions/excluded-records.json').read_text())['records']}

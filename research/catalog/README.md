@@ -1,6 +1,6 @@
 # Game and building-block research database
 
-The live research index contains **41 strictly qualified browser projects and 78 candidate building blocks**. Every listed row has a pinned public source revision, an inspected open-source code license, authentic reviewed gameplay media, a positive dated GitHub-star observation, and a reachable live-play URL. The exclusion archive preserves removed candidates and gate reasons. Eleven projects are explicitly creator-attributed to GPT-6 Astra or Fable 5/5.1; attribution is never inferred. Interface language and typed usage evidence are separate fields.
+The discovery index contains **92 research references and 180 candidate building blocks**. The previously visible 41 retain their order; all 51 removed references are restored below them at the user’s request on 11 September 2026. Native games, unavailable demos, unresolved rights and unknown stars remain visible with their original evidence limits. Research listing does not establish reusable scope or compatibility. The exclusion archive preserves the earlier decision as history.
 
 
 This is a working local research index, independent of the unfinished website design. The source slices have not been extracted, executed, benchmarked or tested in a target game. Browser destinations are not play attestations. A separate dated browser observation confirms one bounded CityMaker session; it does not change source or integration readiness. Code, media, source/demo matching and integration readiness remain separate.
@@ -11,7 +11,7 @@ This is a working local research index, independent of the unfinished website de
 - [Full readable index](INDEX.md)
 - [Twelve-project shortlist and adaptation considerations](SHORTLIST.md)
 - [Gaps, conflicting rights, and next research priorities](GAPS.md)
-- [41-image preview contact sheet](contact-sheet.jpg) and [full image credits](media-credits.md)
+- [79-image provenance contact sheet](contact-sheet.jpg) and [full image credits](media-credits.md)
 - [Exact dashboard image gap backlog](IMAGE-GAPS.md)
 - [Structured JSON](catalog.json), [CSV](catalog.csv), and [SQLite database](catalog.sqlite)
 - [Coverage and per-field completeness](coverage.json)

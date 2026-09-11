@@ -1,14 +1,14 @@
 {
-  "researchRecordCount": 76,
-  "displayedRecordCount": 69,
-  "imageCount": 69,
-  "displayedRowsHaveImages": true,
+  "researchRecordCount": 92,
+  "displayedRecordCount": 92,
+  "imageCount": 79,
+  "displayedRowsHaveImages": false,
   "snapshotHashes": {
-    "snapshot/media-manifest.json": "049e15e0b2f20ee0a4d7e0b4e6fa88e6fbaa1a0b882e3a763ef43bbafc55e5d9",
-    "snapshot/media-credits.md": "b7780a5e60d5a31cf54d837701dc285c32d4e484aa668be1871b480d54e51360",
+    "snapshot/media-manifest.json": "5aa48c50f2909038bdf2b4fbbe8d44d17ab9a18a5aad6eecd4fd66b27bbaf32c",
+    "snapshot/media-credits.md": "4f3f640875a64afbe60097b43ff6586d29f49e70376bffe00eb9ebf325b7a568",
     "snapshot/RESEARCH-CONTRACT.md": "762c366f66e0f6c65047aaf011f8d87ecc35abac16ff05b48819f597f40aad01",
-    "NOTICES.md": "b7780a5e60d5a31cf54d837701dc285c32d4e484aa668be1871b480d54e51360"
+    "NOTICES.md": "4f3f640875a64afbe60097b43ff6586d29f49e70376bffe00eb9ebf325b7a568"
   },
-  "imageByteHashChecks": "69 of 69 passed",
+  "imageByteHashChecks": "79 of 79 passed",
   "networkChecksPerformed": false
 }
