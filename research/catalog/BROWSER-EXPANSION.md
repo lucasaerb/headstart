@@ -1,6 +1,7 @@
 # Browser-first expansion — 10 September 2026
 
-The browser-focused research now adds **33 entries and 66 candidate building blocks**: the original 30-entry repository pass contributes 60 source-inspected blocks, and three official OpenAI Sites showcases contribute six official-description leads because no public source is linked. The whole research index now has **76 entries and 153 building blocks**. Separate monorepo games and model variants retain separate subproject paths; these counts do not represent 76 unrelated repositories or completed integrations.
+> Historical discovery inventory: this document records the earlier 76-candidate research pass. The current authoritative strict set is the 41-row catalog described in [README.md](README.md); excluded candidates remain in `exclusions/` and do not publish.
+
 
 **25 additions have official or source-level Three.js evidence**, including Void Explorer's described WebGPU/WebGL architecture. The seven repository entries outside Three.js use Canvas 2D (four), Babylon.js (one), JavaScript/WebGL (one) and React (one). Hollowflux stays classified only as browser/TypeScript because the official sources inspected do not establish its renderer. Browser availability does not guarantee mobile support or compatibility with a target game. The LAAS world, two flight simulators, six PhiloLabs world/cinematic studies and physics toolkit retain those content types.
 

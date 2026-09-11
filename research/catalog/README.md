@@ -11,7 +11,7 @@ This is a working local research index, independent of the unfinished website de
 - [Full readable index](INDEX.md)
 - [Twelve-project shortlist and adaptation considerations](SHORTLIST.md)
 - [Gaps, conflicting rights, and next research priorities](GAPS.md)
-- [69-image preview contact sheet](contact-sheet.jpg) and [full image credits](media-credits.md)
+- [41-image preview contact sheet](contact-sheet.jpg) and [full image credits](media-credits.md)
 - [Exact dashboard image gap backlog](IMAGE-GAPS.md)
 - [Structured JSON](catalog.json), [CSV](catalog.csv), and [SQLite database](catalog.sqlite)
 - [Coverage and per-field completeness](coverage.json)
@@ -39,26 +39,21 @@ Search uses local lexical full-text matching with exact runtime/kind filters. It
 
 The SQLite database contains `projects`, `building_blocks`, `media`, and a full-text `search` table. Each project retains its full JSON record. Failed validation or SQLite construction preserves the previous database; the subsequent JSON/CSV/Markdown exports are separate writes and can be regenerated. Imports deduplicate repository/provider identity plus subproject path. The CSV protects formula-like leading characters when opened in spreadsheet software.
 
-To refresh the bounded browser preview set and regenerate the image contact sheet, install the optional pinned media dependency in an isolated environment and run:
+To regenerate the exact current media review bundle, install the optional pinned media dependency and run:
 
 ```sh
 python3 -m venv research/catalog/.venv
 research/catalog/.venv/bin/python -m pip install -r research/catalog/requirements-media.txt
-research/catalog/.venv/bin/python research/catalog/scripts/collect_browser_previews.py \
-  --approval-file docs/reviews/full-catalog-media-audit/media-approval.json \
-  --apply
 research/catalog/.venv/bin/python research/catalog/scripts/media_contact_sheet.py
 ```
 
-The completed [independent approval file](../../docs/reviews/full-catalog-media-audit/media-approval.json) covers exactly all 26 full-catalog audit candidates and the three official OpenAI images. Each of its 29 records contains `decision: approved_for_local_catalog_display`, an independent reviewer, timezone-aware review time and `PASS` verdict. The collector rejects partial, extra or blocked decision sets. Without `--approval-file`, the 26 audit rows remain `candidate_local_display_pending_independent_review`, while the three official OpenAI rows remain unresolved and unstamped. [`media-approval.template.json`](media-approval.template.json) remains a deliberately invalid blank starting point for a future independent review cycle.
+The 25 legacy rows retain their prior independent local-display decisions. The 16 recent rows are an exact pending batch described in [the approval request](../../docs/reviews/recent-vibe-games/MEDIA-APPROVAL-REQUEST.md). Until one independent decision file covers exactly all 16 with named reviewer, timezone-aware timestamp and a `PASS` verdict, those images fail closed from the dashboard/API projection. Missing, extra, duplicate, rejected, blank, self-authored or timezone-less decisions are rejected. The contact sheet samples the middle frame of animated media and the reproduction test checks its dimensions, credit count, and animated-frame readability.
 
-The collected originals remain unchanged. The contact sheet only scales copies to fit and samples a representative frame from animated images. Keep the image credits, manifest, license notices and original/source references with distributed media; do not infer permission for other game artwork from these 69 files. Browser-expansion permissions are intentionally limited to the local prototype where stated; they do not establish public-site or in-game reuse rights. The three OpenAI article images have an explicit unresolved-rights expression and user-directed local-display scope, not an inferred image license.
+The collected originals remain unchanged. The contact sheet only scales copies to fit. Keep the image credits, manifest, license notices and source references with distributed media; local display approval does not establish broader asset reuse rights.
 
 ## Evidence boundaries
 
-Seventy-three source-available records have a full source commit and provider identity. The three official OpenAI Sites games retain null source revisions because the inspected official pages link no public repository. Every record keeps an author, timestamp, evidence, capability boundary and explicit unknowns. Canonical sources include Gitea for 0 A.D. and GitLab for Veloren; the Veloren record explains the pinned official backup-mirror inspection.
-
-The internal-reference assessment concerns original summaries and source/demo links, plus only the explicitly reviewed images. It does not approve production publication, source downloads, extraction, asset reuse or tested compatibility. The four candidate-only entries are 3d.city, Clumsy Bird, Gather It and HexGL. Other records still require selected-scope review before source reuse.
+All 41 research rows have pinned public source revisions, inspected open-source code licenses, authentic record-specific media, positive dated GitHub-star observations and reachable browser play URLs. Research inclusion remains distinct from independent dashboard-media approval: the 16 recent images are withheld from projection until their exact-set review passes. Source slices remain untested for integration and demo reachability is not a play attestation.
 
 The HTTP audit records reachability separately from play, follows bounded redirects, limits downloaded response bytes, and records blocked/restricted/failing URLs honestly. It is a local curated-data helper, not the future public ingestion service. Repeat observations can differ across time and network environments; retain the newer report and investigate disagreements. Native download links are not browser demos. No performance or royalty agreement is inferred from this research.
 

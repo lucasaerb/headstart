@@ -820,7 +820,7 @@
       "https://creativecommons.org/licenses/by/4.0/"
     ],
     "credit": "songkeys and Little Flock contributors",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
     "local_path": "media/little-flock.jpg",
     "sha256": "8a2a768ccc8467c5cd5cfe7d90764fa58d30010ef34a286ae2eef0a36b9ba8cf",
@@ -839,23 +839,23 @@
     "record_id": "p-doom",
     "repo_url": "https://github.com/transitive-bullshit/ai-safety-doom",
     "title": "P(DOOM): The Alignment Problem",
-    "notes": "Pinned repository gameplay banner; asset-specific notices retained.",
+    "notes": "Authentic in-game Arrival Platform combat frame from the pinned upstream repository.",
     "uploaded_at": null,
-    "source_page": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/docs/images/readme-banner.jpg",
-    "original_url": "https://raw.githubusercontent.com/transitive-bullshit/ai-safety-doom/5b7f433d9df121ba9c9a4d998a668954278f0b76/docs/images/readme-banner.jpg",
+    "source_page": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/docs/images/arrival.jpg",
+    "original_url": "https://raw.githubusercontent.com/transitive-bullshit/ai-safety-doom/5b7f433d9df121ba9c9a4d998a668954278f0b76/docs/images/arrival.jpg",
     "license_evidence_url": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/NOTICES.md",
     "license_expression": "MIT AND LicenseRef-PDOOM-Notices",
     "license_urls": [
       "https://opensource.org/license/mit"
     ],
     "credit": "Travis Fischer and contributors",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
     "local_path": "media/p-doom.jpg",
-    "sha256": "3bdb4acce67ec1f693f516fcb3113f1bceafaa67b3daa147bbefaaa93a230851",
-    "width": 1600,
-    "height": 540,
-    "alt": "First-person combat in P(DOOM)\u2019s breached frontier laboratory.",
+    "sha256": "25b3ddd858038a5bae291cb14208df396c0df95c063b695a0a342dddb5a8a8a2",
+    "width": 1440,
+    "height": 1000,
+    "alt": "First-person P(DOOM) gameplay on the Arrival Platform, with the player weapon, enemies, mission objective, and status HUD visible.",
     "capture_date": null,
     "capture_date_status": "unknown",
     "downloaded_at": "2026-09-11T01:35:00Z",
@@ -878,7 +878,7 @@
       "https://opensource.org/license/mit"
     ],
     "credit": "BridgeMind; screenshot captured by HeadStart",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
     "local_path": "media/apex-formula.png",
     "sha256": "b89f79ad676efa1176f57364f4dcb37c3d44e7554a9a587b3a0aa60ab0b04993",
@@ -907,7 +907,7 @@
       "https://opensource.org/license/mit"
     ],
     "credit": "BridgeMind",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
     "local_path": "media/turbo-kart-rush.jpg",
     "sha256": "e9015659e69d8b5664509c6312660cf714c5a6b5453345169b117dadd895b578",
@@ -937,7 +937,7 @@
       "https://www.openstreetmap.org/copyright"
     ],
     "credit": "Adilzhan; OpenStreetMap contributors",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
     "local_path": "media/berlin-walk.png",
     "sha256": "bb5fa2179c7552e8e756e73b3067468d56e7817ff3238a6b79017c5b521afbf5",
@@ -966,7 +966,7 @@
       "https://opensource.org/license/mit"
     ],
     "credit": "DUBSOpenHub contributors",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
     "local_path": "media/skysprout.png",
     "sha256": "66680a39cdf7bc0d11de4e24a7820b7acbea70f67734624cab3cae01ee74d49c",
@@ -995,7 +995,7 @@
       "https://www.gnu.org/licenses/gpl-3.0.html"
     ],
     "credit": "William Av Holmberg and contributors",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
     "local_path": "media/glenn-explore.jpg",
     "sha256": "08b8be2b5db87637fd47f38f8bbbddd7158cc97da774f650359cc1e40c328826",
@@ -1024,7 +1024,7 @@
       "https://opensource.org/license/mit"
     ],
     "credit": "Roomsmith Games contributors",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
     "local_path": "media/neomud.png",
     "sha256": "72e5bfb7521811e02a3cf9ffa7730a466291dab081446f632900e7a8340b1fb6",
@@ -1053,7 +1053,7 @@
       "https://github.com/pshenok/server-survival/blob/01796362d3b7bfa6c85efab5e2685f4d955dc137/LICENSE"
     ],
     "credit": "pshenok",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "Local catalog display with credit and source link; no downstream asset-reuse conclusion.",
     "local_path": "media/server-survival.gif",
     "sha256": "436a1c94a79b7e4c03077fc279fbe02efd665203c7c80076866709f98b597401",
@@ -1082,7 +1082,7 @@
       "https://github.com/winchxyz/moon-rover/blob/f5f25ba6bf7477c612b408b265c9275a4fd1200d/LICENSE"
     ],
     "credit": "winchxyz",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "Local catalog display with credit and source link; no downstream asset-reuse conclusion.",
     "local_path": "media/moon-rover.jpg",
     "sha256": "9307b7524a3bc6ca3522944e022149629644368175dec4b27321bc43e1d3cc5c",
@@ -1111,7 +1111,7 @@
       "https://github.com/StarKnightt/operation-ironhold/blob/58b292758fd29953c35bcd3ee7113004b709fda3/LICENSE"
     ],
     "credit": "StarKnightt",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "Local catalog display with credit and source link; no downstream asset-reuse conclusion.",
     "local_path": "media/operation-ironhold.jpg",
     "sha256": "1aef0e21fdadf34c5a784e0b4fa13c6cb9450aa4519b2984e71778fac5748f52",
@@ -1140,7 +1140,7 @@
       "https://github.com/Vheissu/emerald-bayou/blob/e87c03688263daadb1bfbf35efaddc5ab7d53912/LICENSE"
     ],
     "credit": "Vheissu",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "Local catalog display with credit and source link.",
     "local_path": "media/emerald-bayou.jpg",
     "sha256": "64a67d0f40f04c99f9626ef8a2da2a05c11b87c47f81feee952c87db10cc1bf7",
@@ -1169,7 +1169,7 @@
       "https://github.com/Humpalumps/Cadle/blob/ea0da62549980816a6a27e08b75808b1f56d70e7/LICENSE"
     ],
     "credit": "Humpalumps",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "Local catalog display with credit and source link.",
     "local_path": "media/cadle.jpg",
     "sha256": "82d815a38d05c57831ecaa86409462dae7b928724db45d9c9519db4707905441",
@@ -1198,7 +1198,7 @@
       "https://github.com/StarKnightt/jungle-trail/blob/c15640d3a2b6f08ca68e4df98fdfc953ea8a070a/LICENSE"
     ],
     "credit": "StarKnightt",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "Local catalog display with credit and source link.",
     "local_path": "media/jungle-trail.webp",
     "sha256": "ba7a2096b4d5aebd58fc832c4c4bf76455c8a0abae579d7f8126c094573e24ab",
@@ -1227,7 +1227,7 @@
       "https://github.com/pshenok/datacenter-survival/blob/234588545ca6a1d63da41a0ec19a267e8623a72e/LICENSE"
     ],
     "credit": "pshenok",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "Local catalog display with credit and source link.",
     "local_path": "media/datacenter-survival.gif",
     "sha256": "c720bed468ec52b4e0b4d4b83fac412dcd0d3dc140e9ef56e5237ccb1ad1ef6c",
@@ -1256,7 +1256,7 @@
       "https://github.com/aidong27/99-ai-games/blob/6db39254d260d8e1627788c5ea6398449d3a4b0b/LICENSE"
     ],
     "credit": "aidong27",
-    "rights_status": "reviewed_for_catalog_display",
+    "rights_status": "candidate_local_display_pending_independent_review",
     "allowed_use": "Local catalog display with credit and source link.",
     "local_path": "media/protocol-99-entry-001.png",
     "sha256": "7336a2ce2443006bffe42311058568df8173cfa011105ef4f7fb101609002972",

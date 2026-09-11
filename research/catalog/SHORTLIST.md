@@ -1,6 +1,6 @@
 # Research shortlist — 10 September 2026
 
-> Historical first-pass snapshot (10 September 2026): the 43-entry / 87-block counts and priorities below describe the original cohort. The current [browser-first expansion](BROWSER-EXPANSION.md) adds 33 entries / 66 blocks, bringing the research index to 76 / 153. Six new blocks come only from official descriptions because the three OpenAI Sites games have no linked public source. Its attribution and rights caveats must be read alongside this snapshot.
+> Historical first-pass snapshot (10 September 2026): the 43-entry / 87-block counts and priorities below describe the original cohort. The later browser-first discovery pass reached 76 candidates / 153 blocks; the current strict publication research set is 41 records / 78 blocks, with failures preserved under `exclusions/`. Six new blocks come only from official descriptions because the three OpenAI Sites games have no linked public source. Its attribution and rights caveats must be read alongside this snapshot.
 
 Start with these 12 projects to compare real games and useful systems. This order is an editorial research priority, not a quality score, rights clearance or integration verdict. Browser-first candidates lead; native simulation and strategy projects remain valuable references with explicit engine limits.
 

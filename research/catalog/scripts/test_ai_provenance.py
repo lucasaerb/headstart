@@ -98,7 +98,7 @@ class AIProvenanceTests(unittest.TestCase):
     def test_preview_rejects_stale_mapping_and_falls_back_to_canonical_media_path(self):
         row = fixture()
         item = {key: 'fixture' for key in ['credit', 'license_expression', 'source_page', 'license_evidence_url', 'version_relation', 'alt', 'original_url', 'allowed_use', 'modifications', 'reviewer']}
-        item.update(record_id=row['id'], repo_url=row['repo_url'], rights_status='reviewed_for_catalog_display', sha256='a'*64, local_path='media/test.png', license_urls=[], capture_date=None)
+        item.update(record_id=row['id'], repo_url=row['repo_url'], rights_status='reviewed_for_catalog_display', independent_reviewed_at='2026-09-10T22:00:00Z', independent_review_verdict='PASS: fixture', sha256='a'*64, local_path='media/test.png', license_urls=[], capture_date=None)
         old = [{'id': row['id'], 'preview': {'src': 'assets/catalog/test.png', 'sha256': 'a'*64}}]
         self.assertEqual(project([row], [item], old)[0]['preview']['src'], 'assets/catalog/test.png')
         for src, digest in [('https://example.com/test.png', 'a'*64), ('assets/catalog/../../secret', 'a'*64), ('assets/catalog/test.png', 'b'*64)]:
@@ -111,7 +111,7 @@ class AIProvenanceTests(unittest.TestCase):
         second = copy.deepcopy(first)
         second.update(id='shared-second', title='Second', subproject_path='games/second')
         item = {key: 'fixture' for key in ['credit', 'license_expression', 'source_page', 'license_evidence_url', 'version_relation', 'alt', 'original_url', 'allowed_use', 'modifications', 'reviewer']}
-        item.update(record_id=first['id'], repo_url=first['repo_url'], rights_status='reviewed_for_catalog_display', sha256='a'*64, local_path='media/first.png', license_urls=[], capture_date=None)
+        item.update(record_id=first['id'], repo_url=first['repo_url'], rights_status='reviewed_for_catalog_display', independent_reviewed_at='2026-09-10T22:00:00Z', independent_review_verdict='PASS: fixture', sha256='a'*64, local_path='media/first.png', license_urls=[], capture_date=None)
         existing = [
             {'id': first['id'], 'preview': {'src': 'assets/catalog/first.png', 'sha256': 'a'*64}},
             {'id': second['id'], 'preview': {'src': 'assets/catalog/second.png', 'sha256': 'a'*64}},
@@ -128,11 +128,13 @@ class AIProvenanceTests(unittest.TestCase):
         unreviewed = copy.deepcopy(cleared)
         unreviewed.update(id='unreviewed', title='Unreviewed')
         item = {key: 'fixture' for key in ['credit', 'license_expression', 'source_page', 'license_evidence_url', 'version_relation', 'alt', 'original_url', 'allowed_use', 'modifications', 'reviewer']}
-        item.update(record_id=cleared['id'], repo_url=cleared['repo_url'], rights_status='reviewed_for_catalog_display', sha256='a'*64, local_path='media/cleared.png', license_urls=[], capture_date=None)
+        item.update(record_id=cleared['id'], repo_url=cleared['repo_url'], rights_status='reviewed_for_catalog_display', independent_reviewed_at='2026-09-10T22:00:00Z', independent_review_verdict='PASS: fixture', sha256='a'*64, local_path='media/cleared.png', license_urls=[], capture_date=None)
         wrong_status = dict(item, record_id=unreviewed['id'], rights_status='review_pending', sha256='b'*64)
         official = copy.deepcopy(cleared)
         official.update(id='official', title='Official image')
         official_item = dict(item, record_id=official['id'], rights_status='official_source_local_display_rights_unresolved', sha256='c'*64, local_path='media/official.webp')
+        for field in ('reviewer', 'independent_reviewed_at', 'independent_review_verdict'):
+            official_item.pop(field, None)
         pending = copy.deepcopy(cleared)
         pending.update(id='pending', title='Pending independent media review')
         pending_item = dict(item, record_id=pending['id'], rights_status='candidate_local_display_pending_independent_review', sha256='d'*64, local_path='media/pending.webp')
@@ -151,7 +153,7 @@ class AIProvenanceTests(unittest.TestCase):
     def test_new_reviewed_media_derives_safe_dashboard_asset_mapping(self):
         row = fixture()
         item = {key: 'fixture' for key in ['credit', 'license_expression', 'source_page', 'license_evidence_url', 'version_relation', 'alt', 'original_url', 'allowed_use', 'modifications', 'reviewer']}
-        item.update(record_id=row['id'], repo_url=row['repo_url'], source_page='https://example.com/image-page', license_evidence_url='https://example.com/license-proof', rights_status='reviewed_for_catalog_display', sha256='a'*64, local_path='media/new-game.png', license_urls=[], capture_date=None)
+        item.update(record_id=row['id'], repo_url=row['repo_url'], source_page='https://example.com/image-page', license_evidence_url='https://example.com/license-proof', rights_status='reviewed_for_catalog_display', independent_reviewed_at='2026-09-10T22:00:00Z', independent_review_verdict='PASS: fixture', sha256='a'*64, local_path='media/new-game.png', license_urls=[], capture_date=None)
         projected = project([row], [item], require_previews=True)
         self.assertEqual(projected[0]['preview']['src'], 'assets/catalog/new-game.png')
         self.assertEqual(projected[0]['preview']['sha256'], 'a'*64)

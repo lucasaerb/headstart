@@ -324,7 +324,9 @@ def load(root=ROOT):
     if popularity_path.exists() and links_path.exists():
         popularity = {p["repo_url"].rstrip("/").removesuffix(".git").casefold(): p for p in read_json(popularity_path)["repositories"]}
         live = {ref["record_id"] for check in read_json(links_path)["checks"] if check["result"] == "reachable" for ref in check["references"] if ref["field"] == "demo.url"}
-        media_ids = {m["record_id"] for m in media if m.get("rights_status") == "reviewed_for_catalog_display"}
+        # Research rows may carry media awaiting the separate independent
+        # display decision. The frontend projection is the publication gate.
+        media_ids = {m["record_id"] for m in media}
         for row in records:
             pop = popularity.get(row["repo_url"].rstrip("/").removesuffix(".git").casefold())
             if not row["source"]["commit"]: errors.append(row["id"] + ": strict gate requires pinned source")

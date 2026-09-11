@@ -124,7 +124,13 @@ def catalog_asset_src(canonical):
     """Derive a site asset URL only from an explicitly display-scoped flat media path."""
     local_path = canonical.get('local_path')
     status = canonical.get('rights_status')
-    reviewed = status == 'reviewed_for_catalog_display'
+    reviewed = (
+        status == 'reviewed_for_catalog_display'
+        and isinstance(canonical.get('reviewer'), str) and bool(canonical['reviewer'].strip())
+        and isinstance(canonical.get('independent_reviewed_at'), str) and bool(canonical['independent_reviewed_at'].strip())
+        and isinstance(canonical.get('independent_review_verdict'), str)
+        and canonical['independent_review_verdict'].startswith('PASS')
+    )
     official_approved = (
         status == 'official_source_local_display_rights_unresolved'
         and isinstance(canonical.get('reviewer'), str) and bool(canonical['reviewer'].strip())

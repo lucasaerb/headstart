@@ -45,7 +45,7 @@ test("real HTTP catalog routes, signed cursor, selected research and no mutation
     assert.equal(response.status, 200);
     const research = await response.json();
     assert.equal(research.eligibility, "research_only");
-    assert.ok(research.total >= 40);
+    assert.equal(research.total, 25);
     response = await fetch(base + "/api/research?ids=" + research.items[0].id);
     assert.equal((await response.json()).items.length, 1);
     response = await fetch(base + "/api/research?ids=openai-sites-void-explorer");

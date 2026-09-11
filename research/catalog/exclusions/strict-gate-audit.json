@@ -12,7 +12,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -27,7 +28,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -42,7 +44,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": false,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license",
@@ -58,7 +61,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -71,7 +75,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -84,7 +89,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -99,7 +105,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -112,7 +119,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": false,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "positive_github_stars"
@@ -127,7 +135,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -140,7 +149,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -155,7 +165,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -170,7 +181,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -185,7 +197,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -200,7 +213,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -215,7 +229,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -230,7 +245,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -245,7 +261,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -260,7 +277,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -275,7 +293,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -290,7 +309,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -305,7 +325,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -320,7 +341,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -335,7 +357,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -350,7 +373,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -363,7 +387,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -378,7 +403,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -391,7 +417,8 @@
         "authentic_reviewed_media": false,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": false
+        "live_play_reachable": false,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license",
@@ -409,7 +436,8 @@
         "authentic_reviewed_media": false,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": false
+        "live_play_reachable": false,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license",
@@ -427,7 +455,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": false
+        "live_play_reachable": false,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license",
@@ -444,7 +473,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -457,7 +487,8 @@
         "authentic_reviewed_media": false,
         "positive_github_stars": false,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "pinned_public_source",
@@ -475,7 +506,8 @@
         "authentic_reviewed_media": false,
         "positive_github_stars": false,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "pinned_public_source",
@@ -493,7 +525,8 @@
         "authentic_reviewed_media": false,
         "positive_github_stars": false,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "pinned_public_source",
@@ -504,107 +537,131 @@
     },
     {
       "record_id": "little-flock",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "p-doom",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "apex-formula",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "turbo-kart-rush",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "berlin-walk",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "skysprout",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "glenn-explore",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "neomud",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "openrct2",
@@ -615,7 +672,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -630,7 +688,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -645,7 +704,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": false,
         "browser_demo": false,
-        "live_play_reachable": false
+        "live_play_reachable": false,
+        "independent_media_approval": false
       },
       "reasons": [
         "positive_github_stars",
@@ -662,7 +722,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -677,7 +738,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -692,7 +754,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -707,7 +770,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -722,7 +786,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -737,7 +802,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": false
+        "live_play_reachable": false,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo",
@@ -753,7 +819,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -768,7 +835,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -783,7 +851,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -798,7 +867,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": false,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "positive_github_stars",
@@ -814,7 +884,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -829,7 +900,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -844,7 +916,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo"
@@ -859,7 +932,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -872,7 +946,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -885,7 +960,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -898,7 +974,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -911,7 +988,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -924,7 +1002,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -937,7 +1016,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -950,7 +1030,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -965,7 +1046,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -978,7 +1060,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -991,7 +1074,8 @@
         "authentic_reviewed_media": false,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license",
@@ -1007,7 +1091,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": false
+        "live_play_reachable": false,
+        "independent_media_approval": false
       },
       "reasons": [
         "live_play_reachable"
@@ -1022,7 +1107,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -1035,7 +1121,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "inspected_open_source_license"
@@ -1050,7 +1137,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -1063,7 +1151,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": false,
-        "live_play_reachable": false
+        "live_play_reachable": false,
+        "independent_media_approval": false
       },
       "reasons": [
         "browser_demo",
@@ -1079,7 +1168,8 @@
         "authentic_reviewed_media": false,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "authentic_reviewed_media"
@@ -1094,7 +1184,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -1107,7 +1198,8 @@
         "authentic_reviewed_media": false,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "authentic_reviewed_media"
@@ -1122,7 +1214,8 @@
         "authentic_reviewed_media": false,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "authentic_reviewed_media"
@@ -1137,7 +1230,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -1150,7 +1244,8 @@
         "authentic_reviewed_media": false,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
       "reasons": [
         "authentic_reviewed_media"
@@ -1165,7 +1260,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -1178,7 +1274,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -1191,7 +1288,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -1204,7 +1302,8 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
@@ -1217,113 +1316,138 @@
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": true
       },
       "reasons": []
     },
     {
       "record_id": "server-survival",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "moon-rover",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "operation-ironhold",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "emerald-bayou",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "cadle",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "jungle-trail",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "datacenter-survival",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     },
     {
       "record_id": "protocol-99-entry-001",
-      "listed": true,
+      "listed": false,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
         "authentic_reviewed_media": true,
         "positive_github_stars": true,
         "browser_demo": true,
-        "live_play_reachable": true
+        "live_play_reachable": true,
+        "independent_media_approval": false
       },
-      "reasons": []
+      "reasons": [
+        "independent_media_approval"
+      ]
     }
   ]
 }
