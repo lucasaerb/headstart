@@ -17,3 +17,7 @@ C4 remains the selected living-world homepage. Secondary recipe/operations contr
 The accepted delivery is local tooling and evidence, not production email verification, hosted integration, a three-game audience remix, royalty settlement, production scheduling or customer adoption. Integration scope is the exact recorded Three.js world adapters; R3F/camera controllers/collision response remain unsupported. Compositions remain candidate until their full rights and actual target combination are validated. No production deployment or persistent catalog promotion was performed by this reviewer.
 
 The second five-issue batch is accepted. Merge/deployment decisions and remaining backlog scope belong to the coordinator under the user’s authorization.
+
+## Post-acceptance CI portability check
+
+Health-worker startup failed before any request in Linux AMD64 CI34558256962. Follow-up a792c42 has independent source/local-runtime PASS, recorded in the operations review, but Linux CI confirmation remains required before release. The reviewed source limit is the local immutable ARM64 image; no AMD64 success is claimed until the fresh job passes. This pending release gate must not be hidden by the five-issue local acceptance above.

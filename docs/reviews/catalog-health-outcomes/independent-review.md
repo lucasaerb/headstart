@@ -23,3 +23,7 @@ I independently reran the final desktop/mobile suite including actual homepage s
 I inspected main merge8d86ad9: the only initializer conflict retains rights-policy setup and removes the superseded missing-reference expansion. A fresh isolated initialization returned exactly41 strict display records, the required rights table and all three eligible recipe templates. The separately approved catalog/media refresh is preserved; no catalog-driven source status promotion was inferred.
 
 Local CLI scheduling, first-party interactive fixture evidence and opt-in checkout event wrappers are the supported scope. Production cron/storage, automatic personal-plugin telemetry, real external-game interaction success and user adoption remain unclaimed. These limits match the issue’s local delivery boundary.
+
+## Linux CI startup follow-up
+
+Independent source and local-runtime **PASS** for a792c42. The fixed minimal browser environment directs XDG configuration/cache into the existing disposable tmpfs; no HOME override, host credential mount, network or privilege expansion is introduced. Launch failure reports a bounded category instead of losing the pre-request error. I reran the actual isolated positive/negative fixture and report persistence successfully; `independent-browser-xdg.json` retains the result. The original Linux AMD64 startup cause was not captured, so writable-profile diagnosis remains an inference. Required AMD64 CI confirmation remains pending and is a release gate; the local result does not substitute for it.
