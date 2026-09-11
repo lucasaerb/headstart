@@ -1,0 +1,9 @@
+{
+  "existingPersonalVersion": "0.3.0",
+  "archiveMatchedFiles": 22,
+  "archiveDifferences": [
+    "references/discovery-manifest.json"
+  ],
+  "testPluginCacheRemoved": true,
+  "note": "Only distinct headstart-review15 install/marketplace removed by CLI. Existing personal runtime and six skills match preserved 0.3 ZIP; discovery-manifest differs, and no full-byte pretest baseline was recorded. No writes targeted personal."
+}

@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Harbor garden — art review fixture</title><style>*{box-sizing:border-box}body{margin:0;background:#e8eeeb;font:16px system-ui;color:#354b58}main{max-width:1000px;margin:48px auto;padding:24px}h1{font-size:32px;letter-spacing:-1px;margin-bottom:10px}p{line-height:1.6}canvas{width:100%;height:auto;border-radius:20px;margin-top:20px;background:#c6dfdf}small{display:block;margin-top:18px}@media(max-width:500px){main{margin:10px auto;padding:18px}h1{font-size:26px}}</style><main><small>FIRST-PARTY REVIEW FIXTURE · NOT HEADSTART'S LANDING PAGE</small><h1>A quiet harbor garden</h1><p>Brief: muted colors, rounded silhouettes and a gentle coastal mood. The central tower should belong to the same world.</p><canvas width="960" height="540" aria-label="A harbor garden with houses and a central tower"></canvas><p id="status"></p><small>All shapes are first-party procedural fixture artwork. No upstream game imagery or measured performance is implied.</small></main><script type="module">
+import {art} from './game.mjs';
+const c=document.querySelector('canvas'),x=c.getContext('2d');
+x.fillStyle='#c6dfdf';x.fillRect(0,0,960,540);x.fillStyle='#fbf6de';x.beginPath();x.arc(800,110,45,0,Math.PI*2);x.fill();
+x.fillStyle='#96bdc9';x.fillRect(0,300,960,240);for(let i=0;i<14;i++){x.strokeStyle='#d2e0df';x.lineWidth=3;x.beginPath();x.moveTo(i*80-20,350+(i%4)*35);x.lineTo(i*80+40,350+(i%4)*35);x.stroke()}
+x.fillStyle=art.ground;x.beginPath();x.ellipse(480,420,380,80,0,0,Math.PI*2);x.fill();
+function house(a,b,w,h){x.fillStyle='#eee6cb';x.fillRect(a,b,w,h);x.fillStyle='#758793';x.beginPath();x.moveTo(a-10,b);x.lineTo(a+w/2,b-45);x.lineTo(a+w+10,b);x.closePath();x.fill();x.fillStyle='#b0bcbb';x.fillRect(a+w/2-10,b+h-35,20,35)}
+house(170,335,110,85);house(640,320,120,100);x.fillStyle='#edf0db';x.beginPath();x.ellipse(330,125,100,20,0,0,Math.PI*2);x.fill();
+x.fillStyle=art.accent;if(art.shape==='round'){x.beginPath();x.roundRect(400,210,150,215,36);x.fill()}else{x.fillRect(400,210,150,215)}
+x.fillStyle=art.roof;x.beginPath();x.moveTo(375,215);if(art.shape==='round'){x.quadraticCurveTo(475,65,575,215)}else{for(let i=0;i<7;i++){x.lineTo(390+i*28,100+(i%2)*95)}}x.closePath();x.fill();x.fillStyle='#f1e9cd';x.fillRect(455,310,40,55);
+x.fillStyle='#496958';for(const a of [130,315,605,820]){x.beginPath();x.arc(a,365,28,0,Math.PI*2);x.fill()}
+document.getElementById('status').textContent='Rendered style: '+art.shape+'. Review visual coherence against the brief; aesthetic judgment is editorial.';
+</script></html>

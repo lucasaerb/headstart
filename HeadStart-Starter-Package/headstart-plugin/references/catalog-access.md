@@ -1,6 +1,10 @@
+# Catalog modes
+
+Version 0.5.0 supports default snapshot discovery and explicit localhost service mode. First inspect actual tool schemas and call `catalog_info`. Service mode uses different ID/version arguments; see [connected setup](connected-setup.md) and [live contracts](live-catalog.md). The section below describes **snapshot mode only**. Never mix its research IDs with service component versions.
+
 # Catalog access
 
-HeadStart 0.3 provides a real **local, offline metadata MCP server**. It reads 52 independently reviewed link-only references from a bundled snapshot. This is not a hosted catalog, a live upstream check, or clearance to copy code/assets. Twenty research candidates without completed scope review remain outside plugin discovery. The older `seed-catalog.json` remains a historical fixture; do not substitute it for tool results.
+Snapshot mode provides a real **local, offline metadata MCP server**. It reads 52 independently reviewed link-only references from a bundled snapshot. This is not a hosted catalog, a live upstream check, or clearance to copy code/assets. Twenty research candidates without completed scope review remain outside plugin discovery. The older `seed-catalog.json` remains a historical fixture; do not substitute it for tool results.
 
 Inspect the installed tool schemas. Codex prefixes/namespaces tools; resolve by the actual available names rather than inventing a transport command.
 

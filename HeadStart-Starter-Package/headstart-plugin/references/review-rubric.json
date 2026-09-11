@@ -1,0 +1,12 @@
+{
+  "version": "headstart-review-rubric-1",
+  "context": ["brief_revision", "source_version", "source_commit", "target_revision", "integration_record", "authorization"],
+  "authorization": ["review_only", "bounded_improvement"],
+  "art": ["reference_evidence", "palette", "geometry", "camera", "lighting", "materials_textures", "animation", "dimension_asset_workflow", "editorial_rationale", "alternatives"],
+  "code": ["source_location", "severity", "observed_or_hypothesis", "user_impact", "ownership", "lifecycle", "dependencies", "smallest_fix", "validation"],
+  "measurement_profile": ["workload", "device", "os", "engine_version", "browser_version", "resolution", "settings", "warmup", "sampling_method"],
+  "claim_types": ["editorial", "inspected", "measured"],
+  "unavailable": "Return a plan and not-run reason. Never create a measured BenchmarkRun from absent samples.",
+  "comparison": "Require exact matching profiles and pinned expected source/target states; never silently convert mismatched evidence.",
+  "privacy": "Private target source and raw captures remain local unless their transfer is authorized."
+}

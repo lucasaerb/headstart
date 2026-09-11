@@ -28,6 +28,23 @@ class CatalogStore:
         self.db = sqlite3.connect(self.database)
         self.db.row_factory = sqlite3.Row
         self.db.execute('PRAGMA foreign_keys=ON')
+        # Public reads must not attempt schema writes while a catalog refresh is
+        # staging its next version. Check the complete existing schema first;
+        # interrupted/older initialization still goes through the repair below.
+        required = {('table', name) for name in (
+            'migrations', 'research', 'research_history', 'records',
+            'tombstones', 'observations', 'blobs',
+        )} | {('trigger', name) for name in (
+            'immutable_records_update', 'immutable_records_delete',
+            'immutable_history_update', 'immutable_history_delete',
+        )}
+        existing = {(row['type'], row['name']) for row in self.db.execute(
+            "SELECT type,name FROM sqlite_master WHERE type IN ('table','trigger')"
+        )}
+        if required <= existing and self.db.execute(
+            'SELECT 1 FROM migrations WHERE version=1'
+        ).fetchone():
+            return
         self.db.executescript('''
         CREATE TABLE IF NOT EXISTS migrations(version INTEGER PRIMARY KEY);
         INSERT OR IGNORE INTO migrations VALUES(1);

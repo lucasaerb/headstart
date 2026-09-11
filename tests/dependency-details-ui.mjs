@@ -44,8 +44,22 @@ try {
     await page.screenshot({ path: `${output}/${name}-detail.png` });
     await page.locator('[data-close="source-dialog"]').click();
     await page.locator("#project-open").click();
+    // Hold the real refresh response until Compare is active, reproducing the CI race without sleeps.
+    let releaseRefresh, responseFetched;
+    const refreshGate = new Promise((resolve) => { releaseRefresh = resolve; });
+    const fetched = new Promise((resolve) => { responseFetched = resolve; });
+    await page.route("**/api/catalog/search?*", async (route) => {
+      const url = new URL(route.request().url());
+      if (url.searchParams.get("limit") !== "50" || url.searchParams.get("type") !== "component") return route.continue();
+      const response = await route.fetch();
+      responseFetched();
+      await refreshGate;
+      await route.fulfill({ response });
+    });
     await page.getByRole("button", { name: "Saved", exact: true }).click();
+    await fetched;
     await expect(page.locator(".project-save")).toHaveCount(1);
+    await expect(page.locator("#project-dialog [aria-busy]")).toHaveAttribute("aria-busy", "true");
     await page.locator(".project-save input").check();
     await page.getByRole("button", { name: "Compare", exact: true }).click();
     await expect(page.locator(".project-compare")).toContainText(
@@ -60,8 +74,19 @@ try {
     await expect(page.locator(".project-compare")).toContainText(
       "resolved version unknown",
     );
+    const dependencies = page.locator(".project-compare dd").last();
+    await dependencies.scrollIntoViewIfNeeded();
+    const originalDependencies = await dependencies.elementHandle();
+    const scrollBeforeRefresh = await page.locator("#project-dialog").evaluate((node) => node.scrollTop);
+    releaseRefresh();
+    await expect(page.locator("#project-dialog [aria-busy]")).toHaveAttribute("aria-busy", "false");
+    if (!await originalDependencies.evaluate((node) => node.isConnected)) throw Error("Refresh replaced the active comparison");
+    const scrollAfterRefresh = await page.locator("#project-dialog").evaluate((node) => node.scrollTop);
+    if (Math.abs(scrollAfterRefresh - scrollBeforeRefresh) > 1) throw Error("Refresh changed comparison scroll");
+    await originalDependencies.dispose();
+    await page.unroute("**/api/catalog/search?*");
     await page.screenshot({ path: `${output}/${name}-compare.png` });
-    await page.locator(".project-compare dd").last().scrollIntoViewIfNeeded();
+    await dependencies.scrollIntoViewIfNeeded();
     await page.screenshot({
       path: `${output}/${name}-compare-dependencies.png`,
     });
@@ -71,6 +96,11 @@ try {
       )
     )
       throw Error("Overflow");
+    // A failed freshness lookup clears busy state and leaves the pinned facts intact.
+    await page.route("**/api/catalog/search?*", (route) => route.fulfill({ status: 503, contentType: "application/json", body: '{"error":"fixture unavailable"}' }));
+    await page.getByRole("button", { name: "Saved", exact: true }).click();
+    await expect(page.locator(".project-status")).toHaveText("Not checked");
+    await expect(page.locator("#project-dialog [aria-busy]")).toHaveAttribute("aria-busy", "false");
     await page.close();
   }
   console.log("Three.js detail/comparison dependency browser regression PASS");

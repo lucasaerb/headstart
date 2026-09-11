@@ -118,14 +118,24 @@ try {
     await page.locator('[data-demo-game]').first().click();
     await expect(page.locator('#demo-email-dialog')).toBeVisible();
     await page.locator('[data-close="demo-email-dialog"]').click();
-    await page.locator('#search-games').fill('Yuka');
+    // CityMaker remains eligible under the current catalog gate. Remove only
+    // its preview in this controlled response fixture to exercise the missing
+    // image state without restoring excluded research or asserting real media
+    // is missing. Search, selection, reload and prompt still use its real ID.
+    await page.route('**/api/research?**', async route => {
+      const response = await route.fetch();
+      const result = await response.json();
+      result.items = result.items.map(item => item.id === 'open-city-maker' ? {...item, preview:null} : item);
+      await route.fulfill({response, json:result});
+    });
+    await page.locator('#search-games').fill('CityMaker');
     await expect(page.locator('.game-card')).toHaveCount(1);
     await expect(page.locator('.missing-preview')).toContainText('Preview not captured');
     await page.locator('[data-add]').click();
     await page.reload();
     await expect(page.locator('.game-card')).toHaveCount(1);
     await page.locator('#bag-open').click();
-    await expect(page.locator('#bag-items')).toContainText('Yuka');
+    await expect(page.locator('#bag-items')).toContainText('CityMaker');
     await expect(page.locator('#continue-astra')).toBeEnabled();
     // Exercise the integrated action without opening an external website or
     // sending this local test prompt anywhere. Real helper unit tests cover it.
@@ -136,7 +146,7 @@ try {
     await page.locator('#continue-astra').click();
     await expect(page.locator('#prompt-status')).toContainText('unavailable');
     await expect(page.locator('#chatgpt-fallback')).toBeVisible();
-    await expect(page.locator('#gauntlet-prompt')).toHaveValue(/Yuka/);
+    await expect(page.locator('#gauntlet-prompt')).toHaveValue(/CityMaker/);
     await page.screenshot({path:`${output}/${name}-astra-fallback.png`});
     await page.locator('[data-close="bag-dialog"]').click();
     await page.evaluate(()=>document.getElementById('game-grid').scrollIntoView({block:'start',behavior:'instant'}));
@@ -149,6 +159,7 @@ try {
     await expect(page.locator('#remembered-email')).toBeHidden();
     if(await page.evaluate(()=>localStorage.getItem('headstart.remembered-email.v1'))!==null)throw new Error('Forget email did not remove preference');
     if(errors.length) throw new Error(errors.join('; '));
+    await page.unrouteAll({behavior:'wait'});
     await page.close();
   }
   console.log('Discovery UI desktop/mobile, API results, pagination/back, filters/reload/list, search, empty, unsupported, failure/retry, bag retention, systems and demo gate PASS');

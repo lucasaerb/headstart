@@ -10,3 +10,5 @@ Read [evidence and rights](../../references/evidence-and-rights.md). Identify th
 Use [integration record](../../references/integration-record.md) to record copied_from, adapted_from, forked_from or depends_on relationships accurately. Keep the target and graph private by default unless the user asked to publish. Optional platform provenance does not remove applicable license obligations. Do not invent a license grant, commercial-use assurance or royalty agreement.
 
 If source rights are unresolved, report the missing evidence and avoid copying the affected material. When credits are resolved, add them to the user-requested output or authorized target location and include the source mapping in the integration report.
+
+When using a prepared localhost handoff, retain its digest, bag revision, pinned component/source versions, brief and constraints in the integration record. Read [connected setup](../../references/connected-setup.md) for authentication and mode boundaries. If workspace access is denied, return the preserved plan and required local checks; do not change permissions or upload private files to get around it.

@@ -1,0 +1,21 @@
+{
+  "sha256": {
+    "HeadStart-Starter-Package/headstart-plugin/scripts/catalog_mcp.py": "012a3528f86b4753adf051e25a112a53fb3bfbab8a04a22c79ef40bdfe387de3",
+    "HeadStart-Starter-Package/headstart-plugin/scripts/configure_connection.py": "88125bf2058c4903bf30f38db1e982fe5be53bec9dbcf3fb7e729f3027bd703f",
+    "HeadStart-Starter-Package/headstart-plugin/scripts/live_catalog.py": "b978a4c2e2880375f07fbfea29ae2beaa555aa06073ff7245dcbc77f7553c072",
+    "HeadStart-Starter-Package/site/dist/downloads/headstart-plugin-0.5.0.zip": "af4f44b9367e95f44900fc5e932f18f9a3ee7ec46a4609c9dd602762dc4301fd",
+    "HeadStart-Starter-Package/site/dist/plugin-setup.css": "a08213d76f98954e597ef6e866e2fa904c9f8de74bb408a0850238bf9b408ecf",
+    "HeadStart-Starter-Package/site/dist/plugin-setup.js": "308613216fdb050ff21e617710d5240c60d42720aab8cfca2021f91a0c88772c",
+    "HeadStart-Starter-Package/site/dist/plugin.html": "175ae7373200df9ca347ddf5d059301c13c8114b2a59a91316e9207527dcc8ab",
+    "HeadStart-Starter-Package/site/dist/submissions.css": "d053c972ec31f13230231b91a9f9cdc16883cd12f68371cb34b8bedd6a2dc3be",
+    "HeadStart-Starter-Package/site/dist/submissions.html": "a1da74f7b3e5966560c12f35fbf107dcf260f5858d833d8ef0e5b65fef26aed8",
+    "HeadStart-Starter-Package/site/dist/submissions.js": "b6b1e84cde437f9bf65e481b1ee91ff2211e551d16311b8662b16f0b00e33bfe",
+    "docs/reviews/plugin-core/codex-client.json": "69bb537b1ad13547b2b00011ecf2053e4a6a6c6065788112bbb8329d326ed1eb",
+    "services/submissions/api.py": "2f22e7a19577f58e9b9c7efd3dcdbaa1c9ff88bc051886dc13d2579733b5bff3",
+    "services/submissions/handler.mjs": "bf8eab4aba1f2f7fd02fcaa9d060dbb2b7d674bf2115ddc6d5d961ecc892ec82",
+    "services/submissions/store.py": "b4a0ffe25d2e7f5cdf5a058f15f38334575c254c740bc2a261c52ac593df9eed",
+    "tools/plugin/build_distribution.py": "f3e2e087b048accc0718dc69a95189294a274946b3205e2ab775f1370db25ebd",
+    "tools/plugin/check_codex_client.py": "705a553a466f784e041f185b61486e0ade3926760bf6c98302ab4365a5a125b6"
+  },
+  "sourceRevision": "46964ab"
+}

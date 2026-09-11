@@ -1,0 +1,9 @@
+# Issue 16 author evidence
+
+Source checkpoint `dff2046` implements the bounded local source-checkout runner. The exact plan, source pins, target base and changed state, recipe digest, environment, runtime results and retained screenshot/log digests are in `author-evidence.json`. This is author validation, not independent acceptance.
+
+Twelve unit tests passed. Real isolated Chromium validation passed all eighteen behavioral/lifecycle checks for baseline and integrated targets at desktop 1280×800 and mobile 390×844. Three deliberately broken runtime mutants failed their expected checks: no-op adapter, retained input listeners and second renderer. Final positive run: `/tmp/headstart-integration-run-v4`; negative run: `/tmp/headstart-integration-negative-v3`. The latter preceded host review guards, with unchanged browser runtime/adapter bytes.
+
+Actual baseline desktop and integrated mobile captures were visually inspected: flat baseline becomes connected, nonconstant terrain, the orange explorer remains visible, and the target canvas/control layout fits the mobile width. The diagnostic target is separate from HeadStart's unchanged C4 site. These are visual terrain and preserved-control checks; no collision or general gameplay mashup is claimed.
+
+Independent early findings corrected before acceptance: missing rights and exact parent/version validation; final source/recipe drift; actual graph connectivity; hidden initial frame scheduling; retained evidence bytes/path/bounds; and Git smudge-filter host execution. Worktree creation now avoids checkout and writes only verified snapshot bytes. Nested attributes, repository info attributes and filter configuration reject; default global attributes are disabled. Unit regression cases exercise these boundaries. Independent reviewer must recheck the fixes and run its own workflow before the evidence can support tested readiness.

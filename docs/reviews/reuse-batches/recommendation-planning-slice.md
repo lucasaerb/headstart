@@ -1,0 +1,11 @@
+# #19 inactive planning slice — independent review
+
+**PASS for the inactive planning slice** at `543e16f5c53e57e2d8fe470b98885652feae6dbf` and `c93efd88870b231fff4344da1ea5dfd811f11ed9`. Reviewer `reuse_handoff`; author `reuse_plugin`. Full issue acceptance and activation remain pending #16/#17/#18 interfaces and the final five-author review.
+
+Inspected all three source-pinned compositions, the rule implementation and tests. MapControls includes OrbitControls in its selected closure; the other selected geometry/control/noise files and Three.js peer assumptions remain explicit. The templates retain exact source-map/file digests and distinguish proposed visual settings from supplied systems. Map panning, pointer-lock look, caller-seeded Simplex sampling and free-flight source entry points support the limited reasons given. None supplies the missing economy, character collisions, aircraft physics or assembled terrain game claimed absent in the tradeoffs.
+
+Independent five-rule tests PASS. Also seeded the actual curated catalog into disposable SQLite, passed its `public_documents()` to `recommend()`, and obtained the expected three eligible candidates with the cozy-builder first for that brief. This supplements the unit tests' simplified metadata projections; it does not establish final HTTP filtering or rights-report enforcement.
+
+Hard runtime/version/platform/rights/readiness constraints precede scoring; explicit conflicts reject. In particular, asking for assembled readiness above candidate returns no result even when constituent source is reviewed. Version/source/rights exclusions, changed-brief explanations, eligible alternatives, labeled editorial proposals and unknown performance remain explicit. Null target/combination/performance fields avoid fabricated canonical Recipe or measured evidence.
+
+No blocker found in this preparatory slice. Before activation, resolve against the current eligible catalog and applicable scope freezes, carry the exact template/brief/rationale into the accepted handoff/integration interfaces, and independently exercise the resulting client/UI workflow. These templates do not become runnable merely because the single Simplex terrain adapter passes.

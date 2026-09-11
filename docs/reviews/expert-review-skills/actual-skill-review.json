@@ -1,0 +1,171 @@
+{
+  "client": "codex-cli 0.154.0",
+  "pluginId": "headstart-plugin@headstart-review15",
+  "installedVersion": "0.7.0+local.44136fa355b3",
+  "skills": [
+    "headstart-plugin:headstart-art-direction",
+    "headstart-plugin:headstart-code-review",
+    "headstart-plugin:headstart-performance-review"
+  ],
+  "sharedPlanDigest": "5a56439eccd6bdda7ddca98fa8a43d2ca53c6ec2e590c3538784717441d453fe",
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"pwd && rg --files -g '*' .\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' '/Users/lucaserb/.codex/plugins/cache/headstart-review15/headstart-plugin/0.7.0+local.44136fa355b3/references/review-rubric.md'\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' '/Users/lucaserb/.codex/plugins/cache/headstart-review15/headstart-plugin/0.7.0+local.44136fa355b3/skills/headstart-art-direction/SKILL.md'\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' '/Users/lucaserb/.codex/plugins/cache/headstart-review15/headstart-plugin/0.7.0+local.44136fa355b3/skills/headstart-performance-review/SKILL.md'\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' '/Users/lucaserb/.codex/plugins/cache/headstart-review15/headstart-plugin/0.7.0+local.44136fa355b3/skills/headstart-code-review/SKILL.md'\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' '/Users/lucaserb/.codex/plugins/cache/headstart-review15/headstart-plugin/0.7.0+local.44136fa355b3/references/review-records.md'\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"rg --files '/Users/lucaserb/.codex/plugins/cache/headstart-review15/headstart-plugin/0.7.0+local.44136fa355b3' | rg 'review-rubric\\\\.json\"'$|integration_review_context'\"\\\\.py\"'$|review_evidence'\"\\\\.py\"'$|checkout|README'\"'\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' '/Users/lucaserb/.codex/plugins/cache/headstart-review15/headstart-plugin/0.7.0+local.44136fa355b3/references/review-rubric.json'\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' plan.json\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' packet.json\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' target/AGENTS.md\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' README.md\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' target/headstart-target.json\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'git -C target rev-parse HEAD && git -C target status --short && git -C target log -1 --oneline'",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"python3 '/Users/lucaserb/.codex/plugins/cache/headstart-review15/headstart-plugin/0.7.0+local.44136fa355b3/scripts/integration_review_context.py' plan.json packet.json --brief-revision 1\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"python3 '/Users/lucaserb/.codex/plugins/cache/headstart-review15/headstart-plugin/0.7.0+local.44136fa355b3/scripts/review_evidence.py' benchmark.json --root .\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'nl -ba before.mjs'",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'nl -ba after.mjs'",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'nl -ba art-guide.md'",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'nl -ba target/src/game.js'",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'nl -ba target/src/terrain.js'",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'nl -ba target/index.html'",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'nl -ba target/package.json'",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' benchmark.json\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' raw.json\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' evidence.json\"",
+      "status": "completed",
+      "exitCode": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'file captures/desktop-before.png captures/desktop-after.png captures/mobile-after.png && shasum -a 256 captures/desktop-before.png captures/desktop-after.png captures/mobile-after.png && git -C target status --porcelain=v1'",
+      "status": "completed",
+      "exitCode": 0
+    }
+  ],
+  "imageViews": [
+    {
+      "path": "/private/var/folders/_l/rxr56sr56711tlz_23rl9q8h0000gn/T/headstart-review-client-30ofqt3j/captures/desktop-after.png",
+      "status": null
+    },
+    {
+      "path": "/private/var/folders/_l/rxr56sr56711tlz_23rl9q8h0000gn/T/headstart-review-client-30ofqt3j/captures/desktop-before.png",
+      "status": null
+    },
+    {
+      "path": "/private/var/folders/_l/rxr56sr56711tlz_23rl9q8h0000gn/T/headstart-review-client-30ofqt3j/captures/mobile-after.png",
+      "status": null
+    }
+  ],
+  "responses": [
+    "I\u2019m applying the three named HeadStart review skills in review-only mode. I\u2019ll read the shared rubric sections they require, inspect only this fixture and the selected installed plugin, run the two packaged read-only evidence helpers, and use the host image viewer for the three captures. No fixture code will be executed and no files will be changed.",
+    "The fixture is self-contained and includes the expected plan, packet, benchmark, raw evidence, target checkout, editable guide, and captures. I\u2019ve read the three skill instructions plus the shared rubric and record mapping; next I\u2019m binding the review to the fixture\u2019s actual revisions and running the packaged continuity/evidence checks.",
+    "The packaged checks passed their narrow contracts: the continuity helper produced one shared `headstart-review-context-1` bound to brief revision 1, source commit `5c5a\u20267684`, target revision `792b\u2026d6b71`, recipe `simplex-terrain-1`, and `review_only`; the evidence checker reports the benchmark bytes/profile are compatible, while explicitly not proving authorship. I\u2019m now checking the source ownership/lifecycle findings and the visual guide/captures.",
+    "## Review-only result\n\nShared pins from `integration_review_context.py`:\n\n- Brief revision 1; intent: deterministic rolling terrain while preserving renderer, camera, keyboard, and lifecycle; runtime Three.js 0.186.0.\n- Source: `three-simplexnoise-v1@1`, commit `5c5a575bd8cc0cf440026ce8dcf6a77862067684`; MIT, assets excluded.\n- Runtime integration target: `target/`, revision `792b45cb9da7207f394b7edf3a32bddad91d6b71`, state digest `a8afd0\u2026645ebb`; `src/game.js` owns renderer, loop, camera, input, and lifecycle; physics is none. Current `src/terrain.js:1-3` remains `flat-baseline`, so no integration success is claimed.\n- Recipe: `simplex-terrain-1`, digest `e736ae233b198789e58b467a9c23b269ef990e054a5970e1138ceea01a04ac25`; plan digest `5a56439e\u2026`; authorization `review_only`.\n\n### Art\n\nThe separate `before.mjs`/`after.mjs` files are a first-party visual toy fixture, explicitly not the Three.js target.\n\nObserved image evidence: in the center of [desktop-before.png](/private/var/folders/_l/rxr56sr56711tlz_23rl9q8h0000gn/T/headstart-review-client-30ofqt3j/captures/desktop-before.png), the tower is fluorescent magenta with disconnected near-black spikes, contrasting with the muted blue/sage/cream scene. The same region in [desktop-after.png](/private/var/folders/_l/rxr56sr56711tlz_23rl9q8h0000gn/T/headstart-review-client-30ofqt3j/captures/desktop-after.png) is ochre with a slate rounded roof; [mobile-after.png](/private/var/folders/_l/rxr56sr56711tlz_23rl9q8h0000gn/T/headstart-review-client-30ofqt3j/captures/mobile-after.png) retains readable silhouettes.\n\nEditorial judgment: the after palette and rounded geometry better fit the quiet coastal brief. This is a local preference, not a universal objection to saturated or angular forms. The editable [art-guide.md](/private/var/folders/_l/rxr56sr56711tlz_23rl9q8h0000gn/T/headstart-review-client-30ofqt3j/art-guide.md:5) captures that distinction, but its `game.mjs`/nonlocal `after.mjs` reference should not be used as an integration handoff.\n\n### Code findings \u2014 toy fixture\n\n- High, leaked listener: [before.mjs](/private/var/folders/_l/rxr56sr56711tlz_23rl9q8h0000gn/T/headstart-review-client-30ofqt3j/before.mjs:16) removes a newly created callback rather than `onMove` registered at lines 10\u201311. After disposal, a `move` event can still mutate `moves`. Minimal fix: remove `onMove`, as `after.mjs:15` does. Static only; application code was not executed.\n- High, duplicate world owner: [before.mjs](/private/var/folders/_l/rxr56sr56711tlz_23rl9q8h0000gn/T/headstart-review-client-30ofqt3j/before.mjs:8) creates `secondWorld`, then `update` steps both and `worlds()` returns two (lines 13\u201314). This violates single simulation ownership and doubles toy update work. Minimal fix: use only `existingWorld`, as `after.mjs:12-13` does.\n\n### Benchmark\n\n`review_evidence.py` passed byte/profile compatibility, but the supplied `raw.json` is previous measured evidence, not a new run: one CPU-only, non-rendered toy baseline (`0.0317459 ms` mean). It has no gameplay rendering, browser, GPU, or before/after comparison, so it supports neither an FPS claim nor a speedup claim.\n\nNo edits were made."
+  ],
+  "targetUnchanged": true,
+  "fixtureFilesUnchanged": true,
+  "scope": "Actual read-only client invocation on first-party synthetic fixtures; previous CPU samples checked, no new benchmark run. No credentials, private target or raw user captures supplied."
+}

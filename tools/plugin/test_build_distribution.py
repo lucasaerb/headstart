@@ -36,6 +36,7 @@ class DistributionTests(unittest.TestCase):
             market = json.loads((self.root / 'relocated/.agents/plugins/marketplace.json').read_text())
             plugin = self.root / 'relocated' / market['plugins'][0]['source']['path']
             self.assertTrue((plugin / 'scripts/catalog_mcp.py').is_file())
+            self.assertTrue((plugin / 'scripts/live_catalog.py').is_file())
             self.assertTrue((plugin / 'references/discovery-catalog.json').is_file())
             self.assertTrue((plugin / 'references/starting-project-media.json').is_file())
             self.assertTrue((plugin / 'references/technology-companions.md').is_file())

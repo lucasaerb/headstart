@@ -7,11 +7,12 @@ from pathlib import Path
 import re
 import sys
 import ipaddress
+import os
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = '2025-06-18'
-VERSION = '0.4.0'
+VERSION = '0.7.0'
 MAX_LINE = 65536
 NOTICE = ('Local research snapshot; source-inspected references, not reusable packages. '
           'Demo play, integration, asset rights and performance remain unverified. '
@@ -366,6 +367,8 @@ def tool_result(value, error=False):
 class Server:
     def __init__(self, catalog):
         self.catalog, self.initialized, self.ready = catalog, False, False
+        self.tools = getattr(catalog, 'tools', TOOLS)
+        self.notice = getattr(catalog, 'notice', NOTICE)
 
     def dispatch(self, request):
         request_id = request.get('id') if isinstance(request, dict) else None
@@ -389,7 +392,7 @@ class Server:
             if not isinstance(params.get('protocolVersion'), str) or not isinstance(params.get('capabilities'), dict) or not isinstance(params.get('clientInfo'), dict):
                 return error(-32602, 'protocolVersion, capabilities and clientInfo are required')
             self.initialized = True
-            result = {'protocolVersion': PROTOCOL, 'capabilities': {'tools': {'listChanged': False}}, 'serverInfo': {'name': 'headstart', 'version': VERSION}, 'instructions': NOTICE}
+            result = {'protocolVersion': PROTOCOL, 'capabilities': {'tools': {'listChanged': False}}, 'serverInfo': {'name': 'headstart', 'version': VERSION}, 'instructions': self.notice}
         elif method == 'ping':
             result = {}
         elif not self.ready:
@@ -397,7 +400,7 @@ class Server:
         elif method == 'tools/list':
             if params.get('cursor'):
                 return error(-32602, 'No tool pagination cursor is supported')
-            result = {'tools': [{'name': name, 'description': description, 'inputSchema': spec, 'annotations': {'readOnlyHint': True, 'destructiveHint': False, 'idempotentHint': True, 'openWorldHint': False}} for name, description, spec in TOOLS]}
+            result = {'tools': [{'name': name, 'description': description, 'inputSchema': spec, 'annotations': {'readOnlyHint': not (getattr(self.catalog, 'live', False) and name == 'prepare_handoff'), 'destructiveHint': False, 'idempotentHint': True, 'openWorldHint': getattr(self.catalog, 'live', False)}} for name, description, spec in self.tools]}
         elif method == 'tools/call':
             if not isinstance(params.get('name'), str):
                 return error(-32602, 'Tool name is required')
@@ -411,7 +414,14 @@ class Server:
 
 
 def main():
-    server = Server(Catalog())
+    if os.environ.get('HEADSTART_CATALOG_ORIGIN'):
+        # Alias the main module so the adapter shares ToolError identity.
+        sys.modules['catalog_mcp'] = sys.modules[__name__]
+        from live_catalog import LiveCatalog
+        catalog = LiveCatalog(os.environ['HEADSTART_CATALOG_ORIGIN'], os.environ.get('HEADSTART_CREDENTIAL_FILE'))
+    else:
+        catalog = Catalog()
+    server = Server(catalog)
     while True:
         line = sys.stdin.buffer.readline(MAX_LINE + 1)
         if not line:

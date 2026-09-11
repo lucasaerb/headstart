@@ -5,7 +5,7 @@ description: Select and assess Three.js or React Three Fiber starting projects f
 
 # Three.js starter selection
 
-Use this skill when the user wants a Three.js/R3F game starter or wants to compare existing browser-game foundations. Read [catalog access](../../references/catalog-access.md), then call `catalog_info` and search projects with the exact available Three.js or React Three Fiber runtime value. Use `get_starting_project` for the selected project so the response keeps its pinned repository, source commit, demo metadata and any reviewed preview reference together.
+Use this skill when the user wants a Three.js/R3F game starter or wants to compare existing browser-game foundations. Read [catalog access](../../references/catalog-access.md), then call `catalog_info` and search projects with the exact available Three.js or React Three Fiber runtime value. In snapshot mode, use `get_starting_project` for the selected project so its pinned repository, source commit, demo metadata and any reviewed preview reference remain together. Configured localhost mode exposes scoped components instead of this project tool: use the exact advertised `get_component(id, version)` contract and retain its source evidence; do not invent a project/media response or silently switch modes.
 
 Treat the result as a source-inspected starting-project reference, not a vendored template or installation package. The plugin does not include `vibegameengine/web-starter-kit`: its inspected repository revision did not establish a root license for the whole starter, so copying it into a user's target remains blocked pending scope-specific rights evidence. Do not turn license terms for named dependencies into a license grant for the containing repository.
 

@@ -1,0 +1,5 @@
+{
+  "noop": "capability behavior matches phase",
+  "listener-leak": "dispose removes loops and listeners",
+  "second-renderer": "one canvas and owned renderer"
+}
