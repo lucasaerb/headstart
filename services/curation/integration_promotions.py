@@ -13,6 +13,11 @@ def promote(store,job,review):
  accepted=review.get('rows',{}).get(plan['row'],{})
  if accepted!={'validationDigest':w.sha(result),'attestationDigest':w.sha(attestation),'recipeDigest':plan['recipe']['digest']}:raise ValueError('Review does not bind this exact runtime evidence')
  if result['result']!='PASS' or result['planDigest']!=plan['planDigest'] or result['targetIntegrated']!=w.snapshot(job/'target') or result['attestationDigest']!=w.sha(attestation):raise ValueError('Stale or failed execution evidence')
+ phases={f'{phase}-{viewport}':phase for phase in ('baseline','integrated') for viewport in ('1280,800','390,844')}
+ if not isinstance(result.get('results'),dict) or set(result['results'])!=set(phases):raise ValueError('Exactly four runtime phases required')
+ for key,phase in phases.items():
+  value=result['results'][key];report=value.get('report',{}) if isinstance(value,dict) else {}
+  if report.get('result')!='PASS' or report.get('row')!=plan['row'] or report.get('phase')!=phase or not isinstance(report.get('checks'),list) or not report['checks'] or any(not isinstance(c,str) or not c for c in report['checks']):raise ValueError('Missing or failed exact runtime phase')
  expected={f'{phase}-{viewport}.{ext}' for phase in ('baseline','integrated') for viewport in ('1280,800','390,844') for ext in ('png','log')}
  if set(result['evidence'])!=expected:raise ValueError('Missing exact visual/log evidence')
  for name,digest in result['evidence'].items():
