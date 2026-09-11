@@ -1,4 +1,5 @@
 import copy
+import json
 import sqlite3
 import tempfile
 import unittest
@@ -50,12 +51,31 @@ class QueueTests(unittest.TestCase):
   assert_export_allowed(self.store,[self.record]);self.assertEqual(len(self.q.history(report['id'])),2)
  def test_control_challenge_bound_to_repo_and_receipt(self):
   item=self.q.submit(self.suggestion);seen=[]
-  def fetch(url):seen.append(url);return f"HeadStart ownership {item['id']} {item['ownershipChallenge']}".encode()
-  with self.assertRaises(ValueError):self.q.verify_ownership(item['id'],item['receipt'],'a'*40,lambda u:b'spoof')
+  def fetch(url):
+   seen.append(url)
+   if url=='https://api.github.com/repos/example/game':return json.dumps({'id':42,'full_name':'example/game','private':False,'default_branch':'main'}).encode()
+   if url=='https://api.github.com/repos/example/game/branches/main':return json.dumps({'name':'main','commit':{'sha':'a'*40}}).encode()
+   return f"HeadStart ownership {item['id']} {item['ownershipChallenge']}".encode()
+  # A matching challenge at a fork-network commit cannot stand in for repo HEAD.
+  with self.assertRaises(ValueError):self.q.verify_ownership(item['id'],item['receipt'],'b'*40,fetch)
+  self.assertFalse(any('raw.githubusercontent' in url for url in seen))
+  seen.clear()
   result=self.q.verify_ownership(item['id'],item['receipt'],'a'*40,fetch)
-  self.assertEqual(seen,['https://raw.githubusercontent.com/example/game/'+'a'*40+'/.headstart-ownership.txt'])
+  self.assertEqual(seen,['https://api.github.com/repos/example/game','https://api.github.com/repos/example/game/branches/main','https://raw.githubusercontent.com/example/game/'+'a'*40+'/.headstart-ownership.txt'])
   self.assertEqual(result['status'],'pending');self.assertTrue(result['blockingFields'])
-  self.assertEqual(self.q.latest(item['id'])['proposal']['ownership'],'repository_control_verified')
+  proof=self.q.latest(item['id'])['proposal']
+  self.assertEqual(proof['ownership'],'repository_control_verified')
+  self.assertEqual(proof['ownershipEvidence']['repositoryId'],42)
+  self.assertEqual(proof['ownershipEvidence']['defaultBranch'],'main')
+ def test_commit_only_wrong_repository_and_malformed_ref_fail(self):
+  item=self.q.submit(self.suggestion)
+  challenge=f"HeadStart ownership {item['id']} {item['ownershipChallenge']}".encode()
+  with self.assertRaises(ValueError):self.q.verify_ownership(item['id'],item['receipt'],'a'*40,lambda _:challenge)
+  for metadata in ({'id':42,'full_name':'attacker/fork','private':False,'default_branch':'main'},{'id':42,'full_name':'example/game','private':False,'default_branch':'main'}):
+   def fetch(url):
+    return json.dumps(metadata if '/branches/' not in url else {'name':'main','commit':{'sha':123}}).encode()
+   with self.assertRaises(ValueError):self.q.verify_ownership(item['id'],item['receipt'],None,fetch)
+  self.assertEqual(self.q.latest(item['id'])['proposal']['ownership'],'unverified')
  def test_concurrent_review_has_one_winner(self):
   from concurrent.futures import ThreadPoolExecutor
   item=self.q.submit(self.suggestion)

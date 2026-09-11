@@ -5,7 +5,7 @@ import os
 import re
 import secrets
 from datetime import datetime, timezone
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, quote
 
 
 def setup(db):
@@ -129,16 +129,33 @@ class Queue:
         old=self.latest(id)
         repo=old['proposal'].get('repository','')
         p=urlsplit(repo)
-        if p.hostname!='github.com' or len(p.path.strip('/').split('/'))!=2 or not re.fullmatch('[a-f0-9]{40}',commit or ''): raise ValueError('Control verification requires a pinned GitHub repository commit')
-        url='https://raw.githubusercontent.com'+p.path+'/'+commit+'/.headstart-ownership.txt'
+        slug=p.path.strip('/')
+        if p.hostname!='github.com' or not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',slug): raise ValueError('Control verification requires a canonical GitHub repository')
+        if commit is not None and (not isinstance(commit,str) or not re.fullmatch('[a-f0-9]{40}',commit)):raise ValueError('Invalid expected commit')
+        # A raw commit may be reachable through another fork's object network.
+        # Independently resolve this repository's own current default branch.
+        repository_url='https://api.github.com/repos/'+slug
+        metadata=json.loads(fetch(repository_url))
+        if not isinstance(metadata,dict) or not isinstance(metadata.get('full_name'),str) or metadata['full_name'].casefold()!=slug.casefold() or metadata.get('private') is not False or type(metadata.get('id')) is not int:raise ValueError('Repository identity mismatch')
+        branch=metadata.get('default_branch')
+        if not isinstance(branch,str) or not 1<=len(branch)<=200 or any(ord(c)<32 for c in branch):raise ValueError('Invalid default branch')
+        reference_url=repository_url+'/branches/'+quote(branch,safe='')
+        reference=json.loads(fetch(reference_url))
+        if not isinstance(reference,dict) or reference.get('name')!=branch or not isinstance(reference.get('commit'),dict):raise ValueError('Invalid repository reference')
+        resolved=reference['commit'].get('sha')
+        if not isinstance(resolved,str) or not re.fullmatch('[a-f0-9]{40}',resolved):raise ValueError('Unpinned repository reference')
+        if commit is not None and commit!=resolved:raise ValueError('Expected commit is not the claimed repository default-branch HEAD')
+        commit=resolved
+        url='https://raw.githubusercontent.com/'+slug+'/'+commit+'/.headstart-ownership.txt'
         content=fetch(url)
+        if not isinstance(content,bytes) or len(content)>4096:raise ValueError('Invalid challenge content')
         expected=('HeadStart ownership '+old['id']+' '+old['ownershipChallenge']).encode()
         if content.strip()!=expected: raise ValueError('Repository challenge did not match')
         with self.db:
             self.db.execute('BEGIN IMMEDIATE')
             current=self.latest(id)
             if current['revision']!=old['revision']: raise RuntimeError('Stale ownership check; retry')
-            item={**old,'revision':old['revision']+1,'proposal':{**old['proposal'],'ownership':'repository_control_verified','ownershipEvidence':{'url':url,'sha256':hashlib.sha256(content).hexdigest(),'commit':commit}},'actor':'repository-challenge'}
+            item={**old,'revision':old['revision']+1,'proposal':{**old['proposal'],'ownership':'repository_control_verified','ownershipEvidence':{'url':url,'sha256':hashlib.sha256(content).hexdigest(),'commit':commit,'repositoryId':metadata['id'],'defaultBranch':branch,'referenceUrl':reference_url,'referenceSha256':hashlib.sha256(json.dumps(reference,sort_keys=True,separators=(',',':')).encode()).hexdigest(),'checkedAt':datetime.now(timezone.utc).isoformat()}},'actor':'repository-challenge'}
             self.append(item)
         return self.status(id,receipt)
     def history(self,id):

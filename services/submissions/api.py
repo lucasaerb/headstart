@@ -3,17 +3,32 @@ import json
 import os
 import sys
 from pathlib import Path
-from urllib.request import build_opener, HTTPRedirectHandler, Request
+from urllib.parse import urlsplit
+import ipaddress
+import socket
+from services.intake.pipeline import PinnedHTTPS
 from services.catalog.store import CatalogStore
 from .store import Queue
 ROOT=Path(__file__).resolve().parents[2]
-class NoRedirect(HTTPRedirectHandler):
-    def redirect_request(self,*args,**kwargs): raise ValueError('Redirected ownership evidence rejected')
 def fetch_proof(url):
-    with build_opener(NoRedirect).open(Request(url,headers={'User-Agent':'HeadStart-local-control-check'}),timeout=5) as response:
-        result=response.read(4097)
-        if len(result)>4096: raise ValueError('Ownership proof is oversized')
-        return result
+    """Pinned public TLS socket; no proxies, redirects, credentials or compressed bodies."""
+    parsed=urlsplit(url)
+    if parsed.scheme!='https' or parsed.hostname not in ('api.github.com','raw.githubusercontent.com') or parsed.port not in (None,443) or parsed.username or parsed.password or parsed.query or parsed.fragment:raise ValueError('Unsupported ownership destination')
+    addresses={r[4][0] for r in socket.getaddrinfo(parsed.hostname,443,type=socket.SOCK_STREAM)}
+    if not addresses or any(not ipaddress.ip_address(a).is_global for a in addresses):raise ValueError('Nonpublic ownership destination')
+    maximum=262144 if parsed.hostname=='api.github.com' else 4096
+    connection=PinnedHTTPS(parsed.hostname,sorted(addresses)[0])
+    try:
+        connection.request('GET',parsed.path,headers={'User-Agent':'HeadStart-local-control-check','Accept':'application/vnd.github+json' if parsed.hostname=='api.github.com' else 'text/plain','Accept-Encoding':'identity','X-GitHub-Api-Version':'2026-03-10'})
+        response=connection.getresponse()
+        if response.status!=200:raise ValueError('Ownership evidence unavailable or redirected')
+        if response.getheader('Content-Encoding','identity')!='identity':raise ValueError('Compressed ownership evidence rejected')
+        declared=response.getheader('Content-Length')
+        if declared and int(declared)>maximum:raise ValueError('Ownership evidence oversized')
+        body=response.read(maximum+1)
+        if len(body)>maximum:raise ValueError('Ownership evidence oversized')
+        return body
+    finally:connection.close()
 
 def serve(request):
     store=CatalogStore(os.environ.get('HEADSTART_CATALOG_DB',ROOT/'.local/catalog.sqlite3'),os.environ.get('HEADSTART_EVIDENCE_DIR',ROOT/'.local/evidence'))
