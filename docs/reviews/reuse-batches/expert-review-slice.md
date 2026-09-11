@@ -13,3 +13,9 @@ Independent execution:
 Inspected all four fresh desktop/mobile before/after captures. The neon tower and detached dark spikes visibly conflict with the declared muted, rounded garden brief. The warm ochre tower and continuous slate roof address that specific editorial mismatch while retaining composition. Text is readable and mobile has no cropped controls or horizontal overflow. These are explicitly first-party fixture captures, not a replacement for HeadStart's selected C4 site or a measured upstream game integration.
 
 No blocking finding in this slice. Remaining #18 acceptance includes the independently accepted #16 integration-context connection, final plugin activation/package/client workflow, full issue criteria and the final review after all five author handoffs.
+
+## Continuity checkpoint `b1689a6` — changes requested
+
+The new integration-context helper and three context tests were inspected. Ten combined review tests pass, including a real generated plan and unchanged target. However, a **P2 continuity defect** remains: using the actual `5458375` plan/packet, replacing `plan.source.commit` with a different syntactically valid forty-character hash and recomputing `planDigest` still returns that contradictory commit successfully. The helper checks its syntax and the packet digest but does not bind the claimed source back to the packet's selected record. This is an internal-consistency defect, not a request to claim cryptographic author trust.
+
+Before activation, verify selected component/version/commit/files against packet records and their digests, derive the bag revision from bag content and derive the state digest from the recorded files/modes. Add digest-consistent contradiction tests; retain explicit current-target/recipe inspection and author-trust limitations. Actual client/package acceptance remains pending that fix and the final archive evidence.
