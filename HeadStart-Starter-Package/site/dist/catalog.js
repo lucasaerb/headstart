@@ -1,5 +1,170 @@
 window.HEADSTART_CATALOG = [
   {
+    "id": "glenn-explore",
+    "title": "Glenn Explore",
+    "summary": "A large multiplayer 3D driving and exploration world with vehicles, chat, racing and shared online presence.",
+    "genres": [
+      "multiplayer",
+      "driving",
+      "exploration",
+      "open-world"
+    ],
+    "runtime": "Three.js / Cesium",
+    "label": "Play demo",
+    "demoUrl": "https://playglenn.com",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/WilliamAvHolmberg/glenn-explore",
+    "projectUrl": "https://playglenn.com",
+    "commit": "5b40306259dcaa2fc7a0fbb32626f50c3bc99805",
+    "creator": "William Av Holmberg and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "William Av Holmberg and contributors",
+      "licenseExpression": "GPL-3.0-only",
+      "licenseUrls": [
+        "https://www.gnu.org/licenses/gpl-3.0.html"
+      ],
+      "sourcePage": "https://github.com/WilliamAvHolmberg/glenn-explore/blob/5b40306259dcaa2fc7a0fbb32626f50c3bc99805/web/public/hero.jpg",
+      "licenseEvidenceUrl": "https://github.com/WilliamAvHolmberg/glenn-explore/blob/5b40306259dcaa2fc7a0fbb32626f50c3bc99805/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned repository image at the indexed source commit.",
+      "alt": "A vehicle exploring Glenn’s shared 3D world.",
+      "sha256": "08b8be2b5db87637fd47f38f8bbbddd7158cc97da774f650359cc1e40c328826",
+      "originalUrl": "https://raw.githubusercontent.com/WilliamAvHolmberg/glenn-explore/5b40306259dcaa2fc7a0fbb32626f50c3bc99805/web/public/hero.jpg",
+      "allowedUse": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
+      "modifications": "Original repository bytes retained unchanged; site CSS may scale and crop.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/glenn-explore.jpg",
+      "localSourcePath": "research/catalog/media/glenn-explore.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "open-world",
+      "urban",
+      "stylized"
+    ],
+    "runtimeVersion": "three 0.174.0; Cesium 1.133.0",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked production URL returned HTTP 200 with HTML on 2026-09-11. This is a reachability check, not a complete playtest or source/deployment attestation.",
+    "rights": {
+      "code_license": "GPL-3.0-only",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/WilliamAvHolmberg/glenn-explore/blob/5b40306259dcaa2fc7a0fbb32626f50c3bc99805/LICENSE",
+      "asset_status": "mixed",
+      "asset_notes": "Project code is GPL-3.0. User-uploaded models/images and map/provider data require separate rights review.",
+      "scope_reuse_status": "review_required",
+      "notes": "The code license was inspected at the pinned revision. Preserve notices and review selected files, assets, data and dependencies before reuse."
+    },
+    "sourceInspectedAt": "2026-09-11T01:30:00Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/WilliamAvHolmberg/glenn-explore/tree/5b40306259dcaa2fc7a0fbb32626f50c3bc99805",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "multiplayer-state",
+      "vehicle-physics",
+      "racing"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Realtime multiplayer bridge",
+        "category": "multiplayer-state",
+        "evidence_url": "https://github.com/WilliamAvHolmberg/glenn-explore/blob/5b40306259dcaa2fc7a0fbb32626f50c3bc99805/web/src/game/realtime/RealtimeController.ts",
+        "source_path": "web/src/game/realtime/RealtimeController.ts",
+        "status": "source_inspected",
+        "notes": "Connects live player state and presence to the game client. No extraction or target integration test."
+      },
+      {
+        "name": "Vehicle physics",
+        "category": "vehicle-physics",
+        "evidence_url": "https://github.com/WilliamAvHolmberg/glenn-explore/blob/5b40306259dcaa2fc7a0fbb32626f50c3bc99805/web/src/cesium/physics/VehiclePhysics.ts",
+        "source_path": "web/src/cesium/physics/VehiclePhysics.ts",
+        "status": "source_inspected",
+        "notes": "Implements vehicle motion for the Cesium/Three.js world. No extraction or target integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/WilliamAvHolmberg/glenn-explore/tree/5b40306259dcaa2fc7a0fbb32626f50c3bc99805",
+        "claim": "Pinned public repository identity and immutable source revision inspected.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/WilliamAvHolmberg/glenn-explore/blob/5b40306259dcaa2fc7a0fbb32626f50c3bc99805/README.md",
+        "claim": "Project description, live-play link, controls and declared implementation context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/WilliamAvHolmberg/glenn-explore/blob/5b40306259dcaa2fc7a0fbb32626f50c3bc99805/LICENSE",
+        "claim": "Project code license text inspected; assets and dependencies remain separate scopes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/WilliamAvHolmberg/glenn-explore/blob/5b40306259dcaa2fc7a0fbb32626f50c3bc99805/web/src/game/realtime/RealtimeController.ts",
+        "claim": "Realtime multiplayer bridge implementation entry points statically inspected.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/WilliamAvHolmberg/glenn-explore/blob/5b40306259dcaa2fc7a0fbb32626f50c3bc99805/web/src/cesium/physics/VehiclePhysics.ts",
+        "claim": "Vehicle physics implementation entry points statically inspected.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No creator model attribution has been established."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "publisher_reported",
+      "metrics": [
+        {
+          "metric_type": "unique_players",
+          "value": 47093,
+          "checked_at": "2026-09-11T01:29:00Z",
+          "evidence_url": "https://playglenn.com",
+          "scope": "Lifetime unique players displayed by the live publisher homepage at check time.",
+          "notes": "Publisher-reported site counter; methodology, bot filtering and date range were not independently audited."
+        }
+      ],
+      "notes": "Keep this player count distinct from GitHub stars and concurrent-player counts."
+    },
+    "editorialRank": {
+      "record_id": "glenn-explore",
+      "position": 1,
+      "rationale": "publisher-reported usage evidence; playable game/demo; 433 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": true,
+        "github_stars": 433,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 7
+      }
+    },
+    "githubStars": 433,
+    "popularity": {
+      "repo_url": "https://github.com/WilliamAvHolmberg/glenn-explore",
+      "stars": 433,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/WilliamAvHolmberg/glenn-explore",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
+    }
+  },
+  {
     "id": "2048",
     "title": "2048",
     "summary": "A compact sliding-tile puzzle whose input, board rules, presentation and persistence have separate modules.",
@@ -795,6 +960,163 @@ window.HEADSTART_CATALOG = [
     }
   },
   {
+    "id": "server-survival",
+    "title": "Server Survival",
+    "summary": "A top-down 3D cloud-architecture survival and tower-defense game with campaign, survival, and sandbox modes.",
+    "genres": [
+      "strategy",
+      "simulation",
+      "tower-defense",
+      "survival"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://pshenok.github.io/server-survival/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/pshenok/server-survival",
+    "projectUrl": "https://pshenok.github.io/server-survival/",
+    "commit": "01796362d3b7bfa6c85efab5e2685f4d955dc137",
+    "creator": "pshenok",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "pshenok",
+      "licenseExpression": "MIT repository; screenshot/content rights need scope review",
+      "licenseUrls": [
+        "https://github.com/pshenok/server-survival/blob/01796362d3b7bfa6c85efab5e2685f4d955dc137/LICENSE"
+      ],
+      "sourcePage": "https://github.com/pshenok/server-survival/blob/01796362d3b7bfa6c85efab5e2685f4d955dc137/assets/gameplay.gif",
+      "licenseEvidenceUrl": "https://github.com/pshenok/server-survival/blob/01796362d3b7bfa6c85efab5e2685f4d955dc137/LICENSE",
+      "captureDate": "2026-09-11",
+      "versionRelation": "Stored at the pinned inspected source revision.",
+      "alt": "Authentic Server Survival gameplay image from its repository.",
+      "sha256": "436a1c94a79b7e4c03077fc279fbe02efd665203c7c80076866709f98b597401",
+      "originalUrl": "https://raw.githubusercontent.com/pshenok/server-survival/01796362d3b7bfa6c85efab5e2685f4d955dc137/assets/gameplay.gif",
+      "allowedUse": "Local catalog display with credit and source link; no downstream asset-reuse conclusion.",
+      "modifications": "Unmodified upstream bytes.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/server-survival.gif",
+      "localSourcePath": "research/catalog/media/server-survival.gif"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "stylized",
+      "technical"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked live browser build; HTTP reachability was checked, but gameplay compatibility remains untested.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/pshenok/server-survival/blob/01796362d3b7bfa6c85efab5e2685f4d955dc137/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Repository screenshot is used only for local catalog display; downstream asset reuse needs separate review.",
+      "scope_reuse_status": "review_required",
+      "notes": "MIT code license inspected at the pinned revision; asset provenance and dependency notices remain scope-specific."
+    },
+    "sourceInspectedAt": "2026-09-11T02:10:00Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/pshenok/server-survival/tree/01796362d3b7bfa6c85efab5e2685f4d955dc137",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "building",
+      "economy",
+      "waves",
+      "campaign",
+      "i18n"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Playable game loop",
+        "category": "gameplay-loop",
+        "evidence_url": "https://github.com/pshenok/server-survival/blob/01796362d3b7bfa6c85efab5e2685f4d955dc137/game.js",
+        "source_path": "game.js",
+        "status": "source_inspected",
+        "notes": "Primary game source contains the runtime loop and interaction systems."
+      },
+      {
+        "name": "Browser presentation",
+        "category": "presentation",
+        "evidence_url": "https://github.com/pshenok/server-survival/blob/01796362d3b7bfa6c85efab5e2685f4d955dc137/index.html",
+        "source_path": "index.html",
+        "status": "source_inspected",
+        "notes": "Browser entry point and interface shell."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/pshenok/server-survival/tree/01796362d3b7bfa6c85efab5e2685f4d955dc137",
+        "claim": "Pinned public repository revision contains the playable game source.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/pshenok/server-survival/blob/01796362d3b7bfa6c85efab5e2685f4d955dc137/README.md",
+        "claim": "README documents gameplay and links the live browser build.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/pshenok/server-survival/blob/01796362d3b7bfa6c85efab5e2685f4d955dc137/LICENSE",
+        "claim": "Pinned MIT license text covers repository code subject to separately identified assets.",
+        "kind": "license"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No exact GPT-6 Astra or Fable 5/5.1 creator attribution established."
+    },
+    "interfaceLanguages": [
+      "en",
+      "uk",
+      "de",
+      "es",
+      "fr",
+      "pt-BR",
+      "pl",
+      "cs",
+      "zh-CN",
+      "ja",
+      "ko"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No defensible public player or usage count is recorded."
+    },
+    "editorialRank": {
+      "record_id": "server-survival",
+      "position": 7,
+      "rationale": "playable game/demo; 6404 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 6404,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 9
+      }
+    },
+    "githubStars": 6404,
+    "popularity": {
+      "repo_url": "https://github.com/pshenok/server-survival",
+      "stars": 6404,
+      "status": "available",
+      "checked_at": "2026-09-11T02:10:00Z",
+      "evidence_url": "https://api.github.com/repos/pshenok/server-survival",
+      "notes": "Public GitHub repository API observation; star counts change over time."
+    }
+  },
+  {
     "id": "pmndrs-racing-game",
     "title": "Poimandres Racing Game",
     "summary": "A community-built browser racer with a component-based vehicle, track and race interface.",
@@ -1454,6 +1776,140 @@ window.HEADSTART_CATALOG = [
     }
   },
   {
+    "id": "jungle-trail",
+    "title": "Jungle Trail",
+    "summary": "A playable English browser game selected for distinctive interactive systems and genre breadth.",
+    "genres": [
+      "exploration",
+      "walking-simulator"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://starknightt.github.io/jungle-trail/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/StarKnightt/jungle-trail",
+    "projectUrl": "https://starknightt.github.io/jungle-trail/",
+    "commit": "c15640d3a2b6f08ca68e4df98fdfc953ea8a070a",
+    "creator": "StarKnightt",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "StarKnightt",
+      "licenseExpression": "MIT repository; media rights need scope review",
+      "licenseUrls": [
+        "https://github.com/StarKnightt/jungle-trail/blob/c15640d3a2b6f08ca68e4df98fdfc953ea8a070a/LICENSE"
+      ],
+      "sourcePage": "https://github.com/StarKnightt/jungle-trail/blob/c15640d3a2b6f08ca68e4df98fdfc953ea8a070a/media/reel.webp",
+      "licenseEvidenceUrl": "https://github.com/StarKnightt/jungle-trail/blob/c15640d3a2b6f08ca68e4df98fdfc953ea8a070a/LICENSE",
+      "captureDate": "2026-09-11",
+      "versionRelation": "Stored at pinned revision.",
+      "alt": "Authentic Jungle Trail gameplay media.",
+      "sha256": "ba7a2096b4d5aebd58fc832c4c4bf76455c8a0abae579d7f8126c094573e24ab",
+      "originalUrl": "https://raw.githubusercontent.com/StarKnightt/jungle-trail/c15640d3a2b6f08ca68e4df98fdfc953ea8a070a/media/reel.webp",
+      "allowedUse": "Local catalog display with credit and source link.",
+      "modifications": "Unmodified upstream bytes.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/jungle-trail.webp",
+      "localSourcePath": "research/catalog/media/jungle-trail.webp"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "stylized"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked live build; reachability checked, gameplay compatibility untested.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/StarKnightt/jungle-trail/blob/c15640d3a2b6f08ca68e4df98fdfc953ea8a070a/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Repository gameplay image is locally displayed; downstream reuse needs review.",
+      "scope_reuse_status": "review_required",
+      "notes": "MIT code inspected; asset/dependency rights remain scope-specific."
+    },
+    "sourceInspectedAt": "2026-09-11T02:30:00Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/StarKnightt/jungle-trail/tree/c15640d3a2b6f08ca68e4df98fdfc953ea8a070a",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "gameplay-loop",
+      "interaction",
+      "browser-runtime"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Playable game systems",
+        "category": "gameplay-loop",
+        "evidence_url": "https://github.com/StarKnightt/jungle-trail/tree/c15640d3a2b6f08ca68e4df98fdfc953ea8a070a/index.html",
+        "source_path": "index.html",
+        "status": "source_inspected",
+        "notes": "Core browser game systems."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/StarKnightt/jungle-trail/tree/c15640d3a2b6f08ca68e4df98fdfc953ea8a070a",
+        "claim": "Pinned public revision contains game source.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/StarKnightt/jungle-trail/blob/c15640d3a2b6f08ca68e4df98fdfc953ea8a070a/README.md",
+        "claim": "README documents gameplay and live build.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/StarKnightt/jungle-trail/blob/c15640d3a2b6f08ca68e4df98fdfc953ea8a070a/LICENSE",
+        "claim": "Pinned MIT license.",
+        "kind": "license"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No exact preferred-model attribution established."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No public player or usage count recorded."
+    },
+    "editorialRank": {
+      "record_id": "jungle-trail",
+      "position": 12,
+      "rationale": "playable game/demo; 292 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 292,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 5
+      }
+    },
+    "githubStars": 292,
+    "popularity": {
+      "repo_url": "https://github.com/StarKnightt/jungle-trail",
+      "stars": 292,
+      "status": "available",
+      "checked_at": "2026-09-11T02:30:00Z",
+      "evidence_url": "https://api.github.com/repos/StarKnightt/jungle-trail",
+      "notes": "Public GitHub API observation; count changes over time."
+    }
+  },
+  {
     "id": "jelly-baby",
     "title": "Jelly Baby",
     "summary": "A soft-body toy sandbox with elastic character motion and interactive facilities.",
@@ -1780,6 +2236,298 @@ window.HEADSTART_CATALOG = [
     }
   },
   {
+    "id": "moon-rover",
+    "title": "Regolith: The Silence at Anaxagoras",
+    "summary": "A WebGL2 lunar rover survey game with terrain physics, instruments, drilling, discoveries, and desktop/mobile controls.",
+    "genres": [
+      "exploration",
+      "simulation",
+      "adventure"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://winchxyz.github.io/moon-rover/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/winchxyz/moon-rover",
+    "projectUrl": "https://winchxyz.github.io/moon-rover/",
+    "commit": "f5f25ba6bf7477c612b408b265c9275a4fd1200d",
+    "creator": "winchxyz",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "winchxyz",
+      "licenseExpression": "MIT repository; screenshot/content rights need scope review",
+      "licenseUrls": [
+        "https://github.com/winchxyz/moon-rover/blob/f5f25ba6bf7477c612b408b265c9275a4fd1200d/LICENSE"
+      ],
+      "sourcePage": "https://github.com/winchxyz/moon-rover/blob/f5f25ba6bf7477c612b408b265c9275a4fd1200d/docs/hero.jpg",
+      "licenseEvidenceUrl": "https://github.com/winchxyz/moon-rover/blob/f5f25ba6bf7477c612b408b265c9275a4fd1200d/LICENSE",
+      "captureDate": "2026-09-11",
+      "versionRelation": "Stored at the pinned inspected source revision.",
+      "alt": "Authentic Regolith: The Silence at Anaxagoras gameplay image from its repository.",
+      "sha256": "9307b7524a3bc6ca3522944e022149629644368175dec4b27321bc43e1d3cc5c",
+      "originalUrl": "https://raw.githubusercontent.com/winchxyz/moon-rover/f5f25ba6bf7477c612b408b265c9275a4fd1200d/docs/hero.jpg",
+      "allowedUse": "Local catalog display with credit and source link; no downstream asset-reuse conclusion.",
+      "modifications": "Unmodified upstream bytes.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/moon-rover.jpg",
+      "localSourcePath": "research/catalog/media/moon-rover.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "realistic",
+      "science-fiction"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked live browser build; HTTP reachability was checked, but gameplay compatibility remains untested.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/winchxyz/moon-rover/blob/f5f25ba6bf7477c612b408b265c9275a4fd1200d/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Repository screenshot is used only for local catalog display; downstream asset reuse needs separate review.",
+      "scope_reuse_status": "review_required",
+      "notes": "MIT code license inspected at the pinned revision; asset provenance and dependency notices remain scope-specific."
+    },
+    "sourceInspectedAt": "2026-09-11T02:10:00Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/winchxyz/moon-rover/tree/f5f25ba6bf7477c612b408b265c9275a4fd1200d",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "vehicle-controller",
+      "procedural-terrain",
+      "physics",
+      "missions",
+      "mobile-controls"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Playable game loop",
+        "category": "gameplay-loop",
+        "evidence_url": "https://github.com/winchxyz/moon-rover/blob/f5f25ba6bf7477c612b408b265c9275a4fd1200d/index.html",
+        "source_path": "index.html",
+        "status": "source_inspected",
+        "notes": "Primary game source contains the runtime loop and interaction systems."
+      },
+      {
+        "name": "Browser presentation",
+        "category": "presentation",
+        "evidence_url": "https://github.com/winchxyz/moon-rover/blob/f5f25ba6bf7477c612b408b265c9275a4fd1200d/index.html",
+        "source_path": "index.html",
+        "status": "source_inspected",
+        "notes": "Browser entry point and interface shell."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/winchxyz/moon-rover/tree/f5f25ba6bf7477c612b408b265c9275a4fd1200d",
+        "claim": "Pinned public repository revision contains the playable game source.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/winchxyz/moon-rover/blob/f5f25ba6bf7477c612b408b265c9275a4fd1200d/README.md",
+        "claim": "README documents gameplay and links the live browser build.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/winchxyz/moon-rover/blob/f5f25ba6bf7477c612b408b265c9275a4fd1200d/LICENSE",
+        "claim": "Pinned MIT license text covers repository code subject to separately identified assets.",
+        "kind": "license"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No exact GPT-6 Astra or Fable 5/5.1 creator attribution established."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No defensible public player or usage count is recorded."
+    },
+    "editorialRank": {
+      "record_id": "moon-rover",
+      "position": 15,
+      "rationale": "playable game/demo; 120 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 120,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 8
+      }
+    },
+    "githubStars": 120,
+    "popularity": {
+      "repo_url": "https://github.com/winchxyz/moon-rover",
+      "stars": 120,
+      "status": "available",
+      "checked_at": "2026-09-11T02:10:00Z",
+      "evidence_url": "https://api.github.com/repos/winchxyz/moon-rover",
+      "notes": "Public GitHub repository API observation; star counts change over time."
+    }
+  },
+  {
+    "id": "operation-ironhold",
+    "title": "Operation Ironhold",
+    "summary": "A complete browser FPS with four weapons, enemy AI, movement systems, synthesized audio, and a timed combat round.",
+    "genres": [
+      "fps",
+      "action",
+      "shooter"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://starknightt.github.io/operation-ironhold/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/StarKnightt/operation-ironhold",
+    "projectUrl": "https://starknightt.github.io/operation-ironhold/",
+    "commit": "58b292758fd29953c35bcd3ee7113004b709fda3",
+    "creator": "StarKnightt",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "StarKnightt",
+      "licenseExpression": "MIT repository; screenshot/content rights need scope review",
+      "licenseUrls": [
+        "https://github.com/StarKnightt/operation-ironhold/blob/58b292758fd29953c35bcd3ee7113004b709fda3/LICENSE"
+      ],
+      "sourcePage": "https://github.com/StarKnightt/operation-ironhold/blob/58b292758fd29953c35bcd3ee7113004b709fda3/screenshots/gameplay.jpg",
+      "licenseEvidenceUrl": "https://github.com/StarKnightt/operation-ironhold/blob/58b292758fd29953c35bcd3ee7113004b709fda3/LICENSE",
+      "captureDate": "2026-09-11",
+      "versionRelation": "Stored at the pinned inspected source revision.",
+      "alt": "Authentic Operation Ironhold gameplay image from its repository.",
+      "sha256": "1aef0e21fdadf34c5a784e0b4fa13c6cb9450aa4519b2984e71778fac5748f52",
+      "originalUrl": "https://raw.githubusercontent.com/StarKnightt/operation-ironhold/58b292758fd29953c35bcd3ee7113004b709fda3/screenshots/gameplay.jpg",
+      "allowedUse": "Local catalog display with credit and source link; no downstream asset-reuse conclusion.",
+      "modifications": "Unmodified upstream bytes.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/operation-ironhold.jpg",
+      "localSourcePath": "research/catalog/media/operation-ironhold.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "stylized",
+      "military"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked live browser build; HTTP reachability was checked, but gameplay compatibility remains untested.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/StarKnightt/operation-ironhold/blob/58b292758fd29953c35bcd3ee7113004b709fda3/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Repository screenshot is used only for local catalog display; downstream asset reuse needs separate review.",
+      "scope_reuse_status": "review_required",
+      "notes": "MIT code license inspected at the pinned revision; asset provenance and dependency notices remain scope-specific."
+    },
+    "sourceInspectedAt": "2026-09-11T02:10:00Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/StarKnightt/operation-ironhold/tree/58b292758fd29953c35bcd3ee7113004b709fda3",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "first-person-controller",
+      "combat",
+      "enemy-ai",
+      "weapons",
+      "audio-synthesis"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Playable game loop",
+        "category": "gameplay-loop",
+        "evidence_url": "https://github.com/StarKnightt/operation-ironhold/blob/58b292758fd29953c35bcd3ee7113004b709fda3/index.html",
+        "source_path": "index.html",
+        "status": "source_inspected",
+        "notes": "Primary game source contains the runtime loop and interaction systems."
+      },
+      {
+        "name": "Browser presentation",
+        "category": "presentation",
+        "evidence_url": "https://github.com/StarKnightt/operation-ironhold/blob/58b292758fd29953c35bcd3ee7113004b709fda3/index.html",
+        "source_path": "index.html",
+        "status": "source_inspected",
+        "notes": "Browser entry point and interface shell."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/StarKnightt/operation-ironhold/tree/58b292758fd29953c35bcd3ee7113004b709fda3",
+        "claim": "Pinned public repository revision contains the playable game source.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/StarKnightt/operation-ironhold/blob/58b292758fd29953c35bcd3ee7113004b709fda3/README.md",
+        "claim": "README documents gameplay and links the live browser build.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/StarKnightt/operation-ironhold/blob/58b292758fd29953c35bcd3ee7113004b709fda3/LICENSE",
+        "claim": "Pinned MIT license text covers repository code subject to separately identified assets.",
+        "kind": "license"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No exact GPT-6 Astra or Fable 5/5.1 creator attribution established."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No defensible public player or usage count is recorded."
+    },
+    "editorialRank": {
+      "record_id": "operation-ironhold",
+      "position": 16,
+      "rationale": "playable game/demo; 89 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 89,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 8
+      }
+    },
+    "githubStars": 89,
+    "popularity": {
+      "repo_url": "https://github.com/StarKnightt/operation-ironhold",
+      "stars": 89,
+      "status": "available",
+      "checked_at": "2026-09-11T02:10:00Z",
+      "evidence_url": "https://api.github.com/repos/StarKnightt/operation-ironhold",
+      "notes": "Public GitHub repository API observation; star counts change over time."
+    }
+  },
+  {
     "id": "fable-cities",
     "title": "Fable Cities",
     "summary": "A city-builder project with inspectable road, environment and simulation modules and a linked browser build.",
@@ -1945,6 +2693,728 @@ window.HEADSTART_CATALOG = [
       "checked_at": "2026-09-10T19:48:25Z",
       "evidence_url": "https://api.github.com/repos/rawprogress/fable-cities",
       "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "turbo-kart-rush",
+    "title": "Turbo Kart Rush",
+    "summary": "An original Three.js kart racer with eight drivers, four circuits, drifting, ten items, synthesized audio and seven AI opponents.",
+    "genres": [
+      "racing",
+      "arcade",
+      "kart"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://bridge-mind.github.io/turbo-kart-rush/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/bridge-mind/turbo-kart-rush",
+    "projectUrl": "https://bridge-mind.github.io/turbo-kart-rush/",
+    "commit": "6c0456c7642447eae29e0832e7e542fec07ec07d",
+    "creator": "BridgeMind",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "BridgeMind",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://opensource.org/license/mit"
+      ],
+      "sourcePage": "https://github.com/bridge-mind/turbo-kart-rush/blob/6c0456c7642447eae29e0832e7e542fec07ec07d/docs/screenshots/race.jpg",
+      "licenseEvidenceUrl": "https://github.com/bridge-mind/turbo-kart-rush/blob/6c0456c7642447eae29e0832e7e542fec07ec07d/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned repository image at the indexed source commit.",
+      "alt": "A colorful Turbo Kart Rush race with rival karts and the racing HUD.",
+      "sha256": "e9015659e69d8b5664509c6312660cf714c5a6b5453345169b117dadd895b578",
+      "originalUrl": "https://raw.githubusercontent.com/bridge-mind/turbo-kart-rush/6c0456c7642447eae29e0832e7e542fec07ec07d/docs/screenshots/race.jpg",
+      "allowedUse": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
+      "modifications": "Original repository bytes retained unchanged; site CSS may scale and crop.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/turbo-kart-rush.jpg",
+      "localSourcePath": "research/catalog/media/turbo-kart-rush.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "procedural",
+      "colorful",
+      "low-poly"
+    ],
+    "runtimeVersion": "three 0.185.1",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked production URL returned HTTP 200 with HTML on 2026-09-11. This is a reachability check, not a complete playtest or source/deployment attestation.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/bridge-mind/turbo-kart-rush/blob/6c0456c7642447eae29e0832e7e542fec07ec07d/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Repository media and depicted assets require selected-scope review.",
+      "scope_reuse_status": "review_required",
+      "notes": "The code license was inspected at the pinned revision. Preserve notices and review selected files, assets, data and dependencies before reuse."
+    },
+    "sourceInspectedAt": "2026-09-11T01:30:00Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/bridge-mind/turbo-kart-rush/tree/6c0456c7642447eae29e0832e7e542fec07ec07d",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "vehicle-physics",
+      "items",
+      "ai-racing"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Arcade kart and drift model",
+        "category": "vehicle-physics",
+        "evidence_url": "https://github.com/bridge-mind/turbo-kart-rush/blob/6c0456c7642447eae29e0832e7e542fec07ec07d/src/kart/Kart.ts",
+        "source_path": "src/kart/Kart.ts",
+        "status": "source_inspected",
+        "notes": "Implements acceleration, hop, drift charge and mini-turbo behavior. No extraction or target integration test."
+      },
+      {
+        "name": "Position-aware AI drivers",
+        "category": "ai-racing",
+        "evidence_url": "https://github.com/bridge-mind/turbo-kart-rush/blob/6c0456c7642447eae29e0832e7e542fec07ec07d/src/ai/AIDriver.ts",
+        "source_path": "src/ai/AIDriver.ts",
+        "status": "source_inspected",
+        "notes": "Follows racing lines, dodges hazards, uses items and rubber-bands by race state. No extraction or target integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/bridge-mind/turbo-kart-rush/tree/6c0456c7642447eae29e0832e7e542fec07ec07d",
+        "claim": "Pinned public repository identity and immutable source revision inspected.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/bridge-mind/turbo-kart-rush/blob/6c0456c7642447eae29e0832e7e542fec07ec07d/README.md",
+        "claim": "Project description, live-play link, controls and declared implementation context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/bridge-mind/turbo-kart-rush/blob/6c0456c7642447eae29e0832e7e542fec07ec07d/LICENSE",
+        "claim": "Project code license text inspected; assets and dependencies remain separate scopes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/bridge-mind/turbo-kart-rush/blob/6c0456c7642447eae29e0832e7e542fec07ec07d/src/kart/Kart.ts",
+        "claim": "Arcade kart and drift model implementation entry points statically inspected.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/bridge-mind/turbo-kart-rush/blob/6c0456c7642447eae29e0832e7e542fec07ec07d/src/ai/AIDriver.ts",
+        "claim": "Position-aware AI drivers implementation entry points statically inspected.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "creator_attributed",
+      "models": [
+        "Fable 5.1"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/bridge-mind/turbo-kart-rush/blob/6c0456c7642447eae29e0832e7e542fec07ec07d/README.md",
+          "claim": "Maintainer README states five Claude Fable 5.1 sub-agents produced the game in parallel from one prompt."
+        }
+      ],
+      "notes": "Creator attribution describes the reported development workflow; it is not a quality score, certification or exclusive-authorship claim."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No defensible public player or usage count was found during this audit."
+    },
+    "editorialRank": {
+      "record_id": "turbo-kart-rush",
+      "position": 18,
+      "rationale": "playable game/demo; 36 GitHub stars observed; English interface evidenced; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 36,
+        "english_interface": true,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 6
+      }
+    },
+    "githubStars": 36,
+    "popularity": {
+      "repo_url": "https://github.com/bridge-mind/turbo-kart-rush",
+      "stars": 36,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/bridge-mind/turbo-kart-rush",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
+    }
+  },
+  {
+    "id": "datacenter-survival",
+    "title": "Datacenter Survival",
+    "summary": "A playable English browser game selected for distinctive interactive systems and genre breadth.",
+    "genres": [
+      "strategy",
+      "simulation",
+      "survival"
+    ],
+    "runtime": "Canvas 2D",
+    "label": "Play demo",
+    "demoUrl": "https://pshenok.github.io/datacenter-survival/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/pshenok/datacenter-survival",
+    "projectUrl": "https://pshenok.github.io/datacenter-survival/",
+    "commit": "234588545ca6a1d63da41a0ec19a267e8623a72e",
+    "creator": "pshenok",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "pshenok",
+      "licenseExpression": "MIT repository; media rights need scope review",
+      "licenseUrls": [
+        "https://github.com/pshenok/datacenter-survival/blob/234588545ca6a1d63da41a0ec19a267e8623a72e/LICENSE"
+      ],
+      "sourcePage": "https://github.com/pshenok/datacenter-survival/blob/234588545ca6a1d63da41a0ec19a267e8623a72e/assets/demo.gif",
+      "licenseEvidenceUrl": "https://github.com/pshenok/datacenter-survival/blob/234588545ca6a1d63da41a0ec19a267e8623a72e/LICENSE",
+      "captureDate": "2026-09-11",
+      "versionRelation": "Stored at pinned revision.",
+      "alt": "Authentic Datacenter Survival gameplay media.",
+      "sha256": "c720bed468ec52b4e0b4d4b83fac412dcd0d3dc140e9ef56e5237ccb1ad1ef6c",
+      "originalUrl": "https://raw.githubusercontent.com/pshenok/datacenter-survival/234588545ca6a1d63da41a0ec19a267e8623a72e/assets/demo.gif",
+      "allowedUse": "Local catalog display with credit and source link.",
+      "modifications": "Unmodified upstream bytes.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/datacenter-survival.gif",
+      "localSourcePath": "research/catalog/media/datacenter-survival.gif"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "stylized"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked live build; reachability checked, gameplay compatibility untested.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/pshenok/datacenter-survival/blob/234588545ca6a1d63da41a0ec19a267e8623a72e/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Repository gameplay image is locally displayed; downstream reuse needs review.",
+      "scope_reuse_status": "review_required",
+      "notes": "MIT code inspected; asset/dependency rights remain scope-specific."
+    },
+    "sourceInspectedAt": "2026-09-11T02:30:00Z",
+    "integrationFamily": "other-web-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/pshenok/datacenter-survival/tree/234588545ca6a1d63da41a0ec19a267e8623a72e",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "gameplay-loop",
+      "interaction",
+      "browser-runtime"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Playable game systems",
+        "category": "gameplay-loop",
+        "evidence_url": "https://github.com/pshenok/datacenter-survival/tree/234588545ca6a1d63da41a0ec19a267e8623a72e/index.html",
+        "source_path": "index.html",
+        "status": "source_inspected",
+        "notes": "Core browser game systems."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/pshenok/datacenter-survival/tree/234588545ca6a1d63da41a0ec19a267e8623a72e",
+        "claim": "Pinned public revision contains game source.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/pshenok/datacenter-survival/blob/234588545ca6a1d63da41a0ec19a267e8623a72e/README.md",
+        "claim": "README documents gameplay and live build.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/pshenok/datacenter-survival/blob/234588545ca6a1d63da41a0ec19a267e8623a72e/LICENSE",
+        "claim": "Pinned MIT license.",
+        "kind": "license"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No exact preferred-model attribution established."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No public player or usage count recorded."
+    },
+    "editorialRank": {
+      "record_id": "datacenter-survival",
+      "position": 19,
+      "rationale": "playable game/demo; 21 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 21,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 6
+      }
+    },
+    "githubStars": 21,
+    "popularity": {
+      "repo_url": "https://github.com/pshenok/datacenter-survival",
+      "stars": 21,
+      "status": "available",
+      "checked_at": "2026-09-11T02:30:00Z",
+      "evidence_url": "https://api.github.com/repos/pshenok/datacenter-survival",
+      "notes": "Public GitHub API observation; count changes over time."
+    }
+  },
+  {
+    "id": "cadle",
+    "title": "Cadle",
+    "summary": "A playable English browser game selected for distinctive interactive systems and genre breadth.",
+    "genres": [
+      "fps",
+      "rpg",
+      "adventure"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://cadle.gg/play/?start",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/Humpalumps/Cadle",
+    "projectUrl": "https://cadle.gg/play/?start",
+    "commit": "ea0da62549980816a6a27e08b75808b1f56d70e7",
+    "creator": "Humpalumps",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Humpalumps",
+      "licenseExpression": "MIT repository; media rights need scope review",
+      "licenseUrls": [
+        "https://github.com/Humpalumps/Cadle/blob/ea0da62549980816a6a27e08b75808b1f56d70e7/LICENSE"
+      ],
+      "sourcePage": "https://github.com/Humpalumps/Cadle/blob/ea0da62549980816a6a27e08b75808b1f56d70e7/public/assets/site/vale-b.jpg",
+      "licenseEvidenceUrl": "https://github.com/Humpalumps/Cadle/blob/ea0da62549980816a6a27e08b75808b1f56d70e7/LICENSE",
+      "captureDate": "2026-09-11",
+      "versionRelation": "Stored at pinned revision.",
+      "alt": "Authentic Cadle gameplay media.",
+      "sha256": "82d815a38d05c57831ecaa86409462dae7b928724db45d9c9519db4707905441",
+      "originalUrl": "https://raw.githubusercontent.com/Humpalumps/Cadle/ea0da62549980816a6a27e08b75808b1f56d70e7/public/assets/site/vale-b.jpg",
+      "allowedUse": "Local catalog display with credit and source link.",
+      "modifications": "Unmodified upstream bytes.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/cadle.jpg",
+      "localSourcePath": "research/catalog/media/cadle.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "stylized"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked live build; reachability checked, gameplay compatibility untested.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/Humpalumps/Cadle/blob/ea0da62549980816a6a27e08b75808b1f56d70e7/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Repository gameplay image is locally displayed; downstream reuse needs review.",
+      "scope_reuse_status": "review_required",
+      "notes": "MIT code inspected; asset/dependency rights remain scope-specific."
+    },
+    "sourceInspectedAt": "2026-09-11T02:30:00Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/Humpalumps/Cadle/tree/ea0da62549980816a6a27e08b75808b1f56d70e7",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "gameplay-loop",
+      "interaction",
+      "browser-runtime"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Playable game systems",
+        "category": "gameplay-loop",
+        "evidence_url": "https://github.com/Humpalumps/Cadle/tree/ea0da62549980816a6a27e08b75808b1f56d70e7/index.html",
+        "source_path": "index.html",
+        "status": "source_inspected",
+        "notes": "Core browser game systems."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/Humpalumps/Cadle/tree/ea0da62549980816a6a27e08b75808b1f56d70e7",
+        "claim": "Pinned public revision contains game source.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/Humpalumps/Cadle/blob/ea0da62549980816a6a27e08b75808b1f56d70e7/README.md",
+        "claim": "README documents gameplay and live build.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/Humpalumps/Cadle/blob/ea0da62549980816a6a27e08b75808b1f56d70e7/LICENSE",
+        "claim": "Pinned MIT license.",
+        "kind": "license"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No exact preferred-model attribution established."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No public player or usage count recorded."
+    },
+    "editorialRank": {
+      "record_id": "cadle",
+      "position": 20,
+      "rationale": "playable game/demo; 18 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 18,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 6
+      }
+    },
+    "githubStars": 18,
+    "popularity": {
+      "repo_url": "https://github.com/Humpalumps/Cadle",
+      "stars": 18,
+      "status": "available",
+      "checked_at": "2026-09-11T02:30:00Z",
+      "evidence_url": "https://api.github.com/repos/Humpalumps/Cadle",
+      "notes": "Public GitHub API observation; count changes over time."
+    }
+  },
+  {
+    "id": "neomud",
+    "title": "NeoMud",
+    "summary": "A live browser multiplayer dungeon game combining shared rooms, party combat, classes, crafting and a visual world.",
+    "genres": [
+      "multiplayer",
+      "dungeon-crawler",
+      "rpg"
+    ],
+    "runtime": "Kotlin Compose Multiplatform / WASM",
+    "label": "Play demo",
+    "demoUrl": "https://neomud.app",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/roomsmith-games/NeoMud",
+    "projectUrl": "https://neomud.app",
+    "commit": "b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a",
+    "creator": "Roomsmith Games contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Roomsmith Games contributors",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://opensource.org/license/mit"
+      ],
+      "sourcePage": "https://github.com/roomsmith-games/NeoMud/blob/b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a/docs/screenshots/town_square.png",
+      "licenseEvidenceUrl": "https://github.com/roomsmith-games/NeoMud/blob/b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned repository image at the indexed source commit.",
+      "alt": "NeoMud Town Square with room art, characters, minimap and game log.",
+      "sha256": "72e5bfb7521811e02a3cf9ffa7730a466291dab081446f632900e7a8340b1fb6",
+      "originalUrl": "https://raw.githubusercontent.com/roomsmith-games/NeoMud/b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a/docs/screenshots/town_square.png",
+      "allowedUse": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
+      "modifications": "Original repository bytes retained unchanged; site CSS may scale and crop.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/neomud.png",
+      "localSourcePath": "research/catalog/media/neomud.png"
+    },
+    "contentKind": "game",
+    "dimension": "2d",
+    "visualStyle": [
+      "pixel-art",
+      "fantasy",
+      "interface-rich"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked production URL returned HTTP 200 with HTML on 2026-09-11. This is a reachability check, not a complete playtest or source/deployment attestation.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/roomsmith-games/NeoMud/blob/b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Repository media and depicted assets require selected-scope review.",
+      "scope_reuse_status": "review_required",
+      "notes": "The code license was inspected at the pinned revision. Preserve notices and review selected files, assets, data and dependencies before reuse."
+    },
+    "sourceInspectedAt": "2026-09-11T01:30:00Z",
+    "integrationFamily": "other-web-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/roomsmith-games/NeoMud/tree/b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "multiplayer-state",
+      "combat",
+      "party-system"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Server game loop",
+        "category": "combat",
+        "evidence_url": "https://github.com/roomsmith-games/NeoMud/blob/b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a/server/src/main/kotlin/com/neomud/server/game/GameLoop.kt",
+        "source_path": "server/src/main/kotlin/com/neomud/server/game/GameLoop.kt",
+        "status": "source_inspected",
+        "notes": "Runs tick-based combat actions and NPC behavior. No extraction or target integration test."
+      },
+      {
+        "name": "Party coordination",
+        "category": "party-system",
+        "evidence_url": "https://github.com/roomsmith-games/NeoMud/blob/b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a/server/src/main/kotlin/com/neomud/server/game/party/PartyService.kt",
+        "source_path": "server/src/main/kotlin/com/neomud/server/game/party/PartyService.kt",
+        "status": "source_inspected",
+        "notes": "Owns invites, membership and shared group state. No extraction or target integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/roomsmith-games/NeoMud/tree/b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a",
+        "claim": "Pinned public repository identity and immutable source revision inspected.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/roomsmith-games/NeoMud/blob/b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a/README.md",
+        "claim": "Project description, live-play link, controls and declared implementation context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/roomsmith-games/NeoMud/blob/b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a/LICENSE",
+        "claim": "Project code license text inspected; assets and dependencies remain separate scopes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/roomsmith-games/NeoMud/blob/b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a/server/src/main/kotlin/com/neomud/server/game/GameLoop.kt",
+        "claim": "Server game loop implementation entry points statically inspected.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/roomsmith-games/NeoMud/blob/b6f1b31c230c01d83f84feba0a6f5e9d6e061a7a/server/src/main/kotlin/com/neomud/server/game/party/PartyService.kt",
+        "claim": "Party coordination implementation entry points statically inspected.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "The maintainer calls the project vibe-coded with AI assistance but does not identify an exact model for the represented revision."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No defensible public player or usage count was found during this audit."
+    },
+    "editorialRank": {
+      "record_id": "neomud",
+      "position": 21,
+      "rationale": "playable game/demo; 12 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 12,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 6
+      }
+    },
+    "githubStars": 12,
+    "popularity": {
+      "repo_url": "https://github.com/roomsmith-games/NeoMud",
+      "stars": 12,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/roomsmith-games/NeoMud",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
+    }
+  },
+  {
+    "id": "emerald-bayou",
+    "title": "Emerald Bayou",
+    "summary": "A playable English browser game selected for distinctive interactive systems and genre breadth.",
+    "genres": [
+      "exploration",
+      "simulation",
+      "driving"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://vheissu.github.io/emerald-bayou/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/Vheissu/emerald-bayou",
+    "projectUrl": "https://vheissu.github.io/emerald-bayou/",
+    "commit": "e87c03688263daadb1bfbf35efaddc5ab7d53912",
+    "creator": "Vheissu",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Vheissu",
+      "licenseExpression": "MIT repository; media rights need scope review",
+      "licenseUrls": [
+        "https://github.com/Vheissu/emerald-bayou/blob/e87c03688263daadb1bfbf35efaddc5ab7d53912/LICENSE"
+      ],
+      "sourcePage": "https://github.com/Vheissu/emerald-bayou/blob/e87c03688263daadb1bfbf35efaddc5ab7d53912/docs/screenshots/01-hero.jpg",
+      "licenseEvidenceUrl": "https://github.com/Vheissu/emerald-bayou/blob/e87c03688263daadb1bfbf35efaddc5ab7d53912/LICENSE",
+      "captureDate": "2026-09-11",
+      "versionRelation": "Stored at pinned revision.",
+      "alt": "Authentic Emerald Bayou gameplay media.",
+      "sha256": "64a67d0f40f04c99f9626ef8a2da2a05c11b87c47f81feee952c87db10cc1bf7",
+      "originalUrl": "https://raw.githubusercontent.com/Vheissu/emerald-bayou/e87c03688263daadb1bfbf35efaddc5ab7d53912/docs/screenshots/01-hero.jpg",
+      "allowedUse": "Local catalog display with credit and source link.",
+      "modifications": "Unmodified upstream bytes.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/emerald-bayou.jpg",
+      "localSourcePath": "research/catalog/media/emerald-bayou.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "stylized"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked live build; reachability checked, gameplay compatibility untested.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/Vheissu/emerald-bayou/blob/e87c03688263daadb1bfbf35efaddc5ab7d53912/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Repository gameplay image is locally displayed; downstream reuse needs review.",
+      "scope_reuse_status": "review_required",
+      "notes": "MIT code inspected; asset/dependency rights remain scope-specific."
+    },
+    "sourceInspectedAt": "2026-09-11T02:30:00Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/Vheissu/emerald-bayou/tree/e87c03688263daadb1bfbf35efaddc5ab7d53912",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "gameplay-loop",
+      "interaction",
+      "browser-runtime"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Playable game systems",
+        "category": "gameplay-loop",
+        "evidence_url": "https://github.com/Vheissu/emerald-bayou/tree/e87c03688263daadb1bfbf35efaddc5ab7d53912/index.html",
+        "source_path": "index.html",
+        "status": "source_inspected",
+        "notes": "Core browser game systems."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/Vheissu/emerald-bayou/tree/e87c03688263daadb1bfbf35efaddc5ab7d53912",
+        "claim": "Pinned public revision contains game source.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/Vheissu/emerald-bayou/blob/e87c03688263daadb1bfbf35efaddc5ab7d53912/README.md",
+        "claim": "README documents gameplay and live build.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/Vheissu/emerald-bayou/blob/e87c03688263daadb1bfbf35efaddc5ab7d53912/LICENSE",
+        "claim": "Pinned MIT license.",
+        "kind": "license"
+      }
+    ],
+    "aiProvenance": {
+      "status": "unknown",
+      "models": [],
+      "evidence": [],
+      "notes": "No exact preferred-model attribution established."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No public player or usage count recorded."
+    },
+    "editorialRank": {
+      "record_id": "emerald-bayou",
+      "position": 22,
+      "rationale": "playable game/demo; 11 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 11,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 6
+      }
+    },
+    "githubStars": 11,
+    "popularity": {
+      "repo_url": "https://github.com/Vheissu/emerald-bayou",
+      "stars": 11,
+      "status": "available",
+      "checked_at": "2026-09-11T02:30:00Z",
+      "evidence_url": "https://api.github.com/repos/Vheissu/emerald-bayou",
+      "notes": "Public GitHub API observation; count changes over time."
     }
   },
   {
@@ -2264,6 +3734,331 @@ window.HEADSTART_CATALOG = [
     }
   },
   {
+    "id": "p-doom",
+    "title": "P(DOOM): The Alignment Problem",
+    "summary": "A grimy Doom-inspired browser FPS parody with close-range combat, distinct enemy archetypes and a final shutdown encounter.",
+    "genres": [
+      "first-person-shooter",
+      "action",
+      "parody"
+    ],
+    "runtime": "Three.js / Next.js",
+    "label": "Play demo",
+    "demoUrl": "https://p-doom.transitivebullsh.it",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/transitive-bullshit/ai-safety-doom",
+    "projectUrl": "https://p-doom.transitivebullsh.it",
+    "commit": "5b7f433d9df121ba9c9a4d998a668954278f0b76",
+    "creator": "Travis Fischer and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Travis Fischer and contributors",
+      "licenseExpression": "MIT AND LicenseRef-PDOOM-Notices",
+      "licenseUrls": [
+        "https://opensource.org/license/mit"
+      ],
+      "sourcePage": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/docs/images/arrival.jpg",
+      "licenseEvidenceUrl": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/NOTICES.md",
+      "captureDate": null,
+      "versionRelation": "Pinned repository image at the indexed source commit.",
+      "alt": "First-person P(DOOM) gameplay on the Arrival Platform, with the player weapon, enemies, mission objective, and status HUD visible.",
+      "sha256": "25b3ddd858038a5bae291cb14208df396c0df95c063b695a0a342dddb5a8a8a2",
+      "originalUrl": "https://raw.githubusercontent.com/transitive-bullshit/ai-safety-doom/5b7f433d9df121ba9c9a4d998a668954278f0b76/docs/images/arrival.jpg",
+      "allowedUse": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
+      "modifications": "Original repository bytes retained unchanged; site CSS may scale and crop.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/p-doom.jpg",
+      "localSourcePath": "research/catalog/media/p-doom.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "retro",
+      "pixel-art",
+      "science-fiction"
+    ],
+    "runtimeVersion": "three 0.185.1; Next.js 16.3.4",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked production URL returned HTTP 200 with HTML on 2026-09-11. This is a reachability check, not a complete playtest or source/deployment attestation.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/license",
+      "asset_status": "mixed",
+      "asset_notes": "Application code is MIT. NOTICES.md identifies generated art, OFL/CC0 media and several copyrighted Doom sound recordings excluded from the MIT grant.",
+      "scope_reuse_status": "review_required",
+      "notes": "The code license was inspected at the pinned revision. Preserve notices and review selected files, assets, data and dependencies before reuse."
+    },
+    "sourceInspectedAt": "2026-09-11T01:30:00Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/transitive-bullshit/ai-safety-doom/tree/5b7f433d9df121ba9c9a4d998a668954278f0b76",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "combat",
+      "enemy-ai",
+      "level-progression"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Shooter runtime",
+        "category": "combat",
+        "evidence_url": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/lib/game/runtime.ts",
+        "source_path": "lib/game/runtime.ts",
+        "status": "source_inspected",
+        "notes": "Owns the real-time simulation and player combat loop. No extraction or target integration test."
+      },
+      {
+        "name": "Enemy and boss model",
+        "category": "enemy-ai",
+        "evidence_url": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/lib/game/model.ts",
+        "source_path": "lib/game/model.ts",
+        "status": "source_inspected",
+        "notes": "Defines encounter state, enemy behavior and boss progression. No extraction or target integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/transitive-bullshit/ai-safety-doom/tree/5b7f433d9df121ba9c9a4d998a668954278f0b76",
+        "claim": "Pinned public repository identity and immutable source revision inspected.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/readme.md",
+        "claim": "Project description, live-play link, controls and declared implementation context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/license",
+        "claim": "Project code license text inspected; assets and dependencies remain separate scopes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/lib/game/runtime.ts",
+        "claim": "Shooter runtime implementation entry points statically inspected.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/lib/game/model.ts",
+        "claim": "Enemy and boss model implementation entry points statically inspected.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "creator_attributed",
+      "models": [
+        "GPT-6 Astra"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/transitive-bullshit/ai-safety-doom/blob/5b7f433d9df121ba9c9a4d998a668954278f0b76/readme.md",
+          "claim": "Creator README credits GPT-6 Astra and Codex alongside the author and technical stack."
+        }
+      ],
+      "notes": "Creator attribution describes the reported development workflow; it is not a quality score, certification or exclusive-authorship claim."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No defensible public player or usage count was found during this audit."
+    },
+    "editorialRank": {
+      "record_id": "p-doom",
+      "position": 25,
+      "rationale": "playable game/demo; 6 GitHub stars observed; English interface evidenced; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 6,
+        "english_interface": true,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 6
+      }
+    },
+    "githubStars": 6,
+    "popularity": {
+      "repo_url": "https://github.com/transitive-bullshit/ai-safety-doom",
+      "stars": 6,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/transitive-bullshit/ai-safety-doom",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
+    }
+  },
+  {
+    "id": "little-flock",
+    "title": "Little Flock",
+    "summary": "A cooperative 3D sheep-farming game with shared farms, lamb care, gardening and progressive cottage construction.",
+    "genres": [
+      "multiplayer",
+      "cozy",
+      "farming",
+      "simulation"
+    ],
+    "runtime": "React Three Fiber / Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://sharpherd.song.work",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/songkeys/little-flock",
+    "projectUrl": "https://sharpherd.song.work",
+    "commit": "eaaa56184ad8f1b513ae81960075846663803886",
+    "creator": "songkeys and Little Flock contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "songkeys and Little Flock contributors",
+      "licenseExpression": "CC-BY-4.0",
+      "licenseUrls": [
+        "https://creativecommons.org/licenses/by/4.0/"
+      ],
+      "sourcePage": "https://github.com/songkeys/little-flock/blob/eaaa56184ad8f1b513ae81960075846663803886/docs/demo-poster.jpg",
+      "licenseEvidenceUrl": "https://github.com/songkeys/little-flock/blob/eaaa56184ad8f1b513ae81960075846663803886/ASSETS.md",
+      "captureDate": null,
+      "versionRelation": "Pinned repository image at the indexed source commit.",
+      "alt": "A shepherd and sheep in Little Flock’s shared pastoral valley.",
+      "sha256": "8a2a768ccc8467c5cd5cfe7d90764fa58d30010ef34a286ae2eef0a36b9ba8cf",
+      "originalUrl": "https://raw.githubusercontent.com/songkeys/little-flock/eaaa56184ad8f1b513ae81960075846663803886/docs/demo-poster.jpg",
+      "allowedUse": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
+      "modifications": "Original repository bytes retained unchanged; site CSS may scale and crop.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/little-flock.jpg",
+      "localSourcePath": "research/catalog/media/little-flock.jpg"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "stylized",
+      "pastoral",
+      "low-poly"
+    ],
+    "runtimeVersion": "react-three-fiber 9.3; three 0.180",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked production URL returned HTTP 200 with HTML on 2026-09-11. This is a reachability check, not a complete playtest or source/deployment attestation.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/songkeys/little-flock/blob/eaaa56184ad8f1b513ae81960075846663803886/LICENSE",
+      "asset_status": "mixed",
+      "asset_notes": "Code/docs are MIT; project artwork, cottage model and demo media are CC-BY-4.0 with ASSETS.md credits.",
+      "scope_reuse_status": "review_required",
+      "notes": "The code license was inspected at the pinned revision. Preserve notices and review selected files, assets, data and dependencies before reuse."
+    },
+    "sourceInspectedAt": "2026-09-11T01:30:00Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/songkeys/little-flock/tree/eaaa56184ad8f1b513ae81960075846663803886",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "multiplayer-state",
+      "construction-progression",
+      "resource-loop"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Shared farm server",
+        "category": "multiplayer-state",
+        "evidence_url": "https://github.com/songkeys/little-flock/blob/eaaa56184ad8f1b513ae81960075846663803886/server/game.go",
+        "source_path": "server/game.go",
+        "status": "source_inspected",
+        "notes": "Server-owned resource changes and rules persist successful actions before WebSocket broadcasts. No extraction or target integration test."
+      },
+      {
+        "name": "Progressive cottage and journey",
+        "category": "construction-progression",
+        "evidence_url": "https://github.com/songkeys/little-flock/blob/eaaa56184ad8f1b513ae81960075846663803886/src/game/progression.ts",
+        "source_path": "src/game/progression.ts",
+        "status": "source_inspected",
+        "notes": "Client progression state drives construction and guided milestones. No extraction or target integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/songkeys/little-flock/tree/eaaa56184ad8f1b513ae81960075846663803886",
+        "claim": "Pinned public repository identity and immutable source revision inspected.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/songkeys/little-flock/blob/eaaa56184ad8f1b513ae81960075846663803886/README.md",
+        "claim": "Project description, live-play link, controls and declared implementation context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/songkeys/little-flock/blob/eaaa56184ad8f1b513ae81960075846663803886/LICENSE",
+        "claim": "Project code license text inspected; assets and dependencies remain separate scopes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/songkeys/little-flock/blob/eaaa56184ad8f1b513ae81960075846663803886/server/game.go",
+        "claim": "Shared farm server implementation entry points statically inspected.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/songkeys/little-flock/blob/eaaa56184ad8f1b513ae81960075846663803886/src/game/progression.ts",
+        "claim": "Progressive cottage and journey implementation entry points statically inspected.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "creator_attributed",
+      "models": [
+        "GPT-6 Astra"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/songkeys/little-flock/blob/eaaa56184ad8f1b513ae81960075846663803886/README.md",
+          "claim": "Creator README states the complete game was made one-shot with GPT 6 Astra in Codex using one /goal run."
+        }
+      ],
+      "notes": "Creator attribution describes the reported development workflow; it is not a quality score, certification or exclusive-authorship claim."
+    },
+    "interfaceLanguages": [
+      "zh-CN"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No defensible public player or usage count was found during this audit."
+    },
+    "editorialRank": {
+      "record_id": "little-flock",
+      "position": 26,
+      "rationale": "playable game/demo; 6 GitHub stars observed; non-English interface labeled; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 6,
+        "english_interface": false,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 7
+      }
+    },
+    "githubStars": 6,
+    "popularity": {
+      "repo_url": "https://github.com/songkeys/little-flock",
+      "stars": 6,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/songkeys/little-flock",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
+    }
+  },
+  {
     "id": "open-city-maker",
     "title": "CityMaker",
     "summary": "A city-themed 2048 puzzle with procedural architectural tiers.",
@@ -2444,6 +4239,168 @@ window.HEADSTART_CATALOG = [
     }
   },
   {
+    "id": "apex-formula",
+    "title": "Apex Formula",
+    "summary": "A deep browser Formula racing simulation with twenty cars, pit strategy, changing weather, replays and multiple camera systems.",
+    "genres": [
+      "racing",
+      "simulation",
+      "sports"
+    ],
+    "runtime": "Three.js",
+    "label": "Play demo",
+    "demoUrl": "https://bridge-mind.github.io/apex-formula/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/bridge-mind/apex-formula",
+    "projectUrl": "https://bridge-mind.github.io/apex-formula/",
+    "commit": "e5292b85c9a8773fd2a5e2b55df570d5da963488",
+    "creator": "BridgeMind",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "BridgeMind; screenshot captured by HeadStart",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://opensource.org/license/mit"
+      ],
+      "sourcePage": "https://bridge-mind.github.io/apex-formula/",
+      "licenseEvidenceUrl": "https://github.com/bridge-mind/apex-formula/blob/e5292b85c9a8773fd2a5e2b55df570d5da963488/LICENSE",
+      "captureDate": "2026-09-11",
+      "versionRelation": "Live deployment capture; deployed source revision is not attested.",
+      "alt": "Apex Formula title screen with a procedural red Formula car.",
+      "sha256": "b89f79ad676efa1176f57364f4dcb37c3d44e7554a9a587b3a0aa60ab0b04993",
+      "originalUrl": "https://bridge-mind.github.io/apex-formula/",
+      "allowedUse": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
+      "modifications": "Captured at 1280x800; otherwise unchanged.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/apex-formula.png",
+      "localSourcePath": "research/catalog/media/apex-formula.png"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "procedural",
+      "motorsport",
+      "realistic"
+    ],
+    "runtimeVersion": "three 0.185.1",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked production URL returned HTTP 200 with HTML on 2026-09-11. This is a reachability check, not a complete playtest or source/deployment attestation.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/bridge-mind/apex-formula/blob/e5292b85c9a8773fd2a5e2b55df570d5da963488/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Repository media and depicted assets require selected-scope review.",
+      "scope_reuse_status": "review_required",
+      "notes": "The code license was inspected at the pinned revision. Preserve notices and review selected files, assets, data and dependencies before reuse."
+    },
+    "sourceInspectedAt": "2026-09-11T01:30:00Z",
+    "integrationFamily": "threejs-r3f-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/bridge-mind/apex-formula/tree/e5292b85c9a8773fd2a5e2b55df570d5da963488",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "vehicle-physics",
+      "ai-racing",
+      "replay"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "120 Hz vehicle simulation",
+        "category": "vehicle-physics",
+        "evidence_url": "https://github.com/bridge-mind/apex-formula/blob/e5292b85c9a8773fd2a5e2b55df570d5da963488/src/physics/VehiclePhysics.ts",
+        "source_path": "src/physics/VehiclePhysics.ts",
+        "status": "source_inspected",
+        "notes": "Coordinates suspension, tyre, aero, drivetrain and collision state. No extraction or target integration test."
+      },
+      {
+        "name": "Race strategy and weather",
+        "category": "ai-racing",
+        "evidence_url": "https://github.com/bridge-mind/apex-formula/blob/e5292b85c9a8773fd2a5e2b55df570d5da963488/src/race/Strategy.ts",
+        "source_path": "src/race/Strategy.ts",
+        "status": "source_inspected",
+        "notes": "Models tyre and pit decisions alongside changing race conditions. No extraction or target integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/bridge-mind/apex-formula/tree/e5292b85c9a8773fd2a5e2b55df570d5da963488",
+        "claim": "Pinned public repository identity and immutable source revision inspected.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/bridge-mind/apex-formula/blob/e5292b85c9a8773fd2a5e2b55df570d5da963488/README.md",
+        "claim": "Project description, live-play link, controls and declared implementation context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/bridge-mind/apex-formula/blob/e5292b85c9a8773fd2a5e2b55df570d5da963488/LICENSE",
+        "claim": "Project code license text inspected; assets and dependencies remain separate scopes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/bridge-mind/apex-formula/blob/e5292b85c9a8773fd2a5e2b55df570d5da963488/src/physics/VehiclePhysics.ts",
+        "claim": "120 Hz vehicle simulation implementation entry points statically inspected.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/bridge-mind/apex-formula/blob/e5292b85c9a8773fd2a5e2b55df570d5da963488/src/race/Strategy.ts",
+        "claim": "Race strategy and weather implementation entry points statically inspected.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "creator_attributed",
+      "models": [
+        "Fable 5.1"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/bridge-mind/apex-formula/blob/e5292b85c9a8773fd2a5e2b55df570d5da963488/README.md",
+          "claim": "Maintainer README states Claude Fable 5.1 led ten parallel sub-agents against a shared architecture contract."
+        }
+      ],
+      "notes": "Creator attribution describes the reported development workflow; it is not a quality score, certification or exclusive-authorship claim."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No defensible public player or usage count was found during this audit."
+    },
+    "editorialRank": {
+      "record_id": "apex-formula",
+      "position": 28,
+      "rationale": "playable game/demo; 2 GitHub stars observed; English interface evidenced; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 2,
+        "english_interface": true,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 6
+      }
+    },
+    "githubStars": 2,
+    "popularity": {
+      "repo_url": "https://github.com/bridge-mind/apex-formula",
+      "stars": 2,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/bridge-mind/apex-formula",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
+    }
+  },
+  {
     "id": "slimcity",
     "title": "SlimCity",
     "summary": "A compact city simulation with separate economic, road-network and rendering modules.",
@@ -2599,6 +4556,472 @@ window.HEADSTART_CATALOG = [
       "checked_at": "2026-09-10T19:48:26Z",
       "evidence_url": "https://api.github.com/repos/rbenzing/SlimCityGame",
       "notes": "Observed GitHub stargazers_count for the whole repository; shared by its subprojects. A popularity signal, not quality or compatibility evidence."
+    }
+  },
+  {
+    "id": "berlin-walk",
+    "title": "Berlin Walk",
+    "summary": "A walkable and flyable raw-WebGL reconstruction of central Berlin built from OpenStreetMap geometry.",
+    "genres": [
+      "exploration",
+      "walking-simulator",
+      "geospatial"
+    ],
+    "runtime": "WebGL2",
+    "label": "Play demo",
+    "demoUrl": "https://adilzhany.github.io/berlin-walk/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/adilzhanY/berlin-walk",
+    "projectUrl": "https://adilzhany.github.io/berlin-walk/",
+    "commit": "8afa9c84d80c6b476de23d8239c2c9b4b1770003",
+    "creator": "Adilzhan and contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "Adilzhan; OpenStreetMap contributors",
+      "licenseExpression": "MIT AND ODbL-1.0",
+      "licenseUrls": [
+        "https://opensource.org/license/mit",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "sourcePage": "https://github.com/adilzhanY/berlin-walk/blob/8afa9c84d80c6b476de23d8239c2c9b4b1770003/docs/screenshots/01_spawn_pariser_platz.png",
+      "licenseEvidenceUrl": "https://github.com/adilzhanY/berlin-walk/blob/8afa9c84d80c6b476de23d8239c2c9b4b1770003/README.md",
+      "captureDate": null,
+      "versionRelation": "Pinned repository image at the indexed source commit.",
+      "alt": "Berlin Walk view of Pariser Platz and the Brandenburg Gate.",
+      "sha256": "bb5fa2179c7552e8e756e73b3067468d56e7817ff3238a6b79017c5b521afbf5",
+      "originalUrl": "https://raw.githubusercontent.com/adilzhanY/berlin-walk/8afa9c84d80c6b476de23d8239c2c9b4b1770003/docs/screenshots/01_spawn_pariser_platz.png",
+      "allowedUse": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
+      "modifications": "Original repository bytes retained unchanged; site CSS may scale and crop.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/berlin-walk.png",
+      "localSourcePath": "research/catalog/media/berlin-walk.png"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "urban",
+      "real-world",
+      "stylized"
+    ],
+    "runtimeVersion": "esbuild 0.28.2",
+    "runtimeVersionStatus": "inspected",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked production URL returned HTTP 200 with HTML on 2026-09-11. This is a reachability check, not a complete playtest or source/deployment attestation.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/adilzhanY/berlin-walk/blob/8afa9c84d80c6b476de23d8239c2c9b4b1770003/LICENSE",
+      "asset_status": "mixed",
+      "asset_notes": "Application code is MIT; map data is credited to OpenStreetMap contributors under ODbL and must retain attribution.",
+      "scope_reuse_status": "review_required",
+      "notes": "The code license was inspected at the pinned revision. Preserve notices and review selected files, assets, data and dependencies before reuse."
+    },
+    "sourceInspectedAt": "2026-09-11T01:30:00Z",
+    "integrationFamily": "other-web-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/adilzhanY/berlin-walk/tree/8afa9c84d80c6b476de23d8239c2c9b4b1770003",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "world-streaming",
+      "first-person-movement",
+      "day-night-cycle"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Walk and flight controller",
+        "category": "first-person-movement",
+        "evidence_url": "https://github.com/adilzhanY/berlin-walk/blob/8afa9c84d80c6b476de23d8239c2c9b4b1770003/src/engine/controller.js",
+        "source_path": "src/engine/controller.js",
+        "status": "source_inspected",
+        "notes": "Owns walking, collision-aware movement and flight controls. No extraction or target integration test."
+      },
+      {
+        "name": "Tiled world renderer",
+        "category": "world-streaming",
+        "evidence_url": "https://github.com/adilzhanY/berlin-walk/blob/8afa9c84d80c6b476de23d8239c2c9b4b1770003/src/engine/tiles.js",
+        "source_path": "src/engine/tiles.js",
+        "status": "source_inspected",
+        "notes": "Loads and manages built city tiles around the camera. No extraction or target integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/adilzhanY/berlin-walk/tree/8afa9c84d80c6b476de23d8239c2c9b4b1770003",
+        "claim": "Pinned public repository identity and immutable source revision inspected.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/adilzhanY/berlin-walk/blob/8afa9c84d80c6b476de23d8239c2c9b4b1770003/README.md",
+        "claim": "Project description, live-play link, controls and declared implementation context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/adilzhanY/berlin-walk/blob/8afa9c84d80c6b476de23d8239c2c9b4b1770003/LICENSE",
+        "claim": "Project code license text inspected; assets and dependencies remain separate scopes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/adilzhanY/berlin-walk/blob/8afa9c84d80c6b476de23d8239c2c9b4b1770003/src/engine/controller.js",
+        "claim": "Walk and flight controller implementation entry points statically inspected.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/adilzhanY/berlin-walk/blob/8afa9c84d80c6b476de23d8239c2c9b4b1770003/src/engine/tiles.js",
+        "claim": "Tiled world renderer implementation entry points statically inspected.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "creator_attributed",
+      "models": [
+        "Fable 5.1"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/adilzhanY/berlin-walk/blob/8afa9c84d80c6b476de23d8239c2c9b4b1770003/README.md",
+          "claim": "Maintainer README states Claude Fable 5.1 built the project end to end from one prompt in Claude Code."
+        }
+      ],
+      "notes": "Creator attribution describes the reported development workflow; it is not a quality score, certification or exclusive-authorship claim."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No defensible public player or usage count was found during this audit."
+    },
+    "editorialRank": {
+      "record_id": "berlin-walk",
+      "position": 30,
+      "rationale": "playable game/demo; 1 GitHub stars observed; English interface evidenced; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 1,
+        "english_interface": true,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 6
+      }
+    },
+    "githubStars": 1,
+    "popularity": {
+      "repo_url": "https://github.com/adilzhanY/berlin-walk",
+      "stars": 1,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/adilzhanY/berlin-walk",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
+    }
+  },
+  {
+    "id": "protocol-99-entry-001",
+    "title": "Protocol 99: Entry 001",
+    "summary": "A playable English browser game selected for distinctive interactive systems and genre breadth.",
+    "genres": [
+      "action",
+      "top-down",
+      "arcade"
+    ],
+    "runtime": "Canvas 2D",
+    "label": "Play demo",
+    "demoUrl": "https://aidong27.github.io/99-ai-games/entries/001-openai-gpt-6-user-declared-codex/runs/run-raw-20260904-194605-codex/game/?seed=99",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/aidong27/99-ai-games",
+    "projectUrl": "https://aidong27.github.io/99-ai-games/entries/001-openai-gpt-6-user-declared-codex/runs/run-raw-20260904-194605-codex/game/?seed=99",
+    "commit": "6db39254d260d8e1627788c5ea6398449d3a4b0b",
+    "creator": "aidong27",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "aidong27",
+      "licenseExpression": "MIT repository; media rights need scope review",
+      "licenseUrls": [
+        "https://github.com/aidong27/99-ai-games/blob/6db39254d260d8e1627788c5ea6398449d3a4b0b/LICENSE"
+      ],
+      "sourcePage": "https://github.com/aidong27/99-ai-games/blob/6db39254d260d8e1627788c5ea6398449d3a4b0b/entries/001-openai-gpt-6-user-declared-codex/runs/run-raw-20260904-194605-codex/evidence/screenshots/gameplay.png",
+      "licenseEvidenceUrl": "https://github.com/aidong27/99-ai-games/blob/6db39254d260d8e1627788c5ea6398449d3a4b0b/LICENSE",
+      "captureDate": "2026-09-11",
+      "versionRelation": "Stored at pinned revision.",
+      "alt": "Authentic Protocol 99: Entry 001 gameplay media.",
+      "sha256": "7336a2ce2443006bffe42311058568df8173cfa011105ef4f7fb101609002972",
+      "originalUrl": "https://raw.githubusercontent.com/aidong27/99-ai-games/6db39254d260d8e1627788c5ea6398449d3a4b0b/entries/001-openai-gpt-6-user-declared-codex/runs/run-raw-20260904-194605-codex/evidence/screenshots/gameplay.png",
+      "allowedUse": "Local catalog display with credit and source link.",
+      "modifications": "Unmodified upstream bytes.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/protocol-99-entry-001.png",
+      "localSourcePath": "research/catalog/media/protocol-99-entry-001.png"
+    },
+    "contentKind": "game",
+    "dimension": "3d",
+    "visualStyle": [
+      "stylized"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked live build; reachability checked, gameplay compatibility untested.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/aidong27/99-ai-games/blob/6db39254d260d8e1627788c5ea6398449d3a4b0b/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Repository gameplay image is locally displayed; downstream reuse needs review.",
+      "scope_reuse_status": "review_required",
+      "notes": "MIT code inspected; asset/dependency rights remain scope-specific."
+    },
+    "sourceInspectedAt": "2026-09-11T02:30:00Z",
+    "integrationFamily": "other-web-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/aidong27/99-ai-games/tree/6db39254d260d8e1627788c5ea6398449d3a4b0b",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "gameplay-loop",
+      "interaction",
+      "browser-runtime"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Playable game systems",
+        "category": "gameplay-loop",
+        "evidence_url": "https://github.com/aidong27/99-ai-games/tree/6db39254d260d8e1627788c5ea6398449d3a4b0b/game/src/main.js",
+        "source_path": "game/src/main.js",
+        "status": "source_inspected",
+        "notes": "Core browser game systems."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/aidong27/99-ai-games/tree/6db39254d260d8e1627788c5ea6398449d3a4b0b",
+        "claim": "Pinned public revision contains game source.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/aidong27/99-ai-games/blob/6db39254d260d8e1627788c5ea6398449d3a4b0b/README.md",
+        "claim": "README documents gameplay and live build.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/aidong27/99-ai-games/blob/6db39254d260d8e1627788c5ea6398449d3a4b0b/LICENSE",
+        "claim": "Pinned MIT license.",
+        "kind": "license"
+      }
+    ],
+    "aiProvenance": {
+      "status": "creator_attributed",
+      "models": [
+        "GPT-6 (user-declared) × Codex"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/aidong27/99-ai-games/blob/6db39254d260d8e1627788c5ea6398449d3a4b0b/README.md",
+          "claim": "Repository labels Entry 001 GPT-6 user-declared with Codex."
+        }
+      ],
+      "notes": "Does not establish GPT-6 Astra."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No public player or usage count recorded."
+    },
+    "editorialRank": {
+      "record_id": "protocol-99-entry-001",
+      "position": 31,
+      "rationale": "playable game/demo; 1 GitHub stars observed; English interface evidenced.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 1,
+        "english_interface": true,
+        "preferred_model_provenance": false,
+        "genre_capability_breadth": 6
+      }
+    },
+    "githubStars": 1,
+    "popularity": {
+      "repo_url": "https://github.com/aidong27/99-ai-games",
+      "stars": 1,
+      "status": "available",
+      "checked_at": "2026-09-11T02:30:00Z",
+      "evidence_url": "https://api.github.com/repos/aidong27/99-ai-games",
+      "notes": "Public GitHub API observation; count changes over time."
+    }
+  },
+  {
+    "id": "skysprout",
+    "title": "SkySprout",
+    "summary": "An original three-world pixel platformer with precision jumps, coins, enemies and sun-shard goals.",
+    "genres": [
+      "platformer",
+      "action",
+      "arcade"
+    ],
+    "runtime": "Canvas 2D",
+    "label": "Play demo",
+    "demoUrl": "https://dubsopenhub.github.io/skysprout/",
+    "demoKind": "browser",
+    "repoUrl": "https://github.com/DUBSOpenHub/skysprout",
+    "projectUrl": "https://dubsopenhub.github.io/skysprout/",
+    "commit": "8c0484fc4243cc98507173d4b49a5658ff8b960f",
+    "creator": "DUBSOpenHub contributors",
+    "readiness": "review_required",
+    "preview": {
+      "credit": "DUBSOpenHub contributors",
+      "licenseExpression": "MIT",
+      "licenseUrls": [
+        "https://opensource.org/license/mit"
+      ],
+      "sourcePage": "https://github.com/DUBSOpenHub/skysprout/blob/8c0484fc4243cc98507173d4b49a5658ff8b960f/docs/images/skysprout-meadow.png",
+      "licenseEvidenceUrl": "https://github.com/DUBSOpenHub/skysprout/blob/8c0484fc4243cc98507173d4b49a5658ff8b960f/LICENSE",
+      "captureDate": null,
+      "versionRelation": "Pinned repository image at the indexed source commit.",
+      "alt": "SkySprout hero jumping through Sunlit Meadow among coins and enemies.",
+      "sha256": "66680a39cdf7bc0d11de4e24a7820b7acbea70f67734624cab3cae01ee74d49c",
+      "originalUrl": "https://raw.githubusercontent.com/DUBSOpenHub/skysprout/8c0484fc4243cc98507173d4b49a5658ff8b960f/docs/images/skysprout-meadow.png",
+      "allowedUse": "HeadStart catalog identification and preview display for this exact image with listed credit and terms; no endorsement, model-quality claim or blanket game-asset clearance.",
+      "modifications": "Original repository bytes retained unchanged; site CSS may scale and crop.",
+      "rightsStatus": "reviewed_for_catalog_display",
+      "reviewer": "/root/critical_review",
+      "src": "assets/catalog/skysprout.png",
+      "localSourcePath": "research/catalog/media/skysprout.png"
+    },
+    "contentKind": "game",
+    "dimension": "2d",
+    "visualStyle": [
+      "pixel-art",
+      "colorful",
+      "fantasy"
+    ],
+    "runtimeVersion": null,
+    "runtimeVersionStatus": "unknown",
+    "interactiveStatus": "not_tested",
+    "demoSourceRelation": "maintainer_linked",
+    "demoNotes": "Maintainer-linked production URL returned HTTP 200 with HTML on 2026-09-11. This is a reachability check, not a complete playtest or source/deployment attestation.",
+    "rights": {
+      "code_license": "MIT",
+      "code_status": "inspected",
+      "code_evidence_url": "https://github.com/DUBSOpenHub/skysprout/blob/8c0484fc4243cc98507173d4b49a5658ff8b960f/LICENSE",
+      "asset_status": "unreviewed",
+      "asset_notes": "Repository media and depicted assets require selected-scope review.",
+      "scope_reuse_status": "review_required",
+      "notes": "The code license was inspected at the pinned revision. Preserve notices and review selected files, assets, data and dependencies before reuse."
+    },
+    "sourceInspectedAt": "2026-09-11T01:30:00Z",
+    "integrationFamily": "other-web-candidate",
+    "catalogStatus": "local_research_preview",
+    "discoveryDecision": "review_pending",
+    "sourceAvailability": "pinned_public_source",
+    "pinnedSourceUrl": "https://github.com/DUBSOpenHub/skysprout/tree/8c0484fc4243cc98507173d4b49a5658ff8b960f",
+    "platforms": [
+      "browser"
+    ],
+    "platformKind": "browser",
+    "capabilities": [
+      "platformer-movement",
+      "level-progression"
+    ],
+    "buildingBlocks": [
+      {
+        "name": "Deterministic platformer engine",
+        "category": "platformer-movement",
+        "evidence_url": "https://github.com/DUBSOpenHub/skysprout/blob/8c0484fc4243cc98507173d4b49a5658ff8b960f/engine.js",
+        "source_path": "engine.js",
+        "status": "source_inspected",
+        "notes": "Separates physics, input and state transitions from browser rendering. No extraction or target integration test."
+      },
+      {
+        "name": "Three-world game shell",
+        "category": "level-progression",
+        "evidence_url": "https://github.com/DUBSOpenHub/skysprout/blob/8c0484fc4243cc98507173d4b49a5658ff8b960f/game.js",
+        "source_path": "game.js",
+        "status": "source_inspected",
+        "notes": "Connects world definitions, rendering, input and progression. No extraction or target integration test."
+      }
+    ],
+    "sourceEvidence": [
+      {
+        "url": "https://github.com/DUBSOpenHub/skysprout/tree/8c0484fc4243cc98507173d4b49a5658ff8b960f",
+        "claim": "Pinned public repository identity and immutable source revision inspected.",
+        "kind": "repository"
+      },
+      {
+        "url": "https://github.com/DUBSOpenHub/skysprout/blob/8c0484fc4243cc98507173d4b49a5658ff8b960f/README.md",
+        "claim": "Project description, live-play link, controls and declared implementation context inspected.",
+        "kind": "readme"
+      },
+      {
+        "url": "https://github.com/DUBSOpenHub/skysprout/blob/8c0484fc4243cc98507173d4b49a5658ff8b960f/LICENSE",
+        "claim": "Project code license text inspected; assets and dependencies remain separate scopes.",
+        "kind": "license"
+      },
+      {
+        "url": "https://github.com/DUBSOpenHub/skysprout/blob/8c0484fc4243cc98507173d4b49a5658ff8b960f/engine.js",
+        "claim": "Deterministic platformer engine implementation entry points statically inspected.",
+        "kind": "source"
+      },
+      {
+        "url": "https://github.com/DUBSOpenHub/skysprout/blob/8c0484fc4243cc98507173d4b49a5658ff8b960f/game.js",
+        "claim": "Three-world game shell implementation entry points statically inspected.",
+        "kind": "source"
+      }
+    ],
+    "aiProvenance": {
+      "status": "creator_attributed",
+      "models": [
+        "GPT-6 Astra"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/DUBSOpenHub/skysprout/blob/8c0484fc4243cc98507173d4b49a5658ff8b960f/README.md",
+          "claim": "Creator README records model identifier gpt-6-astra in GitHub Copilot CLI for the one-shot build."
+        }
+      ],
+      "notes": "Creator attribution describes the reported development workflow; it is not a quality score, certification or exclusive-authorship claim."
+    },
+    "interfaceLanguages": [
+      "en"
+    ],
+    "notoriety": {
+      "status": "unknown",
+      "metrics": [],
+      "notes": "No defensible public player or usage count was found during this audit."
+    },
+    "editorialRank": {
+      "record_id": "skysprout",
+      "position": 32,
+      "rationale": "playable game/demo; 1 GitHub stars observed; English interface evidenced; creator-attributed preferred model.",
+      "signals": {
+        "usage_evidence": false,
+        "github_stars": 1,
+        "english_interface": true,
+        "preferred_model_provenance": true,
+        "genre_capability_breadth": 5
+      }
+    },
+    "githubStars": 1,
+    "popularity": {
+      "repo_url": "https://github.com/DUBSOpenHub/skysprout",
+      "stars": 1,
+      "status": "available",
+      "checked_at": "2026-09-11T01:23:00Z",
+      "evidence_url": "https://api.github.com/repos/DUBSOpenHub/skysprout",
+      "notes": "Observed from the public GitHub repository API on the stated date; stars are repository-level popularity, not player or quality counts."
     }
   },
   {

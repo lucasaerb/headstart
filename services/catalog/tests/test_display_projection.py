@@ -13,7 +13,7 @@ class DisplayProjectionTest(unittest.TestCase):
         combined=include_missing_references(existing,research)
         recent={r['id'] for r in json.loads((ROOT/'research/catalog/records/recent-vibe.json').read_text())}
         self.assertEqual(combined,existing)
-        self.assertEqual(len(existing),25)
-        self.assertTrue(recent.isdisjoint({r['id'] for r in combined}))
+        self.assertEqual(len(existing),41)
+        self.assertTrue(recent <= {r['id'] for r in combined})
         self.assertEqual(len(research),41)
         self.assertEqual(include_missing_references(combined,research),combined)

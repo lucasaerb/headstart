@@ -153,7 +153,7 @@ Optional semantic search setup and frozen evaluation are documented in `services
 
 ## Production release — 10 September 2026
 
-The current local catalog revision contains 41 strictly gated browser research records. Twenty-five media rows retain independent local-display approval; the 16-row recent batch is withheld from local site/API projection pending the exact-set independent decision in `docs/reviews/recent-vibe-games/media-approval-request.json`. This local state has not been deployed.
+The current local catalog revision contains 41 strictly gated browser research records. All 41 media rows have independent narrow local-display approval; the recent 16-row exact-set decision is recorded in `docs/reviews/recent-vibe-games/media-approval-request.json`. This local state has not been deployed.
 
 The user authorized merging the reviewed backlog and making it live at https://headstart-virid.vercel.app/. Deployment `dpl_Bj9R1Rhi4KhU9WVg34KMYQ2oBXiQ` packages source `7a3a587`, independently accepted in `docs/reviews/production-catalog-release.md`. The C4 design is preserved. The live Python catalog API serves 76 research references and 32 eligible scoped versions (30 components plus two project versions), with actual pinned ONNX semantic retrieval; source-reviewed is not integration-tested. Demo emails remain in private Vercel Blob, with separate optional marketing consent.
 

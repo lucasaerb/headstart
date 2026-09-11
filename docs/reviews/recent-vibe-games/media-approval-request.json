@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "instructions": "Independent reviewer: inspect each exact local media file, pinned source page, alt text, credit and narrow display scope. Replace every blank/pending field with an independent decision. The apply command rejects missing, extra, duplicate, rejected, blank, self-authored, non-PASS, or timezone-less decisions.",
+  "instructions": "Completed exact-set independent decision. The application gate rejects any missing, extra, duplicate, rejected, blank, self-authored, non-PASS, or timezone-less decision.",
   "records": [
     {
       "record_id": "little-flock",

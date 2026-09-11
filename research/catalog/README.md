@@ -47,13 +47,13 @@ research/catalog/.venv/bin/python -m pip install -r research/catalog/requirement
 research/catalog/.venv/bin/python research/catalog/scripts/media_contact_sheet.py
 ```
 
-The 25 legacy rows retain their prior independent local-display decisions. The 16 recent rows are an exact pending batch described in [the approval request](../../docs/reviews/recent-vibe-games/MEDIA-APPROVAL-REQUEST.md). Until one independent decision file covers exactly all 16 with named reviewer, timezone-aware timestamp and a `PASS` verdict, those images fail closed from the dashboard/API projection. Missing, extra, duplicate, rejected, blank, self-authored or timezone-less decisions are rejected. The contact sheet samples the middle frame of animated media and the reproduction test checks its dimensions, credit count, and animated-frame readability.
+All 41 rows have independent narrow local-display decisions. The 16 recent decisions are recorded as an exact set in [the completed approval file](../../docs/reviews/recent-vibe-games/media-approval-request.json), with reviewer, timezone-aware timestamp, and `PASS` verdict. The gate continues to reject missing, extra, duplicate, rejected, blank, self-authored, non-`PASS`, or timezone-less decisions. The contact sheet samples the middle frame of animated media and the reproduction test checks its dimensions, credit count, and animated-frame readability.
 
 The collected originals remain unchanged. The contact sheet only scales copies to fit. Keep the image credits, manifest, license notices and source references with distributed media; local display approval does not establish broader asset reuse rights.
 
 ## Evidence boundaries
 
-All 41 research rows have pinned public source revisions, inspected open-source code licenses, authentic record-specific media, positive dated GitHub-star observations and reachable browser play URLs. Research inclusion remains distinct from independent dashboard-media approval: the 16 recent images are withheld from projection until their exact-set review passes. Source slices remain untested for integration and demo reachability is not a play attestation.
+All 41 research rows have pinned public source revisions, inspected open-source code licenses, authentic record-specific media, positive dated GitHub-star observations and reachable browser play URLs. Research inclusion remains distinct from independent dashboard-media approval; all 41 current images now carry independent review stamps and project. Source slices remain untested for integration and demo reachability is not a play attestation.
 
 The HTTP audit records reachability separately from play, follows bounded redirects, limits downloaded response bytes, and records blocked/restricted/failing URLs honestly. It is a local curated-data helper, not the future public ingestion service. Repeat observations can differ across time and network environments; retain the newer report and investigate disagreements. Native download links are not browser demos. No performance or royalty agreement is inferred from this research.
 

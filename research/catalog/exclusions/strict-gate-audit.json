@@ -537,7 +537,7 @@
     },
     {
       "record_id": "little-flock",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -545,15 +545,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "p-doom",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -561,15 +559,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "apex-formula",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -577,15 +573,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "turbo-kart-rush",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -593,15 +587,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "berlin-walk",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -609,15 +601,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "skysprout",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -625,15 +615,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "glenn-explore",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -641,15 +629,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "neomud",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -657,11 +643,9 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "openrct2",
@@ -1323,7 +1307,7 @@
     },
     {
       "record_id": "server-survival",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -1331,15 +1315,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "moon-rover",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -1347,15 +1329,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "operation-ironhold",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -1363,15 +1343,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "emerald-bayou",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -1379,15 +1357,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "cadle",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -1395,15 +1371,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "jungle-trail",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -1411,15 +1385,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "datacenter-survival",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -1427,15 +1399,13 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     },
     {
       "record_id": "protocol-99-entry-001",
-      "listed": false,
+      "listed": true,
       "gates": {
         "pinned_public_source": true,
         "inspected_open_source_license": true,
@@ -1443,11 +1413,9 @@
         "positive_github_stars": true,
         "browser_demo": true,
         "live_play_reachable": true,
-        "independent_media_approval": false
+        "independent_media_approval": true
       },
-      "reasons": [
-        "independent_media_approval"
-      ]
+      "reasons": []
     }
   ]
 }
