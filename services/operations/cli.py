@@ -28,8 +28,7 @@ def main():
         if args.action=='register-demo':health.register(args.id,args.url,featured=args.featured);result={'registered':args.id}
         elif args.action=='reachability':result=health.run()
         elif args.action=='interactive':
-            report=run(config,image=args.image)
-            result={'evidenceDigest':health.record_interactive(args.id,config,report),'report':report}
+            result=health.run_interactive(args.id,config,image=args.image)
         elif args.action=='register-source':result={'id':monitor.register(config)}
         elif args.action=='sources':result=monitor.run_due()
         elif args.action=='dispatch':result=changes.dispatch(Queue(db))

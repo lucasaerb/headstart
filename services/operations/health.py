@@ -163,6 +163,26 @@ class HealthJobs:
             results.append({'target': target, 'kind': 'reachability', 'observedAt': now, 'category': category})
         return results
 
+    def run_interactive(self, target, plan, *, image, worker=None):
+        """Weekly due check with a crash-expiring lease; explicit local CLI only."""
+        from .browser import run, validate_plan
+        validate_plan(plan)
+        now=int(self.clock());key='interactive:'+str(target)
+        row=self.db.execute('SELECT url FROM health_targets WHERE id=?',(target,)).fetchone()
+        if not row or row[0]!=plan['url']:raise ValueError('Register the exact demo revision first')
+        with self.db:
+            self.db.execute('BEGIN IMMEDIATE')
+            latest=self.db.execute('SELECT MAX(observed_at) FROM health_interactive_records WHERE target=?',(target,)).fetchone()[0]
+            lease=self.db.execute('SELECT expires_at FROM health_leases WHERE target=?',(key,)).fetchone()
+            if latest is not None and now-latest<CADENCE['interactive']:return {'status':'not_due'}
+            if lease and lease[0]>now:return {'status':'already_running'}
+            self.db.execute('INSERT INTO health_leases VALUES(?,?) ON CONFLICT(target) DO UPDATE SET expires_at=excluded.expires_at',(key,now+120))
+        try:
+            report=(worker or run)(plan,image=image)
+            return {'status':'recorded','evidenceDigest':self.record_interactive(target,plan,report),'report':report}
+        finally:
+            with self.db:self.db.execute('DELETE FROM health_leases WHERE target=?',(key,))
+
     def record_interactive(self, target, plan, report):
         from .browser import validate_plan
         validate_plan(plan)

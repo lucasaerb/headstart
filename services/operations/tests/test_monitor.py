@@ -28,7 +28,11 @@ class MonitorTests(unittest.TestCase):
         jobs.register('demo-v1','https://example.com/game',featured=True)
         plan={'url':'https://example.com/game','steps':[{'name':'count','action':'click','input':'button','observe':'output','attribute':None,'before':'0','after':'1'}]}
         report={'schemaVersion':'headstart-interactive-check-1','planDigest':hashlib.sha256(json.dumps(plan,sort_keys=True,separators=(',',':')).encode()).hexdigest(),'observedAt':now[0],'category':'interactive_passed','checks':[{'passed':True},{'passed':True}]}
-        jobs.record_interactive('demo-v1',plan,report)
+        def worker(plan,**kwargs):
+            self.assertEqual(jobs.run_interactive('demo-v1',plan,image='fixture',worker=lambda *a,**k:self.fail('Lease ignored'))['status'],'already_running')
+            return report
+        jobs.run_interactive('demo-v1',plan,image='fixture',worker=worker)
+        self.assertEqual(jobs.run_interactive('demo-v1',plan,image='fixture',worker=lambda *a,**k:self.fail('Weekly cadence ignored'))['status'],'not_due')
         self.assertEqual(jobs.status()[0]['interactive']['status'],'interactive_passed')
         now[0]+=604801;self.assertTrue(jobs.status()[0]['interactive']['stale'])
         report['checks'].pop()
