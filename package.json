@@ -27,7 +27,8 @@
     "test:auth": "node tests/auth-ui.mjs",
     "test:submissions": "node services/submissions/tests/browser.mjs",
     "test:handoff": "node tests/handoff-ui.mjs",
-    "test:mcp": "node tools/dev/mcp-test.mjs"
+    "test:mcp": "node tools/dev/mcp-test.mjs",
+    "test:plugin-setup": "node tests/plugin-setup-ui.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",

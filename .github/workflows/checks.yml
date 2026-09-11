@@ -36,6 +36,9 @@ jobs:
       - run: npm run test:retrieval
         env:
           SCREENSHOT_DIR: test-results/retrieval
+      - run: npm run test:plugin-setup
+        env:
+          SCREENSHOT_DIR: test-results/plugin-setup
       - run: npm run test:mcp
       - run: npm run test:auth
         env:
