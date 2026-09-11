@@ -24,8 +24,11 @@ class EventTests(unittest.TestCase):
     def test_classification_and_deduplication(self):
         for i, kind in enumerate(sorted(EVENTS)):
             event = dict(self.event, eventId=f'{i:064x}', type=kind)
-            self.assertEqual(self.store.collect(event, consent=True)['status'], 'recorded')
-            self.assertEqual(self.store.collect(event, consent=True)['status'], 'duplicate')
+            if kind in ('plugin_lookup', 'first_plan'):
+                with self.assertRaises(ValueError):
+                    self.store.collect(event, consent=True)
+            self.assertEqual(self.store.collect(event, consent=True, completed_action=True)['status'], 'recorded')
+            self.assertEqual(self.store.collect(event, consent=True, completed_action=True)['status'], 'duplicate')
         counts = self.store.counts()
         self.assertTrue(all(value == 1 for value in counts['events'].values()))
         self.assertIsNone(counts['verifiedReuse'])

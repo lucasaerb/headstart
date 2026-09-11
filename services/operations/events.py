@@ -121,7 +121,7 @@ class EventStore:
     def subject(self, deletion_token):
         return hmac.new(self.salt, token(deletion_token).encode(), hashlib.sha256).hexdigest()
 
-    def collect(self, event, *, consent=False):
+    def collect(self, event, *, consent=False, completed_action=False):
         if not self.enabled or consent is not True:
             return {'status': 'disabled'}
         if not isinstance(event, dict) or set(event) - {'eventId', 'deletionToken', 'type', 'catalogId'}:
@@ -132,6 +132,8 @@ class EventStore:
         if not isinstance(kind, str) or kind not in EVENTS:
             # Verified reuse has a separate reviewed-evidence boundary, not a client event.
             raise ValueError('Unsupported interaction event')
+        if kind in ('plugin_lookup', 'first_plan') and completed_action is not True:
+            raise ValueError('This metric requires an observed successful local action')
         catalog_id = event.get('catalogId')
         if catalog_id is not None and (not isinstance(catalog_id, str) or catalog_id not in self.catalog_ids):
             raise ValueError('Unknown public catalog ID')
