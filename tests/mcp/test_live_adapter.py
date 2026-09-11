@@ -4,7 +4,7 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[2]/'HeadStart-Starter-Package/headstart-plugin/scripts'))
 import json, os, tempfile, threading, unittest
 from http.server import BaseHTTPRequestHandler, HTTPServer
-from live_catalog import LiveCatalog
+from live_catalog import LiveCatalog, digest
 from catalog_mcp import ToolError, Server
 from unittest.mock import patch
 
@@ -69,6 +69,15 @@ class TransportTests(unittest.TestCase):
   self.status=200;self.body=valid
   response=server.dispatch({'jsonrpc':'2.0','id':5,'method':'tools/call','params':{'name':'search_components','arguments':{}}})
   self.assertFalse(response['result']['isError'])
+ def test_digest_consistent_malformed_bags_are_rejected_and_recover(self):
+  server=Server(self.client);server.initialized=True;server.ready=True
+  good={'schemaVersion':1,'selections':[{'id':'tile-v1','version':'1'}],'brief':{'revision':0,'constraints':{}},'intent':'Use tile state'}
+  bads=[{**good,'selections':[None]},{**good,'brief':'not a brief'},{**good,'intent':99},{**good,'schemaVersion':True},{**good,'brief':{'revision':True,'constraints':{}}},{**good,'brief':{'revision':0,'constraints':{'evil':{'value':'x','origin':'explicit'}}}},{**good,'selections':[{'id':'../x','version':'1'}]}]
+  for value in bads+[good]:
+   self.body={'schemaVersion':1,'format':'json','bagRevision':digest(value),'content':json.dumps(value)}
+   response=server.dispatch({'jsonrpc':'2.0','id':1,'method':'tools/call','params':{'name':'get_selected_bag','arguments':{}}})
+   self.assertEqual(response['result']['isError'],value!=good)
+   if value!=good:self.assertEqual(response['result']['structuredContent']['error']['code'],'unsupported_contract')
  def test_unknown_arguments_reject_before_network(self):
   with self.assertRaises(ToolError):self.client.call('prepare_handoff',{'url':'http://evil'})
   self.assertEqual(self.requests,[])

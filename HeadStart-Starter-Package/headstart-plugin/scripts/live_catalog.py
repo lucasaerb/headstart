@@ -98,6 +98,18 @@ class LiveCatalog:
             bag=json.loads(value['content'])
             actual=digest(bag)
             if actual!=(revision or value['bagRevision']) or set(bag)!={'schemaVersion','selections','brief','intent'} or bag['schemaVersion']!=1 or not isinstance(bag['selections'],list) or not 1<=len(bag['selections'])<=3:raise ValueError()
+            if type(bag['schemaVersion']) is not int:raise ValueError()
+            refs=bag['selections']
+            for ref in refs:
+                if not isinstance(ref,dict) or set(ref)!={'id','version'} or any(not isinstance(v,str) or not re.fullmatch(r'[A-Za-z0-9_.-]{1,120}',v) for v in ref.values()):raise ValueError()
+            if len({(r['id'],r['version']) for r in refs})!=len(refs):raise ValueError()
+            brief=bag['brief']
+            if not isinstance(brief,dict) or set(brief)!={'revision','constraints'} or type(brief['revision']) is not int or not 0<=brief['revision']<=2**53-1:raise ValueError()
+            constraints=brief['constraints']
+            if not isinstance(constraints,dict) or not set(constraints)<={'experience','style','runtime','runtimeVersion','platform','device','camera','input','scope','budgets','preserve'}:raise ValueError()
+            for constraint in constraints.values():
+                if not isinstance(constraint,dict) or set(constraint)!={'value','origin'} or constraint['origin'] not in ('explicit','inferred') or not isinstance(constraint['value'],str) or len(constraint['value'])>4000:raise ValueError()
+            if not isinstance(bag['intent'],str) or not bag['intent'].strip() or len(bag['intent'])>4000:raise ValueError()
             return {'schemaVersion':1,'bagRevision':actual,'bag':bag,'notice':NOTICE}
         except (KeyError,TypeError,ValueError):raise ToolError('unsupported_contract','Invalid immutable selected-bag contract.') from None
     def call(self,name,args):
