@@ -27,3 +27,5 @@ Local CLI scheduling, first-party interactive fixture evidence and opt-in checko
 ## Linux CI startup follow-up
 
 Independent source and local-runtime **PASS** for a792c42. The fixed minimal browser environment directs XDG configuration/cache into the existing disposable tmpfs; no HOME override, host credential mount, network or privilege expansion is introduced. Launch failure reports a bounded category instead of losing the pre-request error. I reran the actual isolated positive/negative fixture and report persistence successfully; `independent-browser-xdg.json` retains the result. The original Linux AMD64 startup cause was not captured, so writable-profile diagnosis remains an inference. Required AMD64 CI confirmation remains pending and is a release gate; the local result does not substitute for it.
+
+AMD64 confirmation received: independent GitHub run inspection for34559035732 at48f61ac shows integration-reference success. The Linux worker release gate is closed; the separate checks failure was the obsolete discovery fixture, independently corrected/retested at270de42.

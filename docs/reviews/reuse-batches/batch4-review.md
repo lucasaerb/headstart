@@ -21,3 +21,5 @@ The second five-issue batch is accepted. Merge/deployment decisions and remainin
 ## Post-acceptance CI portability check
 
 Health-worker startup failed before any request in Linux AMD64 CI34558256962. Follow-up a792c42 has independent source/local-runtime PASS, recorded in the operations review, but Linux CI confirmation remains required before release. The reviewed source limit is the local immutable ARM64 image; no AMD64 success is claimed until the fresh job passes. This pending release gate must not be hidden by the five-issue local acceptance above.
+
+The AMD64 worker gate above is now **resolved**: GitHub run34559035732 at48f61ac has successful integration-reference execution, independently checked. Test-only270de42 fixes the separate obsolete discovery fixture and independently passes full desktop/mobile discovery. See `discovery-current-catalog-review.md`. Final combined CI completion remains the coordinator’s merge gate; no other implementation acceptance blocker remains.
