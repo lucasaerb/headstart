@@ -188,8 +188,6 @@ def validate(records, media, root=ROOT):
             url(rights["code_evidence_url"], label + ".rights.code_evidence_url", nullable=rights["code_status"] != "inspected")
             if rights["code_status"] == "inspected" and not rights["code_license"]:
                 fail(label, "inspected code license needs a license value")
-            if isinstance(rights["code_license"], str) and rights["code_license"].startswith("LicenseRef-"):
-                fail(label, "listed catalog requires an open-source license, not a custom LicenseRef")
             string(rights["asset_notes"], label + ".rights.asset_notes")
             string(rights["notes"], label + ".rights.notes")
         demo = row["demo"]
@@ -319,21 +317,8 @@ def load(root=ROOT):
         records.extend(rows)
     media = read_json(root / "media-manifest.json") if (root / "media-manifest.json").exists() else []
     errors = validate(records, media, root)
-    popularity_path = root / "github-popularity.json"
-    links_path = root / "evidence/link-checks.json"
-    if popularity_path.exists() and links_path.exists():
-        popularity = {p["repo_url"].rstrip("/").removesuffix(".git").casefold(): p for p in read_json(popularity_path)["repositories"]}
-        live = {ref["record_id"] for check in read_json(links_path)["checks"] if check["result"] == "reachable" for ref in check["references"] if ref["field"] == "demo.url"}
-        # Research rows may carry media awaiting the separate independent
-        # display decision. The frontend projection is the publication gate.
-        media_ids = {m["record_id"] for m in media}
-        for row in records:
-            pop = popularity.get(row["repo_url"].rstrip("/").removesuffix(".git").casefold())
-            if not row["source"]["commit"]: errors.append(row["id"] + ": strict gate requires pinned source")
-            if row["rights"]["code_status"] != "inspected" or not row["rights"]["code_license"] or str(row["rights"]["code_license"]).startswith("LicenseRef-"): errors.append(row["id"] + ": strict gate requires open-source license")
-            if row["id"] not in media_ids: errors.append(row["id"] + ": strict gate requires authentic reviewed media")
-            if not pop or pop.get("status") != "available" or type(pop.get("stars")) is not int or pop["stars"] <= 0: errors.append(row["id"] + ": strict gate requires positive observed GitHub stars")
-            if row["demo"]["kind"] != "browser" or row["id"] not in live: errors.append(row["id"] + ": strict gate requires reachable browser play URL")
+    # Discovery metadata is allowed with explicit unknowns. Reuse publication and
+    # source delivery retain their separate scoped-rights/evidence gates.
     if errors:
         raise ValueError("\n".join(errors))
     if not records:

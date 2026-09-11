@@ -494,6 +494,313 @@
         "preferred_model_provenance": false,
         "genre_capability_breadth": 6
       }
+    },
+    {
+      "record_id": "zero-ad",
+      "position": 42,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "3d-city",
+      "position": 43,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "a-dark-room",
+      "position": 44,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "astra-apex-club",
+      "position": 45,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "toy2game-balance-astronaut",
+      "position": 46,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "browserquest",
+      "position": 47,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "cataclysm-dda",
+      "position": 48,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "clumsy-bird",
+      "position": 49,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "dwellcraft",
+      "position": 50,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "endless-sky",
+      "position": 51,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "toy2game-flip-match",
+      "position": 52,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "fable5-fpv-drone",
+      "position": 53,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "freeciv",
+      "position": 54,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "freecol",
+      "position": 55,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "toy2game-frog-feast",
+      "position": 56,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "gather-it",
+      "position": 57,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "hextris",
+      "position": 58,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "openai-sites-hollowflux",
+      "position": 59,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "fable5-plane-game",
+      "position": 60,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "philolabs-kyoto-higashiyama-gpt-astra",
+      "position": 61,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "philolabs-kyoto-higashiyama",
+      "position": 62,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "luanti",
+      "position": 63,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "magic-carpet-wizard",
+      "position": 64,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "matter-js",
+      "position": 65,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "astra-melon-lab",
+      "position": 66,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "mindustry",
+      "position": 67,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "astra-mosswing",
+      "position": 68,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "openra",
+      "position": 69,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "openrct2",
+      "position": 70,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "openttd",
+      "position": 71,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "toy2game-parking-escape",
+      "position": 72,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "toy2game-penguin-ice",
+      "position": 73,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "phaser-dungeon-crawler",
+      "position": 74,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "toy2game-rabbit-trap",
+      "position": 75,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "silent-meridian",
+      "position": 76,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "astra-sunjing-puzzles",
+      "position": 77,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "openai-sites-sunwake",
+      "position": 78,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "supertux",
+      "position": 79,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "supertuxkart",
+      "position": 80,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "battle-for-wesnoth",
+      "position": 81,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "astra-three-kingdoms",
+      "position": 82,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "philolabs-death-star-trench-run-gpt-astra",
+      "position": 83,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "philolabs-death-star-trench-run",
+      "position": 84,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "unciv",
+      "position": 85,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "philolabs-union-square-sf-gpt-astra",
+      "position": 86,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "philolabs-union-square-sf",
+      "position": 87,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "veloren",
+      "position": 88,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "fable5-real-physics-engine",
+      "position": 89,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "openai-sites-void-explorer",
+      "position": 90,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "widelands",
+      "position": 91,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
+    },
+    {
+      "record_id": "yuka",
+      "position": 92,
+      "rationale": "Restored research reference, listed after the previously visible 41 at user request. Alphabetical within this group; original source, demo, rights and media limitations remain.",
+      "signals": {}
     }
-  ]
+  ],
+  "restoration_note": "On 2026-09-11 the user requested all 51 removed research entries restored below the existing 41. Discovery listing does not establish reuse rights or tested compatibility."
 }

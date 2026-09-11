@@ -1,4 +1,4 @@
-import { cp, mkdir, rm } from "node:fs/promises";
+import { cp, mkdir, rm, readFile, readdir } from "node:fs/promises";
 import { siteRoot } from "./server.mjs";
 import { verifyPublicAssets } from "../../HeadStart-Starter-Package/site/dist/verify-assets.mjs";
 await verifyPublicAssets();
@@ -45,4 +45,24 @@ for (const file of [
   "provenance",
 ])
   await cp(`${siteRoot}/${file}`, new URL(file, output), { recursive: true });
+const catalog = JSON.parse(
+  (await readFile(`${siteRoot}/catalog.js`, "utf8"))
+    .replace(/^window.HEADSTART_CATALOG = /, "")
+    .trim()
+    .replace(/;$/, ""),
+);
+const displayedImages = new Set(
+  catalog
+    .filter(
+      (row) => row.preview?.rightsStatus === "reviewed_for_catalog_display",
+    )
+    .map((row) => row.preview.src),
+);
+for (const name of await readdir(new URL("assets/catalog/", output))) {
+  if (!displayedImages.has("assets/catalog/" + name))
+    await rm(new URL("assets/catalog/" + name, output), {
+      recursive: true,
+      force: true,
+    });
+}
 console.log("Built .local-build (static assets; APIs remain server handlers).");

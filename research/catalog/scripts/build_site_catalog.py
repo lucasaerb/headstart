@@ -146,7 +146,7 @@ def catalog_asset_src(canonical):
     return 'assets/catalog/' + parts[1]
 
 
-def project(records, media, existing=(), reviews=(), popularity=(), play_observations=(), editorial_ranking=None, require_previews=False):
+def project(records, media, existing=(), reviews=(), popularity=(), play_observations=(), editorial_ranking=None, require_previews=False, withheld_media_ids=()):
     """Pure projection. Only record-specific, reviewed local previews survive."""
     media_by_record = {m['record_id']: m for m in media}
     previews = {r['id']: r.get('preview') for r in existing}
@@ -161,7 +161,7 @@ def project(records, media, existing=(), reviews=(), popularity=(), play_observa
         preview = None
         previous = previews.get(row['id'])
         canonical = media_by_record.get(row['id'])
-        if canonical:
+        if canonical and row['id'] not in withheld_media_ids:
             derived_src = catalog_asset_src(canonical)
             previous_src = previous.get('src') if previous else None
             if (isinstance(previous_src, str) and previous_src.startswith('assets/catalog/') and safe_path(previous_src)
@@ -234,8 +234,9 @@ def update_site_index(path, rows, research_total=None):
                                      rf'\g<1>{research_total}\2', source)
     source, visible_count = re.subn(r'(<p id="result-count"[^>]*>)[^<]*(</p>)',
                                     rf'\g<1>{len(rows)} projects\2', source)
+    pictured = sum(bool(row.get('preview')) and row['preview'].get('rightsStatus') == 'reviewed_for_catalog_display' for row in rows)
     source, pictured_count = re.subn(r'(<span id="pictured-count">)[^<]*(</span>)',
-                                     rf'\g<1>{len(rows)} pictured of {research_total} research records\2', source)
+                                     rf'\g<1>{pictured} pictured of {research_total} research records\2', source)
     if script_count != 1 or total_count != 1 or research_count != 1 or visible_count != 1 or pictured_count != 1:
         raise ValueError('Site index needs one catalog script, catalog/research total markers, pictured count and visible result count')
     path.write_text(source, encoding='utf-8')
@@ -260,7 +261,9 @@ def main():
         play_observations = load_play_observations(play_path) if play_path.exists() else []
         ranking_path = args.root / 'editorial-ranking.json'
         editorial_ranking = load_editorial_ranking(ranking_path) if ranking_path.exists() else None
-        output = serialize(project(records, media, existing, reviews, popularity, play_observations, editorial_ranking, require_previews=args.require_previews))
+        policy_path = args.root / 'public-media-policy.json'
+        withheld = json.loads(policy_path.read_text())['withheld_record_ids'] if policy_path.exists() else []
+        output = serialize(project(records, media, existing, reviews, popularity, play_observations, editorial_ranking, require_previews=args.require_previews, withheld_media_ids=withheld))
         if args.output:
             args.output.write_text(output, encoding='utf-8')
         else:
