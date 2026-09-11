@@ -1,0 +1,54 @@
+import json
+import sqlite3
+import unittest
+from unittest.mock import Mock
+from services.operations.changes import SourceChanges
+from services.submissions.store import Queue
+
+
+class ChangeTests(unittest.TestCase):
+    def setUp(self):
+        self.db = sqlite3.connect(':memory:')
+        self.changes = SourceChanges(self.db)
+        self.queue = Queue(self.db)
+        self.old = {'sourceCommit': 'a' * 40, 'sourceDigest': 'b' * 64, 'licenseDigest': 'c' * 64}
+        self.new = dict(self.old, sourceCommit='d' * 40, licenseDigest='e' * 64)
+
+    def tearDown(self):
+        self.db.close()
+
+    def test_change_candidate_never_inherits_tested_evidence(self):
+        self.assertIsNone(self.changes.observe('https://github.com/example/game', self.old, self.old))
+        identity = self.changes.observe('https://github.com/example/game', self.old, self.new)
+        self.assertEqual(identity, self.changes.observe('https://github.com/example/game', self.old, self.new))
+        row = json.loads(self.db.execute('SELECT payload FROM source_change_candidates').fetchone()[0])
+        self.assertEqual(row['previous'], self.old)
+        self.assertEqual(row['candidate'], self.new)
+        self.assertEqual(row['status'], 'candidate')
+        self.assertEqual(row['rights'], 'review_required')
+        self.assertIsNone(row['verification'])
+        with self.assertRaises(sqlite3.IntegrityError):
+            self.db.execute("UPDATE source_change_candidates SET payload='{}'")
+        self.db.rollback()
+        self.assertEqual(self.changes.dispatch(self.queue)[0]['status'], 'delivered')
+        self.assertEqual(len(self.queue.all()), 1)
+
+    def test_crash_after_queue_submit_recovers_without_duplicate(self):
+        identity = self.changes.observe('https://github.com/example/game', self.old, self.new)
+        self.changes.dispatch(self.queue)
+        with self.db:
+            self.db.execute("UPDATE source_change_outbox SET status='pending',queue_id=NULL WHERE id=?", (identity,))
+        self.changes.dispatch(self.queue)
+        self.assertEqual(len(self.queue.all()), 1)
+
+    def test_bounded_retry_exhaustion_and_manual_retry(self):
+        identity = self.changes.observe('https://github.com/example/game', self.old, self.new)
+        unavailable = Mock()
+        unavailable.all.side_effect = OSError('private connection detail')
+        for _ in range(3):
+            self.assertEqual(self.changes.dispatch(unavailable)[0]['status'], 'retry_required')
+        self.assertEqual(self.changes.dispatch(unavailable), [])
+        self.assertEqual(self.changes.retry(identity), 1)
+        self.assertEqual(self.changes.dispatch(self.queue)[0]['status'], 'delivered')
+        stored = list(self.db.execute('SELECT * FROM source_change_outbox'))
+        self.assertNotIn('private connection detail', json.dumps(stored))
