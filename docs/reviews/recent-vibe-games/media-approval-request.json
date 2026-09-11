@@ -4,115 +4,115 @@
   "records": [
     {
       "record_id": "little-flock",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "p-doom",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "apex-formula",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "turbo-kart-rush",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "berlin-walk",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "skysprout",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "glenn-explore",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "neomud",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "server-survival",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "moon-rover",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "operation-ironhold",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "emerald-bayou",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "cadle",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "jungle-trail",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "datacenter-survival",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     },
     {
       "record_id": "protocol-99-entry-001",
-      "decision": "pending_independent_review",
-      "reviewer": "",
-      "reviewed_at": "",
-      "verdict": ""
+      "decision": "approved_for_local_catalog_display",
+      "reviewer": "/root/critical_review",
+      "reviewed_at": "2026-09-11T02:09:29Z",
+      "verdict": "PASS: exact local media, project identity, alt, credit, digest, pinned or live source, and narrow display scope independently reviewed."
     }
   ]
 }
