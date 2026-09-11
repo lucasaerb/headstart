@@ -76,8 +76,8 @@ class TransportTests(unittest.TestCase):
   for value in bads+[good]:
    self.body={'schemaVersion':1,'format':'json','bagRevision':digest(value),'content':json.dumps(value)}
    response=server.dispatch({'jsonrpc':'2.0','id':1,'method':'tools/call','params':{'name':'get_selected_bag','arguments':{}}})
-   self.assertEqual(response['result']['isError'],value!=good)
-   if value!=good:self.assertEqual(response['result']['structuredContent']['error']['code'],'unsupported_contract')
+   self.assertEqual(response['result']['isError'],value is not good)
+   if value is not good:self.assertEqual(response['result']['structuredContent']['error']['code'],'unsupported_contract')
  def test_unknown_arguments_reject_before_network(self):
   with self.assertRaises(ToolError):self.client.call('prepare_handoff',{'url':'http://evil'})
   self.assertEqual(self.requests,[])
