@@ -15,3 +15,11 @@ Independent checks at that checkpoint:
 2. **P1 — final review accepted altered runtime evidence.** After a real successful validation I changed a listed log, then called `review()` with the original validation digest. It returned `integration_tested`. The probe suppressed event writing and restored the log, so no false review record was retained. Fix must verify the exact retained evidence set, safe bounded regular files and each digest before transition. Author fix `afd7e9f` adds those guards and rejection cases; final stable rerun remains pending while finding 1 is addressed.
 
 Earlier pre-checkpoint feedback was addressed in `f3aaa3c`: mandatory rights and exact parent/version closure, recipe/source/packet drift at final review, actual index-graph connectivity and initial frame instrumentation. Their passing tests do not waive the remaining findings. A new source/recipe digest requires a fresh full reference execution before the prerequisite verdict can change.
+
+## Fix round at `dff2046`
+
+`afd7e9f` rechecks the exact retained evidence set and bytes at final review. `dff2046` rejects nested attributes/modules, effective filter/config and repository info attributes before status; worktree materialization now uses `--no-checkout`, index-only `read-tree` and verified Python file copies. The actual marker-based exploit is rejected without host execution. Independent twelve workflow tests PASS.
+
+A new **P2** remains: materialization copies bytes but loses unrelated executable modes. Adding and committing an unrelated `helper.sh` with mode0755, then planning/applying, yields0644 in the worktree. Byte-only snapshots do not include this undeclared change. Preserve the relevant file mode and bind mode drift in state/validation; include a regression for preserved executables and stale mode.
+
+Fresh final runtime attempt `/tmp/headstart-review-integration-dff2046` timed out on the first baseline after60 seconds while another Docker run was active. It is a failed attempt, not new passing evidence or proof of a product regression. A sequential fresh run is required after the mode fix. Earlier exact-checkpoint runtime results remain historical evidence only.
