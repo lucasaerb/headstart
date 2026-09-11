@@ -29,3 +29,12 @@ At base `84795b9`, the coordinator ran the existing 40 Node tests and 68 Python 
 ## Batch 3 implementation checkpoint
 
 Auth author `reuse_auth` delivered `cc282d9` and copy/capture refinement `f736cf2`; curator author `reuse_curator` delivered `e883763`; handoff author `reuse_handoff` delivered `5c7ee1b` with route/browser work following auth prerequisite acceptance. Separate reviewer `reuse_reviewer` recorded a narrow #27 auth prerequisite PASS in `docs/reviews/reuse-batches/prerequisites.md`; this does not replace full combined issue acceptance. Service-backed MCP author is `reuse_mcp`. The coordinator added checks in `25e50dd`; 41 Node and 97 Python tests, syntax, formatting and local build passed at this checkpoint. New browser workflows are included in CI; full combined review remains pending.
+
+
+## Batch 3 independent acceptance — PASS
+
+All first-five issues (#12, #27, #13, #14, #15) passed full critical review after the five author handoffs and correction loop, with implementation frozen at `46964ab`. Reviewer `reuse_handoff` accepted #12/#14/#15 in `85b2d1e`; distinct reviewer `reuse_mcp` accepted #27/#13 in `711a4d4`. Neither approved their own implementation. Aggregate record: `docs/reviews/reuse-batches/batch3-review.md`; full checklist is checked with these scope/evidence links.
+
+Resolved findings include repository default-reference ownership proof, malformed MCP response/session recovery, complete selected-bag validation, delayed auth recovery and deterministic browser selection. The final nine-skill 0.5.0 archive and actual Codex client evidence match. C4 styling and hero remain intact. The accepted delivery is local verified-preview identity plus metadata handoffs and prepared eligible-system context, not production verification, source bytes, a playable three-game remix or royalty services.
+
+Batch 4 (#16–#20) may now begin under its recorded prerequisite gates. `reuse_handoff` remains an independent reviewer for that batch and will not author its implementation. No production promotion or issue closure is implied by this acceptance record.
