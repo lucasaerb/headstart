@@ -109,6 +109,16 @@ def load_play_observations(path):
             raise ValueError('Play observation time must include timezone')
     return data['records']
 
+def load_editorial_ranking(path):
+    data = json.loads(path.read_text(encoding='utf-8'))
+    if data.get('schema_version') != '1.0' or not isinstance(data.get('records'), list):
+        raise ValueError('Invalid editorial ranking contract')
+    positions = [r.get('position') for r in data['records']]
+    ids = [r.get('record_id') for r in data['records']]
+    if len(ids) != len(set(ids)) or sorted(positions) != list(range(1, len(positions) + 1)):
+        raise ValueError('Editorial ranking needs unique IDs and contiguous positions')
+    return data
+
 
 def catalog_asset_src(canonical):
     """Derive a site asset URL only from an explicitly display-scoped flat media path."""
@@ -130,13 +140,14 @@ def catalog_asset_src(canonical):
     return 'assets/catalog/' + parts[1]
 
 
-def project(records, media, existing=(), reviews=(), popularity=(), play_observations=(), require_previews=False):
+def project(records, media, existing=(), reviews=(), popularity=(), play_observations=(), editorial_ranking=None, require_previews=False):
     """Pure projection. Only record-specific, reviewed local previews survive."""
     media_by_record = {m['record_id']: m for m in media}
     previews = {r['id']: r.get('preview') for r in existing}
     decisions = {r['record_id']: r['decision'] for r in reviews}
     popularity_by_repo = {repository_key(p['repo_url']): p for p in popularity}
     play_by_record = {p['record_id']: p for p in play_observations}
+    ranking_by_record = {r['record_id']: r for r in (editorial_ranking or {}).get('records', [])}
     result = []
     for row in records:
         ai = ai_provenance(row)
@@ -181,6 +192,9 @@ def project(records, media, existing=(), reviews=(), popularity=(), play_observa
                   'pinnedSourceUrl': pinned_source_url(row),
                   'platforms': row['platforms'], 'platformKind': platform_kind, 'capabilities': row['capability_tags'], 'buildingBlocks': row['building_blocks'],
                   'sourceEvidence': row['source']['evidence'], 'aiProvenance': ai,
+                  'interfaceLanguages': row.get('interface_languages', ['unknown']),
+                  'notoriety': row.get('notoriety', {'status': 'unknown', 'metrics': [], 'notes': 'No public usage count recorded.'}),
+                  'editorialRank': ranking_by_record.get(row['id']),
                   'githubStars': observed_popularity['stars'] if observed_popularity['status'] == 'available' else None,
                   'popularity': observed_popularity}
         if row['id'] in play_by_record:
@@ -188,10 +202,12 @@ def project(records, media, existing=(), reviews=(), popularity=(), play_observa
         if not require_previews or preview is not None:
             result.append(record)
     def priority(r):
+        if r.get('editorialRank'):
+            return (0, r['editorialRank']['position'], r['id'])
         browser = r['platformKind'] == 'browser'
         preferred = r['aiProvenance']['status'] == 'creator_attributed' and bool(PREFERRED_MODELS & set(r['aiProvenance']['models']))
         three = r['integrationFamily'] == 'threejs-r3f-candidate'
-        return (0 if browser and preferred else 1 if browser and three else 2 if browser else 3, r['title'].casefold(), r['id'])
+        return (1 + (0 if browser and preferred else 1 if browser and three else 2 if browser else 3), r['title'].casefold(), r['id'])
     return sorted(result, key=priority)
 
 
@@ -236,7 +252,9 @@ def main():
         popularity = load_popularity(popularity_path) if popularity_path.exists() else []
         play_path = args.root / 'play-observations.json'
         play_observations = load_play_observations(play_path) if play_path.exists() else []
-        output = serialize(project(records, media, existing, reviews, popularity, play_observations, require_previews=args.require_previews))
+        ranking_path = args.root / 'editorial-ranking.json'
+        editorial_ranking = load_editorial_ranking(ranking_path) if ranking_path.exists() else None
+        output = serialize(project(records, media, existing, reviews, popularity, play_observations, editorial_ranking, require_previews=args.require_previews))
         if args.output:
             args.output.write_text(output, encoding='utf-8')
         else:

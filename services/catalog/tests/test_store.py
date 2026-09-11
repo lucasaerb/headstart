@@ -52,7 +52,9 @@ class StoreTests(unittest.TestCase):
         first=self.store.export()
         self.store.import_research(source)
         self.assertEqual(first,self.store.export())
-        self.assertGreater(len(self.store.research_records()),50)
+        # The import is the strict public research set; excluded research lives
+        # in the separate, reviewable exclusions audit.
+        self.assertGreaterEqual(len(self.store.research_records()),40)
         self.assertTrue(all(r['eligibility']=='research_only' for r in self.store.research_records()))
         self.assertEqual([],self.store.records())
     def test_duplicate_subprojects_rollback_whole_import(self):

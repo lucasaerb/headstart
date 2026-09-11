@@ -1,398 +1,378 @@
 {
-  "records": 76,
-  "building_blocks": 153,
-  "media": 69,
-  "pinned_source_records": 73,
+  "records": 41,
+  "building_blocks": 78,
+  "media": 41,
+  "pinned_source_records": 41,
   "genres": {
-    "4x": 2,
     "action": 7,
-    "action-rpg": 3,
-    "adventure": 4,
+    "adventure": 3,
     "animation": 1,
-    "arcade": 9,
-    "automation": 2,
-    "board-game": 1,
-    "boating": 1,
-    "builder": 7,
-    "building": 1,
-    "city-builder": 3,
+    "arcade": 7,
+    "city-builder": 2,
     "city-building": 1,
-    "colony-management": 1,
-    "crafting": 1,
-    "driving": 1,
+    "cozy": 1,
+    "driving": 3,
     "dungeon": 1,
     "dungeon-crawler": 1,
-    "economy": 4,
-    "endless-runner": 1,
-    "exploration": 17,
-    "fantasy": 1,
-    "first-person-shooter": 1,
-    "flight": 4,
-    "incremental": 1,
-    "management": 6,
-    "multiplayer": 1,
+    "exploration": 11,
+    "farming": 1,
+    "first-person-shooter": 2,
+    "fps": 2,
+    "geospatial": 1,
+    "kart": 1,
+    "management": 2,
+    "multiplayer": 3,
     "navigation": 1,
     "navigation-demo": 1,
-    "party": 5,
-    "physics": 6,
-    "physics-puzzle": 1,
+    "open-world": 1,
+    "parody": 1,
+    "physics": 2,
     "platformer": 4,
     "procedural-generation": 2,
-    "puzzle": 9,
+    "puzzle": 3,
     "racing": 5,
     "rendering": 2,
-    "resource-management": 6,
-    "roguelike": 1,
     "rpg": 2,
-    "rts": 4,
-    "sandbox": 6,
-    "shooter": 1,
-    "simulation": 20,
-    "space": 2,
+    "sandbox": 2,
+    "shooter": 2,
+    "simulation": 10,
     "spatial-query": 1,
-    "strategy": 5,
+    "sports": 1,
+    "strategy": 3,
     "strategy-toolkit": 1,
-    "survival": 1,
+    "survival": 2,
     "survival-horror": 1,
-    "tactics": 1,
+    "top-down": 1,
     "tower-defense": 2,
-    "trading": 1,
-    "transport": 1,
     "turn-based": 1,
-    "turn-based-strategy": 4,
-    "tycoon": 2,
-    "vehicle-demo": 1
+    "vehicle-demo": 1,
+    "walking-simulator": 2
   },
   "content_kind": {
-    "demo": 14,
-    "engine": 4,
-    "game": 49,
-    "toolkit": 9
+    "demo": 6,
+    "engine": 1,
+    "game": 27,
+    "toolkit": 7
   },
   "dimension": {
-    "2d": 27,
-    "3d": 47,
-    "mixed": 2
+    "2d": 7,
+    "3d": 33,
+    "mixed": 1
   },
   "runtimes": {
-    "Arc / JVM": 1,
-    "Babylon.js": 1,
-    "Browser": 1,
-    "Canvas 2D": 4,
-    "Cataclysm native engine": 1,
-    "Endless Sky / SDL / OpenGL": 1,
-    "Engine-independent JavaScript": 1,
-    "Freeciv native engine": 1,
+    "Canvas 2D": 5,
     "Godot": 4,
     "HTML / CSS / JavaScript": 1,
-    "HTML / JavaScript": 1,
-    "HTML5 Canvas": 1,
-    "HTML5 Canvas / Node.js": 1,
-    "JVM / FreeCol": 1,
-    "JavaScript / WebGL": 1,
+    "Kotlin Compose Multiplatform / WASM": 1,
     "LittleJS": 1,
-    "Luanti": 1,
-    "Matter.js": 1,
-    "OpenRA / .NET": 1,
-    "OpenRCT2 native engine": 1,
-    "OpenTTD native engine": 1,
-    "Phaser": 1,
-    "Pyrogenesis": 1,
-    "React": 1,
     "React Three Fiber / Rapier": 2,
-    "React Three Fiber / Three.js": 2,
-    "SuperTux native engine": 1,
-    "SuperTuxKart native engine": 1,
-    "Three.js": 30,
-    "Three.js / micropolisJS": 1,
+    "React Three Fiber / Three.js": 3,
+    "Three.js": 19,
+    "Three.js / Cesium": 1,
+    "Three.js / Next.js": 1,
     "Three.js WebGPU": 2,
-    "Three.js WebGPU / WebGL": 1,
-    "Unity": 1,
-    "Veloren native engine": 1,
-    "Wesnoth native engine": 1,
-    "Widelands / SDL": 1,
-    "libGDX": 1,
-    "melonJS": 1
+    "WebGL2": 1
   },
   "field_completeness": {
-    "source_commit": 73,
-    "provider_id": 73,
-    "code_license_inspected": 60,
-    "demo_destination": 72,
-    "browser_demo_destination": 50,
-    "source_inspected_blocks": 147,
-    "preview_reference": 43
+    "source_commit": 41,
+    "provider_id": 33,
+    "code_license_inspected": 41,
+    "demo_destination": 41,
+    "browser_demo_destination": 41,
+    "source_inspected_blocks": 78,
+    "preview_reference": 26
   },
   "ai_provenance_status": {
-    "creator_attributed": 22,
-    "unknown": 43,
-    "unverified": 11
+    "creator_attributed": 12,
+    "unknown": 27,
+    "unverified": 2
   },
   "creator_attributed_models": {
-    "Fable 5": 4,
+    "Fable 5": 1,
     "Fable 5.1": 4,
-    "GPT-6 Astra": 14
+    "GPT-6 (user-declared) × Codex": 1,
+    "GPT-6 Astra": 6
   },
   "all_contract_field_completeness": {
     "ai_provenance.evidence": {
-      "records": 76,
-      "populated": 24,
-      "null_empty_or_missing": 52
+      "records": 41,
+      "populated": 12,
+      "null_empty_or_missing": 29
     },
     "ai_provenance.models": {
-      "records": 76,
-      "populated": 22,
-      "null_empty_or_missing": 54
+      "records": 41,
+      "populated": 12,
+      "null_empty_or_missing": 29
     },
     "ai_provenance.notes": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "ai_provenance.status": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "authoring_tools": {
-      "records": 76,
-      "populated": 12,
-      "null_empty_or_missing": 64
+      "records": 41,
+      "populated": 7,
+      "null_empty_or_missing": 34
     },
     "building_blocks": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "camera": {
-      "records": 76,
-      "populated": 47,
-      "null_empty_or_missing": 29
+      "records": 41,
+      "populated": 35,
+      "null_empty_or_missing": 6
     },
     "capability_tags": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "content_kind": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "controls": {
-      "records": 76,
-      "populated": 24,
-      "null_empty_or_missing": 52
+      "records": 41,
+      "populated": 31,
+      "null_empty_or_missing": 10
     },
     "creator": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "demo.interactive_status": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "demo.kind": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "demo.notes": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "demo.source_relation": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "demo.url": {
-      "records": 76,
-      "populated": 72,
-      "null_empty_or_missing": 4
+      "records": 41,
+      "populated": 41,
+      "null_empty_or_missing": 0
     },
     "dimension": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "genres": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "id": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
+      "null_empty_or_missing": 0
+    },
+    "interface_languages": {
+      "records": 41,
+      "populated": 41,
+      "null_empty_or_missing": 0
+    },
+    "notoriety.metrics": {
+      "records": 41,
+      "populated": 1,
+      "null_empty_or_missing": 40
+    },
+    "notoriety.notes": {
+      "records": 41,
+      "populated": 41,
+      "null_empty_or_missing": 0
+    },
+    "notoriety.status": {
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "physics": {
-      "records": 76,
-      "populated": 20,
-      "null_empty_or_missing": 56
+      "records": 41,
+      "populated": 9,
+      "null_empty_or_missing": 32
     },
     "platforms": {
-      "records": 76,
-      "populated": 75,
-      "null_empty_or_missing": 1
+      "records": 41,
+      "populated": 41,
+      "null_empty_or_missing": 0
     },
     "preview.notes": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "preview.source_url": {
-      "records": 76,
-      "populated": 43,
-      "null_empty_or_missing": 33
+      "records": 41,
+      "populated": 26,
+      "null_empty_or_missing": 15
     },
     "preview.status": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "project_url": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "repo_url": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "research.author": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "research.completed_at": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "research.elapsed_minutes": {
-      "records": 76,
-      "populated": 24,
-      "null_empty_or_missing": 52
+      "records": 41,
+      "populated": 23,
+      "null_empty_or_missing": 18
     },
     "research.integration_family": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "research.known_unknowns": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "research.selection_reason": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "research.started_at": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "rights.asset_notes": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "rights.asset_status": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "rights.code_evidence_url": {
-      "records": 76,
-      "populated": 62,
-      "null_empty_or_missing": 14
+      "records": 41,
+      "populated": 41,
+      "null_empty_or_missing": 0
     },
     "rights.code_license": {
-      "records": 76,
-      "populated": 60,
-      "null_empty_or_missing": 16
+      "records": 41,
+      "populated": 41,
+      "null_empty_or_missing": 0
     },
     "rights.code_status": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "rights.notes": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "rights.scope_reuse_status": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "runtime.language": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "runtime.name": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "runtime.version": {
-      "records": 76,
-      "populated": 39,
-      "null_empty_or_missing": 37
+      "records": 41,
+      "populated": 26,
+      "null_empty_or_missing": 15
     },
     "runtime.version_status": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "source.commit": {
-      "records": 76,
-      "populated": 73,
-      "null_empty_or_missing": 3
+      "records": 41,
+      "populated": 41,
+      "null_empty_or_missing": 0
     },
     "source.evidence": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "source.inspected_at": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "source.provider_id": {
-      "records": 76,
-      "populated": 73,
-      "null_empty_or_missing": 3
+      "records": 41,
+      "populated": 33,
+      "null_empty_or_missing": 8
     },
     "subproject_path": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "summary": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "title": {
-      "records": 76,
-      "populated": 76,
+      "records": 41,
+      "populated": 41,
       "null_empty_or_missing": 0
     },
     "visual_style": {
-      "records": 76,
-      "populated": 59,
-      "null_empty_or_missing": 17
+      "records": 41,
+      "populated": 38,
+      "null_empty_or_missing": 3
     }
   }
 }

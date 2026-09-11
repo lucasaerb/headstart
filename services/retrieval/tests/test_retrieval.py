@@ -43,4 +43,11 @@ class RetrievalTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as folder,patch.dict(os.environ,{'HEADSTART_EMBEDDING_DIR':folder}):
             with self.assertRaises(ApiError) as error:self.query([('limit','1'),('cursor',first['nextCursor'])])
             self.assertEqual(409,error.exception.status)
+    def test_recommended_research_uses_explicit_rank_but_search_uses_relevance(self):
+        docs=[{'id':'z','title':'Moon Racer','summary':'racing','genres':['racing'],'capabilities':[],'runtime':'Three.js','dimension':'3d','contentKind':'game','platformKind':'browser','aiProvenance':{},'editorialRank':{'position':2}},
+              {'id':'a','title':'Forest Quest','summary':'forest','genres':['adventure'],'capabilities':[],'runtime':'Three.js','dimension':'3d','contentKind':'game','platformKind':'browser','aiProvenance':{},'editorialRank':{'position':1}}]
+        browse=search(docs,[('limit','10')],b'key',research=True,retrieval_mode='lexical')
+        self.assertEqual(['a','z'],[x['id'] for x in browse['items']])
+        found=search(docs,[('q','Moon Racer'),('limit','10')],b'key',research=True,retrieval_mode='lexical')
+        self.assertEqual(['z'],[x['id'] for x in found['items']])
 if __name__=='__main__':unittest.main()
