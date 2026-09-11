@@ -74,6 +74,11 @@ jobs:
       - run: docker build -t headstart-integration-browser:ci tools/integration
       - name: Record immutable runtime image
         run: docker image inspect headstart-integration-browser:ci --format '{{.Id}}' > "$RUNNER_TEMP/headstart-image-id"
+      - name: Record runtime architecture and installed versions
+        run: |
+          docker image inspect headstart-integration-browser:ci --format '{{.Id}} {{.Architecture}} {{.Os}}' > "$RUNNER_TEMP/headstart-image-platform"
+          docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --memory 256m --cpus 1 --pids-limit 64 "$(cat "$RUNNER_TEMP/headstart-image-id")" node --version > "$RUNNER_TEMP/headstart-node-version"
+          docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --memory 256m --cpus 1 --pids-limit 64 "$(cat "$RUNNER_TEMP/headstart-image-id")" chromium --version > "$RUNNER_TEMP/headstart-chromium-version"
       - run: python -m tools.integration.fixture "$RUNNER_TEMP/headstart-base" "$RUNNER_TEMP/headstart-packet.json"
       - run: python -m tools.integration.workflow plan "$RUNNER_TEMP/headstart-base" "$RUNNER_TEMP/headstart-packet.json" "$RUNNER_TEMP/headstart-plan.json" --author ci-reference-builder
       - run: python -m tools.integration.workflow apply "$RUNNER_TEMP/headstart-plan.json" "$RUNNER_TEMP/headstart-packet.json" "$RUNNER_TEMP/headstart-run" --authorized
@@ -90,3 +95,10 @@ jobs:
             ${{ runner.temp }}/headstart-run/validation.json
             ${{ runner.temp }}/headstart-negative/
             ${{ runner.temp }}/headstart-image-id
+            ${{ runner.temp }}/headstart-image-platform
+            ${{ runner.temp }}/headstart-node-version
+            ${{ runner.temp }}/headstart-chromium-version
+            ${{ runner.temp }}/headstart-run/plan.json
+            ${{ runner.temp }}/headstart-run/packet.json
+            ${{ runner.temp }}/headstart-run/applied.json
+            ${{ runner.temp }}/headstart-run/events.jsonl
