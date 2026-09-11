@@ -3,7 +3,7 @@ import { spawn, spawnSync } from "node:child_process";
 import { mkdtemp, cp, mkdir, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { chromium } from "@playwright/test";
+import { chromium, expect } from "@playwright/test";
 const temp = await mkdtemp(join(tmpdir(), "headstart-submission-test-"));
 const origin = "http://127.0.0.1:8895";
 await cp(".local/catalog.sqlite3", join(temp, "catalog.db"));
@@ -66,7 +66,7 @@ try {
   browser = await chromium.launch({
     channel: process.env.HEADSTART_CHROME_CHANNEL || "chrome",
   });
-  const captures = "docs/reviews/curator-submissions/captures";
+  const captures = process.env.SCREENSHOT_DIR || "test-results/curator-submissions";
   await mkdir(captures, { recursive: true });
   for (const [name, viewport] of [
     ["desktop", { width: 1440, height: 1100 }],
@@ -91,7 +91,10 @@ try {
     await page
       .getByLabel("Description", { exact: true })
       .fill("Useful browser camera; synthetic test suggestion.");
+    const createdResponse = page.waitForResponse(response => response.url() === origin + "/api/submissions" && response.request().method() === "POST");
     await page.getByRole("button", { name: "Send for review" }).click();
+    const created = await (await createdResponse).json();
+    assert.equal(typeof created.id, "string");
     await page
       .getByRole("heading", { name: "Your suggestion is in the queue." })
       .waitFor();
@@ -121,14 +124,11 @@ try {
       path: `${captures}/${name}-queue.png`,
       fullPage: true,
     });
-    const first = page.locator(".queue-item").first();
+    const first = page.locator(".queue-item").filter({ hasText: created.id });
+    await expect(first).toHaveCount(1);
+    await expect(first).toContainText("Revision 1");
     await first.getByRole("button", { name: "View immutable history" }).click();
-    await page.waitForFunction(
-      () =>
-        Array.from(document.querySelectorAll(".queue-item button")).find(
-          (b) => b.textContent === "View immutable history",
-        )?.disabled,
-    );
+    await expect(first.getByRole("button", { name: "View immutable history" })).toBeDisabled();
     await page.screenshot({
       path: `${captures}/${name}-history.png`,
       fullPage: true,
