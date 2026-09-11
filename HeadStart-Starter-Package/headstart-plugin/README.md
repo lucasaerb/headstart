@@ -1,10 +1,10 @@
 # HeadStart for Codex
 
-Describe your dream game and find real codebase starting points without leaving your coding conversation. Version **0.5.0** combines nine skills with a local MCP catalog: **52 research references and 105 source-inspected building blocks**, including immutable source links, inspected paths and reuse limitations.
+Describe your dream game and find real codebase starting points without leaving your coding conversation. Version **0.7.0** combines twelve skills with a local MCP catalog: **52 research references and 105 source-inspected building blocks**, including immutable source links, inspected paths and reuse limitations.
 
 ## Start here
 
-Use the **top-level README in the portable HeadStart ZIP** to install its local marketplace and add `headstart-plugin`. The package, MCP server and all nine skill identifiers use HeadStart. Installation is a local Codex workflow; this package is not a public ChatGPT directory listing. Python **3.10 or newer** must be available as `python3` to the Codex process. No API key, server hosting or Python packages are needed for discovery.
+Use the **top-level README in the portable HeadStart ZIP** to install its local marketplace and add `headstart-plugin`. The package, MCP server and all twelve skill identifiers use HeadStart. Installation is a local Codex workflow; this package is not a public ChatGPT directory listing. Python **3.10 or newer** must be available as `python3` to the Codex process. No API key, server hosting or Python packages are needed for discovery.
 
 Start a new Codex thread after adding the plugin. Try:
 
@@ -26,6 +26,7 @@ The default install stays offline. To use the local HeadStart website, follow [c
 - **Blender:** assess asset-authoring/export fit and guide an explicitly requested, safety- and telemetry-reviewed connection to the third-party Blender MCP.
 - **Inspect:** inspect the chosen source and an explicitly selected target workspace.
 - **Plan / Integrate / Validate / Credit:** guide the host coding agent through authorized local work, actual checks and preserved notices. These are skill instructions, not a hosted execution service or pretested integration adapters.
+- **Art direction / Performance review / Code review:** shared pinned context, editable visual guidance, source-located findings and real benchmark evidence checks. Review-only requests do not change target files.
 - **Local MCP:** `catalog_info`, `search_components`, `get_component`, `get_starting_project`; pinned versions, bounded pagination and exact filters. `prepare_handoff` fails closed in snapshot mode. The explicitly configured localhost mode offers `get_selected_bag` and protected `prepare_handoff`; see connected setup. See [catalog access](references/catalog-access.md).
 
 In default snapshot mode the MCP process reads only bundled metadata and makes no network requests. In explicitly configured localhost mode it calls the local service and may record a private planning handoff after browser-approved authentication. Neither mode reads or writes a target project. It includes no upstream game code or image bytes. Four starting-project records include reviewed public preview links and rights context; other projects return an explicit missing-preview state. Discovery is open; public repository and external demo links are available. Demo launch, source downloads and local work—when requested separately—use the host agent's existing capabilities and permissions.

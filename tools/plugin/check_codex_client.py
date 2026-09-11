@@ -77,6 +77,7 @@ def main():
         'testAdaptation':'Only test marketplace name and MCP server key differ, to preserve the existing personal installation. Runtime/skills bytes are checked below.', 'checks':{}}
     source=ROOT/'HeadStart-Starter-Package/headstart-plugin'
     def install(mode, origin=None, credential=None, old=False):
+        subprocess.run(['codex','plugin','remove',plugin_id],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,check=False)
         if plugin.exists(): shutil.rmtree(plugin)
         if old:
             with zipfile.ZipFile(ROOT/'HeadStart-Starter-Package/site/dist/downloads/headstart-plugin-0.3.0.zip') as archive:
@@ -135,11 +136,11 @@ def main():
         client=Client(market)
         skills=client.call('skills/list',{'cwds':[str(market)],'forceReload':True})
         selected=[s for entry in skills['data'] for s in entry['skills'] if s.get('pluginId')==plugin_id]
-        assert len(selected)==9 and all(s['enabled'] for s in selected)
+        assert len(selected)==12 and all(s['enabled'] for s in selected)
         evidence['skills']=[{'name':s['name'],'enabled':s['enabled'],'pluginId':s['pluginId']} for s in selected]
         status=client.call('mcpServerStatus/list',{'threadId':client.thread})
         owned=next(s for s in status['data'] if s.get('pluginId')==plugin_id)
-        assert owned['runtimeStatus']=='connected' and owned['serverInfo']['version']=='0.5.0'
+        assert owned['runtimeStatus']=='connected' and owned['serverInfo']['version']=='0.7.0'
         evidence['server']={k:owned[k] for k in ('name','runtimeStatus','pluginId','serverInfo','tools')}
         info=client.tool('catalog_info',{});assert info['value']['schemaVersion']=='headstart-catalog-api-1'
         evidence['checks']['catalogInfo']=info
@@ -166,7 +167,7 @@ def main():
         evidence['checks']['rollback03']=rollback;client.close();client=None
         evidence['verdict']='PASS'
         args.output.parent.mkdir(parents=True,exist_ok=True);args.output.write_text(json.dumps(evidence,indent=2)+'\n')
-        print('PASS: actual Codex installation, nine skills, public lookup, exact detail, current bag, handoff, denied/revoked/offline, explicit snapshot and 0.3 rollback.')
+        print('PASS: actual Codex installation, twelve skills, public lookup, exact detail, current bag, handoff, denied/revoked/offline, explicit snapshot and 0.3 rollback.')
     finally:
         if client:client.close()
         if server:server.terminate();server.wait(timeout=10)

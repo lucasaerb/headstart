@@ -1,6 +1,6 @@
 {
   "name": "headstart-plugin",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Twelve game-development skills with offline discovery and an explicitly configured localhost catalog and protected planning connection.",
   "author": {
     "name": "HeadStart project"
