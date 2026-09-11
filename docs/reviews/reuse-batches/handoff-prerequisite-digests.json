@@ -1,0 +1,26 @@
+[
+  [
+    "services/handoff/__init__.py",
+    "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  ],
+  [
+    "services/handoff/api.py",
+    "cce47813c3a0361b61dff870b2ffce2c1e607c6a7f753da61c6ee101a5ce52b1"
+  ],
+  [
+    "services/handoff/service.py",
+    "2fa2affd535a259b9e1dc86ab4bc1f3c73d77324d7baef042d7992b2bf5787e8"
+  ],
+  [
+    "services/submissions/store.py",
+    "54e7e62f72f8c23abb5c0e140681c40656dbdddc0fc15d6e4dd06e20e1ab5b50"
+  ],
+  [
+    "tools/dev/api-routes.mjs",
+    "06e92663d2dbe558fc1e17413b5a854b0fe29234f33ecff9d54860048d67c5e6"
+  ],
+  [
+    "tools/dev/auth-handler.mjs",
+    "efaba9985b9b557ba843d8559090d12ffe688c3ebab0d683cadff9820001b442"
+  ]
+]

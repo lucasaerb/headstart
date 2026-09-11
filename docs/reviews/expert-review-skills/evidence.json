@@ -1,0 +1,64 @@
+{
+  "fixture": true,
+  "source_commit": "d7354336bc2123ac6e8dffce721415c466c0f6e9",
+  "before_commit": "05839655bd2b50dd220fc897b59c000a42aca1e1",
+  "after_commit": "d49de999987ae3b9a123e04923a9ffb846621cb0",
+  "review_only_unchanged": true,
+  "review_only_digest": "04957919ac6312c4325a05b05315876bdcc0895bc23d8bec2282abd535982a66",
+  "authorized_improvement_changed": [
+    "game.mjs"
+  ],
+  "unrelated_preserved": true,
+  "observed": {
+    "before": {
+      "callbacks_after_dispose": 2,
+      "world_owners": 2
+    },
+    "after": {
+      "callbacks_after_dispose": 1,
+      "world_owners": 1
+    }
+  },
+  "captures": [
+    {
+      "file": "captures/desktop-before.png",
+      "viewport": {
+        "width": 1200,
+        "height": 860
+      },
+      "target_commit": "05839655bd2b50dd220fc897b59c000a42aca1e1",
+      "sha256": "3bd6cc5555bd33b03f9dbae34e9d6aafd8e189b75a4d4ecd1f03ce1b1c8ca2cb",
+      "browser": "152.0.7977.84"
+    },
+    {
+      "file": "captures/mobile-before.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "target_commit": "05839655bd2b50dd220fc897b59c000a42aca1e1",
+      "sha256": "a32b2a5917038549a7924f8994a4c087912306fec8e18655d741a9b459504944",
+      "browser": "152.0.7977.84"
+    },
+    {
+      "file": "captures/desktop-after.png",
+      "viewport": {
+        "width": 1200,
+        "height": 860
+      },
+      "target_commit": "d49de999987ae3b9a123e04923a9ffb846621cb0",
+      "sha256": "59c54f3752c66b9fc64d644269cf34d0e68358303ec972b377c81a577b7602f7",
+      "browser": "152.0.7977.84"
+    },
+    {
+      "file": "captures/mobile-after.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "target_commit": "d49de999987ae3b9a123e04923a9ffb846621cb0",
+      "sha256": "ec945f23631120e3670345117639b27e295050d9001ef367d4cd8fa2efdcd80d",
+      "browser": "152.0.7977.84"
+    }
+  ]
+}

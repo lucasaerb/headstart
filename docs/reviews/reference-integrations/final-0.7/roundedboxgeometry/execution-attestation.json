@@ -1,0 +1,341 @@
+{
+  "schema_version": "headstart-execution-0.1",
+  "source_commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+  "target_commit": "75a9765b696a595052170e1045eedcc08b2f5ac0",
+  "recipe_digest": "b4206b713ceec2ac66878a46c7e2214aa393a38c7944ba562eb9de2fd4c0b99f",
+  "scope_digest": "b920e245df099b727a358794e89c2561a73a8ac834f333271648df58268ef3ea",
+  "recipe": {
+    "id": "world-feature-roundedboxgeometry-1",
+    "version": "1"
+  },
+  "target": {
+    "id": "headstart-world-target-roundedboxgeometry",
+    "version": "1"
+  },
+  "result": "passed",
+  "runner": "HeadStart reference matrix author runtime; independent review required",
+  "environment": "{\"image\":\"sha256:c7acddd94000df88bc95cef1c1519bca02865e6607ab9ba496a1f608410decd5\",\"integratedState\":\"eff83d92497a2d727bc19186823e0e03ad8061e8f3e8d40a0e07b4853bd3ee0c\",\"network\":\"none\",\"physics\":\"none\",\"planDigest\":\"ed544a3b79dd6a137f69ed9d193cf97b7de430ff6cc049b59d20f52424ccb7df\",\"pluginVersion\":\"0.7.0\",\"runtime\":\"Three.js0.186.0\",\"viewports\":[\"1280,800\",\"390,844\"]}",
+  "executed_at": "2026-09-11T02:51:13.862858+00:00",
+  "checks": [
+    {
+      "name": "baseline-1280,800: one renderer and no hidden initial loop",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: original input owner retained",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: unchanged plain landmark baseline",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: idempotent single existing frame scheduler",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: existing explorer movement preserved",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: keyup stops original movement",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: pause freezes loop and simulation",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: reset restores original explorer and seed",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: original renderer camera scene terrain owners preserved",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: feature disposes all owned resources exactly once",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: feature cleanup preserves original world",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: original world remains usable after feature disposal",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: target teardown removes listeners and frames",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: disposed target refuses restart",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-1280,800: repeated mount cleanup returns baseline listeners",
+      "result": "passed",
+      "log_digest": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647"
+    },
+    {
+      "name": "baseline-390,844: one renderer and no hidden initial loop",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: original input owner retained",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: unchanged plain landmark baseline",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: idempotent single existing frame scheduler",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: existing explorer movement preserved",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: keyup stops original movement",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: pause freezes loop and simulation",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: reset restores original explorer and seed",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: original renderer camera scene terrain owners preserved",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: feature disposes all owned resources exactly once",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: feature cleanup preserves original world",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: original world remains usable after feature disposal",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: target teardown removes listeners and frames",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: disposed target refuses restart",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "baseline-390,844: repeated mount cleanup returns baseline listeners",
+      "result": "passed",
+      "log_digest": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892"
+    },
+    {
+      "name": "integrated-1280,800: one renderer and no hidden initial loop",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: original input owner retained",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: rounded landmark extents",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: rounded landmark excludes sharp corners",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: rounded surface has blended normals",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: idempotent single existing frame scheduler",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: existing explorer movement preserved",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: keyup stops original movement",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: pause freezes loop and simulation",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: reset restores original explorer and seed",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: original renderer camera scene terrain owners preserved",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: feature disposes all owned resources exactly once",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: feature cleanup preserves original world",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: original world remains usable after feature disposal",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: target teardown removes listeners and frames",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: disposed target refuses restart",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-1280,800: repeated mount cleanup returns baseline listeners",
+      "result": "passed",
+      "log_digest": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984"
+    },
+    {
+      "name": "integrated-390,844: one renderer and no hidden initial loop",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: original input owner retained",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: rounded landmark extents",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: rounded landmark excludes sharp corners",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: rounded surface has blended normals",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: idempotent single existing frame scheduler",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: existing explorer movement preserved",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: keyup stops original movement",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: pause freezes loop and simulation",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: reset restores original explorer and seed",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: original renderer camera scene terrain owners preserved",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: feature disposes all owned resources exactly once",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: feature cleanup preserves original world",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: original world remains usable after feature disposal",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: target teardown removes listeners and frames",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: disposed target refuses restart",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    },
+    {
+      "name": "integrated-390,844: repeated mount cleanup returns baseline listeners",
+      "result": "passed",
+      "log_digest": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# Issue20 independent operations review
+
+**PASS — all issue20 criteria accepted within the documented local scope.** Reviewer `reuse_handoff`, reviewed checkpoints5685f31,76bda0c,d215b17 plus previously accepted92d009a/eee9a10 interfaces.
+
+The actual independent network-disabled Docker browser run passed the first-party click/change fixture and rejected the wrong expected result. A private subresource was denied; no external catalog game success is claimed. Raw report is `independent-browser.json`. I inspected broker DNS/public-IP pinning, no credentials/proxy/redirect/query forwarding, bounded resource bytes/deadlines, no container network, restricted mounts, dropped capabilities, memory/process/CPU limits and browser GET-only routing with websocket/service-worker blocking. This is bounded local checking, not a multi-tenant execution service.
+
+The independently rerun real desktop/mobile operations suite passed public broken/stale versus unchecked status, optional consent, actual server event insert/deletion, curator denial and verified curator access, plus service errors. Captures are in `independent-captures/`. I inspected desktop curator and mobile public/privacy states: the C1/C4 navy/blue/pale panels and clear hierarchy continue on this secondary page, dates and untested interaction are distinct, forms/controls fit narrow widths, and private aggregate controls stay separate from public health. The selected C4 hero is unchanged.
+
+The final31 operations tests passed, including pinned source/license bytes, host/network bounds, weekly due/leases, source changes and retry, privacy/retention/dedup, exact accepted reuse receipts and actual interrupted writer recovery. The independent previous31 catalog tests passed. Production scheduling is intentionally not configured; explicit local CLI jobs and stored due state meet the local scope.
+
+I reproduced a source reversion bug with A→B→A→C: deduplicated snapshot rows incorrectly reported B→C. Fixed atd215b17 by separate immutable observation sequence, retaining three distinct snapshots and four observation events. The regression now verifies A→C. Earlier duplicate correction dispatch is fixed by transactional claims and tested across real connections. Old tested evidence never transfers to change candidates; actual reviewed-reference aggregates remain labeled not user adoption.
+
+Remaining acceptance gap: plugin_lookup and first_plan currently have only event categories/manual emit capability, not actual successful lookup/plan instrumentation. The author is adding explicit opt-in local hooks; acceptance requires actual boundary tests, disabled/error behavior and minimal data. Handoff already emits only after a successful protected response. No other blocking finding remains in the reviewed UI/worker/recovery subset. Aggregate Batch4 PASS remains withheld until this final criterion is verified.
+
+## Final instrumentation and merge acceptance
+
+The remaining instrumentation gap is resolved byb342c03 and11bb204. I inspected the checkout-only wrapper around the unchanged actual MCP dispatch and local planner, then independently ran all35 operations tests. Successful actual stdio lookup increments plugin_lookup; failed lookup does not. First-plan increments only after real target/source validation and a successful plan-file write, deduplicates, and rejects failed plans/output writes. Public event submissions cannot claim these internal completed-action categories. The optional wrapper leaves the shipped plugin, runtime recipes and accepted matrix hashes unchanged. Its database/consent paths require owned private permissions; only minimal event fields persist, no raw tool/target material.
+
+I found and reproduced cached-consent leakage in a long-running MCP recorder after a separate forget action. Fix11bb204 rechecks the bounded consent file and token under a database write lock for every completion. The actual live stdio regression and my original two-recorder reproduction now retain zero events after deletion while the lookup itself succeeds. Disabled/unsafe consent leaves product actions usable. No blocker remains.
+
+I independently reran the final desktop/mobile suite including actual homepage search→opt-in server event, deletion, curator access and errors. The accepted actual Docker report also passes the dated HealthJobs persistence interface without rerunning unchanged browser execution. Source reversion, queue concurrency, active index-read recovery and every earlier finding remain closed.
+
+I inspected main merge8d86ad9: the only initializer conflict retains rights-policy setup and removes the superseded missing-reference expansion. A fresh isolated initialization returned exactly41 strict display records, the required rights table and all three eligible recipe templates. The separately approved catalog/media refresh is preserved; no catalog-driven source status promotion was inferred.
+
+Local CLI scheduling, first-party interactive fixture evidence and opt-in checkout event wrappers are the supported scope. Production cron/storage, automatic personal-plugin telemetry, real external-game interaction success and user adoption remain unclaimed. These limits match the issue’s local delivery boundary.
+
+## Linux CI startup follow-up
+
+Independent source and local-runtime **PASS** for a792c42. The fixed minimal browser environment directs XDG configuration/cache into the existing disposable tmpfs; no HOME override, host credential mount, network or privilege expansion is introduced. Launch failure reports a bounded category instead of losing the pre-request error. I reran the actual isolated positive/negative fixture and report persistence successfully; `independent-browser-xdg.json` retains the result. The original Linux AMD64 startup cause was not captured, so writable-profile diagnosis remains an inference. Required AMD64 CI confirmation remains pending and is a release gate; the local result does not substitute for it.
+
+AMD64 confirmation received: independent GitHub run inspection for34559035732 at48f61ac shows integration-reference success. The Linux worker release gate is closed; the separate checks failure was the obsolete discovery fixture, independently corrected/retested at270de42.

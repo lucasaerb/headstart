@@ -13,7 +13,7 @@
     "assets:fetch": "git lfs pull --include=HeadStart-Starter-Package/site/dist/assets/*.mp4 --exclude=",
     "test:media": "node tests/header-media-ui.mjs",
     "catalog:init": "node tools/dev/python.mjs -m services.catalog.initialize",
-    "test:python": "node tools/dev/python.mjs -m unittest discover -s contracts/tests && node tools/dev/python.mjs -m unittest discover -s services/catalog/tests && node tools/dev/python.mjs -m unittest discover -s services/intake/tests && node tools/dev/python.mjs -m unittest discover -s services/curation/tests && node tools/dev/python.mjs -m unittest discover -s services/retrieval/tests && node tools/dev/python.mjs -m unittest services.retrieval.evaluation.test_evaluation",
+    "test:python": "node tools/dev/python.mjs -m tools.integration.fetch_engine && node tools/dev/python.mjs -m unittest discover -s contracts/tests && node tools/dev/python.mjs -m unittest discover -s services/catalog/tests && node tools/dev/python.mjs -m unittest discover -s services/intake/tests && node tools/dev/python.mjs -m unittest discover -s services/curation/tests && node tools/dev/python.mjs -m unittest discover -s services/retrieval/tests && node tools/dev/python.mjs -m unittest services.retrieval.evaluation.test_evaluation && node tools/dev/python.mjs -m unittest discover -s services/auth/tests && node tools/dev/python.mjs -m unittest discover -s services/submissions/tests && node tools/dev/python.mjs -m unittest discover -s services/handoff/tests && node tools/dev/python.mjs -m unittest discover -s tools/review && node tools/dev/python.mjs -m unittest discover -s services/recommendations/tests && node tools/dev/python.mjs -m unittest discover -s services/operations/tests",
     "dev": "node --env-file-if-exists=.env tools/dev/server.mjs",
     "check": "node tools/dev/check.mjs",
     "format:check": "prettier --check tools/dev .github/workflows package.json",
@@ -23,7 +23,16 @@
     "test:detail": "node tests/detail-ui.mjs && node tests/dependency-details-ui.mjs",
     "build": "node tools/dev/build.mjs",
     "test:brief": "node tests/brief-collections-ui.mjs",
-    "test:retrieval": "node tests/retrieval-ui.mjs"
+    "test:retrieval": "node tests/retrieval-ui.mjs",
+    "test:auth": "node tests/auth-ui.mjs",
+    "test:submissions": "node services/submissions/tests/browser.mjs",
+    "test:handoff": "node tests/handoff-ui.mjs",
+    "test:mcp": "node tools/dev/mcp-test.mjs",
+    "test:plugin-setup": "node tests/plugin-setup-ui.mjs",
+    "test:review-skills": "node tools/review/review-fixture.mjs",
+    "test:recipes": "node tests/recipes-ui.mjs",
+    "test:operations": "node tests/operations-ui.mjs",
+    "test:integration": "node tools/dev/python.mjs -m tools.integration.fetch_engine && node tools/dev/python.mjs -m unittest discover -s tools/integration/tests -v"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",

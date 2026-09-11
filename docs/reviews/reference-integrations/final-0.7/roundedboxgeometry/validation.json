@@ -1,0 +1,209 @@
+{
+  "schemaVersion": "headstart-reference-matrix-1",
+  "result": "PASS",
+  "readiness": "awaiting independent review",
+  "planDigest": "ed544a3b79dd6a137f69ed9d193cf97b7de430ff6cc049b59d20f52424ccb7df",
+  "sourceCommit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+  "targetBase": {
+    "head": "75a9765b696a595052170e1045eedcc08b2f5ac0",
+    "files": {
+      "AGENTS.md": "760af4b437268a06489b566daccede5e3167120b7a5f03403073fa3a32b15cb5",
+      "headstart-target.json": "5ef3c4f28fa95790c0c6804d861144929322ca26c0752f22af2d1f6843487e34",
+      "index.html": "0bd89d12101d0dabead3c16aef8c2c22fe7fe7d4d010737a19d16f6bcfcba59a",
+      "package-lock.json": "8493e603c5c27f7358a1fb3ae85a19c1b66a95b8adebafce9444852db61e4a47",
+      "package.json": "b184ceb02eea277af8920cb3cec72dda5b44dd822ce3bd60c6c5acc040e922b9",
+      "src/feature.js": "0ca5e7084978a23b3b12ecc3ef8be79be84730cdfec39b9717670017cbfa4aa2",
+      "src/game.js": "b9ee31269b4a78c045c2f52b38e354ec443d23370f377f5e479b09fb0dd452d7",
+      "src/terrain.js": "d9deb5681cb2524ecb82b169a9bd4115271973a9c557c2b0c112a1d51861dd29",
+      "vendor/THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "vendor/package.json": "35bd886c2d012e1911572a082eccaa96342fd94e2cde39abee56853c66bad806",
+      "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    "modes": {
+      "AGENTS.md": 420,
+      "headstart-target.json": 384,
+      "index.html": 420,
+      "package-lock.json": 420,
+      "package.json": 420,
+      "src/feature.js": 420,
+      "src/game.js": 420,
+      "src/terrain.js": 420,
+      "vendor/THREE-LICENSE.txt": 420,
+      "vendor/package.json": 420,
+      "vendor/three.core.js": 420,
+      "vendor/three.module.js": 420
+    },
+    "stateDigest": "2eb813d5b28ac953d04712b43518f1650ab1944d7b3b60de57fe8afc5efb366f",
+    "unrelatedEdits": ""
+  },
+  "targetIntegrated": {
+    "head": "75a9765b696a595052170e1045eedcc08b2f5ac0",
+    "files": {
+      "HEADSTART-NOTICES.txt": "13d9297607fba933a356b8755b5d847a2b35f3b6d69ba101c95cbe712f7b5575",
+      "vendor/addons/examples/jsm/geometries/RoundedBoxGeometry.js": "c5feab96123858ed8823c889b238dc8734adab7e760e3cfd21e7f3f2f3e348e3",
+      "AGENTS.md": "760af4b437268a06489b566daccede5e3167120b7a5f03403073fa3a32b15cb5",
+      "headstart-target.json": "5ef3c4f28fa95790c0c6804d861144929322ca26c0752f22af2d1f6843487e34",
+      "index.html": "0bd89d12101d0dabead3c16aef8c2c22fe7fe7d4d010737a19d16f6bcfcba59a",
+      "package-lock.json": "8493e603c5c27f7358a1fb3ae85a19c1b66a95b8adebafce9444852db61e4a47",
+      "package.json": "b184ceb02eea277af8920cb3cec72dda5b44dd822ce3bd60c6c5acc040e922b9",
+      "src/feature.js": "4c5906a3a1bcbb8608ea4dd06b0ff045c5235503a9f3f2e866db35db4dc0ecfc",
+      "src/game.js": "b9ee31269b4a78c045c2f52b38e354ec443d23370f377f5e479b09fb0dd452d7",
+      "src/terrain.js": "d9deb5681cb2524ecb82b169a9bd4115271973a9c557c2b0c112a1d51861dd29",
+      "vendor/THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "vendor/package.json": "35bd886c2d012e1911572a082eccaa96342fd94e2cde39abee56853c66bad806",
+      "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    "modes": {
+      "HEADSTART-NOTICES.txt": 420,
+      "vendor/addons/examples/jsm/geometries/RoundedBoxGeometry.js": 420,
+      "AGENTS.md": 420,
+      "headstart-target.json": 384,
+      "index.html": 420,
+      "package-lock.json": 420,
+      "package.json": 420,
+      "src/feature.js": 420,
+      "src/game.js": 420,
+      "src/terrain.js": 420,
+      "vendor/THREE-LICENSE.txt": 420,
+      "vendor/package.json": 420,
+      "vendor/three.core.js": 420,
+      "vendor/three.module.js": 420
+    },
+    "stateDigest": "eff83d92497a2d727bc19186823e0e03ad8061e8f3e8d40a0e07b4853bd3ee0c",
+    "unrelatedEdits": "M src/feature.js\n?? HEADSTART-NOTICES.txt\n?? vendor/addons/"
+  },
+  "recipe": {
+    "id": "world-feature-roundedboxgeometry-1",
+    "digest": "b4206b713ceec2ac66878a46c7e2214aa393a38c7944ba562eb9de2fd4c0b99f"
+  },
+  "pluginVersion": "0.7.0",
+  "briefVersion": 1,
+  "image": "sha256:c7acddd94000df88bc95cef1c1519bca02865e6607ab9ba496a1f608410decd5",
+  "results": {
+    "baseline-1280,800": {
+      "report": {
+        "schemaVersion": 1,
+        "result": "PASS",
+        "checks": [
+          "one renderer and no hidden initial loop",
+          "original input owner retained",
+          "unchanged plain landmark baseline",
+          "idempotent single existing frame scheduler",
+          "existing explorer movement preserved",
+          "keyup stops original movement",
+          "pause freezes loop and simulation",
+          "reset restores original explorer and seed",
+          "original renderer camera scene terrain owners preserved",
+          "feature disposes all owned resources exactly once",
+          "feature cleanup preserves original world",
+          "original world remains usable after feature disposal",
+          "target teardown removes listeners and frames",
+          "disposed target refuses restart",
+          "repeated mount cleanup returns baseline listeners"
+        ],
+        "phase": "baseline",
+        "row": "roundedboxgeometry"
+      },
+      "browserTermination": "terminated after explicit result and capture",
+      "viewport": "1280,800"
+    },
+    "baseline-390,844": {
+      "report": {
+        "schemaVersion": 1,
+        "result": "PASS",
+        "checks": [
+          "one renderer and no hidden initial loop",
+          "original input owner retained",
+          "unchanged plain landmark baseline",
+          "idempotent single existing frame scheduler",
+          "existing explorer movement preserved",
+          "keyup stops original movement",
+          "pause freezes loop and simulation",
+          "reset restores original explorer and seed",
+          "original renderer camera scene terrain owners preserved",
+          "feature disposes all owned resources exactly once",
+          "feature cleanup preserves original world",
+          "original world remains usable after feature disposal",
+          "target teardown removes listeners and frames",
+          "disposed target refuses restart",
+          "repeated mount cleanup returns baseline listeners"
+        ],
+        "phase": "baseline",
+        "row": "roundedboxgeometry"
+      },
+      "browserTermination": "terminated after explicit result and capture",
+      "viewport": "390,844"
+    },
+    "integrated-1280,800": {
+      "report": {
+        "schemaVersion": 1,
+        "result": "PASS",
+        "checks": [
+          "one renderer and no hidden initial loop",
+          "original input owner retained",
+          "rounded landmark extents",
+          "rounded landmark excludes sharp corners",
+          "rounded surface has blended normals",
+          "idempotent single existing frame scheduler",
+          "existing explorer movement preserved",
+          "keyup stops original movement",
+          "pause freezes loop and simulation",
+          "reset restores original explorer and seed",
+          "original renderer camera scene terrain owners preserved",
+          "feature disposes all owned resources exactly once",
+          "feature cleanup preserves original world",
+          "original world remains usable after feature disposal",
+          "target teardown removes listeners and frames",
+          "disposed target refuses restart",
+          "repeated mount cleanup returns baseline listeners"
+        ],
+        "phase": "integrated",
+        "row": "roundedboxgeometry"
+      },
+      "browserTermination": "terminated after explicit result and capture",
+      "viewport": "1280,800"
+    },
+    "integrated-390,844": {
+      "report": {
+        "schemaVersion": 1,
+        "result": "PASS",
+        "checks": [
+          "one renderer and no hidden initial loop",
+          "original input owner retained",
+          "rounded landmark extents",
+          "rounded landmark excludes sharp corners",
+          "rounded surface has blended normals",
+          "idempotent single existing frame scheduler",
+          "existing explorer movement preserved",
+          "keyup stops original movement",
+          "pause freezes loop and simulation",
+          "reset restores original explorer and seed",
+          "original renderer camera scene terrain owners preserved",
+          "feature disposes all owned resources exactly once",
+          "feature cleanup preserves original world",
+          "original world remains usable after feature disposal",
+          "target teardown removes listeners and frames",
+          "disposed target refuses restart",
+          "repeated mount cleanup returns baseline listeners"
+        ],
+        "phase": "integrated",
+        "row": "roundedboxgeometry"
+      },
+      "browserTermination": "terminated after explicit result and capture",
+      "viewport": "390,844"
+    }
+  },
+  "evidence": {
+    "integrated-390,844.log": "d7dcfb60abd7f8b73c87eefbb6c491b46f4052ccf585c6948b35bd4e7aedb9e8",
+    "baseline-1280,800.log": "9ac6bb6a16fe70cf311af78038896894b699e839f4e93b79a77a0533391fe647",
+    "baseline-390,844.log": "6841da7f3c815bc747d6f81382157981bc132f122d1c5c350d1d5867fca7b892",
+    "integrated-1280,800.png": "dcdd4f56298c41b07a7633ebde0918aeb4420608d5c8632af59958e05ed173d5",
+    "integrated-1280,800.log": "608940925f0f36d9016f078d48ae48cd8e6f4c56b68f7d4e32f811344d374984",
+    "integrated-390,844.png": "4612e8b4572d416c750322211e6f32202226127149c99ca83ae0d84532767525",
+    "baseline-1280,800.png": "52432846debce036957030239e114b9bb1de73db0204bbdb83918621ae427742",
+    "baseline-390,844.png": "1ecc7271d74e21a874dd4fee8ed5466ab737964b42113d8af8ae350d22b923fa"
+  },
+  "attestationDigest": "eaf973bd97102dda23be4d091a6d113ef88a8e5b000d243590cecd424c9a69ad"
+}

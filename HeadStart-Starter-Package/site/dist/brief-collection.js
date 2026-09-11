@@ -19,7 +19,7 @@
     n.addEventListener("click", fn);
     return n;
   };
-  let dialog, notice, content, opener, viewMode;
+  let dialog, notice, content, opener, viewMode, savedRefresh = null;
   function persist() {
     if (recovery) {
       warning =
@@ -107,6 +107,7 @@
   };
   function edit() {
     viewMode = "brief";
+    content.setAttribute("aria-busy", "false");
     content.replaceChildren();
     const form = el("form");
     form.id = "project-brief-form";
@@ -222,6 +223,7 @@
   }
   function savedView(compare = false) {
     viewMode = compare ? "compare" : "saved";
+    content.setAttribute("aria-busy", String(Boolean(savedRefresh)));
     content.replaceChildren();
     const top = el(
       "p",
@@ -260,10 +262,14 @@
     }
     for (const s of visible) {
       const card = el("article", undefined, "project-save");
+      const statusLine = el("p", core.status(s, current.get(key(s))), "project-version project-status");
+      statusLine.dataset.kind = s.kind;
+      statusLine.dataset.id = s.id;
+      statusLine.dataset.version = s.version;
       card.append(
         el("h3", s.title),
         el("p", s.kind + " · " + s.version, "project-version"),
-        el("p", core.status(s, current.get(key(s))), "project-version"),
+        statusLine,
       );
       if (compare) {
         const dl = el("dl");
@@ -362,9 +368,19 @@
       button("Brief", edit),
       button("Saved", async () => {
         savedView();
-        await checkSaved();
-        if (dialog.open && viewMode === "saved") savedView();
-        else if (dialog.open && viewMode === "compare") savedView(true);
+        content.setAttribute("aria-busy", "true");
+        if (!savedRefresh) {
+          savedRefresh = checkSaved().finally(() => {
+            savedRefresh = null;
+            // Refresh only status text: preserve active selection, focus and scroll.
+            for (const line of content.querySelectorAll(".project-status")) {
+              const saved = state.saved.find((item) => item.kind === line.dataset.kind && item.id === line.dataset.id && item.version === line.dataset.version);
+              if (saved) line.textContent = core.status(saved, current.get(key(saved)));
+            }
+            content.setAttribute("aria-busy", "false");
+          });
+        }
+        await savedRefresh;
       }),
       button("Compare", () => savedView(true)),
     );

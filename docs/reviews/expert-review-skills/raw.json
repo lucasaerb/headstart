@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "source_commit": "d7354336bc2123ac6e8dffce721415c466c0f6e9",
+  "target_commit": "d49de999987ae3b9a123e04923a9ffb846621cb0",
+  "profile": {
+    "workload": "50000 toy World.step(1/60) calls per batch; no rendering/input; 10 batches",
+    "device": "Apple M4 Pro; arm64; GPU unused",
+    "os": "darwin 24.6.0",
+    "engine_version": "Node v22.22.3",
+    "browser_version": null,
+    "resolution": {
+      "width": 1,
+      "height": 1
+    },
+    "settings": "Headless CPU-only toy fixture, no rendering, non-rendered 1x1 placeholder. Background system load uncontrolled.",
+    "warmup": "3 batches of 50000 updates before collection",
+    "sampling_method": "performance.now monotonic wall time; 10 sequential batch durations; arithmetic mean milliseconds"
+  },
+  "metrics": [
+    {
+      "metric": "cpu-update-batch-mean",
+      "unit": "ms",
+      "samples": [
+        0.03216700000007222,
+        0.032083999999940715,
+        0.032290999999986525,
+        0.031208999999989828,
+        0.03170799999998053,
+        0.031582999999955064,
+        0.03166699999997036,
+        0.03166699999997036,
+        0.03150000000005093,
+        0.031582999999955064
+      ]
+    }
+  ]
+}

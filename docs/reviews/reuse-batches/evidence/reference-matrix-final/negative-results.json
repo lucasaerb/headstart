@@ -1,0 +1,102 @@
+{
+  "simplexnoise-noop": {
+    "result": "rejected",
+    "error": "terrain changed seed changes actual mesh",
+    "logDigest": "bf0ba5a0185bb3d8bd9660253f4fda017c681b25b47538d2b9f9dffd8ccbc6f1"
+  },
+  "simplexnoise-disposal": {
+    "result": "rejected",
+    "error": "feature disposes all owned resources exactly once",
+    "logDigest": "62a356ce0587a432d5890e369bdb2d7d2f6826e89cf40005b9fb24c79005455b"
+  },
+  "improvednoise-noop": {
+    "result": "rejected",
+    "error": "terrain changed seed changes actual mesh",
+    "logDigest": "c669d31c239be23ba6247dfee339315a134363e6e506b78f6e9a6b8470e91c68"
+  },
+  "improvednoise-disposal": {
+    "result": "rejected",
+    "error": "feature disposes all owned resources exactly once",
+    "logDigest": "8089aab4d3374ebf45f519149fb65efbbb2a12976ea0b3fdaad8ac1f15f46a8a"
+  },
+  "capsule-noop": {
+    "result": "rejected",
+    "error": "query intersects target obstacle",
+    "logDigest": "41ef7c856954881ceb37edbaa04a374b43a1e9cba3ab202f91b832b43c2e5e67"
+  },
+  "capsule-disposal": {
+    "result": "rejected",
+    "error": "feature disposes all owned resources exactly once",
+    "logDigest": "c84061f39469852f51f3bb0fd5551cd0fe062c6bd75564f084f3870fcdf8004b"
+  },
+  "obb-noop": {
+    "result": "rejected",
+    "error": "query intersects target obstacle",
+    "logDigest": "bb4dd5ef6223e0b0514f747a5f2c4ae364b093d9baebc29bc12fe68a1f04c069"
+  },
+  "obb-disposal": {
+    "result": "rejected",
+    "error": "feature disposes all owned resources exactly once",
+    "logDigest": "125ca39271a3deb84087a887a2561a5c160fcc08fa44be01fdb273815633d515"
+  },
+  "roundedboxgeometry-noop": {
+    "result": "rejected",
+    "error": "rounded landmark excludes sharp corners",
+    "logDigest": "8edb21ff2105db73ac9d453bde6222eef2f4820639f0a1e39532511e760b48aa"
+  },
+  "roundedboxgeometry-disposal": {
+    "result": "rejected",
+    "error": "feature disposes all owned resources exactly once",
+    "logDigest": "3039f5f9c782010ac65f0d572d1c5ee54086ea30c414709ee56dbd89f718f7b4"
+  },
+  "parametricgeometry-noop": {
+    "result": "rejected",
+    "error": "parametric subdivisions",
+    "logDigest": "abd3890411220bf30be508cea6a7af9841026f0bc3a23cf4b56a0ae7d21c00f3"
+  },
+  "parametricgeometry-disposal": {
+    "result": "rejected",
+    "error": "feature disposes all owned resources exactly once",
+    "logDigest": "9fecfef8ab052923f4c1c02c60f3ca581b849be3ebfd7a3bf225f609d91ff423"
+  },
+  "boxlinegeometry-noop": {
+    "result": "rejected",
+    "error": "construction frame exact extents",
+    "logDigest": "8c2d303303f99689c50b4b9041365ad2a01da5f4361503d449e9f34a44786d7d"
+  },
+  "boxlinegeometry-disposal": {
+    "result": "rejected",
+    "error": "feature disposes all owned resources exactly once",
+    "logDigest": "0a65a3be2fd54b308fd36c2c344ae53c143e096a7e31e8c8cd98dba2e1029c97"
+  },
+  "vertexnormalshelper-noop": {
+    "result": "rejected",
+    "error": "Cannot read properties of undefined (reading 'geometry')",
+    "logDigest": "f52f851e485caa105c0c73c4b11ca5c4cc9ef37822901af09b2aeaa1bbf15c11"
+  },
+  "vertexnormalshelper-disposal": {
+    "result": "rejected",
+    "error": "feature disposes all owned resources exactly once",
+    "logDigest": "0364b5bd282a98a666cb0a6c044e6392e3e751a1f0b33dce492c6dd364196044"
+  },
+  "convexgeometry-noop": {
+    "result": "rejected",
+    "error": "convex hull retains every extreme point",
+    "logDigest": "da38464fe45f1064579c61d0b157acde8f5440ccc77437b582c4c8191ef9c529"
+  },
+  "convexgeometry-disposal": {
+    "result": "rejected",
+    "error": "feature disposes all owned resources exactly once",
+    "logDigest": "d5312aa0a8f6193f6c062ce10b48b9220bb21e8fc94b8ee3db9232320a5b9a1c"
+  },
+  "vertextangentshelper-noop": {
+    "result": "rejected",
+    "error": "Cannot read properties of undefined (reading 'geometry')",
+    "logDigest": "7feceae95a8af31e0df19ea56ee09be35c5e9db6340fa0a0c3bb336fa870a02d"
+  },
+  "vertextangentshelper-disposal": {
+    "result": "rejected",
+    "error": "feature disposes all owned resources exactly once",
+    "logDigest": "85df71aca192879697d570abb1715e025590df681a57df1d13879e372055a5f3"
+  }
+}

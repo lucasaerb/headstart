@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/mrdoob/three.js",
+  "commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+  "version": "0.186.0",
+  "files": {
+    "three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+    "three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+  },
+  "license": "MIT",
+  "licenseEvidence": "services/curation/fixtures/threejs/LICENSE",
+  "scope": "Existing target engine peer; two official build files and retained MIT notice. No external assets."
+}

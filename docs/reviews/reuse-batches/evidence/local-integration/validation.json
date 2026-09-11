@@ -1,0 +1,176 @@
+{
+  "schemaVersion": "headstart-local-integration-1",
+  "result": "PASS",
+  "planDigest": "4c256b3191f9b8e0b9b9eb2d3d842b3ec1f09dacfd4f075604d18a5d24931e3d",
+  "targetState": "696ea96a08259e4dd5742b5bd699e2eb2ff6a662c906695d0d9c932cd8fd2571",
+  "source": {
+    "repository": "https://github.com/mrdoob/three.js",
+    "commit": "5c5a575bd8cc0cf440026ce8dcf6a77862067684",
+    "component": "three-simplexnoise-v1",
+    "version": "1",
+    "files": {
+      "examples/jsm/math/SimplexNoise.js": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072",
+      "LICENSE": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "package.json": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89"
+    },
+    "packetDigest": "bb3d689ebe898e8aa5cff2e75f587d89e454be22deaba709e601597969c9a960",
+    "bagRevision": "c3ab1bb89d965c8cee576bf79f8b6779db7640fdca91f0fc49f3bbb49cdd1b29"
+  },
+  "recipe": {
+    "id": "simplex-terrain-1",
+    "digest": "13577f4d862a4c37f0f730d7875c97d4d8e69e09360df2f18ad045009b042670"
+  },
+  "image": "sha256:c7acddd94000df88bc95cef1c1519bca02865e6607ab9ba496a1f608410decd5",
+  "results": {
+    "baseline-1280,800": {
+      "report": {
+        "schemaVersion": 1,
+        "result": "PASS",
+        "checks": [
+          "no hidden initial frame scheduler",
+          "one canvas and owned renderer",
+          "exact target topology",
+          "actual input listeners registered",
+          "same seed repeats exactly",
+          "capability behavior matches phase",
+          "finite bounded heights",
+          "connected grid topology",
+          "disconnected fully covered topology is rejected",
+          "idempotent single loop",
+          "existing keyboard movement",
+          "keyup stops movement",
+          "pause cancels loop and updates",
+          "reset restores player seed and state",
+          "renderer camera scene ownership preserved",
+          "dispose removes loops and listeners",
+          "dispose resources exactly once",
+          "disposed instance cannot restart"
+        ],
+        "phase": "baseline",
+        "capability": "flat-baseline",
+        "heightRange": [
+          0,
+          0
+        ]
+      },
+      "browserTermination": "terminated after explicit result and capture",
+      "viewport": "1280,800"
+    },
+    "baseline-390,844": {
+      "report": {
+        "schemaVersion": 1,
+        "result": "PASS",
+        "checks": [
+          "no hidden initial frame scheduler",
+          "one canvas and owned renderer",
+          "exact target topology",
+          "actual input listeners registered",
+          "same seed repeats exactly",
+          "capability behavior matches phase",
+          "finite bounded heights",
+          "connected grid topology",
+          "disconnected fully covered topology is rejected",
+          "idempotent single loop",
+          "existing keyboard movement",
+          "keyup stops movement",
+          "pause cancels loop and updates",
+          "reset restores player seed and state",
+          "renderer camera scene ownership preserved",
+          "dispose removes loops and listeners",
+          "dispose resources exactly once",
+          "disposed instance cannot restart"
+        ],
+        "phase": "baseline",
+        "capability": "flat-baseline",
+        "heightRange": [
+          0,
+          0
+        ]
+      },
+      "browserTermination": "terminated after explicit result and capture",
+      "viewport": "390,844"
+    },
+    "integrated-1280,800": {
+      "report": {
+        "schemaVersion": 1,
+        "result": "PASS",
+        "checks": [
+          "no hidden initial frame scheduler",
+          "one canvas and owned renderer",
+          "exact target topology",
+          "actual input listeners registered",
+          "same seed repeats exactly",
+          "capability behavior matches phase",
+          "finite bounded heights",
+          "connected grid topology",
+          "disconnected fully covered topology is rejected",
+          "idempotent single loop",
+          "existing keyboard movement",
+          "keyup stops movement",
+          "pause cancels loop and updates",
+          "reset restores player seed and state",
+          "renderer camera scene ownership preserved",
+          "dispose removes loops and listeners",
+          "dispose resources exactly once",
+          "disposed instance cannot restart"
+        ],
+        "phase": "integrated",
+        "capability": "three-simplex-terrain-1",
+        "heightRange": [
+          -1.6962916851043701,
+          1.5897753238677979
+        ]
+      },
+      "browserTermination": "terminated after explicit result and capture",
+      "viewport": "1280,800"
+    },
+    "integrated-390,844": {
+      "report": {
+        "schemaVersion": 1,
+        "result": "PASS",
+        "checks": [
+          "no hidden initial frame scheduler",
+          "one canvas and owned renderer",
+          "exact target topology",
+          "actual input listeners registered",
+          "same seed repeats exactly",
+          "capability behavior matches phase",
+          "finite bounded heights",
+          "connected grid topology",
+          "disconnected fully covered topology is rejected",
+          "idempotent single loop",
+          "existing keyboard movement",
+          "keyup stops movement",
+          "pause cancels loop and updates",
+          "reset restores player seed and state",
+          "renderer camera scene ownership preserved",
+          "dispose removes loops and listeners",
+          "dispose resources exactly once",
+          "disposed instance cannot restart"
+        ],
+        "phase": "integrated",
+        "capability": "three-simplex-terrain-1",
+        "heightRange": [
+          -1.6962916851043701,
+          1.5897753238677979
+        ]
+      },
+      "browserTermination": "terminated after explicit result and capture",
+      "viewport": "390,844"
+    }
+  },
+  "limitations": [
+    "Visual terrain only; no collision mesh or physics integration.",
+    "Target retains one renderer, loop, camera and input handlers."
+  ],
+  "evidence": {
+    "integrated-390,844.log": "8a161aac7876b075c08643f1a3b9aed9c535149f0c02fb98d82e98ab5deebb32",
+    "baseline-1280,800.log": "12044fb8dd96ff6d9b034b00c0b7bb4b4298f6a60597c7e1727557bf09103ad6",
+    "baseline-390,844.log": "b7d5e94fd54e2f599b3d1f25e8c87b99b6b2e988e9c50a2d768b024ce3586446",
+    "integrated-1280,800.png": "66532c404595ea5d7d8c1fdb8f9e2fa2bd5423021f3c79fe6cde04d18b6fc18f",
+    "integrated-1280,800.log": "e6f5bc75ca0917a2eba3f1a40ad9b3ff87e61c0caf2e6dea04e6fcf3e629cdad",
+    "integrated-390,844.png": "c3c22c63f8de96d6e05025a01ea1a3243be23ca4fc9278587706284dcfa3f731",
+    "baseline-1280,800.png": "5d79d930977fbc90f34265d721beb72517d38f4548f324d457fa8e31383fef2f",
+    "baseline-390,844.png": "2c94f166dccc6c71313af54d07db3108b54679011f3f18d188431686f230d1cc"
+  }
+}

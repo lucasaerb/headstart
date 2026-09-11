@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "author": "reuse_mcp",
+  "status": "author runtime complete; independent review required",
+  "sourceRevision": "2ea7a4d",
+  "pluginVersion": "0.7.0",
+  "unitTestsPassed": 21,
+  "environment": {
+    "image": "sha256:c7acddd94000df88bc95cef1c1519bca02865e6607ab9ba496a1f608410decd5",
+    "architecture": "arm64",
+    "node": "22.23.2",
+    "chromium": "152.0.7977.82-1~deb12u1",
+    "physics": "none"
+  },
+  "rows": {
+    "simplexnoise": {
+      "validationDigest": "e9f38ec29c8315e4d7ed23a9737954a3aa3f01246cf929e5d93496cdbb99ad5c",
+      "attestationDigest": "614f858415e2797ae97a1420ddd31be10d6a7d49240aa46643afa75841525224",
+      "recipeDigest": "c3c0fa2b477e7134f3c25e07e8fd4b54ecb35f0da6f9dec4ab0b7ebe416d950a",
+      "targetBaseCommit": "939c8846472076e7715d56e6ff4e9d4ccb9a482a",
+      "targetIntegratedDigest": "297460a5d75693ad394d31e6797b5cc910635eb65c5be9459da5e0ccfec855af",
+      "checksByPhase": {
+        "baseline-1280,800": 15,
+        "baseline-390,844": 15,
+        "integrated-1280,800": 18,
+        "integrated-390,844": 18
+      }
+    },
+    "improvednoise": {
+      "validationDigest": "db014deaaa1e4cb233bc89b7d1ae019430b15f77cb3348cf5d8cee583f866933",
+      "attestationDigest": "ce3da352d3a470c0f440363b335fc6d2e10e8dc6192d0677d7c442aace7e085c",
+      "recipeDigest": "9b7086a0e371769b8f849f402f3e6e16d89cdcd0d79f2c94a5f6e63714b11d5d",
+      "targetBaseCommit": "6728359937e400efe5ae7781479526d2a40014af",
+      "targetIntegratedDigest": "f33e9904af40da0c41f9b3a85b9976c87a6e66f1a8fe04bc1a18589c6c3acda1",
+      "checksByPhase": {
+        "baseline-1280,800": 15,
+        "baseline-390,844": 15,
+        "integrated-1280,800": 18,
+        "integrated-390,844": 18
+      }
+    },
+    "capsule": {
+      "validationDigest": "dbf62efc8d6de4d25cf098f3d99bfacdf24f388864bb89927329166917aab02b",
+      "attestationDigest": "6857d2dc6c9fdaa2ace3448fa3c1f820a78c51fa9a825fc4c46c78fe6c0fe63a",
+      "recipeDigest": "35440c41535359db6bb11a9a7d41e09ab4727ea1dd5d082f70ab674875ee0188",
+      "targetBaseCommit": "cac754f1bee678c71b16f9ae68591586f8e89a95",
+      "targetIntegratedDigest": "54c47e6ca1128b8c19e8efc10cfbe44aabe6ebd81a227075c1baa49983923fd2",
+      "checksByPhase": {
+        "baseline-1280,800": 15,
+        "baseline-390,844": 15,
+        "integrated-1280,800": 21,
+        "integrated-390,844": 21
+      }
+    },
+    "obb": {
+      "validationDigest": "f270f5159eb779fcfe059a2b63209656689af799243ea27c7f11cb41540a75c8",
+      "attestationDigest": "44b1038ff88016121d7b6fb2424c71c71f48ca8e962a533a7841c44702613179",
+      "recipeDigest": "eab0ef714b061a8e4b00240cbcc82cbe011ba1d96e09378002799befadfef7fb",
+      "targetBaseCommit": "ef77dfb82029f776f190d40ead489ca883a3f66a",
+      "targetIntegratedDigest": "8ab4c12fc2ec7ad1a7e5283b50926ee5df9dc79ca0d00ea46d3027561f3e1954",
+      "checksByPhase": {
+        "baseline-1280,800": 15,
+        "baseline-390,844": 15,
+        "integrated-1280,800": 21,
+        "integrated-390,844": 21
+      }
+    },
+    "roundedboxgeometry": {
+      "validationDigest": "f14a0afdb6fb6e74f3ad9b7c1ef263c50618d2cefbf20b8c7217a75e1ddb797b",
+      "attestationDigest": "eaf973bd97102dda23be4d091a6d113ef88a8e5b000d243590cecd424c9a69ad",
+      "recipeDigest": "b4206b713ceec2ac66878a46c7e2214aa393a38c7944ba562eb9de2fd4c0b99f",
+      "targetBaseCommit": "75a9765b696a595052170e1045eedcc08b2f5ac0",
+      "targetIntegratedDigest": "eff83d92497a2d727bc19186823e0e03ad8061e8f3e8d40a0e07b4853bd3ee0c",
+      "checksByPhase": {
+        "baseline-1280,800": 15,
+        "baseline-390,844": 15,
+        "integrated-1280,800": 17,
+        "integrated-390,844": 17
+      }
+    },
+    "parametricgeometry": {
+      "validationDigest": "fa56b22ba9d757672d4db298d0c98606b1f958f0e5c33f06f652fd627c78e024",
+      "attestationDigest": "732dc4f1c2dead46c8190d4faa3f4a6936684fe4aefa4b86f9554385b35c5589",
+      "recipeDigest": "ac2a8769181cfcb97a0975f58080d1bde4e582b77db9a8584e03358329ea92cd",
+      "targetBaseCommit": "fd5452bad7701d888f09712bb3233be2304c16a0",
+      "targetIntegratedDigest": "5f4780c6ad7fa993e583eafe836851375e174456ff22bc2ee388788c21cd944a",
+      "checksByPhase": {
+        "baseline-1280,800": 15,
+        "baseline-390,844": 15,
+        "integrated-1280,800": 18,
+        "integrated-390,844": 18
+      }
+    },
+    "boxlinegeometry": {
+      "validationDigest": "a6acadb92bd53dfa3426f0201d7d897d566ff2cd253681ca97f5abc830127207",
+      "attestationDigest": "09009ceca48bca40800654b3e388980ded1d4a964fc76a1336658711c9df82ed",
+      "recipeDigest": "3af04004b8929331a729d04b70ea5f2e01e9ed335a673c090eed0a53d9378957",
+      "targetBaseCommit": "916a7d0cb53cd1a28890de5f861de2c148fdad84",
+      "targetIntegratedDigest": "66be22a238114d643c13ca7d212fa60843e28ab40f37f4ecaf67806283729509",
+      "checksByPhase": {
+        "baseline-1280,800": 15,
+        "baseline-390,844": 15,
+        "integrated-1280,800": 17,
+        "integrated-390,844": 17
+      }
+    },
+    "vertexnormalshelper": {
+      "validationDigest": "888ba6f2fdc4ad9c5dfd9993161eccae9dbf8504f3cbabf82a76f06d4da8db1d",
+      "attestationDigest": "f938faa4bbd3c96cca0461cfbdb989f3f06d0ae18367dbf627c4a1c7ee773aa4",
+      "recipeDigest": "c9888d40f7f61235a8a9819a905d95b0e8ec417136b68d17902533e39b6e3ff7",
+      "targetBaseCommit": "e7413cb00c7edeb886e96137f5430dd7e821a175",
+      "targetIntegratedDigest": "11b40f1e8f9897dc32afd9fb45b6074304c979d4fbbc89c627604db6bc0f2986",
+      "checksByPhase": {
+        "baseline-1280,800": 15,
+        "baseline-390,844": 15,
+        "integrated-1280,800": 16,
+        "integrated-390,844": 16
+      }
+    },
+    "convexgeometry": {
+      "validationDigest": "cf07527e7bd137fcc2e89a16762722fcfb6f18f7175cee80f6a423a3dcf40d0e",
+      "attestationDigest": "538fd2705fcfeb3b7d2e0a28b37d80bf4d0e464fc2f60bb63a4d4d9655eff4d7",
+      "recipeDigest": "12909351a25568415553706f3e7fa9845e2bea7b057f93bd36e5eb27ab3d67e8",
+      "targetBaseCommit": "9e5cd61524d3767240875ee105608cbdd6afe558",
+      "targetIntegratedDigest": "aae0891a60cde9b3abaf3e2a7d239d62cc7a6800b3f20afd86dfa699240d5b1b",
+      "checksByPhase": {
+        "baseline-1280,800": 15,
+        "baseline-390,844": 15,
+        "integrated-1280,800": 18,
+        "integrated-390,844": 18
+      }
+    },
+    "vertextangentshelper": {
+      "validationDigest": "97c15c417337f965eb2fde581bd9a50c2d10ec4a1b479c1bf53b60917cc33439",
+      "attestationDigest": "4b631811bd8a8f9a0384742d54e5f80303948eb428bbc51fd708a2103f9dee23",
+      "recipeDigest": "fc99c45354ee94fd11f8ad9e1dcde05a2a269ca31630ccc2eaadbd4783def095",
+      "targetBaseCommit": "7c3c7fc68c14fb3b9133e10fe9d4130ab079c9df",
+      "targetIntegratedDigest": "7e88adacc6e510755643586f3e0e4487b8f961651711e66b38ec083ed45a0c54",
+      "checksByPhase": {
+        "baseline-1280,800": 15,
+        "baseline-390,844": 15,
+        "integrated-1280,800": 16,
+        "integrated-390,844": 16
+      }
+    }
+  },
+  "negativeCases": 20
+}

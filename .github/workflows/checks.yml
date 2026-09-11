@@ -17,6 +17,7 @@ jobs:
           python-version: "3.12"
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m pip install -r services/retrieval/requirements.txt
+      - run: python -m pip install -r tests/mcp/requirements.txt
       - run: python -m services.retrieval.setup
       - run: npm run test:python && npm run catalog:init
       - run: npm run check && npm run format:check && npm test && npm run build
@@ -35,8 +36,96 @@ jobs:
       - run: npm run test:retrieval
         env:
           SCREENSHOT_DIR: test-results/retrieval
+      - run: npm run test:plugin-setup
+        env:
+          SCREENSHOT_DIR: test-results/plugin-setup
+      - run: npm run test:mcp
+      - run: npm run test:review-skills
+        env:
+          SCREENSHOT_DIR: test-results/review-skills
+      - run: npm run test:auth
+        env:
+          SCREENSHOT_DIR: test-results/auth
+      - run: npm run test:submissions
+        env:
+          SCREENSHOT_DIR: test-results/submissions
+      - run: npm run test:handoff
+        env:
+          SCREENSHOT_DIR: test-results/handoff
+      - run: npm run test:recipes
+        env:
+          SCREENSHOT_DIR: test-results/recipes
+      - run: npm run test:operations
+        env:
+          SCREENSHOT_DIR: test-results/operations
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: browser-evidence
           path: test-results/
+
+  integration-reference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m tools.integration.fetch_engine
+      - run: python -m unittest discover -s tools/integration/tests -v
+      - run: docker build -t headstart-integration-browser:ci tools/integration
+      - name: Record immutable runtime image
+        run: docker image inspect headstart-integration-browser:ci --format '{{.Id}}' > "$RUNNER_TEMP/headstart-image-id"
+      - name: Record runtime architecture and installed versions
+        run: |
+          docker image inspect headstart-integration-browser:ci --format '{{.Id}} {{.Architecture}} {{.Os}}' > "$RUNNER_TEMP/headstart-image-platform"
+          docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --memory 256m --cpus 1 --pids-limit 64 "$(cat "$RUNNER_TEMP/headstart-image-id")" node --version > "$RUNNER_TEMP/headstart-node-version"
+          docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges --memory 256m --cpus 1 --pids-limit 64 "$(cat "$RUNNER_TEMP/headstart-image-id")" chromium --version > "$RUNNER_TEMP/headstart-chromium-version"
+      - run: python -m tools.integration.fixture "$RUNNER_TEMP/headstart-base" "$RUNNER_TEMP/headstart-packet.json"
+      - run: python -m tools.integration.workflow plan "$RUNNER_TEMP/headstart-base" "$RUNNER_TEMP/headstart-packet.json" "$RUNNER_TEMP/headstart-plan.json" --author ci-reference-builder
+      - run: python -m tools.integration.workflow apply "$RUNNER_TEMP/headstart-plan.json" "$RUNNER_TEMP/headstart-packet.json" "$RUNNER_TEMP/headstart-run" --authorized
+      - name: Reproduce isolated baseline and integrated runtime
+        run: python -m tools.integration.workflow validate "$RUNNER_TEMP/headstart-run" --image "$(cat "$RUNNER_TEMP/headstart-image-id")"
+      - name: Reject broken runtime mutants
+        run: python -m tools.integration.tests.runtime_mutations --image "$(cat "$RUNNER_TEMP/headstart-image-id")" --output "$RUNNER_TEMP/headstart-negative"
+      - name: Reproduce ten pinned reference integrations
+        run: python -m tools.integration.matrix.run --row all --output "$RUNNER_TEMP/headstart-matrix" --image "$(cat "$RUNNER_TEMP/headstart-image-id")" --authorized
+      - name: Reject per-capability no-op and disposal mutants
+        run: python -m tools.integration.matrix.mutations --output "$RUNNER_TEMP/headstart-matrix-negative" --image "$(cat "$RUNNER_TEMP/headstart-image-id")"
+      - name: Verify isolated interactive health worker
+        run: HEADSTART_BROWSER_IMAGE="$(cat "$RUNNER_TEMP/headstart-image-id")" HEADSTART_OPERATIONS_EVIDENCE="$RUNNER_TEMP/headstart-operations-browser.json" python -m tools.operations.check_browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: integration-reference-evidence
+          path: |
+            ${{ runner.temp }}/headstart-run/evidence/
+            ${{ runner.temp }}/headstart-run/validation.json
+            ${{ runner.temp }}/headstart-negative/
+            ${{ runner.temp }}/headstart-image-id
+            ${{ runner.temp }}/headstart-image-platform
+            ${{ runner.temp }}/headstart-node-version
+            ${{ runner.temp }}/headstart-chromium-version
+            ${{ runner.temp }}/headstart-run/plan.json
+            ${{ runner.temp }}/headstart-run/packet.json
+            ${{ runner.temp }}/headstart-run/applied.json
+            ${{ runner.temp }}/headstart-run/applied-modes.json
+            ${{ runner.temp }}/headstart-run/events.jsonl
+            ${{ runner.temp }}/headstart-matrix/*/plan.json
+            ${{ runner.temp }}/headstart-matrix/*/applied.json
+            ${{ runner.temp }}/headstart-matrix/*/validation.json
+            ${{ runner.temp }}/headstart-matrix/*/execution-attestation.json
+            ${{ runner.temp }}/headstart-matrix/*/events.jsonl
+            ${{ runner.temp }}/headstart-matrix/*/evidence/
+            ${{ runner.temp }}/headstart-matrix-negative/negative-results.json
+            ${{ runner.temp }}/headstart-matrix-negative/*/negative-evidence/
+            ${{ runner.temp }}/headstart-operations-browser.json

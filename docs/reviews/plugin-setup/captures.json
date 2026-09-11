@@ -1,0 +1,31 @@
+{
+  "browser": "Chrome via Playwright",
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 1000
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "captureDirectory": "/tmp/headstart-plugin-setup-captures",
+  "captures": {
+    "desktop-compatible.png": "5217c6d2ff5758adc417a861f6b974cedafa8bb78f726b920b5ba0268728fa54",
+    "desktop-entry.png": "f3758440f1dc271a9ec70f0a16f5d2ba6990430eed2a9a8d97a91eb5d1044481",
+    "desktop-fallback.png": "5e71c97268d59067fed7e0e68d56cd02c2c0135408a979da5be76119502a00c0",
+    "desktop-unavailable.png": "86c82fe520ac5e8d340e599c7384e38fc66444f244a783b1f6cb1e86b2133729",
+    "desktop-unsupported.png": "ed3cb70795a79897ed19543c97f62bc4da10ce6160ddd1c8c26a20ecad916d43",
+    "mobile-compatible.png": "f53397bc9081e44134d11b5583de4015b9a4f68c48c1582e456122f86848c387",
+    "mobile-entry.png": "a6082d44ca94c44dcd3010b1391bb6d03525d70cb885de40ad7f7bd25d6e185a",
+    "mobile-fallback.png": "e9f215ccc15c00b0aa5f4e5e2e9d1ee6b4e8a476a7a9038bfe0fd812873844db",
+    "mobile-unavailable.png": "f86c5cd552d7aad84045d2992d56056c2bb699f98db323c5b4567b08b21d57c7",
+    "mobile-unsupported.png": "e32d3b9fef8d788df8d6ca66320ba39d242183326ce5b5630f85cd1f13df3576"
+  },
+  "designReference": {
+    "path": "HeadStart-Starter-Package/site/dist/styles.css",
+    "sha256": "8771505d490540d0e88cb77bb0d8346c07b583f826464889d3442c76f591fdf2",
+    "basis": "Existing selected-C4 production plugin-page styles preserved"
+  }
+}

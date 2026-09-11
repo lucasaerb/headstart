@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contribute · HeadStart</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="submissions.css" />
+  </head>
+  <body class="plugin-page">
+    <header class="plugin-header">
+      <a class="brand" href="./">HeadStart</a
+      ><a href="./#games">Back to games →</a>
+    </header>
+    <main class="plugin-main">
+      <p class="section-kicker">
+        Help good starting points find their way here
+      </p>
+      <h1>Make the library better.</h1>
+      <p class="plugin-intro">
+        Suggest a game, correct a detail, or report a rights concern. Every
+        change goes through review.
+      </p>
+      <form id="proposal" class="review-card">
+        <label
+          >What would you like to do?<select name="kind" id="kind">
+            <option value="submission">Suggest a game</option>
+            <option value="correction">Propose a correction</option>
+            <option value="rights_report">Report a rights concern</option>
+            <option value="appeal">Appeal a rights report</option>
+          </select></label
+        >
+        <div id="project-fields">
+          <label
+            >Repository URL<input
+              name="repository"
+              type="url"
+              placeholder="https://github.com/creator/game"
+              required /></label
+          ><label
+            >Subproject path <span>Optional</span
+            ><input name="subproject" maxlength="500" /></label
+          ><label
+            >Demo URL <span>Optional</span
+            ><input name="demo" type="url" /></label
+          ><label
+            >Runtime <span>Optional</span
+            ><input name="runtime" maxlength="100" /></label
+          ><label class="check"
+            ><input name="ownershipClaim" type="checkbox" />I control this
+            repository</label
+          >
+          <p class="hint">
+            A claim stays unverified until you publish a repository-specific
+            challenge. Control never replaces a rights review.
+          </p>
+        </div>
+        <div id="scope-fields" hidden>
+          <label
+            >Source kind<select name="entity">
+              <option value="component_version">Component version</option>
+              <option value="project_version">Project version</option>
+            </select></label
+          ><label>Source ID<input name="sourceId" maxlength="160" /></label
+          ><label
+            >Version<input name="version" maxlength="160" value="1" /></label
+          ><label
+            >Affected file paths
+            <span>One per line; leave empty for all files</span
+            ><textarea name="paths" rows="2"></textarea></label
+          ><label id="parent-field" hidden
+            >Original report ID<input name="parentId" maxlength="160"
+          /></label>
+          <p class="hint">
+            An unresolved rights report freezes new source delivery for the
+            affected scope. Existing notices and history are preserved.
+          </p>
+        </div>
+        <label
+          >Description<textarea
+            name="description"
+            rows="4"
+            maxlength="4000"
+            required
+            placeholder="What is useful, or what needs correcting? Include evidence links."
+          ></textarea></label
+        ><label
+          >Contact <span>Optional; private to curators</span
+          ><input name="reporter" maxlength="320" /></label
+        ><button class="primary" type="submit">Send for review →</button>
+      </form>
+      <section
+        id="result"
+        class="review-card"
+        hidden
+        aria-live="polite"
+      ></section>
+      <details class="review-card">
+        <summary>Check a submission</summary>
+        <form id="status-form">
+          <label>Submission ID<input name="id" required /></label
+          ><label
+            >Private receipt<input
+              name="receipt"
+              required
+              autocomplete="off" /></label
+          ><button type="submit">Check status</button>
+        </form>
+        <pre id="status-result" aria-live="polite"></pre>
+      </details>
+      <details class="review-card">
+        <summary>Verify repository control</summary>
+        <p>
+          For GitHub, commit a file named
+          <code>.headstart-ownership.txt</code> in the repository root. Its only
+          content must be your exact challenge below. The server checks that
+          file at the commit you supply. Other providers remain unverified.
+        </p>
+        <form id="ownership-form">
+          <label>Submission ID<input name="id" required /></label
+          ><label
+            >Private receipt<input
+              name="receipt"
+              required
+              autocomplete="off" /></label
+          ><label
+            >Full commit SHA<input
+              name="commit"
+              required
+              pattern="[a-f0-9]{40}" /></label
+          ><button type="submit">Verify control</button>
+        </form>
+        <p id="ownership-result" aria-live="polite"></p>
+      </details>
+      <details class="review-card" id="curator">
+        <summary>Curator review</summary>
+        <p>
+          Requires a verified local session and explicit curator access.
+          <a href="auth.html">Open account</a>
+        </p>
+        <button id="load-queue">Load private queue</button>
+        <p id="queue-message" aria-live="polite"></p>
+        <div id="queue"></div>
+      </details>
+      <p class="hint">
+        This local review workspace does not publish submissions automatically,
+        send messages, or execute submitted code.
+      </p>
+    </main>
+    <script type="module" src="submissions.js"></script>
+  </body>
+</html>
