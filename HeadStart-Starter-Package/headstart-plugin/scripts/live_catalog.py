@@ -74,7 +74,9 @@ class LiveCatalog:
             value=json.loads(raw,parse_constant=lambda _:(_ for _ in ()).throw(ValueError()))
             if not isinstance(value,dict):raise ValueError()
             if status!=200:
-                code=value.get('error',{}).get('code','service_error')
+                error=value.get('error')
+                if not isinstance(error,dict):raise ValueError()
+                code=error.get('code','service_error')
                 if not isinstance(code,str) or not re.fullmatch('[A-Za-z_]{1,80}',code):code='service_error'
                 raise ToolError(code,'Local service rejected the request. Verify account pairing, exact selection and current scope rights; retry when eligible. No substitute was returned.')
             return value
@@ -86,7 +88,7 @@ class LiveCatalog:
         records=[value.get('item')] if detail else value.get('items')
         if not isinstance(records,list) or len(records)>10:raise ToolError('unsupported_contract','Invalid catalog record collection.')
         for r in records:
-            if not isinstance(r,dict) or not all(isinstance(r.get(k),str) for k in ('id','versionId','version','type','title')) or not isinstance(r.get('data'),dict) or not re.fullmatch('[0-9a-f]{40}',r['data'].get('source_commit','')) or not isinstance(r['data'].get('evidence'),list):raise ToolError('unsupported_contract','Invalid pinned catalog record.')
+            if not isinstance(r,dict) or not all(isinstance(r.get(k),str) for k in ('id','versionId','version','type','title')) or not isinstance(r.get('data'),dict) or not isinstance(r['data'].get('source_commit'),str) or not re.fullmatch('[0-9a-f]{40}',r['data']['source_commit']) or not isinstance(r['data'].get('evidence'),list):raise ToolError('unsupported_contract','Invalid pinned catalog record.')
         return value
     def bag(self,args):
         revision=args.get('bag_revision')
@@ -99,6 +101,11 @@ class LiveCatalog:
             return {'schemaVersion':1,'bagRevision':actual,'bag':bag,'notice':NOTICE}
         except (KeyError,TypeError,ValueError):raise ToolError('unsupported_contract','Invalid immutable selected-bag contract.') from None
     def call(self,name,args):
+        try:
+            return self._call(name,args)
+        except (ValueError,TypeError,KeyError,AttributeError,RecursionError):
+            raise ToolError('unsupported_contract','Malformed service record. Use compatible service/client contracts and retry; no substitute was returned.') from None
+    def _call(self,name,args):
         specs={name:spec for name,_,spec in TOOLS}
         if name not in specs:raise ToolError('unknown_tool','Consult tools/list for this configured service mode.')
         validate_args(args,specs[name])
@@ -106,7 +113,7 @@ class LiveCatalog:
         if name=='prepare_handoff':
             selected=self.bag(args)
             result=self.request('/v1/handoffs',True,{**selected['bag'],'recipe':None})
-            if result.get('schemaVersion')!=1 or result.get('bagRevision')!=selected['bagRevision'] or not re.fullmatch('[0-9a-f]{64}',result.get('digest','')):raise ToolError('unsupported_contract','Invalid prepared handoff contract.')
+            if result.get('schemaVersion')!=1 or result.get('bagRevision')!=selected['bagRevision'] or not isinstance(result.get('digest'),str) or not re.fullmatch('[0-9a-f]{64}',result['digest']):raise ToolError('unsupported_contract','Invalid prepared handoff contract.')
             packet=self.request('/v1/handoffs/'+result['digest']+'/json',True)
             try:
                 payload=json.loads(packet['content'])
