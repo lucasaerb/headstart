@@ -52,3 +52,26 @@ class ChangeTests(unittest.TestCase):
         self.assertEqual(self.changes.dispatch(self.queue)[0]['status'], 'delivered')
         stored = list(self.db.execute('SELECT * FROM source_change_outbox'))
         self.assertNotIn('private connection detail', json.dumps(stored))
+
+    def test_two_real_connections_claim_only_one_dispatch(self):
+        import tempfile
+        import threading
+        from pathlib import Path
+        from concurrent.futures import ThreadPoolExecutor
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/'queue.db'
+            first=sqlite3.connect(path,check_same_thread=False);second=sqlite3.connect(path,check_same_thread=False)
+            a,b=SourceChanges(first),SourceChanges(second);qa,qb=Queue(first),Queue(second)
+            a.observe('https://github.com/example/game',self.old,self.new)
+            entered=threading.Event();release=threading.Event();original=qa.all
+            def paused():
+                entered.set();self.assertTrue(release.wait(5));return original()
+            qa.all=paused
+            try:
+                with ThreadPoolExecutor(max_workers=2) as pool:
+                    pending=pool.submit(a.dispatch,qa)
+                    self.assertTrue(entered.wait(5))
+                    self.assertEqual(b.dispatch(qb),[])
+                    release.set();self.assertEqual(pending.result(timeout=5)[0]['status'],'delivered')
+                self.assertEqual(len(qb.all()),1)
+            finally:release.set();first.close();second.close()

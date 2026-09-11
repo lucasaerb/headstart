@@ -33,6 +33,8 @@ class SourceChanges:
                 id TEXT PRIMARY KEY, queue_id TEXT, attempts INTEGER NOT NULL DEFAULT 0,
                 status TEXT NOT NULL DEFAULT 'pending');
         ''')
+        columns={r[1] for r in db.execute('PRAGMA table_info(source_change_outbox)')}
+        if 'lease_until' not in columns:db.execute('ALTER TABLE source_change_outbox ADD COLUMN lease_until INTEGER NOT NULL DEFAULT 0')
         db.commit()
 
     def observe(self, repository, old, new):
@@ -57,8 +59,12 @@ class SourceChanges:
         if type(limit) is not int or not 1 <= limit <= 25:
             raise ValueError('Invalid dispatch limit')
         output = []
-        rows = self.db.execute("SELECT id,attempts FROM source_change_outbox WHERE status='pending' ORDER BY id LIMIT ?", (limit,)).fetchall()
+        rows = self.db.execute("SELECT id,attempts FROM source_change_outbox WHERE status='pending' OR (status='processing' AND lease_until<=?) ORDER BY id LIMIT ?", (int(self.clock()),limit,)).fetchall()
         for identity, attempts in rows:
+            with self.db:
+                self.db.execute('BEGIN IMMEDIATE')
+                claimed=self.db.execute("UPDATE source_change_outbox SET status='processing',lease_until=? WHERE id=? AND (status='pending' OR (status='processing' AND lease_until<=?))",(int(self.clock())+60,identity,int(self.clock()))).rowcount
+            if not claimed:continue
             candidate = json.loads(self.db.execute('SELECT payload FROM source_change_candidates WHERE id=?', (identity,)).fetchone()[0])
             description = 'Source-change candidate ' + identity + '. Review pinned source and license changes before publication; prior tested evidence does not transfer.'
             # Curator-only queue lookup also recovers a crash after submit but before acknowledgment.
@@ -67,11 +73,11 @@ class SourceChanges:
                 queue_id = existing['id'] if existing else queue.submit({'repository': candidate['repository'], 'description': description}, kind='correction')['id']
             except Exception:
                 with self.db:
-                    self.db.execute('UPDATE source_change_outbox SET attempts=?,status=? WHERE id=?', (attempts + 1, 'failed' if attempts + 1 >= 3 else 'pending', identity))
+                    self.db.execute('UPDATE source_change_outbox SET attempts=?,status=?,lease_until=0 WHERE id=?', (attempts + 1, 'failed' if attempts + 1 >= 3 else 'pending', identity))
                 output.append({'id': identity, 'status': 'retry_required'})
                 continue
             with self.db:
-                self.db.execute("UPDATE source_change_outbox SET queue_id=?,status='delivered' WHERE id=?", (queue_id, identity))
+                self.db.execute("UPDATE source_change_outbox SET queue_id=?,status='delivered',lease_until=0 WHERE id=?", (queue_id, identity))
             output.append({'id': identity, 'status': 'delivered', 'queueId': queue_id})
         return output
 
